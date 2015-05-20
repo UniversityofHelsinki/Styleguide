@@ -1,0 +1,15 @@
+{
+  "name": "uh-living-styleguide",
+  "version": "0.0.0",
+  "description": "Living styleguide for University of Helsinki",
+  "author": "Benjamin Horn <benjamin.horn@idean.com>",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "*",
+    "gulp-notify": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp-autoprefixer": "^2.2.0"
+  }
+}

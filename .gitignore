@@ -1,0 +1,8 @@
+/*.sublime-project
+/*.sublime-workspace
+/node_modules
+/*.config.json
+/styleguide.html
+/templates/*
+/*.log
+/.sass-cache
