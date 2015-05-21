@@ -111,7 +111,7 @@ h4 {
 	description: Description about typography.
  */
 /*
-	section: 3
+	section: 5
 	title: Navigation
 	description: Description about navigation.
  */
@@ -121,7 +121,7 @@ h4 {
 	description: Description about forms.
  */
 /*
-	section: 5
+	section: 3
 	title: Common elements
 	description: Description about common elements.
  */
@@ -131,12 +131,6 @@ html {
 
 body {
   color: #666;
-}
-
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
 }
 
 p {
@@ -152,12 +146,12 @@ p {
   }
 }
 
-dl, menu, ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
+/*
+	section: 3.1
+	title: Links
+  template: 3_1_links
+	description:
+ */
 a {
   color: #0098d0;
   outline: 0;
@@ -171,11 +165,64 @@ a:hover, a:active, a:focus {
   outline: 0;
 }
 
+/*
+	section: 3.2
+	title: Fieldset
+	template: 3_2_fieldset
+	description:
+ */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+	section: 3.3
+	title: Lists
+	description:
+ */
+ /*
+	section: 3.3.1
+	title: Unordered list
+	template: 3_3_1_unordered-list
+	description:
+ */
+ /*
+	section: 3.3.2
+	title: Unordered list
+	template: 3_3_2_ordered-list
+	description:
+ */
+ /*
+	section: 3.3.3
+	title: Definition list
+	template: 3_3_3_definition-list
+	description:
+ */
+dl, menu, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+	section: 3.4
+	title: Image
+	template: 3_4_image
+	description:
+ */
 img, media {
   max-width: 100%;
   height: auto;
 }
 
+/*
+	section: 3.5
+	title: Blockquote
+  template: 3_5_blockquote
+	description:
+ */
 blockquote {
   font-size: 20px;
   font-size: 1.25rem;
@@ -187,6 +234,13 @@ blockquote {
   color: #979797;
   line-height: 1.1em;
 }
+
+/*
+	section: 3.5.1
+	title: Blockquote paragraph
+  template: 3_5_1_blockquote
+	description: Blockquote with a p-element inside.
+ */
 blockquote p {
   font-size: 22px;
   font-size: 1.375rem;
@@ -202,3 +256,193 @@ blockquote p {
 	title: Components
 	description: Description about components.
  */
+/*
+	section: 6.1
+	title: Table
+	description:
+ */
+/*
+	section: 6.1.1
+	title: Table sortable
+	template: 6_1_1_table-sortable
+	description:
+ */
+.table-sortable thead tr {
+  border: 2px solid #666;
+}
+.table-sortable thead tr th {
+  background: #424242;
+  color: #FFF;
+  padding: 0.6em 0.9em;
+}
+.table-sortable thead tr th, .table-sortable thead tr th a, .table-sortable thead tr th a.active {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.table-sortable thead tr th:hover, .table-sortable thead tr th a:hover, .table-sortable thead tr th a.active:hover {
+  text-decoration: underline;
+}
+.table-sortable thead tr th.active img {
+  margin-left: 0.5em;
+}
+.table-sortable tbody tr td {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  border: 2px dotted #EBEBEB;
+  color: #666;
+  padding: 1.2em 0.9em;
+}
+.table-sortable tbody tr td a, .table-sortable tbody tr td a.active {
+  color: #0098d0;
+  text-decoration: none;
+}
+.table-sortable tbody tr td a:hover, .table-sortable tbody tr td a.active:hover {
+  text-decoration: none;
+  color: #0882B3;
+}
+.table-sortable tbody tr td.active {
+  color: #666;
+}
+.table-sortable tbody tr.odd {
+  background-color: #f2f2f2;
+}
+.table-sortable tbody tr.odd td.active {
+  background-color: #e6e6e6;
+}
+.table-sortable tbody tr.even {
+  background-color: #FFF;
+}
+.table-sortable tbody tr.even td.active {
+  background-color: #f2f2f2;
+}
+
+/*
+	section: 6.1.2
+	title: Table simple
+  template: 6_1_2_table-simple
+	description:
+ */
+.table-simple {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.table-simple tr {
+  background-color: #fafafa;
+}
+.table-simple tr th {
+  background-color: #f2f2f2;
+}
+.table-simple tr:nth-of-type(2n) {
+  background-color: #FFF;
+}
+.table-simple tr:nth-of-type(2n) th {
+  background-color: #fafafa;
+}
+.table-simple td,
+.table-simple th {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  border: 2px dotted #EBEBEB;
+  color: #666;
+  padding: 0.7em 0.9em;
+  vertical-align: top;
+}
+.table-simple td a,
+.table-simple td a.active,
+.table-simple th a,
+.table-simple th a.active {
+  color: #0098d0;
+  text-decoration: none;
+}
+.table-simple td a:hover,
+.table-simple td a.active:hover,
+.table-simple th a:hover,
+.table-simple th a.active:hover {
+  text-decoration: none;
+  color: #0882B3;
+}
+.table-simple td.active,
+.table-simple th.active {
+  color: #666;
+}
+.table-simple td:first-child,
+.table-simple th:first-child {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/**
+ * Table states
+ */
+.is-table-wrapped {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.is-table-wrapped > table {
+  display: none;
+}
+.is-table-wrapped table {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  margin-bottom: 0 !important;
+}
+.is-table-wrapped th, .is-table-wrapped td {
+  white-space: nowrap;
+}
+.is-table-wrapped:before {
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  content: " ";
+  height: 100%;
+  position: absolute;
+  left: 35%;
+  margin-left: -1em;
+  top: 0;
+  width: 1em;
+  z-index: 10;
+}
+.is-table-wrapped:after {
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  content: " ";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1em;
+  z-index: 10;
+}
+
+.is-table-pinned {
+  float: left;
+  overflow-x: auto;
+  position: relative;
+  width: 35%;
+}
+.is-table-pinned table {
+  width: 100%;
+}
+.is-table-pinned table td, .is-table-pinned table th {
+  border-right: none !important;
+}
+
+.is-table-scrollable {
+  border-right: 2px dotted #EBEBEB;
+  margin-left: 35%;
+  overflow-x: auto;
+  position: relative;
+}
+.is-table-scrollable td:first-child, .is-table-scrollable th:first-child {
+  display: none;
+}
+.is-table-scrollable td, .is-table-scrollable th {
+  border-left: none !important;
+}
+.is-table-scrollable td:last-child, .is-table-scrollable th:last-child {
+  border-right: none !important;
+}

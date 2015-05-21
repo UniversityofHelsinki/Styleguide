@@ -11,22 +11,17 @@ body {
   color: $gray;
 }
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
 
 p {
   @include text-paragraph;
 }
 
-dl, menu, ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
+/*
+	section: 3.1
+	title: Links
+  template: 3_1_links
+	description:
+ */
 a {
   color: $blue;
   outline: 0;
@@ -41,11 +36,67 @@ a:hover, a:active, a:focus {
   outline: 0;
 }
 
+/*
+	section: 3.2
+	title: Fieldset
+	template: 3_2_fieldset
+	description:
+ */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+	section: 3.3
+	title: Lists
+	description:
+ */
+ 
+ /*
+	section: 3.3.1
+	title: Unordered list
+	template: 3_3_1_unordered-list
+	description:
+ */
+ 
+ /*
+	section: 3.3.2
+	title: Unordered list
+	template: 3_3_2_ordered-list
+	description:
+ */
+ 
+ /*
+	section: 3.3.3
+	title: Definition list
+	template: 3_3_3_definition-list
+	description:
+ */
+dl, menu, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+	section: 3.4
+	title: Image
+	template: 3_4_image
+	description:
+ */
 img, media {
   max-width: 100%;
   height: auto;
 }
 
+/*
+	section: 3.5
+	title: Blockquote
+  template: 3_5_blockquote
+	description:
+ */
 blockquote {
   @include font-size(20px);
   @include font-weight-book;
@@ -54,12 +105,18 @@ blockquote {
   padding: 10px 25px;
   color: $silver;
   line-height: 1.1em;
+}
 
-  p {
+/*
+	section: 3.5.1
+	title: Blockquote paragraph
+  template: 3_5_1_blockquote
+	description: Blockquote with a p-element inside.
+ */
+blockquote p {
     @include font-size(22px);
     @include font-weight-book;
     display: inline;
     color: $silver;
     line-height: 1.1em;
   }
-}
