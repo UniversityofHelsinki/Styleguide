@@ -1,0 +1,216 @@
+/*
+	section: 6.1
+	title: Table
+	description:
+ */
+ 
+ 
+/*
+	section: 6.1.1
+	title: Table sortable
+	template: 6_1_1_table-sortable
+	description:
+ */
+.table-sortable {
+  thead {
+    tr {
+      border: 2px solid $gray;
+
+      th {
+        background: $darkgray;
+        color: $white;
+        padding: 0.6em 0.9em;
+
+        &, a, a.active {
+          @include font-size(16px);
+          @include font-weight-bold;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &.active img {
+          margin-left: 0.5em
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        @include font-size(13px);
+        border: 2px dotted $lightsilver;
+        color: $gray;
+        padding: 1.2em 0.9em;
+
+        a, a.active {
+          color: $blue;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+            color: $blue--active;
+          }
+        }
+
+        &.active {
+          color: $gray;
+        }
+      }
+
+      &.odd {
+        background-color: darken($white, 5%);
+
+        td.active {
+          background-color: darken($white, 10%);
+        }
+      }
+
+      &.even {
+        background-color: $white;
+
+        td.active {
+          background-color: darken($white, 5%);
+        }
+      }
+    }
+  }
+}
+
+/*
+	section: 6.1.2
+	title: Table simple
+  template: 6_1_2_table-simple
+	description:
+ */
+%table-simple,
+.table-simple {
+  @include font-size(14px);
+
+  tr {
+    background-color: darken($white, 2%);
+
+    th {
+      background-color: darken($white, 5%);
+    }
+
+    &:nth-of-type(2n) {
+      background-color: $white;
+
+      th {
+        background-color: darken($white, 2%);
+      }
+    }
+  }
+
+  td, th {
+    @include font-family-main;
+    border: 2px dotted $lightsilver;
+    color: $gray;
+    padding: 0.7em 0.9em;
+    vertical-align: top;
+
+    a, a.active {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+        color: $blue--active;
+      }
+    }
+
+    &.active {
+      color: $gray;
+    }
+
+    &:first-child {
+      @include font-weight-bold;
+    }
+  }
+}
+
+/**
+ * Table states
+ */
+
+.is-table-wrapped {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+
+  > table {
+    display: none;
+  }
+
+  table {
+    @include font-size(13px);
+    margin-bottom: 0 !important;
+  }
+
+  th, td {
+    white-space: nowrap;
+  }
+
+  &:before {
+    background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%);
+    content: " ";
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    margin-left: -1em;
+    top: 0;
+    width: 1em;
+    z-index: 10;
+  }
+
+  &:after {
+    background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%);
+    content: " ";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1em;
+    z-index: 10;
+  }
+}
+
+.is-table-pinned {
+  float: left;
+  overflow-x: auto;
+  position: relative;
+  width: 35%;
+
+  table {
+    width: 100%;
+
+    td, th {
+      border-right: none !important;
+    }
+  }
+}
+
+.is-table-scrollable {
+  border-right: 2px dotted $lightsilver;
+  margin-left: 35%;
+  overflow-x: auto;
+  position: relative;
+
+  td:first-child, th:first-child {
+    display: none;
+  }
+
+  td, th {
+    border-left: none !important;
+
+    &:last-child {
+      border-right: none !important;
+    }
+  }
+}
