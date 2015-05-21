@@ -1,0 +1,446 @@
+/*
+ section: 5.1.1
+ title: Main menu
+ template: 5_1_1_main-menu
+ description: The main menu.
+*/
+
+// TODO: Desperately needs refactoring! As does the whole menu DOM
+.main-menu {
+	// Fix admin links
+	&.contextual-links-region {
+		position: static;
+	}
+
+	h2.block__title {
+		display: none;
+	}
+
+	.navigation {
+		background-color: $white;
+		border-bottom: 1px solid lighten($silver, 20%);
+		/**
+		 * Responsive navigation cannot calculate the height of the child <li>...
+		 * TODO: Check this!
+		 */
+		&.opened {
+			max-height: 9999px !important;
+		}
+	}
+
+	#nav-toggle {
+		background: $black;
+		display: block;
+		height: 70px;
+		position: absolute;
+		right: 0;
+		text-indent: -2000em;
+		top: 49px;
+		width: 70px;
+		z-index: 15;
+
+		&:hover {
+			background-color: $blue;
+		}
+
+		&:after {
+			@include font-size(28px);
+			@include font-awesome("\f0c9");
+			color: $white;
+			left: 24px;
+			top: 19px;
+			position: absolute;
+			text-indent: 0;
+		}
+
+		&.active {
+			&:after {
+				@include font-awesome("\f068");
+				left: 24px;
+				top: 19px;
+			}
+		}
+
+		@include breakpoint($small) {
+			display: none;
+		}
+	}
+
+	.menu-path-front {
+		display: inline-block;
+
+		a {
+			@include breakpoint($small) {
+				font-size: 0;
+				padding-right: 19px;
+				padding-left: 0;
+			}
+
+			@include breakpoint($medium) {
+				padding-right: 35px;
+			}
+
+			&:after {
+				@include font-awesome("\f015");
+				@include font-size(16px);
+				@include font-weight-light;
+				transition: opacity, 0.2s;
+				display: none;
+
+				@include breakpoint($small) {
+					display: inline;
+				}
+			}
+		}
+
+		@include breakpoint($small) {
+			.triangle {
+				display: none;
+			}
+		}
+	}
+}
+
+.responsive-navigation {
+	border-bottom: 1px solid lighten($silver, 20%);
+
+	@include breakpoint($small) {
+		border-bottom: none;
+	}
+
+	.triangle {
+		border-right: 1px solid lighten($silver, 20%);
+		bottom: 0;
+		cursor: pointer;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 60px;
+		z-index: 10;
+
+		@include breakpoint($small) {
+			top: auto;
+		}
+	}
+
+	.menuparent {
+		> .triangle {
+			&:before {
+				@include font-awesome("\f054");
+				@include font-size(14px);
+				color: $blue;
+				display: inline-block;
+				margin-top: 1.3em;
+
+				@include breakpoint($small) {
+					display: none;
+				}
+			}
+
+			// ipad retina
+			&.hidden:before {
+				display: none;
+			}
+		}
+
+		&.m-active {
+			> .triangle:before {
+				@include font-awesome("\f078");
+			}
+		}
+
+		> .active-triangle {
+			&:before {
+				color: $darkblue;
+			}
+		}
+	}
+
+	.menu-path-front {
+		> .triangle {
+			border-right: 0 none;
+
+			&:before {
+				@include font-awesome("\f015");
+				@include font-size(16px);
+				@include font-weight-light;
+				transition: opacity, 0.2s;
+				border-right: 0 none;
+				color: $blue;
+				display: inline-block;
+				margin-top: 1em;
+
+				@include breakpoint($small) {
+					display: none;
+				}
+			}
+
+			// ipad retina
+			&.hidden:before {
+				display: none;
+			}
+		}
+
+		> .active-triangle {
+			&:before {
+				color: $darkblue;
+			}
+		}
+	}
+
+	li {
+		border-top: 1px solid darken($lightsilver, 10%);
+		list-style-type: none;
+		list-style-image: none;
+		position: relative;
+		width: auto;
+
+		@include breakpoint($small) {
+			border-top: none;
+		}
+
+		&.active-trail > a {
+			color: $darkblue;
+		}
+	}
+
+	ul {
+		display: none;
+
+		&.active-trail {
+			> li > ul {
+				display: block;
+			}
+		}
+	}
+
+	.responsive-navigation {
+		display: block;
+	}
+
+	a {
+		@include link-menu;
+		padding: 15px 20px 15px 80px;
+
+		&:hover,
+		&.active-trail,
+		&.active {
+			color: $darkblue;
+		}
+	}
+
+	// 2nd level of navigation
+	.level-2 {
+		background: darken($white, 5%);
+
+		> ul {
+			padding-bottom: 10px;
+		}
+	}
+
+	// 3rd level of navigation
+	.level-3 {
+		border: none;
+
+		a {
+			@include font-weight-book;
+			border: 0 none;
+			color: $silver;
+			padding: 10px 30px 10px 80px;
+			text-transform: none;
+
+			&:hover, &.active {
+				color: $darkgray;
+			}
+			&.active.m-active {
+				color: $white;
+			}
+
+			.triangle {
+				display: none;
+			}
+		}
+
+		&.active-trail .triangle {
+			display: block;
+			text-align: center;
+
+			&:before {
+				@include font-awesome("\f0da");
+				@include font-size(22px);
+				color: $darkblue;
+				display: inline-block;
+				margin-top: 0.6em;
+			}
+		}
+	}
+
+	.level-4 {
+		display: none;
+	}
+
+	@include breakpoint($small) {
+		@include container;
+
+		li {
+			display: inline-block;
+			list-style-image: none;
+			list-style-type: none;
+			position: relative;
+
+			&:nth-child(2) a {
+				padding-left: 0;
+			}
+
+			a {
+				@include font-weight-bold;
+				@include link-menu;
+				transition: padding, 0.3s;
+				transform: translate3d(0, 0, 0);
+				display: block;
+				padding: 1.6em 1em;
+
+				@include breakpoint($medium) {
+					padding: 1.6em 2em;
+				}
+			}
+
+			&.is-open {
+				.triangle {
+					border-bottom: 10px solid $silver;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					height: 0;
+					left: 50%;
+					margin-left: -10px;
+					min-height: 0;
+					position: absolute;
+					width: 0;
+					z-index: auto;
+				}
+
+				&:nth-child(2) .triangle {
+					margin-left: -25px;
+				}
+
+				&.active-trail {
+					.triangle {
+						border-bottom-color: $darkblue;
+					}
+				}
+			}
+
+			&.menuparent ul {
+				display: none;
+				height: 0px;
+			}
+		}
+	}
+}
+
+// Sticky navigation
+.stickynav-active {
+	position: static;
+
+	.main-menu {
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	@include breakpoint($small) {
+		position: fixed;
+
+		.main-menu {
+			height: auto;
+			overflow: visible;
+		}
+
+		+ div {
+			padding-top: 70px;
+		}
+
+		.responsive-navigation {
+			li {
+				a {
+					@include font-size(15px);
+					padding: 0.75em 1em;
+				}
+
+				.triangle {
+					bottom: 0px;
+				}
+
+				&:nth-child(2) .triangle {
+					margin-left: -10px;
+				}
+
+				&.menu-path-front {
+					display: inline-block;
+
+					a {
+						@include breakpoint($small) {
+							font-size: 0;
+							padding-right: 5px;
+							padding-left: 0;
+						}
+
+						&:after {
+							display: none;
+
+							@include breakpoint($small) {
+								display: inline;
+							}
+						}
+					}
+
+					@include breakpoint($small) {
+						.triangle {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint($medium) {
+		.responsive-navigation {
+			li {
+				a {
+					@include font-size(15px);
+					padding: 0.75em 2em;
+				}
+				&.active-trail {
+					.triangle {
+						// bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.l-menu-bar {
+	@include breakpoint($small) {
+		min-height: 66px;
+	}
+}
+
+// JS stuff
+.js #nav {
+	clip: rect(0 0 0 0);
+	max-height: 0;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+
+	@include breakpoint($small) {
+		position: relative;
+
+		&.closed {
+			max-height: none;
+		}
+	}
+}

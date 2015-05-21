@@ -1,0 +1,46 @@
+@mixin link-internal {
+	@include font-family-main;
+	display: block;
+	line-height: normal;
+	overflow: hidden;
+	padding-right: 1.5em;
+	position: relative;
+
+	&:after {
+		@include arrow-internal;
+		height: 100%;
+		margin-top: -0.5em;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+
+	&:hover:after {
+		color: $darkblue;
+	}
+}
+
+@mixin link-menu {
+	@include font-size(15px);
+	@include font-weight-bold;
+	color: $blue;
+	display: block;
+	line-height: 1.25em;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:hover,
+	&.active-trail,
+	&.active {
+		color: $darkblue;
+	}
+}
+
+@mixin link-concealed {
+	color: inherit;
+
+	&:hover {
+		color: inherit;
+	}
+}
