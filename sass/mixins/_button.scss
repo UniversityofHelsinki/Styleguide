@@ -1,204 +1,204 @@
 @mixin button {
-  transition-duration: 0.1s;
-  transition-property: all;
-  background-color: $blue;
-  border: none;
-  color: $white;
-  cursor: pointer;
-  display: block;
-  line-height: 125%;
-  padding: 0.9em 1em;
+	transition-duration: 0.1s;
+	transition-property: all;
+	background-color: $blue;
+	border: none;
+	color: $white;
+	cursor: pointer;
+	display: block;
+	line-height: 125%;
+	padding: 0.9em 1em;
 
-  &:hover {
-    background-color: $darkblue;
-    color: $white;
-  }
+	&:hover {
+		background-color: $darkblue;
+		color: $white;
+	}
 }
 
 @mixin button-accordion {
-  @include button;
-  background-color: $white;
-  border: 2px solid $blue;
-  color: $blue;
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 3em;
-  padding-right: 0;
-  padding-top: 0.8em;
-  position: relative;
+	@include button;
+	background-color: $white;
+	border: 2px solid $blue;
+	color: $blue;
+	display: block;
+	line-height: normal;
+	overflow: hidden;
+	padding-bottom: 0.8em;
+	padding-left: 3em;
+	padding-right: 0;
+	padding-top: 0.8em;
+	position: relative;
 
-  &:before {
-    @include font-awesome("\f054");
-    @include vertically-center;
-    transition-duration: 0.1s;
-    color: $blue;
-    left: 1em;
-    position: absolute;
-  }
+	&:before {
+		@include font-awesome("\f054");
+		@include vertically-center;
+		transition-duration: 0.1s;
+		color: $blue;
+		left: 1em;
+		position: absolute;
+	}
 
-  &.is-active {
-    background-color: $blue;
-    color: $white;
+	&.is-active {
+		background-color: $blue;
+		color: $white;
 
-    &:before {
-      transform: translateY(-50%) rotate(90deg);
-      color: $white;
-    }
-  }
+		&:before {
+			transform: translateY(-50%) rotate(90deg);
+			color: $white;
+		}
+	}
 
-  &:hover {
-    background-color: $blue;
-  }
+	&:hover {
+		background-color: $blue;
+	}
 
-  a:hover &:before,
-  &:hover:before {
-    color: $white;
-  }
+	a:hover &:before,
+	&:hover:before {
+		color: $white;
+	}
 }
 
 @mixin button-internal {
-  @include border-side(bottom);
-  @include font-family-main;
-  @include font-size(15px);
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-right: 2em;
-  padding-top: 0.8em;
-  position: relative;
+	@include border-side(bottom);
+	@include font-family-main;
+	@include font-size(15px);
+	display: block;
+	line-height: normal;
+	overflow: hidden;
+	padding-bottom: 0.8em;
+	padding-left: 0;
+	padding-right: 2em;
+	padding-top: 0.8em;
+	position: relative;
 
-  &:after {
-    @include font-awesome("\f061");
-    color: inherit;
-    font-weight: 200;
-    height: 100%;
-    margin-top: -0.5em;
-    position: absolute;
-    right: 0;
-    top: 50%;
-  }
+	&:after {
+		@include font-awesome("\f061");
+		color: inherit;
+		font-weight: 200;
+		height: 100%;
+		margin-top: -0.5em;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
 
-  a:hover &:after,
-  &:hover:after {
-    color: $darkblue;
-  }
+	a:hover &:after,
+	&:hover:after {
+		color: $darkblue;
+	}
 }
 
 @mixin button-internal-dark {
-  @include button-internal;
-  background: $blue;
-  border: none;
-  color: $white;
-  overflow: visible;
-  padding-left: 1em;
-  padding-right: 3em;
+	@include button-internal;
+	background: $blue;
+	border: none;
+	color: $white;
+	overflow: visible;
+	padding-left: 1em;
+	padding-right: 3em;
 
-  &:after {
-    transition-duration: 0.1s;
-    transition-property: padding;
-    background-color: $blue--active;
-    color: $white;
-    line-height: 2.8em;
-    margin-top: 0;
-    padding-left: 1em;
-    padding-right: 1em;
-    top: 0;
-  }
+	&:after {
+		transition-duration: 0.1s;
+		transition-property: padding;
+		background-color: $blue--active;
+		color: $white;
+		line-height: 2.8em;
+		margin-top: 0;
+		padding-left: 1em;
+		padding-right: 1em;
+		top: 0;
+	}
 
-  &:hover {
-    background-color: $darkblue;
-    color: $white;
+	&:hover {
+		background-color: $darkblue;
+		color: $white;
 
-    a:hover &:after,
-    &:after {
-      background: $darkblue--active;
-      color: $white;
-      // padding-right: 0.5em;
-    }
-  }
+		a:hover &:after,
+		&:after {
+			background: $darkblue--active;
+			color: $white;
+			// padding-right: 0.5em;
+		}
+	}
 }
 
 @mixin button-anchor {
-  @include font-size(15px);
-  @include font-weight-bold;
-  display: block;
-  overflow: hidden;
-  padding-left: 1.5em;
-  position: relative;
+	@include font-size(15px);
+	@include font-weight-bold;
+	display: block;
+	overflow: hidden;
+	padding-left: 1.5em;
+	position: relative;
 
-  &:before {
-    @include font-awesome("\f063");
-    @include font-size(12px);
-    color: $blue;
-    height: 100%;
-    left: 0;
-    line-height: 1.9em;
-    position: absolute;
-    top: 0;
-  }
+	&:before {
+		@include font-awesome("\f063");
+		@include font-size(12px);
+		color: $blue;
+		height: 100%;
+		left: 0;
+		line-height: 1.9em;
+		position: absolute;
+		top: 0;
+	}
 
-  a:hover &:before,
-  &:hover:before {
-    color: $darkblue;
-  }
+	a:hover &:before,
+	&:hover:before {
+		color: $darkblue;
+	}
 }
 
 @mixin button-anchor--up {
-  @include font-size(13px);
-  @include font-weight-medium;
-  background: $blue;
-  color: $white;
-  display: inline-block;
-  height: 60px;
-  line-height: 1.2em;
-  padding-top: 30px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  width: 60px;
+	@include font-size(13px);
+	@include font-weight-medium;
+	background: $blue;
+	color: $white;
+	display: inline-block;
+	height: 60px;
+	line-height: 1.2em;
+	padding-top: 30px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 60px;
 
-  &:hover {
-    background-color: $darkblue;
-  }
+	&:hover {
+		background-color: $darkblue;
+	}
 
-  &:after {
-    @include font-awesome("\f062");
-    @include font-size(15px);
-    color: $white;
-    height: 100%;
-    left: 23px;
-    position: absolute;
-    top: 10px;
-  }
+	&:after {
+		@include font-awesome("\f062");
+		@include font-size(15px);
+		color: $white;
+		height: 100%;
+		left: 23px;
+		position: absolute;
+		top: 10px;
+	}
 }
 
 @mixin button-tag {
-  @include button;
-  @include border;
-  @include font-size(13px);
-  background: $lightsilver;
-  border-color: darken($lightsilver, 10%);
-  color: $darkgray;
-  cursor: default;
-  padding: 2px 0.4em;
+	@include button;
+	@include border;
+	@include font-size(13px);
+	background: $lightsilver;
+	border-color: darken($lightsilver, 10%);
+	color: $darkgray;
+	cursor: default;
+	padding: 2px 0.4em;
 
-  // Close button
-  a {
-    @include font-size(13px);
-    color: $darkblue;
-    cursor: pointer;
-    margin-left: 3px;
+	// Close button
+	a {
+		@include font-size(13px);
+		color: $darkblue;
+		cursor: pointer;
+		margin-left: 3px;
 
-    &:after {
-      @include font-awesome("\f00d");
-    }
-  }
+		&:after {
+			@include font-awesome("\f00d");
+		}
+	}
 
-  &:hover a {
-    color: lighten($blue, 20%);
-  }
+	&:hover a {
+		color: lighten($blue, 20%);
+	}
 }

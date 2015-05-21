@@ -220,14 +220,14 @@ textarea {
  description: Submit form element.
 */
 .form-submit {
-  @include button;
-  display: inline-block;
-
-  &.js-hide {
-    display: none;
-  }
-
-  & + & {
-    margin-left: 1em;
-  }
+	@include button;
+	display: inline-block;
+	
+	&.js-hide {
+		display: none;
+	}
+	
+	& + & {
+		margin-left: 1em;
+	}
 }

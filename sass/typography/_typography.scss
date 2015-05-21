@@ -1,73 +1,73 @@
 /*
-	section: 2
-	title: Typography
-	description: Description about typography.
- */
+ section: 2
+ title: Typography
+ description: Description about typography.
+*/
  
- @import 'font-awesome/_font-awesome';
+@import 'font-awesome/_font-awesome';
  
- /*
-	section: 2.1
-	title: Fonts
-	description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
- */
+/*
+ section: 2.1
+ title: Fonts
+ description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
+*/
  
-  /*
-	section: 2.2
-	title: Headings
-  template: 2_2_headings
-	description: Description about typography.
- */
+/*
+    section: 2.2
+    title: Headings
+    template: 2_2_headings
+    description: Description about typography.
+*/
 h1, h2, h3, h4, h5, h6 {
-  @include font-family-main;
-  color: $darkgray;
-  letter-spacing: -0.05em;
-  line-height: 1.1em;
-  margin: 0;
-  padding-bottom: 0.4em;
-  text-transform: uppercase;
-  word-wrap: break-word;
+	@include font-family-main;
+	color: $darkgray;
+	letter-spacing: -0.05em;
+	line-height: 1.1em;
+	margin: 0;
+	padding-bottom: 0.4em;
+	text-transform: uppercase;
+	word-wrap: break-word;
 
-  a {
-    text-decoration: none;
-    color: $darkgray;
+	a {
+		text-decoration: none;
+		color: $darkgray;
 
-    &:hover {
-      color: $darkgray;
-      cursor: pointer;
-    }
-  }
+		&:hover {
+			color: $darkgray;
+			cursor: pointer;
+		}
+	}
 }
 
 h1 {
-  @include font-size(36px);
-  line-height: 1.15em;
-  letter-spacing: -2px;
+	@include font-size(36px);
+	line-height: 1.15em;
+	letter-spacing: -2px;
 
-  @include breakpoint($small) {
-    @include font-size(50px);
-  }
+	@include breakpoint($small) {
+		@include font-size(50px);
+	}
 }
 
 h2 {
-  @include font-size(25px);
-  margin-top: -2px;
+	@include font-size(25px);
+	margin-top: -2px;
 
-  @include breakpoint($medium) {
-    @include font-size(38px);
-  }
+	@include breakpoint($medium) {
+		@include font-size(38px);
+	}
 }
 
 h3 {
-  @include font-size(32px);
+	@include font-size(32px);
 }
 
 h4 {
-  @include font-size(21px);
+	@include font-size(21px);
 }
-  /*
-	section: 2.3
-	title: Paragraphs
-  template: 2_3_paragraphs
-	description: Description about typography.
- */
+/*
+ section: 2.3
+ title: Paragraphs
+ template: 2_3_paragraphs
+ description: Description about typography.
+*/

@@ -9,24 +9,24 @@
 	description: Description about variables.
  */
 /*
-	section: 1.1
-	title: Colors
-	description: The colors used through out the theme.
- */
- /*
-	section: 1.1.1
-	title: Text colors
-	description: Main text colors for Helsingin yliopisto - Julkiset
-	color-list: grid
-	colors: $white, $black
- */
- /*
-	section: 1.1.2
-	title: Other colors
-	description: The colors used through out the theme.
-	color-list: list
-	colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
- */
+ section: 1.1
+ title: Colors
+ description: The colors used through out the theme.
+*/
+/*
+ section: 1.1.1
+ title: Text colors
+ description: Main text colors for Helsingin yliopisto - Julkiset
+ color-list: grid
+ colors: $white, $black
+*/
+/*
+ section: 1.1.2
+ title: Other colors
+ description: The colors used through out the theme.
+ color-list: list
+ colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
+*/
 /**
  * Mixin for basic paragraph, if one is used in other elements
  */
@@ -40,10 +40,10 @@
  * Mixin for subtitle thin
  */
 /*
-	section: 2
-	title: Typography
-	description: Description about typography.
- */
+ section: 2
+ title: Typography
+ description: Description about typography.
+*/
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2392,17 +2392,17 @@
   content: "";
 }
 
- /*
-	section: 2.1
-	title: Fonts
-	description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
- */
-  /*
-	section: 2.2
-	title: Headings
-  template: 2_2_headings
-	description: Description about typography.
- */
+/*
+ section: 2.1
+ title: Fonts
+ description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
+*/
+/*
+    section: 2.2
+    title: Headings
+    template: 2_2_headings
+    description: Description about typography.
+*/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
   color: #424242;
@@ -2457,12 +2457,12 @@ h4 {
   font-size: 1.3125rem;
 }
 
-  /*
-	section: 2.3
-	title: Paragraphs
-  template: 2_3_paragraphs
-	description: Description about typography.
- */
+/*
+ section: 2.3
+ title: Paragraphs
+ template: 2_3_paragraphs
+ description: Description about typography.
+*/
 /*
 	section: 5
 	title: Navigation
@@ -2711,10 +2711,10 @@ textarea {
 }
 
 /*
-	section: 3
-	title: Common elements
-	description: Description about common elements.
- */
+ section: 3
+ title: Common elements
+ description: Description about common elements.
+*/
 html {
   font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
 }
@@ -2737,11 +2737,11 @@ p {
 }
 
 /*
-	section: 3.1
-	title: Links
-  template: 3_1_links
-	description:
- */
+ section: 3.1
+ title: Links
+ template: 3_1_links
+ description:
+*/
 a {
   color: #0098d0;
   outline: 0;
@@ -2756,11 +2756,11 @@ a:hover, a:active, a:focus {
 }
 
 /*
-	section: 3.2
-	title: Fieldset
-	template: 3_2_fieldset
-	description:
- */
+ section: 3.2
+ title: Fieldset
+ template: 3_2_fieldset
+ description:
+*/
 fieldset {
   border-top: 0 none;
   border-bottom: 1px solid #EBEBEB;
@@ -2786,28 +2786,28 @@ fieldset legend {
 }
 
 /*
-	section: 3.3
-	title: Lists
-	description:
- */
- /*
-	section: 3.3.1
-	title: Unordered list
-	template: 3_3_1_unordered-list
-	description:
- */
- /*
-	section: 3.3.2
-	title: Unordered list
-	template: 3_3_2_ordered-list
-	description:
- */
- /*
-	section: 3.3.3
-	title: Definition list
-	template: 3_3_3_definition-list
-	description:
- */
+ section: 3.3
+ title: Lists
+ description:
+*/
+/*
+ section: 3.3.1
+ title: Unordered list
+ template: 3_3_1_unordered-list
+ description:
+*/
+/*
+ section: 3.3.2
+ title: Unordered list
+ template: 3_3_2_ordered-list
+ description:
+*/
+/*
+ section: 3.3.3
+ title: Definition list
+ template: 3_3_3_definition-list
+ description:
+*/
 dl, menu, ol, ul {
   margin: 0;
   padding: 0;
@@ -2815,22 +2815,22 @@ dl, menu, ol, ul {
 }
 
 /*
-	section: 3.4
-	title: Image
-	template: 3_4_image
-	description:
- */
+ section: 3.4
+ title: Image
+ template: 3_4_image
+ description:
+*/
 img, media {
   max-width: 100%;
   height: auto;
 }
 
 /*
-	section: 3.5
-	title: Blockquote
-  template: 3_5_blockquote
-	description:
- */
+ section: 3.5
+ title: Blockquote
+ template: 3_5_blockquote
+ description:
+*/
 blockquote {
   font-size: 20px;
   font-size: 1.25rem;
@@ -2844,11 +2844,11 @@ blockquote {
 }
 
 /*
-	section: 3.5.1
-	title: Blockquote paragraph
-  template: 3_5_1_blockquote
-	description: Blockquote with a p-element inside.
- */
+ section: 3.5.1
+ title: Blockquote paragraph
+ template: 3_5_1_blockquote
+ description: Blockquote with a p-element inside.
+*/
 blockquote p {
   font-size: 22px;
   font-size: 1.375rem;
@@ -2859,8 +2859,15 @@ blockquote p {
   line-height: 1.1em;
 }
 
-/**
-* Tables
+/*
+ section: 6
+ title: Components
+ description: Description about components.
+*/
+/*
+ section: 6.1
+ title: Table
+ description:
 */
 table {
   width: 100%;
@@ -2872,21 +2879,11 @@ th {
 }
 
 /*
-	section: 6
-	title: Components
-	description: Description about components.
- */
-/*
-	section: 6.1
-	title: Table
-	description:
- */
-/*
-	section: 6.1.1
-	title: Table sortable
-	template: 6_1_1_table-sortable
-	description:
- */
+ section: 6.1.1
+ title: Table sortable
+ template: 6_1_1_table-sortable
+ description:
+*/
 .table-sortable thead tr {
   border: 2px solid #666;
 }
@@ -2942,11 +2939,11 @@ th {
 }
 
 /*
-	section: 6.1.2
-	title: Table simple
-  template: 6_1_2_table-simple
-	description:
- */
+ section: 6.1.2
+ title: Table simple
+ template: 6_1_2_table-simple
+ description:
+*/
 .table-simple {
   font-size: 14px;
   font-size: 0.875rem;
@@ -2999,11 +2996,11 @@ th {
  * Table states
  */
 /*
-	section: 6.1.3
-	title: Table wrapped
-	template: 6_1_3_table-wrapped
-	description:
- */
+ section: 6.1.3
+ title: Table wrapped
+ template: 6_1_3_table-wrapped
+ description:
+*/
 .is-table-wrapped {
   margin-bottom: 20px;
   position: relative;
@@ -3045,11 +3042,11 @@ th {
 }
 
 /*
-	section: 6.1.4
-	title: Table pinned
-	template: 6_1_4_table-pinned
-	description:
- */
+ section: 6.1.4
+ title: Table pinned
+ template: 6_1_4_table-pinned
+ description:
+*/
 .is-table-pinned {
   float: left;
   overflow-x: auto;
@@ -3064,11 +3061,11 @@ th {
 }
 
 /*
-	section: 6.1.5
-	title: Table scrollable
-	template: 6_1_5_table-scrollable
-	description:
- */
+ section: 6.1.5
+ title: Table scrollable
+ template: 6_1_5_table-scrollable
+ description:
+*/
 .is-table-scrollable {
   border-right: 2px dotted #EBEBEB;
   margin-left: 35%;
@@ -3086,17 +3083,17 @@ th {
 }
 
 /*
-	section: 6.2
-	title: List of links
-	template: 6_2_list-of-links
-	description:
- */
- /*
-	section: 6.2.1
-	title: List of links (dark theme)
-	template: 6_2_1_list-of-links-dark-theme
-	description:
- */
+ section: 6.2
+ title: List of links
+ template: 6_2_list-of-links
+ description:
+*/
+/*
+ section: 6.2.1
+ title: List of links (dark theme)
+ template: 6_2_1_list-of-links-dark-theme
+ description:
+*/
 .list-of-links--condensed,
 .list-of-links {
   display: block;
@@ -3218,11 +3215,11 @@ a:hover .theme-dark a.list-of-links__link:hover:after, .theme-dark a.list-of-lin
 }
 
 /*
-	section: 6.2.2
-	title: List of links condensed
-	template: 6_2_2_list-of-links-condensed
-	description:
- */
+ section: 6.2.2
+ title: List of links condensed
+ template: 6_2_2_list-of-links-condensed
+ description:
+*/
 .list-of-links--condensed {
   margin-bottom: 1em;
 }

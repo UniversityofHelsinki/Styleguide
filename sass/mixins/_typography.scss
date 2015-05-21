@@ -1,105 +1,105 @@
 // Use REMs with a pixel fallback for font sizing.
 @mixin font-size($font-size){
-  font-size: $font-size;
-  font-size: ($font-size / $base-font-size)*1rem;
+	font-size: $font-size;
+	font-size: ($font-size / $base-font-size)*1rem;
 }
 
 // Fonts
 @mixin font-family-main {
-  font-family: $font-family-main;
+	font-family: $font-family-main;
 }
 
 @mixin font-family-bodytext {
-  font-family: $font-family-bodytext;
+	font-family: $font-family-bodytext;
 }
 
 
 // Font Awesome
 @mixin font-awesome($unicode : '') {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  @if ($unicode) {
-    content: $unicode;
-  }
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "FontAwesome";
+	@if ($unicode) {
+		content: $unicode;
+	}
 }
 
 // Weights
 @mixin font-weight-light {
-  font-weight: 300;
-  font-style: normal;
+	font-weight: 300;
+	font-style: normal;
 }
 
 @mixin font-weight-book {
-  font-weight: 400;
-  font-style: normal;
+	font-weight: 400;
+	font-style: normal;
 }
 
 @mixin font-weight-medium {
-  font-weight: 600;
-  font-style: normal;
+	font-weight: 600;
+	font-style: normal;
 }
 
 @mixin font-weight-bold {
-  font-weight: 700;
-  font-style: normal;
+	font-weight: 700;
+	font-style: normal;
 }
 
 // Links
 @mixin link-heading {
-  font-weight: 600;
-  text-transform: uppercase;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 // Common text stylings
 @mixin text-paragraph {
-  @include font-size(18px);
-  margin: 0 0 $vert-spacing-unit 0;
-  letter-spacing: 0.01em;
-  line-height: 1.7em;
+	@include font-size(18px);
+	margin: 0 0 $vert-spacing-unit 0;
+	letter-spacing: 0.01em;
+	line-height: 1.7em;
 
-  @include breakpoint($small) {
-    line-height: 1.8em;
-  }
+	@include breakpoint($small) {
+		line-height: 1.8em;
+	}
 }
 
 @mixin text-label {
-  @include font-size(18px);
-  @include font-weight-book;
-  color: $gray;
-  text-transform: none;
+	@include font-size(18px);
+	@include font-weight-book;
+	color: $gray;
+	text-transform: none;
 }
 
 @mixin text-informative {
-  @include font-size(14px);
-  @include font-weight-book;
-  color: $lightgray;
-  line-height: 1.5em;
+	@include font-size(14px);
+	@include font-weight-book;
+	color: $lightgray;
+	line-height: 1.5em;
 }
 
 @mixin text-liftup {
-  @include font-size(22px);
-  @include font-weight-book;
-  color: $silver;
-  line-height: 1.5em;
+	@include font-size(22px);
+	@include font-weight-book;
+	color: $silver;
+	line-height: 1.5em;
 }
 
 @mixin text-filter-label {
-  @include font-size(14px);
-  @include font-weight-book;
-  color: $silver;
-  display: block;
-  margin-bottom: 1em;
-  text-transform: uppercase;
+	@include font-size(14px);
+	@include font-weight-book;
+	color: $silver;
+	display: block;
+	margin-bottom: 1em;
+	text-transform: uppercase;
 }
 
 @mixin text-author {
-  @include font-size(12px);
-  @include font-weight-medium;
-  color: $silver;
-  display: block;
-  margin-bottom: 1em;
-  text-transform: uppercase;
+	@include font-size(12px);
+	@include font-weight-medium;
+	color: $silver;
+	display: block;
+	margin-bottom: 1em;
+	text-transform: uppercase;
 }
 
 // --- OLD STUFF BELOW --- //
@@ -110,11 +110,11 @@
  */
 
 @mixin paragraph {
-  color: $gray;
-  font-family: 'Georgia';
-  font-size: 1.15em;
-  letter-spacing: 0.01em;
-  line-height: 1.8em;
+	color: $gray;
+	font-family: 'Georgia';
+	font-size: 1.15em;
+	letter-spacing: 0.01em;
+	line-height: 1.8em;
 }
 
 /**
@@ -122,14 +122,14 @@
  */
 
 @mixin fatmenu-heading {
-  @include font-weight-bold;
-  color: $white;
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  margin: 1em 0;
-  padding: 0;
-  text-decoration: none;
+	@include font-weight-bold;
+	color: $white;
+	font-size: 1.7em;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	margin: 1em 0;
+	padding: 0;
+	text-decoration: none;
 }
 
 /**
@@ -137,12 +137,12 @@
  */
 
 @mixin subtitle {
-  @include font-weight-medium;
-  color: lighten($black, 33%);
-  font-size: 1.2em;
-  line-height: 1.2em;
-  padding: 0;
-  margin: 0;
+	@include font-weight-medium;
+	color: lighten($black, 33%);
+	font-size: 1.2em;
+	line-height: 1.2em;
+	padding: 0;
+	margin: 0;
 }
 
 /**
@@ -150,10 +150,10 @@
  */
 
 @mixin subtitle-thin {
-  @include font-weight-light;
-  color: lighten($black, 33%);
-  font-size: 1.1em;
-  line-height: 2.4em;
-  padding: 0;
-  margin: 0;
+	@include font-weight-light;
+	color: lighten($black, 33%);
+	font-size: 1.1em;
+	line-height: 2.4em;
+	padding: 0;
+	margin: 0;
 }
