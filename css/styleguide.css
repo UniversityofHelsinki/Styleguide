@@ -320,6 +320,11 @@ table[class*="idean-styleguide"] {
 	position: relative;
 	border-radius: 3px;
 }
+#idean-styleguide .idean-styleguide-demo-example:after {
+	content: ' ';
+	clear: both;
+	display: block;
+}
 #idean-styleguide .idean-styleguide-fullscreen{
 	position: absolute;
 	bottom: 0;
