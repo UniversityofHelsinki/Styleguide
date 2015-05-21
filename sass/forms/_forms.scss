@@ -1,5 +1,209 @@
 /*
-	section: 4
-	title: Forms
-	description: Description about forms.
- */
+ section: 4
+ title: Forms
+ description: Description about forms.
+*/
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+}
+/*
+ section: 4.1
+ title: Forms, Basic
+ description: Basic form elements.
+*/
+ 
+/*
+ section: 4.1.1
+ title: Forms, Select
+ template: 4_1_1_forms-select
+ description: Select form element.
+*/
+select {
+	background: transparent;
+	border: 1px solid darken($lightsilver,20%);
+	padding: 10px 5px;
+	width: 100%;
+}
+ 
+/*
+ section: 4.1.2
+ title: Forms, Checkbox
+ template: 4_1_2_forms-checkbox
+ description: Checkbox form element.
+*/
+.form-type-checkbox {
+	input {
+		display: none;
+	}
+
+	input[type=checkbox]:checked + label:before {
+		@include font-weight-medium;
+		@include font-size(16px);
+		color: $blue;
+		content: "x";
+		line-height: 11px;
+		text-align: center;
+	}
+	
+	label {
+		@include font-size(13px);
+		@include font-weight-medium;
+		color: $gray;
+		cursor: pointer;
+		display: inline-block;
+		line-height: 19px;
+		margin-bottom: 10px;
+		margin-right: 15px;
+		padding-left: 25px;
+		position: relative;
+	}
+
+	label:before {
+		content: "";
+		display: inline-block;
+
+		width: 16px;
+		height: 17px;
+
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		border: 1px solid $blue;
+	}
+
+	@include breakpoint($small) {
+		// @include reset-columns;
+		clear: both;
+	}
+}
+ 
+/*
+ section: 4.1.3
+ title: Forms, Radio
+ template: 4_1_3_forms-radio
+ description: Radio form element.
+*/
+.form-type-radio {
+	clear: right;
+	&:last-child {
+		margin-bottom: 1em;
+	}
+	input {
+		display: none;
+	}
+
+	input[type=radio]:checked + label:before {
+		@include font-size(30px);
+		content: "\2022";
+		color: $blue;
+		text-align: center;
+		line-height: 14px;
+	}
+
+	label {
+		@include font-size(13px);
+		@include font-weight-medium;
+		color: $gray;
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-right: 15px;
+		line-height: 19px;
+		margin-bottom: 5px;
+	}
+
+	label:before {
+		border-radius: 8px;
+		width: 16px;
+		height: 16px;
+
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		border: 1px solid $blue;
+
+		content: "";
+		display: inline-block;
+	}
+}
+
+/*
+ section: 4.1.4
+ title: Forms, Input
+ template: 4_1_4_forms-input
+ description: input form element.
+*/
+.form-type-text {
+	input {
+		@include font-size(16px);
+		@include font-weight-medium;
+		border: 1px solid darken($lightsilver,20%);
+		color: $gray;
+		padding: 10px;
+		width: 100%;
+
+		&.form-submit {
+			width: auto;
+			color: $white;
+			padding: 10px 30px;
+			background-color: $blue;
+		}
+
+		&.error {
+			border: 1px solid $brown;
+		}
+	}
+
+	@include breakpoint($small) {
+		//@include grid-span(8);
+
+		&:nth-child(even) {
+			//@include grid-span(8, 'omega');
+		}
+	}
+
+	label {
+		@include subtitle-thin;
+
+		.form-required {
+			@include subtitle;
+			color: $blue;
+		}
+	}
+
+	.description {
+		@include font-size(12px);
+		@include font-weight-medium;
+		color: $gray;
+		margin-top: 5px;
+	}
+}
+ 
+/*
+ section: 4.1.5
+ title: Forms, Textarea
+ template: 4_1_5_forms-textarea
+ description: Textarea form element.
+*/
+textarea {
+	@include font-size(16px);
+	@include font-weight-medium;
+	border: 1px solid darken($lightsilver,20%);
+	color: $gray;
+	opacity: 1 !important;
+	padding: 10px;
+	width: 100%;
+}
+
+/*
+ section: 4.1.6
+ title: Forms, File
+ template: 4_1_6_forms-file
+ description: File form element.
+*/

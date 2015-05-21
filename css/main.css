@@ -1,4 +1,8 @@
 @charset "UTF-8";
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
 /*
 	section: 1
 	title:Variables
@@ -2465,10 +2469,212 @@ h4 {
 	description: Description about navigation.
  */
 /*
-	section: 4
-	title: Forms
-	description: Description about forms.
- */
+ section: 4
+ title: Forms
+ description: Description about forms.
+*/
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/*
+ section: 4.1
+ title: Forms, Basic
+ description: Basic form elements.
+*/
+/*
+ section: 4.1.1
+ title: Forms, Select
+ template: 4_1_1_forms-select
+ description: Select form element.
+*/
+select {
+  background: transparent;
+  border: 1px solid #b8b8b8;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+/*
+ section: 4.1.2
+ title: Forms, Checkbox
+ template: 4_1_2_forms-checkbox
+ description: Checkbox form element.
+*/
+.form-type-checkbox input {
+  display: none;
+}
+.form-type-checkbox input[type=checkbox]:checked + label:before {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #0098d0;
+  content: "x";
+  line-height: 11px;
+  text-align: center;
+}
+.form-type-checkbox label {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #666;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 19px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+.form-type-checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border: 1px solid #0098d0;
+}
+@media (min-width: 48em) {
+  .form-type-checkbox {
+    clear: both;
+  }
+}
+
+/*
+ section: 4.1.3
+ title: Forms, Radio
+ template: 4_1_3_forms-radio
+ description: Radio form element.
+*/
+.form-type-radio {
+  clear: right;
+}
+.form-type-radio:last-child {
+  margin-bottom: 1em;
+}
+.form-type-radio input {
+  display: none;
+}
+.form-type-radio input[type=radio]:checked + label:before {
+  font-size: 30px;
+  font-size: 1.875rem;
+  content: "\2022";
+  color: #0098d0;
+  text-align: center;
+  line-height: 14px;
+}
+.form-type-radio label {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #666;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  line-height: 19px;
+  margin-bottom: 5px;
+}
+.form-type-radio label:before {
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border: 1px solid #0098d0;
+  content: "";
+  display: inline-block;
+}
+
+/*
+ section: 4.1.4
+ title: Forms, Input
+ template: 4_1_4_forms-input
+ description: input form element.
+*/
+.form-type-text input {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  border: 1px solid #b8b8b8;
+  color: #666;
+  padding: 10px;
+  width: 100%;
+}
+.form-type-text input.form-submit {
+  width: auto;
+  color: #FFF;
+  padding: 10px 30px;
+  background-color: #0098d0;
+}
+.form-type-text input.error {
+  border: 1px solid #974822;
+}
+.form-type-text label {
+  font-weight: 300;
+  font-style: normal;
+  color: #767676;
+  font-size: 1.1em;
+  line-height: 2.4em;
+  padding: 0;
+  margin: 0;
+}
+.form-type-text label .form-required {
+  font-weight: 600;
+  font-style: normal;
+  color: #767676;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 0;
+  margin: 0;
+  color: #0098d0;
+}
+.form-type-text .description {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #666;
+  margin-top: 5px;
+}
+
+/*
+ section: 4.1.5
+ title: Forms, Textarea
+ template: 4_1_5_forms-textarea
+ description: Textarea form element.
+*/
+textarea {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  border: 1px solid #b8b8b8;
+  color: #666;
+  opacity: 1 !important;
+  padding: 10px;
+  width: 100%;
+}
+
+/*
+ section: 4.1.6
+ title: Forms, File
+ template: 4_1_6_forms-file
+ description: File form element.
+*/
 /*
 	section: 3
 	title: Common elements
@@ -2521,9 +2727,27 @@ a:hover, a:active, a:focus {
 	description:
  */
 fieldset {
-  border: none;
+  border-top: 0 none;
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0 none;
+  border-right: 0 none;
+  margin: 0 0 1.5em;
+  padding: 0.5em 0 1em;
+  width: 100%;
+}
+fieldset:last-of-type {
+  border-bottom: 0 none;
   margin: 0;
+  padding-bottom: 0;
+}
+fieldset legend {
+  font-weight: 600;
+  font-style: normal;
+  color: #767676;
+  font-size: 1.2em;
+  line-height: 1.2em;
   padding: 0;
+  margin: 0;
 }
 
 /*
@@ -2598,6 +2822,50 @@ blockquote p {
   display: inline;
   color: #979797;
   line-height: 1.1em;
+}
+
+/**
+ * Default inputs
+ */
+input {
+  -webkit-appearance: none;
+}
+
+.form-submit {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  display: inline-block;
+}
+.form-submit:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.form-submit.js-hide {
+  display: none;
+}
+.form-submit + .form-submit {
+  margin-left: 1em;
+}
+
+/**
+* Tables
+*/
+table {
+  width: 100%;
+}
+
+th {
+  background: none;
+  padding: 0;
 }
 
 /*
