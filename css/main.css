@@ -4,8 +4,110 @@
 	description: Description about variables.
  */
 /*
+	section: 1.1
+	title: Colors
+	description: The colors used through out the theme.
+ */
+ /*
+	section: 1.1.1
+	title: Text colors
+	description: Main text colors for Helsingin yliopisto - Julkiset
+	color-list: grid
+	colors: $white, $black
+ */
+ /*
+	section: 1.1.2
+	title: Other colors
+	description: The colors used through out the theme.
+	color-list: list
+	colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
+ */
+/**
+ * Mixin for basic paragraph, if one is used in other elements
+ */
+/**
+ * Mixin for fatmenu heading
+ */
+/**
+ * Mixin for subtitle
+ */
+/**
+ * Mixin for subtitle thin
+ */
+/*
 	section: 2
 	title: Typography
+	description: Description about typography.
+ */
+ /*
+	section: 2.1
+	title: Fonts
+	description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
+ */
+  /*
+	section: 2.2
+	title: Headings
+  template: 2_2_headings
+	description: Description about typography.
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  color: #424242;
+  letter-spacing: -0.05em;
+  line-height: 1.1em;
+  margin: 0;
+  padding-bottom: 0.4em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+  color: #424242;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: #424242;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.15em;
+  letter-spacing: -2px;
+}
+@media (min-width: 48em) {
+  h1 {
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+}
+
+h2 {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  margin-top: -2px;
+}
+@media (min-width: 62.5em) {
+  h2 {
+    font-size: 38px;
+    font-size: 2.375rem;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+
+  /*
+	section: 2.3
+	title: Paragraphs
+  template: 2_3_paragraphs
 	description: Description about typography.
  */
 /*
@@ -23,6 +125,78 @@
 	title: Common elements
 	description: Description about common elements.
  */
+html {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+}
+
+body {
+  color: #666;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0 0 30px 0;
+  letter-spacing: 0.01em;
+  line-height: 1.7em;
+}
+@media (min-width: 48em) {
+  p {
+    line-height: 1.8em;
+  }
+}
+
+dl, menu, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #0098d0;
+  outline: 0;
+  text-decoration: none;
+}
+a:hover {
+  color: #005479;
+}
+
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+img, media {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  border-left: 10px solid #979797;
+  margin: 20px 10px;
+  padding: 10px 25px;
+  color: #979797;
+  line-height: 1.1em;
+}
+blockquote p {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  color: #979797;
+  line-height: 1.1em;
+}
+
 /*
 	section: 6
 	title: Components

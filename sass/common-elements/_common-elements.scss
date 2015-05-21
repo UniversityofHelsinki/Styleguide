@@ -3,3 +3,63 @@
 	title: Common elements
 	description: Description about common elements.
  */
+html {
+  @include font-family-main;
+}
+
+body {
+  color: $gray;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  @include text-paragraph;
+}
+
+dl, menu, ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $blue;
+  outline: 0;
+  text-decoration: none;
+
+  &:hover {
+    color: $darkblue;
+  }
+}
+
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+img, media {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  @include font-size(20px);
+  @include font-weight-book;
+  border-left: 10px solid $silver;
+  margin: 20px 10px;
+  padding: 10px 25px;
+  color: $silver;
+  line-height: 1.1em;
+
+  p {
+    @include font-size(22px);
+    @include font-weight-book;
+    display: inline;
+    color: $silver;
+    line-height: 1.1em;
+  }
+}

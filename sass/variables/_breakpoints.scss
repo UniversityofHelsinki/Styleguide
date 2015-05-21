@@ -1,0 +1,18 @@
+// Singularity and Breakpoint variables
+$vert-spacing-unit: 30px;
+$horz-spacing-unit: 30px;
+
+$bp-small: 48em;
+$bp-medium: 62.5em;
+$bp-large: 75em;
+
+$mobile-only: max-width $bp-small;
+$small: $bp-small, 'no-query' '.lt-ie9';
+$medium: $bp-medium, 'no-query' '.lt-ie9';
+$large: $bp-large;
+
+$grids: 12;
+$grids: add-grid(16 at $bp-small);
+$output: 'float';
+
+$gutters: $horz-spacing-unit;
