@@ -76,7 +76,7 @@ fieldset {
 
 /*
  section: 3.3.2
- title: Unordered list
+ title: Ordered list
  template: 3_3_2_ordered-list
  description:
 */
@@ -87,7 +87,7 @@ fieldset {
  template: 3_3_3_definition-list
  description:
 */
-dl, menu, ol, ul {
+dl, ol, ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
