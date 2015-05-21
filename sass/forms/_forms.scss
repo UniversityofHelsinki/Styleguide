@@ -9,6 +9,11 @@ button, input, select, textarea {
 	margin: 0;
 	vertical-align: baseline;
 }
+
+input {
+  -webkit-appearance: none;
+}
+
 /*
  section: 4.1
  title: Forms, Basic
@@ -207,3 +212,22 @@ textarea {
  template: 4_1_6_forms-file
  description: File form element.
 */
+
+/*
+ section: 4.1.7
+ title: Forms, Submit
+ template: 4_1_7_forms-submit
+ description: Submit form element.
+*/
+.form-submit {
+  @include button;
+  display: inline-block;
+
+  &.js-hide {
+    display: none;
+  }
+
+  & + & {
+    margin-left: 1em;
+  }
+}

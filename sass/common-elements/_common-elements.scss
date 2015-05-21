@@ -134,28 +134,6 @@ blockquote p {
   line-height: 1.1em;
 }
   
-  
-/**
- * Default inputs
- */
-input {
-  -webkit-appearance: none;
-}
-
-.form-submit {
-  @include button;
-  display: inline-block;
-
-  &.js-hide {
-    display: none;
-  }
-
-  & + & {
-    margin-left: 1em;
-  }
-}
-
-  
 /**
 * Tables
 */

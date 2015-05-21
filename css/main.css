@@ -2480,6 +2480,10 @@ button, input, select, textarea {
   vertical-align: baseline;
 }
 
+input {
+  -webkit-appearance: none;
+}
+
 /*
  section: 4.1
  title: Forms, Basic
@@ -2676,6 +2680,37 @@ textarea {
  description: File form element.
 */
 /*
+ section: 4.1.7
+ title: Forms, Submit
+ template: 4_1_7_forms-submit
+ description: Submit form element.
+*/
+.form-submit {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  display: inline-block;
+}
+.form-submit:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.form-submit.js-hide {
+  display: none;
+}
+.form-submit + .form-submit {
+  margin-left: 1em;
+}
+
+/*
 	section: 3
 	title: Common elements
 	description: Description about common elements.
@@ -2822,38 +2857,6 @@ blockquote p {
   display: inline;
   color: #979797;
   line-height: 1.1em;
-}
-
-/**
- * Default inputs
- */
-input {
-  -webkit-appearance: none;
-}
-
-.form-submit {
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-property: all;
-  transition-property: all;
-  background-color: #0098d0;
-  border: none;
-  color: #FFF;
-  cursor: pointer;
-  display: block;
-  line-height: 125%;
-  padding: 0.9em 1em;
-  display: inline-block;
-}
-.form-submit:hover {
-  background-color: #005479;
-  color: #FFF;
-}
-.form-submit.js-hide {
-  display: none;
-}
-.form-submit + .form-submit {
-  margin-left: 1em;
 }
 
 /**
