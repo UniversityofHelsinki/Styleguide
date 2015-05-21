@@ -2907,6 +2907,197 @@ h4 {
  template: 5_1_2_fat-menu
  description: The fat menu.
 */
+.fatmenu {
+  background-color: #FFF;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+}
+.logged-in .fatmenu {
+  position: static;
+}
+.stickynav-active .fatmenu {
+  position: fixed;
+}
+.fatmenu.is-open {
+  border-bottom: 1px solid #cacaca;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 48em) {
+  .fatmenu {
+    display: block;
+  }
+}
+.fatmenu .menu-block-wrapper {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 0 1em;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+.fatmenu .menu-block-wrapper p.exit {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #005479;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  text-transform: uppercase;
+}
+.fatmenu .menu-block-wrapper p.exit:hover {
+  color: #003146;
+}
+.fatmenu .menu-block-wrapper p.exit:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  padding-right: 5px;
+}
+.fatmenu a {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #0098d0;
+  display: block;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  padding: 15px 0 0;
+}
+.fatmenu .level-1 {
+  float: left;
+  margin-right: -100%;
+  visibility: hidden;
+  padding: 5px 0 10px;
+  width: 100%;
+}
+.fatmenu .level-1.is-open {
+  visibility: visible;
+  display: block !important;
+  margin-right: 0;
+}
+.fatmenu .level-1.is-open > a {
+  display: none;
+}
+.fatmenu .level-2 {
+  margin-right: 10px;
+  padding: 0;
+  width: 30%;
+}
+.fatmenu .level-2 > .menu {
+  margin: 0.5em 0 1em;
+  padding: 0;
+  position: relative;
+}
+.fatmenu .level-2 > .menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-left: 1px solid #EBEBEB;
+}
+.fatmenu .level-2.last {
+  border-bottom: 0 none;
+}
+.fatmenu .level-2 > a {
+  color: #0098d0;
+  position: relative;
+}
+.fatmenu .level-2 > a:hover {
+  color: #005479;
+}
+.fatmenu .level-2 > a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.fatmenu .level-2 > a.active-trail {
+  color: #005479;
+}
+.fatmenu .level-3 a {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  padding: 6px 0 6px 15px;
+  position: relative;
+  text-transform: none;
+}
+.fatmenu .level-3 a:hover, .fatmenu .level-3 a.active-trail {
+  color: #005479;
+}
+.fatmenu .level-3 a.active-trail:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 22px;
+  font-size: 1.375rem;
+  left: 0;
+  top: 7px;
+  position: absolute;
+}
+.fatmenu .level-4 {
+  display: none;
+}
+
+.close-fatmenu {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #0098d0;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 0.8em;
+  position: absolute;
+  text-align: center;
+  right: -5%;
+  top: 0;
+  z-index: 11;
+}
+@media (min-width: 62.5em) {
+  .close-fatmenu {
+    right: -2%;
+  }
+}
+.close-fatmenu:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  transfom: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  color: #979797;
+  left: 0;
+  width: 100%;
+}
+.close-fatmenu:hover:before {
+  -webkit-transform: translateY(-50%) translateZ(0) scale(1.2);
+  transform: translateY(-50%) translateZ(0) scale(1.2);
+  color: #666;
+}
+.close-fatmenu:hover {
+  color: #005479;
+}
+
 /*
  section: 4
  title: Forms
