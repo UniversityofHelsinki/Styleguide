@@ -1,0 +1,52 @@
+/*
+	section: 6.2
+	title: List of links
+	template: 6_2_list-of-links
+	description:
+ */
+ 
+ /*
+	section: 6.2.1
+	title: List of links (dark theme)
+	template: 6_2_1_list-of-links-dark-theme
+	description:
+ */
+%list-of-links,
+.list-of-links {
+  display: block;
+}
+
+.list-of-links__title {
+  @include label-rule(bottom);
+  @include text-label;
+}
+
+a.list-of-links__link,
+.list-of-links__link > a { // We can't always (easily) get this class to the <a> element because of Drupal, so we use this hack
+  @include button-internal;
+  @include font-weight-medium;
+  margin-bottom: 2px;
+
+  .theme-dark & {
+    @include button-internal-dark;
+  }
+}
+
+/*
+	section: 6.2.2
+	title: List of links condensed
+	template: 6_2_2_list-of-links-condensed
+	description:
+ */
+.list-of-links--condensed {
+  @extend %list-of-links;
+  margin-bottom: 1em;
+
+  a.list-of-links__link,
+  .list-of-links__link > a {
+    @include font-weight-book;
+    @include font-size(14px);
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+}

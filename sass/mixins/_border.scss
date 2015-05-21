@@ -1,0 +1,35 @@
+@mixin border-bottom {
+  border-bottom: 1px solid $lightsilver;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+@mixin border-top {
+  border-top: 1px solid $lightsilver;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+@mixin border-left {
+  border-left: 1px solid $lightsilver;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+@mixin border-right {
+  border-right: 1px solid $lightsilver;
+  border-left: 0;
+  border-bottom: 0;
+  border-top: 0;
+}
+
+@mixin border {
+  border: 1px solid $lightsilver;
+}
+
+@mixin border-side($direction) {
+  border-#{$direction}: 1px solid $lightsilver;
+}

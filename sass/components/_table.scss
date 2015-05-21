@@ -139,6 +139,12 @@
  * Table states
  */
 
+/*
+	section: 6.1.3
+	title: Table wrapped
+	template: 6_1_3_table-wrapped
+	description:
+ */
 .is-table-wrapped {
   margin-bottom: 20px;
   position: relative;
@@ -181,6 +187,12 @@
   }
 }
 
+/*
+	section: 6.1.4
+	title: Table pinned
+	template: 6_1_4_table-pinned
+	description:
+ */
 .is-table-pinned {
   float: left;
   overflow-x: auto;
@@ -196,6 +208,12 @@
   }
 }
 
+/*
+	section: 6.1.5
+	title: Table scrollable
+	template: 6_1_5_table-scrollable
+	description:
+ */
 .is-table-scrollable {
   border-right: 2px dotted $lightsilver;
   margin-left: 35%;
