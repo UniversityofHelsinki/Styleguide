@@ -1,6 +1,7 @@
 //Node namespaces
 var fs = require("fs");
 var util = require("util");
+var recursiveReadSync = require('recursive-readdir-sync');
 
 var compile = function(type){
     var sources = buildCssContents(type);
@@ -133,7 +134,7 @@ var getTemplate = function(path){
 
 var getCssContents = function(type) {
 	var css = "";
-    var fileList = fs.readdirSync(uncompiledCssPath);
+    var fileList = recursiveReadSync(uncompiledCssPath);
     var targetList = [];
     var i;
 
@@ -153,7 +154,7 @@ var getCssContents = function(type) {
         }
     }
     for (i = targetList.length - 1; i >= 0; i--) {
-        css = css.concat(fs.readFileSync(uncompiledCssPath + targetList[i]).toString());
+        css = css.concat(fs.readFileSync(targetList[i]).toString());
     }
 
     return css;
