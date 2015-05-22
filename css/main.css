@@ -3082,7 +3082,9 @@ h4 {
   transition-duration: 0.1s;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
-  transfom: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   position: absolute;
   top: 50%;
   color: #979797;
@@ -3931,4 +3933,183 @@ a:hover .theme-dark a.list-of-links__link:hover:after, .theme-dark a.list-of-lin
   font-size: 0.875rem;
   padding-top: 0.8em;
   padding-bottom: 0.8em;
+}
+
+/*
+ section: 6.3
+ title: Accordion
+ template: 6_3_accordion
+ description:
+*/
+.accordion :focus {
+  outline: none;
+}
+
+.accordion__item {
+  margin-bottom: 15px;
+}
+
+.accordion__title {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  background-color: #FFF;
+  border: 2px solid #0098d0;
+  color: #0098d0;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 3em;
+  padding-right: 0;
+  padding-top: 0.8em;
+  position: relative;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.accordion__title:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.accordion__title:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  color: #0098d0;
+  left: 1em;
+  position: absolute;
+}
+.accordion__title.is-active {
+  background-color: #0098d0;
+  color: #FFF;
+}
+.accordion__title.is-active:before {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+  color: #FFF;
+}
+.accordion__title:hover {
+  background-color: #0098d0;
+}
+a:hover .accordion__title:before, .accordion__title:hover:before {
+  color: #FFF;
+}
+
+.accordion__content > .textarea {
+  padding: 20px 10px;
+}
+@media (min-width: 48em) {
+  .accordion__content > .textarea {
+    padding: 20px 40px;
+  }
+}
+
+/*
+ section: 6.3.1
+ title: Accordion (dark)
+ template: 6_3_1_accordion-dark
+ description:
+*/
+.accordion--dark .accordion__title {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  background-color: #FFF;
+  border: 2px solid #0098d0;
+  color: #0098d0;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 3em;
+  padding-right: 0;
+  padding-top: 0.8em;
+  position: relative;
+  background-color: #0098d0;
+  border-color: #0098d0;
+  color: #FFF;
+  /*
+  @include button;
+  padding: 0;
+  height: auto;
+  line-height: 100%;*/
+}
+.accordion--dark .accordion__title:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.accordion--dark .accordion__title:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  color: #0098d0;
+  left: 1em;
+  position: absolute;
+}
+.accordion--dark .accordion__title.is-active {
+  background-color: #0098d0;
+  color: #FFF;
+}
+.accordion--dark .accordion__title.is-active:before {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+  color: #FFF;
+}
+.accordion--dark .accordion__title:hover {
+  background-color: #0098d0;
+}
+a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__title:hover:before {
+  color: #FFF;
+}
+.accordion--dark .accordion__title:hover {
+  background-color: #005479;
+  border-color: #005479;
+}
+.accordion--dark .accordion__title:before {
+  color: #FFF;
+}
+.accordion--dark .accordion__title.is-active {
+  background-color: #005479;
+  border-color: #005479;
+  color: #FFF;
+}
+.accordion--dark .accordion__title.ui-state-active {
+  background-color: #0882B3;
 }

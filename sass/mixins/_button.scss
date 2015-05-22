@@ -57,6 +57,25 @@
 		color: $white;
 	}
 }
+@mixin button-accordion-dark {
+	@include button-accordion;
+	background-color: $blue;
+	border-color: $blue;
+	color: $white;
+	
+	&:hover {
+		background-color: $darkblue;
+		border-color: $darkblue;
+	}
+	&:before {
+		color: $white;	
+	}
+	&.is-active {
+		background-color: $darkblue;
+		border-color: $darkblue;
+		color: $white;
+	}
+}
 
 @mixin button-internal {
 	@include border-side(bottom);
