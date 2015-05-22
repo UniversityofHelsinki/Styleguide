@@ -4141,9 +4141,12 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
   content: ':';
 }
 
-/**
- * Breadcrumbs
- */
+/*
+ section: 6.5
+ title: Breadcrumbs
+ template: 6_5_breadcumbs
+ description:
+*/
 .breadcrumbs {
   font-size: 12px;
   font-size: 0.75rem;
@@ -4189,3 +4192,10 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
   font-weight: 300;
   font-style: normal;
 }
+
+/*
+ section: 6.6
+ title: Carousel
+ template: 6_6_carousel
+ description: No code added yet.
+*/
