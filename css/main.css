@@ -4273,3 +4273,102 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
     border-left: 1px solid #EBEBEB;
   }
 }
+
+/*
+ section: 6.8
+ title: Pagination
+ template: 6_8_pagination
+ description:
+*/
+.pager {
+  margin-top: 30px;
+}
+
+.pager__item {
+  padding: 0;
+}
+
+.pager__item--current,
+.pager__item a {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1em 1.4em;
+  text-transform: none;
+}
+.pager__item--current:hover,
+.pager__item a:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+
+.pager__item,
+.pager__item--current {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.pager__item--current,
+.pager__item--current a {
+  background-color: #005479;
+}
+
+.pager__item--previous,
+.pager__item--next {
+  position: relative;
+}
+.pager__item--previous a:before,
+.pager__item--next a:before {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  background-color: #0882B3;
+  display: inline-block;
+  height: 100%;
+  top: 0;
+  padding: 1em;
+  position: absolute;
+  text-decoration: inherit;
+}
+.pager__item--previous:hover a:before,
+.pager__item--next:hover a:before {
+  background-color: #003146;
+}
+
+.pager__item--previous a {
+  padding-left: 4em;
+}
+.pager__item--previous a:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  left: 0;
+}
+
+.pager__item--next a {
+  padding-right: 4em;
+}
+.pager__item--next a:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  right: 0;
+}
+
+.pager__item--first,
+.pager__item--last {
+  display: none;
+}
