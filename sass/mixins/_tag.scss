@@ -1,0 +1,20 @@
+@mixin tag-label {
+  @include arrow($direction: 'left', $ball: true);
+  @include border;
+  border-left: none;
+  color: $darksilver;
+  display: block;
+  line-height: 27px;
+  margin-left: 12px;
+  padding: 0 1em 0 1.5em;
+  position: relative;
+
+  // "Fugly" selector hack
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $darkblue;
+    }
+  }
+}

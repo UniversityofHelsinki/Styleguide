@@ -1,0 +1,43 @@
+/*
+ section: 6.9
+ title: Tag list
+ template: 6_9_tag-list
+ description:
+*/
+%tag-list,
+.tag-list {
+	display: block;
+	overflow: hidden;
+}
+
+%tag-list__title,
+.tag-list__title {
+	@include text-informative;
+	display: block;
+	padding-bottom: 1em;
+
+	@include breakpoint($large) {
+		display: table-cell;
+		vertical-align: top;
+		width: 200px;
+	}
+}
+
+%tag-list__links,
+.tag-list__links {
+	@include breakpoint($small) {
+		display: table-cell;
+	}
+}
+
+%tag-list__link,
+.tag-list__link {
+	// @include transition-scale(1.05);
+	@include tag-label;
+	@include font-size(11px);
+	@include font-weight-medium;
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
