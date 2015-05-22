@@ -1,0 +1,21 @@
+/*
+ section: 6.4
+ title: Author
+ template: 6_4_author
+ description:
+*/
+.author {
+	@include text-author;
+	margin-bottom: 0;
+	margin-top: 0.7em;
+
+	@include breakpoint($small) {
+		margin-bottom: 0.4em;
+	}
+
+	.author__label {
+		&:after {
+			content: ':';
+		}
+	}
+}
