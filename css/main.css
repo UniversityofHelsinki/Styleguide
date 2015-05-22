@@ -4078,22 +4078,35 @@ th {
  template: 6_1_2_table-simple
  description:
 */
+.textarea table,
+.box-ingress__content table,
 .table-simple {
   font-size: 14px;
   font-size: 0.875rem;
 }
+.textarea table tr,
+.box-ingress__content table tr,
 .table-simple tr {
   background-color: #fafafa;
 }
+.textarea table tr th,
+.box-ingress__content table tr th,
 .table-simple tr th {
   background-color: #f2f2f2;
 }
+.textarea table tr:nth-of-type(2n),
+.box-ingress__content table tr:nth-of-type(2n),
 .table-simple tr:nth-of-type(2n) {
   background-color: #FFF;
 }
+.textarea table tr:nth-of-type(2n) th,
+.box-ingress__content table tr:nth-of-type(2n) th,
 .table-simple tr:nth-of-type(2n) th {
   background-color: #fafafa;
 }
+.textarea table td,
+.box-ingress__content table td, .textarea table th,
+.box-ingress__content table th,
 .table-simple td,
 .table-simple th {
   font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
@@ -4102,6 +4115,11 @@ th {
   padding: 0.7em 0.9em;
   vertical-align: top;
 }
+.textarea table td a,
+.box-ingress__content table td a, .textarea table td a.active,
+.box-ingress__content table td a.active, .textarea table th a,
+.box-ingress__content table th a, .textarea table th a.active,
+.box-ingress__content table th a.active,
 .table-simple td a,
 .table-simple td a.active,
 .table-simple th a,
@@ -4109,6 +4127,11 @@ th {
   color: #0098d0;
   text-decoration: none;
 }
+.textarea table td a:hover,
+.box-ingress__content table td a:hover, .textarea table td a.active:hover,
+.box-ingress__content table td a.active:hover, .textarea table th a:hover,
+.box-ingress__content table th a:hover, .textarea table th a.active:hover,
+.box-ingress__content table th a.active:hover,
 .table-simple td a:hover,
 .table-simple td a.active:hover,
 .table-simple th a:hover,
@@ -4116,10 +4139,16 @@ th {
   text-decoration: none;
   color: #0882B3;
 }
+.textarea table td.active,
+.box-ingress__content table td.active, .textarea table th.active,
+.box-ingress__content table th.active,
 .table-simple td.active,
 .table-simple th.active {
   color: #666;
 }
+.textarea table td:first-child,
+.box-ingress__content table td:first-child, .textarea table th:first-child,
+.box-ingress__content table th:first-child,
 .table-simple td:first-child,
 .table-simple th:first-child {
   font-weight: 700;
@@ -4911,6 +4940,93 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 }
 
 /*
+ section: 6.11
+ title: textarea
+ description: Basic component used in multiple row textareas with links, headings, lists and so on.
+*/
+.textarea,
+.box-ingress__content,
+.box-ingress__content p {
+  font-family: Georgia;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.8em;
+}
+.textarea ul, .textarea ol,
+.box-ingress__content ul,
+.box-ingress__content ol {
+  margin-bottom: 30px;
+}
+.textarea li,
+.box-ingress__content li {
+  margin-bottom: 0.5em;
+}
+.textarea ul,
+.box-ingress__content ul {
+  padding-left: 1.5em;
+  position: relative;
+}
+.textarea ul li,
+.box-ingress__content ul li {
+  list-style-type: none;
+}
+.textarea ul li:before,
+.box-ingress__content ul li:before {
+  font-size: 9px;
+  font-size: 0.5625rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: #0098d0;
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+}
+.textarea ol,
+.box-ingress__content ol {
+  counter-reset: item;
+  padding-left: 1.5em;
+  position: relative;
+}
+.textarea ol li,
+.box-ingress__content ol li {
+  display: block;
+}
+.textarea ol li:before,
+.box-ingress__content ol li:before {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-weight: 700;
+  font-style: normal;
+  color: #0098d0;
+  content: counter(item) ". ";
+  counter-increment: item;
+  left: 0;
+  line-height: 1.7em;
+  position: absolute;
+}
+.textarea h3,
+.box-ingress__content h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.textarea table,
+.box-ingress__content table {
+  line-height: normal;
+  margin-bottom: 2em;
+}
+
+/**
+ * textarea-initial
+ * An element (usually an image) floated left before a textarea.
+ */
+.textarea-initial {
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
+/*
  section: 6.10
  title: Box
  description:
@@ -5525,4 +5641,46 @@ a:hover a.box-hero__link:hover:after, a.box-hero__link:hover:after, a:hover
   font-style: normal;
   line-height: 45px;
   padding: 0 0.35em;
+}
+
+/*
+ section: 6.10.4
+ title: Box ingress
+ template: 6_10_4_box-ingress
+ description: TODO: write documentation
+*/
+/**
+ * box-ingress
+ * TODO: write documentation
+ */
+.box-ingress {
+  *zoom: 1;
+  clear: both;
+}
+.box-ingress:before, .box-ingress:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.box-ingress:after {
+  clear: both;
+}
+
+.box-ingress__image {
+  margin-bottom: 2em;
+}
+@media (min-width: 48em) {
+  .box-ingress__image {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 2em;
+    max-width: 270px;
+  }
+}
+
+.box-ingress__content, .box-ingress__content p {
+  color: #666;
+  letter-spacing: 0.01em;
+  line-height: 1.7em;
 }

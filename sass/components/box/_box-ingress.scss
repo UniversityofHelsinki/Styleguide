@@ -1,0 +1,37 @@
+/*
+ section: 6.10.4
+ title: Box ingress
+ template: 6_10_4_box-ingress
+ description: TODO: write documentation
+*/
+
+/**
+ * box-ingress
+ * TODO: write documentation
+ */
+
+.box-ingress {
+	@include clearfix;
+}
+
+.box-ingress__image {
+	margin-bottom: 2em;
+
+	@include breakpoint($small) {
+		float: left;
+		margin-bottom: 0;
+		margin-right: 2em;
+		max-width: 270px;
+	}
+}
+
+.box-ingress__content {
+	@extend %textarea;
+	color: $gray;
+	letter-spacing: 0.01em;
+	line-height: 1.7em;
+	
+	p {
+		@extend .box-ingress__content;
+	}
+}
