@@ -3099,6 +3099,76 @@ h4 {
 }
 
 /*
+ section: 5.2
+ title: Side menu
+ template: 5_2_side-menu
+ description: The side menu.
+*/
+.sidemenu {
+  margin: 1em 0;
+  padding-left: 1.25em;
+}
+.sidemenu li {
+  padding-bottom: 0.75em;
+  padding-top: 0.75em;
+}
+.sidemenu a {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #0098d0;
+  display: block;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.sidemenu a:hover {
+  color: #005479;
+}
+.sidemenu a.active-trail {
+  color: #005479;
+}
+.sidemenu .level-2 {
+  border-bottom: 1px solid #EBEBEB;
+}
+.sidemenu .level-2 > .menu {
+  display: none;
+  border-left: 1px solid #EBEBEB;
+  margin: 1em 0;
+  padding: 0;
+}
+.sidemenu .level-2.active-trail > .menu {
+  display: block;
+}
+.sidemenu .level-2.last {
+  border-bottom: 0 none;
+}
+.sidemenu .level-3 a {
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  padding-left: 1.25em;
+  position: relative;
+  text-transform: none;
+}
+.sidemenu .level-3 a:hover, .sidemenu .level-3 a.active-trail {
+  color: #005479;
+}
+.sidemenu .level-3 a.active-trail:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 22px;
+  font-size: 1.375rem;
+  left: 0;
+  top: 1px;
+  position: absolute;
+}
+
+/*
  section: 4
  title: Forms
  description: Description about forms.
