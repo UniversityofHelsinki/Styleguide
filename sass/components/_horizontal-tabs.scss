@@ -1,0 +1,75 @@
+/*
+ section: 6.7
+ title: Horizontal tabs
+ template: 6_7_horizontal-tabs
+ description:
+*/
+// NOTE: this is not smacss because the field group horizontal-tabs.js produces shitty markup
+.horizontal-tabs {
+	.horizontal-tabs-list {
+		box-shadow: 0 -10px 16px -18px $black inset;
+		margin-bottom: $vert-spacing-unit*2;
+	}
+
+	.horizontal-tabs-pane {
+		legend {
+			display: none;
+		}
+	}
+
+	.horizontal-tab-button {
+		margin-bottom: 2px;
+		outline: none;
+
+		> a {
+			@include link-heading;
+			@include button;
+		}
+
+		&.selected {
+			> a {
+				background-color: $darkblue;
+				color: $white;
+			}
+		}
+	}
+
+	@include breakpoint($small) {
+		.horizontal-tab-button {
+			@include link-heading;
+			background: none;
+			border-bottom: none;
+			border-right: 1px solid $lightsilver;
+			border-top: 1px solid $lightsilver;
+			color: $white;
+			display: inline-block;
+			margin: 0;
+
+			> a {
+				background: none;
+				color: $blue;
+				display: block;
+				padding: 1em 3em;
+			}
+
+			&.selected a,
+			&:hover > a {
+				transition-property: all;
+				background-color: rgba(255,255,255,1);
+				color: $darkblue;
+			}
+
+			&:not(.selected) {
+				box-shadow: 11px 5px 13px -18px $black inset;
+
+				&:first-child {
+					box-shadow: none;
+				}
+			}
+
+			&:first-child {
+				border-left: 1px solid $lightsilver;
+			}
+		}
+	}
+}

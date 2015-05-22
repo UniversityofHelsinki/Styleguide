@@ -4199,3 +4199,77 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
  template: 6_6_carousel
  description: No code added yet.
 */
+/*
+ section: 6.7
+ title: Horizontal tabs
+ template: 6_7_horizontal-tabs
+ description:
+*/
+.horizontal-tabs .horizontal-tabs-list {
+  box-shadow: 0 -10px 16px -18px #222 inset;
+  margin-bottom: 60px;
+}
+.horizontal-tabs .horizontal-tabs-pane legend {
+  display: none;
+}
+.horizontal-tabs .horizontal-tab-button {
+  margin-bottom: 2px;
+  outline: none;
+}
+.horizontal-tabs .horizontal-tab-button > a {
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+}
+.horizontal-tabs .horizontal-tab-button > a:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.horizontal-tabs .horizontal-tab-button.selected > a {
+  background-color: #005479;
+  color: #FFF;
+}
+@media (min-width: 48em) {
+  .horizontal-tabs .horizontal-tab-button {
+    font-weight: 600;
+    text-transform: uppercase;
+    background: none;
+    border-bottom: none;
+    border-right: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+    color: #FFF;
+    display: inline-block;
+    margin: 0;
+  }
+  .horizontal-tabs .horizontal-tab-button > a {
+    background: none;
+    color: #0098d0;
+    display: block;
+    padding: 1em 3em;
+  }
+  .horizontal-tabs .horizontal-tab-button.selected a, .horizontal-tabs .horizontal-tab-button:hover > a {
+    -webkit-transition-property: all;
+    transition-property: all;
+    background-color: white;
+    color: #005479;
+  }
+  .horizontal-tabs .horizontal-tab-button:not(.selected) {
+    box-shadow: 11px 5px 13px -18px #222 inset;
+  }
+  .horizontal-tabs .horizontal-tab-button:not(.selected):first-child {
+    box-shadow: none;
+  }
+  .horizontal-tabs .horizontal-tab-button:first-child {
+    border-left: 1px solid #EBEBEB;
+  }
+}
