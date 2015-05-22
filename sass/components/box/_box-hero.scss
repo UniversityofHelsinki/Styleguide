@@ -1,0 +1,81 @@
+/*
+ section: 6.10.3
+ title: Box hero
+ template: 6_10_3_box-hero
+ description: Box-hero is the main story (for example, front page carousel content)
+*/
+
+%box-hero,
+.box-hero {
+	margin: 0 auto;
+	text-align: center;
+
+	@include breakpoint($large) {
+		text-align: left;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	@include breakpoint($large) {
+		/* TODO: Readd */
+		/*@include grid-span(7, 1);*/
+		margin: 0;
+	}
+}
+
+.box-hero__title {
+	@include font-size(40px);
+	@include text-shadow-outline-bold(#000000);
+	color: $white;
+	line-height: 105%;
+	margin-bottom: $vert-spacing-unit*0.7;
+	word-wrap: break-word;
+
+	@include breakpoint($small) {
+		@include font-size(54px);
+	}
+
+	&:only-child {
+		margin: 0;
+	}
+}
+
+.box-hero__content {
+	@include font-family-main;
+	@include text-liftup;
+	@include font-size(20px);
+	@include text-shadow-outline-bold(#000000);
+	color: $white;
+	font-weight: 600;
+	line-height: 1.25em;
+	margin-bottom: $vert-spacing-unit*0.7;
+
+	@include breakpoint($small) {
+		@include font-size(24px);
+	}
+}
+
+a.box-hero__link,
+.box-hero__link > a  {
+	@include button-internal-dark;
+	@include font-weight-medium;
+	display: inline-block;
+	padding-right: 6em;
+	text-align: left;
+}
+
+.box-hero__link.is-videolink {
+	a:after {
+		@include font-awesome('\f01d');
+		@include font-size(30px);
+		@include font-weight-light;
+		line-height: 45px;
+		padding: 0 0.35em;
+	}
+}
