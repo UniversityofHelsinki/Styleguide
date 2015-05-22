@@ -4024,7 +4024,12 @@ a:hover .theme-dark a.list-of-links__link:hover:after, .theme-dark a.list-of-lin
 /*
  section: 6.3
  title: Accordion
- template: 6_3_accordion
+ description:
+*/
+/*
+ section: 6.3.1
+ title: Accordion normal
+ template: 6_3_1_accordion-normal
  description:
 */
 .accordion :focus {
@@ -4111,9 +4116,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before {
 }
 
 /*
- section: 6.3.1
+ section: 6.3.2
  title: Accordion (dark)
- template: 6_3_1_accordion-dark
+ template: 6_3_2_accordion-dark
  description:
 */
 .accordion--dark .accordion__title {

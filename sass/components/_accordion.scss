@@ -1,11 +1,16 @@
 /*
  section: 6.3
  title: Accordion
- template: 6_3_accordion
  description:
 */
 
 
+/*
+ section: 6.3.1
+ title: Accordion normal
+ template: 6_3_1_accordion-normal
+ description:
+*/
 .accordion {
 	:focus {
 		outline: none;
@@ -34,9 +39,9 @@
 }
 
 /*
- section: 6.3.1
+ section: 6.3.2
  title: Accordion (dark)
- template: 6_3_1_accordion-dark
+ template: 6_3_2_accordion-dark
  description:
 */
 .accordion--dark {
