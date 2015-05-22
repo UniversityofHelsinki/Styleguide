@@ -4,8 +4,6 @@
  description: Description about typography.
 */
  
-@import 'font-awesome/_font-awesome';
- 
 /*
  section: 2.1
  title: Fonts
@@ -71,3 +69,10 @@ h4 {
  template: 2_3_paragraphs
  description: Description about typography.
 */
+
+/*
+ section: 2.4
+ title: Icons
+ description: font-awesome is used for icons.
+*/
+@import 'font-awesome/_font-awesome';
