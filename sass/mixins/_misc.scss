@@ -1,0 +1,80 @@
+.ui-tabs-hide {
+	display: none;
+}
+
+.border-bottom {
+	@include border-bottom;
+}
+
+.regional-rule-top {
+	@include regional-rule-top($lightsilver);
+}
+
+.regional-rule-bottom {
+	@include regional-rule-bottom($lightsilver);
+}
+
+.horizontal-rule-top {
+	@include horizontal-rule(top);
+}
+
+.horizontal-rule-bottom {
+	@include horizontal-rule(bottom);
+}
+
+.tiedekulma-embed {
+	display: inline-block;
+	margin-bottom: 0.5em;
+	position: relative;
+	width: 100%;
+
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 55%; // Aspect ratio of 322 x 190
+	}
+
+	> * {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+}
+
+.link-wrapper {
+	display: block;
+	height: 100%;
+}
+
+.float-left {
+	float:left;
+}
+
+.float-right {
+	float:right;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+@mixin clearfix {
+	*zoom: 1;
+	clear: both;
+
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+.clearfix {
+	@include clearfix;
+	clear: both;
+}

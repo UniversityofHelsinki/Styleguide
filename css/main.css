@@ -46,6 +46,94 @@
 /**
  * Mixin for subtitle thin
  */
+.ui-tabs-hide {
+  display: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.regional-rule-top {
+  border-top: 1px solid #EBEBEB;
+  background: transparent url("../images/bg_shadow.png") no-repeat top center;
+  background-size: 100% auto;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.regional-rule-bottom {
+  border-bottom: 1px solid #EBEBEB;
+  background: transparent url("../images/bg_shadow.png") no-repeat top center;
+  background-size: 100% auto;
+}
+
+.horizontal-rule-top {
+  border-top: 1px solid #EBEBEB;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.horizontal-rule-bottom {
+  border-bottom: 1px solid #EBEBEB;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.tiedekulma-embed {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  position: relative;
+  width: 100%;
+}
+.tiedekulma-embed:after {
+  content: '';
+  display: block;
+  padding-top: 55%;
+}
+.tiedekulma-embed > * {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.link-wrapper {
+  display: block;
+  height: 100%;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+  clear: both;
+  clear: both;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+
 /*
  section: 2
  title: Typography
