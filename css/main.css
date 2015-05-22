@@ -5027,3 +5027,97 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 .box-application__link > a {
   display: block;
 }
+
+/*
+ section: 6.10.2
+ title: Box data
+ template: 6_10_2_box-data
+ description: Data is story-like component, but mainly with data insertions e.g. event list.
+*/
+.box-data {
+  display: block;
+  padding: 15px 0;
+}
+@media (min-width: 48em) {
+  .box-data {
+    display: table;
+    width: 100%;
+  }
+}
+
+.box-data__title, .box-data__date {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.box-data__date {
+  background-color: #666;
+  color: #FFF;
+  display: block;
+  float: left;
+  height: 55px;
+  line-height: 1em;
+  margin: 0 20px 0px 0;
+  width: 55px;
+  position: relative;
+}
+@media (min-width: 48em) {
+  .box-data__date {
+    margin: 0 15px 0 0;
+  }
+}
+.box-data__date > span {
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin: -15px auto 0 auto;
+  text-align: center;
+}
+
+.box-data__content {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+}
+
+.box-data__link {
+  border-bottom: 1px solid #EBEBEB;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-right: 2em;
+  padding-top: 0.8em;
+  position: relative;
+}
+.box-data__link:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+a:hover .box-data__link:after, .box-data__link:hover:after {
+  color: #005479;
+}

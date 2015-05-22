@@ -1,0 +1,57 @@
+/*
+ section: 6.10.2
+ title: Box data
+ template: 6_10_2_box-data
+ description: Data is story-like component, but mainly with data insertions e.g. event list.
+*/
+
+%box-data,
+.box-data {
+	display: block;
+	padding: 15px 0;
+
+	@include breakpoint($small) {
+		display: table;
+		width: 100%;
+	}
+}
+
+.box-data__title {
+	@include text-informative;
+	@include font-family-main;
+	@include font-weight-medium;
+}
+
+.box-data__date {
+	@extend .box-data__title;
+	background-color: $gray;
+	color: $white;
+	display: block;
+	float: left;
+	height: 55px;
+	line-height: 1em;
+	margin: 0 20px 0px 0;
+	width: 55px;
+	position: relative;
+
+	@include breakpoint($small) {
+		margin: 0 15px 0 0;
+	}
+
+	> span {
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		margin: -15px auto 0 auto;
+		text-align: center;
+	}
+}
+
+.box-data__content {
+	@include text-informative;
+	@include font-family-main;
+}
+
+.box-data__link {
+	@include button-internal;
+}
