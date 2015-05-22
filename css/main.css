@@ -3413,6 +3413,92 @@ textarea {
 }
 
 /*
+ section: 4.2
+ title: Search form
+ description: The search form.
+*/
+/*
+ section: 4.2.1
+ title: Search form, normal
+ template: 4_2_1_search-form
+ description: The search form for desktop.
+*/
+.search-form {
+  display: none;
+  position: relative;
+}
+@media (min-width: 48em) {
+  .search-form {
+    display: block;
+  }
+}
+
+/*
+ section: 4.2.2
+ title: Search form, mobile
+ template: 4_2_2_search-form-mobile
+ description: The search form for mobile.
+*/
+.search-form-mobile {
+  background-color: #222;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  padding: 14px 52px;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .search-form-mobile {
+    display: none;
+  }
+}
+.search-form-mobile form {
+  position: relative;
+}
+
+.search-form__input {
+  background: #424242;
+  border: none;
+  color: #FFF;
+  line-height: 34px;
+  margin-bottom: 0;
+  max-width: 100%;
+  min-height: 34px;
+  padding-left: 12px;
+  padding-right: 34px;
+  width: 100%;
+}
+.search-form__input:focus {
+  outline-color: #0098d0;
+}
+@media (min-width: 48em) {
+  .search-form__input {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+
+.search-form__submit {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  background-color: transparent;
+  height: 36px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
+}
+.search-form__input:focus + .search-form__submit {
+  color: #0098d0;
+}
+.search-form__input:focus + .search-form__submit:hover {
+  color: #FFF;
+}
+
+/*
  section: 3
  title: Common elements
  description: Description about common elements.
