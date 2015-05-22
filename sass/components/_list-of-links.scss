@@ -1,14 +1,13 @@
 /*
  section: 6.2
  title: List of links
- template: 6_2_list-of-links
  description:
 */
 
 /*
  section: 6.2.1
- title: List of links (dark theme)
- template: 6_2_1_list-of-links-dark-theme
+ title: List of links, normal
+ template: 6_2_1_list-of-links-normal
  description:
 */
 %list-of-links,
@@ -21,6 +20,12 @@
 	@include text-label;
 }
 
+/*
+ section: 6.2.2
+ title: List of links, dark theme
+ template: 6_2_2_list-of-links-dark-theme
+ description:
+*/
 a.list-of-links__link,
 .list-of-links__link > a { // We can't always (easily) get this class to the <a> element because of Drupal, so we use this hack
 	@include button-internal;
@@ -33,9 +38,9 @@ a.list-of-links__link,
 }
 
 /*
- section: 6.2.2
- title: List of links condensed
- template: 6_2_2_list-of-links-condensed
+ section: 6.2.3
+ title: List of links, condensed
+ template: 6_2_3_list-of-links-condensed
  description:
 */
 .list-of-links--condensed {
