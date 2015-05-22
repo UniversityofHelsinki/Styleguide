@@ -4113,3 +4113,79 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 .accordion--dark .accordion__title.ui-state-active {
   background-color: #0882B3;
 }
+
+/*
+ section: 6.4
+ title: Author
+ template: 6_4_author
+ description:
+*/
+.author {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #979797;
+  display: block;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0.7em;
+}
+@media (min-width: 48em) {
+  .author {
+    margin-bottom: 0.4em;
+  }
+}
+.author .author__label:after {
+  content: ':';
+}
+
+/**
+ * Breadcrumbs
+ */
+.breadcrumbs {
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 1em 0 0.3em;
+}
+@media (min-width: 48em) {
+  .breadcrumbs {
+    margin: 0;
+  }
+}
+
+.breadcrumbs__item {
+  display: inline;
+  margin-right: 0.2em;
+}
+.breadcrumbs__item a {
+  font-weight: 600;
+  font-style: normal;
+  color: #0098d0;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.breadcrumbs__item a:hover {
+  color: #0882B3;
+}
+
+.breadcrumbs__divider {
+  font-weight: 600;
+  font-style: normal;
+  color: #0098d0;
+  display: inline;
+  margin-right: 0.5em;
+}
+
+.breadcrumbs__home a:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+}

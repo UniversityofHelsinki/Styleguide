@@ -1,0 +1,48 @@
+/*
+ section: 6.5
+ title: Breadcrumbs
+ template: 6_5_breadcumbs
+ description:
+*/
+.breadcrumbs {
+	@include font-size(12px);
+	margin: 1em 0 0.3em;
+
+	@include breakpoint($small) {
+		margin: 0;
+	}
+}
+
+.breadcrumbs__item {
+	display: inline;
+	margin-right: 0.2em;
+
+	a {
+		@include font-weight-medium;
+		color: $blue;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover {
+			color: $blue--active;
+		}
+	}
+}
+
+.breadcrumbs__divider {
+	@include font-weight-medium;
+	color: $blue;
+	display: inline;
+	margin-right: 0.5em;
+}
+
+.breadcrumbs__home a {
+	&:after {
+		@include font-awesome("\f015");
+		// @include font-awesome("\f19c");
+		@include font-size(16px);
+		@include font-weight-light;
+	}
+}
+
