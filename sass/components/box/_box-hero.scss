@@ -23,8 +23,7 @@
 	}
 
 	@include breakpoint($large) {
-		/* TODO: Readd */
-		/*@include grid-span(7, 1);*/
+		@include grid-span(7, 1);
 		margin: 0;
 	}
 }

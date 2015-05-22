@@ -8,6 +8,7 @@
     "gulp-concat": "*",
     "gulp-notify": "*",
     "gulp-ruby-sass": "*",
+    "gulp-compass": "2.1.0",
     "gulp-util": "*",
     "gulp-watch": "*",
     "gulp-autoprefixer": "^2.2.0",

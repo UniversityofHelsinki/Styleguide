@@ -1,6 +1,13 @@
-*, *:after, *:before {
-	box-sizing: border-box;
-}
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit";
+
+// Generate normalize.css.
+@import "normalize";
+
+@import "toolkit/kickstart";
 
 @import 'variables/_variables';
 @import 'mixins/_mixins';

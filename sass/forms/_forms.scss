@@ -166,10 +166,11 @@ select {
 	}
 
 	@include breakpoint($small) {
-		//@include grid-span(8);
+		@include grid-span(8);
 
 		&:nth-child(even) {
-			//@include grid-span(8, 'omega');
+			// Todo: what's omega?
+			//@include grid-span(8, omega);
 		}
 	}
 
