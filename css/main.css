@@ -4209,14 +4209,8 @@ textarea {
 
 /*
  section: 4.1.6
- title: Forms, File
- template: 4_1_6_forms-file
- description: File form element.
-*/
-/*
- section: 4.1.7
  title: Forms, Submit
- template: 4_1_7_forms-submit
+ template: 4_1_6_forms-submit
  description: Submit form element.
 */
 .form-submit {
@@ -4471,6 +4465,281 @@ blockquote p {
   display: inline;
   color: #979797;
   line-height: 1.1em;
+}
+
+/*
+ section: 3.5
+ title: Buttons
+ description: 
+*/
+/*
+ section: 3.5.1
+ title: Button
+ template: 3_5_1-button
+ description: 
+*/
+.btn {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+}
+.btn:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+
+/*
+ section: 3.5.2
+ title: Button dark
+ template: 3_5_2-button-dark
+ description: 
+*/
+.btn-dark {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+}
+.btn-dark:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+
+/*
+ section: 3.5.3
+ title: Button internal
+ template: 3_5_3-button-internal
+ description: 
+*/
+.btn-internal {
+  border-bottom: 1px solid #EBEBEB;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-right: 2em;
+  padding-top: 0.8em;
+  position: relative;
+}
+.btn-internal:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+a:hover .btn-internal:after, .btn-internal:hover:after {
+  color: #005479;
+}
+
+/*
+ section: 3.5.4
+ title: Button internal dark
+  template: 3_5_4-button-internal-dark
+ description: 
+*/
+.btn-internal-dark {
+  border-bottom: 1px solid #EBEBEB;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-right: 2em;
+  padding-top: 0.8em;
+  position: relative;
+  background: #0098d0;
+  border: none;
+  color: #FFF;
+  overflow: visible;
+  padding-left: 1em;
+  padding-right: 3em;
+}
+.btn-internal-dark:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+a:hover .btn-internal-dark:after, .btn-internal-dark:hover:after {
+  color: #005479;
+}
+.btn-internal-dark:after {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: padding;
+  transition-property: padding;
+  background-color: #0882B3;
+  color: #FFF;
+  line-height: 2.8em;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  top: 0;
+}
+.btn-internal-dark:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+a:hover .btn-internal-dark:hover:after, .btn-internal-dark:hover:after {
+  background: #003146;
+  color: #FFF;
+}
+
+/*
+ section: 3.5.5
+ title: Button anchor
+ template: 3_5_5-button-anchor
+ description: 
+*/
+.btn-anchor {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  overflow: hidden;
+  padding-left: 1.5em;
+  position: relative;
+}
+.btn-anchor:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #0098d0;
+  height: 100%;
+  left: 0;
+  line-height: 1.9em;
+  position: absolute;
+  top: 0;
+}
+a:hover .btn-anchor:before, .btn-anchor:hover:before {
+  color: #005479;
+}
+
+/*
+ section: 3.5.6
+ title: Button anchor up
+ template: 3_5_6-button-anchor-up
+ description: 
+*/
+.btn-anchor-up {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-style: normal;
+  background: #0098d0;
+  color: #FFF;
+  display: inline-block;
+  height: 60px;
+  line-height: 1.2em;
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
+}
+.btn-anchor-up:hover {
+  background-color: #005479;
+}
+.btn-anchor-up:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #FFF;
+  height: 100%;
+  left: 23px;
+  position: absolute;
+  top: 10px;
+}
+
+/*
+ section: 3.5.7
+ title: Button tag
+ template: 3_5_7-button-tag
+ description: 
+*/
+.btn-tag {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
+  border: 1px solid #EBEBEB;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  background: #EBEBEB;
+  border-color: #d2d2d2;
+  color: #424242;
+  cursor: default;
+  padding: 2px 0.4em;
+}
+.btn-tag:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.btn-tag a {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #005479;
+  cursor: pointer;
+  margin-left: 3px;
+}
+.btn-tag a:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+}
+.btn-tag:hover a {
+  color: #37c9ff;
 }
 
 /*

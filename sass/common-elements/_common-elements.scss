@@ -128,3 +128,79 @@ blockquote p {
 	color: $silver;
 	line-height: 1.1em;
 }
+
+/*
+ section: 3.5
+ title: Buttons
+ description: 
+*/
+
+/*
+ section: 3.5.1
+ title: Button
+ template: 3_5_1-button
+ description: 
+*/
+.btn {
+	@include button;
+}
+
+/*
+ section: 3.5.2
+ title: Button dark
+ template: 3_5_2-button-dark
+ description: 
+*/
+.btn-dark {
+	@include button;
+}
+
+/*
+ section: 3.5.3
+ title: Button internal
+ template: 3_5_3-button-internal
+ description: 
+*/
+.btn-internal {
+	@include button-internal;
+}
+
+/*
+ section: 3.5.4
+ title: Button internal dark
+  template: 3_5_4-button-internal-dark
+ description: 
+*/
+.btn-internal-dark {
+	@include button-internal-dark;
+}
+
+/*
+ section: 3.5.5
+ title: Button anchor
+ template: 3_5_5-button-anchor
+ description: 
+*/
+.btn-anchor {
+	@include button-anchor;
+}
+
+/*
+ section: 3.5.6
+ title: Button anchor up
+ template: 3_5_6-button-anchor-up
+ description: 
+*/
+.btn-anchor-up {
+	@include button-anchor--up;
+}
+
+/*
+ section: 3.5.7
+ title: Button tag
+ template: 3_5_7-button-tag
+ description: 
+*/
+.btn-tag {
+	@include button-tag;
+}
