@@ -107,7 +107,8 @@
 			@include float-span(8);
 
 			&:nth-of-type(2n) {
-				//@include float-span(8, 'omega');
+				// omega
+				@include float-span(8);
 			}
 		}
 	}
@@ -117,13 +118,13 @@
 .l-grid-item-3 {
 	$grid-gutter: ($vert-spacing-unit);
 	margin-bottom: $grid-gutter;
-
 	@include breakpoint($small) {
 		@include layout($grid: 9, $gutter: 1/2) {
 			@include grid-span(3);
 
 			&:nth-of-type(3n) {
-				//@include grid-span(3, 'omega');
+				// omega
+				@include grid-span(3);
 			}
 		}
 	}
@@ -139,7 +140,8 @@
 			@include grid-span(4);
 
 			&:nth-of-type(4n) {
-				//@include grid-span(4, 'omega');
+				// omega
+				@include grid-span(4);
 			}
 		}
 	}
