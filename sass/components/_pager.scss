@@ -9,6 +9,10 @@
 	margin-top: $vert-spacing-unit;
 }
 
+.pager--centered {
+	text-align: center;
+}
+
 .pager__item {
 	padding: 0;
 }
@@ -24,7 +28,7 @@
 .pager__item,
 .pager__item--current {
 	display: inline-block;
-	margin: 0 5px;
+	margin: 5px 5px;
 }
 
 .pager__item--current,
@@ -81,3 +85,4 @@
 .pager__item--last {
 	display: none;
 }
+
