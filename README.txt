@@ -1,15 +1,17 @@
 Idean Styleguide V2
 -------------------
 
-The Idean Living Styleguide is back, and better than ever!
-Now featuring less fuss and more awesomeness, mark comments in your stylesheet to notify the builder of composition of the guide, with references to external templates.
+Setup:
+======
 
-Setup
-=====
+1. `bundle install`
+2. `npm install`
+3. `gulp` (to compile the css)
+4. `node build` (to render styleguide.html)
 
-download the git repo to a subfolder of your project.
-run: node build
-follow instructions!
+
+Config:
+===============
 
 compiledCssPath: The relative path to the compiled css file
 uncompiledCssPath: The relative path to the uncompiled css files (.less, .sass etc). This should be the Root folder, it will walk all subtrees.
