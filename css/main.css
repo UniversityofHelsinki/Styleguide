@@ -371,6 +371,23 @@ video {
   clear: both;
 }
 
+.is-hidden {
+  display: none;
+}
+
+.is-center {
+  text-align: center;
+}
+
+.is-center-mobile {
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .is-center-mobile {
+    text-align: left;
+  }
+}
+
 /*
  section: 2
  title: Typography
@@ -6410,4 +6427,88 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   float: none;
   margin-left: 1em;
   text-align: left;
+}
+
+/*
+ section:  6.10.6
+ title: Box subsection
+ template: 6_10_6-box-subsection
+ description: Provides peripheral information of main content eg. contact info
+*/
+.box-subsection {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.box-subsection__title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #666;
+  text-transform: none;
+}
+
+.box-subsection__content {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0 15px 25px -27px #666;
+  padding: 1em;
+  margin: 1em 0 0;
+}
+
+.box-subsection__row {
+  padding-bottom: 1em;
+  word-wrap: break-word;
+}
+.box-subsection__row a {
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*
+ section:  6.10.7
+ title: Box subtitle
+ template: 6_10_7-box-subtitle
+ description: Provides supplementary text information below a title
+*/
+.box-subtitle {
+  display: block;
+}
+
+.box-subtitle__title {
+  border-bottom: 1px solid #EBEBEB;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #666;
+  text-transform: none;
+}
+
+.box-subtitle__content {
+  font-weight: 600;
+  font-style: normal;
+}
+@media (min-width: 48em) {
+  .box-subtitle__content {
+    height: 3em;
+  }
+}
+
+.box-subtitle__ingress {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #979797;
+  line-height: 1.5em;
+  margin-bottom: 30px;
 }
