@@ -4679,6 +4679,7 @@ a:hover .btn-anchor:before, .btn-anchor:hover:before {
 }
 .btn-anchor-up:hover {
   background-color: #005479;
+  color: #FFF;
 }
 .btn-anchor-up:after {
   -webkit-font-smoothing: antialiased;
@@ -4953,12 +4954,6 @@ th {
   z-index: 10;
 }
 
-/*
- section: 6.1.4
- title: Table pinned
- template: 6_1_4_table-pinned
- description:
-*/
 .is-table-pinned {
   float: left;
   overflow-x: auto;
@@ -4972,12 +4967,6 @@ th {
   border-right: none !important;
 }
 
-/*
- section: 6.1.5
- title: Table scrollable
- template: 6_1_5_table-scrollable
- description:
-*/
 .is-table-scrollable {
   border-right: 2px dotted #EBEBEB;
   margin-left: 35%;
