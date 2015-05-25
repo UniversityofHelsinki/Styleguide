@@ -1,0 +1,16 @@
+%is-hidden,
+.is-hidden {
+  display: none;
+}
+
+.is-center {
+  text-align: center;
+}
+
+.is-center-mobile {
+  text-align: center;
+
+  @include breakpoint($small) {
+    text-align: left;
+  }
+}
