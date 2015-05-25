@@ -1,0 +1,33 @@
+/*
+ section:  6.10.6
+ title: Box subsection
+ template: 6_10_6-box-subsection
+ description: Provides peripheral information of main content eg. contact info
+*/
+
+%box-subsection,
+.box-subsection {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.box-subsection__title {
+	@include text-label;
+}
+
+.box-subsection__content {
+	@include text-informative;
+	@include border;
+	@include shadow-under;
+	padding: 1em;
+	margin: 1em 0 0;
+}
+
+.box-subsection__row {
+	padding-bottom: 1em;
+	word-wrap: break-word;
+
+	a {
+		@include font-weight-medium;
+	}
+}
