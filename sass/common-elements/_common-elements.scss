@@ -95,19 +95,14 @@ dl, ol, ul {
 
 /*
  section: 3.4
- title: Image
- template: 3_4_image
+ title: Blockquote
  description:
 */
-img, media {
-	max-width: 100%;
-	height: auto;
-}
 
 /*
- section: 3.5
+ section: 3.4.1
  title: Blockquote
- template: 3_5_blockquote
+ template: 3_4_1_blockquote
  description:
 */
 blockquote {
@@ -121,9 +116,9 @@ blockquote {
 }
 
 /*
- section: 3.5.1
+ section: 3.4.2
  title: Blockquote paragraph
- template: 3_5_1_blockquote
+ template: 3_4_2_blockquote-paragraph
  description: Blockquote with a p-element inside.
 */
 blockquote p {
