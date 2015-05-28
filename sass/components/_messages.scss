@@ -1,0 +1,93 @@
+/*
+ section: 6.12
+ title: Messages
+ description:
+*/
+
+
+$error-bg-color: $brown;
+$error-bg-color-light: #f5ede9;
+
+
+/*
+ section: 6.12.1
+ title: Message
+ template: 6_12_1-message
+ description: 
+*/
+
+.message {
+	position: relative;
+	text-align: left;
+	padding: 1em 4em;
+	font-size: 0.8rem;
+}
+
+.message.error {
+	background-color: $error-bg-color-light;
+	color: $brown;
+
+	.message__icon {
+		background-image: url('../assets/icons/warning_section_message.svg');
+	}
+
+	.message__close {
+		background-image: url('../assets/icons/close_brown.svg');
+	}
+}
+
+.message__icon {
+	@include center-vertical;
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	left: 1.5rem;
+}
+
+.message__close {
+	@include center-vertical;
+	position: absolute;
+	right: 1.5em;
+	width: 0.6rem;
+	height: 0.6rem;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+@include breakpoint($medium) {
+	.message {
+		text-align: center;
+	}
+
+	.message__icon {
+		position: static;
+		margin-right: 1em;
+		transform: inherit;
+	}
+}
+
+/*
+ section: 6.12.2
+ title: Messages global
+ template: 6_12_2-messages-global
+ description: 
+*/
+
+.global-messages {
+	@include ng-show-fade;
+
+	.message.error {
+		color: $white;
+		background-color: $error-bg-color;
+
+		.message__icon {
+			background-image: url('../assets/icons/warning_page_message.svg');
+		}
+
+		.message__close {
+			background-image: url('../assets/icons/close_white.svg');
+		}
+	}
+}

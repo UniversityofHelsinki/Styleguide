@@ -7169,3 +7169,104 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
     height: 300px;
   }
 }
+
+/*
+ section: 6.12
+ title: Messages
+ description:
+*/
+/*
+ section: 6.12.1
+ title: Message
+ template: 6_12_1-message
+ description: 
+*/
+.message {
+  position: relative;
+  text-align: left;
+  padding: 1em 4em;
+  font-size: 0.8rem;
+}
+
+.message.error {
+  background-color: #f5ede9;
+  color: #974822;
+}
+.message.error .message__icon {
+  background-image: url("../assets/icons/warning_section_message.svg");
+}
+.message.error .message__close {
+  background-image: url("../assets/icons/close_brown.svg");
+}
+
+.message__icon {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 1.5rem;
+}
+
+.message__close {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  position: absolute;
+  right: 1.5em;
+  width: 0.6rem;
+  height: 0.6rem;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 62.5em) {
+  .message {
+    text-align: center;
+  }
+
+  .message__icon {
+    position: static;
+    margin-right: 1em;
+    -webkit-transform: inherit;
+    -ms-transform: inherit;
+    transform: inherit;
+  }
+}
+/*
+ section: 6.12.2
+ title: Messages global
+ template: 6_12_2-messages-global
+ description: 
+*/
+.global-messages.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+}
+.global-messages.ng-hide-add {
+  opacity: 1;
+}
+.global-messages.ng-hide-add-active {
+  opacity: 0;
+}
+.global-messages.ng-hide-remove {
+  opacity: 0;
+}
+.global-messages.ng-hide-remove-active {
+  opacity: 1;
+}
+.global-messages .message.error {
+  color: #FFF;
+  background-color: #974822;
+}
+.global-messages .message.error .message__icon {
+  background-image: url("../assets/icons/warning_page_message.svg");
+}
+.global-messages .message.error .message__close {
+  background-image: url("../assets/icons/close_white.svg");
+}
