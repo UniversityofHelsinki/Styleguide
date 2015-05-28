@@ -88,6 +88,11 @@
 	transform: translate(0, -50%);
 }
 
+// Todo: Find better place for this.
+@mixin all-link-states {
+  &:link, &:hover, &:active, &:visited {@content}
+}
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.

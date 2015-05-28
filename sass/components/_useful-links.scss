@@ -1,0 +1,214 @@
+/*
+ section: 6.15
+ title: Useful links
+ description: 
+*/
+/*
+ section: 6.15.1
+ title: Normal state
+ template: 6_15_1-useful-links-normal-state
+ description: The normal state.
+*/
+
+.useful-links {
+	position: relative;
+}
+
+.useful-links h3 {
+	@include font-size(20px);
+	float: left;
+}
+
+.useful-links ul[dnd-list], .useful-links li[dnd-list] {
+	position: relative;
+}
+
+.useful-links li[dnd-list] {
+	display: block;
+}
+
+.useful-links .dndDraggingSource {
+	display: none;
+}
+
+.useful-links .dndDragging {
+	opacity: 0.7;
+}
+
+.useful-links .dndPlaceholder {
+	background-color: #ddd !important;
+	display: block;
+	position: relative;
+	height: 50px;
+}
+
+/*
+ section: 6.15.2
+ title: Add state
+ template: 6_15_2-useful-links-add-state
+ description: State when user wishes to add a link.
+*/
+.useful-links__edit {
+	display: block;
+	text-align: right;
+	margin-bottom: 0.5em;
+}
+
+.useful-links__link {
+	position: relative;
+}
+
+.useful-links__delete-link {
+	@include all-link-states {
+		color: $white;
+	}
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	@include transform(translate(0, -50%));
+}
+
+/*
+ section: 6.15.3
+ title: Edit link state
+ template: 6_15_3-useful-links-edit-link-state
+ description: State when user edits an existing link.
+*/
+.useful-links__edit-link-url {
+	position: relative;
+	background-color: $white;
+	border: 2px solid $lightsilver;
+	margin-bottom: 2px;
+	padding: 0.8em 3em 0.8em 1em;
+	input {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		width: 100%;
+	}
+
+	a {
+		position: absolute;
+		right: 1em;
+		top: 50%;
+		@include transform(translate(0, -50%));
+	}
+
+}
+
+.list-of-links__link.edit {
+	&:after {
+		display: none;
+	}
+	background-color: $gray !important;
+
+	i.fa-bars {
+		position: absolute;
+		top: 50%;
+		left: 1.5em;
+		@include transform(translate(-50%, -50%));
+	}
+
+	span {
+		display: inline-block;
+		$padding: 2px;
+		padding: $padding;
+		position: relative;
+		margin: -$padding;
+		margin-left: 2em;
+		@include breakpoint($mobile-only) {
+			margin-left: 0;
+		}
+	}
+
+	span i {
+		margin-left: 0.5em;
+		display: none;
+	}
+
+	@mixin show-editable-link() {
+		span {
+			cursor: pointer;
+			background-color: $darkgray;
+			i {
+				display: inline;
+			}
+		}
+	}
+
+	@include breakpoint($mobile-only) {
+		@include show-editable-link;
+	}
+
+	&.editable:hover {
+		@include show-editable-link;
+	}
+}
+
+.new-useful-link {
+	position: relative;
+	padding: 0.7em 0 0.7em 1em;
+	border: 2px solid $lightsilver;
+	margin-bottom: 2px;
+
+	form {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	input {
+		border: 0;
+		width: 70%;
+	}
+}
+
+.new-useful-link__add-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 3em;
+
+	background-color: $blue;
+
+	@include all-link-states {
+		color: $white;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+.useful-link-title {
+	@include border;
+	@include tab-shadow;
+	@include ng-show-fade;
+	background-color: $white;
+	position: absolute;
+	margin-top: -0.5em;
+	margin-left: 0.5em;
+	padding: 0.5em;
+	width: 85%;
+	z-index: 2;
+	input {
+		border: 0;
+		width: 100%;
+		color: $blue;
+	}
+}
+
+.useful-link-title__arrow {
+	@include triangle(10px);
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
