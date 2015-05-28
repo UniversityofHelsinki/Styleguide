@@ -46,7 +46,7 @@ var loopSection = function(arr, level, id){
         var secTitle = arr.title ? ': '+arr.title : "";
         var colorList = '';
         template = '<'+section+' '+sectionClass+' id="section-'+id+'">';
-        template = template + (level === 0 ? '<header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-'+id+'">Idean Style Guide: '+id+secTitle+'</a></h1></header>' : '<h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-'+id+'">Section '+id+secTitle+'</a></h2>');
+        template = template + (level === 0 ? '<header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-'+id+'">University of Helsinki Style Guide: '+id+secTitle+'</a></h1></header>' : '<h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-'+id+'">Section '+id+secTitle+'</a></h2>');
         template = template + (level === 0 ? '' : '<a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a>');
         if(arr.description) template = template + '<p class="idean-styleguide-description">'+arr.description+'</p>';
         if(arr.template) template = template + getTemplate(arr.template);
@@ -539,7 +539,7 @@ function runProcess(){
     console.log("start process");
 
     var header = '<!DOCTYPE html><head><meta charset="utf-8">\n<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">\n<title>Styleguide</title>\n<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">\n<link href="'+compiledCssPath+'" rel="stylesheet" type="text/css">\n<link rel="stylesheet" href="css/styleguide.css">\n<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">\n<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">\n</head>\n<body id="idean-styleguide" class="idean-styleguide-body">\n';
-    var footer = '<div class="idean-styleguide-popup" style="display:none;"><a href="#" class="idean-styleguide-popup-close">Close</a><div class="idean-styleguide-popup-code"></div></div><footer class="idean-styleguide-footer"><a href="http://www.idean.com" class="idean-styleguide-branding">Idean</a></footer>\n<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>\n<script>window.jQuery || document.write(\'<script src="js/jquery-1.11.0.min.js"><\\/script>\')</script>\n<script src="js/script.js"></script>\n</body></html>';
+    var footer = '<div class="idean-styleguide-popup" style="display:none;"><a href="#" class="idean-styleguide-popup-close">Close</a><div class="idean-styleguide-popup-code"></div></div><footer class="idean-styleguide-footer"><a href="http://www.helsinki.fi/en" class="idean-styleguide-branding">University of Helsinki</a></footer>\n<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>\n<script>window.jQuery || document.write(\'<script src="js/jquery-1.11.0.min.js"><\\/script>\')</script>\n<script src="js/script.js"></script>\n</body></html>';
 
     var content = compile(cssCompiler);
 
