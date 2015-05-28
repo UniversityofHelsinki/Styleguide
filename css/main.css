@@ -5336,6 +5336,14 @@ a:hover .accordion__title:before, .accordion__title:hover:before {
   color: #FFF;
 }
 
+.accordion__content > .accordion {
+  padding: 20px 0px 0px 20px;
+}
+@media (min-width: 48em) {
+  .accordion__content > .accordion {
+    padding: 20px 0px 0px 20px;
+  }
+}
 .accordion__content > .textarea {
   padding: 20px 10px;
 }
@@ -5343,6 +5351,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before {
   .accordion__content > .textarea {
     padding: 20px 40px;
   }
+}
+.accordion__content > .textarea + .accordion {
+  padding-top: 0px;
 }
 
 /*
@@ -5435,6 +5446,12 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
   background-color: #0882B3;
 }
 
+/*
+ section: 6.3.3
+ title: Accordion multiple levels
+ template: 6_3_3_accordion-multiple-levels
+ description:
+*/
 /*
  section: 6.4
  title: Author

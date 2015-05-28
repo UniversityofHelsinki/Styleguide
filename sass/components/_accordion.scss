@@ -29,12 +29,23 @@
 }
 
 .accordion__content {
+	> .accordion {
+		padding: 20px 0px 0px 20px;
+
+		@include breakpoint($small) {
+			padding: 20px 0px 0px 20px;
+		}
+	}
 	> .textarea {
 		padding: 20px 10px;
 
 		@include breakpoint($small) {
 			padding: 20px 40px;
 		}
+	}
+	
+	> .textarea + .accordion {
+		padding-top: 0px;
 	}
 }
 
@@ -58,3 +69,10 @@
 		}
 	}
 }
+
+/*
+ section: 6.3.3
+ title: Accordion multiple levels
+ template: 6_3_3_accordion-multiple-levels
+ description:
+*/
