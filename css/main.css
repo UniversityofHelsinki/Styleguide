@@ -7270,3 +7270,45 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
 .global-messages .message.error .message__close {
   background-image: url("../assets/icons/close_white.svg");
 }
+
+/*
+ section: 6.13
+ title: UI Component
+ description: Used in some cases to wrap around another component.
+*/
+.ui-component {
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+.ui-component__title {
+  line-height: 1;
+  margin-bottom: .5em;
+}
+@media (max-width: 48em) {
+  .ui-component__title {
+    text-align: center;
+  }
+}
+.ui-component__title.border-bottom {
+  padding-bottom: .25em;
+}
+
+.ui-component__title-link {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  float: right;
+  color: #0098d0;
+}
+.ui-component__title-link:hover, .ui-component__title-link:focus, .ui-component__title-link:active {
+  color: #0882B3;
+}
+
+@media (min-width: 48em) {
+  .ui-component--portfolio .ui-component__title {
+    text-align: left;
+  }
+}
