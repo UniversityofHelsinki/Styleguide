@@ -500,6 +500,105 @@ video {
   margin-right: 2em;
 }
 
+.inline-list > *, .tag-list > * {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.inline-list > *:first-child, .tag-list > *:first-child {
+  margin-left: 0;
+}
+.inline-list > *:last-child, .tag-list > *:last-child {
+  margin-right: 0;
+}
+.inline-list > *, .tag-list > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inline-list--large > * {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.inline-list--large > *:first-child {
+  margin-left: 0;
+}
+.inline-list--large > *:last-child {
+  margin-right: 0;
+}
+
+.inline-list--small > *, .tag-list > * {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.inline-list--small > *:first-child, .tag-list > *:first-child {
+  margin-left: 0;
+}
+.inline-list--small > *:last-child, .tag-list > *:last-child {
+  margin-right: 0;
+}
+
+.table-list {
+  display: table;
+  width: 100%;
+}
+.table-list > * {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.table-list > *:first-child {
+  padding-left: 0;
+}
+.table-list > *:last-child {
+  padding-right: 0;
+}
+.table-list > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.table-list--large > * {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.table-list--large > *:first-child {
+  padding-left: 0;
+}
+.table-list--large > *:last-child {
+  padding-right: 0;
+}
+
+.table-list--small > * {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.table-list--small > *:first-child {
+  padding-left: 0;
+}
+.table-list--small > *:last-child {
+  padding-right: 0;
+}
+
+.tag-list > * {
+  margin-bottom: 6px;
+}
+
+.item-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+.item-list--bar > li {
+  border-color: #979797;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+.item-list--bar > li:last-child {
+  border-bottom-width: 0;
+}
+
 /*
  section: 2
  title: Typography
@@ -5717,8 +5816,13 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 
 /*
  section: 6.9
+ title: Tags
+ description:
+*/
+/*
+ section: 6.9.1
  title: Tag list
- template: 6_9_tag-list
+ template: 6_9_1-tag-list
  description:
 */
 .tag-list {
@@ -5808,6 +5912,36 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 }
 .tag-list__link a:hover {
   color: #005479;
+}
+
+/*
+ section: 6.9.2
+ title: Tags
+ template: 6_9_2-tags
+ description:
+*/
+.tag {
+  background-color: #0098d0;
+  color: #FFF;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.3em 0.7em 0.4em;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.tag--active {
+  background-color: #005479;
+  color: #FFF;
+}
+
+a.tag:hover, a.tag:active, a.tag:focus {
+  background-color: #005479;
+  color: #FFF;
 }
 
 /*

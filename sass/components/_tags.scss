@@ -1,0 +1,32 @@
+//
+// Tags
+// --------------------------------------------------
+
+/*
+ section: 6.9.2
+ title: Tags
+ template: 6_9_2-tags
+ description:
+*/
+.tag {
+  background-color: $blue;
+  color: $white;
+  @include font-size(15px);
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.3em 0.7em 0.4em;
+  transition-property: background-color;
+  transition-duration: 0.1s;
+}
+
+.tag--active {
+  background-color: $darkblue;
+  color: $white;
+}
+
+a.tag {
+  &:hover, &:active, &:focus {
+    background-color: $darkblue;
+    color: $white;
+  }
+}
