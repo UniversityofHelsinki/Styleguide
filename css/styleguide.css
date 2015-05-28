@@ -75,11 +75,12 @@ table[class*="idean-styleguide"] {
 	font-size: 30px;
 	line-height: 60px;
 	font-weight:bold;
+	padding-left: 63px;
 }
 #idean-styleguide .idean-styleguide-title:before{
 	content: '';
 	position: absolute;
-	left: 0;
+	left: 10px;
 	top: 50%;
 	transform: translate(0, -50%);
 	
@@ -90,6 +91,16 @@ table[class*="idean-styleguide"] {
 	width: 53px;
 	height: 50%;
 }
+
+@media (max-width: 767px) {
+	#idean-styleguide .idean-styleguide-title{
+		padding-left: 0px;
+	}
+	#idean-styleguide .idean-styleguide-title:before{
+		display: none;
+	}
+}
+
 
 /* TITLES */
 #idean-styleguide .idean-styleguide-section-title{
