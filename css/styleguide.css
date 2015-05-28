@@ -511,7 +511,12 @@ table[class*="idean-styleguide"] {
 #idean-styleguide .token.constant,
 #idean-styleguide .token.symbol,
 #idean-styleguide .token.deleted {
-	color: #905;
+	color: #905 !important;
+	background-color: transparent !important;
+	line-height: inherit !important;
+	font-size: inherit !important;
+	padding: 0 !important;
+	display: inherit !important;
 }
 
 #idean-styleguide .token.selector,
