@@ -56,6 +56,32 @@
 	float:right;
 }
 
+// Todo: Find better place for this.
+@mixin triangle($size) {
+  &:before {
+    content : "";
+    position: absolute;
+    left: -$size/2;
+    top: -$size;
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $lightsilver;
+  }
+  &:after {
+    content : "";
+    position: absolute;
+    left: -$size/2;
+    top: -$size + 1;
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $white;
+  }
+}
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.

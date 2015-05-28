@@ -4,6 +4,7 @@
  description: Description about components.
 */
 
+// Components
 @import '_table';
 @import '_list-of-links';
 @import '_accordion';
@@ -13,5 +14,7 @@
 @import '_horizontal-tabs';
 @import '_pager';
 @import '_tag-list';
-@import '_textarea';
 @import 'box/_box';
+
+@import '_favorites';
+@import '_rss';

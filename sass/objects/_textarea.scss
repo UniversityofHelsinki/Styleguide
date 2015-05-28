@@ -1,0 +1,79 @@
+/*
+ Basic component used in multiple row textareas with links, headings, lists and so on.
+*/
+
+.textarea,
+%textarea {
+	@include font-family-bodytext;
+	@include font-size(18px);
+	line-height: 1.8em;
+
+	ul, ol {
+		margin-bottom: $vert-spacing-unit;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+
+	ul {
+		padding-left: 1.5em;
+		position: relative;
+
+		li {
+			list-style-type: none;
+
+			&:before {
+				@include font-size(9px);
+				@include font-awesome("\f111");
+				color: $blue;
+				left: 0;
+				margin-top: 1px;
+				position: absolute;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: item;
+		padding-left: 1.5em;
+		position: relative;
+
+		li {
+			display: block;
+
+			&:before {
+				@include font-family-main;
+				@include font-weight-bold;
+				color: $blue;
+				content: counter(item) ". ";
+				counter-increment: item;
+				left: 0;
+				line-height: 1.7em;
+				position: absolute;
+			}
+		}
+	}
+
+	h3 {
+		@include font-size(24px);
+	}
+
+	table {
+		@extend %table-simple;
+		line-height: normal;
+		margin-bottom: 2em;
+	}
+}
+
+/**
+ * textarea-initial
+ * An element (usually an image) floated left before a textarea.
+ */
+
+%textarea-initial,
+.textarea-initial {
+	float: left;
+	margin-bottom: 2em;
+	margin-right: 2em;
+}

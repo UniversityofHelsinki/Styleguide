@@ -1,0 +1,23 @@
+//
+// Bars & tubes
+// --------------------------------------------------
+.bar, .tube {
+  display: block;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.bar {
+  @include border-bottom;
+}
+
+// Size modifiers.
+.tube--small, .bar--small {
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+.tube--large, .bar--large {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}

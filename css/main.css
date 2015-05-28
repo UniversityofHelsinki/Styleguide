@@ -388,6 +388,118 @@ video {
   }
 }
 
+.bar, .tube {
+  display: block;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.bar {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.tube--small, .bar--small {
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+.tube--large, .bar--large {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.island {
+  padding: 1em;
+}
+
+/*
+ Basic component used in multiple row textareas with links, headings, lists and so on.
+*/
+.textarea,
+.box-ingress__content,
+.box-ingress__content p {
+  font-family: Georgia;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.8em;
+}
+.textarea ul, .textarea ol,
+.box-ingress__content ul,
+.box-ingress__content ol {
+  margin-bottom: 30px;
+}
+.textarea li,
+.box-ingress__content li {
+  margin-bottom: 0.5em;
+}
+.textarea ul,
+.box-ingress__content ul {
+  padding-left: 1.5em;
+  position: relative;
+}
+.textarea ul li,
+.box-ingress__content ul li {
+  list-style-type: none;
+}
+.textarea ul li:before,
+.box-ingress__content ul li:before {
+  font-size: 9px;
+  font-size: 0.5625rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: #0098d0;
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+}
+.textarea ol,
+.box-ingress__content ol {
+  counter-reset: item;
+  padding-left: 1.5em;
+  position: relative;
+}
+.textarea ol li,
+.box-ingress__content ol li {
+  display: block;
+}
+.textarea ol li:before,
+.box-ingress__content ol li:before {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-weight: 700;
+  font-style: normal;
+  color: #0098d0;
+  content: counter(item) ". ";
+  counter-increment: item;
+  left: 0;
+  line-height: 1.7em;
+  position: absolute;
+}
+.textarea h3,
+.box-ingress__content h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.textarea table,
+.box-ingress__content table {
+  line-height: normal;
+  margin-bottom: 2em;
+}
+
+/**
+ * textarea-initial
+ * An element (usually an image) floated left before a textarea.
+ */
+.textarea-initial {
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
 /*
  section: 2
  title: Typography
@@ -5682,93 +5794,6 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 }
 
 /*
- section: 6.11
- title: textarea
- description: Basic component used in multiple row textareas with links, headings, lists and so on.
-*/
-.textarea,
-.box-ingress__content,
-.box-ingress__content p {
-  font-family: Georgia;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.8em;
-}
-.textarea ul, .textarea ol,
-.box-ingress__content ul,
-.box-ingress__content ol {
-  margin-bottom: 30px;
-}
-.textarea li,
-.box-ingress__content li {
-  margin-bottom: 0.5em;
-}
-.textarea ul,
-.box-ingress__content ul {
-  padding-left: 1.5em;
-  position: relative;
-}
-.textarea ul li,
-.box-ingress__content ul li {
-  list-style-type: none;
-}
-.textarea ul li:before,
-.box-ingress__content ul li:before {
-  font-size: 9px;
-  font-size: 0.5625rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  color: #0098d0;
-  left: 0;
-  margin-top: 1px;
-  position: absolute;
-}
-.textarea ol,
-.box-ingress__content ol {
-  counter-reset: item;
-  padding-left: 1.5em;
-  position: relative;
-}
-.textarea ol li,
-.box-ingress__content ol li {
-  display: block;
-}
-.textarea ol li:before,
-.box-ingress__content ol li:before {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif, Nimbus Sans L;
-  font-weight: 700;
-  font-style: normal;
-  color: #0098d0;
-  content: counter(item) ". ";
-  counter-increment: item;
-  left: 0;
-  line-height: 1.7em;
-  position: absolute;
-}
-.textarea h3,
-.box-ingress__content h3 {
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-.textarea table,
-.box-ingress__content table {
-  line-height: normal;
-  margin-bottom: 2em;
-}
-
-/**
- * textarea-initial
- * An element (usually an image) floated left before a textarea.
- */
-.textarea-initial {
-  float: left;
-  margin-bottom: 2em;
-  margin-right: 2em;
-}
-
-/*
  section: 6.10
  title: Box
  description:
@@ -6767,4 +6792,380 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   color: #979797;
   line-height: 1.5em;
   margin-bottom: 30px;
+}
+
+/*
+ section: 6.11
+ title: Favorites
+ description: 
+*/
+/*
+ section: 6.11.1
+ title: Favorites add
+ description:
+*/
+/*
+ section: 6.11.1.1
+ title: Favorites add
+ template: 6_11_1_1_favorites-add
+ description: Add new item block
+*/
+/*
+ section: 6.11.1.2
+ title: Favorites add menu
+ template: 6_11_1_2_favorites-add-menu
+ description:  Add new item block with menu (the inline style is added by javascript and should be implemented as such)
+*/
+/*
+ section: 6.11.2
+ title: Favorites single
+ template: 6_11_2_favorites-single
+ description: Single large item.
+*/
+/*
+ section: 6.11.3
+ title: Favorites multiple
+ template: 6_11_3_favorites-multiple
+ description: Item block with multiple items inside.
+*/
+.favorites-container {
+  *zoom: 1;
+  clear: both;
+}
+.favorites-container:before, .favorites-container:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.favorites-container:after {
+  clear: both;
+}
+
+.favorites-list__item {
+  position: relative;
+}
+
+.favorites-list__remove {
+  display: block;
+  border: 1px solid #EBEBEB;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background-color: #FFF;
+  padding: 0 2px;
+}
+
+/***************************** Required styles *****************************/
+/**
+ * For the correct positioning of the placeholder element, the dnd-list and
+ * it's children must have position: relative
+ */
+.favorites-container ul[dnd-list],
+.favorites-container ul[dnd-list] > li {
+  position: relative;
+}
+
+/***************************** Dropzone Styling *****************************/
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+.favorites-container .dropzone ul[dnd-list] {
+  min-height: 42px;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+/**
+ * The dnd-lists's child elements currently MUST have
+ * position: relative. Otherwise we can not determine
+ * whether the mouse pointer is in the upper or lower
+ * half of the element we are dragging over. In other
+ * browsers we can use event.offsetY for this.
+ */
+.favorites-container .dropzone li {
+  display: block;
+}
+
+/**
+ * Reduce opacity of elements during the drag operation. This allows the user
+ * to see where he is dropping his element, even if the element is huge. The
+ * .dndDragging class is automatically set during the drag operation.
+ */
+.favorites-container .dropzone .dndDragging {
+  opacity: 0.7;
+}
+
+/**
+ * The dndDraggingSource class will be applied to the source element of a drag
+ * operation. It makes sense to hide it to give the user the feeling that he's
+ * actually moving it. Note that the source element has also .dndDragging class.
+ */
+.favorites-container .dropzone .dndDraggingSource {
+  display: none;
+}
+
+/**
+ * An element with .dndPlaceholder class will be added as child of the dnd-list
+ * while the user is dragging over it.
+ */
+.favorites-container .dropzone .dndPlaceholder {
+  background-color: #ddd !important;
+  display: block;
+  position: relative;
+}
+@media (min-width: 62.5em) {
+  .favorites-container .dropzone .dndPlaceholder {
+    height: 300px;
+  }
+}
+@media (min-width: 75em) {
+  .favorites-container .dropzone .dndPlaceholder {
+    height: 340px;
+  }
+}
+
+/***************************** Element type specific styles *****************************/
+.favorites-container .dropzone .itemlist {
+  min-height: 120px !important;
+}
+
+.favorites-container .dropzone .itemlist > li {
+  margin-bottom: 1em;
+}
+@media (min-width: 48em) {
+  .favorites-container .dropzone .itemlist > li {
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
+  .favorites-container .dropzone .itemlist > li > * {
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 1em;
+  }
+  .favorites-container .dropzone .itemlist > li > * {
+    height: 240px;
+    width: 240px;
+  }
+}
+@media (min-width: 62.5em) {
+  .favorites-container .dropzone .itemlist > li > * {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media (min-width: 75em) {
+  .favorites-container .dropzone .itemlist > li > * {
+    height: 340px;
+    width: 340px;
+  }
+}
+.favorites-container .dropzone .itemlist > li .rss-feed, .favorites-container .dropzone .itemlist > li .add-new {
+  border: 1px solid #EBEBEB;
+}
+
+.favorites-container .dropzone .container-element {
+  margin: 10px;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 15px;
+}
+
+.favorite-img {
+  max-height: 150px;
+}
+
+@media (max-width: 48em) {
+  .favorites-list__item.add-new {
+    height: 100px;
+  }
+}
+
+.add-favorite-container {
+  border: 1px solid #EBEBEB;
+  box-shadow: 1px 1px 2px -1px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  position: relative;
+  top: -35px;
+}
+@media (min-width: 48em) {
+  .add-favorite-container {
+    top: -105px;
+  }
+}
+@media (min-width: 62.5em) {
+  .add-favorite-container {
+    top: -135px;
+  }
+}
+@media (min-width: 75em) {
+  .add-favorite-container {
+    top: -155px;
+  }
+}
+
+.add-favorite-arrow {
+  position: relative;
+  left: -5px;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.add-favorite-arrow:before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #EBEBEB;
+}
+.add-favorite-arrow:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -9px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+}
+
+.add-favorite {
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+@media (min-width: 48em) {
+  .add-favorite {
+    width: 280px;
+    height: 280px;
+  }
+}
+@media (min-width: 62.5em) {
+  .add-favorite {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media (min-width: 75em) {
+  .add-favorite {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.add-favorite-step {
+  width: 100%;
+}
+.add-favorite-step ul {
+  padding: 0.5em;
+}
+.add-favorite-step li.bar {
+  padding: 0.5em 0;
+  font-size: 0.9em;
+}
+
+.add-favorite-button {
+  height: 100%;
+  display: block;
+}
+
+.add-favorite-button__plus {
+  font-weight: bold;
+  font-size: 6rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.add-favorite-button__title {
+  font-size: 2rem;
+}
+
+.rss-feed {
+  font-size: 0.9rem;
+}
+
+.rss-feed__item {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  padding: 0.5em 0;
+}
+.rss-feed__item:first-child {
+  padding-top: 0;
+}
+.rss-feed__item:last-child {
+  border: 0;
+}
+
+.rss-feed__item-title {
+  margin: 0.2em 0;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.rss-feed__date {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+.add-new-rss-feed input[type="text"] {
+  border: 0;
+  width: 80%;
+  font-size: 0.8rem;
+}
+.add-new-rss-feed i.fa-search {
+  color: #EBEBEB;
+}
+.add-new-rss-feed a.fa-close {
+  color: #0098d0;
+  cursor: pointer;
+}
+.add-new-rss-feed .bar {
+  padding: 1em;
+}
+.add-new-rss-feed .rss-search-result-list {
+  font-size: 0.8rem;
+}
+
+.rss-search-result-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 200px;
+}
+@media (min-width: 48em) {
+  .rss-search-result-list {
+    height: 230px;
+  }
+}
+@media (min-width: 62.5em) {
+  .rss-search-result-list {
+    height: 270px;
+  }
+}
+@media (min-width: 75em) {
+  .rss-search-result-list {
+    height: 300px;
+  }
 }
