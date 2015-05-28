@@ -7312,3 +7312,111 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
     text-align: left;
   }
 }
+
+/*
+ section: 6.14
+ title: Todo items
+ template: 6_14-todo-items
+ description: Todo items list component.
+*/
+.todo-items {
+  margin-top: 10px;
+  color: #fff;
+}
+.todo-items ul {
+  height: 196px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  margin: 1em;
+  padding: 10px 20px 30px 20px;
+  overflow: auto;
+  border: 0 transparent;
+}
+@media (min-width: 48em) {
+  .todo-items ul {
+    margin: 0;
+  }
+}
+.todo-items ul li {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 60px 10px 0px;
+  word-wrap: break-word;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.todo-items ul li .todo-action {
+  cursor: pointer;
+}
+.todo-items ul li .todo-action.fa-check {
+  right: 35px;
+}
+.todo-items ul li .todo-action.fa-close {
+  right: 10px;
+}
+.todo-items ul li.done {
+  color: #666;
+}
+.todo-items ul li.done .todo-action {
+  color: #222;
+}
+.todo-items ul li.done .todo-action.fa-close {
+  color: #FFF;
+}
+.todo-items ul li .vertically-centered, .todo-items ul li .todo-action {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.todo-items .new-todo-item {
+  position: relative;
+  margin: 0 1em;
+}
+@media (min-width: 48em) {
+  .todo-items .new-todo-item {
+    padding: 0;
+    margin: 10px 0 0 0;
+    height: 4em;
+    line-height: 4em;
+  }
+}
+.todo-items .new-todo-item .input-container {
+  overflow: hidden;
+  margin-right: 4em;
+}
+.todo-items .new-todo-item .input-container input {
+  width: 100%;
+  height: 4em;
+  border: none;
+  padding: 0 20px;
+  color: #666;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.todo-items .new-todo-item .input-container input:focus {
+  background: #ffffff;
+}
+.todo-items .new-todo-item .input-container input:-moz-placeholder {
+  color: #979797;
+}
+.todo-items .new-todo-item .input-container input::-moz-placeholder {
+  color: #979797;
+}
+.todo-items .new-todo-item .input-container input:-ms-input-placeholder {
+  color: #979797;
+}
+.todo-items .new-todo-item .input-container input::-webkit-input-placeholder {
+  color: #979797;
+}
+.todo-items .new-todo-item .add-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  background-color: #0098d0;
+}
+.todo-items .new-todo-item .add-icon .fa-plus {
+  color: #ffffff;
+}
