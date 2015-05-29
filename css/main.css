@@ -352,6 +352,13 @@ video {
   float: right;
 }
 
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.

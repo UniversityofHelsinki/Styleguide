@@ -55,6 +55,12 @@
 .float-right {
 	float:right;
 }
+// Todo: Find better place for this.
+.element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
 
 // Todo: Find better place for this.
 @mixin triangle($size) {
