@@ -5,89 +5,89 @@
 */
 
 
-$error-bg-color: $brown;
-$error-bg-color-light: #f5ede9;
+$messages: (
+	'status': (
+		'color': $black,
+		'color-alt': #81b43b,
+		'bg-color': #b2e576,
+		'bg-color-alt': #f2f7eb,
+		'icon': '\f00c',
+	),
+	'warning': (
+		'color': $white,
+		'color-alt': $black,
+		'bg-color': #52c6af,
+		'bg-color-alt': #f8f8f8,
+		'icon': '\f06a',
+	),
+	'error': (
+		'color': $white,
+		'color-alt': #964822,
+		'bg-color': #964822,
+		'bg-color-alt': #f4ece8,
+		'icon': '\f071',
+	)
+);
 
 
 /*
  section: 6.12.1
- title: Message
- template: 6_12_1-message
- description: 
+ title: Status message
+ template: 6_12_1-message-status
+ description: Used for displaying informational messages to the user.
 */
-
-.message {
-	position: relative;
-	text-align: left;
-	padding: 1em 4em;
-	font-size: 0.8rem;
-}
-
-.message.error {
-	background-color: $error-bg-color-light;
-	color: $brown;
-
-	.message__icon {
-		background-image: url('../assets/icons/warning_section_message.svg');
-	}
-
-	.message__close {
-		background-image: url('../assets/icons/close_brown.svg');
-	}
-}
-
-.message__icon {
-	@include center-vertical;
-	width: 1rem;
-	height: 1rem;
-	display: inline-block;
-	vertical-align: middle;
-	position: absolute;
-	left: 1.5rem;
-}
-
-.message__close {
-	@include center-vertical;
-	position: absolute;
-	right: 1.5em;
-	width: 0.6rem;
-	height: 0.6rem;
-	display: block;
-	background-repeat: no-repeat;
-}
-
-@include breakpoint($medium) {
-	.message {
-		text-align: center;
-	}
-
-	.message__icon {
-		position: static;
-		margin-right: 1em;
-		transform: inherit;
-	}
-}
 
 /*
  section: 6.12.2
- title: Messages global
- template: 6_12_2-messages-global
- description: 
+ title: Warning message
+ template: 6_12_2-message-warning
+ description: Used for displaying warning messages to the user.
 */
 
-.global-messages {
-	@include ng-show-fade;
-
-	.message.error {
-		color: $white;
-		background-color: $error-bg-color;
-
-		.message__icon {
-			background-image: url('../assets/icons/warning_page_message.svg');
+/*
+ section: 6.12.3
+ title: Error message
+ template: 6_12_3-message-error
+ description: Used for displaying error messages to the user.
+*/
+.messages {
+	@include font-weight-medium;
+	@include font-size(12px);
+	text-align: center;
+	padding: 1.3em 0;
+	p {
+		@include font-family-main;
+		margin: 0;
+		padding: 0;
+		font-size: inherit;
+	}
+	a {
+		@include font-weight-bold;
+		&:after {
+			@include font-awesome('\f061');
+			margin-left: 0.5em;
 		}
-
-		.message__close {
-			background-image: url('../assets/icons/close_white.svg');
+	}
+	@each $name, $type in $messages {
+		&.#{$name} {
+			background-color: map-get(map-get($messages, $name), "bg-color");
+			color: map-get(map-get($messages, $name), "color");
+			* {
+				color: map-get(map-get($messages, $name), "color");
+			}
+			&.alternative {
+				background-color: map-get(map-get($messages, $name), "bg-color-alt");
+				color: map-get(map-get($messages, $name), "color-alt");
+				* {
+					color: map-get(map-get($messages, $name), "color-alt");
+				}
+			}
+			p:before,
+			li:before {
+				@include font-awesome(map-get(map-get($messages, $name), "icon"));
+				font-size: 1.3em;
+				margin-right: 0.7em;
+			}
 		}
 	}
 }
