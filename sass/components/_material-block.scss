@@ -1,0 +1,67 @@
+/*
+ section: 6.17
+ title: Material block
+ template: 6_17-material-block
+ description: <strong>Note! This component is not finished.</strong><br/><br/>Display suite material block styles (used in events material attachements). Depends on alternative accordion.
+*/
+
+.ds-material-block {
+	padding: 0.5em 0;
+	border-top: 1px solid $lightsilver;
+	@include breakpoint($small) {
+		width: 100%;
+	}
+}
+
+.ds-material-block--content {
+	overflow: hidden;
+	@include breakpoint($small) {
+		width: 100%;
+	}
+	
+	.field {
+		@include breakpoint($small) {
+			float: left;
+			display: inline-block;
+			width: 33%;
+		} 
+	}
+}
+
+.table-three-columns {
+	.field {
+		width: 33%;
+	}
+	.hide-from-three-column-tables {
+		display: none;
+	}
+}
+
+.table-four-columns {
+	.field {
+		width: 25%;
+	}
+}
+
+.material-block--title {
+	font-weight: 900;
+}
+
+// helper
+.remove-styles {
+	p {
+		margin: 0;
+		padding: 0;
+		line-height: 1.4;
+		&:first-child {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.meta-information {
+	div {
+		float: left;
+	}
+}

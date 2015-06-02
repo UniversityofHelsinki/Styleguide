@@ -5554,10 +5554,306 @@ a:hover .accordion--dark .accordion__title:before, .accordion--dark .accordion__
 
 /*
  section: 6.3.3
- title: Accordion multiple levels
- template: 6_3_3_accordion-multiple-levels
+ title: Accordion nested
+ template: 6_3_3_accordion-nested
  description:
 */
+/*
+ section: 6.3.4
+ title: Alternative accordion normal
+ template: 6_3_4_alternative-accordion-normal
+ description:
+*/
+/*
+ section: 6.3.5
+ title: Alternative accordion nested
+ template: 6_3_5_alternative-accordion-nested
+ description:
+*/
+.accordion-item,
+.field-group-accordion-item {
+  float: left;
+  clear: both;
+}
+
+.accordion-item {
+  position: relative;
+  width: 100%;
+  margin: 1em 0 0;
+  padding-left: 2.5em;
+  padding-bottom: 0px;
+  background: #005479;
+  font-size: 1em;
+  color: #FFF;
+  overflow: hidden;
+}
+.accordion-item:before {
+  content: "\f054";
+  position: absolute;
+  left: 1em;
+  top: 0.65em;
+  font-family: "FontAwesome";
+}
+.accordion-item.is-active {
+  background: #003146;
+}
+.accordion-item.is-active a {
+  background: #0882B3;
+}
+.accordion-item.is-active:before {
+  content: "\f078";
+  left: 0.75em;
+}
+.accordion-item a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.65em;
+  background: #0098d0;
+  color: inherit;
+  letter-spacing: 0;
+}
+.accordion-item a:hover {
+  color: inherit;
+}
+
+.field-group-accordion-item {
+  padding: 2em 0 0;
+  font-size: 1em;
+}
+.field-group-accordion-item .block-title {
+  display: none;
+}
+
+.accordion-content-label {
+  font-weight: 900;
+}
+
+.accordion-help {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+.accordion-help p {
+  margin-bottom: 0;
+}
+
+.accordion-content-item {
+  margin: 2em 0 1em;
+}
+@media (min-width: 48em) {
+  .accordion-content-item {
+    padding-left: 2.6em;
+  }
+}
+.accordion-content-item.tighten {
+  margin-top: 1em;
+}
+.accordion-content-item p {
+  font-size: inherit;
+}
+@media (min-width: 48em) {
+  .accordion-content-item ~ .action-links {
+    margin-left: 2.6em;
+  }
+}
+.accordion-content-item ~ .action-links a {
+  padding: 1em;
+}
+.accordion-content-item .field-collection-item-field-imp-attached-material-sec {
+  margin-top: 3em;
+}
+.accordion-content-item .field-collection-view-links {
+  padding: 1em 0.3em;
+  background: #EBEBEB;
+  overflow: hidden;
+}
+.accordion-content-item .field-collection-view-links li {
+  float: left;
+  padding: 0 0.5em;
+}
+.accordion-content-item.squeeze-bottom {
+  margin-bottom: 0;
+}
+.accordion-content-item.squeeze-bottom ~ .accordion-content-item {
+  margin-top: 0;
+}
+
+.accordion-content--label,
+.accordion-content-item--label {
+  text-transform: uppercase;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 1em;
+}
+
+/*.accordion-content-item--content {}*/
+.view-course-event-references .box-data,
+.view-course-event-references .border-bottom {
+  border-bottom: 0;
+  padding: 0;
+}
+
+/**
+*   DS teaser styles 
+*/
+/* accordion teaser */
+@media (min-width: 48em) {
+  .ds-teaser-accordion {
+    margin-left: 2.6em;
+  }
+}
+.ds-teaser-accordion .accordion-style-clean.ds-teaser-accordion--title {
+  padding: 0 0 1em 0;
+  border: 0;
+  border-bottom: 1px solid #EBEBEB;
+  background: transparent;
+}
+.ds-teaser-accordion .accordion-style-clean.ds-teaser-accordion--title.is-active {
+  border-bottom: 0;
+}
+.ds-teaser-accordion .accordion-style-clean.ds-teaser-accordion--title:before {
+  color: #0098d0;
+}
+.ds-teaser-accordion .accordion-style-clean.ds-teaser-accordion--content {
+  border-bottom: 1px solid #EBEBEB;
+}
+.ds-teaser-accordion .accordion-style-clean .ds-teaser-accordion--title_header {
+  color: #222;
+}
+.ds-teaser-accordion .accordion-style-clean .ds-teaser-accordion--title_header {
+  padding: 0;
+}
+.ds-teaser-accordion p {
+  font-size: inherit;
+}
+.views-row-first .ds-teaser-accordion .accordion-style-clean.ds-teaser-accordion--title {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #EBEBEB;
+}
+.views-row-first .ds-teaser-accordion .icon-placement-right:before {
+  top: 2.6em;
+}
+
+[class*="group-accordion-item"] .ds-teaser-accordion {
+  margin-top: 1em;
+}
+
+.ds-teaser-accordion--title {
+  position: relative;
+  width: 100%;
+  padding-left: 2.4em;
+  border: 1px solid #0098d0;
+  background: #0098d0;
+  font-size: 1em;
+}
+.ds-teaser-accordion--title:hover {
+  cursor: pointer;
+}
+.ds-teaser-accordion--title:before {
+  content: "\f054";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2.4em;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-family: "FontAwesome";
+  color: #FFF;
+}
+.ds-teaser-accordion--title .field-name-field-imp-begin-date {
+  float: right;
+}
+.ds-teaser-accordion--title.is-active:before {
+  content: "\f078";
+}
+.ds-teaser-accordion--title.icon-placement-right {
+  padding-left: 0;
+  padding-right: 2.4em;
+}
+.ds-teaser-accordion--title.icon-placement-right:before {
+  top: 1.6em;
+  left: auto;
+  right: 0.9em;
+}
+.ds-teaser-accordion--title.icon-placement-right.is-active:before {
+  left: auto;
+  right: 0.65em;
+}
+.ds-teaser-accordion--title p {
+  margin: 0;
+  padding: 0;
+}
+
+.ds-teaser-accordion--title_header {
+  padding: 0.65em;
+  margin: 0;
+  background: #FFF;
+  color: #0098d0;
+  font-size: 1em;
+  text-transform: none;
+}
+
+.ds-teaser-accordion--title-loc-time {
+  float: right;
+  padding: 0.65em;
+  font-size: 1em;
+  color: #979797;
+}
+
+.ds-teaser-accordion--title_timespan {
+  color: #979797;
+}
+
+.ds-teaser-accordion--content {
+  margin-top: 2em;
+  padding-bottom: 2em;
+}
+.ds-teaser-accordion--content > .ds-teaser-accordion--content--indented {
+  padding: 0 10px;
+}
+@media (min-width: 48em) {
+  .ds-teaser-accordion--content > .ds-teaser-accordion--content--indented {
+    padding: 0 40px;
+  }
+}
+
+.ds-teaser-accordion--content-field {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1em;
+  overflow: hidden;
+}
+.ds-teaser-accordion--content-field .label-above {
+  font-weight: 900;
+}
+@media (min-width: 48em) {
+  .ds-teaser-accordion--content-field .label-above {
+    float: left;
+    min-width: 12em;
+    font-weight: normal;
+  }
+}
+@media (min-width: 48em) {
+  .ds-teaser-accordion--content-field .content {
+    float: left;
+    max-width: 32em;
+  }
+}
+
+/* fix bug with sub-accordion item widh */
+.field-group-accordion-item {
+  width: 100%;
+  padding: 0 0 1em;
+}
+.field-group-accordion-item .views-row-first {
+  padding-top: 1em;
+}
+
 /*
  section: 6.4
  title: Author
@@ -8002,4 +8298,65 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   top: -10px;
   right: 12px;
+}
+
+/*
+ section: 6.17
+ title: Material block
+ template: 6_17-material-block
+ description: <strong>Note! This component is not finished.</strong><br/><br/>Display suite material block styles (used in events material attachements). Depends on alternative accordion.
+*/
+.ds-material-block {
+  padding: 0.5em 0;
+  border-top: 1px solid #EBEBEB;
+}
+@media (min-width: 48em) {
+  .ds-material-block {
+    width: 100%;
+  }
+}
+
+.ds-material-block--content {
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .ds-material-block--content {
+    width: 100%;
+  }
+}
+@media (min-width: 48em) {
+  .ds-material-block--content .field {
+    float: left;
+    display: inline-block;
+    width: 33%;
+  }
+}
+
+.table-three-columns .field {
+  width: 33%;
+}
+.table-three-columns .hide-from-three-column-tables {
+  display: none;
+}
+
+.table-four-columns .field {
+  width: 25%;
+}
+
+.material-block--title {
+  font-weight: 900;
+}
+
+.remove-styles p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+.remove-styles p:first-child {
+  margin: 0;
+  padding: 0;
+}
+
+.meta-information div {
+  float: left;
 }
