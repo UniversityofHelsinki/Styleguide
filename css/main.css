@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*
+  section: 1
+  title: Global
+  description:
+*/
+/*
+ section: 1.2
+ title: Grid
+ description: The recommended grid to use is <a href="https://github.com/at-import/Singularity" target="_blank">singularity</a>.
+*/
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -241,31 +251,31 @@ video {
 }
 
 /*
-	section: 1
+	section: 1.1
 	title:Variables
 	description: Description about variables.
  */
 /*
- section: 1.1
+ section: 1.1.1
  title: Colors
  description: The colors used through out the theme.
 */
 /*
- section: 1.1.1
+ section: 1.1.1.1
  title: Text colors
  description: Main text colors for Helsingin yliopisto - Julkiset
  color-list: grid
  colors: $white, $black
 */
 /*
- section: 1.1.2
+ section: 1.1.1.2
  title: Other colors
  description: The colors used through out the theme.
  color-list: list
  colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
 */
 /*
- section: 1.1.3
+ section: 1.1.1.3
  title: Faculty colors
  description:  <table><tr><th>Faculty</th><th>Color variable</th></tr><tr><td>humanistinen</td><td>$lightblue</td></tr><tr><td>oikeustieteellinen</td><td>$darkred</td></tr><tr><td>kayttaytymistieteellinen</td><td>$yellow</td></tr><tr><td>laaketieteellinen</td><td>$darkturquoise</td></tr><tr><td>maatalous-metsatieteellinen </td><td>$turquoise</td></tr><tr><td>matemaattis-luonnontieteellinen</td><td>$orange</td></tr><tr><td>svenska-social--och-kommunalhogskolan</td><td>$pink</td></tr><tr><td>farmasian</td><td>$lightturquoise</td></tr><tr><td>valtiotieteellinen</td><td>$red</td></tr><tr><td>teologinen</td><td>$lila</td></tr><tr><td>elainlaaketieteellinen</td><td>$darkgreen</td></tr><tr><td>bio--ja-ymparistotieteellinen  </td><td>$limegreen</td></tr></table>
  color-list: list
