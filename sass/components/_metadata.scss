@@ -1,0 +1,141 @@
+/*
+ section: 6.16
+ title: Course meta data
+ description: <strong>Note! This component is not finished.</strong><br/><br/>Expected metadata setup consists from a variation of inline text elements which either float to the left or right.
+*/
+
+/*
+ section: 6.16.1
+ title: Single row
+ template: 6_16_1-course-meta-data-single
+ description: Expected metadata setup consists from a variation of inline text elements which either float to the left or right
+*/
+
+/*
+ section: 6.16.2
+ title: Multi row
+ template: 6_16_2-course-meta-data-multi
+ description: Used on open university and other courses which needs multiple rows.
+*/
+.ds-node-metadata {
+	width: 100%;
+	clear: both;
+
+	@include border-side(top);
+	@include border-side(bottom);
+	display: block;
+	padding: 6px 0 5px;
+	margin-bottom: 2rem;
+
+	font-size: 0.875em;
+	line-height: 1.31em;
+
+	.field {
+		margin-right: 1em;
+	}
+	.strong {
+		font-weight: 900;
+	}
+	.highlight {
+		color: $blue;
+	}
+	.date {
+		float: right;
+	}
+	label {
+		margin-right: 0.35em;
+	}
+	.teaching-languages {
+		float: right;
+		span {
+			margin-left: 0.35em;
+			font-weight: 900;
+		}
+	}
+	.activity {
+		float: right;
+		margin-left: 10px;
+		position: relative;
+		width: 35px;
+		height: 20px;
+		cursor: pointer;
+		.activity-toggle {
+			display: inline;
+			&:before {
+				@include font-awesome('\f0f3');
+				font-size: 14px;
+				color: $blue;
+			}
+		}
+		.count {
+			@include border-radius(1em);
+			@include font-weight-bold;
+			display: inline;
+			position: absolute;
+			left: 3px;
+			top: -4px;
+			background-color: $orange;
+			color: $white;
+			text-align: center;
+			font-size: 10px;
+			line-height: 14px;
+			padding: 0 4px;
+			min-width: 14px;
+		}
+		.item-list {
+			@include transition(all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s);
+			z-index: 1;
+			font-size: 0.85em;
+			overflow: hidden;
+			background: $white;
+			position: absolute;
+			right: 5px;
+			padding: 0 1em;
+			margin-top: 10px;
+			height: 0;
+			width: 300px;
+			li {
+				@include border-bottom;
+				padding: 0.5em 0;
+				&:last-child {
+					border-bottom: 0;
+				}
+				&.new:before {
+					@include font-awesome('\f071');
+					color: $orange;
+				}
+				.message-date {
+					@include font-weight-light;
+				}
+			}
+			.activity-confirm {
+				display: inline-block;
+				text-transform: uppercase;
+				background: $blue;
+				color: $white;
+				padding: 0.25em 0.5em;
+				margin: 0.5em 0;
+			}
+			&.collapsed {
+				@include border;
+				overflow: visible;
+				height: auto;
+				padding: 0.5em 1em;
+			}
+			&:before {
+				@include alternative-arrow($lightsilver, 10px, 'up');
+				position: absolute;
+				top: -11px;
+				right: 12px;
+			}
+			&:after {
+				@include alternative-arrow($white, 10px, 'up');
+				position: absolute;
+				top: -10px;
+				right: 12px;
+			}
+		}
+	}
+}
+
+

@@ -7842,3 +7842,164 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #FFF;
 }
+
+/*
+ section: 6.16
+ title: Course meta data
+ description: <strong>Note! This component is not finished.</strong><br/><br/>Expected metadata setup consists from a variation of inline text elements which either float to the left or right.
+*/
+/*
+ section: 6.16.1
+ title: Single row
+ template: 6_16_1-course-meta-data-single
+ description: Expected metadata setup consists from a variation of inline text elements which either float to the left or right
+*/
+/*
+ section: 6.16.2
+ title: Multi row
+ template: 6_16_2-course-meta-data-multi
+ description: Used on open university and other courses which needs multiple rows.
+*/
+.ds-node-metadata {
+  width: 100%;
+  clear: both;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  display: block;
+  padding: 6px 0 5px;
+  margin-bottom: 2rem;
+  font-size: 0.875em;
+  line-height: 1.31em;
+}
+.ds-node-metadata .field {
+  margin-right: 1em;
+}
+.ds-node-metadata .strong {
+  font-weight: 900;
+}
+.ds-node-metadata .highlight {
+  color: #0098d0;
+}
+.ds-node-metadata .date {
+  float: right;
+}
+.ds-node-metadata label {
+  margin-right: 0.35em;
+}
+.ds-node-metadata .teaching-languages {
+  float: right;
+}
+.ds-node-metadata .teaching-languages span {
+  margin-left: 0.35em;
+  font-weight: 900;
+}
+.ds-node-metadata .activity {
+  float: right;
+  margin-left: 10px;
+  position: relative;
+  width: 35px;
+  height: 20px;
+  cursor: pointer;
+}
+.ds-node-metadata .activity .activity-toggle {
+  display: inline;
+}
+.ds-node-metadata .activity .activity-toggle:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  font-size: 14px;
+  color: #0098d0;
+}
+.ds-node-metadata .activity .count {
+  border-radius: 1em;
+  font-weight: 700;
+  font-style: normal;
+  display: inline;
+  position: absolute;
+  left: 3px;
+  top: -4px;
+  background-color: #fca311;
+  color: #FFF;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0 4px;
+  min-width: 14px;
+}
+.ds-node-metadata .activity .item-list {
+  -moz-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
+  -o-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
+  -webkit-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1);
+  -webkit-transition-delay: 0s;
+  -webkit-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
+  z-index: 1;
+  font-size: 0.85em;
+  overflow: hidden;
+  background: #FFF;
+  position: absolute;
+  right: 5px;
+  padding: 0 1em;
+  margin-top: 10px;
+  height: 0;
+  width: 300px;
+}
+.ds-node-metadata .activity .item-list li {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  padding: 0.5em 0;
+}
+.ds-node-metadata .activity .item-list li:last-child {
+  border-bottom: 0;
+}
+.ds-node-metadata .activity .item-list li.new:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+  color: #fca311;
+}
+.ds-node-metadata .activity .item-list li .message-date {
+  font-weight: 300;
+  font-style: normal;
+}
+.ds-node-metadata .activity .item-list .activity-confirm {
+  display: inline-block;
+  text-transform: uppercase;
+  background: #0098d0;
+  color: #FFF;
+  padding: 0.25em 0.5em;
+  margin: 0.5em 0;
+}
+.ds-node-metadata .activity .item-list.collapsed {
+  border: 1px solid #EBEBEB;
+  overflow: visible;
+  height: auto;
+  padding: 0.5em 1em;
+}
+.ds-node-metadata .activity .item-list:before {
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #EBEBEB;
+  position: absolute;
+  top: -11px;
+  right: 12px;
+}
+.ds-node-metadata .activity .item-list:after {
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  position: absolute;
+  top: -10px;
+  right: 12px;
+}
