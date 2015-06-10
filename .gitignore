@@ -6,6 +6,7 @@
 /node_modules
 /*.log
 /.sass-cache
+/index.html
 
 #
 # Mac OSX
