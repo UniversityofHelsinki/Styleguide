@@ -1,6 +1,0 @@
-{
-	"compiledCssPath":"css/main.css",
-	"uncompiledCssPath":"sass/",
-	"output":"styleguide.html",
-	"cssCompiler":"sass"
-}
