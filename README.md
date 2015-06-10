@@ -27,66 +27,11 @@ Setup:
 1. `bundle install`
 2. `npm install`
 3. `gulp` (to compile the css)
-4. `node build` (to render styleguide.html)
+4. cd into `styleguide/`
+5. `node build` (to render `index.html`, the style guide)
 
-Comment syntax:
+Style guide documentation:
 ---------------
 
-Write comments anywhere in the CSS document, but we suggest putting it somewhere that is actually relevant to the code you are displaying to act as documentation.
+Read `styleguide/README.md` for more information about how to document the style guide.
 
-Required
-* section: numerical section number with point devision for hierarchy eg 1.1.1
-
-Optional:
-* title: name of section
-* description: description of section
-* template: name of the template html in the template subdirectory with examples to import
-* color-list: Display the colors used in the style guideline. Options: grid | list
-* colors: Display only a specific set of colors by writing in the variable color name. The list should be comma-separated.
-
-The hierarchy is imported and created ad hock, so if you only have 1.1.1 then section 1 and 1.1 will automatically be made with no title and description etc.
-Recommended structure would have each "page" as the sass section or document with comments in the head, eg.
-If you have duplicate section numbers they will be overwritten by the latest, and a warning printed in the console.
-
-~~~
-/*
-section: 1
-title:Buttons
- */
-
-/*
-section: 1.1
-title:Basic buttons
- */
-
-/*
-section: 1.1.1
-title:Button 1
-template:button_1
- */
-.button1{
-	...
-}
-
-/*
-section: 1.1.2
-title:Button 1
-template:button_2
- */
-.button2{
-	...
-}
-
-/*
-section: 2
-title: Colors
-color-list: grid
-*/
-~~~
-
-
-Templates:
-----------
-
-Templates are stored in the subdirectory 'templates'. These should be direct implementations and examples of states of the CSS, either alone or in a container as required.
-Firstrun templates are stubbed out for you, so by naming the template and running the script it will automatically create the file for you to then complete.
