@@ -1,0 +1,105 @@
+#idean-styleguide .idean-styleguide-title{
+	position: relative;
+	color: #FFF;
+	background: #222;
+	padding-left: 63px;
+}
+#idean-styleguide .idean-styleguide-title:before{
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+	
+	background-image: url('../images/hy_logo_white.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	width: 53px;
+	height: 50%;
+}
+
+@media (max-width: 767px) {
+	#idean-styleguide .idean-styleguide-title{
+		padding-left: 0px;
+	}
+	#idean-styleguide .idean-styleguide-title:before{
+		display: none;
+	}
+}
+
+#idean-styleguide .idean-styleguide-section-title{
+	color: #0098d0;
+}
+
+#idean-styleguide .idean-styleguide-collapse{
+	color: #424242;
+}
+#idean-styleguide .idean-styleguide-menu{
+	background: #fff;
+}
+#idean-styleguide .idean-styleguide-menu-container ul{
+	width: 100%;	
+}
+
+#idean-styleguide .idean-styleguide-menu-button{
+	background: #fff;
+}
+
+#idean-styleguide .idean-styleguide-menu-button .lines{ 
+    background: #222;
+}
+#idean-styleguide .idean-styleguide-menu-button .lines:before, 
+#idean-styleguide .idean-styleguide-menu-button .lines:after{
+    background: #222;
+}
+
+#idean-styleguide .idean-styleguide-menu .idean-styleguide-link{
+	color: #424242;
+}
+#idean-styleguide .idean-styleguide-menu .idean-styleguide-link:hover{
+	color: #424242;
+}
+#idean-styleguide .idean-styleguide-menu .idean-styleguide-link.active{
+	color: #0882B3;
+}
+#idean-styleguide .idean-styleguide-menu .idean-styleguide-link.active:hover{
+	color: #424242;
+}
+#idean-styleguide .idean-styleguide-menu ul ul{
+	background: #fff;
+}
+#idean-styleguide .idean-styleguide-menu ul ul ul{ background: #fff; }
+#idean-styleguide .idean-styleguide-menu ul ul ul ul{ background: #fff; }
+#idean-styleguide .idean-styleguide-menu ul ul ul ul ul { background: #fff; }
+#idean-styleguide .idean-styleguide-menu ul ul ul ul ul ul{ background: #fff; }
+#idean-styleguide .idean-styleguide-demo-example:after {
+	content: ' ';
+	clear: both;
+	display: block;
+}
+#idean-styleguide .idean-styleguide-fullscreen{
+	color: #424242;
+}
+#idean-styleguide .idean-styleguide-popup-close{
+	background: #424242;
+}
+#idean-styleguide .idean-styleguide-selected-message{
+	background: #424242;
+}
+
+#idean-styleguide .token.property,
+#idean-styleguide .token.tag,
+#idean-styleguide .token.boolean,
+#idean-styleguide .token.number,
+#idean-styleguide .token.constant,
+#idean-styleguide .token.symbol,
+#idean-styleguide .token.deleted {
+	color: #905 !important;
+	background-color: transparent !important;
+	line-height: inherit !important;
+	font-size: inherit !important;
+	padding: 0 !important;
+	display: inherit !important;
+}
+
