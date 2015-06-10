@@ -27,8 +27,7 @@ Setup:
 1. `bundle install`
 2. `npm install`
 3. `gulp` (to compile the css)
-4. cd into `styleguide/`
-5. `node build` (to render `index.html`, the style guide)
+4. `node server` to start the http server and compile the style guide.
 
 Style guide documentation:
 ---------------

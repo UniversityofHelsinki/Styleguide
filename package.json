@@ -12,6 +12,7 @@
     "gulp-util": "*",
     "gulp-watch": "*",
     "gulp-autoprefixer": "^2.2.0",
-    "recursive-readdir-sync": "1.0.6"
+    "recursive-readdir-sync": "1.0.6",
+    "http-server": "^0.8.0"
   }
 }
