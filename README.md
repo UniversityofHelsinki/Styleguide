@@ -49,6 +49,11 @@ Submit changes with pull requests.
 
 ## Usage ##
 
+### Dependencies ###
+
+1. ruby & rubygems
+2. node & npm
+3. gulp
 
 ### Setting up ###
 
