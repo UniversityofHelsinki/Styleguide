@@ -1,15 +1,41 @@
-University of Helsinki Style Guide
-==================================
+# University of Helsinki Style Guide #
 
-Implementing the style guide in a project
------------------------------------------
+## Implementing the style guide in a project ##
 
-There’s a couple of ways on how to implement the style guide, the recommended way would be to use the style guide as a Git sub-module in the project that wants to implement it. The reason why you would want to use it as a sub-module instead of copying the files is because you’ll be able to get changes and new release from upstream.
+There’s a couple of ways on how to implement the style guide, while we don't enforce a specific way, we recommend you implement it in such a fashion that it can easily be updated (i.e. don't copy the files into a new project).
 
-Once the sub-module is in place, you can add the relevant SASS files that the project needs to the main SASS file so it’s compiled with the rest of the project’s CSS.
+### Using Bower ###
 
-Additions/changes to the style guide
-------------------------------------
+You can configure the style guide as a dependency through bower, which means the style guide will be fetched from github when the project is being initialized.
+
+Here's an example bower.json file (you'll need to change out the hash-string "release-X.X.X" to the release tag you want to use):
+```
+{
+  "name": "my-project",
+  [...]
+  "devDependencies": {
+    "Styleguide": "https://github.com/UH-StudentServices/Styleguide.git#release-X.X.X"
+  }
+}
+```
+Depending on how you use the styleguide, you can either have it as a dev dependency or a dependency (i.e. if you're  referencing the .sass files or using the compiled `main.css`).
+
+Once you run `bower install` you should be able to use the style guide from your bower components folder. 
+
+### Using git submodules ###
+
+You can add the styleguide, or this repo, as a [git submodule](http://git-scm.com/docs/git-submodule) in your project. The advantage that you get from using submodules is that there are less tools in the chain and you might have an easier time making pull request to the styleguide (depending on your specific workflow).
+
+Here's how you'd add the submodule. (you'll need to change out the "release-X.X.X" to the release tag you want to use)
+````
+git clone https://github.com/UH-StudentServices/Styleguide.git hu-styleguide
+cd hu-styleguide/
+git checkout release-X.X.X
+```
+
+Once you've added the submodule, you'll have to commit it to the parent repository.
+
+## Additions/changes to the style guide ##
 
 When adding new components or changing existing components, try to do so in a non-breaking fashion (because there might be other projects that depend on the component you’ve changed). Use modifiers for changes and keep to the same standard that the rest of the CSS was written in the specific component.
 
@@ -21,16 +47,17 @@ Since the style guide does not support any javascript dependencies, you need to 
 
 Submit changes with pull requests.
 
-Setup:
-======
+## Usage ##
+
+
+### Setting up ###
 
 1. `bundle install`
 2. `npm install`
 3. `gulp` (to compile the css)
 4. `node server` to start the http server and compile the style guide.
 
-Style guide documentation:
----------------
+## Style guide documentation: ##
 
 Read `styleguide/README.md` for more information about how to document the style guide.
 
