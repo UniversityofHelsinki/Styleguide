@@ -11,6 +11,7 @@
     "gulp-concat": "*",
     "gulp-notify": "*",
     "gulp-ruby-sass": "*",
+    "gulp-shell": "^0.4.2",
     "gulp-util": "*",
     "gulp-watch": "*",
     "recursive-readdir-sync": "1.0.6"
