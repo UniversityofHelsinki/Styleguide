@@ -637,8 +637,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #424242;
   letter-spacing: -0.05em;
   line-height: 1.1em;
-  margin: 0;
-  padding-bottom: 0.4em;
   text-transform: uppercase;
   word-wrap: break-word;
 }
@@ -667,7 +665,6 @@ h1 {
 h2 {
   font-size: 25px;
   font-size: 1.5625rem;
-  margin-top: -2px;
 }
 @media (min-width: 62.5em) {
   h2 {
@@ -4430,7 +4427,7 @@ textarea {
   font-style: normal;
   border: 1px solid #b8b8b8;
   color: #666;
-  opacity: 1 !important;
+  opacity: 1;
   padding: 10px;
   width: 100%;
 }
@@ -4441,7 +4438,7 @@ textarea {
  template: 4_1_6_forms-submit
  description: Submit form element.
 */
-.form-submit {
+.form-type-submit {
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   -webkit-transition-property: all;
@@ -4453,64 +4450,41 @@ textarea {
   display: block;
   line-height: 125%;
   padding: 0.9em 1em;
-  display: inline-block;
 }
-.form-submit:hover {
+.form-type-submit:hover {
   background-color: #005479;
   color: #FFF;
-}
-.form-submit.js-hide {
-  display: none;
-}
-.form-submit + .form-submit {
-  margin-left: 1em;
 }
 
 /*
  section: 4.2
  title: Search form
- description: The search form.
+ template: 4_2_search-form
+ description: The search form for normal and mobile browsers.
 */
-/*
- section: 4.2.1
- title: Search form, normal
- template: 4_2_1_search-form
- description: The search form for desktop.
-*/
-.search-form {
-  display: none;
+.form-type-search {
   position: relative;
 }
-@media (min-width: 48em) {
-  .search-form {
+@media (max-width: 48em) {
+  .form-type-search {
+    background-color: #222;
     display: block;
+    margin: 0;
+    max-width: 100%;
+    padding: 14px 52px;
+    width: 100%;
   }
-}
-
-/*
- section: 4.2.2
- title: Search form, mobile
- template: 4_2_2_search-form-mobile
- description: The search form for mobile.
-*/
-.search-form-mobile {
-  background-color: #222;
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  padding: 14px 52px;
-  width: 100%;
+  .form-type-search form {
+    position: relative;
+  }
 }
 @media (min-width: 48em) {
-  .search-form-mobile {
-    display: none;
+  .form-type-search {
+    position: relative;
   }
 }
-.search-form-mobile form {
-  position: relative;
-}
 
-.search-form__input {
+.form-type-search input[type="text"] {
   background: #424242;
   border: none;
   color: #FFF;
@@ -4522,21 +4496,32 @@ textarea {
   padding-right: 34px;
   width: 100%;
 }
-.search-form__input:focus {
+.form-type-search input[type="text"]:focus {
   outline-color: #0098d0;
 }
 @media (min-width: 48em) {
-  .search-form__input {
+  .form-type-search input[type="text"] {
     font-size: 12px;
     font-size: 0.75rem;
   }
 }
 
-.search-form__submit {
+.form-type-search input[type="submit"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "FontAwesome";
   content: "";
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  background-color: #0098d0;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  line-height: 125%;
+  padding: 0.9em 1em;
   background-color: transparent;
   height: 36px;
   padding: 0;
@@ -4545,10 +4530,14 @@ textarea {
   top: 0;
   width: 34px;
 }
-.search-form__input:focus + .search-form__submit {
+.form-type-search input[type="submit"]:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+.search-form__input:focus + .form-type-search input[type="submit"] {
   color: #0098d0;
 }
-.search-form__input:focus + .search-form__submit:hover {
+.search-form__input:focus + .form-type-search input[type="submit"]:hover {
   color: #FFF;
 }
 
@@ -4651,8 +4640,6 @@ fieldset legend {
  description:
 */
 dl, ol, ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
