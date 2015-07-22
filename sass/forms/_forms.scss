@@ -14,6 +14,7 @@ input {
   -webkit-appearance: none;
 }
 
+
 /*
  section: 4.1
  title: Forms, Basic
@@ -202,7 +203,7 @@ textarea {
 	@include font-weight-medium;
 	border: 1px solid darken($lightsilver,20%);
 	color: $gray;
-	opacity: 1 !important;
+	opacity: 1;
 	padding: 10px;
 	width: 100%;
 }
@@ -213,15 +214,6 @@ textarea {
  template: 4_1_6_forms-submit
  description: Submit form element.
 */
-.form-submit {
+.form-type-submit {
 	@include button;
-	display: inline-block;
-	
-	&.js-hide {
-		display: none;
-	}
-	
-	& + & {
-		margin-left: 1em;
-	}
 }

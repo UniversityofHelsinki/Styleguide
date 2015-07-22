@@ -54,9 +54,9 @@ gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: ""
   });
-  gulp.watch('./sass/**/*.scss', ['build']);
+  gulp.watch(['./sass/**/*.scss', './templates/**/*.html'], ['build']);
 
-  gulp.watch(["index.html", "./templates/**/*.html"]).on('change', browserSync.reload);
+  gulp.watch(['index.html']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['build']);
