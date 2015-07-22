@@ -6,6 +6,8 @@ var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 
+var browserSync = require('browser-sync').create();
+
 // Compass task
 gulp.task(
 	'compass', 
@@ -43,9 +45,12 @@ gulp.task(
 	}
 );
 
-gulp.task('watch', function() {
-	// watch scss files
-	gulp.watch('./sass/**/*.scss', ['compass']);
+gulp.task('serve', ['compass'], function() {
+  browserSync.init({
+    server: ""
+  });
+  gulp.watch('./sass/**/*.scss', ['compass']);
+  gulp.watch("index.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['compass', 'watch']);
+gulp.task('default', ['compass']);

@@ -4135,7 +4135,7 @@ h4 {
   transition-property: transform;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -transform: translateY(-50%);
   position: absolute;
   top: 50%;
   color: #979797;
@@ -5426,7 +5426,7 @@ a:hover .theme-dark a.list-of-links__link:hover:after, .theme-dark a.list-of-lin
   content: "";
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -transform: translateY(-50%);
   position: absolute;
   top: 50%;
   -webkit-transition-duration: 0.1s;
@@ -5521,7 +5521,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before {
   content: "";
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -transform: translateY(-50%);
   position: absolute;
   top: 50%;
   -webkit-transition-duration: 0.1s;
@@ -6638,7 +6638,7 @@ a.tag:hover, a.tag:active, a.tag:focus {
   }
 }
 
-.box-data__title, .box-data__date {
+.box-data__title, .box-data__date, .box-data__grade {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -6650,7 +6650,7 @@ a.tag:hover, a.tag:active, a.tag:focus {
   font-style: normal;
 }
 
-.box-data__date {
+.box-data__date, .box-data__grade {
   background-color: #666;
   color: #FFF;
   display: block;
@@ -6662,16 +6662,23 @@ a.tag:hover, a.tag:active, a.tag:focus {
   position: relative;
 }
 @media (min-width: 48em) {
-  .box-data__date {
+  .box-data__date, .box-data__grade {
     margin: 0 15px 0 0;
   }
 }
-.box-data__date > span {
-  height: 30px;
+.box-data__date > span, .box-data__grade > span {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -transform: translateY(-50%);
   position: absolute;
   top: 50%;
-  margin: -15px auto 0 auto;
   text-align: center;
+  width: 100%;
+}
+
+.box-data__grade {
+  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .box-data__content {
@@ -7555,9 +7562,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   left: 50%;
   top: 50%;
-  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -transform: translate(-50%, -50%);
 }
 
 .add-favorite-button__title {
@@ -7846,9 +7853,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
 .todo-items ul li .vertically-centered, .todo-items ul li .todo-action {
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -transform: translateY(-50%);
 }
 .todo-items .new-todo-item {
   position: relative;
@@ -7966,9 +7973,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   top: 50%;
   right: 1em;
-  -ms-transform: translate(0, -50%);
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -transform: translate(0, -50%);
 }
 .useful-links__delete-link:link, .useful-links__delete-link:hover, .useful-links__delete-link:active, .useful-links__delete-link:visited {
   color: #FFF;
@@ -7998,9 +8005,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   right: 1em;
   top: 50%;
-  -ms-transform: translate(0, -50%);
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -transform: translate(0, -50%);
 }
 
 .list-of-links__link.edit {
@@ -8013,9 +8020,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   top: 50%;
   left: 1.5em;
-  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -transform: translate(-50%, -50%);
 }
 .list-of-links__link.edit span {
   display: inline-block;
@@ -8081,9 +8088,9 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -transform: translate(-50%, -50%);
 }
 
 .useful-link-title {
