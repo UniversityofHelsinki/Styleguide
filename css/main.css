@@ -5368,19 +5368,14 @@ a:hover .accordion.theme-dark .accordion-title:before, .accordion.theme-dark .ac
  description:
 */
 .pager {
+  text-align: center;
   margin-top: 30px;
 }
-
-.pager--centered {
-  text-align: center;
+.pager li {
+  display: inline-block;
+  margin: 5px 5px;
 }
-
-.pager__item {
-  padding: 0;
-}
-
-.pager__item--current,
-.pager__item a {
+.pager li > a {
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   -webkit-transition-property: all;
@@ -5394,32 +5389,30 @@ a:hover .accordion.theme-dark .accordion-title:before, .accordion.theme-dark .ac
   padding: 0.9em 1em;
   font-weight: 400;
   font-style: normal;
-  padding: 1em 1.4em;
   text-transform: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
-.pager__item--current:hover,
-.pager__item a:hover {
+.pager li > a:hover {
   background-color: #005479;
   color: #FFF;
 }
-
-.pager__item,
-.pager__item--current {
-  display: inline-block;
-  margin: 5px 5px;
-}
-
-.pager__item--current,
-.pager__item--current a {
+.pager li > a.active {
   background-color: #005479;
 }
-
-.pager__item--previous,
-.pager__item--next {
+.pager li.pager-page a {
+  padding: 1em 1.4em;
+}
+.pager .pager-last,
+.pager .pager-next,
+.pager .pager-previous,
+.pager .pager-first {
   position: relative;
 }
-.pager__item--previous a:before,
-.pager__item--next a:before {
+.pager .pager-last a:before,
+.pager .pager-next a:before,
+.pager .pager-previous a:before,
+.pager .pager-first a:before {
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition-duration: 0.1s;
@@ -5432,36 +5425,51 @@ a:hover .accordion.theme-dark .accordion-title:before, .accordion.theme-dark .ac
   position: absolute;
   text-decoration: inherit;
 }
-.pager__item--previous:hover a:before,
-.pager__item--next:hover a:before {
+.pager .pager-last:hover a:before,
+.pager .pager-next:hover a:before,
+.pager .pager-previous:hover a:before,
+.pager .pager-first:hover a:before {
   background-color: #003146;
 }
-
-.pager__item--previous a {
+.pager .pager-first a,
+.pager .pager-previous a {
   padding-left: 4em;
 }
-.pager__item--previous a:before {
+.pager .pager-first a:before,
+.pager .pager-previous a:before {
+  left: 0;
+}
+.pager .pager-first a:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "FontAwesome";
   content: "";
-  left: 0;
 }
-
-.pager__item--next a {
+.pager .pager-previous a:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+}
+.pager .pager-next a,
+.pager .pager-last a {
   padding-right: 4em;
 }
-.pager__item--next a:before {
+.pager .pager-next a:before,
+.pager .pager-last a:before {
+  right: 0;
+}
+.pager .pager-next a:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+  content: "";
+}
+.pager .pager-last a:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "FontAwesome";
   content: "";
-  right: 0;
-}
-
-.pager__item--first,
-.pager__item--last {
-  display: none;
 }
 
 /*
