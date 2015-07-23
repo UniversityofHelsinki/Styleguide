@@ -12,41 +12,34 @@
  description:
 */
 .accordion {
-	:focus {
-		outline: none;
-	}
+  :focus {
+    outline: none;
+  }
 }
 
-.accordion__item {
-	margin-bottom: ($vert-spacing-unit)/2;
+.accordion-item {
+  margin-bottom: ($vert-spacing-unit)/2;
+
+  &.active {
+    color: $white;
+  }
 }
 
-.accordion__title {
-	@include button-accordion;
-	@include font-weight-medium;
-	@include font-size(14px);
-	text-transform: uppercase;
+.accordion-title {
+  @include button-accordion;
+  @include font-weight-medium;
+  @include font-size(14px);
+  text-transform: uppercase;
 }
 
-.accordion__content {
-	> .accordion {
-		padding: 20px 0px 0px 20px;
-
-		@include breakpoint($small) {
-			padding: 20px 0px 0px 20px;
-		}
-	}
-	> .textarea {
-		padding: 20px 10px;
-
-		@include breakpoint($small) {
-			padding: 20px 40px;
-		}
-	}
-	
-	> .textarea + .accordion {
-		padding-top: 0px;
-	}
+.accordion-content {
+  padding-top: 2em;
+  padding-left: 1em;
+  p {
+    padding-left: 1em;
+    padding-right: 2em;
+    @include font-family-bodytext();
+  }
 }
 
 /*
@@ -55,19 +48,11 @@
  template: 6_3_2_accordion-dark
  description:
 */
-.accordion--dark {
-	.accordion__title {
-		@include button-accordion-dark;
-		/*
-		@include button;
-		padding: 0;
-		height: auto;
-		line-height: 100%;*/
 
-		&.ui-state-active {
-			background-color: $blue--active;
-		}
-	}
+.accordion.theme-dark {
+  .accordion-title {
+    @include button-accordion-dark;
+  }
 }
 
 /*
@@ -91,53 +76,55 @@
  description:
 */
 
-.accordion-item,
+/*.accordion-item,
 .field-group-accordion-item {
 	float: left;
 	clear: both;
-}
+}*/
 
-.accordion-item {
-	position: relative;
-	width: 100%;
-	margin: 1em 0 0;
-	padding-left: 2.5em;
-	padding-bottom: 0px;
-	background: $darkblue;
+.accordion-alternative {
+  .accordion-item {
+    position: relative;
+    width: 100%;
+    margin: 1em 0 0;
+    padding-left: 2.5em;
+    padding-bottom: 0px;
+    background: $darkblue;
 
-	font-size: 1em;
-	color: $white;
-	overflow: hidden;
-	&:before {
-		content: "\f054";
-		position: absolute;
-		left: 1em;
-		top: 0.65em;
+    font-size: 1em;
+    color: $white;
+    overflow: hidden;
+    &:before {
+      content: "\f054";
+      position: absolute;
+      left: 1em;
+      top: 0.65em;
 
-		font-family: "FontAwesome";
-	}
-	&.is-active {
-		background: $darkblue--active;
-		a {
-			background: $blue--active;
-		}
-	}
-	&.is-active:before {
-		content: "\f078";
-		left: 0.75em;
-	}
-	a {
-		display: inline-block;
-		width: 100%;
-		padding: 0.65em;
+      font-family: "FontAwesome";
+    }
+    &.is-active {
+      background: $darkblue--active;
+      a {
+        background: $blue--active;
+      }
+    }
+    &.is-active:before {
+      content: "\f078";
+      left: 0.75em;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 0.65em;
 
-		background: $blue;
-		color: inherit;
-		letter-spacing: 0;
-		&:hover {
-			color: inherit;
-		}
-	}
+      background: $blue;
+      color: inherit;
+      letter-spacing: 0;
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
 }
 
 .field-group-accordion-item {
