@@ -3514,638 +3514,57 @@ h4 {
 /*
 	section: 5
 	title: Navigation
-	description: Description about navigation.
- */
- /*
-	section: 5.1
-	title: Main navigation
-	template: 5_1_main_navigation
-	description: The main navigation is built up by two components. The "Main menu" which also acts as the responsive menu, and a sub menu (called the fat menu).
+	description: Main and side menu
  */
 /*
- section: 5.1.1
+ section: 5.1
  title: Main menu
- template: 5_1_1_main-menu
+ template: 5_1_main-menu
  description: The main menu.
 */
-.main-menu.contextual-links-region {
-  position: static;
+.main-menu ul {
+  *zoom: 1;
+  clear: both;
 }
-.main-menu h2.block__title {
-  display: none;
+.main-menu ul:before, .main-menu ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
-.main-menu .navigation {
-  background-color: #FFF;
-  border-bottom: 1px solid #cacaca;
-  /**
-   * Responsive navigation cannot calculate the height of the child <li>...
-   * TODO: Check this!
-   */
+.main-menu ul:after {
+  clear: both;
 }
-.main-menu .navigation.opened {
-  max-height: 9999px !important;
-}
-.main-menu #nav-toggle {
-  background: #222;
+.main-menu li {
   display: block;
-  height: 70px;
-  position: absolute;
-  right: 0;
-  text-indent: -2000em;
-  top: 49px;
-  width: 70px;
-  z-index: 15;
-}
-.main-menu #nav-toggle:hover {
-  background-color: #0098d0;
-}
-.main-menu #nav-toggle:after {
-  font-size: 28px;
-  font-size: 1.75rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  color: #FFF;
-  left: 24px;
-  top: 19px;
-  position: absolute;
-  text-indent: 0;
-}
-.main-menu #nav-toggle.active:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  left: 24px;
-  top: 19px;
-}
-@media (min-width: 48em) {
-  .main-menu #nav-toggle {
-    display: none;
-  }
-}
-.main-menu .menu-path-front {
-  display: inline-block;
-}
-@media (min-width: 48em) {
-  .main-menu .menu-path-front a {
-    font-size: 0;
-    padding-right: 19px;
-    padding-left: 0;
-  }
-}
-@media (min-width: 62.5em) {
-  .main-menu .menu-path-front a {
-    padding-right: 35px;
-  }
-}
-.main-menu .menu-path-front a:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 300;
-  font-style: normal;
-  -webkit-transition: opacity, 0.2s;
-  transition: opacity, 0.2s;
-  display: none;
-}
-@media (min-width: 48em) {
-  .main-menu .menu-path-front a:after {
-    display: inline;
-  }
-}
-@media (min-width: 48em) {
-  .main-menu .menu-path-front .triangle {
-    display: none;
-  }
-}
-
-.responsive-navigation {
-  border-bottom: 1px solid #cacaca;
-}
-@media (min-width: 48em) {
-  .responsive-navigation {
-    border-bottom: none;
-  }
-}
-.responsive-navigation .triangle {
-  border-right: 1px solid #cacaca;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 60px;
-  z-index: 10;
-}
-@media (min-width: 48em) {
-  .responsive-navigation .triangle {
-    top: auto;
-  }
-}
-.responsive-navigation .menuparent > .triangle:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #0098d0;
-  display: inline-block;
-  margin-top: 1.3em;
-}
-@media (min-width: 48em) {
-  .responsive-navigation .menuparent > .triangle:before {
-    display: none;
-  }
-}
-.responsive-navigation .menuparent > .triangle.hidden:before {
-  display: none;
-}
-.responsive-navigation .menuparent.m-active > .triangle:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-}
-.responsive-navigation .menuparent > .active-triangle:before {
-  color: #005479;
-}
-.responsive-navigation .menu-path-front > .triangle {
-  border-right: 0 none;
-}
-.responsive-navigation .menu-path-front > .triangle:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 300;
-  font-style: normal;
-  -webkit-transition: opacity, 0.2s;
-  transition: opacity, 0.2s;
-  border-right: 0 none;
-  color: #0098d0;
-  display: inline-block;
-  margin-top: 1em;
-}
-@media (min-width: 48em) {
-  .responsive-navigation .menu-path-front > .triangle:before {
-    display: none;
-  }
-}
-.responsive-navigation .menu-path-front > .triangle.hidden:before {
-  display: none;
-}
-.responsive-navigation .menu-path-front > .active-triangle:before {
-  color: #005479;
-}
-.responsive-navigation li {
-  border-top: 1px solid #d2d2d2;
-  list-style-type: none;
-  list-style-image: none;
-  position: relative;
-  width: auto;
-}
-@media (min-width: 48em) {
-  .responsive-navigation li {
-    border-top: none;
-  }
-}
-.responsive-navigation li.active-trail > a {
-  color: #005479;
-}
-.responsive-navigation ul {
-  display: none;
-}
-.responsive-navigation ul.active-trail > li > ul {
-  display: block;
-}
-.responsive-navigation .responsive-navigation {
-  display: block;
-}
-.responsive-navigation a {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  font-style: normal;
-  color: #0098d0;
-  display: block;
-  line-height: 1.25em;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 20px 15px 80px;
-}
-.responsive-navigation a:hover, .responsive-navigation a.active-trail, .responsive-navigation a.active {
-  color: #005479;
-}
-.responsive-navigation a:hover, .responsive-navigation a.active-trail, .responsive-navigation a.active {
-  color: #005479;
-}
-.responsive-navigation .level-2 {
-  background: #f2f2f2;
-}
-.responsive-navigation .level-2 > ul {
-  padding-bottom: 10px;
-}
-.responsive-navigation .level-3 {
-  border: none;
-}
-.responsive-navigation .level-3 a {
-  font-weight: 400;
-  font-style: normal;
-  border: 0 none;
-  color: #979797;
-  padding: 10px 30px 10px 80px;
-  text-transform: none;
-}
-.responsive-navigation .level-3 a:hover, .responsive-navigation .level-3 a.active {
-  color: #424242;
-}
-.responsive-navigation .level-3 a.active.m-active {
-  color: #FFF;
-}
-.responsive-navigation .level-3 a .triangle {
-  display: none;
-}
-.responsive-navigation .level-3.active-trail .triangle {
-  display: block;
-  text-align: center;
-}
-.responsive-navigation .level-3.active-trail .triangle:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 22px;
-  font-size: 1.375rem;
-  color: #005479;
-  display: inline-block;
-  margin-top: 0.6em;
-}
-.responsive-navigation .level-4 {
-  display: none;
-}
-@media (min-width: 48em) {
-  .responsive-navigation {
-    margin: 0 auto;
-    max-width: 75em;
-    padding: 0 1em;
-  }
-  .responsive-navigation li {
-    display: inline-block;
-    list-style-image: none;
-    list-style-type: none;
-    position: relative;
-  }
-  .responsive-navigation li:nth-child(2) a {
-    padding-left: 0;
-  }
-  .responsive-navigation li a {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    font-weight: 700;
-    font-style: normal;
-    color: #0098d0;
-    display: block;
-    line-height: 1.25em;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    text-decoration: none;
-    -webkit-transition: padding, 0.3s;
-    transition: padding, 0.3s;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    display: block;
-    padding: 1.6em 1em;
-  }
-  .responsive-navigation li a:hover, .responsive-navigation li a.active-trail, .responsive-navigation li a.active {
-    color: #005479;
-  }
-}
-@media (min-width: 48em) and (min-width: 62.5em) {
-  .responsive-navigation li a {
-    padding: 1.6em 2em;
-  }
-}
-@media (min-width: 48em) {
-  .responsive-navigation li.is-open .triangle {
-    border-bottom: 10px solid #979797;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    height: 0;
-    left: 50%;
-    margin-left: -10px;
-    min-height: 0;
-    position: absolute;
-    width: 0;
-    z-index: auto;
-  }
-  .responsive-navigation li.is-open:nth-child(2) .triangle {
-    margin-left: -25px;
-  }
-  .responsive-navigation li.is-open.active-trail .triangle {
-    border-bottom-color: #005479;
-  }
-  .responsive-navigation li.menuparent ul {
-    display: none;
-    height: 0px;
-  }
-}
-
-.stickynav-active {
-  position: static;
-}
-.stickynav-active .main-menu {
-  height: 100%;
-  overflow-y: scroll;
-}
-@media (min-width: 48em) {
-  .stickynav-active {
-    position: fixed;
-  }
-  .stickynav-active .main-menu {
-    height: auto;
-    overflow: visible;
-  }
-  .stickynav-active + div {
-    padding-top: 70px;
-  }
-  .stickynav-active .responsive-navigation li a {
-    font-size: 15px;
-    font-size: 0.9375rem;
-    padding: 0.75em 1em;
-  }
-  .stickynav-active .responsive-navigation li .triangle {
-    bottom: 0px;
-  }
-  .stickynav-active .responsive-navigation li:nth-child(2) .triangle {
-    margin-left: -10px;
-  }
-  .stickynav-active .responsive-navigation li.menu-path-front {
-    display: inline-block;
-  }
-}
-@media (min-width: 48em) and (min-width: 48em) {
-  .stickynav-active .responsive-navigation li.menu-path-front a {
-    font-size: 0;
-    padding-right: 5px;
-    padding-left: 0;
-  }
-}
-@media (min-width: 48em) {
-  .stickynav-active .responsive-navigation li.menu-path-front a:after {
-    display: none;
-  }
-}
-@media (min-width: 48em) and (min-width: 48em) {
-  .stickynav-active .responsive-navigation li.menu-path-front a:after {
-    display: inline;
-  }
-}
-@media (min-width: 48em) and (min-width: 48em) {
-  .stickynav-active .responsive-navigation li.menu-path-front .triangle {
-    display: none;
-  }
-}
-
-@media (min-width: 62.5em) {
-  .stickynav-active .responsive-navigation li a {
-    font-size: 15px;
-    font-size: 0.9375rem;
-    padding: 0.75em 2em;
-  }
-}
-
-@media (min-width: 48em) {
-  .l-menu-bar {
-    min-height: 66px;
-  }
-}
-
-.js #nav {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
-@media (min-width: 48em) {
-  .js #nav {
-    position: relative;
-  }
-  .js #nav.closed {
-    max-height: none;
-  }
-}
-
-/*
- section: 5.1.2
- title: Fat menu
- template: 5_1_2_fat-menu
- description: The fat menu.
-*/
-.fatmenu {
-  background-color: #FFF;
-  display: none;
-  position: absolute;
-  width: 100%;
-  z-index: 11;
-}
-.logged-in .fatmenu {
-  position: static;
-}
-.stickynav-active .fatmenu {
-  position: fixed;
-}
-.fatmenu.is-open {
-  border-bottom: 1px solid #cacaca;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-@media (min-width: 48em) {
-  .fatmenu {
-    display: block;
-  }
-}
-.fatmenu .menu-block-wrapper {
-  margin: 0 auto;
-  max-width: 75em;
-  padding: 0 1em;
-  height: 0;
-  overflow: hidden;
-  position: relative;
-}
-.fatmenu .menu-block-wrapper p.exit {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #005479;
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 15px;
-  text-transform: uppercase;
-}
-.fatmenu .menu-block-wrapper p.exit:hover {
-  color: #003146;
-}
-.fatmenu .menu-block-wrapper p.exit:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  padding-right: 5px;
-}
-.fatmenu a {
-  font-weight: 700;
-  font-style: normal;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  color: #0098d0;
-  display: block;
-  line-height: 1.25em;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  padding: 15px 0 0;
-}
-.fatmenu .level-1 {
   float: left;
-  margin-right: -100%;
-  visibility: hidden;
-  padding: 5px 0 10px;
-  width: 100%;
+  list-style: none;
 }
-.fatmenu .level-1.is-open {
-  visibility: visible;
-  display: block !important;
-  margin-right: 0;
-}
-.fatmenu .level-1.is-open > a {
-  display: none;
-}
-.fatmenu .level-2 {
-  margin-right: 10px;
-  padding: 0;
-  width: 30%;
-}
-.fatmenu .level-2 > .menu {
-  margin: 0.5em 0 1em;
-  padding: 0;
-  position: relative;
-}
-.fatmenu .level-2 > .menu:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  border-left: 1px solid #EBEBEB;
-}
-.fatmenu .level-2.last {
-  border-bottom: 0 none;
-}
-.fatmenu .level-2 > a {
-  color: #0098d0;
-  position: relative;
-}
-.fatmenu .level-2 > a:hover {
-  color: #005479;
-}
-.fatmenu .level-2 > a:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-.fatmenu .level-2 > a.active-trail {
-  color: #005479;
-}
-.fatmenu .level-3 a {
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 400;
+.main-menu a {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
   font-style: normal;
-  color: #777777;
-  padding: 6px 0 6px 15px;
-  position: relative;
-  text-transform: none;
+  display: block;
+  padding: 1.6em 1.5em;
 }
-.fatmenu .level-3 a:hover, .fatmenu .level-3 a.active-trail {
+.main-menu a.active {
   color: #005479;
-}
-.fatmenu .level-3 a.active-trail:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 22px;
-  font-size: 1.375rem;
-  left: 0;
-  top: 7px;
-  position: absolute;
-}
-.fatmenu .level-4 {
-  display: none;
 }
 
-.close-fatmenu {
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #0098d0;
-  cursor: pointer;
-  height: 100%;
-  padding: 0 0.8em;
-  position: absolute;
-  text-align: center;
-  right: -5%;
-  top: 0;
-  z-index: 11;
+li.main-menu-home a {
+  padding-left: 0;
 }
-@media (min-width: 62.5em) {
-  .close-fatmenu {
-    right: -2%;
-  }
+li.main-menu-home a span {
+  display: none;
 }
-.close-fatmenu:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+li.main-menu-home a:before {
+  content: "\f015";
   font-family: "FontAwesome";
-  content: "";
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  color: #979797;
-  left: 0;
-  width: 100%;
-}
-.close-fatmenu:hover:before {
-  -webkit-transform: translateY(-50%) translateZ(0) scale(1.2);
-  transform: translateY(-50%) translateZ(0) scale(1.2);
-  color: #666;
-}
-.close-fatmenu:hover {
-  color: #005479;
 }
 
 /*
@@ -4154,15 +3573,15 @@ h4 {
  template: 5_2_side-menu
  description: The side menu.
 */
-.sidemenu {
+.side-menu {
   margin: 1em 0;
   padding-left: 1.25em;
 }
-.sidemenu li {
+.side-menu li {
   padding-bottom: 0.75em;
   padding-top: 0.75em;
 }
-.sidemenu a {
+.side-menu a {
   font-size: 15px;
   font-size: 0.9375rem;
   font-weight: 700;
@@ -4174,28 +3593,28 @@ h4 {
   text-transform: uppercase;
   text-decoration: none;
 }
-.sidemenu a:hover {
+.side-menu a:hover {
   color: #005479;
 }
-.sidemenu a.active-trail {
+.side-menu a.active-trail {
   color: #005479;
 }
-.sidemenu .level-2 {
+.side-menu .level-2 {
   border-bottom: 1px solid #EBEBEB;
 }
-.sidemenu .level-2 > .menu {
+.side-menu .level-2 > .menu {
   display: none;
   border-left: 1px solid #EBEBEB;
   margin: 1em 0;
   padding: 0;
 }
-.sidemenu .level-2.active-trail > .menu {
+.side-menu .level-2.active-trail > .menu {
   display: block;
 }
-.sidemenu .level-2.last {
+.side-menu .level-2.last {
   border-bottom: 0 none;
 }
-.sidemenu .level-3 a {
+.side-menu .level-3 a {
   font-weight: 400;
   font-style: normal;
   color: #777777;
@@ -4203,10 +3622,10 @@ h4 {
   position: relative;
   text-transform: none;
 }
-.sidemenu .level-3 a:hover, .sidemenu .level-3 a.active-trail {
+.side-menu .level-3 a:hover, .side-menu .level-3 a.active-trail {
   color: #005479;
 }
-.sidemenu .level-3 a.active-trail:before {
+.side-menu .level-3 a.active-trail:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "FontAwesome";
