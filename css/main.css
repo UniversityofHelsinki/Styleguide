@@ -5475,7 +5475,12 @@ a:hover .accordion.theme-dark .accordion-title:before, .accordion.theme-dark .ac
 /*
  section: 6.9
  title: Tags
- template: 6_9-tags
+ description:
+*/
+/*
+ section: 6.9.1
+ title: Tag list
+ template: 6_9_1-tag-list
  description:
 */
 ul.tag-list li {
@@ -5540,68 +5545,31 @@ ul.tag-list li a:hover {
 
 /*
  section: 6.9.2
- title: Tags
- template: 6_9_2-tags
+ title: Tab list
+ template: 6_9_2-tab-list
  description:
 */
-ul.tag-list li {
-  border: 1px solid #EBEBEB;
-  border-left: none;
-  color: #888888;
-  display: block;
-  line-height: 27px;
-  margin-left: 12px;
-  padding: 0 1em 0 1.5em;
-  position: relative;
-  font-size: 11px;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  font-style: normal;
+ul.tag-list-tabs li {
+  font-size: 15px;
+  font-size: 0.9375rem;
   float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  text-transform: uppercase;
   list-style: none;
+  background-color: #0098d0;
+  color: #FFF;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.3em 0.7em 0.4em;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  margin-right: 1em;
 }
-ul.tag-list li:before, ul.tag-list li:after {
-  border: 1px solid #EBEBEB;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-top-color: transparent;
-  border-width: 14px 10px;
-  content: " ";
-  height: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 0;
+ul.tag-list-tabs li.active {
+  background-color: #005479;
 }
-ul.tag-list li:before {
-  left: -20px;
-}
-ul.tag-list li:after {
-  left: -19px;
-  border-right-color: #FFF;
-}
-ul.tag-list li > *:before {
-  border: 1px solid #EBEBEB;
-  border-color: #d2d2d2;
-  border-radius: 50%;
-  content: " ";
-  height: 6px;
-  left: 0;
-  margin-top: -3px;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  z-index: 10;
-}
-ul.tag-list li a {
-  color: inherit;
-}
-ul.tag-list li a:hover {
-  color: #005479;
+ul.tag-list-tabs li a, ul.tag-list-tabs li a:hover, ul.tag-list-tabs li a:active, ul.tag-list-tabs li a:focus {
+  color: #FFF;
 }
 
 /*
