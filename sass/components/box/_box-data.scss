@@ -16,14 +16,14 @@
 	}
 }
 
-.box-data-title {
+.box-data__title {
 	@include text-informative;
 	@include font-family-main;
 	@include font-weight-medium;
 }
 
-.box-data-date {
-	@extend .box-data-title;
+.box-data__date {
+	@extend .box-data__title;
 	background-color: $gray;
 	color: $white;
 	display: block;
@@ -39,22 +39,19 @@
 	}
 
 	> span {
-      @include vertically-center;
-      text-align: center;
-      width: 100%;
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		margin: -15px auto 0 auto;
+		text-align: center;
 	}
 }
 
-.box-data-grade {
-  @extend .box-data-date;
-  @include font-size(30px);
-}
-
-.box-data-content {
+.box-data__content {
 	@include text-informative;
 	@include font-family-main;
 }
 
-.box-data-link {
+.box-data__link {
 	@include button-internal;
 }

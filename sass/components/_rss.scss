@@ -1,0 +1,66 @@
+.rss-feed {
+	font-size: 0.9rem;
+}
+
+.rss-feed__item {
+	@include border-bottom;
+	padding: 0.5em 0;
+	&:first-child {
+		padding-top: 0;
+	}
+	&:last-child {
+		border: 0;
+	}
+}
+
+.rss-feed__item-title {
+	margin: 0.2em 0;
+	font-size: 1.1rem;
+	word-wrap: break-word;
+}
+
+.rss-feed__date {
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+}
+
+.add-new-rss-feed {
+	input[type="text"] {
+		border: 0;
+		width: 80%;
+		font-size: 0.8rem;
+	}
+
+	i.fa-search {
+		color: $lightsilver;
+	}
+
+	a.fa-close {
+		color: $blue;
+		cursor: pointer;
+	}
+
+	.bar {
+		padding: 1em;
+	}
+
+	.rss-search-result-list {
+		font-size: 0.8rem;
+	}
+}
+
+.rss-search-result-list {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 200px;
+	@include breakpoint($small) {
+		height: 230px;
+	}
+	@include breakpoint($medium) {
+		height: 270px;
+	}
+	@include breakpoint($large) {
+		height: 300px;
+	}
+}

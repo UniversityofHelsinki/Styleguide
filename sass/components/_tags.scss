@@ -3,61 +3,30 @@
 // --------------------------------------------------
 
 /*
- section: 6.9
- title: Tags
- description:
-*/
-
-/*
- section: 6.9.1
- title: Tag list
- template: 6_9_1-tag-list
- description:
-*/
-
-ul.tag-list {
-  li {
-    @include tag-label;
-    @include font-size(11px);
-    @include font-weight-medium;
-    float: left;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    text-transform: uppercase;
-    list-style: none;
-  }
-}
-
-/*
  section: 6.9.2
- title: Tab list
- template: 6_9_2-tab-list
+ title: Tags
+ template: 6_9_2-tags
  description:
 */
-
-ul.tag-list-tabs {
-  li {
-    @include font-size(15px);
-    float: left;
-    list-style: none;
-    background-color: $blue;
-    color: $white;
-    display: inline-block;
-    line-height: 1.1;
-    padding: 0.3em 0.7em 0.4em;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-
-    margin-right: 1em;
-
-    &.active {
-      background-color: $darkblue;
-    }
-
-    a, a:hover, a:active, a:focus {
-      color: $white;
-    }
-
-  }
+.tag {
+  background-color: $blue;
+  color: $white;
+  @include font-size(15px);
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.3em 0.7em 0.4em;
+  transition-property: background-color;
+  transition-duration: 0.1s;
 }
 
+.tag--active {
+  background-color: $darkblue;
+  color: $white;
+}
+
+a.tag {
+  &:hover, &:active, &:focus {
+    background-color: $darkblue;
+    color: $white;
+  }
+}

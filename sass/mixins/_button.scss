@@ -38,7 +38,7 @@
 		position: absolute;
 	}
 
-	&.active {
+	&.is-active {
 		background-color: $blue;
 		color: $white;
 
@@ -70,7 +70,7 @@
 	&:before {
 		color: $white;	
 	}
-	&.active {
+	&.is-active {
 		background-color: $darkblue;
 		border-color: $darkblue;
 		color: $white;
