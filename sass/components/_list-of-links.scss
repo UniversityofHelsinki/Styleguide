@@ -10,13 +10,14 @@
  template: 6_2_1_list-of-links-normal
  description:
 */
+%list-of-links,
+.list-of-links {
+	display: block;
+}
 
-ul.list-of-links {
-  li > a {
-    @include button-internal;
-    @include font-weight-medium;
-    margin-bottom: 2px;
-  }
+.list-of-links__title {
+	@include label-rule(bottom);
+	@include text-label;
 }
 
 /*
@@ -25,7 +26,32 @@ ul.list-of-links {
  template: 6_2_2_list-of-links-dark-theme
  description:
 */
+a.list-of-links__link,
+.list-of-links__link > a { // We can't always (easily) get this class to the <a> element because of Drupal, so we use this hack
+	@include button-internal;
+	@include font-weight-medium;
+	margin-bottom: 2px;
 
-ul.list-of-links.theme-dark a {
-  @include button-internal-dark;
+	.theme-dark & {
+		@include button-internal-dark;
+	}
+}
+
+/*
+ section: 6.2.3
+ title: List of links, condensed
+ template: 6_2_3_list-of-links-condensed
+ description:
+*/
+.list-of-links--condensed {
+	@extend %list-of-links;
+	margin-bottom: 1em;
+
+	a.list-of-links__link,
+	.list-of-links__link > a {
+		@include font-weight-book;
+		@include font-size(14px);
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+	}
 }

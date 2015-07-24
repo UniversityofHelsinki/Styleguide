@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: $darkgray;
 	letter-spacing: -0.05em;
 	line-height: 1.1em;
-    margin: 0;
-    padding-bottom: 0.4em;
+	margin: 0;
+	padding-bottom: 0.4em;
 	text-transform: uppercase;
 	word-wrap: break-word;
 
@@ -49,6 +49,7 @@ h1 {
 
 h2 {
 	@include font-size(25px);
+	margin-top: -2px;
 
 	@include breakpoint($medium) {
 		@include font-size(38px);
@@ -72,8 +73,6 @@ h4 {
 /*
  section: 2.4
  title: Icons
- template: 2_4_icons
- description: HY icons. Some components use Font Awesome icons.
+ description: font-awesome is used for icons.
 */
 @import 'font-awesome/_font-awesome';
-@import 'hy-icons/hy-icons';

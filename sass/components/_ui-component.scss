@@ -1,0 +1,57 @@
+/*
+ section: 6.13
+ title: UI Component
+ description: Used in some cases to wrap around another component.
+*/
+
+
+//
+// UI component
+// --------------------------------------------------
+
+
+.ui-component {
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+// UI component components
+.ui-component__title {
+  line-height: 1;
+  margin-bottom: .5em;
+
+  @include breakpoint($mobile-only) {
+    text-align: center;
+  }
+
+  // Some extra spacing if used in conjunction with border-bottom.
+  &.border-bottom {
+    padding-bottom: .25em;
+  }
+}
+
+.ui-component__title-link {
+  // Neutralization for .ui-component__title and all hN styles.
+  @include font-size(14px);
+  font-weight: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  // Let's get to actual business.
+  float: right;
+  color: $blue;
+  &:hover, &:focus, &:active {
+    color: $blue--active;
+  }
+}
+
+
+
+// Modifiers
+.ui-component--events {}
+.ui-component--studies {}
+
+.ui-component--portfolio {
+  @include breakpoint($small) {
+    .ui-component__title { text-align: left; }
+  }
+}
