@@ -28,7 +28,7 @@
 	}
 }
 
-.box-hero__title {
+.box-hero-title {
 	@include font-size(40px);
 	@include text-shadow-outline-bold(#000000);
 	color: $white;
@@ -45,7 +45,7 @@
 	}
 }
 
-.box-hero__content {
+.box-hero-content {
 	@include font-family-main;
 	@include text-liftup;
 	@include font-size(20px);
@@ -60,8 +60,8 @@
 	}
 }
 
-a.box-hero__link,
-.box-hero__link > a  {
+a.box-hero-link,
+.box-hero-link > a  {
 	@include button-internal-dark;
 	@include font-weight-medium;
 	display: inline-block;
@@ -69,7 +69,7 @@ a.box-hero__link,
 	text-align: left;
 }
 
-.box-hero__link.is-videolink {
+.box-hero-link.is-videolink {
 	a:after {
 		@include font-awesome('\f01d');
 		@include font-size(30px);

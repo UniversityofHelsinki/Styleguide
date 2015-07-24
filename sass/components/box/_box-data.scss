@@ -16,14 +16,14 @@
 	}
 }
 
-.box-data__title {
+.box-data-title {
 	@include text-informative;
 	@include font-family-main;
 	@include font-weight-medium;
 }
 
-.box-data__date {
-	@extend .box-data__title;
+.box-data-date {
+	@extend .box-data-title;
 	background-color: $gray;
 	color: $white;
 	display: block;
@@ -45,16 +45,16 @@
 	}
 }
 
-.box-data__grade {
-  @extend .box-data__date;
+.box-data-grade {
+  @extend .box-data-date;
   @include font-size(30px);
 }
 
-.box-data__content {
+.box-data-content {
 	@include text-informative;
 	@include font-family-main;
 }
 
-.box-data__link {
+.box-data-link {
 	@include button-internal;
 }

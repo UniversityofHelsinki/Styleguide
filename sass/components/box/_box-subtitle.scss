@@ -7,23 +7,23 @@
 
 %box-subtitle,
 .box-subtitle {
-	display: block;
+  display: block;
 }
 
-.box-subtitle__title {
-	@include label-rule(bottom);
-	@include text-label;
+.box-subtitle-title {
+  @include label-rule(bottom);
+  @include text-label;
 }
 
-.box-subtitle__content {
-	@include font-weight-medium;
+.box-subtitle-content {
+  @include font-weight-medium;
 
-	@include breakpoint($small) {
-		height: 3em;
-	}
+  @include breakpoint($small) {
+    height: 3em;
+  }
 }
 
-.box-subtitle__ingress {
-	@include text-liftup;
-	margin-bottom: $vert-spacing-unit;
+.box-subtitle-ingress {
+  @include text-liftup;
+  margin-bottom: $vert-spacing-unit;
 }

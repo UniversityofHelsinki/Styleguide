@@ -11,23 +11,14 @@
 	margin-bottom: 1em;
 }
 
-.box-subsection__title {
+.box-subsection-title {
 	@include text-label;
 }
 
-.box-subsection__content {
+.box-subsection-content {
 	@include text-informative;
 	@include border;
 	@include shadow-under;
 	padding: 1em;
 	margin: 1em 0 0;
-}
-
-.box-subsection__row {
-	padding-bottom: 1em;
-	word-wrap: break-word;
-
-	a {
-		@include font-weight-medium;
-	}
 }
