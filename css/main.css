@@ -694,7 +694,8 @@ h4 {
 /*
  section: 2.4
  title: Icons
- description: font-awesome is used for icons.
+ template: 2_4_icons
+ description: HY icons. Some components use Font Awesome icons.
 */
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3044,6 +3045,251 @@ h4 {
   content: "";
 }
 
+@font-face {
+  font-family: "hy-icons";
+  src: url("/assets/fonts/hy-icons.eot");
+  src: url("/assets/fonts/hy-icons.eot?#iefix") format("eot"), url("/assets/fonts/hy-icons.woff") format("woff"), url("/assets/fonts/hy-icons.ttf") format("truetype"), url("/assets/fonts/hy-icons.svg#hy-icons") format("svg");
+}
+.icon:before {
+  font-family: "hy-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-hy-Icons_add-to-todo-list:before {
+  content: "\E001";
+}
+
+.icon-hy-Icons_arrow-up:before {
+  content: "\E002";
+}
+
+.icon-hy-Icons_arrow:before {
+  content: "\E003";
+}
+
+.icon-hy-Icons_avatar-group:before {
+  content: "\E004";
+}
+
+.icon-hy-Icons_avatar:before {
+  content: "\E005";
+}
+
+.icon-hy-Icons_bachelor:before {
+  content: "\E006";
+}
+
+.icon-hy-Icons_camera:before {
+  content: "\E007";
+}
+
+.icon-hy-Icons_chat:before {
+  content: "\E008";
+}
+
+.icon-hy-Icons_date:before {
+  content: "\E009";
+}
+
+.icon-hy-Icons_discover:before {
+  content: "\E00A";
+}
+
+.icon-hy-Icons_done:before {
+  content: "\E00B";
+}
+
+.icon-hy-Icons_download:before {
+  content: "\E00C";
+}
+
+.icon-hy-Icons_drag:before {
+  content: "\E00D";
+}
+
+.icon-hy-Icons_drop-down:before {
+  content: "\E00E";
+}
+
+.icon-hy-Icons_edit-event:before {
+  content: "\E00F";
+}
+
+.icon-hy-Icons_edit:before {
+  content: "\E010";
+}
+
+.icon-hy-Icons_events:before {
+  content: "\E011";
+}
+
+.icon-hy-Icons_facebook:before {
+  content: "\E012";
+}
+
+.icon-hy-Icons_favorites:before {
+  content: "\E013";
+}
+
+.icon-hy-Icons_grid:before {
+  content: "\E014";
+}
+
+.icon-hy-Icons_hamburger:before {
+  content: "\E015";
+}
+
+.icon-hy-Icons_home:before {
+  content: "\E016";
+}
+
+.icon-hy-Icons_hy-logo:before {
+  content: "\E017";
+}
+
+.icon-hy-Icons_info:before {
+  content: "\E018";
+}
+
+.icon-hy-Icons_link-arrow-offsite:before {
+  content: "\E019";
+}
+
+.icon-hy-Icons_link-arrow:before {
+  content: "\E01A";
+}
+
+.icon-hy-Icons_linkedin:before {
+  content: "\E01B";
+}
+
+.icon-hy-Icons_list:before {
+  content: "\E01C";
+}
+
+.icon-hy-Icons_location:before {
+  content: "\E01D";
+}
+
+.icon-hy-Icons_log:before {
+  content: "\E01E";
+}
+
+.icon-hy-Icons_magnify-minus:before {
+  content: "\E01F";
+}
+
+.icon-hy-Icons_magnify-plus:before {
+  content: "\E020";
+}
+
+.icon-hy-Icons_master:before {
+  content: "\E021";
+}
+
+.icon-hy-Icons_minus:before {
+  content: "\E022";
+}
+
+.icon-hy-Icons_modify:before {
+  content: "\E023";
+}
+
+.icon-hy-Icons_navi-triangle:before {
+  content: "\E024";
+}
+
+.icon-hy-Icons_new-group:before {
+  content: "\E025";
+}
+
+.icon-hy-Icons_new-person:before {
+  content: "\E026";
+}
+
+.icon-hy-Icons_notification:before {
+  content: "\E027";
+}
+
+.icon-hy-Icons_opinder-logo-new:before {
+  content: "\E028";
+}
+
+.icon-hy-Icons_opinder-logo:before {
+  content: "\E029";
+}
+
+.icon-hy-Icons_pdf:before {
+  content: "\E02A";
+}
+
+.icon-hy-Icons_people:before {
+  content: "\E02B";
+}
+
+.icon-hy-Icons_person-outline:before {
+  content: "\E02C";
+}
+
+.icon-hy-Icons_person:before {
+  content: "\E02D";
+}
+
+.icon-hy-Icons_plus:before {
+  content: "\E02E";
+}
+
+.icon-hy-Icons_profile:before {
+  content: "\E02F";
+}
+
+.icon-hy-Icons_question:before {
+  content: "\E030";
+}
+
+.icon-hy-Icons_remove:before {
+  content: "\E031";
+}
+
+.icon-hy-Icons_search:before {
+  content: "\E032";
+}
+
+.icon-hy-Icons_time:before {
+  content: "\E033";
+}
+
+.icon-hy-Icons_todo-list:before {
+  content: "\E034";
+}
+
+.icon-hy-Icons_twitter:before {
+  content: "\E035";
+}
+
+.icon-hy-Icons_units-and-faculties:before {
+  content: "\E036";
+}
+
+.icon-hy-Icons_video:before {
+  content: "\E037";
+}
+
+.icon-hy-Icons_warning:before {
+  content: "\E038";
+}
+
+.icon-hy-Icons_you-tube:before {
+  content: "\E039";
+}
+
 /**
  * Gridder container and box classes
  */
@@ -3565,8 +3811,8 @@ li.main-menu-home a span {
   display: none;
 }
 li.main-menu-home a:before {
-  content: "\f015";
-  font-family: "FontAwesome";
+  content: "\E016";
+  font-family: "hy-icons";
 }
 
 /*
@@ -6612,268 +6858,4 @@ a:hover .box-story-link:after, .box-story-link:hover:after {
   content: "";
   font-size: 1.3em;
   margin-right: 0.7em;
-}
-
-/*
- section: 6.13
- title: UI Component
- description: Used in some cases to wrap around another component.
-*/
-.ui-component {
-  margin-bottom: 3em;
-  margin-top: 1em;
-}
-
-.ui-component__title {
-  line-height: 1;
-  margin-bottom: .5em;
-}
-@media (max-width: 48em) {
-  .ui-component__title {
-    text-align: center;
-  }
-}
-.ui-component__title.border-bottom {
-  padding-bottom: .25em;
-}
-
-.ui-component__title-link {
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: normal;
-  letter-spacing: normal;
-  text-transform: none;
-  float: right;
-  color: #0098d0;
-}
-.ui-component__title-link:hover, .ui-component__title-link:focus, .ui-component__title-link:active {
-  color: #0882B3;
-}
-
-@media (min-width: 48em) {
-  .ui-component--portfolio .ui-component__title {
-    text-align: left;
-  }
-}
-
-/*
- section: 6.16
- title: Course meta data
- description: <strong>Note! This component is not finished.</strong><br/><br/>Expected metadata setup consists from a variation of inline text elements which either float to the left or right.
-*/
-/*
- section: 6.16.1
- title: Single row
- template: 6_16_1-course-meta-data-single
- description: Expected metadata setup consists from a variation of inline text elements which either float to the left or right
-*/
-/*
- section: 6.16.2
- title: Multi row
- template: 6_16_2-course-meta-data-multi
- description: Used on open university and other courses which needs multiple rows.
-*/
-.ds-node-metadata {
-  width: 100%;
-  clear: both;
-  border-top: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
-  display: block;
-  padding: 6px 0 5px;
-  margin-bottom: 2rem;
-  font-size: 0.875em;
-  line-height: 1.31em;
-}
-.ds-node-metadata .field {
-  margin-right: 1em;
-}
-.ds-node-metadata .strong {
-  font-weight: 900;
-}
-.ds-node-metadata .highlight {
-  color: #0098d0;
-}
-.ds-node-metadata .date {
-  float: right;
-}
-.ds-node-metadata label {
-  margin-right: 0.35em;
-}
-.ds-node-metadata .teaching-languages {
-  float: right;
-}
-.ds-node-metadata .teaching-languages span {
-  margin-left: 0.35em;
-  font-weight: 900;
-}
-.ds-node-metadata .activity {
-  float: right;
-  margin-left: 10px;
-  position: relative;
-  width: 35px;
-  height: 20px;
-  cursor: pointer;
-}
-.ds-node-metadata .activity .activity-toggle {
-  display: inline;
-}
-.ds-node-metadata .activity .activity-toggle:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  font-size: 14px;
-  color: #0098d0;
-}
-.ds-node-metadata .activity .count {
-  border-radius: 1em;
-  font-weight: 700;
-  font-style: normal;
-  display: inline;
-  position: absolute;
-  left: 3px;
-  top: -4px;
-  background-color: #fca311;
-  color: #FFF;
-  text-align: center;
-  font-size: 10px;
-  line-height: 14px;
-  padding: 0 4px;
-  min-width: 14px;
-}
-.ds-node-metadata .activity .item-list {
-  -moz-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
-  -o-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
-  -webkit-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1);
-  -webkit-transition-delay: 0s;
-  -webkit-transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
-  transition: all 0.5s cubic-bezier(0.15, 1, 0.33, 1) 0s;
-  z-index: 1;
-  font-size: 0.85em;
-  overflow: hidden;
-  background: #FFF;
-  position: absolute;
-  right: 5px;
-  padding: 0 1em;
-  margin-top: 10px;
-  height: 0;
-  width: 300px;
-}
-.ds-node-metadata .activity .item-list li {
-  border-bottom: 1px solid #EBEBEB;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  padding: 0.5em 0;
-}
-.ds-node-metadata .activity .item-list li:last-child {
-  border-bottom: 0;
-}
-.ds-node-metadata .activity .item-list li.new:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "FontAwesome";
-  content: "";
-  color: #fca311;
-}
-.ds-node-metadata .activity .item-list li .message-date {
-  font-weight: 300;
-  font-style: normal;
-}
-.ds-node-metadata .activity .item-list .activity-confirm {
-  display: inline-block;
-  text-transform: uppercase;
-  background: #0098d0;
-  color: #FFF;
-  padding: 0.25em 0.5em;
-  margin: 0.5em 0;
-}
-.ds-node-metadata .activity .item-list.collapsed {
-  border: 1px solid #EBEBEB;
-  overflow: visible;
-  height: auto;
-  padding: 0.5em 1em;
-}
-.ds-node-metadata .activity .item-list:before {
-  width: 0;
-  height: 0;
-  content: '';
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-bottom: 10px solid #EBEBEB;
-  position: absolute;
-  top: -11px;
-  right: 12px;
-}
-.ds-node-metadata .activity .item-list:after {
-  width: 0;
-  height: 0;
-  content: '';
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  border-bottom: 10px solid #FFF;
-  position: absolute;
-  top: -10px;
-  right: 12px;
-}
-
-/*
- section: 6.17
- title: Material block
- template: 6_17-material-block
- description: <strong>Note! This component is not finished.</strong><br/><br/>Display suite material block styles (used in events material attachements). Depends on alternative accordion.
-*/
-.ds-material-block {
-  padding: 0.5em 0;
-  border-top: 1px solid #EBEBEB;
-}
-@media (min-width: 48em) {
-  .ds-material-block {
-    width: 100%;
-  }
-}
-
-.ds-material-block--content {
-  overflow: hidden;
-}
-@media (min-width: 48em) {
-  .ds-material-block--content {
-    width: 100%;
-  }
-}
-@media (min-width: 48em) {
-  .ds-material-block--content .field {
-    float: left;
-    display: inline-block;
-    width: 33%;
-  }
-}
-
-.table-three-columns .field {
-  width: 33%;
-}
-.table-three-columns .hide-from-three-column-tables {
-  display: none;
-}
-
-.table-four-columns .field {
-  width: 25%;
-}
-
-.material-block--title {
-  font-weight: 900;
-}
-
-.remove-styles p {
-  margin: 0;
-  padding: 0;
-  line-height: 1.4;
-}
-.remove-styles p:first-child {
-  margin: 0;
-  padding: 0;
-}
-
-.meta-information div {
-  float: left;
 }
