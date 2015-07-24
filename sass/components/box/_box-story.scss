@@ -17,7 +17,7 @@
 	overflow: hidden;
 }
 
-.box-story__image {
+.box-story-image {
 	margin-bottom: 0.5em;
 
 	@include breakpoint($medium) {
@@ -33,7 +33,7 @@
 	}
 }
 
-.box-story__video {
+.box-story-video {
 	display: inline-block;
 	margin-bottom: 0.5em;
 	position: relative;
@@ -63,7 +63,7 @@
 	}
 }
 
-.box-story__topical {
+.box-story-topical {
 	@include border;
 	@include font-size(12px);
 	@include font-weight-medium;
@@ -72,20 +72,20 @@
 	overflow: hidden;
 }
 
-.box-story__date {
+.box-story-date {
 	color: $silver;
 	display: inline-block;
 	padding: 5px 1em;
 }
 
-.box-story__tag {
+.box-story-tag {
 	@include tag-label;
 	border: none;
 	display: inline-block;
 	text-transform: uppercase;
 }
 
-.box-story__title {
+.box-story-title {
 	@include transition-property(color);
 	@include transition-duration(0.1s);
 	overflow: hidden;
@@ -96,7 +96,7 @@
 	}
 }
 
-.box-story__content {
+.box-story-content {
 	@include font-family-bodytext;
 	color: $gray;
 	line-height: 1.5em;
@@ -108,7 +108,7 @@
 	}
 }
 
-.box-story__link {
+.box-story-link {
 	@include transition-property(color);
 	@include transition-duration(0.1s);
 	@include button-internal;
@@ -127,13 +127,13 @@
  template: 6_10_5_2-box-story-liftup
  description: box-story--liftup is a more prominent display of content
 */
-%box-story--liftup,
-.box-story--liftup {
+%box-story-liftup,
+.box-story-liftup {
 	@extend %box-story;
 }
 
-.box-story__image {
-	.box-story--liftup & {
+.box-story-image {
+	.box-story-liftup & {
 		@include breakpoint($small) {
 			float: left;
 			margin-right: 2em;
@@ -142,20 +142,20 @@
 	}
 }
 
-.box-story__title {
-	.box-story--liftup & {
+.box-story-title {
+	.box-story-liftup & {
 		@include font-size(30px);
 		height: auto;
 	}
 
-	.box-story--liftup:active &,
-	.box-story--liftup:hover & {
+	.box-story-liftup:active &,
+	.box-story-liftup:hover & {
 		color: $darkblue;
 	}
 }
 
-.box-story__content {
-	.box-story--liftup & {
+.box-story-content {
+	.box-story-liftup & {
 		@include font-family-main;
 		@include text-liftup;
 		overflow: visible;
@@ -167,9 +167,9 @@
 	}
 }
 
-.box-story__link {
-	.box-story--liftup:active &,
-	.box-story--liftup:hover & {
+.box-story-link {
+	.box-story-liftup:active &,
+	.box-story-liftup:hover & {
 		color: $darkblue;
 	}
 }
@@ -180,24 +180,24 @@
  template: 6_10_5_3-box-story-constrained
  description: Constrained story has content that is not full width
 */
-.box-story--constrained {
+.box-story-constrained {
 	@extend %box-story;
 }
 
-.box-story__title {
-	.box-story--constrained & {
+.box-story-title {
+	.box-story-constrained & {
 		height: auto;
 	}
 }
 
-.box-story__topical {
-	.box-story--constrained & {
+.box-story-topical {
+	.box-story-constrained & {
 		display: inline-block;
 	}
 }
 
-.box-story__content {
-	.box-story--constrained & {
+.box-story-content {
+	.box-story-constrained & {
 		.more-link {
 			display: inline;
 			float: none;
