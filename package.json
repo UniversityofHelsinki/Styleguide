@@ -4,15 +4,16 @@
   "description": "Living styleguide for University of Helsinki",
   "author": "Benjamin Horn <benjamin.horn@idean.com>",
   "devDependencies": {
+    "browser-sync": "^2.8.0",
     "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-compass": "2.1.0",
     "gulp-concat": "*",
     "gulp-notify": "*",
     "gulp-ruby-sass": "*",
-    "gulp-compass": "2.1.0",
+    "gulp-shell": "^0.4.2",
     "gulp-util": "*",
     "gulp-watch": "*",
-    "gulp-autoprefixer": "^2.2.0",
-    "recursive-readdir-sync": "1.0.6",
-    "http-server": "^0.8.0"
+    "recursive-readdir-sync": "1.0.6"
   }
 }

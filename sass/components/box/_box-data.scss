@@ -16,14 +16,14 @@
 	}
 }
 
-.box-data__title {
+.box-data-title {
 	@include text-informative;
 	@include font-family-main;
 	@include font-weight-medium;
 }
 
-.box-data__date {
-	@extend .box-data__title;
+.box-data-date {
+	@extend .box-data-title;
 	background-color: $gray;
 	color: $white;
 	display: block;
@@ -39,19 +39,22 @@
 	}
 
 	> span {
-		height: 30px;
-		position: absolute;
-		top: 50%;
-		margin: -15px auto 0 auto;
-		text-align: center;
+      @include vertically-center;
+      text-align: center;
+      width: 100%;
 	}
 }
 
-.box-data__content {
+.box-data-grade {
+  @extend .box-data-date;
+  @include font-size(30px);
+}
+
+.box-data-content {
 	@include text-informative;
 	@include font-family-main;
 }
 
-.box-data__link {
+.box-data-link {
 	@include button-internal;
 }

@@ -59,8 +59,7 @@ Submit changes with pull requests.
 
 1. `bundle install`
 2. `npm install`
-3. `gulp` (to compile the css)
-4. `node server` to start the http server and compile the style guide.
+3. `gulp serve` (to compile the css and launch server)
 
 ## Style guide documentation: ##
 
