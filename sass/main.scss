@@ -3,12 +3,6 @@
   title: Global
   description:
 */
-
- /*
-  section: 1.2
-  title: Grid
-  description: The recommended grid to use is <a href="https://github.com/at-import/Singularity" target="_blank">singularity</a>.
- */
  
 // Import external libraries.
 @import "compass";
@@ -21,15 +15,13 @@
 
 @import "toolkit/kickstart";
 
-@import 'variables/_variables';
+@import 'variables/**/*';
 @import 'mixins/_mixins';
 @import '_states';
 @import 'objects/_objects';
 @import 'typography/_typography';
 @import 'layouts/common/_grid';
-@import 'layouts/common/_layouts';
-@import 'navigation/_navigation';
 @import 'forms/_forms';
 @import 'forms/_search-form';
 @import 'common-elements/_common-elements';
-@import 'components/_components';
+@import 'components/**/*';

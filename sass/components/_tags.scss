@@ -16,7 +16,7 @@
 */
 
 ul.tag-list {
-  li {
+  > li {
     @include tag-label;
     @include font-size(11px);
     @include font-weight-medium;
@@ -35,7 +35,7 @@ ul.tag-list {
  description:
 */
 
-ul.tag-list-tabs {
+ul.tag-list--tabs {
   li {
     @include font-size(15px);
     float: left;

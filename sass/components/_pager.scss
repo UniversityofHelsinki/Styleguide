@@ -19,20 +19,20 @@
     text-transform: none;
     padding-top: 1em;
     padding-bottom: 1em;
-
-    &.active {
-      background-color: $darkblue;
-    }
   }
 
-  li.pager-page a {
+  li.pager__page a {
     padding: 1em 1.4em;
   }
 
-  .pager-last,
-  .pager-next,
-  .pager-previous,
-  .pager-first {
+  li.pager__page.is-active a {
+    background-color: $darkblue;
+  }
+
+  .pager__last,
+  .pager__next,
+  .pager__previous,
+  .pager__first {
     position: relative;
 
     a:before {
@@ -53,28 +53,30 @@
       }
     }
   }
-  .pager-first a,
-  .pager-previous a {
+  .pager__first a,
+  .pager__previous a {
     padding-left: 4em;
     &:before {
       left: 0;
     }
   }
 
-  .pager-first a {
+  .pager__first a {
     &:before {
-      @include font-awesome("\f060");
+      @include hy-icon("\E01A");
+      transform: rotate(180deg);
     }
   }
 
-  .pager-previous a {
+  .pager__previous a {
     &:before {
-      @include font-awesome("\f053");
+      @include hy-icon("\E003");
+      transform: rotate(180deg);
     }
   }
 
-  .pager-next a,
-  .pager-last a {
+  .pager__next a,
+  .pager__last a {
     padding-right: 4em;
 
     &:before {
@@ -82,15 +84,15 @@
     }
   }
 
-  .pager-next a {
+  .pager__next a {
     &:before {
-      @include font-awesome("\f054");
+      @include hy-icon("\E003");
     }
   }
 
-  .pager-last a {
+  .pager__last a {
     &:before {
-      @include font-awesome("\f061");
+      @include hy-icon("\E01A");
     }
   }
 }

@@ -11,28 +11,42 @@
  template: 6_3_1_accordion-normal
  description:
 */
-.accordion {
-  :focus {
+ul%accordion,
+ul.accordion {
+  &:focus {
     outline: none;
   }
-}
+  > li {
+    margin-bottom: ($vert-spacing-unit)/2;
 
-.accordion-item {
-  margin-bottom: ($vert-spacing-unit)/2;
-
-  &.active {
-    color: $white;
+    &.is-active {
+      color: $white;
+    }
   }
 }
 
-.accordion-title {
-  @include button-accordion;
+.accordion--light {
+  @extend ul%accordion;
+  .accordion__title {
+    @include button-accordion;
+  }
+}
+
+.accordion--dark {
+  @extend ul%accordion;
+  .accordion__title {
+    @include button-accordion--dark;
+  }
+}
+
+.accordion__title {
   @include font-weight-medium;
   @include font-size(14px);
+
   text-transform: uppercase;
 }
 
-.accordion-content {
+.accordion__content {
   padding-top: 2em;
   padding-left: 1em;
   p {
@@ -49,329 +63,9 @@
  description:
 */
 
-.accordion.theme-dark {
-  .accordion-title {
-    @include button-accordion-dark;
-  }
-}
-
 /*
  section: 6.3.3
  title: Accordion nested
  template: 6_3_3_accordion-nested
  description:
 */
-
-/*
- section: 6.3.4
- title: Alternative accordion normal
- template: 6_3_4_alternative-accordion-normal
- description:
-*/
-
-/*
- section: 6.3.5
- title: Alternative accordion nested
- template: 6_3_5_alternative-accordion-nested
- description:
-*/
-
-/*.accordion-item,
-.field-group-accordion-item {
-	float: left;
-	clear: both;
-}*/
-
-.accordion-alternative {
-  .accordion-item {
-    position: relative;
-    width: 100%;
-    margin: 1em 0 0;
-    padding-left: 2.5em;
-    padding-bottom: 0px;
-    background: $darkblue;
-
-    font-size: 1em;
-    color: $white;
-    overflow: hidden;
-    &:before {
-      content: "\f054";
-      position: absolute;
-      left: 1em;
-      top: 0.65em;
-
-      font-family: "FontAwesome";
-    }
-    &.is-active {
-      background: $darkblue--active;
-      a {
-        background: $blue--active;
-      }
-    }
-    &.is-active:before {
-      content: "\f078";
-      left: 0.75em;
-    }
-    a {
-      display: inline-block;
-      width: 100%;
-      padding: 0.65em;
-
-      background: $blue;
-      color: inherit;
-      letter-spacing: 0;
-      &:hover {
-        color: inherit;
-      }
-    }
-  }
-}
-
-.field-group-accordion-item {
-	padding: 2em 0 0;
-	font-size: 1em;
-	.block-title {
-		display: none;
-	}
-}
-
-.accordion-content-label {
-	font-weight: 900;
-}
-
-.accordion-help {
-	@include border-bottom;
-	p {
-		margin-bottom: 0;
-	}
-}
-
-.accordion-content-item {
-	margin: 2em 0 1em;
-	@include breakpoint($small) {
-		padding-left: 2.6em;
-	}
-	&.tighten {
-		margin-top: 1em;
-	}
-	// unify font size to paragraphs
-	p {
-		font-size: inherit;
-	}
-	// editroial links
-	& ~ .action-links {
-		@include breakpoint($small) {
-			margin-left: 2.6em;
-		}
-		a {
-			padding: 1em;
-		}
-	}
-	.field-collection-item-field-imp-attached-material-sec {
-		margin-top: 3em;
-	}
-	.field-collection-view-links {
-		padding: 1em 0.3em;
-		background: $lightsilver;
-		overflow: hidden;
-		li {
-			float: left;
-			padding: 0 0.5em;
-		}
-	}
-	// helper
-	&.squeeze-bottom {
-		margin-bottom: 0;
-		~ .accordion-content-item {
-			margin-top: 0;
-		}
-	}
-}
-
-.accordion-content--label,
-.accordion-content-item--label {
-	text-transform: uppercase;
-	font-weight: 900;
-	display: block;
-	margin-bottom: 1em;
-}
-
-/*.accordion-content-item--content {}*/
-.view-course-event-references .box-data,
-.view-course-event-references .border-bottom {
-	border-bottom: 0;
-	padding: 0;
-}
-
-/**
-*   DS teaser styles 
-*/
-
-/* accordion teaser */
-.ds-teaser-accordion {
-	@include breakpoint($small) {
-		margin-left: 2.6em;
-	}
-	// clean styles
-	.accordion-style-clean {
-		&.ds-teaser-accordion--title {
-			padding: 0 0 1em 0;
-			border: 0;
-			//border-top: 1px solid $lightsilver;
-			border-bottom: 1px solid $lightsilver;
-			background: transparent;
-			&.is-active {
-				border-bottom: 0;
-			}
-			&:before {
-				color: $blue;
-			}
-		}
-		&.ds-teaser-accordion--content {
-			border-bottom: 1px solid $lightsilver;
-		}
-		.ds-teaser-accordion--title_header {
-			color: $black;
-		}
-		.ds-teaser-accordion--title_header {
-			padding: 0;
-		}
-	}
-	p {
-		font-size: inherit;
-	}
-	// add bordertop for first item
-	.views-row-first & .accordion-style-clean.ds-teaser-accordion--title {
-		margin-top: 2em;
-		padding-top: 1em;
-		border-top: 1px solid $lightsilver;
-	}
-	.views-row-first & .icon-placement-right {
-		&:before {
-			top: 2.6em;
-		}
-	}
-}
-
-// second level accordions fix
-[class*="group-accordion-item"] .ds-teaser-accordion {
-	margin-top: 1em;
-}
-
-.ds-teaser-accordion--title {
-	position: relative;
-	width: 100%;
-	padding-left: 2.4em;
-	border: 1px solid $blue;
-	background: $blue;
-
-	font-size: 1em;
-	&:hover {
-		cursor: pointer;
-	}
-	&:before {
-		content: "\f054";
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 2.4em;
-		text-align: center;
-		transform: translate(0,-50%);
-
-		font-family: "FontAwesome";
-		color: $white;
-	}
-	.field-name-field-imp-begin-date {
-		float: right;
-	}
-	&.is-active:before {
-		content: "\f078";
-	}
-	 // icon setting
-	&.icon-placement-right {
-		padding-left: 0;
-		padding-right: 2.4em;
-		&:before {
-			top: 1.6em;
-			left: auto;
-			right: 0.9em;
-		}
-		&.is-active:before {
-			left: auto;
-			right: 0.65em;
-		}
-	}
-	p { // remove margin and padding
-		margin: 0;
-		padding: 0;
-	}
-}
-
-.ds-teaser-accordion--title_header {
-	padding: 0.65em;
-	margin: 0;
-
-	background: $white;
-
-	color: $blue;
-	font-size: 1em;
-	//font-weight: normal;
-	text-transform: none;
-}
-
-.ds-teaser-accordion--title-loc-time {
-	float: right;
-	padding: 0.65em;
-
-	font-size: 1em;
-	color: $silver;
-}
-
-.ds-teaser-accordion--title_timespan {
-	color: $silver;
-}
-
-.ds-teaser-accordion--content {
-	margin-top: 2em;
-	padding-bottom: 2em;
-	> .ds-teaser-accordion--content--indented {
-		padding: 0 10px;
-		@include breakpoint($small) {
-			padding: 0 40px;
-		}
-	}
-}
-
-.ds-teaser-accordion--content-field {
-	margin-top: 0.5em;
-	padding-bottom: 0.5em;
-	border-bottom: 1px solid rgb(221, 221, 221);
-
-	font-size: 1em;
-	overflow: hidden;
-	.label-above {
-		font-weight: 900;
-		@include breakpoint($small) {
-			float: left;
-			min-width: 12em;
-
-			font-weight: normal;
-		}
-	}
-	.content {
-		@include breakpoint($small) {
-			float: left;
-			max-width: 32em;
-		}
-	}
-}
-
-/* fix bug with sub-accordion item widh */
-.field-group-accordion-item {
-	width: 100%;
-	padding: 0 0 1em;
-
-	.views-row-first {
-		padding-top: 1em;
-	}
-}

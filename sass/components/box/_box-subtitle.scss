@@ -10,12 +10,12 @@
   display: block;
 }
 
-.box-subtitle-title {
+.box-subtitle__title {
   @include label-rule(bottom);
   @include text-label;
 }
 
-.box-subtitle-content {
+.box-subtitle__content {
   @include font-weight-medium;
 
   @include breakpoint($small) {
@@ -23,7 +23,7 @@
   }
 }
 
-.box-subtitle-ingress {
+.box-subtitle__ingress {
   @include text-liftup;
   margin-bottom: $vert-spacing-unit;
 }

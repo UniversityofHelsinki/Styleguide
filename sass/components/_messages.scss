@@ -11,21 +11,21 @@ $messages: (
 		'color-alt': #81b43b,
 		'bg-color': #b2e576,
 		'bg-color-alt': #f2f7eb,
-		'icon': '\f00c',
+		'icon': '\E018',
 	),
 	'warning': (
 		'color': $white,
 		'color-alt': $black,
 		'bg-color': #52c6af,
 		'bg-color-alt': #f8f8f8,
-		'icon': '\f06a',
+		'icon': '\E038',
 	),
 	'error': (
 		'color': $white,
 		'color-alt': #964822,
 		'bg-color': #964822,
 		'bg-color-alt': #f4ece8,
-		'icon': '\f071',
+		'icon': '\E038',
 	)
 );
 
@@ -64,7 +64,7 @@ $messages: (
 	a {
 		@include font-weight-bold;
 		&:after {
-			@include font-awesome('\f061');
+			@include hy-icon('\E01A');
 			margin-left: 0.5em;
 		}
 	}
@@ -84,7 +84,7 @@ $messages: (
 			}
 			p:before,
 			li:before {
-				@include font-awesome(map-get(map-get($messages, $name), "icon"));
+				@include hy-icon(map-get(map-get($messages, $name), "icon"));
 				font-size: 1.3em;
 				margin-right: 0.7em;
 			}

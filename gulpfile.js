@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 
 var browserSync = require('browser-sync').create();
-var shell = require('gulp-shell')
+var shell = require('gulp-shell');
 
 // Compass task
 gulp.task(

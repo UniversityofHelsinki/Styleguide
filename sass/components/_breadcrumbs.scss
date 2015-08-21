@@ -13,7 +13,7 @@
 	}
 }
 
-.breadcrumbs-item {
+.breadcrumbs__item {
 	display: inline;
 	margin-right: 0.2em;
 
@@ -30,16 +30,16 @@
 	}
 }
 
-.breadcrumbs-divider {
+.breadcrumbs__divider {
 	@include font-weight-medium;
 	color: $blue;
 	display: inline;
 	margin-right: 0.5em;
 }
 
-.breadcrumbs-home a {
+.breadcrumbs__home a {
 	&:after {
-		@include font-awesome("\f015");
+		@include hy-icon("\E016");
 		@include font-size(16px);
 		@include font-weight-light;
 	}
