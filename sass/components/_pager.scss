@@ -63,14 +63,14 @@
 
   .pager__first a {
     &:before {
-      @include hy-icon("\E01A");
+      @include hy-icon("\EA19");
       transform: rotate(180deg);
     }
   }
 
   .pager__previous a {
     &:before {
-      @include hy-icon("\E003");
+      @include hy-icon("\EA03");
       transform: rotate(180deg);
     }
   }
@@ -86,13 +86,13 @@
 
   .pager__next a {
     &:before {
-      @include hy-icon("\E003");
+      @include hy-icon("\EA03");
     }
   }
 
   .pager__last a {
     &:before {
-      @include hy-icon("\E01A");
+      @include hy-icon("\EA19");
     }
   }
 }

@@ -39,7 +39,7 @@
 
 .breadcrumbs__home a {
 	&:after {
-		@include hy-icon("\E016");
+		@include hy-icon("\EA16");
 		@include font-size(16px);
 		@include font-weight-light;
 	}
