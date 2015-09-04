@@ -17,7 +17,7 @@
 	overflow: hidden;
 }
 
-.box-story-image {
+.box-story__image {
 	margin-bottom: 0.5em;
 
 	@include breakpoint($medium) {
@@ -33,7 +33,7 @@
 	}
 }
 
-.box-story-video {
+.box-story__video {
 	display: inline-block;
 	margin-bottom: 0.5em;
 	position: relative;
@@ -63,7 +63,7 @@
 	}
 }
 
-.box-story-topical {
+.box-story__topical {
 	@include border;
 	@include font-size(12px);
 	@include font-weight-medium;
@@ -72,20 +72,20 @@
 	overflow: hidden;
 }
 
-.box-story-date {
+.box-story__date {
 	color: $silver;
 	display: inline-block;
 	padding: 5px 1em;
 }
 
-.box-story-tag {
+.box-story__tag {
 	@include tag-label;
 	border: none;
 	display: inline-block;
 	text-transform: uppercase;
 }
 
-.box-story-title {
+.box-story__title {
 	@include transition-property(color);
 	@include transition-duration(0.1s);
 	overflow: hidden;
@@ -96,7 +96,7 @@
 	}
 }
 
-.box-story-content {
+.box-story__content {
 	@include font-family-bodytext;
 	color: $gray;
 	line-height: 1.5em;
@@ -108,7 +108,7 @@
 	}
 }
 
-.box-story-link {
+.box-story__link {
 	@include transition-property(color);
 	@include transition-duration(0.1s);
 	@include button-internal;
@@ -132,8 +132,8 @@
 	@extend %box-story;
 }
 
-.box-story-image {
-	.box-story-liftup & {
+.box-story__image {
+	.box-storyliftup & {
 		@include breakpoint($small) {
 			float: left;
 			margin-right: 2em;
@@ -142,7 +142,7 @@
 	}
 }
 
-.box-story-title {
+.box-story__title {
 	.box-story-liftup & {
 		@include font-size(30px);
 		height: auto;
@@ -154,7 +154,7 @@
 	}
 }
 
-.box-story-content {
+.box-story__content {
 	.box-story-liftup & {
 		@include font-family-main;
 		@include text-liftup;
@@ -167,7 +167,7 @@
 	}
 }
 
-.box-story-link {
+.box-story__link {
 	.box-story-liftup:active &,
 	.box-story-liftup:hover & {
 		color: $darkblue;
@@ -184,19 +184,19 @@
 	@extend %box-story;
 }
 
-.box-story-title {
+.box-story__title {
 	.box-story-constrained & {
 		height: auto;
 	}
 }
 
-.box-story-topical {
+.box-story__topical {
 	.box-story-constrained & {
 		display: inline-block;
 	}
 }
 
-.box-story-content {
+.box-story__content {
 	.box-story-constrained & {
 		.more-link {
 			display: inline;

@@ -5,11 +5,9 @@
  description: The main menu.
 */
 
-.main-menu {
+ul.main-menu {
 
-  ul {
-    @include clearfix();
-  }
+  @include clearfix();
 
   li {
     display: block;
@@ -35,14 +33,13 @@
 
 }
 
-li.main-menu-home a {
+li.main-menu__home a {
   padding-left: 0;
   span {
     display: none;
   }
   &:before {
-    content: "\E016";
-    font-family: "hy-icons";
+    @include hy-icon("\EA16");
   }
 }
 

@@ -11,11 +11,11 @@
 	margin-bottom: 1em;
 }
 
-.box-subsection-title {
+.box-subsection__title {
 	@include text-label;
 }
 
-.box-subsection-content {
+.box-subsection__content {
 	@include text-informative;
 	@include border;
 	@include shadow-under;

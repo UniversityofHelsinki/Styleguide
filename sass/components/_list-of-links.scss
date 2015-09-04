@@ -7,25 +7,34 @@
 /*
  section: 6.2.1
  title: List of links, normal
- template: 6_2_1_list-of-links-normal
+ template: 6_2_1_list-of-links--light
  description:
 */
-
-ul.list-of-links {
+ul%list-of-links {
   li > a {
-    @include button-internal;
     @include font-weight-medium;
     margin-bottom: 2px;
+  }
+}
+
+
+ul.list-of-links--light {
+  @extend ul%list-of-links;
+  li > a {
+    @include button-internal;
   }
 }
 
 /*
  section: 6.2.2
  title: List of links, dark theme
- template: 6_2_2_list-of-links-dark-theme
+ template: 6_2_2_list-of-links--dark
  description:
 */
 
-ul.list-of-links.theme-dark a {
-  @include button-internal-dark;
+ul.list-of-links--dark {
+  @extend ul%list-of-links;
+  li > a {
+    @include button-internal--dark;
+  }
 }
