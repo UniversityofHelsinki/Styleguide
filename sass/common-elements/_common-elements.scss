@@ -3,6 +3,7 @@
  title: Common elements
  description: Description about common elements.
 */
+
 html {
 	@include font-family-main;
 }
@@ -11,17 +12,79 @@ body {
 	color: $gray;
 }
 
+/*
+    section: 3.1
+    title: Headings
+    template: 3_1_headings
+    description: Description about headings.
+*/
 
-p {
-	@include text-paragraph;
+h1, h2, h3, h4, h5, h6 {
+  @include font-family-main;
+  color: $darkgray;
+  letter-spacing: -0.05em;
+  line-height: 1.1em;
+  margin: 0;
+  padding-bottom: 0.4em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  a { //TODO: Color inherit
+    text-decoration: none;
+    color: $darkgray;
+
+    &:hover {
+      color: $darkgray;
+      cursor: pointer;
+    }
+  }
+}
+
+h1 {
+  @include font-size(36px);
+  line-height: 1.15em;
+  letter-spacing: -2px;
+
+  @include breakpoint($small) {
+    @include font-size(50px);
+  }
+}
+
+h2 {
+  @include font-size(25px);
+
+  @include breakpoint($medium) {
+    @include font-size(38px);
+  }
+}
+
+h3 {
+  @include font-size(32px);
+}
+
+h4 {
+  @include font-size(21px);
 }
 
 /*
- section: 3.1
+    section: 3.2
+    title: Paragraph
+    template: 3_2_paragraphs
+    description: Description about paragraph.
+*/
+
+
+p {
+	@include text-paragraph; //TODO: Needs a section
+}
+
+/*
+ section: 3.3
  title: Links
- template: 3_1_links
+ template: 3_3_links
  description:
 */
+
 a {
 	color: $blue;
 	outline: 0;
@@ -34,63 +97,6 @@ a {
 
 a:hover, a:active, a:focus {
 	outline: 0;
-}
-
-/*
- section: 3.2
- title: Fieldset
- template: 3_2_fieldset
- description:
-*/
-fieldset {
-	border-top: 0 none;
-	border-bottom: 1px solid #EBEBEB;
-	border-left: 0 none;
-	border-right: 0 none;
-	margin: 0 0 1.5em;
-	padding: 0.5em 0 1em;
-	width: 100%;
-	&:last-of-type {
-		border-bottom: 0 none;
-		margin: 0;
-		padding-bottom: 0;
-	}
-
-	legend {
-		@include subtitle;
-	}
-}
-
-/*
- section: 3.3
- title: Lists
- description:
-*/
-
-/*
- section: 3.3.1
- title: Unordered list
- template: 3_3_1_unordered-list
- description:
-*/
-
-/*
- section: 3.3.2
- title: Ordered list
- template: 3_3_2_ordered-list
- description:
-*/
-
-/*
- section: 3.3.3
- title: Definition list
- template: 3_3_3_definition-list
- description:
-*/
-dl, ol, ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
 }
 
 /*
@@ -131,76 +137,60 @@ blockquote p {
 
 /*
  section: 3.5
- title: Buttons
- description: 
+ title: Form components
+ description:
 */
 
-/*
- section: 3.5.1
- title: Button
- template: 3_5_1-button
- description: 
-*/
-.btn {
-	@include button;
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
 }
 
-/*
- section: 3.5.2
- title: Button dark
- template: 3_5_2-button-dark
- description: 
-*/
-.btn-dark {
-	@include button;
+input {
+  -webkit-appearance: none;
 }
 
-/*
- section: 3.5.3
- title: Button internal
- template: 3_5_3-button-internal
- description: 
-*/
-.btn-internal {
-	@include button-internal;
+select {
+  background: transparent;
+  border: 1px solid darken($lightsilver,20%);
+  padding: 10px 5px;
+  width: 100%;
 }
 
-/*
- section: 3.5.4
- title: Button internal dark
-  template: 3_5_4-button-internal-dark
- description: 
-*/
-.btn-internal-dark {
-	@include button-internal-dark;
+textarea {
+  @include font-size(16px);
+  @include font-weight-medium;
+  border: 1px solid darken($lightsilver,20%);
+  color: $gray;
+  opacity: 1;
+  padding: 10px;
+  width: 100%;
 }
 
-/*
- section: 3.5.5
- title: Button anchor
- template: 3_5_5-button-anchor
- description: 
-*/
-.btn-anchor {
-	@include button-anchor;
+input[type="submit"] {
+  @include button;
 }
 
-/*
- section: 3.5.6
- title: Button anchor up
- template: 3_5_6-button-anchor-up
- description: 
-*/
-.btn-anchor-up {
-	@include button-anchor--up;
+table {
+  width: 100%;
 }
 
-/*
- section: 3.5.7
- title: Button tag
- template: 3_5_7-button-tag
- description: 
-*/
-.btn-tag {
-	@include button-tag;
+tbody {
+}
+
+th {
+  background: none;
+  padding: 0;
+}
+
+tr {
+}
+
+td {
+}
+
+dl, ol, ul {
+  list-style: none;
 }

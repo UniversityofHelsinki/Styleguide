@@ -62,7 +62,7 @@
 
 a.box-hero__link,
 .box-hero__link > a  {
-	@include button-internal-dark;
+	@include button-internal--dark;
 	@include font-weight-medium;
 	display: inline-block;
 	padding-right: 6em;

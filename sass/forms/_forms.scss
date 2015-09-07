@@ -3,16 +3,6 @@
  title: Forms
  description: Description about forms.
 */
-button, input, select, textarea {
-	font-family: inherit;
-	font-size: 100%;
-	margin: 0;
-	vertical-align: baseline;
-}
-
-input {
-  -webkit-appearance: none;
-}
 
 /*
  section: 4.1
@@ -26,20 +16,16 @@ input {
  template: 4_1_1_forms-select
  description: Select form element.
 */
-select {
-	background: transparent;
-	border: 1px solid darken($lightsilver,20%);
-	padding: 10px 5px;
-	width: 100%;
-}
- 
+
+//Moved to common elements
+
 /*
  section: 4.1.2
  title: Forms, Checkbox
  template: 4_1_2_forms-checkbox
  description: Checkbox form element.
 */
-.form-type-checkbox {
+.form-type-checkbox { //TODO: Refactor
 	input {
 		display: none;
 	}
@@ -92,7 +78,7 @@ select {
  template: 4_1_3_forms-radio
  description: Radio form element.
 */
-.form-type-radio {
+.form-type-radio { //TODO: Refactor
 	clear: right;
 	&:last-child {
 		margin-bottom: 1em;
@@ -144,7 +130,7 @@ select {
  template: 4_1_4_forms-input
  description: input form element.
 */
-.form-type-text {
+.form-type-text { //TODO: Refactor
 	input {
 		@include font-size(16px);
 		@include font-weight-medium;
@@ -197,15 +183,7 @@ select {
  template: 4_1_5_forms-textarea
  description: Textarea form element.
 */
-textarea {
-	@include font-size(16px);
-	@include font-weight-medium;
-	border: 1px solid darken($lightsilver,20%);
-	color: $gray;
-	opacity: 1 !important;
-	padding: 10px;
-	width: 100%;
-}
+//Moved to common elements
 
 /*
  section: 4.1.6
@@ -213,15 +191,5 @@ textarea {
  template: 4_1_6_forms-submit
  description: Submit form element.
 */
-.form-submit {
-	@include button;
-	display: inline-block;
-	
-	&.js-hide {
-		display: none;
-	}
-	
-	& + & {
-		margin-left: 1em;
-	}
-}
+//Moved to common elements
+

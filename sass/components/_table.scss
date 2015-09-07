@@ -3,30 +3,15 @@
  title: Table
  description:
 */
-table {
-	width: 100%;
-}
 
-tbody {
-}
-
-th {
-	background: none;
-	padding: 0;
-}
-
-tr {
-}
-
-td {
-}
- 
 /*
  section: 6.1.1
  title: Table sortable
  template: 6_1_1_table-sortable
  description:
 */
+//TODO: Should be in its own file
+
 .table-sortable {
 	thead {
 		tr {
@@ -104,6 +89,7 @@ td {
  template: 6_1_2_table-simple
  description:
 */
+//TODO: Should be in its own file
 %table-simple,
 .table-simple {
 	@include font-size(14px);
@@ -147,92 +133,6 @@ td {
 
 		&:first-child {
 			@include font-weight-bold;
-		}
-	}
-}
-
-/**
- * Table states
- */
-
-/*
- section: 6.1.3
- title: Table wrapped
- template: 6_1_3_table-wrapped
- description:
-*/
-.is-table-wrapped {
-	margin-bottom: 20px;
-	position: relative;
-	overflow: hidden;
-
-	> table {
-		display: none;
-	}
-
-	table {
-		@include font-size(13px);
-		margin-bottom: 0 !important;
-	}
-
-	th, td {
-		white-space: nowrap;
-	}
-
-	&:before {
-		background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%);
-		content: " ";
-		height: 100%;
-		position: absolute;
-		left: 35%;
-		margin-left: -1em;
-		top: 0;
-		width: 1em;
-		z-index: 10;
-	}
-
-	&:after {
-		background: linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%);
-		content: " ";
-		height: 100%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 1em;
-		z-index: 10;
-	}
-}
-
-.is-table-pinned {
-	float: left;
-	overflow-x: auto;
-	position: relative;
-	width: 35%;
-
-	table {
-		width: 100%;
-
-		td, th {
-			border-right: none !important;
-		}
-	}
-}
-
-.is-table-scrollable {
-	border-right: 2px dotted $lightsilver;
-	margin-left: 35%;
-	overflow-x: auto;
-	position: relative;
-
-	td:first-child, th:first-child {
-		display: none;
-	}
-
-	td, th {
-		border-left: none !important;
-
-		&:last-child {
-			border-right: none !important;
 		}
 	}
 }

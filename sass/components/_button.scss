@@ -1,0 +1,55 @@
+/*
+ section: 3.5
+ title: Buttons
+ description:
+*/
+
+/*
+ section: 3.5.1
+ title: Button
+ template: 3_5_1-button
+ description:
+*/
+.button {
+  @include button;
+}
+
+/*
+ section: 3.5.3
+ title: Button internal
+ template: 3_5_3-button-internal
+ description:
+*/
+.button-internal {
+  @include button-internal;
+}
+
+/*
+ section: 3.5.4
+ title: Button internal dark
+  template: 3_5_4-button-internal--dark
+ description:
+*/
+.button-internal--dark {
+  @include button-internal--dark;
+}
+
+/*
+ section: 3.5.5
+ title: Button anchor
+ template: 3_5_5-button-anchor
+ description:
+*/
+.button-anchor {
+  @include button-anchor;
+}
+
+/*
+ section: 3.5.6
+ title: Button anchor up
+ template: 3_5_6-button-anchor--up
+ description:
+*/
+.button-anchor--up {
+  @include button-anchor--up;
+}

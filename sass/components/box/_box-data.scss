@@ -39,12 +39,15 @@
 	}
 
 	> span {
-		height: 30px;
-		position: absolute;
-		top: 50%;
-		margin: -15px auto 0 auto;
-		text-align: center;
+      @include vertically-center;
+      text-align: center;
+      width: 100%;
 	}
+}
+
+.box-data__grade {
+  @extend .box-data__date;
+  @include font-size(30px);
 }
 
 .box-data__content {

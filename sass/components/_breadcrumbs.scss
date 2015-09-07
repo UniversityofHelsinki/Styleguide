@@ -39,8 +39,7 @@
 
 .breadcrumbs__home a {
 	&:after {
-		@include font-awesome("\f015");
-		// @include font-awesome("\f19c");
+		@include hy-icon("\EA16");
 		@include font-size(16px);
 		@include font-weight-light;
 	}

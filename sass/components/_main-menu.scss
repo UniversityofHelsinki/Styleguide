@@ -1,0 +1,46 @@
+/*
+ section: 5.1
+ title: Main menu
+ template: 5_1_main-menu
+ description: The main menu.
+*/
+
+ul.main-menu {
+
+  @include clearfix();
+
+  li {
+    display: block;
+    float: left;
+    list-style: none;
+  }
+
+  a {
+    @include font-size(15px);
+    line-height: 1.25em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    padding: 1.6em 1.5em;
+
+    &.active {
+      color: $darkblue;
+    }
+  }
+
+}
+
+li.main-menu__home a {
+  padding-left: 0;
+  span {
+    display: none;
+  }
+  &:before {
+    @include hy-icon("\EA16");
+  }
+}
+
+

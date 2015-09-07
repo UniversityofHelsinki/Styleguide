@@ -3,11 +3,18 @@
 // --------------------------------------------------
 
 /*
- section: 6.9.2
+ section: 6.9
  title: Tags
- template: 6_9_2-tags
  description:
 */
+
+/*
+ section: 6.9.1
+ title: Tag
+ template: 6_9_1-tag
+ description:
+*/
+
 .tag {
   background-color: $blue;
   color: $white;
@@ -30,3 +37,58 @@ a.tag {
     color: $white;
   }
 }
+
+/*
+ section: 6.9.2
+ title: Tag list
+ template: 6_9_2-tag-list
+ description:
+*/
+
+
+ul.tag-list {
+  > li {
+    @include tag-label;
+    @include font-size(11px);
+    @include font-weight-medium;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    list-style: none;
+  }
+}
+
+/*
+ section: 6.9.3
+ title: Tab list
+ template: 6_9_3-tab-list
+ description:
+*/
+
+ul.tag-list--tabs {
+  li {
+    @include font-size(15px);
+    float: left;
+    list-style: none;
+    background-color: $blue;
+    color: $white;
+    display: inline-block;
+    line-height: 1.1;
+    padding: 0.3em 0.7em 0.4em;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    margin-right: 1em;
+
+    &.active {
+      background-color: $darkblue;
+    }
+
+    a, a:hover, a:active, a:focus {
+      color: $white;
+    }
+
+  }
+}
+

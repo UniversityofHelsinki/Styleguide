@@ -22,12 +22,3 @@
 	padding: 1em;
 	margin: 1em 0 0;
 }
-
-.box-subsection__row {
-	padding-bottom: 1em;
-	word-wrap: break-word;
-
-	a {
-		@include font-weight-medium;
-	}
-}

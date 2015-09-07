@@ -127,13 +127,13 @@
  template: 6_10_5_2-box-story-liftup
  description: box-story--liftup is a more prominent display of content
 */
-%box-story--liftup,
-.box-story--liftup {
+%box-story-liftup,
+.box-story-liftup {
 	@extend %box-story;
 }
 
 .box-story__image {
-	.box-story--liftup & {
+	.box-storyliftup & {
 		@include breakpoint($small) {
 			float: left;
 			margin-right: 2em;
@@ -143,19 +143,19 @@
 }
 
 .box-story__title {
-	.box-story--liftup & {
+	.box-story-liftup & {
 		@include font-size(30px);
 		height: auto;
 	}
 
-	.box-story--liftup:active &,
-	.box-story--liftup:hover & {
+	.box-story-liftup:active &,
+	.box-story-liftup:hover & {
 		color: $darkblue;
 	}
 }
 
 .box-story__content {
-	.box-story--liftup & {
+	.box-story-liftup & {
 		@include font-family-main;
 		@include text-liftup;
 		overflow: visible;
@@ -168,8 +168,8 @@
 }
 
 .box-story__link {
-	.box-story--liftup:active &,
-	.box-story--liftup:hover & {
+	.box-story-liftup:active &,
+	.box-story-liftup:hover & {
 		color: $darkblue;
 	}
 }
@@ -180,24 +180,24 @@
  template: 6_10_5_3-box-story-constrained
  description: Constrained story has content that is not full width
 */
-.box-story--constrained {
+.box-story-constrained {
 	@extend %box-story;
 }
 
 .box-story__title {
-	.box-story--constrained & {
+	.box-story-constrained & {
 		height: auto;
 	}
 }
 
 .box-story__topical {
-	.box-story--constrained & {
+	.box-story-constrained & {
 		display: inline-block;
 	}
 }
 
 .box-story__content {
-	.box-story--constrained & {
+	.box-story-constrained & {
 		.more-link {
 			display: inline;
 			float: none;

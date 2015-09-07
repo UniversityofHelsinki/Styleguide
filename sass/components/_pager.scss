@@ -4,85 +4,95 @@
  template: 6_8_pagination
  description:
 */
-%pager,
 .pager {
-	margin-top: $vert-spacing-unit;
+  text-align: center;
+  margin-top: $vert-spacing-unit;
+
+  li {
+    display: inline-block;
+    margin: 5px 5px;
+  }
+
+  li > a {
+    @include button;
+    @include font-weight-book;
+    text-transform: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  li.pager__page a {
+    padding: 1em 1.4em;
+  }
+
+  li.pager__page.is-active a {
+    background-color: $darkblue;
+  }
+
+  .pager__last,
+  .pager__next,
+  .pager__previous,
+  .pager__first {
+    position: relative;
+
+    a:before {
+      transition-property: background-color;
+      transition-duration: 0.1s;
+      background-color: $blue--active;
+      display: inline-block;
+      height: 100%;
+      top: 0;
+      padding: 1em;
+      position: absolute;
+      text-decoration: inherit;
+    }
+
+    &:hover {
+      a:before {
+        background-color: $darkblue--active;
+      }
+    }
+  }
+  .pager__first a,
+  .pager__previous a {
+    padding-left: 4em;
+    &:before {
+      left: 0;
+    }
+  }
+
+  .pager__first a {
+    &:before {
+      @include hy-icon("\EA19");
+      transform: rotate(180deg);
+    }
+  }
+
+  .pager__previous a {
+    &:before {
+      @include hy-icon("\EA03");
+      transform: rotate(180deg);
+    }
+  }
+
+  .pager__next a,
+  .pager__last a {
+    padding-right: 4em;
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  .pager__next a {
+    &:before {
+      @include hy-icon("\EA03");
+    }
+  }
+
+  .pager__last a {
+    &:before {
+      @include hy-icon("\EA19");
+    }
+  }
 }
-
-.pager--centered {
-	text-align: center;
-}
-
-.pager__item {
-	padding: 0;
-}
-
-.pager__item--current,
-.pager__item a {
-	@include button;
-	@include font-weight-book;
-	padding: 1em 1.4em;
-	text-transform: none;
-}
-
-.pager__item,
-.pager__item--current {
-	display: inline-block;
-	margin: 5px 5px;
-}
-
-.pager__item--current,
-.pager__item--current a {
-	background-color: $darkblue;
-}
-
-.pager__item--previous,
-.pager__item--next {
-	position: relative;
-
-	a:before {
-		transition-property: background-color;
-		transition-duration: 0.1s;
-		background-color: $blue--active;
-		display: inline-block;
-		height: 100%;
-		top: 0;
-		padding: 1em;
-		position: absolute;
-		text-decoration: inherit;
-	}
-
-	&:hover {
-		a:before {
-			background-color: $darkblue--active;
-		}
-	}
-}
-
-.pager__item--previous {
-	a {
-		padding-left: 4em;
-
-		&:before {
-			@include font-awesome("\f060");
-			left: 0;
-		}
-	}
-}
-
-.pager__item--next {
-	a {
-		padding-right: 4em;
-
-		&:before {
-			@include font-awesome("\f061");
-			right: 0;
-		}
-	}
-}
-
-.pager__item--first,
-.pager__item--last {
-	display: none;
-}
-

@@ -10,9 +10,3 @@ $mobile-only: max-width $bp-small;
 $small: $bp-small, 'no-query' '.lt-ie9';
 $medium: $bp-medium, 'no-query' '.lt-ie9';
 $large: $bp-large;
-
-$grids: 12;
-$grids: add-grid(16 at $bp-small);
-$output: 'float';
-
-$gutters: $horz-spacing-unit;
