@@ -1,0 +1,13 @@
+{
+  "name": "UH Styleguide",
+  "version": "1.0.0",
+  "homepage": "https://github.com/UH-StudentServices/Styleguide",
+  "authors": [
+    "Marko Rautajoki <marko.rautajoki@gofore.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "Styleguide_icons" : "https://github.com/UH-StudentServices/Styleguide-icons.git#4.0.0"
+  }
+}

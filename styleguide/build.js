@@ -22,7 +22,7 @@ function runProcess() {
 					'<style>' + FileGetContents(config.compiledCssPath) + '</style>' +
 					'<style>' + FileGetContents('css/styleguide.css') + '</style>' +
 					'<style>' + overrideCss + '</style>' +
-          '<link href="http://rawgithub.com/UH-StudentServices/Styleguide-icons/master/css/icons.css" rel="stylesheet" type="text/css">' +
+          '<link href="bower_components/Styleguide_icons/css/icons.css" rel="stylesheet" type="text/css">' +
 					'<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">'+
 					'<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">'+
 				'</head>'+
