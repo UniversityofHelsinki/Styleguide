@@ -11,21 +11,21 @@ $messages: (
 		'color-alt': #81b43b,
 		'bg-color': #b2e576,
 		'bg-color-alt': #f2f7eb,
-		'icon': '\EA17',
+		'icon': '\EA19',
 	),
 	'warning': (
 		'color': $white,
 		'color-alt': $black,
 		'bg-color': #52c6af,
 		'bg-color-alt': #f8f8f8,
-		'icon': '\EA39',
+		'icon': '\EA3C',
 	),
 	'error': (
 		'color': $white,
 		'color-alt': #964822,
 		'bg-color': #964822,
 		'bg-color-alt': #f4ece8,
-		'icon': '\EA39',
+		'icon': '\EA3C',
 	)
 );
 
@@ -64,7 +64,7 @@ $messages: (
 	a {
 		@include font-weight-bold;
 		&:after {
-			@include hy-icon('\EA19');
+			@include hy-icon('\EA1B');
 			margin-left: 0.5em;
 		}
 	}
