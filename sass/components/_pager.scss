@@ -63,7 +63,7 @@
 
   .pager__first a {
     &:before {
-      @include hy-icon("\EA19");
+      @include hy-icon("\EA1B");
       transform: rotate(180deg);
     }
   }
@@ -92,7 +92,7 @@
 
   .pager__last a {
     &:before {
-      @include hy-icon("\EA19");
+      @include hy-icon("\EA1B");
     }
   }
 }
