@@ -49,7 +49,7 @@
 }
 
 .form-type-search input[type="submit"] {
-  @include hy-icon();
+  @include icon();
   @include button();
   background-color: transparent;
   height: 36px;

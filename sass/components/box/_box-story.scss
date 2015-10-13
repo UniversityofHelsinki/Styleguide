@@ -20,15 +20,16 @@
 .box-story__image {
 	margin-bottom: 0.5em;
 
-	@include breakpoint($medium) {
-		.gridder-box-width-3 &,
-		.gridder-box-width-4 & {
-			border-right: 1em solid #FFFFFF;
-			float: left;
-		}
-	}
+  @include breakpoint($medium) {
+    .gridder-box-width-3:not(.gridder-parent) &,
+    .gridder-box-width-4:not(.gridder-parent) & {
+      border-right: 1em solid #FFFFFF;
+      float: left;
+    }
+  }
 
 	img {
+    @include border;
 		width: 100%;
 	}
 }
@@ -67,8 +68,8 @@
 	@include border;
 	@include font-size(12px);
 	@include font-weight-medium;
+  background-color: $white;
 	margin-bottom: 1em;
-	// height: 28px;
 	overflow: hidden;
 }
 
@@ -109,16 +110,21 @@
 }
 
 .box-story__link {
-	@include transition-property(color);
-	@include transition-duration(0.1s);
-	@include button-internal;
+	@include button-next-transparent;
 	@include font-weight-medium;
+	@include transition-duration(0.1s);
+	@include transition-property(color);
 	color: $darkgray;
 
 	.box-story:active &,
 	.box-story:hover & {
 		color: $darkblue;
 	}
+}
+
+.box-story__embed {
+  clear: both;
+  padding-top: 1em;
 }
 
 /*
@@ -180,29 +186,42 @@
  template: 6_10_5_3-box-story-constrained
  description: Constrained story has content that is not full width
 */
-.box-story-constrained {
-	@extend %box-story;
+.box-story--constrained {
+  @extend %box-story;
+  @include border-bottom;
+  padding: 1em 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    border: 0;
+  }
 }
 
 .box-story__title {
-	.box-story-constrained & {
-		height: auto;
-	}
+  .box-story--constrained & {
+    float: left;
+    height: auto;
+    margin-right: 2em;
+  }
 }
 
 .box-story__topical {
-	.box-story-constrained & {
-		display: inline-block;
-	}
+  .box-story--constrained & {
+    display: inline-block;
+    margin: 0;
+  }
 }
 
 .box-story__content {
-	.box-story-constrained & {
-		.more-link {
-			display: inline;
-			float: none;
-			margin-left: 1em;
-			text-align: left;
-		}
-	}
+  .box-story--constrained & {
+    .more-link {
+      display: inline;
+      float: none;
+      margin-left: 1em;
+      text-align: left;
+    }
+  }
 }

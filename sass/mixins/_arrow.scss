@@ -45,7 +45,7 @@
 }
 
 @mixin arrow-internal {
-	@include font-awesome("\f061");
+	@include icon("\f061");
 	color: $blue;
 }
 

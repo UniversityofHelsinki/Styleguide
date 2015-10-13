@@ -3,7 +3,7 @@
   title: Global
   description:
 */
- 
+
 // Import external libraries.
 @import "compass";
 @import "breakpoint";
@@ -15,12 +15,12 @@
 
 @import "toolkit/kickstart";
 
-@import 'variables/**/*';
-@import 'mixins/**/*';
-@import '_states';
-@import 'objects/**/*';
-@import 'typography/**/*';
-@import 'layouts/**/*';
-@import 'forms/**/*';
-@import 'common-elements/**/*';
-@import 'components/**/*';
+@import "variables/**/*";
+@import "mixins/**/*";
+@import "common-elements/**/*";
+@import "objects/**/*";
+@import "typography/**/*";
+@import "layouts/**/*";
+@import "forms/**/*";
+@import "components/**/*";
+@import "_states.scss";

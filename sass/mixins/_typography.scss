@@ -13,21 +13,11 @@
 	font-family: $font-family-bodytext;
 }
 
-
-// Font Awesome
-@mixin font-awesome($unicode : '') {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: "FontAwesome";
-	@if ($unicode) {
-		content: $unicode;
-	}
-}
-
-@mixin hy-icon($unicode : '') {
+// Icons
+@mixin icon($unicode : '') {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
+  font-family: "icomoon";
   @if ($unicode) {
     content: $unicode;
   }

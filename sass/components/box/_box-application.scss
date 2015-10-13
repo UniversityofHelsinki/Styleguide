@@ -11,41 +11,13 @@
   @include shadow-under;
   display: block;
   position: relative;
-}
-
-.box-appication__wrapper-link {
-  &:hover {
-    border-color: $blue--active;
-
-    &:after {
-      color: $blue--active;
-    }
-
-    .box-application__content {
-      border-color: $blue--active;
-    }
-
-    .box-application__title {
-      background-color: $blue--active;
-    }
-  }
-
-  &:after {
-    @include transition-element(color, 0.1s);
-    @include arrow-internal;
-    bottom: 1em;
-    height: 1em;
-    position: absolute;
-    right: 1em;
-  }
 
   // Generate theme colors via array selectors declared in _colors.scss
-  //TODO: Does not follow the modifier format. Should it?
   @for $i from 1 through length($faculty_colors) {
-    $color_name: nth($faculty_color_names, $i);
-    $color: nth($faculty_colors, $i);
+    $color_name : nth($faculty_color_names, $i);
+    $color : nth($faculty_colors, $i);
 
-    .theme-#{$color_name} & {
+    &.theme-#{$color_name} {
       .box-application__content {
         border-left-color: $color;
       }
@@ -66,6 +38,33 @@
         }
       }
     }
+  }
+}
+
+.box-application__wrapper-link {
+  &:hover {
+    border-color: $blue--active;
+
+    &:after {
+      color: $blue--active;
+    }
+
+    .box-application__content {
+      border-color: $blue--active;
+    }
+
+    .box-application__title {
+      background-color: $blue--active;
+    }
+  }
+
+  &:after {
+    @include arrow-internal;
+    @include transition-element(color, 0.1s);
+    bottom: 1em;
+    height: 1em;
+    position: absolute;
+    right: 1em;
   }
 }
 
@@ -105,5 +104,62 @@
 
   &.theme-big {
     min-height: 12em;
+  }
+}
+
+.box-application__longfield {
+  margin-bottom: 0.7em;
+  overflow: hidden;
+
+  @include breakpoint($small) {
+    height: 7.2em;
+  }
+
+  @include breakpoint($medium) {
+    height: 4.2em;
+  }
+}
+
+.box-application__field {
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.box-application__field--title {
+  min-height: 4.5em;
+
+  @include breakpoint($medium) {
+    min-height: 3em;
+  }
+}
+
+.box-application__field--link {
+  margin-bottom: 0.3em;
+  overflow: hidden;
+}
+
+.box-application__status {
+  bottom: 1em;
+  padding-left: 1.5em;
+  position: absolute;
+
+  &:before {
+    @include icon("\f111");
+    @include font-size(12px);
+    color: $green;
+    left: 0;
+    margin-top: 0.3em;
+    position: absolute;
+  }
+}
+
+.box-application__link {
+  @include link-internal;
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+
+  > a {
+    display: block;
   }
 }

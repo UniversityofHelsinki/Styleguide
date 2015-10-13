@@ -20,8 +20,9 @@ ul%list-of-links {
 
 ul.list-of-links--light {
   @extend ul%list-of-links;
+
   li > a {
-    @include button-internal;
+    @include button-next-transparent;
   }
 }
 
@@ -34,7 +35,8 @@ ul.list-of-links--light {
 
 ul.list-of-links--dark {
   @extend ul%list-of-links;
+
   li > a {
-    @include button-internal--dark;
+    @include button-next;
   }
 }

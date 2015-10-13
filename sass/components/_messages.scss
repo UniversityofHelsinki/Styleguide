@@ -64,7 +64,7 @@ $messages: (
 	a {
 		@include font-weight-bold;
 		&:after {
-			@include hy-icon('\EA1B');
+			@include icon('\EA1B');
 			margin-left: 0.5em;
 		}
 	}
@@ -84,7 +84,7 @@ $messages: (
 			}
 			p:before,
 			li:before {
-				@include hy-icon(map-get(map-get($messages, $name), "icon"));
+				@include icon(map-get(map-get($messages, $name), "icon"));
 				font-size: 1.3em;
 				margin-right: 0.7em;
 			}

@@ -39,7 +39,7 @@ li.main-menu__home a {
     display: none;
   }
   &:before {
-    @include hy-icon("\EA16");
+    @include icon("\EA16");
   }
 }
 

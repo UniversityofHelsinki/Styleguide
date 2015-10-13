@@ -9,7 +9,7 @@
  title: Forms, Basic
  description: Basic form elements.
 */
- 
+
 /*
  section: 4.1.1
  title: Forms, Select
@@ -38,7 +38,7 @@
 		line-height: 11px;
 		text-align: center;
 	}
-	
+
 	label {
 		@include font-size(13px);
 		@include font-weight-medium;
@@ -71,7 +71,7 @@
 		clear: both;
 	}
 }
- 
+
 /*
  section: 4.1.3
  title: Forms, Radio
@@ -110,17 +110,15 @@
 
 	label:before {
 		border-radius: 8px;
-		width: 16px;
-		height: 16px;
-
-		margin-right: 10px;
-		position: absolute;
-		left: 0;
-		top: 2px;
 		border: 1px solid $blue;
-
 		content: "";
 		display: inline-block;
+		height: 16px;
+		left: 0;
+		margin-right: 10px;
+		position: absolute;
+		top: 2px;
+		width: 16px;
 	}
 }
 
@@ -176,7 +174,7 @@
 		margin-top: 5px;
 	}
 }
- 
+
 /*
  section: 4.1.5
  title: Forms, Textarea
