@@ -1,22 +1,22 @@
 /*
- section: 3
- title: Common elements
- description: Description about common elements.
+  section: 3
+  title: Common elements
+  description: Description about common elements.
 */
 
 html {
-	@include font-family-main;
+  @include font-family-main;
 }
 
 body {
-	color: $gray;
+  color: $gray;
 }
 
 /*
-    section: 3.1
-    title: Headings
-    template: 3_1_headings
-    description: Description about headings.
+  section: 3.1
+  title: Headings
+  template: 3_1_headings
+  description: Description about headings.
 */
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,7 +29,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   word-wrap: break-word;
 
-  a { //TODO: Color inherit
+  a {
+    //TODO: Color inherit
     text-decoration: none;
     color: $darkgray;
 
@@ -67,78 +68,77 @@ h4 {
 }
 
 /*
-    section: 3.2
-    title: Paragraph
-    template: 3_2_paragraphs
-    description: Description about paragraph.
+  section: 3.2
+  title: Paragraph
+  template: 3_2_paragraphs
+  description: Description about paragraph.
 */
 
-
 p {
-	@include text-paragraph; //TODO: Needs a section
+  @include text-paragraph; //TODO: Needs a section
 }
 
 /*
- section: 3.3
- title: Links
- template: 3_3_links
- description:
+  section: 3.3
+  title: Links
+  template: 3_3_links
+  description:
 */
 
 a {
-	color: $blue;
-	outline: 0;
-	text-decoration: none;
+  color: $blue;
+  outline: 0;
+  text-decoration: none;
 
-	&:hover {
-		color: $darkblue;
-	}
+  &:hover {
+    color: $darkblue;
+  }
 }
 
 a:hover, a:active, a:focus {
-	outline: 0;
+  outline: 0;
 }
 
 /*
- section: 3.4
- title: Blockquote
- description:
+  section: 3.4
+  title: Blockquote
+  description:
 */
 
 /*
- section: 3.4.1
- title: Blockquote
- template: 3_4_1_blockquote
- description:
+  section: 3.4.1
+  title: Blockquote
+  template: 3_4_1_blockquote
+  description:
 */
 blockquote {
-	@include font-size(20px);
-	@include font-weight-book;
-	border-left: 10px solid $silver;
-	margin: 20px 10px;
-	padding: 10px 25px;
-	color: $silver;
-	line-height: 1.1em;
+  @include font-size(20px);
+  @include font-weight-book;
+  border-left: 10px solid $silver;
+  margin: 20px 10px;
+  padding: 10px 25px;
+  color: $silver;
+  line-height: 1.1em;
 }
 
 /*
- section: 3.4.2
- title: Blockquote paragraph
- template: 3_4_2_blockquote-paragraph
- description: Blockquote with a p-element inside.
+  section: 3.4.2
+  title: Blockquote paragraph
+  template: 3_4_2_blockquote-paragraph
+  description: Blockquote with a p-element inside.
 */
 blockquote p {
-	@include font-size(22px);
-	@include font-weight-book;
-	display: inline;
-	color: $silver;
-	line-height: 1.1em;
+  @include font-size(22px);
+  @include font-weight-book;
+  display: inline;
+  color: $silver;
+  line-height: 1.1em;
 }
 
 /*
- section: 3.5
- title: Form components
- description:
+  section: 3.5
+  title: Form components
+  description:
 */
 
 button, input, select, textarea {
@@ -154,7 +154,7 @@ input {
 
 select {
   background: transparent;
-  border: 1px solid darken($lightsilver,20%);
+  border: 1px solid darken($lightsilver, 20%);
   padding: 10px 5px;
   width: 100%;
 }
@@ -162,7 +162,7 @@ select {
 textarea {
   @include font-size(16px);
   @include font-weight-medium;
-  border: 1px solid darken($lightsilver,20%);
+  border: 1px solid darken($lightsilver, 20%);
   color: $gray;
   opacity: 1;
   padding: 10px;

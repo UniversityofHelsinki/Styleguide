@@ -14,96 +14,96 @@
 }
 
 .box-appication__wrapper-link {
-	&:hover {
-		border-color: $blue--active;
+  &:hover {
+    border-color: $blue--active;
 
-		&:after {
-			color: $blue--active;
-		}
+    &:after {
+      color: $blue--active;
+    }
 
-		.box-application__content {
-			border-color: $blue--active;
-		}
+    .box-application__content {
+      border-color: $blue--active;
+    }
 
-		.box-application__title {
-			background-color: $blue--active;
-		}
-	}
+    .box-application__title {
+      background-color: $blue--active;
+    }
+  }
 
-	&:after {
-		transition: color, 0.1s;
-		@include arrow-internal;
-		bottom: 1em;
-		height: 1em;
-		position: absolute;
-		right: 1em;
-	}
+  &:after {
+    @include transition-element(color, 0.1s);
+    @include arrow-internal;
+    bottom: 1em;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+  }
 
-	// Generate theme colors via array selectors declared in _colors.scss
+  // Generate theme colors via array selectors declared in _colors.scss
   //TODO: Does not follow the modifier format. Should it?
-	@for $i from 1 through length($faculty_colors) {
-		$color_name : nth($faculty_color_names, $i);
-		$color : nth($faculty_colors, $i);
+  @for $i from 1 through length($faculty_colors) {
+    $color_name: nth($faculty_color_names, $i);
+    $color: nth($faculty_colors, $i);
 
-		.theme-#{$color_name} & {
-			.box-application__content {
-				border-left-color: $color;
-			}
+    .theme-#{$color_name} & {
+      .box-application__content {
+        border-left-color: $color;
+      }
 
-			&:hover {
-				border-color: $color;
+      &:hover {
+        border-color: $color;
 
-				.box-application__content {
-					border-color: $color;
-				}
+        .box-application__content {
+          border-color: $color;
+        }
 
-				.box-application__title {
-					background-color: $color;
-				}
+        .box-application__title {
+          background-color: $color;
+        }
 
-				&:after {
-					color: $color;
-				}
-			}
-		}
-	}
+        &:after {
+          color: $color;
+        }
+      }
+    }
+  }
 }
 
 .box-application__title {
-	transition: all, 0.1s;
-	background-color: $blue;
-	color: $white;
-	padding: 1em;
-	text-align: center;
-	overflow: hidden;
+  @include transition-element(all, 0.1s);
+  background-color: $blue;
+  color: $white;
+  padding: 1em;
+  text-align: center;
+  overflow: hidden;
 
-	@include breakpoint($small) {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		height: 6.2em;
-	}
+  @include breakpoint($small) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 9.2em;
+  }
 
-	@include breakpoint($medium) {
-		height: 5.6em;
-	}
+  @include breakpoint($medium) {
+    height: 6.6em;
+  }
 
-	.inverted:hover & {
-		color: $black;
-	}
+  .inverted:hover & {
+    color: $black;
+  }
 }
 
 .box-application__content {
-	transition: border-color, 0.1s;
-	@include border-side('bottom');
-	@include border-side('left');
-	@include border-side('right');
-	border-left: 4px solid $blue;
-	color: $silver;
-	overflow: hidden;
-	padding: 1em 1.5em;
+  @include transition-element(border-color, 0.1s);
+  @include border-side('bottom');
+  @include border-side('left');
+  @include border-side('right');
+  border-left: 4px solid $blue;
+  color: $silver;
+  overflow: hidden;
+  padding: 1em 1.5em;
 
-	&.theme-big {
-		min-height: 12em;
-	}
+  &.theme-big {
+    min-height: 12em;
+  }
 }

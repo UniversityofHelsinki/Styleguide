@@ -16,12 +16,11 @@
 @import "toolkit/kickstart";
 
 @import 'variables/**/*';
-@import 'mixins/_mixins';
+@import 'mixins/**/*';
 @import '_states';
-@import 'objects/_objects';
-@import 'typography/_typography';
-@import 'layouts/common/_grid';
-@import 'forms/_forms';
-@import 'forms/_search-form';
-@import 'common-elements/_common-elements';
+@import 'objects/**/*';
+@import 'typography/**/*';
+@import 'layouts/**/*';
+@import 'forms/**/*';
+@import 'common-elements/**/*';
 @import 'components/**/*';
