@@ -4,39 +4,39 @@
  description:
 */
 
+ul.list-of-links {
+  > li {
+    margin-bottom: 2px;
+
+    > a {
+      @include font-weight-medium;
+    }
+  }
+}
+
+.list-of-links__title {
+  @include label-rule(bottom);
+  @include text-label;
+}
+
+.list-of-links__subtitle {
+  @include font-size(11px);
+  @include font-weight-medium;
+  color: $darksilver;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
 /*
  section: 6.2.1
- title: List of links, normal
- template: 6_2_1_list-of-links--light
+ title: List of links
+ template: 6_2_1_list-of-links
  description:
 */
-ul%list-of-links {
-  li > a {
-    @include font-weight-medium;
-    margin-bottom: 2px;
-  }
-}
-
-
-ul.list-of-links--light {
-  @extend ul%list-of-links;
-
-  li > a {
-    @include button-next-transparent;
-  }
-}
 
 /*
  section: 6.2.2
- title: List of links, dark theme
- template: 6_2_2_list-of-links--dark
+ title: List of links (with transparent buttons)
+ template: 6_2_2_list-of-links-transparent
  description:
 */
-
-ul.list-of-links--dark {
-  @extend ul%list-of-links;
-
-  li > a {
-    @include button-next;
-  }
-}

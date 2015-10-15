@@ -15,80 +15,37 @@
  description:
 */
 
+%tag,
 .tag {
-  background-color: $blue;
-  color: $white;
-  @include font-size(15px);
+  @include arrow($direction: 'left', $ball: true);
+  @include border;
+  @include font-size(11px);
+  @include font-weight-medium;
+  border-left: none;
+  color: $darksilver;
   display: inline-block;
-  line-height: 1.1;
-  padding: 0.3em 0.7em 0.4em;
-  transition-property: background-color;
-  transition-duration: 0.1s;
-}
+  line-height: 27px;
+  list-style: none;
+  margin-left: 12px;
+  padding: 0 1em 0 1.5em;
+  position: relative;
+  text-transform: uppercase;
 
-.tag--active {
-  background-color: $darkblue;
-  color: $white;
-}
-
-a.tag {
-  &:hover, &:active, &:focus {
-    background-color: $darkblue;
-    color: $white;
+  &:hover {
+    color: $darkblue;
   }
 }
 
 /*
  section: 6.9.2
- title: Tag list
- template: 6_9_2-tag-list
+ title: Tag group
+ template: 6_9_2-tag-group
  description:
 */
 
-
-ul.tag-list {
+ul.tag-group {
   > li {
-    @include tag-label;
-    @include font-size(11px);
-    @include font-weight-medium;
-    float: left;
     margin-right: 1em;
     margin-bottom: 1em;
-    text-transform: uppercase;
-    list-style: none;
   }
 }
-
-/*
- section: 6.9.3
- title: Tab list
- template: 6_9_3-tab-list
- description:
-*/
-
-ul.tag-list--tabs {
-  li {
-    @include font-size(15px);
-    float: left;
-    list-style: none;
-    background-color: $blue;
-    color: $white;
-    display: inline-block;
-    line-height: 1.1;
-    padding: 0.3em 0.7em 0.4em;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-
-    margin-right: 1em;
-
-    &.active {
-      background-color: $darkblue;
-    }
-
-    a, a:hover, a:active, a:focus {
-      color: $white;
-    }
-
-  }
-}
-

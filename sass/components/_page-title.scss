@@ -1,0 +1,62 @@
+/*
+ section: 3.6
+ title: Page title
+*/
+
+/*
+ section: 3.6.1
+ title: Page title
+ template: 3_6_1-page-title
+*/
+
+/*
+ section: 3.6.2
+ title: Page title small
+ template: 3_6_2-page-title--small
+*/
+
+/*
+ section: 3.6.3
+ title: Page title suffix
+ template: 3_6_3-page-title--suffix
+*/
+
+%page-title,
+.page-title {
+}
+
+.page-title--small {
+  @include font-size(32px);
+  line-height: 1em;
+
+  @include breakpoint($medium) {
+    @include font-size(38px);
+  }
+}
+
+.page-title--suffix {
+  @include border-side(bottom);
+  @include font-size(18px);
+  @include font-weight-light;
+  letter-spacing: 0px;
+  line-height: 1.2em;
+  margin-bottom: $vert-spacing-unit;
+  padding-bottom: $vert-spacing-unit/2;
+  text-transform: initial;
+
+  @include breakpoint($medium) {
+    @include font-size(22px);
+  }
+
+  .page-title__firstrow {
+    margin-bottom: 0.5em;
+  }
+
+  .page-title__secondrow {
+    @include font-size(14px);
+
+    @include breakpoint($medium) {
+      @include font-size(16px);
+    }
+  }
+}

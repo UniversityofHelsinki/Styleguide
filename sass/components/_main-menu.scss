@@ -6,13 +6,21 @@
 */
 
 ul.main-menu {
-
   @include clearfix();
 
   li {
     display: block;
     float: left;
     list-style: none;
+
+    &:first-of-type {
+      a {
+        padding-left: 0;
+        span {
+          display: none;
+        }
+      }
+    }
   }
 
   a {
@@ -30,17 +38,4 @@ ul.main-menu {
       color: $darkblue;
     }
   }
-
 }
-
-li.main-menu__home a {
-  padding-left: 0;
-  span {
-    display: none;
-  }
-  &:before {
-    @include icon("\EA16");
-  }
-}
-
-

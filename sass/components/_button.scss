@@ -1,55 +1,243 @@
-// /*
-//  section: 3.5
-//  title: Buttons
-//  description:
-// */
+/*
+ section: 3.5
+ title: Buttons
+ description:
+*/
 
-// /*
-//  section: 3.5.1
-//  title: Button
-//  template: 3_5_1-button
-//  description:
-// */
-// .button {
-//   @include button;
-// }
+/*
+ section: 3.5.1
+ title: Button
+ template: 3_5_1-button
+ description:
+*/
+%button,
+.button {
+  @include transition-duration(0.1s);
+  @include transition-property(all);
+  @include font-size(15px);
+  background-color: $blue;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  padding: 0.8em 1em;
 
-// /*
-//  section: 3.5.3
-//  title: Button internal
-//  template: 3_5_3-button-internal
-//  description:
-// */
-// .button-internal {
-//   @include button-next-transparent;
-// }
+  &:hover {
+    background-color: $darkblue;
+    color: $white;
+  }
 
-// /*
-//  section: 3.5.4
-//  title: Button internal dark
-//   template: 3_5_4-button-internal--dark
-//  description:
-// */
-// .button-internal--dark {
-//   @include button-next;
-// }
+  &:before,
+  &:after {
+    @include transition-duration(0.1s);
+    @include transition-property(all);
+  }
 
-// /*
-//  section: 3.5.5
-//  title: Button anchor
-//  template: 3_5_5-button-anchor
-//  description:
-// */
-// .button-anchor {
-//   @include button-anchor;
-// }
+  &.theme-transparent {
+    background-color: $white;
+    color: $blue;
 
-// /*
-//  section: 3.5.6
-//  title: Button anchor up
-//  template: 3_5_6-button-anchor--up
-//  description:
-// */
-// .button-anchor--up {
-//   @include button-anchor--up;
-// }
+    &:hover {
+      background-color: $blue;
+    }
+
+    a:hover,
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+/*
+ section: 3.5.2
+ title: Button accordion
+  template: 3_5_2-button--accordion
+ description:
+*/
+%button--accordion,
+.button--accordion {
+  @extend %button;
+  border: 2px solid $blue;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-left: 3em;
+  padding-right: 0;
+  position: relative;
+
+  &:before {
+    @include icon("\f054");
+    @include transition-duration(0.1s);
+    @include vertically-center;
+    left: 1em;
+    position: absolute;
+  }
+
+  &.is-active {
+    background-color: $blue;
+    color: $white;
+
+    &:before {
+      @include transform(translateY(-50%) rotate(90deg));
+      color: $white;
+    }
+  }
+
+  a:hover &:before,
+  &:hover:before {
+    color: $white;
+  }
+}
+
+/*
+ section: 3.5.3
+ title: Button action
+  template: 3_5_3-button--action
+ description:
+*/
+%button--action,
+.button--action {
+  @extend %button;
+  display: block;
+  padding-left: 1em;
+  padding-right: 4em;
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3rem;
+  }
+
+  // Icon background
+  &:before {
+    background-color: $blue--active;
+    content: "";
+    height: 100%;
+  }
+
+  // Icon
+  &:after {
+    @include vertically-center;
+    color: $white;
+    right: -2px;
+    text-align: center;
+  }
+
+  &:hover {
+    &:before {
+      background: $darkblue--active;
+    }
+  }
+
+  &.theme-transparent {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 3em;
+
+    &:hover,
+    &:before {
+      background-color: transparent;
+    }
+
+    &:after {
+      color: $blue;
+    }
+
+    a:hover,
+    &:hover,
+    &:hover:after {
+      color: $darkblue;
+    }
+  }
+}
+
+/*
+ section: 3.5.4
+ title: Button action before
+  template: 3_5_4-button--action-before
+ description:
+*/
+%button--action-before,
+.button--action-before {
+  @extend %button--action;
+  padding-left: 4em;
+  padding-right: 1em;
+
+  &:before,
+  &:after {
+    left: 0;
+    right: auto;
+  }
+
+  &.theme-transparent {
+    padding-left: 2em;
+
+    &:after {
+      text-align: left;
+    }
+  }
+}
+
+/*
+ section: 3.5.5
+ title: Button anchor
+ template: 3_5_5-button--anchor
+ description:
+*/
+.button--anchor {
+  @extend %button;
+  @include font-size(13px);
+  @include font-weight-medium;
+  display: inline-block;
+  height: 60px;
+  line-height: 1.2em;
+  min-width: 60px;
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+
+  &:after {
+    @include font-size(15px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 1em;
+    width: 100%;
+  }
+}
+
+/*
+ section: 3.5.6
+ title: Button group
+ template: 3_5_6-button-group
+ description:
+*/
+%button-group,
+.button-group {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  > * {
+    display: inline-block;
+    margin-bottom: 0.3em;
+    position: relative;
+  }
+}
+
+/*
+ section: 3.5.7
+ title: Button group small
+ template: 3_5_7-button-group--small
+ description:
+*/
+.button-group--small {
+  @extend %button-group;
+
+  > * {
+    @include font-size(15px);
+    padding: 0.3em 0.7em;
+  }
+}

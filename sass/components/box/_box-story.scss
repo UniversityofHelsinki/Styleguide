@@ -1,7 +1,6 @@
 /*
  section: 6.10.5
  title: Box story
- description: Displays content as a liftup in e.g. gridder-fields and news listings
 */
 
 /*
@@ -15,6 +14,20 @@
 	display: block;
 	height: 100%;
 	overflow: hidden;
+
+  // Overrides
+  .box-story__link:after,
+  .box-story__link {
+    color: $darkgray;
+  }
+
+  &:active,
+  &:hover {
+    .box-story__link:after,
+    .box-story__link {
+      color: $darkblue;
+    }
+  }
 }
 
 .box-story__image {
@@ -110,16 +123,7 @@
 }
 
 .box-story__link {
-	@include button-next-transparent;
 	@include font-weight-medium;
-	@include transition-duration(0.1s);
-	@include transition-property(color);
-	color: $darkgray;
-
-	.box-story:active &,
-	.box-story:hover & {
-		color: $darkblue;
-	}
 }
 
 .box-story__embed {
@@ -127,63 +131,65 @@
   padding-top: 1em;
 }
 
+
 /*
  section: 6.10.5.2
  title: Box story liftup
- template: 6_10_5_2-box-story-liftup
+ template: 6_10_5_2-box-story--liftup
  description: box-story--liftup is a more prominent display of content
 */
-%box-story-liftup,
-.box-story-liftup {
-	@extend %box-story;
+%box-story--liftup,
+.box-story--liftup {
+  @extend %box-story;
 }
 
 .box-story__image {
-	.box-storyliftup & {
-		@include breakpoint($small) {
-			float: left;
-			margin-right: 2em;
-			max-width: 270px;
-		}
-	}
+  .box-story--liftup & {
+    @include breakpoint($small) {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 2em;
+      max-width: 270px;
+    }
+  }
 }
 
 .box-story__title {
-	.box-story-liftup & {
-		@include font-size(30px);
-		height: auto;
-	}
+  .box-story--liftup & {
+    @include font-size(30px);
+    height: auto;
+  }
 
-	.box-story-liftup:active &,
-	.box-story-liftup:hover & {
-		color: $darkblue;
-	}
+  .box-story--liftup:active &,
+  .box-story--liftup:hover & {
+    color: $darkblue;
+  }
 }
 
 .box-story__content {
-	.box-story-liftup & {
-		@include font-family-main;
-		@include text-liftup;
-		overflow: visible;
-		color: $lightgray;
+  .box-story--liftup & {
+    @include font-family-main;
+    @include text-liftup;
+    overflow: visible;
+    color: $lightgray;
 
-		@include breakpoint($medium) {
-			overflow: hidden;
-		}
-	}
+    @include breakpoint($medium) {
+      overflow: hidden;
+    }
+  }
 }
 
 .box-story__link {
-	.box-story-liftup:active &,
-	.box-story-liftup:hover & {
-		color: $darkblue;
-	}
+  .box-story--liftup:active &,
+  .box-story--liftup:hover & {
+    color: $darkblue;
+  }
 }
 
 /*
  section: 6.10.5.3
  title: Box story constrained
- template: 6_10_5_3-box-story-constrained
+ template: 6_10_5_3-box-story--constrained
  description: Constrained story has content that is not full width
 */
 .box-story--constrained {

@@ -136,7 +136,7 @@ blockquote p {
 }
 
 /*
-  section: 3.5
+  section: 3.4.3
   title: Form components
   description:
 */
@@ -170,7 +170,7 @@ textarea {
 }
 
 input[type="submit"] {
-  @include button;
+  @extend %button;
 }
 
 table {
@@ -192,5 +192,7 @@ td {
 }
 
 dl, ol, ul {
+  margin: 0;
   list-style: none;
+  padding: 0;
 }

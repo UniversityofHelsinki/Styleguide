@@ -6,7 +6,6 @@
 */
 
 .form-type-search { //TODO: Refactor
-
   position: relative;
 
   @include breakpoint($mobile-only) {
@@ -49,8 +48,8 @@
 }
 
 .form-type-search input[type="submit"] {
+  @extend %button;
   @include icon();
-  @include button();
   background-color: transparent;
   height: 36px;
   padding: 0;

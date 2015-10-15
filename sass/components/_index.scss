@@ -1,0 +1,27 @@
+/*
+ section: 9.1
+ title: Index
+ template: 9_1_1-index
+ description: Index of content
+*/
+%index,
+.index {
+  display: block;
+  padding: 2em 0;
+}
+
+.index__label {
+  @include text-label;
+  margin-bottom: 1em;
+}
+
+.index__row {
+  @include breakpoint($small) {
+    float: left;
+    padding-right: 8%;
+    width: 50%;
+  }
+}
+
+.index__link {
+}

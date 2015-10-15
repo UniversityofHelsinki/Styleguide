@@ -17,10 +17,12 @@
 
 @import "variables/**/*";
 @import "mixins/**/*";
-@import "common-elements/**/*";
 @import "objects/**/*";
 @import "typography/**/*";
 @import "layouts/**/*";
 @import "forms/**/*";
+@import "common-elements/**/*";
 @import "components/**/*";
+@import "_icons.scss";
+@import "_theme.scss";
 @import "_states.scss";

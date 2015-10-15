@@ -14,8 +14,8 @@ ul.horizontal-tabs {
     outline: none;
 
     > a {
+      @extend %button;
       @include link-heading;
-      @include button;
     }
 
     &.is-active {
