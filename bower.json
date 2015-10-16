@@ -8,6 +8,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "Styleguide_icons" : "https://github.com/UH-StudentServices/Styleguide-icons.git#4.0.0"
+    "Styleguide-icons" : "https://github.com/UniversityofHelsinki/Styleguide-icons.git#5.0.0"
   }
 }

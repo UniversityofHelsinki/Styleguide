@@ -11,14 +11,14 @@ $messages: (
 		'color-alt': #81b43b,
 		'bg-color': #b2e576,
 		'bg-color-alt': #f2f7eb,
-		'icon': '\EA19',
+		'icon': '\EA0B',
 	),
-	'warning': (
+	'info': (
 		'color': $white,
 		'color-alt': $black,
 		'bg-color': #52c6af,
 		'bg-color-alt': #f8f8f8,
-		'icon': '\EA3C',
+		'icon': '\EA18',
 	),
 	'error': (
 		'color': $white,
@@ -34,14 +34,14 @@ $messages: (
  section: 6.12.1
  title: Status message
  template: 6_12_1-message-status
- description: Used for displaying informational messages to the user.
+ description: Used for displaying status messages to the user.
 */
 
 /*
  section: 6.12.2
- title: Warning message
- template: 6_12_2-message-warning
- description: Used for displaying warning messages to the user.
+ title: Info message
+ template: 6_12_2-message-info
+ description: Used for displaying informational messages to the user.
 */
 
 /*
@@ -51,7 +51,6 @@ $messages: (
  description: Used for displaying error messages to the user.
 */
 .messages {
-	@include font-weight-medium;
 	@include font-size(12px);
 	text-align: center;
 	padding: 1.3em 0;
@@ -63,10 +62,6 @@ $messages: (
 	}
 	a {
 		@include font-weight-bold;
-		&:after {
-			@include icon('\EA1B');
-			margin-left: 0.5em;
-		}
 	}
 	@each $name, $type in $messages {
 		&.#{$name} {
@@ -85,8 +80,8 @@ $messages: (
 			p:before,
 			li:before {
 				@include icon(map-get(map-get($messages, $name), "icon"));
-				font-size: 1.3em;
-				margin-right: 0.7em;
+				font-size: 1.4em;
+				margin-right: 0.5em;
 			}
 		}
 	}
