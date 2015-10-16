@@ -79,7 +79,7 @@ $messages: (
 			}
 			p:before,
 			li:before {
-				@include hy-icon(map-get(map-get($messages, $name), "icon"));
+				@include icon(map-get(map-get($messages, $name), "icon"));
 				font-size: 1.4em;
 				margin-right: 0.5em;
 			}

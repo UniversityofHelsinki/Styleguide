@@ -1,0 +1,36 @@
+.icon-next {
+  &:after {
+    @include icon("\f061");
+  }
+}
+
+.icon-prev {
+  &:after {
+    @include icon("\f060");
+  }
+}
+
+.icon-video {
+  &:after {
+    @include icon('\e816');
+    @include font-size(26px);
+  }
+}
+
+.icon-up {
+  &:after {
+    @include icon("\f062");
+  }
+}
+
+.icon-down {
+  &:after {
+    @include icon("\f063");
+  }
+}
+
+.icon-home {
+  &:after {
+    @include icon("\f015");
+  }
+}

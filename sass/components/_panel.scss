@@ -1,0 +1,25 @@
+/*
+ section: 11.1
+ title: Panel
+ template: 11_1_panel
+ description:
+*/
+%panel,
+.panel {
+  @include clearfix;
+  position: relative;
+}
+
+.panel__title {
+  margin-bottom: 0.4em;
+}
+
+.panel__more-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  a {
+    border-bottom: 0 none;
+  }
+}

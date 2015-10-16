@@ -1,0 +1,60 @@
+/*
+ section: 8.1
+ title: Feed listing
+ description:
+ template: 8_1_1-feed-listing
+*/
+
+.feed-listing {
+  @include clearfix;
+  position: relative;
+}
+
+.feed-listing__item {
+  margin-bottom: $vert-spacing-unit;
+}
+
+.feed-listing__title {
+  @include font-size(15px);
+  @include font-weight-medium;
+  float: left;
+  line-height: 1.1em;
+  margin-right: 1em;
+}
+
+.feed-listing__date {
+  @include font-size(13px);
+  @include font-weight-medium;
+}
+
+.feed-listing__content {
+  margin-top: 5px;
+
+  p {
+    @include font-size(14px);
+    line-height: 1.4em;
+    margin-bottom: 0.4em;
+
+    em {
+      font-style: normal;
+    }
+
+    a {
+      color: $darkgray;
+    }
+
+    &.type {
+      @include font-weight-medium;
+      @include font-size(12px);
+      color: $silver;
+    }
+
+    &:last-child {
+      margin: 0 0 $vert-spacing-unit 0;
+    }
+  }
+}
+
+.feed-listing__more-link {
+  // @extend %panel__more-link;
+}

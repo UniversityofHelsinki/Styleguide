@@ -25,7 +25,7 @@
 
 			&:before {
 				@include font-size(9px);
-				@include font-awesome("\f111");
+				@include icon("\f111");
 				color: $blue;
 				left: 0;
 				margin-top: 1px;
@@ -76,4 +76,20 @@
 	float: left;
 	margin-bottom: 2em;
 	margin-right: 2em;
+}
+
+/**
+ * textarea-ingress
+ *
+ */
+
+%textarea-ingress,
+.textarea-ingress {
+  color: $gray;
+  letter-spacing: 0.01em;
+  line-height: 1.7em;
+
+  p {
+    @extend .textarea-ingress;
+  }
 }

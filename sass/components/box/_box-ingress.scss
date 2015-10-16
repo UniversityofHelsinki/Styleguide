@@ -26,12 +26,6 @@
 }
 
 .box-ingress__content {
-	@extend %textarea;
-	color: $gray;
-	letter-spacing: 0.01em;
-	line-height: 1.7em;
-	
-	p {
-		@extend .box-ingress__content;
-	}
+  @extend %textarea;
+  @extend %textarea-ingress;
 }

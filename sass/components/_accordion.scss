@@ -7,8 +7,8 @@
 
 /*
  section: 6.3.1
- title: Accordion normal
- template: 6_3_1_accordion-normal
+ title: Accordion
+ template: 6_3_1_accordion
  description:
 */
 ul%accordion,
@@ -25,31 +25,17 @@ ul.accordion {
   }
 }
 
-.accordion--light {
-  @extend ul%accordion;
-  .accordion__title {
-    @include button-accordion;
-  }
-}
-
-.accordion--dark {
-  @extend ul%accordion;
-  .accordion__title {
-    @include button-accordion--dark;
-  }
-}
-
 .accordion__title {
   @include font-weight-medium;
   @include font-size(14px);
-
   text-transform: uppercase;
 }
 
 .accordion__content {
   padding-top: 2em;
   padding-left: 1em;
-  p {
+
+  > p {
     padding-left: 1em;
     padding-right: 2em;
     @include font-family-bodytext();
@@ -58,14 +44,21 @@ ul.accordion {
 
 /*
  section: 6.3.2
- title: Accordion (dark)
- template: 6_3_2_accordion-dark
+ title: Accordion (with transparent buttons)
+ template: 6_3_2_accordion-transparent
  description:
 */
 
 /*
  section: 6.3.3
- title: Accordion nested
+ title: Accordion (nested)
  template: 6_3_3_accordion-nested
+ description:
+*/
+
+/*
+ section: 6.3.4
+ title: Accordion (nested with transparent buttons)
+ template: 6_3_4_accordion-nested-transparent
  description:
 */
