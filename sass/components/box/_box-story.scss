@@ -1,7 +1,6 @@
 /*
  section: 6.10.5
  title: Box story
- description: Displays content as a liftup in e.g. gridder-fields and news listings
 */
 
 /*
@@ -15,20 +14,35 @@
 	display: block;
 	height: 100%;
 	overflow: hidden;
+
+  // Overrides
+  .box-story__link:after,
+  .box-story__link {
+    color: $darkgray;
+  }
+
+  &:active,
+  &:hover {
+    .box-story__link:after,
+    .box-story__link {
+      color: $darkblue;
+    }
+  }
 }
 
 .box-story__image {
 	margin-bottom: 0.5em;
 
-	@include breakpoint($medium) {
-		.gridder-box-width-3 &,
-		.gridder-box-width-4 & {
-			border-right: 1em solid #FFFFFF;
-			float: left;
-		}
-	}
+  @include breakpoint($medium) {
+    .gridder-box-width-3:not(.gridder-parent) &,
+    .gridder-box-width-4:not(.gridder-parent) & {
+      border-right: 1em solid #FFFFFF;
+      float: left;
+    }
+  }
 
 	img {
+    @include border;
 		width: 100%;
 	}
 }
@@ -67,8 +81,8 @@
 	@include border;
 	@include font-size(12px);
 	@include font-weight-medium;
+  background-color: $white;
 	margin-bottom: 1em;
-	// height: 28px;
 	overflow: hidden;
 }
 
@@ -109,100 +123,111 @@
 }
 
 .box-story__link {
-	@include transition-property(color);
-	@include transition-duration(0.1s);
-	@include button-internal;
 	@include font-weight-medium;
-	color: $darkgray;
-
-	.box-story:active &,
-	.box-story:hover & {
-		color: $darkblue;
-	}
 }
+
+.box-story__embed {
+  clear: both;
+  padding-top: 1em;
+}
+
 
 /*
  section: 6.10.5.2
  title: Box story liftup
- template: 6_10_5_2-box-story-liftup
+ template: 6_10_5_2-box-story--liftup
  description: box-story--liftup is a more prominent display of content
 */
-%box-story-liftup,
-.box-story-liftup {
-	@extend %box-story;
+%box-story--liftup,
+.box-story--liftup {
+  @extend %box-story;
 }
 
 .box-story__image {
-	.box-storyliftup & {
-		@include breakpoint($small) {
-			float: left;
-			margin-right: 2em;
-			max-width: 270px;
-		}
-	}
+  .box-story--liftup & {
+    @include breakpoint($small) {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 2em;
+      max-width: 270px;
+    }
+  }
 }
 
 .box-story__title {
-	.box-story-liftup & {
-		@include font-size(30px);
-		height: auto;
-	}
+  .box-story--liftup & {
+    @include font-size(30px);
+    height: auto;
+  }
 
-	.box-story-liftup:active &,
-	.box-story-liftup:hover & {
-		color: $darkblue;
-	}
+  .box-story--liftup:active &,
+  .box-story--liftup:hover & {
+    color: $darkblue;
+  }
 }
 
 .box-story__content {
-	.box-story-liftup & {
-		@include font-family-main;
-		@include text-liftup;
-		overflow: visible;
-		color: $lightgray;
+  .box-story--liftup & {
+    @include font-family-main;
+    @include text-liftup;
+    overflow: visible;
+    color: $lightgray;
 
-		@include breakpoint($medium) {
-			overflow: hidden;
-		}
-	}
+    @include breakpoint($medium) {
+      overflow: hidden;
+    }
+  }
 }
 
 .box-story__link {
-	.box-story-liftup:active &,
-	.box-story-liftup:hover & {
-		color: $darkblue;
-	}
+  .box-story--liftup:active &,
+  .box-story--liftup:hover & {
+    color: $darkblue;
+  }
 }
 
 /*
  section: 6.10.5.3
  title: Box story constrained
- template: 6_10_5_3-box-story-constrained
+ template: 6_10_5_3-box-story--constrained
  description: Constrained story has content that is not full width
 */
-.box-story-constrained {
-	@extend %box-story;
+.box-story--constrained {
+  @extend %box-story;
+  @include border-bottom;
+  padding: 1em 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    border: 0;
+  }
 }
 
 .box-story__title {
-	.box-story-constrained & {
-		height: auto;
-	}
+  .box-story--constrained & {
+    float: left;
+    height: auto;
+    margin-right: 2em;
+  }
 }
 
 .box-story__topical {
-	.box-story-constrained & {
-		display: inline-block;
-	}
+  .box-story--constrained & {
+    display: inline-block;
+    margin: 0;
+  }
 }
 
 .box-story__content {
-	.box-story-constrained & {
-		.more-link {
-			display: inline;
-			float: none;
-			margin-left: 1em;
-			text-align: left;
-		}
-	}
+  .box-story--constrained & {
+    .more-link {
+      display: inline;
+      float: none;
+      margin-left: 1em;
+      text-align: left;
+    }
+  }
 }

@@ -4,95 +4,30 @@
  template: 6_8_pagination
  description:
 */
-.pager {
-  text-align: center;
+%ul.pager,
+ul.pager {
   margin-top: $vert-spacing-unit;
 
-  li {
+  > li {
+    cursor: default;
     display: inline-block;
-    margin: 5px 5px;
-  }
+    margin-bottom: 0.3em;
 
-  li > a {
-    @include button;
-    @include font-weight-book;
-    text-transform: none;
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-
-  li.pager__page a {
-    padding: 1em 1.4em;
-  }
-
-  li.pager__page.is-active a {
-    background-color: $darkblue;
-  }
-
-  .pager__last,
-  .pager__next,
-  .pager__previous,
-  .pager__first {
-    position: relative;
-
-    a:before {
-      transition-property: background-color;
-      transition-duration: 0.1s;
-      background-color: $blue--active;
-      display: inline-block;
-      height: 100%;
-      top: 0;
-      padding: 1em;
-      position: absolute;
-      text-decoration: inherit;
+    > a {
+      display: block;
+      position: relative;
     }
 
-    &:hover {
-      a:before {
-        background-color: $darkblue--active;
+    &.is-active {
+      background-color: $darkblue;
+
+      > a {
+        background-color: inherit;
       }
     }
-  }
-  .pager__first a,
-  .pager__previous a {
-    padding-left: 4em;
-    &:before {
-      left: 0;
-    }
-  }
 
-  .pager__first a {
-    &:before {
-      @include hy-icon("\EA1B");
-      transform: rotate(180deg);
-    }
-  }
-
-  .pager__previous a {
-    &:before {
-      @include hy-icon("\EA03");
-      transform: rotate(180deg);
-    }
-  }
-
-  .pager__next a,
-  .pager__last a {
-    padding-right: 4em;
-
-    &:before {
-      right: 0;
-    }
-  }
-
-  .pager__next a {
-    &:before {
-      @include hy-icon("\EA03");
-    }
-  }
-
-  .pager__last a {
-    &:before {
-      @include hy-icon("\EA1B");
+    &.pager__ellipsis {
+      color: $black;
     }
   }
 }

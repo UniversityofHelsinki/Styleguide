@@ -33,11 +33,11 @@
 	@include text-shadow-outline-bold(#000000);
 	color: $white;
 	line-height: 105%;
-	margin-bottom: $vert-spacing-unit*0.7;
+	margin-bottom: $vert-spacing-unit*0.3;
 	word-wrap: break-word;
 
 	@include breakpoint($small) {
-		@include font-size(54px);
+		@include font-size(48px);
 	}
 
 	&:only-child {
@@ -54,27 +54,12 @@
 	font-weight: 600;
 	line-height: 1.25em;
 	margin-bottom: $vert-spacing-unit*0.7;
-
-	@include breakpoint($small) {
-		@include font-size(24px);
-	}
 }
 
 a.box-hero__link,
 .box-hero__link > a  {
-	@include button-internal--dark;
 	@include font-weight-medium;
 	display: inline-block;
 	padding-right: 6em;
 	text-align: left;
-}
-
-.box-hero__link.is-videolink {
-	a:after {
-		@include font-awesome('\f01d');
-		@include font-size(30px);
-		@include font-weight-light;
-		line-height: 45px;
-		padding: 0 0.35em;
-	}
 }

@@ -1,33 +1,20 @@
-@mixin arrow($direction, $ball) {
-	&:before, &:after {
-		@include border;
-		@if $direction == left {
-			border-bottom-color: transparent;
-			border-left-color: transparent;
-			border-top-color: transparent;
-		}
-		border-width: 14px 10px;
-		content: " ";
-		height: 0;
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		width: 0;
-	}
-
-	&:before {
-		left: -20px;
-	}
-
-	&:after {
-		left: -19px;
-		@if $direction == left {
-			border-right-color: $white;
-		}
-	}
+@mixin arrow($direction: 'left', $ball: false) {
+  &:after {
+    @include border-side(left);
+    @include border-side(bottom);
+    @include transform(rotate(45deg));
+    @include transform-origin(0%, 0%);
+    content: '';
+    height: 19px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 19px;
+    z-index: -20;
+  }
 
 	@if $ball {
-		> *:before {
+		&:before {
 			@include border;
 			border-color: darken($lightsilver, 10%);
 			border-radius: 50%;
@@ -45,7 +32,7 @@
 }
 
 @mixin arrow-internal {
-	@include font-awesome("\f061");
+	@include icon("\f061");
 	color: $blue;
 }
 

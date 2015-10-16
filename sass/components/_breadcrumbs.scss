@@ -36,12 +36,3 @@
 	display: inline;
 	margin-right: 0.5em;
 }
-
-.breadcrumbs__home a {
-	&:after {
-		@include hy-icon("\EA16");
-		@include font-size(16px);
-		@include font-weight-light;
-	}
-}
-

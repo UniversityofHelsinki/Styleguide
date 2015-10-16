@@ -3,7 +3,7 @@
  title: Colors
  description: The colors used through out the theme.
 */
- 
+
 /*
  section: 1.1.1
  title: Text colors
@@ -21,17 +21,20 @@ $black: #222;
  color-list: list
  colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
 */
-$blue: #0098d0;
-$blue--active: #0882B3;
-$darkblue: #005479;
-$darkblue--active: darken($darkblue, 10%);
+$blue:              #178feb;
+$blue--active:      darken($blue, 10%);
+$darkblue:          darken($blue, 20%);
+$darkblue--active:  darken($darkblue, 10%);
 
-$lightsilver: #EBEBEB;
-$silver: #979797;
-$darksilver: #888888;
-$lightgray: #777777;
-$gray: #666;
-$darkgray: #424242;
+// 6 shades of gray. Still 44 to go.
+$darkwhite     : #FAFAFA;
+$lightsilver   : #EBEBEB;
+$silver        : #979797;
+$darksilver    : #888888;
+$lightgray     : #777777;
+$gray          : #666;
+$darkgray      : #424242;
+$grayturquoise : #566467;
 
 $green: #4FB151;
 $brown: #974822;

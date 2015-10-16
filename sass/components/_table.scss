@@ -136,3 +136,84 @@
 		}
 	}
 }
+
+/**
+ * Table states
+ */
+
+.is-table-wrapped {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+
+  > table {
+    display: none;
+  }
+
+  table {
+    @include font-size(13px);
+    margin-bottom: 0 !important;
+  }
+
+  th, td {
+    white-space: nowrap;
+  }
+
+  &:before {
+    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%));
+    content: " ";
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    margin-left: -1em;
+    top: 0;
+    width: 1em;
+    z-index: 10;
+  }
+
+  &:after {
+    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%));
+    content: " ";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1em;
+    z-index: 10;
+  }
+}
+
+.is-table-pinned {
+  float: left;
+  overflow-x: auto;
+  position: relative;
+  width: 35%;
+
+  table {
+    width: 100%;
+
+    td, th {
+      border-right: none !important;
+    }
+  }
+}
+
+.is-table-scrollable {
+  border-right: 2px dotted $lightsilver;
+  margin-left: 35%;
+  overflow-x: auto;
+  position: relative;
+
+  td:first-child, th:first-child {
+    display: none;
+  }
+
+  td, th {
+    border-left: none !important;
+
+    &:last-child {
+      border-right: none !important;
+    }
+  }
+}
+
