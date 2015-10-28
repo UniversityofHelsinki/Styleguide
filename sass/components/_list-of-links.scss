@@ -9,7 +9,7 @@ ul.list-of-links {
     margin-bottom: 2px;
 
     > a {
-      @include font-weight-medium;
+      @include font-weight-medium; //TODO: Is this necessary?
     }
   }
 }

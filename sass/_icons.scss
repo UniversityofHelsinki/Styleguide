@@ -1,36 +1,93 @@
-.icon-next {
+/* Icon modifiers for components */
+
+.icon--next {
   &:after {
-    @include icon("\f061");
+    @include icon($icon-link-arrow);
   }
 }
 
-.icon-prev {
+.icon--prev {
   &:after {
-    @include icon("\f060");
+    @include transform(rotate(180deg));
+    @include icon($icon-link-arrow);
   }
 }
 
-.icon-video {
+.icon--video {
   &:after {
-    @include icon('\e816');
+    @include icon($icon-video);
     @include font-size(26px);
   }
 }
 
-.icon-up {
+.icon--up {
   &:after {
-    @include icon("\f062");
+    @include icon($icon-arrow-up);
   }
 }
 
-.icon-down {
+.icon--down {
   &:after {
-    @include icon("\f063");
+    @include icon($icon-arrow-up);
   }
 }
 
-.icon-home {
+.icon--home {
   &:after {
-    @include icon("\f015");
+    @include icon($icon-home);
   }
 }
+
+/* Icon transforms */
+
+.icon-rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -transform: rotate(270deg);
+}
+
+@-webkit-keyframes icon-spin {
+  from   { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes icon-spin {
+  from   { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes icon-spin {
+  from   { -o-transform: rotate(0deg); }
+  to { -o-transform: rotate(360deg); }
+}
+@keyframes icon-spin {
+  from   { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  -moz-animation: icon-spin 2s infinite linear;
+  -ms-animation: icon-spin 2s infinite linear;
+  -animation: icon-spin 2s infinite linear;
+}
+
+.icon-2x { font-size: 2em; }
+.icon-3x { font-size: 3em; }
+.icon-4x { font-size: 4em; }
+.icon-5x { font-size: 5em; }
+
+

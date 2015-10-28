@@ -65,7 +65,7 @@
   position: relative;
 
   &:before {
-    @include icon("\f054");
+    @include icon("\e902");
     @include transition-duration(0.1s);
     @include vertically-center;
     left: 1em;
@@ -172,11 +172,10 @@
   }
 
   &.theme-transparent {
-    padding-left: 2em;
-
     &:after {
-      text-align: left;
+      width: auto;
     }
+    padding-left: 2em;
   }
 }
 
