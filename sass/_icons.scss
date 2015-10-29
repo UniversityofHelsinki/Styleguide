@@ -2,39 +2,39 @@
 
 .icon--next {
   &:after {
-    @include icon($icon-link-arrow);
+    @include icon($hy-link-arrow);
   }
 }
 
 .icon--prev {
   &:after {
     @include transform(rotate(180deg));
-    @include icon($icon-link-arrow);
+    @include icon($hy-link-arrow);
   }
 }
 
 .icon--video {
   &:after {
-    @include icon($icon-video);
+    @include icon($hy-video);
     @include font-size(26px);
   }
 }
 
 .icon--up {
   &:after {
-    @include icon($icon-arrow-up);
+    @include icon($hy-arrow-up);
   }
 }
 
 .icon--down {
   &:after {
-    @include icon($icon-arrow-up);
+    @include icon($hy-arrow-up);
   }
 }
 
 .icon--home {
   &:after {
-    @include icon($icon-home);
+    @include icon($hy-home);
   }
 }
 

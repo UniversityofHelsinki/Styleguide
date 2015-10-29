@@ -22,7 +22,7 @@ function runProcess() {
 					'<style>' + FileGetContents(config.compiledCssPath) + '</style>' +
 					'<style>' + FileGetContents('css/styleguide.css') + '</style>' +
 					'<style>' + overrideCss + '</style>' +
-          '<link href="icomoon/hy-icons/style.css" rel="stylesheet" type="text/css">' +
+          '<link href="bower_components/Styleguide-icons/css/icons.css" rel="stylesheet" type="text/css">' +
 				'</head>'+
 				'<body id="idean-styleguide" class="idean-styleguide-body">';
 

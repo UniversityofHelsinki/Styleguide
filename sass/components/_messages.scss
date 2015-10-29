@@ -11,21 +11,21 @@ $messages: (
 		'color-alt': #81b43b,
 		'bg-color': #b2e576,
 		'bg-color-alt': #f2f7eb,
-		'icon': $icon-done,
+		'icon': $hy-done,
 	),
 	'info': (
 		'color': $white,
 		'color-alt': $black,
 		'bg-color': #52c6af,
 		'bg-color-alt': #f8f8f8,
-		'icon': $icon-info,
+		'icon': $hy-info,
 	),
 	'error': (
 		'color': $white,
 		'color-alt': #964822,
 		'bg-color': #964822,
 		'bg-color-alt': #f4ece8,
-		'icon': $icon-warning,
+		'icon': $hy-warning,
 	)
 );
 

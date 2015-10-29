@@ -21,7 +21,8 @@ gulp.task(
 					css: './css',
 					sass: './sass',
 					debug: false,
-					time: true
+					time: true,
+          import_path: 'bower_components'
 				}
 			)
 		).on(
