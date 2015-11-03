@@ -23,8 +23,6 @@ function runProcess() {
 					'<style>' + FileGetContents('css/styleguide.css') + '</style>' +
 					'<style>' + overrideCss + '</style>' +
           '<link href="bower_components/Styleguide-icons/css/icons.css" rel="stylesheet" type="text/css">' +
-					'<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">'+
-					'<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">'+
 				'</head>'+
 				'<body id="idean-styleguide" class="idean-styleguide-body">';
 
@@ -35,8 +33,7 @@ function runProcess() {
 				'<footer class="idean-styleguide-footer">'+
 					'<a href="http://www.idean.com" class="idean-styleguide-branding">Idean</a>'+
 				'</footer>'+
-				'<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>'+
-				'<script>window.jQuery || document.write(\'<script src="js/jquery-1.11.0.min.js"><\\/script>\')</script>'+
+				'<script src="styleguide/js/jquery-1.11.0.min.js"></script>'+
 				'<script>' + FileGetContents('js/script.js') + '</script>'+
 				'</body>'+
 			'</html>';

@@ -11,21 +11,21 @@ $messages: (
 		'color-alt': #81b43b,
 		'bg-color': #b2e576,
 		'bg-color-alt': #f2f7eb,
-		'icon': '\EA0B',
+		'icon': $hy-done,
 	),
 	'info': (
 		'color': $white,
 		'color-alt': $black,
 		'bg-color': #52c6af,
 		'bg-color-alt': #f8f8f8,
-		'icon': '\EA18',
+		'icon': $hy-info,
 	),
 	'error': (
 		'color': $white,
 		'color-alt': #964822,
 		'bg-color': #964822,
 		'bg-color-alt': #f4ece8,
-		'icon': '\EA3C',
+		'icon': $hy-warning,
 	)
 );
 
@@ -82,6 +82,8 @@ $messages: (
 				@include icon(map-get(map-get($messages, $name), "icon"));
 				font-size: 1.4em;
 				margin-right: 0.5em;
+                position: relative;
+                top: 2px;
 			}
 		}
 	}

@@ -1,36 +1,37 @@
-.icon-next {
+.icon--next {
   &:after {
-    @include icon("\f061");
+    @include icon($hy-link-arrow);
   }
 }
 
-.icon-prev {
+.icon--prev {
   &:after {
-    @include icon("\f060");
+    @include transform(rotate(180deg));
+    @include icon($hy-link-arrow);
   }
 }
 
-.icon-video {
+.icon--video {
   &:after {
-    @include icon('\e816');
+    @include icon($hy-video);
     @include font-size(26px);
   }
 }
 
-.icon-up {
+.icon--up {
   &:after {
-    @include icon("\f062");
+    @include icon($hy-arrow-up);
   }
 }
 
-.icon-down {
+.icon--down {
   &:after {
-    @include icon("\f063");
+    @include icon($hy-arrow-up);
   }
 }
 
-.icon-home {
+.icon--home {
   &:after {
-    @include icon("\f015");
+    @include icon($hy-home);
   }
 }

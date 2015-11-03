@@ -21,7 +21,7 @@
 @mixin icon($unicode : '') {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "icomoon";
+  font-family: "hy-icons";
   line-height: 0;
 
   @if ($unicode) {
