@@ -1,4 +1,9 @@
 #!/bin/bash -xe
+
+###
+# Script to publish Styleguide develop version to GitHub pages at http://universityofhelsinki.github.io/Styleguide
+# This script is triggered to run on Mystudies Myteachings Jenkins on repository updates http://opi-1.student.helsinki.fi:8082/view/Styleguide/job/styleguide-publish-develop-github-pages/
+###
 git checkout develop
 echo "## Rebasing develop from origin develop"
 git pull --rebase
