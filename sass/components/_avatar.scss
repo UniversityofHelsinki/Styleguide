@@ -1,0 +1,40 @@
+/*
+ section: 13.1
+ title: Avatar image
+ description:
+*/
+
+/*
+ section: 13.1.1
+ title: Avatar image
+ template: 13_1_1_avatar-image
+ description:
+*/
+
+.avatar-image {
+  color : white;
+  display: inline-block;
+  background: url("../assets/svg/avatar.svg") no-repeat center center;
+  background-size: 65% 65%;
+  width: 60px;
+  height: 60px;
+
+  &.is-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.is-large {
+    width: 90px;
+    height: 90px;
+  }
+
+  &.is-student {
+    background-color: #7b46a3;
+  }
+
+  &.is-teacher {
+    background-color: #99cc66;
+  }
+
+}
