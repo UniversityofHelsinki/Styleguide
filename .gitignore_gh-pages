@@ -8,7 +8,6 @@
 /.sass-cache
 #/index.html
 #/bower_components
-#/css
 
 #
 # Mac OSX
@@ -33,3 +32,6 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+
+#Idea
+.idea
