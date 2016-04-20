@@ -53,7 +53,9 @@ gulp.task('build', ['compass'], function() {
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({
-    server: ""
+    server: {
+      baseDir : './'
+    }
   });
   gulp.watch(['./sass/**/*.scss', './templates/**/*.html'], ['build']);
 
