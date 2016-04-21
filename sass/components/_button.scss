@@ -65,9 +65,10 @@
   position: relative;
 
   &:before {
-    @include icon("\e902");
+    @include icon($hy-arrow);
+    @include transform(translateY(-50%) rotate(270deg));
     @include transition-duration(0.1s);
-    @include vertically-center;
+    top: 50%;
     left: 1em;
     position: absolute;
   }

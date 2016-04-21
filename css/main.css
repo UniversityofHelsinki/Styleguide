@@ -1559,13 +1559,12 @@ input.theme-transparent[type="submit"] a:hover,
   -moz-osx-font-smoothing: grayscale;
   font-family: "hy-icons";
   line-height: 0;
-  content: "";
+  content: "";
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  -moz-transform: translateY(-50%) rotate(270deg);
+  -ms-transform: translateY(-50%) rotate(270deg);
+  -transform: translateY(-50%) rotate(270deg);
   transition-duration: 0.1s;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -transform: translateY(-50%);
-  position: absolute;
   top: 50%;
   left: 1em;
   position: absolute;
