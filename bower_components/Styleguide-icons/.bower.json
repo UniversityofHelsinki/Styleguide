@@ -1,0 +1,14 @@
+{
+  "name": "Styleguide-icons",
+  "homepage": "https://github.com/UniversityofHelsinki/Styleguide-icons",
+  "version": "5.0.4",
+  "_release": "5.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.4",
+    "commit": "8ed1f749d0b84643103129c51ea8a95b19c8141a"
+  },
+  "_source": "https://github.com/UniversityofHelsinki/Styleguide-icons.git",
+  "_target": "~5.0.3",
+  "_originalSource": "https://github.com/UniversityofHelsinki/Styleguide-icons.git"
+}

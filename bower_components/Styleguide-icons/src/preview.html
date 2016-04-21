@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <link href="../css/main.css" rel='stylesheet' type='text/css' />
+    <link href="../css/icons.css" rel='stylesheet' type='text/css' />
+</head>
+<body>
+<h2>Default icons</h2>
+<p>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+</p>
+
+<h2>Resize icons by using classes hy-2x, hy-3x etc</h2>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> hy-2x <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+<p>
+
+</p>
+
+<h2>Rotate 90 degrees by using hy-rotate-90 class</h2>
+<p>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> hy-rotate-90 <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+</p>
+
+<h2>Rotate 180 degrees by using hy-rotate-180 class</h2>
+<p>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> hy-rotate-180 <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+</p>
+
+<h2>Rotate 270 degrees by using hy-rotate-270 class</h2>
+<p>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> hy-rotate-270 <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+</p>
+
+<h2>Spin icons by using hy-spin</h2>
+<p>
+    <% _.each(glyphs, function(glyph) { %>
+    <span class="<%= className %> hy-spin <%= className %>-<%= glyph.name %>"></span>
+    <% }); %>
+</p>
+
+</body>
+</html> 

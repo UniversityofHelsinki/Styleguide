@@ -6,8 +6,8 @@
 /node_modules
 /*.log
 /.sass-cache
-/index.html
-/bower_components
+#/index.html
+#/bower_components
 
 #
 # Mac OSX
