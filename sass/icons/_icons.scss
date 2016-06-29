@@ -1,3 +1,6 @@
+@import "__variables.scss";
+@import "__icon_font.scss";
+
 .icon--next {
   &:after {
     @include icon($hy-link-arrow);
