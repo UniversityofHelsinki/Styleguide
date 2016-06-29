@@ -33,7 +33,7 @@
   }
 
   &.theme-transparent {
-    background-color: $white;
+    background-color: transparent;
     color: $blue;
 
     &:hover {
@@ -99,6 +99,7 @@
 .button--action {
   @extend %button;
   display: block;
+  font-weight: 600;
   padding-left: 1em;
   padding-right: 4em;
   position: relative;
@@ -122,7 +123,6 @@
   &:after {
     @include vertically-center;
     color: $white;
-    right: -2px;
     text-align: center;
   }
 
@@ -133,9 +133,16 @@
   }
 
   &.theme-transparent {
-    display: inline-block;
+    align-items: center;
+    display: flex;
     padding-left: 0;
-    padding-right: 3em;
+    padding-right: 0;
+
+    &:after {
+      margin-left: 15px;
+      position: static;
+      width: auto;
+    }
 
     &:hover,
     &:before {
@@ -173,10 +180,13 @@
   }
 
   &.theme-transparent {
-    &:after {
-      width: auto;
-    }
     padding-left: 2em;
+
+    &:after {
+      margin: 0;
+      position: absolute;
+      text-align: left;
+    }
   }
 }
 
@@ -205,6 +215,16 @@
     position: absolute;
     top: 1em;
     width: 100%;
+  }
+}
+
+.button--expand {
+  @extend %button;
+
+  .is-overflow-expandable & {
+    bottom: 0;
+    position: absolute;
+    right: 0;
   }
 }
 

@@ -21,6 +21,12 @@
  template: 3_6_3-page-title--suffix
 */
 
+/*
+ section: 3.6.4
+ title: Page title listing
+ template: 3_6_4-page-title--listing
+*/
+
 %page-title,
 .page-title {
 }
@@ -58,5 +64,20 @@
     @include breakpoint($medium) {
       @include font-size(16px);
     }
+  }
+}
+
+.page-title--listing {
+  border-bottom: 1px solid $lightsilver;
+  margin-bottom: 1em;
+
+  .page-title__subheading {
+    @include font-family-bodytext;
+    @include font-size(16px);
+    color: $silver;
+    float: right;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
   }
 }
