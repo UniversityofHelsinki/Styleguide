@@ -30,8 +30,58 @@
 
 // Line break with rule on top
 @mixin line-break($border-color) {
-	border-top: 1px solid $border-color;
-	background: transparent url('../images/bg_shadow.png') no-repeat top center;
-	background-size: 100% auto;
+  border-top: 2px solid $border-color;
 }
 
+// Inline element with ball before/after
+@mixin tb-ball($position: 'before') {
+  display: inline-block;
+  position: relative;
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  @if $position == 'before' {
+    padding-left: 1.5em;
+
+    &:before {
+      content: " ";
+      left: 0;
+    }
+
+  } @else if $position == 'after' {
+    margin-right: 0.5em;
+    padding-right: 1.5em;
+
+    &:after {
+      content: " ";
+      right: 0;
+    }
+  }
+
+  &:after,
+  &:before {
+    @include border;
+    border-color: darken($lightsilver, 10%);
+    border-radius: 50%;
+    height: 6px;
+    margin-top: -3px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    z-index: 10;
+  }
+
+  // "Fugly" selector hack
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $darkblue;
+    }
+  }
+}

@@ -2,40 +2,342 @@
  section: 5.1
  title: Main menu
  template: 5_1_main-menu
- description: The main menu.
+ description: The main menu. To see the mobile menu, resize your browser to mobile width.
 */
 
-ul.main-menu {
-  @include clearfix();
+.main-menu {
+  background-color: $white;
+  border-bottom: 1px solid lighten($silver, 20%);
+  overflow: hidden;
 
   li {
-    display: block;
-    float: left;
+    display: flex;
+    flex-flow: column wrap;
     list-style: none;
+    position: relative;
 
-    &:first-of-type {
-      a {
-        padding-left: 0;
-        span {
-          display: none;
-        }
-      }
+    @include breakpoint($small) {
+      align-items: center;
+      flex-flow: row wrap;
     }
   }
 
   a {
-    @include font-size(15px);
-    line-height: 1.25em;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    font-style: normal;
-    display: block;
-    padding: 1.6em 1.5em;
+    @include link-menu;
+  }
+}
 
-    &.active {
+li.main-menu__front {
+  @include breakpoint($small) {
+    display: inline-block;
+    left: 1em;
+    position: absolute;
+    top: 50%;
+  }
+
+  > a {
+    @include breakpoint($small) {
+      font-size: 0;
+      padding-left: 0;
+      padding-right: 19px;
+
+      &:after {
+        @include icon("\EA16");
+        @include font-size(16px);
+        @include font-weight-light;
+        @include transition-element(opacity, 0.2s);
+      }
+    }
+
+    @include breakpoint($medium) {
+      padding-right: 35px;
+    }
+  }
+}
+
+.main-menu__expand {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 50px;
+  z-index: 10;
+
+  &:before {
+    @include font-size(14px);
+    @include icon("\EA2F");
+    @include transition-duration(0.2s);
+    @include transition-property(color, border-color);
+    border: 1px solid lighten($silver, 20%);
+    color: lighten($silver, 20%);
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    top: 10px;
+    width: 2em;
+  }
+
+  &:hover:before {
+    border-color: $silver;
+    color: $silver;
+  }
+
+  @include breakpoint($small) {
+    align-items: center;
+    display: flex;
+    height: 1.2em;
+    justify-content: center;
+    order: 2;
+    position: static;
+    width: 1.2em;
+
+    &:before {
+      @include font-size(12px);
+      height: auto;
+      line-height: normal;
+      padding: 2px;
+      top: auto;
+      width: auto;
+    }
+  }
+
+  .is-open > & {
+    &:before {
+      @include icon("\EA24");
+      border-color: $darkblue;
+      background-color: $darkblue;
+      color: $white;
+    }
+
+    &:hover:before {
+      border-color: $blue--active;
+      background-color: $blue--active;
+    }
+  }
+}
+
+.main-menu__lvl1 {
+  border-bottom: 1px solid lighten($silver, 20%);
+
+  > li {
+    border-top: 1px solid darken($lightsilver, 10%);
+
+    &.is-open {
+      background: darken($white, 5%);
+    }
+
+    > a {
+      padding: 15px 20px 15px 60px;
+    }
+  }
+
+  @include breakpoint($small) {
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    padding: 0.6em 2em 0.6em 2em;
+    position: relative;
+
+    > li {
+      border: none;
+
+      &.is-open {
+        background: none;
+      }
+
+      > a {
+        padding: 0.6em 0.55em 0.6em 1.25em;
+      }
+    }
+  }
+
+  @include breakpoint($medium) {
+    > li {
+      > a {
+        padding: 0.6em 1em 0.6em 1.8em;
+      }
+    }
+  }
+}
+
+.main-menu__lvl2 {
+  > li {
+    > .main-menu__expand {
+      left: 25px;
+    }
+
+    > a {
+      padding: 15px 30px 15px 80px;
+      text-transform: none;
+    }
+  }
+
+  @include breakpoint($small) {
+    display: none;
+  }
+}
+
+.main-menu__lvl3 {
+  padding-bottom: 10px;
+
+  > li {
+    > a {
+      @include font-weight-book;
+      color: $silver;
+      padding: 5px 30px 5px 80px;
+      text-transform: none;
+    }
+  }
+}
+
+/*
+ section: 5.1.1
+ title: Fatmenu
+ template: 5_1_1_fatmenu
+ description: The fatmenu.
+*/
+
+.fatmenu {
+  background-color: $white;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+
+  .logged-in & {
+    position: static;
+  }
+
+  .stickynav-active & {
+    position: fixed;
+  }
+
+  &.is-open {
+    border-bottom: 1px solid lighten($silver, 20%);
+  }
+
+  @include breakpoint($small) {
+    display: block;
+  }
+}
+
+.fatmenu__title {
+  a {
+    color: $blue;
+
+    &:hover {
       color: $darkblue;
     }
+
+    &:after {
+      @include font-size(16px);
+      @include icon("\EA1B");
+      margin-left: 1em;
+      position: absolute;
+    }
+  }
+}
+
+.fatmenu__lvl1 {
+  @include container;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+
+  > li {
+    float: left;
+    margin-right: -100%;
+    visibility: hidden;
+    padding: 2em 0 20px;
+    width: 100%;
+
+    &.is-open {
+      visibility: visible;
+      display: block !important;
+      margin-right: 0;
+    }
+  }
+}
+
+.fatmenu__lvl2 {
+  > li {
+    float: left;
+    margin-right: 10px;
+    padding: 0 0 0.8em 0;
+    width: 30%;
+
+    > a {
+      @include font-weight-bold;
+      @include font-size(15px);
+      display: block;
+      letter-spacing: 0;
+      line-height: 1.25em;
+      padding: ($vert-spacing-unit)/2 0 0;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        color: $darkblue;
+      }
+
+      &.active-trail {
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+.fatmenu__lvl3 {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  position: relative;
+
+  > li {
+    > a {
+      @include font-size(14px);
+      @include font-weight-book;
+      color: $lightgray;
+      padding: ($vert-spacing-unit)/7 0 ($vert-spacing-unit)/7 0;
+      position: relative;
+      text-transform: none;
+
+      &:hover,
+      &.active-trail {
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+.fatmenu__collapse {
+  @include font-weight-medium;
+  @include font-size(16px);
+  align-items: center;
+  border: 1px solid lighten($silver, 20%);
+  color: lighten($silver, 20%);
+  cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 15px;
+  width: 2em;
+
+  &:hover {
+    background-color: $darkblue;
+    border-color: $darkblue;
+    color: $white;
+  }
+
+  &:before {
+    @include icon("\EA24");
   }
 }

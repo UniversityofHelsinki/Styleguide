@@ -6,15 +6,15 @@
 */
 %ul.pager,
 ul.pager {
-  margin-top: $vert-spacing-unit;
+  @include font-size(15px);
+  color: $white;
+  margin: $vert-spacing-unit 0;
 
   > li {
-    cursor: default;
     display: inline-block;
     margin-bottom: 0.3em;
 
     > a {
-      display: block;
       position: relative;
     }
 
@@ -28,6 +28,30 @@ ul.pager {
 
     &.pager__ellipsis {
       color: $black;
+      display: none;
+
+      @include breakpoint($small) {
+        display: inline-block;
+      }
+    }
+
+    &.pager__page {
+      display: none;
+
+      @include breakpoint($small) {
+        display: inline-block;
+      }
+
+      a {
+        display: block;
+      }
+    }
+
+    &.pager__previous,
+    &.pager__next {
+      a {
+        display: block;
+      }
     }
   }
 }

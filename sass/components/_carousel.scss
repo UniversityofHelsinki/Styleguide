@@ -11,100 +11,42 @@
  description:
 */
 .carousel {
-  @include border-bottom;
-  margin-bottom: $vert-spacing-unit;
+  @include clearfix;
+  margin-bottom: $vert-spacing-unit*1.5;
+  position: relative;
 }
 
 .carousel__slide {
   background: $black;
   color: $white;
-  margin-bottom: $vert-spacing-unit*1.5;
-  overflow: hidden;
-}
-
-.carousel__active-slide {
-  float: left;
-  position: relative;
-}
-
-%carousel__title,
-.carousel__title {
-  @include font-size(40px);
-  @include text-shadow-outline-bold;
-  color: $white;
-  line-height: 105%;
-  margin-bottom: 0;
-  word-wrap: break-word;
-
-  @include breakpoint($small) {
-    @include font-size(48px);
-  }
-
-  @include breakpoint($medium) {
-    @include font-size(60px);
-  }
-}
-
-.carousel__alt-title {
-  @include font-size(20px);
-  @include text-shadow-outline-bold;
-  color: $white;
-  letter-spacing: normal;
-  line-height: 105%;
-  margin-bottom: 0;
-  text-transform: none;
-  word-wrap: break-word;
-
-  @include breakpoint($small) {
-    @include font-size(24px);
-  }
-
-  @include breakpoint($medium) {
-    @include font-size(30px);
-  }
-}
-
-.carousel__image {
-  @include breakpoint($small) {
-    @include float-span(12, 1, $gutter: 0);
-  }
-
-  img {
-    vertical-align: bottom;
-    width: 100%;
-  }
 }
 
 .carousel__content {
+  @include font-size(12px);
+  background: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 10px 7px 10px 15px;
+  position: absolute;
 
   @include breakpoint($small) {
-    @include float-span(4, 13);
-    @include font-size(12px);
-  }
-  @include breakpoint($medium) {
-    @include font-size(16px);
+    @include font-size(14px);
   }
 }
 
 .carousel__credits {
   @include text-author;
-  @include text-shadow-outline;
-  color: $white;
-  margin-left: 0.3em;
-  line-height: normal;
+  // @include transform(translateY(100%));
+  bottom: 0;
+  color: $silver;
+  height: $vert-spacing-unit;
+  line-height: $vert-spacing-unit;
+  margin-bottom: 0;
+  margin-left: 0;
   position: absolute;
-  top: 0;
-
-  @include breakpoint($small) {
-    @include text-shadow(none);
-    color: $silver;
-    bottom: 0;
-    height: $vert-spacing-unit*1.5;
-    line-height: $vert-spacing-unit*1.5;
-    margin-bottom: 0;
-    top: auto;
-  }
+  right: 0;
+  top: auto;
 }
 
 /* Control Nav */
@@ -112,12 +54,14 @@
   bottom: 0;
   position: absolute;
   right: 0;
-  height: $vert-spacing-unit*1.5;
-  line-height: $vert-spacing-unit*1.5;
+  height: $vert-spacing-unit;
+  line-height: $vert-spacing-unit;
   width: 100%;
 
   @include breakpoint($small) {
     @include float-span(4, 13, $gutter: 0);
+    height: $vert-spacing-unit*1.5;
+    line-height: $vert-spacing-unit*1.5;
   }
 
   li {
@@ -136,148 +80,12 @@
   }
 }
 
+/* Direction Nav */
 .carousel__direction-nav {
-  bottom: 0;
-  height: $vert-spacing-unit*1.5;
-  position: absolute;
-  right: 0;
-  z-index: 10;
-  width: 100%;
-
-  @include breakpoint($small) {
-    @include float-span(4, 13, $gutter: 0);
-  }
-
-  li {
-    float: left;
-    width: 50%;
-
-    &:last-child {
-      float: right;
-    }
-  }
-
-  a {
-    @include font-size(16px);
-    display: block;
-    height: $vert-spacing-unit*1.5;
-    line-height: $vert-spacing-unit*1.5;
-    width: 100%;
-
-    &.carousel__prev:before {
-      @include icon("\f060");
-    }
-
-    &.carousel__next {
-      text-align: right;
-
-      &:before {
-        @include icon("\f061");
-      }
-    }
-  }
-}
-
-.carousel__trigger {
-  @include transition-scale(1.1);
-  left: initial;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-
-  @include breakpoint($small) {
-    left: 5px;
-    right: auto;
-  }
-
-  > a {
-    @include font-size(28px);
-    @include text-shadow-default;
-    color: $white;
-
-    &:after {
-      @include icon("\f00e");
-    }
-
-    &:hover {
-      color: darken($white, 10%);
-    }
-  }
-}
-
-
-/*
- section: 7.1.2
- title: Carousel unwrapped
- template: 7_1_2-carousel-unwrapped
- description:
-*/
-%carousel-unwrapped,
-.carousel-unwrapped {
-  background-color: $black;
-  overflow: hidden;
-  position: relative;
-
-  li > article {
-    @include breakpoint($large) {
-      &:before {
-        @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%));
-        content: '';
-        height: 100%;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 100%;
-        z-index: 1;
-      }
-    }
-  }
-}
-
-.carousel-unwrapped__content {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-
-  // TODO: implement this in some other way than this generic layout class.
-  .l-subregion-wrapper {
-    @include vertically-center;
-    background: none;
-    border: none;
-    position: relative;
-    z-index: 5;
-  }
-
-  .l-subregion {
-    padding: 0 10%;
-
-    @include breakpoint($large) {
-      padding: 0 1em;
-    }
-  }
-
-  @include breakpoint($small) {
-    &:before {
-      @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%), linear-gradient(right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%));
-      content: '';
-      height: 100%;
-      left: 0px;
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      z-index: 1;
-    }
-  }
-}
-
-.carousel-unwrapped__direction-nav {
   a {
     @include font-size(50px);
     @include font-weight-bold;
-    @include text-shadow-default;
+    @include text-shadow;
     @include transition-scale(1.15);
     @include transition-property('all');
     color: $white;
@@ -303,7 +111,145 @@
       width: 5%;
     }
 
-    &.carousel-unwrapped__prev {
+    &.carousel__prev {
+      left: 0;
+
+      &:before {
+        @include icon("\f104");
+      }
+    }
+
+    &.carousel__next {
+      right: 0;
+
+      &:before {
+        @include icon("\f105");
+      }
+    }
+  }
+}
+
+.carousel__trigger {
+  @include transition-scale(1.1);
+  left: initial;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+
+  @include breakpoint($small) {
+    left: 5px;
+    right: auto;
+  }
+
+  > a {
+    @include font-size(28px);
+    @include text-shadow-default;
+    color: $white;
+    // It was decided in the UX-hackathon 23.11.2015 that the colorbox is obsolete for now, so we hide it
+    display: none;
+
+    &:after {
+      @include icon("\f00e");
+    }
+
+    &:hover {
+      color: darken($white, 10%);
+    }
+  }
+}
+
+
+/*
+ section: 7.1.2
+ title: Carousel unwrapped
+ template: 7_1_2-carousel-unwrapped
+ description:
+*/
+%carousel-unwrapped,
+.carousel-unwrapped {
+  background-color: $black;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+
+  article {
+    position: relative;
+    height: 100%;
+  }
+
+  .slides,
+  .slides > li,
+  .flexslider {
+    height: 100%;
+  }
+}
+
+.carousel-unwrapped__content {
+  height: 100%;
+
+  // TODO: implement this in some other way than this generic layout class.
+  .l-subregion-wrapper {
+    @include vertically-center;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 5;
+  }
+
+  .l-subregion {
+    padding: 0 10%;
+
+    @include breakpoint($large) {
+      padding: 0 1em;
+    }
+  }
+
+  &.theme-raster:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../images/raster.svg);
+    -webkit-background-size: 4px 4px;
+    background-size: 4px 4px;
+    z-index: 1;
+  }
+}
+
+/* Direction Nav */
+.carousel-unwrapped .direction-nav {
+  a {
+    @include font-size(50px);
+    @include font-weight-bold;
+    @include transition-scale(1.15);
+    @include transition-property('all');
+    color: $white;
+    display: block;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 10%;
+    z-index: 10;
+
+    &:active {
+      color: $silver;
+    }
+
+    &:before {
+      @include vertically-center;
+      display: block;
+      position: relative;
+    }
+
+    @include breakpoint($large) {
+      width: 5%;
+    }
+
+    &.prev {
       @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
       left: 0;
 
@@ -312,7 +258,7 @@
       }
     }
 
-    &.carousel-unwrapped__next {
+    &.next {
       @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
       right: 0;
 
@@ -328,9 +274,9 @@
   left: 70%;
   max-height: 350px;
   min-width: $bp-small;
-  opacity: 0.5;
-  position: relative;
+  position: absolute;
   width: 100%;
+  top: 0;
 
   @include breakpoint($small) {
     left: 50%;
@@ -342,7 +288,6 @@
 
   @include breakpoint($large) {
     min-width: 1750px;
-    opacity: 0.9;
   }
 
   img {
@@ -352,7 +297,72 @@
 
     @include breakpoint($small) {
       margin-left: -50%;
+      max-width: 130%;
+      width: auto;
     }
+    @include breakpoint($medium) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+.carousel-unwrapped--horizontal {
+  @extend .carousel-unwrapped;
+  height: auto;
+
+  @include breakpoint($small) {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .carousel-unwrapped__row {
+    @include breakpoint($small) {
+      display: table-row;
+    }
+  }
+
+  .carousel-unwrapped__cell {
+    height: 200px;
+    overflow: hidden;
+
+    &:first-of-type {
+      height: 350px;
+    }
+
+    @include breakpoint($small) {
+      display: table-cell;
+      height: 350px;
+      vertical-align: top;
+    }
+  }
+
+  article {
+    &:before {
+      display: none;
+    }
+  }
+
+  .carousel-unwrapped__content {
+    display: block;
+    position: relative;
+    z-index: 10;
+
+    &:before {
+      @include transition-property(opacity);
+      @include transition-duration(0.2s);
+      opacity: 0.6;
+    }
+
+    &:hover:before {
+      opacity: 0.8;
+    }
+  }
+
+  .carousel-unwrapped__image {
+    opacity: 0.5;
   }
 }
 
@@ -363,23 +373,27 @@
  description:
 */
 .carousel-unwrapped--teaser {
-  @extend %carousel-unwrapped;
   background-color: $black;
   overflow: hidden;
   position: relative;
 
-  .carousel-unwrapped__title {
-    @extend %carousel__title;
-    @include font-size(26px);
-    padding-bottom: 0;
-
+  .l-subregion {
     @include breakpoint($small) {
-      @include font-size(36px);
+      padding: 0 1em;
+    }
+
+    &:before,
+    &:after {
+      display: none;
     }
   }
 
+  .carousel-unwrapped__content {
+    height: 88px;
+  }
+
   .carousel-unwrapped__image {
-    height: 90px;
+    max-height: 90px;
 
     @include breakpoint($small) {
       opacity: 0.9;
@@ -387,8 +401,9 @@
     }
 
     img {
-      @include filter(blur(10px));
-      @include transform(scale(1.15));
+      @include breakpoint($small) {
+        width: 100%;
+      }
     }
   }
 }

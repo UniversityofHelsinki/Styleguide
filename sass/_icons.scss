@@ -6,8 +6,8 @@
 
 .icon--prev {
   &:after {
-    @include transform(rotate(180deg));
     @include icon($hy-link-arrow);
+    transform: rotate(180deg);
   }
 }
 
@@ -27,6 +27,7 @@
 .icon--down {
   &:after {
     @include icon($hy-arrow-up);
+    transform: rotate(180deg);
   }
 }
 

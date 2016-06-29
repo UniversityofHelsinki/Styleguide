@@ -10,7 +10,7 @@ var shell = require('gulp-shell');
 
 // Compass task
 gulp.task(
-	'compass', 
+	'compass',
 	function() {
 		return gulp.src('./sass/**/*.scss')
 		.pipe(
@@ -26,7 +26,7 @@ gulp.task(
 				}
 			)
 		).on(
-			'error', 
+			'error',
 			function(error) {
 				console.log(error.message);
 				this.emit('end');
