@@ -5467,8 +5467,8 @@ input.search-form__submit {
   font-style: normal;
   transition-duration: 0.1s;
   transition-property: color;
-  -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
+  -webkit-align-self: flex-end;
   align-self: flex-end;
   margin-top: auto;
 }
@@ -5517,8 +5517,8 @@ input.search-form__submit {
   align-items: center;
   background-color: #666;
   color: #FFF;
-  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
+  -webkit-flex-shrink: 0;
   flex-shrink: 0;
   height: 55px;
   line-height: 1em;
