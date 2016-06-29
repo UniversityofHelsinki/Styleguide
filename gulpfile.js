@@ -3,53 +3,149 @@ var gutil = require('gulp-util');
 var sass = require('gulp-ruby-sass');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
-var autoprefixer = require('gulp-autoprefixer');
+var autoPrefixer = require('gulp-autoprefixer');
 
 var browserSync = require('browser-sync').create();
 var shell = require('gulp-shell');
 
-// Compass task
-gulp.task(
-	'compass', 
-	function() {
-		return gulp.src('./sass/**/*.scss')
-		.pipe(
-			compass(
-				{
-					config_file: './config.rb',
-					environment: 'production',
-					css: './css',
-					sass: './sass',
-					debug: false,
-					time: true,
-          import_path: 'bower_components'
-				}
-			)
-		).on(
-			'error', 
-			function(error) {
-				console.log(error.message);
-				this.emit('end');
-			}
-		).pipe(
-			autoprefixer(
-				{
-					browsers: ['last 4 versions'],
-					cascade: false
-				}
-			)
-		).pipe(
-			gulp.dest(
-				'./css'
-			)
-		)
-	}
-);
+var iconfont = require('gulp-iconfont');
+var consolidate = require('gulp-consolidate');
+var clean = require('gulp-clean');
+var fs = require('fs');
+var _ = require('lodash');
 
-gulp.task('build', ['compass'], function() {
+var iconFontSettings = {
+	fontClassName : 'hy',
+	fontFileName : 'hy-icons',
+	fontName: 'hy-icons',
+	svgSrc: 'icons/dest/*.svg',
+	fontDestination: 'fonts/',
+	fontCssPath: '../fonts/',
+	appendUnicode: true
+};
+
+var generateIconSrcPath = 'icons/src';
+var generateIconDestPath = 'icons/dest';
+var unicodesJsonFileName = 'icons/unicodes.json';
+
+// Compass task
+gulp.task('compass', function() {
+	return gulp.src('./sass/**/*.scss')
+	.pipe(
+		compass(
+			{
+				config_file: './config.rb',
+				environment: 'production',
+				css: './css',
+				sass: './sass',
+				debug: false,
+				time: true
+			}
+		)
+	).on(
+		'error',
+		function(error) {
+			console.log(error.message);
+			this.emit('end');
+		}
+	).pipe(
+		autoPrefixer(
+			{
+				browsers: ['last 4 versions'],
+				cascade: false
+			}
+		)
+	).pipe(
+		gulp.dest(
+			'./css'
+		)
+	)
+});
+
+
+// Generate icons.
+gulp.task('generateUnicodeIconFiles', ['clean'], function() {
+
+	if (!fs.existsSync(generateIconDestPath)){
+		fs.mkdirSync(generateIconDestPath);
+	}
+
+	var iconFiles = fs.readdirSync(generateIconSrcPath);
+	var unicodes = require('./' + unicodesJsonFileName);
+
+	var unicodeIntValues = _.map(_.values(unicodes), function(unicode) {
+		return parseInt(unicode.split('u')[1], 16);
+	});
+
+	var nextUnicodeIntValue = _.max(unicodeIntValues);
+
+	_.each(iconFiles, function(file) {
+		var unicodeValue;
+
+		if(_.has(unicodes, file)) {
+			unicodeValue = unicodes[file];
+		} else {
+			nextUnicodeIntValue++;
+			unicodeValue = 'u' + nextUnicodeIntValue.toString(16).toUpperCase();
+			unicodes[file] = unicodeValue;
+		}
+		fs.createReadStream(generateIconSrcPath + '/' + file)
+      .pipe(fs.createWriteStream(generateIconDestPath + '/' + unicodeValue + '-' + file));
+	});
+	fs.writeFile(unicodesJsonFileName, JSON.stringify(unicodes));
+});
+
+// Create icon font from generated icons.
+gulp.task('iconFont', ['generateUnicodeIconFiles'], function(){
+	gulp.src([iconFontSettings.svgSrc])
+		.pipe(iconfont({
+			fontName: iconFontSettings.fontFileName,
+			appendUnicode: true,
+			fontHeight: 1000,
+			normalize: true,
+			descent: 6
+		}))
+		.on('glyphs', function(glyphs) {
+			gulp.src('../icon-css-template.css')
+        .pipe(consolidate('lodash', {
+					glyphs: glyphs,
+					fontFileName : iconFontSettings.fontFileName,
+					fontName: iconFontSettings.fontName,
+					fontPath: iconFontSettings.fontCssPath,
+					className: iconFontSettings.fontClassName
+				}))
+				.pipe(gulp.dest('css/'));
+
+			gulp.src('../variables.scss')
+				.pipe(consolidate('lodash', {
+					glyphs: glyphs,
+					className: iconFontSettings.fontClassName
+				}))
+				.pipe(gulp.dest('/sass/icons/_variables.scss'));
+
+			// gulp.src('src/preview.html')
+			// 	.pipe(consolidate('lodash', {
+			// 		glyphs: glyphs,
+			// 		className: iconFontSettings.fontClassName
+			// 	}))
+			// 	.pipe(gulp.dest('preview/'));
+
+		})
+		.pipe(gulp.dest(iconFontSettings.fontDestination));
+});
+
+// Main tasks.
+gulp.task('clean', function () {
+	return gulp.src(iconFontSettings.fontDestination+'/'+iconFontSettings.fontFileName+'.*', {read: false})
+		.pipe(clean())
+		.pipe(gulp.src(generateIconDestPath, {read: false}))
+		.pipe(clean());
+});
+
+gulp.task('build', ['clean', 'generateUnicodeIconFiles', 'iconFont', 'compass'], function() {
   return gulp.src('')
     .pipe(shell(['node build'], {cwd : './styleguide'}));
-})
+});
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({

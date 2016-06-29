@@ -11,8 +11,6 @@ git checkout gh-pages
 git reset --hard develop
 echo "## Installing npm dependencies"
 npm install
-echo "## Installing bower dependencies"
-bower install
 cp .gitignore_gh-pages .gitignore
 echo "## Building styleguide"
 ./node_modules/gulp/bin/gulp.js

@@ -1039,6 +1039,65 @@ video {
   color: #FFF;
 }
 
+.icon--next:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+}
+
+.icon--prev:after {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -transform: rotate(180deg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+}
+
+.icon--video:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+  font-size: 22.75px;
+  font-size: 1.625rem;
+}
+@media (min-width: 48em) {
+  .icon--video:after {
+    font-size: 26px;
+  }
+}
+
+.icon--up:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+}
+
+.icon--down:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+}
+
+.icon--home:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  line-height: 0;
+  content: "";
+}
+
 /*
   section: 3
   title: Common elements
@@ -4516,65 +4575,6 @@ a.box-hero__link,
   .box-subtitle__ingress {
     font-size: 22px;
   }
-}
-
-.icon--next:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
-}
-
-.icon--prev:after {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -transform: rotate(180deg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
-}
-
-.icon--video:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
-  font-size: 22.75px;
-  font-size: 1.625rem;
-}
-@media (min-width: 48em) {
-  .icon--video:after {
-    font-size: 26px;
-  }
-}
-
-.icon--up:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
-}
-
-.icon--down:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
-}
-
-.icon--home:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  line-height: 0;
-  content: "";
 }
 
 .theme-transparent {

@@ -11,7 +11,7 @@
 @import "toolkit";
 
 // Styleguide icon variables
-@import "Styleguide-icons/sass/variables.scss";
+@import "sass/icons/variables.scss";
 
 // Generate normalize.css.
 @import "normalize";
@@ -24,8 +24,8 @@
 @import "typography/**/*";
 @import "layouts/**/*";
 @import "forms/**/*";
+@import "icons/**/*";
 @import "common-elements/**/*";
 @import "components/**/*";
-@import "_icons.scss";
 @import "_theme.scss";
 @import "_states.scss";
