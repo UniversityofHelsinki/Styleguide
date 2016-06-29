@@ -1213,6 +1213,817 @@ video {
   color: #FFF;
 }
 
+@font-face {
+  font-family: 'hy-icons';
+  src: url("../fonts/hy-icons.eot");
+  src: url("../fonts/hy-icons.eot?#iefix") format("eot"), url("../fonts/hy-icons.woff") format("woff"), url("../fonts/hy-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.hy {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hy-rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -transform: rotate(90deg);
+}
+
+.hy-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -transform: rotate(180deg);
+}
+
+.hy-rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -transform: rotate(270deg);
+}
+
+@-webkit-keyframes hy-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes hy-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.hy-spin {
+  -webkit-animation: hy-spin 2s infinite linear;
+  -moz-animation: hy-spin 2s infinite linear;
+  -ms-animation: hy-spin 2s infinite linear;
+  -animation: hy-spin 2s infinite linear;
+}
+
+.hy:before {
+  box-sizing: border-box;
+}
+
+.hy-2x {
+  font-size: 2em;
+}
+
+.hy-3x {
+  font-size: 3em;
+}
+
+.hy-4x {
+  font-size: 4em;
+}
+
+.hy-5x {
+  font-size: 5em;
+}
+
+.hy-add-to-todo-list:before {
+  content: "";
+}
+
+.hy-arrow-up:before {
+  content: "";
+}
+
+.hy-arrow:before {
+  content: "";
+}
+
+.hy-avatar-group:before {
+  content: "";
+}
+
+.hy-avatar:before {
+  content: "";
+}
+
+.hy-bachelor:before {
+  content: "";
+}
+
+.hy-camera:before {
+  content: "";
+}
+
+.hy-chat:before {
+  content: "";
+}
+
+.hy-date:before {
+  content: "";
+}
+
+.hy-discover:before {
+  content: "";
+}
+
+.hy-done:before {
+  content: "";
+}
+
+.hy-download:before {
+  content: "";
+}
+
+.hy-drag:before {
+  content: "";
+}
+
+.hy-drop-down:before {
+  content: "";
+}
+
+.hy-edit-event:before {
+  content: "";
+}
+
+.hy-edit:before {
+  content: "";
+}
+
+.hy-events:before {
+  content: "";
+}
+
+.hy-facebook:before {
+  content: "";
+}
+
+.hy-favorites:before {
+  content: "";
+}
+
+.hy-grid:before {
+  content: "";
+}
+
+.hy-hamburger:before {
+  content: "";
+}
+
+.hy-home:before {
+  content: "";
+}
+
+.hy-hy-logo:before {
+  content: "";
+}
+
+.hy-info-stroke:before {
+  content: "";
+}
+
+.hy-info:before {
+  content: "";
+}
+
+.hy-link-arrow-offsite:before {
+  content: "";
+}
+
+.hy-link-arrow:before {
+  content: "";
+}
+
+.hy-linkedin:before {
+  content: "";
+}
+
+.hy-list:before {
+  content: "";
+}
+
+.hy-location:before {
+  content: "";
+}
+
+.hy-log:before {
+  content: "";
+}
+
+.hy-logout:before {
+  content: "";
+}
+
+.hy-magnify-minus:before {
+  content: "";
+}
+
+.hy-magnify-plus:before {
+  content: "";
+}
+
+.hy-master:before {
+  content: "";
+}
+
+.hy-minus:before {
+  content: "";
+}
+
+.hy-modify:before {
+  content: "";
+}
+
+.hy-navi-triangle:before {
+  content: "";
+}
+
+.hy-new-group:before {
+  content: "";
+}
+
+.hy-new-person:before {
+  content: "";
+}
+
+.hy-notification:before {
+  content: "";
+}
+
+.hy-opinder-logo-new:before {
+  content: "";
+}
+
+.hy-pdf:before {
+  content: "";
+}
+
+.hy-people:before {
+  content: "";
+}
+
+.hy-person-outline:before {
+  content: "";
+}
+
+.hy-person:before {
+  content: "";
+}
+
+.hy-plus:before {
+  content: "";
+}
+
+.hy-profile:before {
+  content: "";
+}
+
+.hy-question:before {
+  content: "";
+}
+
+.hy-remove:before {
+  content: "";
+}
+
+.hy-rotate-left:before {
+  content: "";
+}
+
+.hy-rotate-right:before {
+  content: "";
+}
+
+.hy-search:before {
+  content: "";
+}
+
+.hy-time:before {
+  content: "";
+}
+
+.hy-todo-list:before {
+  content: "";
+}
+
+.hy-tour:before {
+  content: "";
+}
+
+.hy-twitter:before {
+  content: "";
+}
+
+.hy-units-and-faculties:before {
+  content: "";
+}
+
+.hy-video:before {
+  content: "";
+}
+
+.hy-warning:before {
+  content: "";
+}
+
+.hy-you-tube:before {
+  content: "";
+}
+
+.hy-id-number:before {
+  content: "";
+}
+
+.hy-mail:before {
+  content: "";
+}
+
+.hy-mobile:before {
+  content: "";
+}
+
+.hy-opinder-logo:before {
+  content: "";
+}
+
+.hy-permission-all:before {
+  content: "";
+}
+
+.hy-permission-group:before {
+  content: "";
+}
+
+.hy-permission-private:before {
+  content: "";
+}
+
+.hy-phone:before {
+  content: "";
+}
+
+.hy-preview:before {
+  content: "";
+}
+
+.hy-url:before {
+  content: "";
+}
+
+.hy-instagram:before {
+  content: "";
+}
+
+.hy-login:before {
+  content: "";
+}
+
+.hy-spinner:before {
+  content: "";
+}
+
+@font-face {
+  font-family: 'hy-icons';
+  src: url("../fonts/hy-icons.eot");
+  src: url("../fonts/hy-icons.eot?#iefix") format("eot"), url("../fonts/hy-icons.woff") format("woff"), url("../fonts/hy-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.hy {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hy-rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -transform: rotate(90deg);
+}
+
+.hy-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -transform: rotate(180deg);
+}
+
+.hy-rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -transform: rotate(270deg);
+}
+
+@-webkit-keyframes hy-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes hy-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.hy-spin {
+  -webkit-animation: hy-spin 2s infinite linear;
+  -moz-animation: hy-spin 2s infinite linear;
+  -ms-animation: hy-spin 2s infinite linear;
+  -animation: hy-spin 2s infinite linear;
+}
+
+.hy:before {
+  box-sizing: border-box;
+}
+
+.hy-2x {
+  font-size: 2em;
+}
+
+.hy-3x {
+  font-size: 3em;
+}
+
+.hy-4x {
+  font-size: 4em;
+}
+
+.hy-5x {
+  font-size: 5em;
+}
+
+.hy-add-to-todo-list:before {
+  content: "";
+}
+
+.hy-arrow-up:before {
+  content: "";
+}
+
+.hy-arrow:before {
+  content: "";
+}
+
+.hy-avatar-group:before {
+  content: "";
+}
+
+.hy-avatar:before {
+  content: "";
+}
+
+.hy-bachelor:before {
+  content: "";
+}
+
+.hy-camera:before {
+  content: "";
+}
+
+.hy-chat:before {
+  content: "";
+}
+
+.hy-date:before {
+  content: "";
+}
+
+.hy-discover:before {
+  content: "";
+}
+
+.hy-done:before {
+  content: "";
+}
+
+.hy-download:before {
+  content: "";
+}
+
+.hy-drag:before {
+  content: "";
+}
+
+.hy-drop-down:before {
+  content: "";
+}
+
+.hy-edit-event:before {
+  content: "";
+}
+
+.hy-edit:before {
+  content: "";
+}
+
+.hy-events:before {
+  content: "";
+}
+
+.hy-facebook:before {
+  content: "";
+}
+
+.hy-favorites:before {
+  content: "";
+}
+
+.hy-grid:before {
+  content: "";
+}
+
+.hy-hamburger:before {
+  content: "";
+}
+
+.hy-home:before {
+  content: "";
+}
+
+.hy-hy-logo:before {
+  content: "";
+}
+
+.hy-info-stroke:before {
+  content: "";
+}
+
+.hy-info:before {
+  content: "";
+}
+
+.hy-link-arrow-offsite:before {
+  content: "";
+}
+
+.hy-link-arrow:before {
+  content: "";
+}
+
+.hy-linkedin:before {
+  content: "";
+}
+
+.hy-list:before {
+  content: "";
+}
+
+.hy-location:before {
+  content: "";
+}
+
+.hy-log:before {
+  content: "";
+}
+
+.hy-logout:before {
+  content: "";
+}
+
+.hy-magnify-minus:before {
+  content: "";
+}
+
+.hy-magnify-plus:before {
+  content: "";
+}
+
+.hy-master:before {
+  content: "";
+}
+
+.hy-minus:before {
+  content: "";
+}
+
+.hy-modify:before {
+  content: "";
+}
+
+.hy-navi-triangle:before {
+  content: "";
+}
+
+.hy-new-group:before {
+  content: "";
+}
+
+.hy-new-person:before {
+  content: "";
+}
+
+.hy-notification:before {
+  content: "";
+}
+
+.hy-opinder-logo-new:before {
+  content: "";
+}
+
+.hy-pdf:before {
+  content: "";
+}
+
+.hy-people:before {
+  content: "";
+}
+
+.hy-person-outline:before {
+  content: "";
+}
+
+.hy-person:before {
+  content: "";
+}
+
+.hy-plus:before {
+  content: "";
+}
+
+.hy-profile:before {
+  content: "";
+}
+
+.hy-question:before {
+  content: "";
+}
+
+.hy-remove:before {
+  content: "";
+}
+
+.hy-rotate-left:before {
+  content: "";
+}
+
+.hy-rotate-right:before {
+  content: "";
+}
+
+.hy-search:before {
+  content: "";
+}
+
+.hy-time:before {
+  content: "";
+}
+
+.hy-todo-list:before {
+  content: "";
+}
+
+.hy-tour:before {
+  content: "";
+}
+
+.hy-twitter:before {
+  content: "";
+}
+
+.hy-units-and-faculties:before {
+  content: "";
+}
+
+.hy-video:before {
+  content: "";
+}
+
+.hy-warning:before {
+  content: "";
+}
+
+.hy-you-tube:before {
+  content: "";
+}
+
+.hy-id-number:before {
+  content: "";
+}
+
+.hy-mail:before {
+  content: "";
+}
+
+.hy-mobile:before {
+  content: "";
+}
+
+.hy-opinder-logo:before {
+  content: "";
+}
+
+.hy-permission-all:before {
+  content: "";
+}
+
+.hy-permission-group:before {
+  content: "";
+}
+
+.hy-permission-private:before {
+  content: "";
+}
+
+.hy-phone:before {
+  content: "";
+}
+
+.hy-preview:before {
+  content: "";
+}
+
+.hy-url:before {
+  content: "";
+}
+
+.hy-instagram:before {
+  content: "";
+}
+
+.hy-login:before {
+  content: "";
+}
+
+.hy-spinner:before {
+  content: "";
+}
+
+.icon--next:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+}
+
+.icon--prev:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon--video:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+  font-size: 22.75px;
+  font-size: 1.625rem;
+}
+@media (min-width: 48em) {
+  .icon--video:after {
+    font-size: 26px;
+  }
+}
+
+.icon--up:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+}
+
+.icon--down:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon--home:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "hy-icons";
+  content: "";
+}
+
 /*
   section: 3
   title: Common elements
@@ -2108,7 +2919,6 @@ a:hover
   transition-duration: 0.1s;
   transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   transition-property: "all";
   color: #FFF;
   display: block;
@@ -2174,7 +2984,6 @@ a:hover
   transition-duration: 0.1s;
   transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   left: initial;
   position: absolute;
   right: 10px;
@@ -2289,7 +3098,6 @@ a:hover
   transition-duration: 0.1s;
   transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   transition-property: "all";
   color: #FFF;
   display: block;
@@ -3139,7 +3947,6 @@ td.jobs-listing__date {
   .main-menu li {
     -webkit-align-items: center;
     -ms-flex-align: center;
-    -ms-grid-row-align: center;
     align-items: center;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
@@ -5717,61 +6524,6 @@ a.box-hero__link,
   .box-subtitle__ingress {
     font-size: 22px;
   }
-}
-
-.icon--next:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-}
-
-.icon--prev:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.icon--video:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-  font-size: 22.75px;
-  font-size: 1.625rem;
-}
-@media (min-width: 48em) {
-  .icon--video:after {
-    font-size: 26px;
-  }
-}
-
-.icon--up:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-}
-
-.icon--down:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.icon--home:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
 }
 
 .theme-transparent {
