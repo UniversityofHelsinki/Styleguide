@@ -1,0 +1,73 @@
+@font-face {
+    font-family: '<%= fontName %>';
+    src: url('<%= fontPath %><%= fontFileName %>.eot');
+    src: url('<%= fontPath %><%= fontFileName %>.eot?#iefix') format('eot'), url('<%= fontPath %><%= fontFileName %>.woff') format('woff'), url('<%= fontPath %><%= fontFileName %>.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.<%= className %> {
+    display: inline-block;
+    font-family: "<%= fontName %>";
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.<%= className %>-rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -transform: rotate(90deg);
+}
+
+.<%= className %>-rotate-180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -transform: rotate(180deg);
+}
+
+.<%= className %>-rotate-270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -transform: rotate(270deg);
+}
+
+@-webkit-keyframes hy-spin {
+    from   { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes hy-spin {
+    from   { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes hy-spin {
+    from   { -o-transform: rotate(0deg); }
+    to { -o-transform: rotate(360deg); }
+}
+@keyframes hy-spin {
+    from   { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.<%= className %>-spin {
+    -webkit-animation: hy-spin 2s infinite linear;
+    -moz-animation: hy-spin 2s infinite linear;
+    -ms-animation: hy-spin 2s infinite linear;
+    -animation: hy-spin 2s infinite linear;
+}
+
+.<%= className %>:before {
+   box-sizing: border-box;
+}
+
+.<%= className %>-2x { font-size: 2em; }
+.<%= className %>-3x { font-size: 3em; }
+.<%= className %>-4x { font-size: 4em; }
+.<%= className %>-5x { font-size: 5em; }
+
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
+<% }); %>
