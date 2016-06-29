@@ -1,8 +1,13 @@
 {
   "name": "uh-living-styleguide",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UniversityofHelsinki/Styleguide.git"
+  },
   "version": "0.0.0",
   "description": "Living styleguide for University of Helsinki",
   "author": "Benjamin Horn <benjamin.horn@idean.com>",
+  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.8.0",
     "gulp": "^3.9.0",

@@ -59,8 +59,7 @@ Submit changes with pull requests.
 
 1. `bundle install`
 2. `npm install`
-3. `bower install`
-4. `gulp serve` (to compile the css and launch server)
+3. `gulp serve` (to compile the css and launch server)
 
 ## Style guide documentation: ##
 
