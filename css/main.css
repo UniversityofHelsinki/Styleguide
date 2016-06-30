@@ -1591,6 +1591,66 @@ video {
   content: "";
 }
 
+.hy-bullet-list:before {
+  content: "";
+}
+
+.hy-contentlink:before {
+  content: "";
+}
+
+.hy-customlink:before {
+  content: "";
+}
+
+.hy-dragbutton:before {
+  content: "";
+}
+
+.hy-embed:before {
+  content: "";
+}
+
+.hy-feed:before {
+  content: "";
+}
+
+.hy-file-text:before {
+  content: "";
+}
+
+.hy-helsinginyliopisto:before {
+  content: "";
+}
+
+.hy-horizontal-resize:before {
+  content: "";
+}
+
+.hy-image-gallery:before {
+  content: "";
+}
+
+.hy-images:before {
+  content: "";
+}
+
+.hy-leiki-list:before {
+  content: "";
+}
+
+.hy-listoflinks:before {
+  content: "";
+}
+
+.hy-play:before {
+  content: "";
+}
+
+.hy-wrench:before {
+  content: "";
+}
+
 @font-face {
   font-family: 'hy-icons';
   src: url("../fonts/hy-icons.eot");
@@ -1967,6 +2027,66 @@ video {
 
 .hy-spinner:before {
   content: "";
+}
+
+.hy-bullet-list:before {
+  content: "";
+}
+
+.hy-contentlink:before {
+  content: "";
+}
+
+.hy-customlink:before {
+  content: "";
+}
+
+.hy-dragbutton:before {
+  content: "";
+}
+
+.hy-embed:before {
+  content: "";
+}
+
+.hy-feed:before {
+  content: "";
+}
+
+.hy-file-text:before {
+  content: "";
+}
+
+.hy-helsinginyliopisto:before {
+  content: "";
+}
+
+.hy-horizontal-resize:before {
+  content: "";
+}
+
+.hy-image-gallery:before {
+  content: "";
+}
+
+.hy-images:before {
+  content: "";
+}
+
+.hy-leiki-list:before {
+  content: "";
+}
+
+.hy-listoflinks:before {
+  content: "";
+}
+
+.hy-play:before {
+  content: "";
+}
+
+.hy-wrench:before {
+  content: "";
 }
 
 .icon--next:after {
