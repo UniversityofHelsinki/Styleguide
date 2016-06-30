@@ -83,7 +83,7 @@
 /* Direction Nav */
 .carousel__direction-nav {
   a {
-    @include font-size(50px);
+    @include font-size(40px);
     @include font-weight-bold;
     @include text-shadow;
     @include transition-scale(1.15);
@@ -115,7 +115,9 @@
       left: 0;
 
       &:before {
-        @include icon("\f104");
+        @include icon("\EA03");
+        transform: rotate(180deg) translateY(-50%);
+        transform-origin: 50% 0;
       }
     }
 
@@ -123,37 +125,8 @@
       right: 0;
 
       &:before {
-        @include icon("\f105");
+        @include icon("\EA03");
       }
-    }
-  }
-}
-
-.carousel__trigger {
-  @include transition-scale(1.1);
-  left: initial;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-
-  @include breakpoint($small) {
-    left: 5px;
-    right: auto;
-  }
-
-  > a {
-    @include font-size(28px);
-    @include text-shadow-default;
-    color: $white;
-    // It was decided in the UX-hackathon 23.11.2015 that the colorbox is obsolete for now, so we hide it
-    display: none;
-
-    &:after {
-      @include icon("\f00e");
-    }
-
-    &:hover {
-      color: darken($white, 10%);
     }
   }
 }
@@ -171,17 +144,11 @@
   height: 350px;
   overflow: hidden;
   position: relative;
+}
 
-  article {
-    position: relative;
-    height: 100%;
-  }
-
-  .slides,
-  .slides > li,
-  .flexslider {
-    height: 100%;
-  }
+.carousel-unwrapped__slide,
+.carousel-unwrapped__slides {
+  height: 100%;
 }
 
 .carousel-unwrapped__content {
@@ -212,7 +179,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: url(../images/raster.svg);
+    background: url(images/raster.svg);
     -webkit-background-size: 4px 4px;
     background-size: 4px 4px;
     z-index: 1;
@@ -220,9 +187,9 @@
 }
 
 /* Direction Nav */
-.carousel-unwrapped .direction-nav {
+.carousel-unwrapped__direction-nav {
   a {
-    @include font-size(50px);
+    @include font-size(40px);
     @include font-weight-bold;
     @include transition-scale(1.15);
     @include transition-property('all');
@@ -249,21 +216,23 @@
       width: 5%;
     }
 
-    &.prev {
+    &.carousel-unwrapped__prev {
       @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
       left: 0;
 
       &:before {
-        @include icon("\f104");
+        @include icon("\EA03");
+        transform: rotate(180deg) translateY(-50%);
+        transform-origin: 50% 0;
       }
     }
 
-    &.next {
+    &.carousel-unwrapped__next {
       @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
       right: 0;
 
       &:before {
-        @include icon("\f105");
+        @include icon("\EA03");
       }
     }
   }
