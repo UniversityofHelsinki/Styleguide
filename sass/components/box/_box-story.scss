@@ -7,31 +7,89 @@
  section: 6.10.5.1
  title: Box story
  template: 6_10_5_1-box-story
- description: Displays content as a liftup in e.g. gridder-fields and news listings
+ description: Displays content as a liftup in e.g. gridder-fields and news listings. ".theme-plain" modifier is for pictureless stories.
 */
 %box-story,
 .box-story {
-	display: block;
-	height: 100%;
-	overflow: hidden;
+  @include transition-property(background-color);
+  @include transition-duration(0.1s);
+  display: block;
+  flex: 1 1 auto;
+  position: relative;
 
-  // Overrides
-  .box-story__link:after,
-  .box-story__link {
-    color: $darkgray;
+  &:active .box-story__title,
+  &:hover .box-story__title {
+    color: $darkblue;
   }
 
-  &:active,
-  &:hover {
-    .box-story__link:after,
+  &.theme-small {
+    .box-story__title {
+      @include font-size(21px);
+    }
+  }
+
+  &.theme-plain {
+    background-color: $blue--active;
+    padding: 3.5em 1.5em;
+
+    .box-story__date,
+    .box-story__tag,
+    .box-story__title,
+    .box-story__content,
+    .box-story__link > a,
+    .box-story__link > a:after {
+      color: $white;
+    }
+
+    .box-story__topical {
+      height: auto;
+    }
+
+    .box-story__label {
+      background: $white;
+      color: $blue--active;
+    }
+
     .box-story__link {
-      color: $darkblue;
+      bottom: 0.5em;
+      position: absolute;
+      right: 1.5em;
+    }
+
+    &:hover {
+      background-color: $darkblue;
+
+      .box-story__link > a {
+        color: $white;
+
+        &:after {
+          color: $white;
+        }
+      }
     }
   }
 }
 
+.box-story__label {
+  @include label;
+  left: 1px;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+
+  .theme-thin {
+    font-weight: 400;
+    margin-left: 0.3em;
+  }
+
+  &.theme-yliopisto-lehti {
+    background-color: $orange;
+  }
+}
+
 .box-story__image {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
 
   @include breakpoint($medium) {
     .gridder-box-width-3:not(.gridder-parent) &,
@@ -41,89 +99,84 @@
     }
   }
 
-	img {
+  img {
     @include border;
-		width: 100%;
-	}
-}
+    width: 100%;
+  }
 
-.box-story__video {
-	display: inline-block;
-	margin-bottom: 0.5em;
-	position: relative;
-	width: 100%;
+  .box-story__overlay {
+    background: $black;
+    bottom: 1em;
+    color: $white;
+    font-size: 0.8em;
+    padding: 0 3px;
+    position: absolute;
+    right: 1em;
+    text-align: right;
 
-	&:after {
-		content: '';
-		display: block;
-		padding-top: 56.25%; // Aspect ratio of 16:9
-	}
-
-	> * {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		top: 0;
-	}
-
-	img {
-		width: 100%;
-	}
-
-	iframe, object, embed, video {
-		width: 100%;
-		height: 100%;
-	}
+    &.theme-bold {
+      @include text-shadow-outline-small;
+      background: none;
+      font-size: 1.05em;
+      font-weight: bold;
+      letter-spacing: -1px;
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .box-story__topical {
-	@include border;
-	@include font-size(12px);
-	@include font-weight-medium;
-  background-color: $white;
-	margin-bottom: 1em;
-	overflow: hidden;
+  @include font-size(12px);
+  @include font-weight-medium;
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  @include breakpoint($small) {
+    height: 2.7em;
+  }
+
+  @include breakpoint($medium) {
+    height: auto;
+  }
 }
 
-.box-story__date {
-	color: $silver;
-	display: inline-block;
-	padding: 5px 1em;
-}
-
+.box-story__date,
 .box-story__tag {
-	@include tag-label;
-	border: none;
-	display: inline-block;
-	text-transform: uppercase;
+  @include text-tag;
+  @include tb-ball('after');
 }
 
 .box-story__title {
-	@include transition-property(color);
-	@include transition-duration(0.1s);
-	overflow: hidden;
-
-	.box-story:active &,
-	.box-story:hover & {
-		color: $darkblue;
-	}
+  @include display-flex;
+  @include transition-property(color);
+  @include transition-duration(0.1s);
+  align-items: center;
+  overflow: hidden;
 }
 
 .box-story__content {
-	@include font-family-bodytext;
-	color: $gray;
-	line-height: 1.5em;
-	margin-bottom: 0.4em;
-	overflow: hidden;
+  @include font-family-bodytext;
+  color: $gray;
+  line-height: 1.5em;
+  margin-bottom: 0.4em;
+  overflow: hidden;
 
-	a {
-		@include link-concealed;
-	}
+  &:not(.textarea) a {
+    @include link-concealed;
+  }
 }
 
 .box-story__link {
-	@include font-weight-medium;
+  @include font-weight-medium;
+  @include transition-duration(0.1s);
+  @include transition-property(color);
+  color: $darkgray;
+
+  .box-story:active &,
+  .box-story:hover & {
+    color: $darkblue;
+  }
 }
 
 .box-story__embed {
@@ -131,6 +184,55 @@
   padding-top: 1em;
 }
 
+.box-story__video {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 56.25%; // Aspect ratio for our gridder
+  }
+
+  > * {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  iframe, object, embed, video {
+    height: 100%;
+    overflow:hidden;
+    width: 100%;
+  }
+
+  &.theme-full {
+    &:after {
+      padding-top: 56.25%;
+    }
+  }
+}
+
+.box-story__creator {
+  color: $gray;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.box-story__info {
+  color: $lightgray;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
 
 /*
  section: 6.10.5.2
@@ -141,33 +243,32 @@
 %box-story--liftup,
 .box-story--liftup {
   @extend %box-story;
-}
+  clear: both;
+  overflow: visible;
 
-.box-story__image {
-  .box-story--liftup & {
+  .box-story__image {
+    float: right;
+    margin-left: 0.5em;
+    max-width: 100px;
+    text-align: center;
+
     @include breakpoint($small) {
-      float: left;
       margin-bottom: 0;
-      margin-right: 2em;
       max-width: 270px;
     }
-  }
-}
 
-.box-story__title {
-  .box-story--liftup & {
+    img {
+      vertical-align: middle;
+      width: auto;
+    }
+  }
+
+  .box-story__title {
     @include font-size(30px);
     height: auto;
   }
 
-  .box-story--liftup:active &,
-  .box-story--liftup:hover & {
-    color: $darkblue;
-  }
-}
-
-.box-story__content {
-  .box-story--liftup & {
+  .box-story__content {
     @include font-family-main;
     @include text-liftup;
     overflow: visible;
@@ -177,12 +278,16 @@
       overflow: hidden;
     }
   }
-}
 
-.box-story__link {
-  .box-story--liftup:active &,
-  .box-story--liftup:hover & {
-    color: $darkblue;
+  &:active,
+  &:hover {
+    .box-story__link {
+      color: $darkblue;
+    }
+
+    .box-story__title {
+      color: $darkblue;
+    }
   }
 }
 
@@ -208,9 +313,10 @@
 
 .box-story__title {
   .box-story--constrained & {
-    float: left;
+    display: inline-block;
     height: auto;
     margin-right: 2em;
+    padding-bottom: 0;
   }
 }
 
@@ -218,6 +324,7 @@
   .box-story--constrained & {
     display: inline-block;
     margin: 0;
+    height: auto;
   }
 }
 
@@ -228,6 +335,57 @@
       float: none;
       margin-left: 1em;
       text-align: left;
+    }
+
+    // Hide the content in narrow grids on tablet breakpoints.
+    .gridder-box-width-1 & {
+      @include breakpoint($small) {
+        display: none;
+      }
+
+      @include breakpoint($medium) {
+        display: block;
+      }
+    }
+  }
+}
+
+/*
+ section: 6.10.5.4
+ title: Box story related
+ template: 6_10_5_4-box-story--related
+ description: ...
+*/
+.box-story--related {
+  margin-bottom: $vert-spacing-unit;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 369px;
+
+  @include breakpoint($small) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .box-story__image {
+    margin-bottom: 0;
+
+    img {
+      border: none;
+    }
+  }
+
+  .box-story__content-wrapper {
+    background-color: $darkwhite;
+    padding: 1.5em;
+  }
+
+  .box-story__content {
+    @include font-family-main;
+    @include font-size(14px);
+
+    p {
+      @include font-size(14px);
     }
   }
 }

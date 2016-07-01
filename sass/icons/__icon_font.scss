@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'hy-icons';
+    src: url('../fonts/hy-icons.eot');
+    src: url('../fonts/hy-icons.eot?#iefix') format('eot'), url('../fonts/hy-icons.woff') format('woff'), url('../fonts/hy-icons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hy {
+    display: inline-block;
+    font-family: "hy-icons";
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hy-rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -transform: rotate(90deg);
+}
+
+.hy-rotate-180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -transform: rotate(180deg);
+}
+
+.hy-rotate-270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -transform: rotate(270deg);
+}
+
+@-webkit-keyframes hy-spin {
+    from   { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes hy-spin {
+    from   { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes hy-spin {
+    from   { -o-transform: rotate(0deg); }
+    to { -o-transform: rotate(360deg); }
+}
+@keyframes hy-spin {
+    from   { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.hy-spin {
+    -webkit-animation: hy-spin 2s infinite linear;
+    -moz-animation: hy-spin 2s infinite linear;
+    -ms-animation: hy-spin 2s infinite linear;
+    -animation: hy-spin 2s infinite linear;
+}
+
+.hy:before {
+   box-sizing: border-box;
+}
+
+.hy-2x { font-size: 2em; }
+.hy-3x { font-size: 3em; }
+.hy-4x { font-size: 4em; }
+.hy-5x { font-size: 5em; }
+
+.hy-add-to-todo-list:before { content: "\EA01" }
+.hy-arrow-up:before { content: "\EA02" }
+.hy-arrow:before { content: "\EA03" }
+.hy-avatar-group:before { content: "\EA04" }
+.hy-avatar:before { content: "\EA05" }
+.hy-bachelor:before { content: "\EA06" }
+.hy-camera:before { content: "\EA07" }
+.hy-chat:before { content: "\EA08" }
+.hy-date:before { content: "\EA09" }
+.hy-discover:before { content: "\EA0A" }
+.hy-done:before { content: "\EA0B" }
+.hy-download:before { content: "\EA0C" }
+.hy-drag:before { content: "\EA0D" }
+.hy-drop-down:before { content: "\EA0E" }
+.hy-edit-event:before { content: "\EA0F" }
+.hy-edit:before { content: "\EA10" }
+.hy-events:before { content: "\EA11" }
+.hy-facebook:before { content: "\EA12" }
+.hy-favorites:before { content: "\EA13" }
+.hy-grid:before { content: "\EA14" }
+.hy-hamburger:before { content: "\EA15" }
+.hy-home:before { content: "\EA16" }
+.hy-hy-logo:before { content: "\EA17" }
+.hy-info-stroke:before { content: "\EA18" }
+.hy-info:before { content: "\EA19" }
+.hy-link-arrow-offsite:before { content: "\EA1A" }
+.hy-link-arrow:before { content: "\EA1B" }
+.hy-linkedin:before { content: "\EA1C" }
+.hy-list:before { content: "\EA1D" }
+.hy-location:before { content: "\EA1E" }
+.hy-log:before { content: "\EA1F" }
+.hy-logout:before { content: "\EA20" }
+.hy-magnify-minus:before { content: "\EA21" }
+.hy-magnify-plus:before { content: "\EA22" }
+.hy-master:before { content: "\EA23" }
+.hy-minus:before { content: "\EA24" }
+.hy-modify:before { content: "\EA25" }
+.hy-navi-triangle:before { content: "\EA26" }
+.hy-new-group:before { content: "\EA27" }
+.hy-new-person:before { content: "\EA28" }
+.hy-notification:before { content: "\EA29" }
+.hy-opinder-logo-new:before { content: "\EA2A" }
+.hy-pdf:before { content: "\EA2B" }
+.hy-people:before { content: "\EA2C" }
+.hy-person-outline:before { content: "\EA2D" }
+.hy-person:before { content: "\EA2E" }
+.hy-plus:before { content: "\EA2F" }
+.hy-profile:before { content: "\EA30" }
+.hy-question:before { content: "\EA31" }
+.hy-remove:before { content: "\EA32" }
+.hy-rotate-left:before { content: "\EA33" }
+.hy-rotate-right:before { content: "\EA34" }
+.hy-search:before { content: "\EA35" }
+.hy-time:before { content: "\EA36" }
+.hy-todo-list:before { content: "\EA37" }
+.hy-tour:before { content: "\EA38" }
+.hy-twitter:before { content: "\EA39" }
+.hy-units-and-faculties:before { content: "\EA3A" }
+.hy-video:before { content: "\EA3B" }
+.hy-warning:before { content: "\EA3C" }
+.hy-you-tube:before { content: "\EA3D" }
+.hy-id-number:before { content: "\EA3E" }
+.hy-mail:before { content: "\EA3F" }
+.hy-mobile:before { content: "\EA40" }
+.hy-opinder-logo:before { content: "\EA41" }
+.hy-permission-all:before { content: "\EA42" }
+.hy-permission-group:before { content: "\EA43" }
+.hy-permission-private:before { content: "\EA44" }
+.hy-phone:before { content: "\EA45" }
+.hy-preview:before { content: "\EA46" }
+.hy-url:before { content: "\EA47" }
+.hy-instagram:before { content: "\EA48" }
+.hy-login:before { content: "\EA49" }
+.hy-spinner:before { content: "\EA4A" }
+.hy-bullet-list:before { content: "\EA4C" }
+.hy-contentlink:before { content: "\EA4D" }
+.hy-customlink:before { content: "\EA4E" }
+.hy-dragbutton:before { content: "\EA4F" }
+.hy-embed:before { content: "\EA51" }
+.hy-feed:before { content: "\EA52" }
+.hy-file-text:before { content: "\EA53" }
+.hy-helsinginyliopisto:before { content: "\EA54" }
+.hy-horizontal-resize:before { content: "\EA55" }
+.hy-image-gallery:before { content: "\EA56" }
+.hy-images:before { content: "\EA57" }
+.hy-leiki-list:before { content: "\EA58" }
+.hy-listoflinks:before { content: "\EA59" }
+.hy-play:before { content: "\EA5A" }
+.hy-wrench:before { content: "\EA5B" }

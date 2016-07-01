@@ -7,20 +7,23 @@
 
 %box-subsection,
 .box-subsection {
-	display: block;
-	margin-bottom: 1em;
+  @include border;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 .box-subsection__title {
-	@include text-label;
+  @include text-label;
 }
 
 .box-subsection__content {
-	@include text-informative;
-	@include border;
-	@include shadow-under;
-	padding: 1em;
-	margin: 1em 0 0;
+  @include text-informative;
+  margin: 1em 0 0;
+
+  &.theme-plain {
+    @include font-size(16px);
+  }
 }
 
 .box-subsection__row {
@@ -29,5 +32,12 @@
 
   a {
     @include font-weight-medium;
+
+    &.is-tel {
+      @include breakpoint($small) {
+        @include font-weight-book;
+        color: $lightgray;
+      }
+    }
   }
 }

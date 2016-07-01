@@ -1,0 +1,38 @@
+/*
+ section: 6.10.9
+ title: Box logo
+ template: 6_10_9-box-logo
+ description: box-logo is a part of picture and link combination lists (for example, collaboration links in groups)
+*/
+%box-logo,
+.box-logo {
+  background-color: $lightsilver;
+  display: table;
+  height: 180px;
+  margin: 10px;
+  width: 180px;
+
+  &.theme-transparent {
+    background-color: transparent;
+    padding: 0;
+
+    > a {
+      padding: 0;
+    }
+  }
+
+  > a {
+    @extend h4;
+    @include font-family-main;
+    @include font-size(18px);
+    display: table-cell;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .ie & img {
+    width: 180px;
+  }
+}

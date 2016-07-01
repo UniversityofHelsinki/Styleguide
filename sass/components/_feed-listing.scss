@@ -10,10 +10,6 @@
   position: relative;
 }
 
-.feed-listing__item {
-  margin-bottom: $vert-spacing-unit;
-}
-
 .feed-listing__title {
   @include font-size(15px);
   @include font-weight-medium;

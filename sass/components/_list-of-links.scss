@@ -4,19 +4,14 @@
  description:
 */
 
-ul.list-of-links {
-  > li {
-    margin-bottom: 2px;
-
-    > a {
-      @include font-weight-medium; //TODO: Is this necessary?
-    }
-  }
+%list-of-links,
+.list-of-links {
+  display: block;
+  margin-bottom: $vert-spacing-unit;
 }
 
 .list-of-links__title {
-  @include label-rule(bottom);
-  @include text-label;
+  margin-bottom: 0.5em;
 }
 
 .list-of-links__subtitle {
@@ -26,6 +21,53 @@ ul.list-of-links {
   margin-bottom: 1em;
   text-transform: uppercase;
 }
+
+.list-of-links__link {
+  margin-bottom: 2px;
+
+  // Theme info footer
+  .theme-footer &,
+  .theme-info-footer & {
+    @include border-side(bottom);
+    border-bottom-color: lighten($gray, 40%);
+    color: lighten($darkgray, 10%);
+
+    &:after {
+      color: $gray;
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+
+    &:hover {
+      color: $black;
+
+      &:after {
+        color: $black;
+      }
+    }
+  }
+
+  // Theme footer
+  .theme-footer & {
+    border-bottom-color: darken($black, 20%);
+    color: $white;
+    display: block;
+
+    &:after {
+      color: $white;
+    }
+
+    &:hover {
+      color: darken($white, 20%);
+
+      &:after {
+        color: darken($white, 20%);
+      }
+    }
+  }
+}
+
 
 /*
  section: 6.2.1
@@ -40,3 +82,22 @@ ul.list-of-links {
  template: 6_2_2_list-of-links-transparent
  description:
 */
+
+/*
+ section: 6.2.3
+ title: List of links condensed
+ template: 6_2_2_list-of-links-condensed
+ description:
+*/
+
+.list-of-links--condensed {
+  @extend %list-of-links;
+  margin-bottom: 1em;
+
+  .list-of-links__link {
+    @include font-weight-book;
+    @include font-size(14px);
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+}
