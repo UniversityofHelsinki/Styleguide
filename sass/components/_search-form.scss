@@ -32,8 +32,8 @@
 .search-form__input {
   @include border-radius(0);
   border: 2px solid $blue;
-  line-height: 34px;
   height: 40px;
+  line-height: 34px;
   padding-left: 1em;
   padding-right: 3em;
   width: 100%;
@@ -102,7 +102,7 @@ input.search-form__submit {
   width: 34px;
 
   .search-form--dark__input:focus + & {
-    color : $blue;
+    color: $blue;
 
     &:hover {
       color: $white;

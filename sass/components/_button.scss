@@ -68,9 +68,9 @@
     @include icon($hy-arrow);
     @include transform(translateY(-50%) rotate(270deg));
     @include transition-duration(0.1s);
-    top: 50%;
     left: 1em;
     position: absolute;
+    top: 50%;
   }
 
   &.is-active {

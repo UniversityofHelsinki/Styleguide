@@ -23,12 +23,12 @@
 
 .carousel__content {
   @include font-size(12px);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   bottom: 0;
   left: 0;
-  right: 0;
   padding: 10px 7px 10px 15px;
   position: absolute;
+  right: 0;
 
   @include breakpoint($small) {
     @include font-size(14px);
@@ -52,10 +52,10 @@
 /* Control Nav */
 .carousel__control-nav {
   bottom: 0;
-  position: absolute;
-  right: 0;
   height: $vert-spacing-unit;
   line-height: $vert-spacing-unit;
+  position: absolute;
+  right: 0;
   width: 100%;
 
   @include breakpoint($small) {
@@ -131,7 +131,6 @@
   }
 }
 
-
 /*
  section: 7.1.2
  title: Carousel unwrapped
@@ -172,16 +171,16 @@
   }
 
   &.theme-raster:after {
+    background: url(images/raster.svg);
+    background-size: 4px 4px;
+    -webkit-background-size: 4px 4px;
+    bottom: 0;
     content: '';
     display: block;
-    position: absolute;
     left: 0;
-    top: 0;
+    position: absolute;
     right: 0;
-    bottom: 0;
-    background: url(images/raster.svg);
-    -webkit-background-size: 4px 4px;
-    background-size: 4px 4px;
+    top: 0;
     z-index: 1;
   }
 }
@@ -217,7 +216,7 @@
     }
 
     &.carousel-unwrapped__prev {
-      @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
+      @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%));
       left: 0;
 
       &:before {
@@ -228,7 +227,7 @@
     }
 
     &.carousel-unwrapped__next {
-      @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0,0,0,0) 100%));
+      @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%));
       right: 0;
 
       &:before {
@@ -239,13 +238,13 @@
 }
 
 .carousel-unwrapped__image {
-  @include transform(translate3d(0,0,0));
+  @include transform(translate3d(0, 0, 0));
   left: 70%;
   max-height: 350px;
   min-width: $bp-small;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
 
   @include breakpoint($small) {
     left: 50%;
@@ -275,7 +274,6 @@
     }
   }
 }
-
 
 .carousel-unwrapped--horizontal {
   @extend .carousel-unwrapped;
@@ -365,8 +363,8 @@
     max-height: 90px;
 
     @include breakpoint($small) {
-      opacity: 0.9;
       min-width: 1750px;
+      opacity: 0.9;
     }
 
     img {

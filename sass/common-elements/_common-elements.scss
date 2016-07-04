@@ -34,9 +34,9 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 
   a {
-    //TODO: Color inherit
-    text-decoration: none;
+    // TODO: Color inherit
     color: $darkgray;
+    text-decoration: none;
 
     &:hover {
       color: $darkgray;
@@ -47,8 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   @include font-size(36px);
-  line-height: 1.15em;
   letter-spacing: -2px;
+  line-height: 1.15em;
 
   @include breakpoint($small) {
     @include font-size(50px);
@@ -134,8 +134,8 @@ blockquote {
 blockquote p {
   @include font-size(22px);
   @include font-weight-book;
-  display: inline;
   color: $silver;
+  display: inline;
   line-height: 1.1em;
 }
 
@@ -196,7 +196,7 @@ td {
 }
 
 dl, ol, ul {
-  margin: 0;
   list-style: none;
+  margin: 0;
   padding: 0;
 }

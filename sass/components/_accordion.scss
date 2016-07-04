@@ -4,7 +4,6 @@
  description:
 */
 
-
 /*
  section: 6.3.1
  title: Accordion
@@ -39,16 +38,15 @@
 
 .accordion--dark {
   .accordion__title {
-    padding: 0;
     height: auto;
     line-height: 100%;
+    padding: 0;
 
     &.ui-state-active {
       background-color: $blue--active;
     }
   }
 }
-
 
 /*
  section: 6.3.2

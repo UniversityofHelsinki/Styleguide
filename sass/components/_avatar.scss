@@ -12,21 +12,21 @@
 */
 
 .avatar-image {
-  color : white;
-  display: inline-block;
   background: url("../assets/svg/avatar.svg") no-repeat center center;
   background-size: 65% 65%;
-  width: 60px;
+  color: white;
+  display: inline-block;
   height: 60px;
+  width: 60px;
 
   &.is-small {
-    width: 40px;
     height: 40px;
+    width: 40px;
   }
 
   &.is-large {
-    width: 90px;
     height: 90px;
+    width: 90px;
   }
 
   &.is-student {

@@ -7,8 +7,8 @@
 
 .box-application {
   display: block;
-  position: relative;
   margin-bottom: 2.5em;
+  position: relative;
 }
 
 .box-application__title {
@@ -39,9 +39,9 @@
 
 .box-application__td {
   @include font-family-main;
-  display: table-cell;
   border: 2px dotted $lightsilver;
   color: $gray;
+  display: table-cell;
   padding: 0.7em 0.9em;
   vertical-align: top;
   width: 50%;
@@ -51,8 +51,8 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: none;
       color: $blue--active;
+      text-decoration: none;
     }
   }
 

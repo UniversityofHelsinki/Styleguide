@@ -1,23 +1,23 @@
 // AngularJS specific mixins.
 
 @mixin ng-show-fade() {
-	&.ng-hide-remove.ng-hide-remove-active {
-		transition: all linear 0.4s;
-	}
+  &.ng-hide-remove.ng-hide-remove-active {
+    transition: all linear 0.4s;
+  }
 
-	&.ng-hide-add {
-		opacity: 1;
-	}
+  &.ng-hide-add {
+    opacity: 1;
+  }
 
-	&.ng-hide-add-active {
-		opacity: 0;
-	}
+  &.ng-hide-add-active {
+    opacity: 0;
+  }
 
-	&.ng-hide-remove {
-		opacity: 0;
-	}
+  &.ng-hide-remove {
+    opacity: 0;
+  }
 
-	&.ng-hide-remove-active {
-		opacity: 1;
-	}
+  &.ng-hide-remove-active {
+    opacity: 1;
+  }
 }

@@ -68,7 +68,6 @@
   }
 }
 
-
 /*
  section: 6.2.1
  title: List of links
@@ -97,7 +96,7 @@
   .list-of-links__link {
     @include font-weight-book;
     @include font-size(14px);
-    padding-top: 0.8em;
     padding-bottom: 0.8em;
+    padding-top: 0.8em;
   }
 }

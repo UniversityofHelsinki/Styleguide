@@ -2,41 +2,48 @@
 // Lists
 // --------------------------------------------------
 
-
 // Inline link list
 // Turns elements inside the list into inline-blocks and displays them 
 // horizontally, separated by defined padding / 2.
-$padding-base-horizontal:         12px !default;
-$padding-large-horizontal:        24px !default;
-$padding-small-horizontal:        6px !default;
+$padding-base-horizontal: 12px !default;
+$padding-large-horizontal: 24px !default;
+$padding-small-horizontal: 6px !default;
 
 // Helper size variant mixin.
 @mixin inline-list-size-variant($padding-horizontal: 6px) {
-	$margin: ceil(abs($padding-horizontal) / 2);
+  $margin: ceil(abs($padding-horizontal) / 2);
 
-	> * {
-		margin-left: $margin;
-		margin-right: $margin;
+  > * {
+    margin-left: $margin;
+    margin-right: $margin;
 
-		&:first-child { margin-left: 0; }
-		&:last-child { margin-right: 0; }
-	}
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 // Defaults.
 .inline-list {
-	@include inline-list-size-variant($padding-base-horizontal);
+  @include inline-list-size-variant($padding-base-horizontal);
 
-	> * {
-		display: inline-block;
-		vertical-align: middle;
-	}
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 // Size modifiers.
-.inline-list--large   { @include inline-list-size-variant($padding-large-horizontal); }
-.inline-list--small   { @include inline-list-size-variant($padding-small-horizontal); }
+.inline-list--large {
+  @include inline-list-size-variant($padding-large-horizontal);
+}
 
+.inline-list--small {
+  @include inline-list-size-variant($padding-small-horizontal);
+}
 
 // Table list
 // Turns elements inside the list into "table" cells.
@@ -44,69 +51,73 @@ $padding-small-horizontal:        6px !default;
 // Helper size variant mixin.
 // Helper size variant mixin.
 @mixin table-list-size-variant($padding-horizontal: 6px) {
-	$padding: ceil(abs($padding-horizontal) / 2);
+  $padding: ceil(abs($padding-horizontal) / 2);
 
-	> * {
-		padding-left: $padding;
-		padding-right: $padding;
+  > * {
+    padding-left: $padding;
+    padding-right: $padding;
 
-		&:first-child { padding-left: 0; }
-		&:last-child { padding-right: 0; }
-	}
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .table-list {
-	@include table-list-size-variant($padding-base-horizontal);
-	display: table;
-	width: 100%;
+  @include table-list-size-variant($padding-base-horizontal);
+  display: table;
+  width: 100%;
 
-	> * {
-		display: table-cell;
-		vertical-align: middle;
-	}
+  > * {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 // Size modifiers.
-.table-list--large { @include table-list-size-variant($padding-large-horizontal); }
-.table-list--small { @include table-list-size-variant($padding-small-horizontal); }
+.table-list--large {
+  @include table-list-size-variant($padding-large-horizontal);
+}
 
-
+.table-list--small {
+  @include table-list-size-variant($padding-small-horizontal);
+}
 
 // Tag list
 .tag-list {
-	@extend .inline-list;
-	@extend .inline-list--small;
+  @extend .inline-list;
+  @extend .inline-list--small;
 
-	> * {
-		margin-bottom: $padding-small-horizontal;
-	}
+  > * {
+    margin-bottom: $padding-small-horizontal;
+  }
 }
-
-
 
 // Item list
 .item-list {
-	list-style: none outside none;
-	margin: 0;
-	padding: 0;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
 }
 
-.item-list > li {}
-
-
+.item-list > li {
+}
 
 // Bar list. Extends "item-list"
 // Adds borders and padding between list items.
 .item-list--bar {
-	> li {
-		border-color: $silver;
-		border-style: solid;
-		border-width: 0 0 1px 0;
-		padding-bottom: .5em;
-		padding-top: .5em;
+  > li {
+    border-color: $silver;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    padding-bottom: .5em;
+    padding-top: .5em;
 
-		&:last-child {
-			border-bottom-width: 0;
-		}
-	}
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
 }

@@ -1,31 +1,31 @@
 // Label rule
 @mixin label-rule($direction) {
-	@include border-side($direction);
-	margin-bottom: 0.5em;
-	padding-bottom: 0.5em;
+  @include border-side($direction);
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 // Horizontal rule
 @mixin horizontal-rule($direction) {
-	@include border-side($direction);
-	margin-#{$direction}: $vert-spacing-unit;
-	padding-#{$direction}: $vert-spacing-unit;
+  @include border-side($direction);
+  margin-#{$direction}: $vert-spacing-unit;
+  padding-#{$direction}: $vert-spacing-unit;
 }
 
 // Regional rule bottom
 @mixin regional-rule-bottom($border-color) {
-	border-bottom: 1px solid $border-color;
-	background: transparent url('../images/bg_shadow.png') no-repeat top center;
-	background-size: 100% auto;
+  background: transparent url('../images/bg_shadow.png') no-repeat top center;
+  background-size: 100% auto;
+  border-bottom: 1px solid $border-color;
 }
 
 // Regional rule top
 @mixin regional-rule-top($border-color) {
-	border-top: 1px solid $border-color;
-	background: transparent url('../images/bg_shadow.png') no-repeat top center;
-	background-size: 100% auto;
-	margin-top: $vert-spacing-unit;
-	padding-top: $vert-spacing-unit;
+  background: transparent url('../images/bg_shadow.png') no-repeat top center;
+  background-size: 100% auto;
+  border-top: 1px solid $border-color;
+  margin-top: $vert-spacing-unit;
+  padding-top: $vert-spacing-unit;
 }
 
 // Line break with rule on top

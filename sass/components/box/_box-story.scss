@@ -13,8 +13,8 @@
 .box-story {
   @include transition-property(background-color);
   @include transition-duration(0.1s);
-  display: block;
   flex: 1 1 auto;
+  display: block;
   position: relative;
 
   &:active .box-story__title,
@@ -197,9 +197,9 @@
   }
 
   > * {
-    position: absolute;
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
     top: 0;
   }
@@ -210,7 +210,7 @@
 
   iframe, object, embed, video {
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
     width: 100%;
   }
 
@@ -271,8 +271,8 @@
   .box-story__content {
     @include font-family-main;
     @include text-liftup;
-    overflow: visible;
     color: $lightgray;
+    overflow: visible;
 
     @include breakpoint($medium) {
       overflow: hidden;
@@ -323,8 +323,8 @@
 .box-story__topical {
   .box-story--constrained & {
     display: inline-block;
-    margin: 0;
     height: auto;
+    margin: 0;
   }
 }
 

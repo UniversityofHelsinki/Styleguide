@@ -41,8 +41,8 @@ $grid-gutter: $vert-spacing-unit/2;
 
       @include breakpoint($medium) {
         > * {
-          border-right: 1px solid $lightsilver;
           border-bottom: none;
+          border-right: 1px solid $lightsilver;
           padding-right: 15px;
         }
 
@@ -68,8 +68,8 @@ $grid-gutter: $vert-spacing-unit/2;
 
 .gridder-box {
   @include display-flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-direction: column;
   margin-bottom: $vert-spacing-unit;
   margin-left: auto;
   margin-right: auto;
@@ -86,7 +86,6 @@ $grid-gutter: $vert-spacing-unit/2;
     margin-bottom: 0;
   }
 }
-
 
 // Different widths
 @for $grid-columns from 1 through 4 {
