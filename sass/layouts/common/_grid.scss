@@ -9,7 +9,7 @@
 /**
  * Gridder container and box classes
  */
-$grid-gutter: $vert-spacing-unit/2;
+$grid-gutter: $vert-spacing-unit / 2;
 
 .gridder-container-4 {
   &.theme-alt {
@@ -109,7 +109,7 @@ $grid-gutter: $vert-spacing-unit/2;
 
         @for $i from 1 through 4 {
           &.gridder-box-width-#{$i} {
-            width: ($gridder-box-width) * $i;
+            width: $gridder-box-width * $i;
           }
         }
       }
@@ -119,7 +119,7 @@ $grid-gutter: $vert-spacing-unit/2;
       @include breakpoint($small) {
         @for $i from 1 through 4 {
           &.gridder-box-width-#{$i} {
-            width: ($gridder-box-width) * $i;
+            width: $gridder-box-width * $i;
           }
         }
       }

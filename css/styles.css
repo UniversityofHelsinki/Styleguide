@@ -1577,10 +1577,6 @@ video {
   content: "";
 }
 
-.hy-you-tube:before {
-  content: "";
-}
-
 .hy-id-number:before {
   content: "";
 }
@@ -1691,6 +1687,10 @@ video {
 
 .hy-wrench:before {
   content: "";
+}
+
+.hy-youtube:before {
+  content: "";
 }
 
 @font-face {
@@ -2015,10 +2015,6 @@ video {
   content: "";
 }
 
-.hy-you-tube:before {
-  content: "";
-}
-
 .hy-id-number:before {
   content: "";
 }
@@ -2129,6 +2125,10 @@ video {
 
 .hy-wrench:before {
   content: "";
+}
+
+.hy-youtube:before {
+  content: "";
 }
 
 .icon--next:after {

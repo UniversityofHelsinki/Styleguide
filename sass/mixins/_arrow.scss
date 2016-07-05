@@ -1,4 +1,4 @@
-@mixin arrow($direction: 'left', $ball: false) {
+@mixin arrow($direction: "left", $ball: false) {
   &:after {
     @include border-side(left);
     @include border-side(bottom);
@@ -36,30 +36,30 @@
   color: $blue;
 }
 
-@mixin alternative-arrow($color: $white, $size:10px, $direction:'down') {
+@mixin alternative-arrow($color: $white, $size: 10px, $direction: "down") {
   width: 0;
   height: 0;
   content: '';
 
-  @if $direction == 'up' {
+  @if $direction == "up" {
     border-right: $size solid transparent;
     border-left: $size solid transparent;
     border-bottom: $size solid $color;
   }
 
-  @if $direction == 'down' {
+  @if $direction == "down" {
     border-right: $size solid transparent;
     border-left: $size solid transparent;
     border-top: $size solid $color;
   }
 
-  @if $direction == 'right' {
+  @if $direction == "right" {
     border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-left: $size solid $color;
   }
 
-  @if $direction == 'left' {
+  @if $direction == "left" {
     border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-right: $size solid $color;

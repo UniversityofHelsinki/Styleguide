@@ -71,7 +71,7 @@
     border-right: $size solid transparent;
     content: "";
     height: 0;
-    left: -$size/2;
+    left: -$size / 2;
     position: absolute;
     top: -$size;
     width: 0;
@@ -82,7 +82,7 @@
     border-right: $size solid transparent;
     content: "";
     height: 0;
-    left: -$size/2;
+    left: -$size / 2;
     position: absolute;
     top: -$size + 1;
     width: 0;
@@ -90,7 +90,7 @@
 }
 
 // Todo: Find better place for this.
-@mixin center-vertical() {
+@mixin center-vertical {
   top: 50%;
   transform: translate(0, -50%);
 }
@@ -98,7 +98,7 @@
 // Todo: Find better place for this.
 @mixin all-link-states {
   &:link, &:hover, &:active, &:visited {
-    @content
+    @content;
   }
 }
 

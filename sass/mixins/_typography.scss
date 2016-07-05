@@ -18,7 +18,7 @@
 }
 
 // Icons
-@mixin icon($unicode : '') {
+@mixin icon($unicode: "") {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "hy-icons";

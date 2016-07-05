@@ -5,26 +5,26 @@
 */
 
 $messages: (
-  'status': (
-    'color': $black,
-    'color-alt': #81b43b,
-    'bg-color': #b2e576,
-    'bg-color-alt': #f2f7eb,
-    'icon': $hy-done,
+  "status": (
+    "color": $black,
+    "color-alt": #81b43b,
+    "bg-color": #b2e576,
+    "bg-color-alt": #f2f7eb,
+    "icon": $hy-done,
   ),
-  'info': (
-    'color': $white,
-    'color-alt': $black,
-    'bg-color': #52c6af,
-    'bg-color-alt': #f8f8f8,
-    'icon': $hy-info,
+  "info": (
+    "color": $white,
+    "color-alt": $black,
+    "bg-color": #52c6af,
+    "bg-color-alt": #f8f8f8,
+    "icon": $hy-info,
   ),
-  'error': (
-    'color': $white,
-    'color-alt': #964822,
-    'bg-color': #964822,
-    'bg-color-alt': #f4ece8,
-    'icon': $hy-warning,
+  "error": (
+    "color": $white,
+    "color-alt": #964822,
+    "bg-color": #964822,
+    "bg-color-alt": #f4ece8,
+    "icon": $hy-warning,
   )
 );
 

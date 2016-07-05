@@ -14,14 +14,14 @@
 
 // Regional rule bottom
 @mixin regional-rule-bottom($border-color) {
-  background: transparent url('../images/bg_shadow.png') no-repeat top center;
+  background: transparent url("../images/bg_shadow.png") no-repeat top center;
   background-size: 100% auto;
   border-bottom: 1px solid $border-color;
 }
 
 // Regional rule top
 @mixin regional-rule-top($border-color) {
-  background: transparent url('../images/bg_shadow.png') no-repeat top center;
+  background: transparent url("../images/bg_shadow.png") no-repeat top center;
   background-size: 100% auto;
   border-top: 1px solid $border-color;
   margin-top: $vert-spacing-unit;
@@ -34,7 +34,7 @@
 }
 
 // Inline element with ball before/after
-@mixin tb-ball($position: 'before') {
+@mixin tb-ball($position: "before") {
   display: inline-block;
   position: relative;
 
@@ -44,15 +44,15 @@
     }
   }
 
-  @if $position == 'before' {
+  @if $position == "before" {
     padding-left: 1.5em;
 
     &:before {
       content: " ";
       left: 0;
     }
-
-  } @else if $position == 'after' {
+  }
+  @else if $position == "after" {
     margin-right: 0.5em;
     padding-right: 1.5em;
 

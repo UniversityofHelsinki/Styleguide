@@ -11,5 +11,5 @@
 }
 
 @mixin bubble-shadow {
-  @include box-shadow(-1px 1px 10px rgba(17, 17, 17, 0.2));
+  @include box-shadow((-1px) 1px 10px rgba(17, 17, 17, 0.2));
 }

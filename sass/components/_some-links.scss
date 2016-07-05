@@ -15,7 +15,7 @@
 }
 
 .some-links__link {
-  @include font-family-main();
+  @include font-family-main;
   @include font-size(13px);
   @include font-weight-medium;
   display: block;

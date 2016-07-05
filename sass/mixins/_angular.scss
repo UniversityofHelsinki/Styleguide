@@ -1,6 +1,6 @@
 // AngularJS specific mixins.
 
-@mixin ng-show-fade() {
+@mixin ng-show-fade {
   &.ng-hide-remove.ng-hide-remove-active {
     transition: all linear 0.4s;
   }

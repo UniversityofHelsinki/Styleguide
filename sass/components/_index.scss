@@ -134,6 +134,6 @@
 }
 
 .index-topical__field {
-  @include tb-ball('after');
+  @include tb-ball("after");
   @include font-family-bodytext;
 }
