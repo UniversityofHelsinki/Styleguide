@@ -19,6 +19,7 @@ ul.pager {
     }
 
     &.is-active {
+      @include button;
       background-color: $darkblue;
 
       > a {
@@ -43,7 +44,20 @@ ul.pager {
       }
 
       a {
+        @include button;
         display: block;
+      }
+    }
+
+    &.pager__previous {
+      a {
+        @include button-previous;
+      }
+    }
+
+    &.pager__next {
+      a {
+        @include button-next;
       }
     }
 

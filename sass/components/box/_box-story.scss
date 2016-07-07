@@ -13,6 +13,7 @@
 .box-story {
   @include transition-property(background-color);
   @include transition-duration(0.1s);
+  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
   display: block;
   position: relative;
@@ -168,6 +169,7 @@
 }
 
 .box-story__link {
+  @include button-next-transparent;
   @include font-weight-medium;
   @include transition-duration(0.1s);
   @include transition-property(color);

@@ -8,18 +8,18 @@
 .panel {
   @include clearfix;
   position: relative;
+
+  // Drupal workaround
+  > .more-link {
+    @extend %panel__more-link;
+  }
 }
 
-.panel__title {
-  margin-bottom: 0.4em;
-}
-
+%panel__more-link,
 .panel__more-link {
-  position: absolute;
-  right: 0;
-  top: 0;
-
   a {
+    @include button-next-transparent;
+    @include text-bold;
     border-bottom: 0 none;
   }
 }

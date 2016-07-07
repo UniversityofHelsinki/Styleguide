@@ -40,12 +40,12 @@
   // @include transform(translateY(100%));
   bottom: 0;
   color: $silver;
-  height: $vert-spacing-unit;
-  line-height: $vert-spacing-unit;
+  height: $vert-spacing-unit + 10px;
+  line-height: $vert-spacing-unit + 10px;
   margin-bottom: 0;
   margin-left: 0;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: auto;
 }
 
@@ -99,6 +99,10 @@
 
     &:active {
       color: $silver;
+    }
+
+    &:hover {
+      color: $white;
     }
 
     &:before {
@@ -203,6 +207,10 @@
 
     &:active {
       color: $silver;
+    }
+
+    &:hover {
+      color: $white;
     }
 
     &:before {

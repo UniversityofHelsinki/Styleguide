@@ -12,25 +12,7 @@
 */
 %button,
 .button {
-  @include transition-duration(0.1s);
-  @include transition-property(all);
-  @include font-size(15px);
-  background-color: $blue;
-  border: none;
-  color: $white;
-  cursor: pointer;
-  padding: 0.8em 1em;
-
-  &:hover {
-    background-color: $darkblue;
-    color: $white;
-  }
-
-  &:before,
-  &:after {
-    @include transition-duration(0.1s);
-    @include transition-property(all);
-  }
+  @include button;
 
   &.theme-transparent {
     background-color: transparent;
@@ -68,9 +50,9 @@
     @include icon($hy-arrow);
     @include transform(translateY(-50%) rotate(270deg));
     @include transition-duration(0.1s);
+    @include vertically-center;
     left: 1em;
     position: absolute;
-    top: 50%;
   }
 
   &.is-active {
@@ -123,6 +105,7 @@
   &:after {
     @include vertically-center;
     color: $white;
+    right: -2px;
     text-align: center;
   }
 
@@ -140,6 +123,7 @@
 
     &:after {
       margin-left: 15px;
+      line-height: 0;
       position: static;
       width: auto;
     }
@@ -240,7 +224,7 @@
   position: relative;
   vertical-align: middle;
 
-  > * {
+  > .button {
     display: inline-block;
     margin-bottom: 0.3em;
     position: relative;
@@ -255,8 +239,7 @@
 */
 .button-group--small {
   @extend %button-group;
-
-  > * {
+  > .button {
     @include font-size(15px);
     padding: 0.3em 0.7em;
   }

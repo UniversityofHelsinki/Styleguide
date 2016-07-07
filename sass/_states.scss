@@ -40,3 +40,35 @@
     }
   }
 }
+
+.is-overflown {
+  overflow: visible;
+}
+
+.is-overflow-expandable {
+  position: relative;
+}
+
+.is-hidden--mobile {
+  display: none;
+
+  @include breakpoint($small) {
+    display: block;
+  }
+}
+
+.is-tel {
+  @include breakpoint($small) {
+    color: $black;
+  }
+}
+
+.is-unpublished {
+  &:before {
+    background: $red;
+    content: "Unpublished";
+    color: $white;
+    padding: 1px 5px;
+    z-index: 1000;
+  }
+}

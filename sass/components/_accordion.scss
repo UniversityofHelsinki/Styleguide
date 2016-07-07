@@ -21,6 +21,7 @@
 }
 
 .accordion__title {
+  @extend %button--accordion;
   @include font-weight-medium;
   @include font-size(14px);
   text-transform: uppercase;
@@ -38,6 +39,7 @@
 
 .accordion--dark {
   .accordion__title {
+    @extend %button;
     height: auto;
     line-height: 100%;
     padding: 0;
