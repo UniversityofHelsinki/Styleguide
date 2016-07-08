@@ -47,7 +47,7 @@
   position: relative;
 
   &:before {
-    @include icon($hy-arrow);
+    @include icon($icon-link-arrow);
     @include transform(translateY(-50%) rotate(270deg));
     @include transition-duration(0.1s);
     @include vertically-center;

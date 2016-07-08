@@ -26,7 +26,17 @@
   @include button-next-transparent;
   @include font-weight-medium;
   margin-bottom: 2px;
+  padding-left: 10px;
 
+  &:hover {
+    &:after {
+      color: $white;
+    }
+  }
+
+  &:after {
+    height: auto;
+  }
   .theme-dark & {
     @include button-next;
   }
@@ -110,5 +120,6 @@
     @include font-size(14px);
     padding-bottom: 0.8em;
     padding-top: 0.8em;
+    padding-left: 10px;
   }
 }

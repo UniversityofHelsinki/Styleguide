@@ -1,41 +1,10 @@
 @import "__variables.scss";
 @import "__icon_font.scss";
 
-.icon--next {
-  &:after {
-    @include icon($hy-link-arrow);
-  }
-}
-
-.icon--prev {
-  &:after {
-    @include icon($hy-link-arrow);
-    transform: rotate(180deg);
-  }
-}
-
+// Tweak icon--video size.
 .icon--video {
   &:after {
-    @include icon($hy-video);
+    @include icon($icon-video);
     @include font-size(26px);
-  }
-}
-
-.icon--up {
-  &:after {
-    @include icon($hy-arrow-up);
-  }
-}
-
-.icon--down {
-  &:after {
-    @include icon($hy-arrow-up);
-    transform: rotate(180deg);
-  }
-}
-
-.icon--home {
-  &:after {
-    @include icon($hy-home);
   }
 }
