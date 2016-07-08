@@ -34,7 +34,7 @@
   position: relative;
 
   &:before {
-    @include icon("\f054");
+    @include icon($icon-arrow);
     @include transition-duration(0.1s);
     @include vertically-center;
     color: $blue;
@@ -74,7 +74,7 @@
   position: relative;
 
   &:after {
-    @include icon("\f061");
+    @include icon($icon-link-arrow);
     color: inherit;
     font-weight: 200;
     height: 100%;
@@ -138,7 +138,7 @@
   @include button-next-transparent;
 
   &:after {
-    @include icon("\f060");
+    @include icon($icon-link-arrow-left);
     left: 0;
     margin-left: 0;
     margin-right: 1em;
@@ -152,7 +152,7 @@
   padding-right: 1em;
 
   &:after {
-    @include icon("\f060");
+    @include icon($icon-link-arrow-left);
     left: 0;
     margin-left: 0;
     margin-right: 1em;
@@ -169,7 +169,7 @@
   position: relative;
 
   &:before {
-    @include icon("\f063");
+    @include icon($icon-link-arrow-offsite);
     @include font-size(12px);
     color: $blue;
     height: 100%;
@@ -204,7 +204,7 @@
   }
 
   &:after {
-    @include icon("\f062");
+    @include icon($icon-link-arrow-up);
     @include font-size(15px);
     color: $white;
     height: 100%;
@@ -232,7 +232,7 @@
     margin-left: 3px;
 
     &:after {
-      @include icon("\f00d");
+      @include icon($icon-remove);
     }
   }
 

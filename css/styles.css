@@ -5073,6 +5073,13 @@ td.jobs-listing__date {
   }
 }
 .list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -5112,6 +5119,13 @@ a:hover .list-of-links__link:after, .list-of-links__link:hover:after {
   }
 }
 .theme-dark .list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -5170,6 +5184,13 @@ a:hover .theme-dark .list-of-links__link:after {
   }
 }
 .theme-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -6037,6 +6058,13 @@ ul.pager > li.pager__previous a {
   }
 }
 ul.pager > li.pager__previous a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -6087,7 +6115,7 @@ ul.pager > li.pager__previous a:after {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "";
+  content: "";
   left: 0;
   margin-left: 0;
   margin-right: 1em;
@@ -6118,6 +6146,13 @@ ul.pager > li.pager__next a {
   }
 }
 ul.pager > li.pager__next a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -6217,6 +6252,13 @@ ul.pager > li.pager__next a {
 .feed-listing__more-link a:after,
 .panel > .more-link a:after,
 .panel__more-link a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -6885,6 +6927,13 @@ input.search-form__submit {
   }
 }
 .box-application__link > a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -7418,6 +7467,13 @@ a.box-hero__link,
 }
 a.box-hero__link:after,
 .box-hero__link > a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -7864,6 +7920,13 @@ a:hover a.box-hero__link:after, a:hover
   }
 }
 .box-story__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -8216,6 +8279,13 @@ a:hover .box-story__link:after, .box-story__link:hover:after {
   }
 }
 .box-subtitle__link a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
   color: inherit;
   font-weight: 200;
   height: 100%;
@@ -8289,7 +8359,7 @@ a:hover .box-subtitle__link a:after, .box-subtitle__link a:hover:after {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "";
+  content: "";
   font-size: 10.5px;
   font-size: 0.75rem;
   color: #178feb;
@@ -8308,7 +8378,7 @@ a:hover .box-subtitle__link a:after, .box-subtitle__link a:hover:after {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "";
+  content: "";
 }
 @media (min-width: 48em) {
   .is-toggleable-mobile:after {
