@@ -25,6 +25,77 @@
   a {
     @include link-menu;
   }
+
+  > ul.menu {
+    border-bottom: 1px solid lighten($silver, 20%);
+
+    @include breakpoint($small) {
+      border: none;
+      display: flex;
+      flex-flow: row wrap;
+      height: 100%;
+      padding: 0.6em 2em 0.6em 2em;
+      position: relative;
+    }
+  }
+
+  li.is-lvl1 {
+    border-top: 1px solid darken($lightsilver, 10%);
+
+    &.is-open {
+      background: darken($white, 5%);
+    }
+
+    > a {
+      padding: 15px 20px 15px 60px;
+    }
+
+    @include breakpoint($small) {
+      border: none;
+
+      &.is-open {
+        background: none;
+      }
+
+      > a {
+        padding: 0.6em 0.55em 0.6em 1.25em;
+      }
+    }
+
+    @include breakpoint($medium) {
+      > a {
+        padding: 0.6em 1em 0.6em 1.8em;
+      }
+    }
+  }
+
+  li.is-lvl2 {
+    > .main-menu__expand {
+      left: 25px;
+    }
+
+    > a {
+      padding: 15px 30px 15px 80px;
+      text-transform: none;
+    }
+
+    @include breakpoint($small) {
+      display: none;
+    }
+
+    > ul.menu {
+      padding-bottom: 10px;
+    }
+  }
+
+  li.is-lvl3 {
+    > a {
+      @include font-weight-book;
+      color: $silver;
+      padding: 5px 30px 5px 80px;
+      text-transform: none;
+    }
+  }
 }
 
 li.main-menu__front {
@@ -119,80 +190,7 @@ li.main-menu__front {
   }
 }
 
-.main-menu__lvl1 {
-  border-bottom: 1px solid lighten($silver, 20%);
 
-  > li {
-    border-top: 1px solid darken($lightsilver, 10%);
-
-    &.is-open {
-      background: darken($white, 5%);
-    }
-
-    > a {
-      padding: 15px 20px 15px 60px;
-    }
-  }
-
-  @include breakpoint($small) {
-    border: none;
-    display: flex;
-    flex-flow: row wrap;
-    height: 100%;
-    padding: 0.6em 2em 0.6em 2em;
-    position: relative;
-
-    > li {
-      border: none;
-
-      &.is-open {
-        background: none;
-      }
-
-      > a {
-        padding: 0.6em 0.55em 0.6em 1.25em;
-      }
-    }
-  }
-
-  @include breakpoint($medium) {
-    > li {
-      > a {
-        padding: 0.6em 1em 0.6em 1.8em;
-      }
-    }
-  }
-}
-
-.main-menu__lvl2 {
-  > li {
-    > .main-menu__expand {
-      left: 25px;
-    }
-
-    > a {
-      padding: 15px 30px 15px 80px;
-      text-transform: none;
-    }
-  }
-
-  @include breakpoint($small) {
-    display: none;
-  }
-}
-
-.main-menu__lvl3 {
-  padding-bottom: 10px;
-
-  > li {
-    > a {
-      @include font-weight-book;
-      color: $silver;
-      padding: 5px 30px 5px 80px;
-      text-transform: none;
-    }
-  }
-}
 
 /*
  section: 5.1.1
@@ -223,32 +221,15 @@ li.main-menu__front {
   @include breakpoint($small) {
     display: block;
   }
-}
 
-.fatmenu__title {
-  a {
-    color: $blue;
-
-    &:hover {
-      color: $darkblue;
-    }
-
-    &:after {
-      @include font-size(16px);
-      @include icon("\EA1B");
-      margin-left: 1em;
-      position: absolute;
-    }
+  > ul.menu {
+    @include container;
+    height: 0;
+    overflow: hidden;
+    position: relative;
   }
-}
 
-.fatmenu__lvl1 {
-  @include container;
-  height: 0;
-  overflow: hidden;
-  position: relative;
-
-  > li {
+  li.is-lvl1 {
     float: left;
     margin-right: -100%;
     visibility: hidden;
@@ -261,10 +242,8 @@ li.main-menu__front {
       margin-right: 0;
     }
   }
-}
 
-.fatmenu__lvl2 {
-  > li {
+  li.is-lvl2 {
     float: left;
     margin-right: 10px;
     padding: 0 0 0.8em 0;
@@ -288,15 +267,15 @@ li.main-menu__front {
         color: $darkblue;
       }
     }
+
+    > ul.menu {
+      margin: 0.5em 0 0 0;
+      padding: 0;
+      position: relative;
+    }
   }
-}
 
-.fatmenu__lvl3 {
-  margin: 0.5em 0 0 0;
-  padding: 0;
-  position: relative;
-
-  > li {
+  li.is-lvl3 {
     > a {
       @include font-size(14px);
       @include font-weight-book;
@@ -309,6 +288,23 @@ li.main-menu__front {
       &.active-trail {
         color: $darkblue;
       }
+    }
+  }
+}
+
+.fatmenu__title {
+  a {
+    color: $blue;
+
+    &:hover {
+      color: $darkblue;
+    }
+
+    &:after {
+      @include font-size(16px);
+      @include icon("\EA1B");
+      margin-left: 1em;
+      position: absolute;
     }
   }
 }
