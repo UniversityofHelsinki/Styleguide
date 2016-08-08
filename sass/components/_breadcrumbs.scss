@@ -28,8 +28,8 @@
     @include font-weight-medium;
     color: $blue;
     letter-spacing: 0.01em;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       color: $blue--active;

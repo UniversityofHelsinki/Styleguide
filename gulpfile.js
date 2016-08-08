@@ -15,7 +15,7 @@ var fs = require('fs');
 var _ = require('lodash');
 
 var iconFontSettings = {
-  fontClassName: 'hy',
+  fontClassName: 'icon',
   fontFileName: 'hy-icons',
   fontName: 'hy-icons',
   iconsPath: './icons/',

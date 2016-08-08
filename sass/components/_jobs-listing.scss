@@ -11,7 +11,7 @@ table.jobs-listing {
   height: inherit;
 
   thead {
-    display:none;
+    display: none;
 
     @include breakpoint($medium) {
       display: table-header-group;

@@ -443,17 +443,17 @@ video {
 }
 
 .regional-rule-top {
-  border-top: 1px solid #EBEBEB;
   background: transparent url("../images/bg_shadow.png") no-repeat top center;
   background-size: 100% auto;
+  border-top: 1px solid #EBEBEB;
   margin-top: 30px;
   padding-top: 30px;
 }
 
 .regional-rule-bottom {
-  border-bottom: 1px solid #EBEBEB;
   background: transparent url("../images/bg_shadow.png") no-repeat top center;
   background-size: 100% auto;
+  border-bottom: 1px solid #EBEBEB;
 }
 
 .horizontal-rule-top {
@@ -480,9 +480,9 @@ video {
   padding-top: 55%;
 }
 .tiedekulma-embed > * {
-  position: absolute;
   bottom: 0;
   left: 0;
+  position: absolute;
   right: 0;
   top: 0;
 }
@@ -501,10 +501,10 @@ video {
 }
 
 .element-invisible {
-  position: absolute !important;
   clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+  /* IE6, IE7 */
+  position: absolute !important;
 }
 
 /**
@@ -532,15 +532,7 @@ video {
 .textarea,
 .box-ingress__content {
   font-family: Georgia;
-  font-size: 15.75px;
-  font-size: 1.125rem;
   line-height: 1.8em;
-}
-@media (min-width: 48em) {
-  .textarea,
-  .box-ingress__content {
-    font-size: 18px;
-  }
 }
 .textarea ul, .textarea ol,
 .box-ingress__content ul,
@@ -549,6 +541,7 @@ video {
 }
 .textarea li,
 .box-ingress__content li {
+  line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 .textarea ul,
@@ -568,7 +561,6 @@ video {
   -moz-osx-font-smoothing: grayscale;
   font-family: "hy-icons";
   content: "";
-  color: #178feb;
   left: 0;
   margin-top: 1px;
   position: absolute;
@@ -594,10 +586,9 @@ video {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-weight: 700;
   font-style: normal;
-  color: #178feb;
   content: counter(item) ". ";
   counter-increment: item;
-  left: 0;
+  left: 1px;
   line-height: 1.7em;
   position: absolute;
 }
@@ -637,6 +628,19 @@ video {
   color: #666;
   letter-spacing: 0.01em;
   line-height: 1.7em;
+}
+
+.textarea-infobox {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  background-color: #EBEBEB;
+  margin-bottom: 2em;
+  padding: 1.5em;
+}
+.textarea-infobox p {
+  line-height: normal;
+}
+.textarea-infobox p:last-of-type {
+  margin-bottom: 0;
 }
 
 /*
@@ -688,8 +692,8 @@ video {
 }
 @media (min-width: 62.5em) {
   .gridder-container-4.theme-alt > .gridder-box > * {
-    border-right: 1px solid #EBEBEB;
     border-bottom: none;
+    border-right: 1px solid #EBEBEB;
     padding-right: 15px;
   }
   .gridder-container-4.theme-alt > .gridder-box:last-child > * {
@@ -714,9 +718,9 @@ video {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-direction: column;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1020,15 +1024,15 @@ video {
   }
 }
 .form-type-checkbox label:before {
+  border: 1px solid #178feb;
   content: "";
   display: inline-block;
-  width: 16px;
   height: 17px;
+  left: 0;
   margin-right: 10px;
   position: absolute;
-  left: 0;
   top: 2px;
-  border: 1px solid #178feb;
+  width: 16px;
 }
 @media (min-width: 48em) {
   .form-type-checkbox {
@@ -1054,10 +1058,10 @@ video {
 .form-type-radio input[type=radio]:checked + label:before {
   font-size: 26.25px;
   font-size: 1.875rem;
-  content: "\2022";
   color: #178feb;
-  text-align: center;
+  content: "\2022";
   line-height: 14px;
+  text-align: center;
 }
 @media (min-width: 48em) {
   .form-type-radio input[type=radio]:checked + label:before {
@@ -1070,13 +1074,13 @@ video {
   font-weight: 600;
   font-style: normal;
   color: #666;
-  display: inline-block;
   cursor: pointer;
-  position: relative;
-  padding-left: 25px;
-  margin-right: 15px;
+  display: inline-block;
   line-height: 19px;
   margin-bottom: 5px;
+  margin-right: 15px;
+  padding-left: 25px;
+  position: relative;
 }
 @media (min-width: 48em) {
   .form-type-radio label {
@@ -1084,8 +1088,8 @@ video {
   }
 }
 .form-type-radio label:before {
-  border-radius: 8px;
   border: 1px solid #178feb;
+  border-radius: 8px;
   content: "";
   display: inline-block;
   height: 16px;
@@ -1118,10 +1122,10 @@ video {
   }
 }
 .form-type-text input.form-submit {
-  width: auto;
+  background-color: #178feb;
   color: #FFF;
   padding: 10px 30px;
-  background-color: #178feb;
+  width: auto;
 }
 .form-type-text input.error {
   border: 1px solid #974822;
@@ -1262,37 +1266,28 @@ video {
   font-weight: normal;
   font-style: normal;
 }
-.hy {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.hy-rotate-90 {
+.icon-rotate-90 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -transform: rotate(90deg);
 }
 
-.hy-rotate-180 {
+.icon-rotate-180 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -transform: rotate(180deg);
 }
 
-.hy-rotate-270 {
+.icon-rotate-270 {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -transform: rotate(270deg);
 }
 
-@-webkit-keyframes hy-spin {
+@-webkit-keyframes icon-spin {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -1300,7 +1295,7 @@ video {
     -webkit-transform: rotate(360deg);
   }
 }
-@keyframes hy-spin {
+@keyframes icon-spin {
   from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -1310,383 +1305,941 @@ video {
     transform: rotate(360deg);
   }
 }
-.hy-spin {
-  -webkit-animation: hy-spin 2s infinite linear;
-  -moz-animation: hy-spin 2s infinite linear;
-  -ms-animation: hy-spin 2s infinite linear;
-  -animation: hy-spin 2s infinite linear;
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  -moz-animation: icon-spin 2s infinite linear;
+  -ms-animation: icon-spin 2s infinite linear;
+  -animation: icon-spin 2s infinite linear;
 }
 
-.hy:before {
+.icon:before {
   box-sizing: border-box;
 }
 
-.hy-2x {
+.icon-2x {
   font-size: 2em;
 }
 
-.hy-3x {
+.icon-3x {
   font-size: 3em;
 }
 
-.hy-4x {
+.icon-4x {
   font-size: 4em;
 }
 
-.hy-5x {
+.icon-5x {
   font-size: 5em;
 }
 
-.hy-add-to-todo-list:before {
+.icon--add-to-todo-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-arrow-up:before {
-  content: "";
-}
-
-.hy-arrow:before {
+.icon--arrow:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-avatar-group:before {
+.icon--avatar-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-avatar:before {
+.icon--avatar:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-bachelor:before {
+.icon--bachelor:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-camera:before {
+.icon--camera:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-chat:before {
+.icon--chat:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-date:before {
+.icon--date:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-discover:before {
+.icon--discover:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-done:before {
+.icon--done:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-download:before {
+.icon--download:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-drag:before {
+.icon--drag:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-drop-down:before {
+.icon--drop-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-edit-event:before {
+.icon--edit-event:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-edit:before {
+.icon--edit:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-events:before {
+.icon--events:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-facebook:before {
+.icon--facebook:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-favorites:before {
+.icon--favorites:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-grid:before {
+.icon--grid:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-hamburger:before {
+.icon--hamburger:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-home:before {
+.icon--home:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-hy-logo:before {
+.icon--hy-logo:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-info-stroke:before {
+.icon--info-stroke:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-info:before {
+.icon--info:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-link-arrow-offsite:before {
+.icon--link-arrow-offsite:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-link-arrow:before {
+.icon--link-arrow:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-linkedin:before {
+.icon--linkedin:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-list:before {
+.icon--list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-location:before {
+.icon--location:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-log:before {
+.icon--log:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-logout:before {
+.icon--logout:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-magnify-minus:before {
+.icon--magnify-minus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-magnify-plus:before {
+.icon--magnify-plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-master:before {
+.icon--master:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-minus:before {
+.icon--minus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-modify:before {
+.icon--modify:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-navi-triangle:before {
+.icon--navi-triangle:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-new-group:before {
+.icon--new-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-new-person:before {
+.icon--new-person:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-notification:before {
+.icon--notification:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-opinder-logo-new:before {
+.icon--opinder-logo-new:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-pdf:before {
+.icon--pdf:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-people:before {
+.icon--people:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-person-outline:before {
+.icon--person-outline:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-person:before {
+.icon--person:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-plus:before {
+.icon--plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-profile:before {
+.icon--profile:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-question:before {
+.icon--question:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-remove:before {
+.icon--remove:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-rotate-left:before {
+.icon--rotate-left:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-rotate-right:before {
+.icon--rotate-right:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-search:before {
+.icon--search:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-time:before {
+.icon--time:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-todo-list:before {
+.icon--todo-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-tour:before {
+.icon--tour:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-twitter:before {
+.icon--twitter:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-units-and-faculties:before {
+.icon--units-and-faculties:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-video:before {
+.icon--video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-warning:before {
+.icon--warning:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-id-number:before {
+.icon--id-number:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-mail:before {
+.icon--mail:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-mobile:before {
+.icon--mobile:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-opinder-logo:before {
+.icon--opinder-logo:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-all:before {
+.icon--permission-all:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-group:before {
+.icon--permission-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-private:before {
+.icon--permission-private:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-phone:before {
+.icon--phone:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-preview:before {
+.icon--preview:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-url:before {
+.icon--url:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-instagram:before {
+.icon--instagram:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-login:before {
+.icon--login:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-spinner:before {
+.icon--spinner:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-bullet-list:before {
+.icon--bullet-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-contentlink:before {
+.icon--contentlink:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-customlink:before {
+.icon--customlink:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-dragbutton:before {
+.icon--dragbutton:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-embed:before {
+.icon--embed:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-feed:before {
+.icon--feed:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-file-text:before {
+.icon--file-text:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-helsinginyliopisto:before {
+.icon--helsinginyliopisto:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-horizontal-resize:before {
+.icon--horizontal-resize:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-image-gallery:before {
+.icon--image-gallery:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-images:before {
+.icon--images:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-leiki-list:before {
+.icon--leiki-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-listoflinks:before {
+.icon--listoflinks:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-play:before {
+.icon--play:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-wrench:before {
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--youtube:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--link-arrow-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--link-arrow-left:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--link-arrow-up:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 @font-face {
@@ -1696,37 +2249,28 @@ video {
   font-weight: normal;
   font-style: normal;
 }
-.hy {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.hy-rotate-90 {
+.icon-rotate-90 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -transform: rotate(90deg);
 }
 
-.hy-rotate-180 {
+.icon-rotate-180 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -transform: rotate(180deg);
 }
 
-.hy-rotate-270 {
+.icon-rotate-270 {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -transform: rotate(270deg);
 }
 
-@-webkit-keyframes hy-spin {
+@-webkit-keyframes icon-spin {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -1734,7 +2278,7 @@ video {
     -webkit-transform: rotate(360deg);
   }
 }
-@keyframes hy-spin {
+@keyframes icon-spin {
   from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -1744,406 +2288,950 @@ video {
     transform: rotate(360deg);
   }
 }
-.hy-spin {
-  -webkit-animation: hy-spin 2s infinite linear;
-  -moz-animation: hy-spin 2s infinite linear;
-  -ms-animation: hy-spin 2s infinite linear;
-  -animation: hy-spin 2s infinite linear;
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  -moz-animation: icon-spin 2s infinite linear;
+  -ms-animation: icon-spin 2s infinite linear;
+  -animation: icon-spin 2s infinite linear;
 }
 
-.hy:before {
+.icon:before {
   box-sizing: border-box;
 }
 
-.hy-2x {
+.icon-2x {
   font-size: 2em;
 }
 
-.hy-3x {
+.icon-3x {
   font-size: 3em;
 }
 
-.hy-4x {
+.icon-4x {
   font-size: 4em;
 }
 
-.hy-5x {
+.icon-5x {
   font-size: 5em;
 }
 
-.hy-add-to-todo-list:before {
+.icon--add-to-todo-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-arrow-up:before {
-  content: "";
-}
-
-.hy-arrow:before {
+.icon--arrow:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-avatar-group:before {
+.icon--avatar-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-avatar:before {
+.icon--avatar:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-bachelor:before {
+.icon--bachelor:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-camera:before {
+.icon--camera:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-chat:before {
+.icon--chat:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-date:before {
+.icon--date:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-discover:before {
+.icon--discover:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-done:before {
+.icon--done:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-download:before {
+.icon--download:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-drag:before {
+.icon--drag:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-drop-down:before {
+.icon--drop-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-edit-event:before {
+.icon--edit-event:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-edit:before {
+.icon--edit:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-events:before {
+.icon--events:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-facebook:before {
+.icon--facebook:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-favorites:before {
+.icon--favorites:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-grid:before {
+.icon--grid:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-hamburger:before {
+.icon--hamburger:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-home:before {
+.icon--home:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-hy-logo:before {
+.icon--hy-logo:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-info-stroke:before {
+.icon--info-stroke:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-info:before {
+.icon--info:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-link-arrow-offsite:before {
+.icon--link-arrow-offsite:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-link-arrow:before {
+.icon--link-arrow:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-linkedin:before {
+.icon--linkedin:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-list:before {
+.icon--list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-location:before {
+.icon--location:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-log:before {
+.icon--log:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-logout:before {
+.icon--logout:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-magnify-minus:before {
+.icon--magnify-minus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-magnify-plus:before {
+.icon--magnify-plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-master:before {
+.icon--master:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-minus:before {
+.icon--minus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-modify:before {
+.icon--modify:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-navi-triangle:before {
+.icon--navi-triangle:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-new-group:before {
+.icon--new-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-new-person:before {
+.icon--new-person:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-notification:before {
+.icon--notification:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-opinder-logo-new:before {
+.icon--opinder-logo-new:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-pdf:before {
+.icon--pdf:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-people:before {
+.icon--people:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-person-outline:before {
+.icon--person-outline:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-person:before {
+.icon--person:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-plus:before {
+.icon--plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-profile:before {
+.icon--profile:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-question:before {
+.icon--question:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-remove:before {
+.icon--remove:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-rotate-left:before {
+.icon--rotate-left:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-rotate-right:before {
+.icon--rotate-right:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-search:before {
+.icon--search:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-time:before {
+.icon--time:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-todo-list:before {
+.icon--todo-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-tour:before {
+.icon--tour:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-twitter:before {
+.icon--twitter:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-units-and-faculties:before {
+.icon--units-and-faculties:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-video:before {
+.icon--video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-warning:before {
+.icon--warning:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-id-number:before {
+.icon--id-number:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-mail:before {
+.icon--mail:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-mobile:before {
+.icon--mobile:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-opinder-logo:before {
+.icon--opinder-logo:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-all:before {
+.icon--permission-all:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-group:before {
+.icon--permission-group:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-permission-private:before {
+.icon--permission-private:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-phone:before {
+.icon--phone:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-preview:before {
+.icon--preview:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-url:before {
+.icon--url:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-instagram:before {
+.icon--instagram:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-login:before {
+.icon--login:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-spinner:before {
+.icon--spinner:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-bullet-list:before {
+.icon--bullet-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-contentlink:before {
+.icon--contentlink:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-customlink:before {
+.icon--customlink:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-dragbutton:before {
+.icon--dragbutton:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-embed:before {
+.icon--embed:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-feed:before {
+.icon--feed:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-file-text:before {
+.icon--file-text:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-helsinginyliopisto:before {
+.icon--helsinginyliopisto:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-horizontal-resize:before {
+.icon--horizontal-resize:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-image-gallery:before {
+.icon--image-gallery:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-images:before {
+.icon--images:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-leiki-list:before {
+.icon--leiki-list:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-listoflinks:before {
+.icon--listoflinks:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-play:before {
+.icon--play:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.hy-wrench:before {
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
 }
 
-.icon--next:after {
+.icon--youtube:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
+  content: "";
 }
 
-.icon--prev:after {
+.icon--link-arrow-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--link-arrow-left:after {
+  display: inline-block;
   font-family: "hy-icons";
-  content: "";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--link-arrow-up:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 .icon--video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   font-size: 22.75px;
   font-size: 1.625rem;
@@ -2152,30 +3240,6 @@ video {
   .icon--video:after {
     font-size: 26px;
   }
-}
-
-.icon--up:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-}
-
-.icon--down:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.icon--home:after {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
 }
 
 /*
@@ -2214,8 +3278,8 @@ h1, h2, h3, h4,
 }
 h1 a, h2 a, h3 a, h4 a,
 .box-logo > a a, h5 a, h6 a {
-  text-decoration: none;
   color: #424242;
+  text-decoration: none;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover,
 .box-logo > a a:hover, h5 a:hover, h6 a:hover {
@@ -2226,8 +3290,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover,
 h1 {
   font-size: 31.5px;
   font-size: 2.25rem;
-  line-height: 1.15em;
   letter-spacing: -2px;
+  line-height: 1.15em;
 }
 @media (min-width: 48em) {
   h1 {
@@ -2366,8 +3430,8 @@ blockquote p {
   font-size: 1.375rem;
   font-weight: 400;
   font-style: normal;
-  display: inline;
   color: #979797;
+  display: inline;
   line-height: 1.1em;
 }
 @media (min-width: 48em) {
@@ -2426,8 +3490,8 @@ th {
 }
 
 dl, ol, ul {
-  margin: 0;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -2473,9 +3537,9 @@ dl, ol, ul {
 }
 
 .accordion--dark .accordion__title {
-  padding: 0;
   height: auto;
   line-height: 100%;
+  padding: 0;
 }
 .accordion--dark .accordion__title.ui-state-active {
   background-color: #1073bf;
@@ -2538,20 +3602,20 @@ dl, ol, ul {
  description:
 */
 .avatar-image {
-  color: white;
-  display: inline-block;
   background: url("../assets/svg/avatar.svg") no-repeat center center;
   background-size: 65% 65%;
-  width: 60px;
+  color: white;
+  display: inline-block;
   height: 60px;
+  width: 60px;
 }
 .avatar-image.is-small {
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
 .avatar-image.is-large {
-  width: 90px;
   height: 90px;
+  width: 90px;
 }
 .avatar-image.is-student {
   background-color: #7b46a3;
@@ -2597,8 +3661,8 @@ dl, ol, ul {
   font-style: normal;
   color: #178feb;
   letter-spacing: 0.01em;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .breadcrumbs__item a:hover {
   color: #1073bf;
@@ -2623,7 +3687,7 @@ dl, ol, ul {
  template: 3_5_1-button
  description:
 */
-.form-type-search input[type="submit"], input[type="submit"],
+.form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .accordion__title,
 .button--accordion,
 .button--action-before,
 .button--action, .button--anchor, .button--expand, .horizontal-tabs .horizontal-tab-button > a,
@@ -2639,7 +3703,7 @@ dl, ol, ul {
   padding: 0.8em 1em;
 }
 @media (min-width: 48em) {
-  .form-type-search input[type="submit"], input[type="submit"],
+  .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .accordion__title,
   .button--accordion,
   .button--action-before,
   .button--action, .button--anchor, .button--expand, .horizontal-tabs .horizontal-tab-button > a,
@@ -2647,7 +3711,7 @@ dl, ol, ul {
     font-size: 15px;
   }
 }
-input[type="submit"]:hover,
+input[type="submit"]:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
 .button--action:hover, .button--anchor:hover, .button--expand:hover, .horizontal-tabs .horizontal-tab-button > a:hover,
@@ -2655,19 +3719,15 @@ input[type="submit"]:hover,
   background-color: #0c5790;
   color: #FFF;
 }
-.form-type-search input[type="submit"]:before, input[type="submit"]:before,
+.form-type-search input[type="submit"]:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .horizontal-tabs .horizontal-tab-button > a:before, .form-type-search input[type="submit"]:after, input[type="submit"]:after,
-.button--accordion:after,
-.button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .horizontal-tabs .horizontal-tab-button > a:after,
-.button:before,
-.button:after {
+.button--action:before, .button--anchor:before, .button--expand:before, .horizontal-tabs .horizontal-tab-button > a:before,
+.button:before {
   transition-duration: 0.1s;
   transition-property: all;
 }
-input.theme-transparent[type="submit"],
+input.theme-transparent[type="submit"], .theme-transparent.accordion__title,
 .theme-transparent.button--accordion,
 .theme-transparent.button--action-before,
 .theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .horizontal-tabs .horizontal-tab-button > a.theme-transparent,
@@ -2675,17 +3735,17 @@ input.theme-transparent[type="submit"],
   background-color: transparent;
   color: #178feb;
 }
-input.theme-transparent[type="submit"]:hover,
+input.theme-transparent[type="submit"]:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
 .theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
 .button.theme-transparent:hover {
   background-color: #178feb;
 }
-input.theme-transparent[type="submit"] a:hover,
+input.theme-transparent[type="submit"] a:hover, .theme-transparent.accordion__title a:hover,
 .theme-transparent.button--accordion a:hover,
 .theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, input.theme-transparent[type="submit"]:hover,
+.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
 .theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
@@ -2700,6 +3760,7 @@ input.theme-transparent[type="submit"] a:hover,
   template: 3_5_2-button--accordion
  description:
 */
+.accordion__title,
 .button--accordion {
   border: 2px solid #178feb;
   display: block;
@@ -2709,24 +3770,34 @@ input.theme-transparent[type="submit"] a:hover,
   padding-right: 0;
   position: relative;
 }
+.accordion__title:before,
 .button--accordion:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
+  content: "";
   -webkit-transform: translateY(-50%) rotate(270deg);
   -moz-transform: translateY(-50%) rotate(270deg);
   -ms-transform: translateY(-50%) rotate(270deg);
   -transform: translateY(-50%) rotate(270deg);
   transition-duration: 0.1s;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
   top: 50%;
   left: 1em;
   position: absolute;
 }
+.is-active.accordion__title,
 .button--accordion.is-active {
   background-color: #178feb;
   color: #FFF;
 }
+.is-active.accordion__title:before,
 .button--accordion.is-active:before {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -moz-transform: translateY(-50%) rotate(90deg);
@@ -2734,7 +3805,7 @@ input.theme-transparent[type="submit"] a:hover,
   -transform: translateY(-50%) rotate(90deg);
   color: #FFF;
 }
-a:hover
+a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 .button--accordion:before,
 .button--accordion:hover:before {
   color: #FFF;
@@ -2777,6 +3848,7 @@ a:hover
   position: absolute;
   top: 50%;
   color: #FFF;
+  right: -2px;
   text-align: center;
 }
 .button--action-before:hover:before,
@@ -2797,6 +3869,7 @@ a:hover
 .theme-transparent.button--action-before:after,
 .button--action.theme-transparent:after {
   margin-left: 15px;
+  line-height: 0;
   position: static;
   width: auto;
 }
@@ -2900,8 +3973,8 @@ a:hover
   position: relative;
   vertical-align: middle;
 }
-.button-group--small > *,
-.button-group > * {
+.button-group--small > .button,
+.button-group > .button {
   display: inline-block;
   margin-bottom: 0.3em;
   position: relative;
@@ -2913,13 +3986,13 @@ a:hover
  template: 3_5_7-button-group--small
  description:
 */
-.button-group--small > * {
+.button-group--small > .button {
   font-size: 13.125px;
   font-size: 0.9375rem;
   padding: 0.3em 0.7em;
 }
 @media (min-width: 48em) {
-  .button-group--small > * {
+  .button-group--small > .button {
     font-size: 15px;
   }
 }
@@ -2962,9 +4035,9 @@ a:hover
   background: rgba(0, 0, 0, 0.6);
   bottom: 0;
   left: 0;
-  right: 0;
   padding: 10px 7px 10px 15px;
   position: absolute;
+  right: 0;
 }
 @media (min-width: 48em) {
   .carousel__content {
@@ -2994,12 +4067,12 @@ a:hover
   text-transform: uppercase;
   bottom: 0;
   color: #979797;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   margin-bottom: 0;
   margin-left: 0;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: auto;
 }
 @media (min-width: 48em) {
@@ -3011,10 +4084,10 @@ a:hover
 /* Control Nav */
 .carousel__control-nav {
   bottom: 0;
-  position: absolute;
-  right: 0;
   height: 30px;
   line-height: 30px;
+  position: absolute;
+  right: 0;
   width: 100%;
 }
 @media (min-width: 48em) {
@@ -3095,6 +4168,9 @@ a:hover
 .carousel__direction-nav a:active {
   color: #979797;
 }
+.carousel__direction-nav a:hover {
+  color: #FFF;
+}
 .carousel__direction-nav a:before {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3113,9 +4189,12 @@ a:hover
   left: 0;
 }
 .carousel__direction-nav a.carousel__prev:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   -webkit-transform: rotate(180deg) translateY(-50%);
   -ms-transform: rotate(180deg) translateY(-50%);
@@ -3128,9 +4207,12 @@ a:hover
   right: 0;
 }
 .carousel__direction-nav a.carousel__next:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
 }
 
@@ -3176,15 +4258,16 @@ a:hover
   }
 }
 .carousel-unwrapped__content.theme-raster:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
   background: url(images/raster.svg);
   background-size: 4px 4px;
+  -webkit-background-size: 4px 4px;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 
@@ -3224,6 +4307,9 @@ a:hover
 .carousel-unwrapped__direction-nav a:active {
   color: #979797;
 }
+.carousel-unwrapped__direction-nav a:hover {
+  color: #FFF;
+}
 .carousel-unwrapped__direction-nav a:before {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3245,9 +4331,12 @@ a:hover
   left: 0;
 }
 .carousel-unwrapped__direction-nav a.carousel-unwrapped__prev:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   -webkit-transform: rotate(180deg) translateY(-50%);
   -ms-transform: rotate(180deg) translateY(-50%);
@@ -3263,9 +4352,12 @@ a:hover
   right: 0;
 }
 .carousel-unwrapped__direction-nav a.carousel-unwrapped__next:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
 }
 
@@ -3278,8 +4370,8 @@ a:hover
   max-height: 350px;
   min-width: 48em;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
 }
 @media (min-width: 48em) {
   .carousel-unwrapped__image {
@@ -3391,8 +4483,8 @@ a:hover
 }
 @media (min-width: 48em) {
   .carousel-unwrapped--teaser .carousel-unwrapped__image {
-    opacity: 0.9;
     min-width: 1750px;
+    opacity: 0.9;
   }
 }
 @media (min-width: 48em) {
@@ -3600,13 +4692,13 @@ a:hover
 }
 @media (min-width: 48em) {
   .index__label {
-    -webkit-columns: all;
-    -moz-columns: all;
-    -ms-columns: all;
-    -o-columns: all;
     -webkit-column-span: all;
     -moz-column-span: all;
     column-span: all;
+    -moz-columns: all;
+    -ms-columns: all;
+    -o-columns: all;
+    -webkit-columns: all;
   }
 }
 
@@ -3721,8 +4813,8 @@ a:hover
 */
 .index-topical {
   display: block;
-  position: relative;
   margin-bottom: 1.5em;
+  position: relative;
 }
 
 .index-topical__title {
@@ -3921,8 +5013,8 @@ td.jobs-listing__date {
   z-index: 0;
 }
 .label-row__item.theme-yliopisto-lehti {
-  border-color: #fca311;
   background-color: #fca311;
+  border-color: #fca311;
 }
 .label-row__item.theme-yliopisto-lehti.theme-secondary {
   background: none;
@@ -3960,15 +5052,156 @@ td.jobs-listing__date {
 }
 
 .list-of-links__link {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  font-weight: 600;
+  font-style: normal;
   margin-bottom: 2px;
+  padding-left: 10px;
+}
+@media (min-width: 48em) {
+  .list-of-links__link {
+    font-size: 15px;
+  }
+}
+.list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .list-of-links__link:after, .list-of-links__link:hover:after {
+  color: #0c5790;
+}
+.list-of-links__link:hover:after {
+  color: #FFF;
+}
+.list-of-links__link:after {
+  height: auto;
+}
+.theme-dark .list-of-links__link {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  background: #178feb;
+  color: #FFF;
+  overflow: visible;
+  padding-left: 1em;
+  padding-right: 4em;
+}
+@media (min-width: 48em) {
+  .theme-dark .list-of-links__link {
+    font-size: 15px;
+  }
+}
+.theme-dark .list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .theme-dark .list-of-links__link:after, .theme-dark .list-of-links__link:hover:after {
+  color: #0c5790;
+}
+.theme-dark .list-of-links__link:after {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  background-color: #1073bf;
+  color: #FFF;
+  line-height: 2.8em;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.theme-dark .list-of-links__link:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover .theme-dark .list-of-links__link:hover:after, .theme-dark .list-of-links__link:hover:after {
+  background: #083a61;
+  color: #FFF;
+}
+a:hover .theme-dark .list-of-links__link {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover .theme-dark .list-of-links__link:after {
+  background: #083a61;
+  color: #FFF;
 }
 .theme-footer .list-of-links__link, .theme-info-footer .list-of-links__link {
   border-bottom: 1px solid #EBEBEB;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
   border-bottom-color: #cccccc;
   color: #5c5c5c;
 }
+@media (min-width: 48em) {
+  .theme-footer .list-of-links__link, .theme-info-footer .list-of-links__link {
+    font-size: 15px;
+  }
+}
 .theme-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__link:hover:after, a:hover .theme-info-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:hover:after {
+  color: #0c5790;
+}
+.theme-footer .list-of-links__link:before, .theme-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:before, .theme-info-footer .list-of-links__link:after {
   color: #666;
+  margin-top: -0.5em;
   position: absolute;
   right: 0;
   top: 50%;
@@ -3976,7 +5209,7 @@ td.jobs-listing__date {
 .theme-footer .list-of-links__link:hover, .theme-info-footer .list-of-links__link:hover {
   color: #222;
 }
-.theme-footer .list-of-links__link:hover:after, .theme-info-footer .list-of-links__link:hover:after {
+.theme-footer .list-of-links__link:hover:before, .theme-footer .list-of-links__link:hover:after, .theme-info-footer .list-of-links__link:hover:before, .theme-info-footer .list-of-links__link:hover:after {
   color: #222;
 }
 .theme-footer .list-of-links__link {
@@ -3984,13 +5217,13 @@ td.jobs-listing__date {
   color: #FFF;
   display: block;
 }
-.theme-footer .list-of-links__link:after {
+.theme-footer .list-of-links__link:before, .theme-footer .list-of-links__link:after {
   color: #FFF;
 }
 .theme-footer .list-of-links__link:hover {
   color: #cccccc;
 }
-.theme-footer .list-of-links__link:hover:after {
+.theme-footer .list-of-links__link:hover:before, .theme-footer .list-of-links__link:hover:after {
   color: #cccccc;
 }
 
@@ -4020,8 +5253,9 @@ td.jobs-listing__date {
   font-style: normal;
   font-size: 12.25px;
   font-size: 0.875rem;
-  padding-top: 0.8em;
   padding-bottom: 0.8em;
+  padding-top: 0.8em;
+  padding-left: 10px;
 }
 @media (min-width: 48em) {
   .list-of-links--condensed .list-of-links__link {
@@ -4160,9 +5394,12 @@ td.jobs-listing__date {
     padding-right: 19px;
   }
   li.main-menu__front > a:after {
+    display: inline-block;
+    font-family: "hy-icons";
+    font-style: normal;
+    font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "hy-icons";
     content: "";
     font-size: 14px;
     font-size: 1rem;
@@ -4199,9 +5436,12 @@ td.jobs-listing__date {
 .main-menu__expand:before {
   font-size: 12.25px;
   font-size: 0.875rem;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   transition-duration: 0.2s;
   transition-property: color, border-color;
@@ -4259,17 +5499,20 @@ td.jobs-listing__date {
 }
 
 .is-open > .main-menu__expand:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
-  border-color: #0c5790;
   background-color: #0c5790;
+  border-color: #0c5790;
   color: #FFF;
 }
 .is-open > .main-menu__expand:hover:before {
-  border-color: #1073bf;
   background-color: #1073bf;
+  border-color: #1073bf;
 }
 
 /*
@@ -4310,14 +5553,14 @@ td.jobs-listing__date {
 .fatmenu li.is-lvl1 {
   float: left;
   margin-right: -100%;
-  visibility: hidden;
   padding: 2em 0 20px;
+  visibility: hidden;
   width: 100%;
 }
 .fatmenu li.is-lvl1.is-open {
-  visibility: visible;
   display: block !important;
   margin-right: 0;
+  visibility: visible;
 }
 .fatmenu li.is-lvl2 {
   float: left;
@@ -4381,9 +5624,12 @@ td.jobs-listing__date {
 .fatmenu__title a:after {
   font-size: 14px;
   font-size: 1rem;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   margin-left: 1em;
   position: absolute;
@@ -4404,7 +5650,6 @@ td.jobs-listing__date {
   align-items: center;
   border: 1px solid #cacaca;
   color: #cacaca;
-  cursor: pointer;
   cursor: pointer;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4431,9 +5676,12 @@ td.jobs-listing__date {
   color: #FFF;
 }
 .fatmenu__collapse:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
 }
 
@@ -4463,8 +5711,8 @@ td.jobs-listing__date {
 .messages {
   font-size: 10.5px;
   font-size: 0.75rem;
-  text-align: center;
   padding: 1.3em 0;
+  text-align: center;
 }
 @media (min-width: 48em) {
   .messages {
@@ -4473,9 +5721,9 @@ td.jobs-listing__date {
 }
 .messages p {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: inherit;
   margin: 0;
   padding: 0;
-  font-size: inherit;
 }
 .messages a {
   font-weight: 700;
@@ -4497,9 +5745,12 @@ td.jobs-listing__date {
 }
 .messages.status p:before,
 .messages.status li:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   font-size: 1.4em;
   margin-right: 0.5em;
@@ -4522,9 +5773,12 @@ td.jobs-listing__date {
 }
 .messages.info p:before,
 .messages.info li:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   font-size: 1.4em;
   margin-right: 0.5em;
@@ -4547,9 +5801,12 @@ td.jobs-listing__date {
 }
 .messages.error p:before,
 .messages.error li:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   font-size: 1.4em;
   margin-right: 0.5em;
@@ -4701,7 +5958,29 @@ ul.pager > li > a {
   position: relative;
 }
 ul.pager > li.is-active {
+  transition-duration: 0.1s;
+  transition-property: all;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  background-color: #178feb;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  padding: 0.8em 1em;
   background-color: #0c5790;
+}
+@media (min-width: 48em) {
+  ul.pager > li.is-active {
+    font-size: 15px;
+  }
+}
+ul.pager > li.is-active:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+ul.pager > li.is-active:before {
+  transition-duration: 0.1s;
+  transition-property: all;
 }
 ul.pager > li.is-active > a {
   background-color: inherit;
@@ -4724,7 +6003,194 @@ ul.pager > li.pager__page {
   }
 }
 ul.pager > li.pager__page a {
+  transition-duration: 0.1s;
+  transition-property: all;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  background-color: #178feb;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  padding: 0.8em 1em;
   display: block;
+}
+@media (min-width: 48em) {
+  ul.pager > li.pager__page a {
+    font-size: 15px;
+  }
+}
+ul.pager > li.pager__page a:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+ul.pager > li.pager__page a:before {
+  transition-duration: 0.1s;
+  transition-property: all;
+}
+ul.pager > li.pager__previous a {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  background: #178feb;
+  color: #FFF;
+  overflow: visible;
+  padding-left: 1em;
+  padding-right: 4em;
+  padding-left: 4em;
+  padding-right: 1em;
+}
+@media (min-width: 48em) {
+  ul.pager > li.pager__previous a {
+    font-size: 15px;
+  }
+}
+ul.pager > li.pager__previous a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover
+ul.pager > li.pager__previous a:after,
+ul.pager > li.pager__previous a:hover:after {
+  color: #0c5790;
+}
+ul.pager > li.pager__previous a:after {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  background-color: #1073bf;
+  color: #FFF;
+  line-height: 2.8em;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+ul.pager > li.pager__previous a:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__previous a:hover:after,
+ul.pager > li.pager__previous a:hover:after {
+  background: #083a61;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__previous a {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__previous a:after {
+  background: #083a61;
+  color: #FFF;
+}
+ul.pager > li.pager__previous a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  left: 0;
+  margin-left: 0;
+  margin-right: 1em;
+  right: auto;
+}
+ul.pager > li.pager__next a {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  background: #178feb;
+  color: #FFF;
+  overflow: visible;
+  padding-left: 1em;
+  padding-right: 4em;
+}
+@media (min-width: 48em) {
+  ul.pager > li.pager__next a {
+    font-size: 15px;
+  }
+}
+ul.pager > li.pager__next a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover
+ul.pager > li.pager__next a:after,
+ul.pager > li.pager__next a:hover:after {
+  color: #0c5790;
+}
+ul.pager > li.pager__next a:after {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  background-color: #1073bf;
+  color: #FFF;
+  line-height: 2.8em;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+ul.pager > li.pager__next a:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__next a:hover:after,
+ul.pager > li.pager__next a:hover:after {
+  background: #083a61;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__next a {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover
+ul.pager > li.pager__next a:after {
+  background: #083a61;
+  color: #FFF;
 }
 ul.pager > li.pager__previous a,
 ul.pager > li.pager__next a {
@@ -4753,17 +6219,60 @@ ul.pager > li.pager__next a {
   clear: both;
 }
 
-.panel__title {
-  margin-bottom: 0.4em;
-}
-
-.panel__more-link {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+.feed-listing__more-link a,
+.panel > .more-link a,
 .panel__more-link a {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
   border-bottom: 0 none;
+}
+@media (min-width: 48em) {
+  .feed-listing__more-link a,
+  .panel > .more-link a,
+  .panel__more-link a {
+    font-size: 15px;
+  }
+}
+.feed-listing__more-link a:after,
+.panel > .more-link a:after,
+.panel__more-link a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .feed-listing__more-link a:after,
+a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
+.panel > .more-link a:hover:after, a:hover
+.panel__more-link a:after,
+.panel__more-link a:hover:after {
+  color: #0c5790;
+}
+@media (min-width: 48em) {
+  .feed-listing__more-link a,
+  .panel > .more-link a,
+  .panel__more-link a {
+    font-size: 16px;
+  }
 }
 
 /*
@@ -4847,8 +6356,8 @@ ul.pager > li.pager__next a {
 .search-form__input {
   border-radius: 0;
   border: 2px solid #178feb;
-  line-height: 34px;
   height: 40px;
+  line-height: 34px;
   padding-left: 1em;
   padding-right: 3em;
   width: 100%;
@@ -4870,9 +6379,12 @@ ul.pager > li.pager__next a {
 
 input.search-form__submit {
   border-radius: 0;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   background-color: #178feb;
   bottom: 0;
@@ -4915,9 +6427,12 @@ input.search-form__submit {
 }
 
 .search-form--dark__submit {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
   content: "";
   background-color: transparent;
   height: 36px;
@@ -5070,8 +6585,8 @@ input.search-form__submit {
   text-decoration: none;
 }
 .table-sortable tbody tr td a:hover, .table-sortable tbody tr td a.active:hover {
-  text-decoration: none;
   color: #1073bf;
+  text-decoration: none;
 }
 .table-sortable tbody tr td.active {
   color: #666;
@@ -5160,8 +6675,8 @@ input.search-form__submit {
 .table-simple td a.active:hover,
 .table-simple th a:hover,
 .table-simple th a.active:hover {
-  text-decoration: none;
   color: #1073bf;
+  text-decoration: none;
 }
 .textarea table td.active,
 .box-ingress__content table td.active, .box-application__table td.active, .textarea table th.active,
@@ -5184,8 +6699,8 @@ input.search-form__submit {
  */
 .is-table-wrapped {
   margin-bottom: 20px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 .is-table-wrapped > table {
   display: none;
@@ -5209,9 +6724,9 @@ input.search-form__submit {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%);
   content: " ";
   height: 100%;
-  position: absolute;
   left: 35%;
   margin-left: -1em;
+  position: absolute;
   top: 0;
   width: 1em;
   z-index: 10;
@@ -5323,8 +6838,8 @@ input.search-form__submit {
 */
 .box-application {
   display: block;
-  position: relative;
   margin-bottom: 2.5em;
+  position: relative;
 }
 
 .box-application__title {
@@ -5359,9 +6874,9 @@ input.search-form__submit {
 
 .box-application__td {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  display: table-cell;
   border: 2px dotted #EBEBEB;
   color: #666;
+  display: table-cell;
   padding: 0.7em 0.9em;
   vertical-align: top;
   width: 50%;
@@ -5371,8 +6886,8 @@ input.search-form__submit {
   text-decoration: none;
 }
 .box-application__td a:hover, .box-application__td a.active:hover {
-  text-decoration: none;
   color: #1073bf;
+  text-decoration: none;
 }
 .box-application__td.active {
   color: #666;
@@ -5384,6 +6899,44 @@ input.search-form__submit {
 
 .box-application__link {
   float: right;
+}
+.box-application__link > a {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  font-weight: 600;
+  font-style: normal;
+  transition-duration: 0.1s;
+  transition-property: color;
+  text-align: right;
+}
+@media (min-width: 48em) {
+  .box-application__link > a {
+    font-size: 15px;
+  }
+}
+.box-application__link > a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .box-application__link > a:after, .box-application__link > a:hover:after {
+  color: #0c5790;
 }
 
 /*
@@ -5402,12 +6955,12 @@ input.search-form__submit {
   transition-duration: 0.3s;
   transition-property: all;
   color: #222;
-  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex-direction: column;
+  -webkit-flex: 1 1 auto;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-direction: column;
   line-height: 19px;
 }
 @media (min-width: 48em) {
@@ -5416,14 +6969,14 @@ input.search-form__submit {
   }
 }
 .box-card.theme-plain {
-  display: block;
   border: none;
+  display: block;
 }
 @media (min-width: 48em) {
   .box-card.theme-plain .box-card__item {
-    -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-direction: row;
   }
 }
 .box-card.theme-plain .box-card__item:last-of-type {
@@ -5450,8 +7003,8 @@ input.search-form__submit {
   border-top: 0;
   background-color: #FAFAFA;
   font-weight: 700;
-  line-height: 19px;
   height: 55px;
+  line-height: 19px;
   padding: 1.25em;
 }
 
@@ -5460,12 +7013,12 @@ input.search-form__submit {
   display: -ms-flexbox;
   display: flex;
   background-color: #FFF;
-  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex-direction: column;
+  -webkit-flex: 1 1 auto;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-direction: column;
   line-height: 19px;
   padding: 1.25em;
 }
@@ -5474,21 +7027,21 @@ input.search-form__submit {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 1 auto;
+  border-bottom: 1px solid #EBEBEB;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex-direction: column;
+  -webkit-flex: 1 1 auto;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-bottom: 1px solid #EBEBEB;
+  -webkit-flex-direction: column;
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
 }
 @media (min-width: 48em) {
   .gridder-box-width-2 .box-card__item, .gridder-box-width-3 .box-card__item, .gridder-box-width-4 .box-card__item {
-    -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-direction: row;
   }
 }
 .box-card__item:last-of-type {
@@ -5534,7 +7087,7 @@ input.search-form__submit {
 .box-card__field.theme-small, .theme-small.box-card__fieldset {
   margin-bottom: 0.5em;
 }
-.box-card__field.icon-university, .icon-university.box-card__fieldset {
+.box-card__field.icon--units-and-faculties, .icon--units-and-faculties.box-card__fieldset {
   font-weight: 700;
   font-style: normal;
   text-transform: capitalize;
@@ -5559,8 +7112,8 @@ input.search-form__submit {
   -moz-transform: translateY(-25%);
   -ms-transform: translateY(-25%);
   -transform: translateY(-25%);
-  content: 'L';
   color: #979797;
+  content: 'L';
   left: 0;
   position: absolute;
 }
@@ -5667,11 +7220,11 @@ input.search-form__submit {
     text-align: left;
   }
   .box-hero:before {
+    background: rgba(0, 0, 0, 0.2);
+    bottom: 0;
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
   }
 }
 @media (min-width: 75em) {
@@ -5721,12 +7274,12 @@ input.search-form__submit {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-flex-direction: row;
+    -webkit-align-items: center;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-direction: row;
     padding: 0 1em;
     text-align: left;
   }
@@ -5776,8 +7329,8 @@ input.search-form__submit {
   background: rgba(34, 34, 34, 0.3);
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJUlEQVQIW2NkYGDwYUCAzYxIApsZGBh8YQJgDkghSOA/jAMSAACdZgTocDscBAAAAABJRU5ErkJggg==);
   background-position: -1px 100%;
-  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   display: inline;
   line-height: 150%;
   padding: 0 0.5rem;
@@ -5879,17 +7432,97 @@ input.search-form__submit {
 
 a.box-hero__link,
 .box-hero__link > a {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
+  background: #178feb;
+  color: #FFF;
+  overflow: visible;
+  padding-left: 1em;
+  padding-right: 4em;
   font-weight: 600;
   font-style: normal;
   display: inline-block;
   padding-right: 6em;
   text-align: left;
 }
-
-.box-hero__link.is-videolink a:after {
+@media (min-width: 48em) {
+  a.box-hero__link,
+  .box-hero__link > a {
+    font-size: 15px;
+  }
+}
+a.box-hero__link:after,
+.box-hero__link > a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover a.box-hero__link:after, a.box-hero__link:hover:after, a:hover
+.box-hero__link > a:after,
+.box-hero__link > a:hover:after {
+  color: #0c5790;
+}
+a.box-hero__link:after,
+.box-hero__link > a:after {
+  transition-duration: 0.2s;
+  transition-property: color background-color;
+  background-color: #1073bf;
+  color: #FFF;
+  line-height: 2.8em;
+  margin-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+a.box-hero__link:hover,
+.box-hero__link > a:hover {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover a.box-hero__link:hover:after, a.box-hero__link:hover:after, a:hover
+.box-hero__link > a:hover:after,
+.box-hero__link > a:hover:after {
+  background: #083a61;
+  color: #FFF;
+}
+a:hover a.box-hero__link, a:hover
+.box-hero__link > a {
+  background-color: #0c5790;
+  color: #FFF;
+}
+a:hover a.box-hero__link:after, a:hover
+.box-hero__link > a:after {
+  background: #083a61;
+  color: #FFF;
+}
+
+.box-hero__link.is-videolink a:after {
+  display: inline-block;
   font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
   font-size: 26.25px;
   font-size: 1.875rem;
@@ -5911,9 +7544,9 @@ a.box-hero__link,
   position: absolute;
   top: 50%;
   margin: 0 auto;
-  text-align: center;
   padding: 10px;
   position: absolute;
+  text-align: center;
   width: 100%;
   z-index: 5;
 }
@@ -6023,10 +7656,10 @@ a.box-hero__link,
 .box-story {
   transition-property: background-color;
   transition-duration: 0.1s;
-  display: block;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  display: block;
   position: relative;
 }
 .box-story--liftup:active .box-story__title, .box-story--constrained:active .box-story__title,
@@ -6261,11 +7894,42 @@ a.box-hero__link,
 }
 
 .box-story__link {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
   font-weight: 600;
   font-style: normal;
   transition-duration: 0.1s;
   transition-property: color;
   color: #424242;
+}
+@media (min-width: 48em) {
+  .box-story__link {
+    font-size: 15px;
+  }
+}
+.box-story__link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .box-story__link:after, .box-story__link:hover:after {
+  color: #0c5790;
 }
 .box-story:active .box-story__link, .box-story:hover .box-story__link {
   color: #0c5790;
@@ -6288,9 +7952,9 @@ a.box-hero__link,
   padding-top: 56.25%;
 }
 .box-story__video > * {
-  position: absolute;
   bottom: 0;
   left: 0;
+  position: absolute;
   right: 0;
   top: 0;
 }
@@ -6363,8 +8027,8 @@ a.box-hero__link,
   font-style: normal;
   color: #979797;
   line-height: 1.5em;
-  overflow: visible;
   color: #777777;
+  overflow: visible;
 }
 @media (min-width: 48em) {
   .box-story--liftup .box-story__content {
@@ -6414,8 +8078,8 @@ a.box-hero__link,
 
 .box-story--constrained .box-story__topical {
   display: inline-block;
-  margin: 0;
   height: auto;
+  margin: 0;
 }
 
 .box-story--constrained .box-story__content .more-link {
@@ -6590,10 +8254,41 @@ a.box-hero__link,
   }
 }
 .box-subtitle__link a {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  display: block;
+  line-height: normal;
+  overflow: hidden;
+  padding-bottom: 0.8em;
+  padding-left: 0;
+  padding-top: 0.8em;
+  position: relative;
   font-size: 14px;
   font-size: 1rem;
   font-weight: 600;
   font-style: normal;
+}
+@media (min-width: 48em) {
+  .box-subtitle__link a {
+    font-size: 15px;
+  }
+}
+.box-subtitle__link a:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: inherit;
+  font-weight: 200;
+  height: 100%;
+  margin-left: 1em;
+}
+a:hover .box-subtitle__link a:after, .box-subtitle__link a:hover:after {
+  color: #0c5790;
 }
 @media (min-width: 48em) {
   .box-subtitle__link a {
@@ -6654,10 +8349,13 @@ a.box-hero__link,
 }
 
 .is-toggleable-mobile:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
+  content: "";
   font-size: 10.5px;
   font-size: 0.75rem;
   color: #178feb;
@@ -6670,13 +8368,47 @@ a.box-hero__link,
   }
 }
 .is-toggleable-mobile.is-active:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-  content: "";
+  content: "";
 }
 @media (min-width: 48em) {
   .is-toggleable-mobile:after {
     display: none;
   }
+}
+
+.is-overflown {
+  overflow: visible;
+}
+
+.is-overflow-expandable {
+  position: relative;
+}
+
+.is-hidden--mobile {
+  display: none;
+}
+@media (min-width: 48em) {
+  .is-hidden--mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 48em) {
+  .is-tel {
+    color: #222;
+  }
+}
+
+.is-unpublished:before {
+  background: #e5053a;
+  content: "Unpublished";
+  color: #FFF;
+  padding: 1px 5px;
+  z-index: 1000;
 }

@@ -12,24 +12,24 @@
   @include transition-duration(0.3s);
   @include transition-property(all);
   color: $black;
-  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex-direction: column;
+  -webkit-flex: 1 1 auto;
   flex-direction: column;
+  -webkit-flex-direction: column;
   line-height: 19px;
 
   &.theme-plain {
-    display: block;
     border: none;
+    display: block;
 
     .box-card__item {
       @include breakpoint($small) {
-        -webkit-flex-direction: row;
         flex-direction: row;
+        -webkit-flex-direction: row;
       }
 
       &:last-of-type {
-        border:none;
+        border: none;
       }
     }
 
@@ -53,29 +53,29 @@
   @include border-bottom;
   background-color: $darkwhite;
   font-weight: 700;
-  line-height: 19px;
   height: 55px;
+  line-height: 19px;
   padding: 1.25em;
 }
 
 .box-card__content {
   @include display-flex;
   background-color: $white;
-  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex-direction: column;
+  -webkit-flex: 1 1 auto;
   flex-direction: column;
+  -webkit-flex-direction: column;
   line-height: 19px;
   padding: 1.25em;
 }
 
 .box-card__item {
   @include display-flex;
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  flex-direction: column;
   border-bottom: 1px solid $lightsilver;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
 
@@ -83,8 +83,8 @@
     .gridder-box-width-2 &,
     .gridder-box-width-3 &,
     .gridder-box-width-4 & {
-      -webkit-flex-direction: row;
       flex-direction: row;
+      -webkit-flex-direction: row;
     }
   }
 
@@ -140,7 +140,7 @@
     margin-bottom: 0.5em;
   }
 
-  &.icon-university {
+  &.icon--units-and-faculties {
     @include font-weight-bold;
     text-transform: capitalize;
   }
@@ -167,8 +167,8 @@
 
     &:before {
       @include transform(translateY(-25%));
-      content: 'L';
       color: $silver;
+      content: 'L';
       left: 0;
       position: absolute;
     }
