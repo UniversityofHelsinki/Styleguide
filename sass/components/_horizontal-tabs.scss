@@ -10,7 +10,7 @@
 
   .horizontal-tabs-list {
     @include box-shadow(0 -1px 0 0 $lightsilver inset);
-    margin-bottom: $vert-spacing-unit*2;
+    margin-bottom: $vert-spacing-unit * 2;
   }
 
   .horizontal-tabs-pane {
@@ -58,7 +58,7 @@
       &.selected a,
       &:hover > a {
         @include transition-property(all);
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(255, 255, 255, 1);
         color: $darkblue;
       }
 

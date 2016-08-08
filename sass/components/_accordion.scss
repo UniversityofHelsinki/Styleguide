@@ -4,7 +4,6 @@
  description:
 */
 
-
 /*
  section: 6.3.1
  title: Accordion
@@ -18,10 +17,11 @@
 }
 
 .accordion__item {
-  margin-bottom: ($vert-spacing-unit)/2;
+  margin-bottom: $vert-spacing-unit / 2;
 }
 
 .accordion__title {
+  @extend %button--accordion;
   @include font-weight-medium;
   @include font-size(14px);
   text-transform: uppercase;
@@ -39,16 +39,16 @@
 
 .accordion--dark {
   .accordion__title {
-    padding: 0;
+    @extend %button;
     height: auto;
     line-height: 100%;
+    padding: 0;
 
     &.ui-state-active {
       background-color: $blue--active;
     }
   }
 }
-
 
 /*
  section: 6.3.2

@@ -107,14 +107,14 @@ li.main-menu__front {
   .is-open > & {
     &:before {
       @include icon("\EA24");
-      border-color: $darkblue;
       background-color: $darkblue;
+      border-color: $darkblue;
       color: $white;
     }
 
     &:hover:before {
-      border-color: $blue--active;
       background-color: $blue--active;
+      border-color: $blue--active;
     }
   }
 }
@@ -251,14 +251,14 @@ li.main-menu__front {
   > li {
     float: left;
     margin-right: -100%;
-    visibility: hidden;
     padding: 2em 0 20px;
+    visibility: hidden;
     width: 100%;
 
     &.is-open {
-      visibility: visible;
       display: block !important;
       margin-right: 0;
+      visibility: visible;
     }
   }
 }
@@ -319,7 +319,6 @@ li.main-menu__front {
   align-items: center;
   border: 1px solid lighten($silver, 20%);
   color: lighten($silver, 20%);
-  cursor: pointer;
   cursor: pointer;
   display: flex;
   height: 2em;

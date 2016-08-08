@@ -10,5 +10,5 @@
 
 .tag-list__item {
   @include text-tag;
-  @include tb-ball('after');
+  @include tb-ball("after");
 }

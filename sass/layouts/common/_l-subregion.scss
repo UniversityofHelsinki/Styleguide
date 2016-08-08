@@ -4,7 +4,7 @@
   position: relative;
 
   @include breakpoint($small) {
-    padding: $vert-spacing-unit+10 0;
+    padding: ($vert-spacing-unit + 10) 0;
   }
 
   &:nth-of-type(odd) {

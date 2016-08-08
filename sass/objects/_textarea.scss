@@ -4,66 +4,64 @@
 
 .textarea,
 %textarea {
-	@include font-family-bodytext;
-	@include font-size(18px);
-	line-height: 1.8em;
+  @include font-family-bodytext;
+  line-height: 1.8em;
 
-	ul, ol {
-		margin-bottom: $vert-spacing-unit;
-	}
+  ul, ol {
+    margin-bottom: $vert-spacing-unit;
+  }
 
-	li {
-		margin-bottom: 0.5em;
-	}
+  li {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+  }
 
-	ul {
-		padding-left: 1.5em;
-		position: relative;
+  ul {
+    padding-left: 1.5em;
+    position: relative;
 
-		li {
-			list-style-type: none;
+    li {
+      list-style-type: none;
 
-			&:before {
-				@include font-size(9px);
-				@include icon("\f111");
-				color: $blue;
-				left: 0;
-				margin-top: 1px;
-				position: absolute;
-			}
-		}
-	}
+      &:before {
+        @include font-size(9px);
+        @include icon("\f111");
+        left: 0;
+        margin-top: 1px;
+        position: absolute;
+      }
+    }
+  }
 
-	ol {
-		counter-reset: item;
-		padding-left: 1.5em;
-		position: relative;
+  ol {
+    counter-reset: item;
+    padding-left: 1.5em;
+    position: relative;
 
-		li {
-			display: block;
+    li {
+      display: block;
 
-			&:before {
-				@include font-family-main;
-				@include font-weight-bold;
-				color: $blue;
-				content: counter(item) ". ";
-				counter-increment: item;
-				left: 0;
-				line-height: 1.7em;
-				position: absolute;
-			}
-		}
-	}
+      &:before {
+        @include font-family-main;
+        @include font-weight-bold;
+        content: counter(item) ". ";
+        counter-increment: item;
+        left: 1px;
+        line-height: 1.7em;
+        position: absolute;
+      }
+    }
+  }
 
-	h3 {
-		@include font-size(24px);
-	}
+  h3 {
+    @include font-size(24px);
+  }
 
-	table {
-		@extend %table-simple;
-		line-height: normal;
-		margin-bottom: 2em;
-	}
+  table {
+    @extend %table-simple;
+    line-height: normal;
+    margin-bottom: 2em;
+  }
 }
 
 /**
@@ -73,9 +71,9 @@
 
 %textarea-initial,
 .textarea-initial {
-	float: left;
-	margin-bottom: 2em;
-	margin-right: 2em;
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
 }
 
 /**
@@ -91,5 +89,21 @@
 
   p {
     @extend .textarea-ingress;
+  }
+}
+
+%textarea-infobox,
+.textarea-infobox {
+  @include font-family-main;
+  background-color: $lightsilver;
+  margin-bottom: 2em;
+  padding: 1.5em;
+
+  p {
+    line-height: normal;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

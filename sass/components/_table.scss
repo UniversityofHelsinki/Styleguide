@@ -13,74 +13,74 @@
 //TODO: Should be in its own file
 
 .table-sortable {
-	thead {
-		tr {
-			border: 2px solid $gray;
+  thead {
+    tr {
+      border: 2px solid $gray;
 
-			th {
-				background: $darkgray;
-				color: $white;
-				padding: 0.6em 0.9em;
+      th {
+        background: $darkgray;
+        color: $white;
+        padding: 0.6em 0.9em;
 
-				&, a, a.active {
-					@include font-size(16px);
-					@include font-weight-bold;
-					color: $white;
-					text-decoration: none;
-					text-transform: uppercase;
+        &, a, a.active {
+          @include font-size(16px);
+          @include font-weight-bold;
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
 
-					&:hover {
-						text-decoration: underline;
-					}
-				}
+          &:hover {
+            text-decoration: underline;
+          }
+        }
 
-				&.active img {
-					margin-left: 0.5em
-				}
-			}
-		}
-	}
+        &.active img {
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
 
-	tbody {
-		tr {
-			td {
-				@include font-size(13px);
-				border: 2px dotted $lightsilver;
-				color: $gray;
-				padding: 1.2em 0.9em;
+  tbody {
+    tr {
+      td {
+        @include font-size(13px);
+        border: 2px dotted $lightsilver;
+        color: $gray;
+        padding: 1.2em 0.9em;
 
-				a, a.active {
-					color: $blue;
-					text-decoration: none;
+        a, a.active {
+          color: $blue;
+          text-decoration: none;
 
-					&:hover {
-						text-decoration: none;
-						color: $blue--active;
-					}
-				}
+          &:hover {
+            color: $blue--active;
+            text-decoration: none;
+          }
+        }
 
-				&.active {
-					color: $gray;
-				}
-			}
+        &.active {
+          color: $gray;
+        }
+      }
 
-			&.odd {
-				background-color: darken($white, 5%);
+      &.odd {
+        background-color: darken($white, 5%);
 
-				td.active {
-					background-color: darken($white, 10%);
-				}
-			}
+        td.active {
+          background-color: darken($white, 10%);
+        }
+      }
 
-			&.even {
-				background-color: $white;
+      &.even {
+        background-color: $white;
 
-				td.active {
-					background-color: darken($white, 5%);
-				}
-			}
-		}
-	}
+        td.active {
+          background-color: darken($white, 5%);
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -92,49 +92,49 @@
 //TODO: Should be in its own file
 %table-simple,
 .table-simple {
-	@include font-size(14px);
+  @include font-size(14px);
 
-	tr {
-		background-color: darken($white, 2%);
+  tr {
+    background-color: darken($white, 2%);
 
-		th {
-			background-color: darken($white, 5%);
-		}
+    th {
+      background-color: darken($white, 5%);
+    }
 
-		&:nth-of-type(2n) {
-			background-color: $white;
+    &:nth-of-type(2n) {
+      background-color: $white;
 
-			th {
-				background-color: darken($white, 2%);
-			}
-		}
-	}
+      th {
+        background-color: darken($white, 2%);
+      }
+    }
+  }
 
-	td, th {
-		@include font-family-main;
-		border: 2px dotted $lightsilver;
-		color: $gray;
-		padding: 0.7em 0.9em;
-		vertical-align: top;
+  td, th {
+    @include font-family-main;
+    border: 2px dotted $lightsilver;
+    color: $gray;
+    padding: 0.7em 0.9em;
+    vertical-align: top;
 
-		a, a.active {
-			color: $blue;
-			text-decoration: none;
+    a, a.active {
+      color: $blue;
+      text-decoration: none;
 
-			&:hover {
-				text-decoration: none;
-				color: $blue--active;
-			}
-		}
+      &:hover {
+        color: $blue--active;
+        text-decoration: none;
+      }
+    }
 
-		&.active {
-			color: $gray;
-		}
+    &.active {
+      color: $gray;
+    }
 
-		&:first-child {
-			@include font-weight-bold;
-		}
-	}
+    &:first-child {
+      @include font-weight-bold;
+    }
+  }
 }
 
 /**
@@ -143,8 +143,8 @@
 
 .is-table-wrapped {
   margin-bottom: 20px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 
   > table {
     display: none;
@@ -160,19 +160,19 @@
   }
 
   &:before {
-    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%));
+    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
     content: " ";
     height: 100%;
-    position: absolute;
     left: 35%;
     margin-left: -1em;
+    position: absolute;
     top: 0;
     width: 1em;
     z-index: 10;
   }
 
   &:after {
-    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0,0,0,0.0001) 100%));
+    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
     content: " ";
     height: 100%;
     position: absolute;

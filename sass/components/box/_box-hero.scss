@@ -14,11 +14,11 @@
     text-align: left;
 
     &:before {
+      background: rgba(0, 0, 0, 0.2);
+      bottom: 0;
       content: '';
       position: absolute;
       top: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -56,10 +56,10 @@
 
     @include breakpoint($small) {
       @include display-flex;
-      -webkit-align-items: center;
       align-items: center;
-      -webkit-flex-direction: row;
+      -webkit-align-items: center;
       flex-direction: row;
+      -webkit-flex-direction: row;
       padding: 0 1em;
       text-align: left;
     }
@@ -91,8 +91,8 @@
   background: rgba($black, 0.3);
   background: $raster-stripe;
   background-position: -1px 100%;
-  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   display: inline;
   line-height: 150%;
   padding: 0 0.5rem;
@@ -102,7 +102,8 @@
   @include font-size(40px);
   color: $white;
   line-height: 105%;
-  margin-bottom: $vert-spacing-unit*0.5; // 0.7 = 21px, 0.3 = 9px
+  margin-bottom: $vert-spacing-unit * 0.5;
+  // 0.7 = 21px, 0.3 = 9px
   padding: 0;
   word-wrap: break-word;
 
@@ -139,11 +140,12 @@
   color: $white;
   font-weight: 600;
   line-height: 1.25em;
-  margin-bottom: $vert-spacing-unit*0.7;
+  margin-bottom: $vert-spacing-unit * 0.7;
 }
 
 a.box-hero__link,
-.box-hero__link > a  {
+.box-hero__link > a {
+  @include button-next;
   @include font-weight-medium;
   display: inline-block;
   padding-right: 6em;
@@ -163,9 +165,9 @@ a.box-hero__link,
 .box-hero-plain {
   @include vertically-center;
   margin: 0 auto;
-  text-align: center;
   padding: 10px;
   position: absolute;
+  text-align: center;
   width: 100%;
   z-index: 5;
 

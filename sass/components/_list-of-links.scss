@@ -23,17 +23,36 @@
 }
 
 .list-of-links__link {
+  @include button-next-transparent;
+  @include font-weight-medium;
   margin-bottom: 2px;
+  padding-left: 10px;
+
+  &:hover {
+    &:after {
+      color: $white;
+    }
+  }
+
+  &:after {
+    height: auto;
+  }
+  .theme-dark & {
+    @include button-next;
+  }
 
   // Theme info footer
   .theme-footer &,
   .theme-info-footer & {
     @include border-side(bottom);
+    @include button-next-transparent;
     border-bottom-color: lighten($gray, 40%);
     color: lighten($darkgray, 10%);
 
+    &:before,
     &:after {
       color: $gray;
+      margin-top: -0.5em;
       position: absolute;
       right: 0;
       top: 50%;
@@ -42,6 +61,7 @@
     &:hover {
       color: $black;
 
+      &:before,
       &:after {
         color: $black;
       }
@@ -54,6 +74,7 @@
     color: $white;
     display: block;
 
+    &:before,
     &:after {
       color: $white;
     }
@@ -61,13 +82,13 @@
     &:hover {
       color: darken($white, 20%);
 
+      &:before,
       &:after {
         color: darken($white, 20%);
       }
     }
   }
 }
-
 
 /*
  section: 6.2.1
@@ -97,7 +118,8 @@
   .list-of-links__link {
     @include font-weight-book;
     @include font-size(14px);
-    padding-top: 0.8em;
     padding-bottom: 0.8em;
+    padding-top: 0.8em;
+    padding-left: 10px;
   }
 }
