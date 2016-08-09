@@ -18,25 +18,25 @@
   }
 }
 
-.<%= className %>-rotate-90 {
+.<%= className %>-rotate-90:after {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.<%= className %>-rotate-180 {
+.<%= className %>-rotate-180:after {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.<%= className %>-rotate-270 {
+.<%= className %>-rotate-270:after {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 @-webkit-keyframes <%= className %>-spin {
@@ -56,11 +56,11 @@
   to { transform: rotate(360deg); }
 }
 
-.<%= className %>-spin {
+.<%= className %>-spin:after {
   -webkit-animation: <%= className %>-spin 2s infinite linear;
   -moz-animation: <%= className %>-spin 2s infinite linear;
   -ms-animation: <%= className %>-spin 2s infinite linear;
-  -animation: <%= className %>-spin 2s infinite linear;
+  animation: <%= className %>-spin 2s infinite linear;
 }
 
 .<%= className %>:before {

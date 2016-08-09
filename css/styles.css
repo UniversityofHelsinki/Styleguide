@@ -1266,25 +1266,22 @@ video {
   font-weight: normal;
   font-style: normal;
 }
-.icon-rotate-90 {
+.icon-rotate-90:after {
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.icon-rotate-180 {
+.icon-rotate-180:after {
   -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.icon-rotate-270 {
+.icon-rotate-270:after {
   -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 @-webkit-keyframes icon-spin {
@@ -1305,11 +1302,9 @@ video {
     transform: rotate(360deg);
   }
 }
-.icon-spin {
+.icon-spin:after {
   -webkit-animation: icon-spin 2s infinite linear;
-  -moz-animation: icon-spin 2s infinite linear;
-  -ms-animation: icon-spin 2s infinite linear;
-  -animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 .icon:before {
@@ -2240,6 +2235,56 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--code-fork:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--cogs:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--external-link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--globe:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--image:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 @font-face {
@@ -2249,25 +2294,22 @@ video {
   font-weight: normal;
   font-style: normal;
 }
-.icon-rotate-90 {
+.icon-rotate-90:after {
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.icon-rotate-180 {
+.icon-rotate-180:after {
   -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.icon-rotate-270 {
+.icon-rotate-270:after {
   -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 @-webkit-keyframes icon-spin {
@@ -2288,11 +2330,9 @@ video {
     transform: rotate(360deg);
   }
 }
-.icon-spin {
+.icon-spin:after {
   -webkit-animation: icon-spin 2s infinite linear;
-  -moz-animation: icon-spin 2s infinite linear;
-  -ms-animation: icon-spin 2s infinite linear;
-  -animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 .icon:before {
@@ -3225,21 +3265,54 @@ video {
   content: "";
 }
 
-.icon--video:after {
+.icon--code-fork:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "";
-  font-size: 22.75px;
-  font-size: 1.625rem;
+  content: "";
 }
-@media (min-width: 48em) {
-  .icon--video:after {
-    font-size: 26px;
-  }
+
+.icon--cogs:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--external-link:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--globe:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--image:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 /*
