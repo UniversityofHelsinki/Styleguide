@@ -96,10 +96,6 @@
       padding: 5px 30px 5px 80px;
       text-transform: none;
     }
-
-    > ul.menu {
-      display: none;
-    }
   }
 }
 
@@ -293,6 +289,10 @@ li.main-menu__front {
       &.active-trail {
         color: $darkblue;
       }
+    }
+
+    > ul.menu {
+      display: none;
     }
   }
 }
