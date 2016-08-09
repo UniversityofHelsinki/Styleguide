@@ -2192,26 +2192,6 @@ video {
   content: "";
 }
 
-.icon--wrench:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-}
-
-.icon--youtube:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-}
-
 .icon--link-arrow-down:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -3173,26 +3153,6 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
-}
-
-.icon--wrench:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-}
-
-.icon--youtube:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
 }
 
 .icon--link-arrow-down:after {
@@ -5319,6 +5279,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
 }
 @media (min-width: 48em) {
   .main-menu > ul.menu {
+    margin: 0 auto;
+    max-width: 75em;
+    padding: 0 1em;
     border: none;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5377,6 +5340,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   color: #979797;
   padding: 5px 30px 5px 80px;
   text-transform: none;
+}
+.main-menu li.is-lvl3 > ul.menu {
+  display: none;
 }
 
 @media (min-width: 48em) {
@@ -5528,9 +5494,6 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   width: 100%;
   z-index: 11;
 }
-.logged-in .fatmenu {
-  position: static;
-}
 .stickynav-active .fatmenu {
   position: fixed;
 }
@@ -5561,6 +5524,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   display: block !important;
   margin-right: 0;
   visibility: visible;
+}
+.fatmenu li.is-lvl1 > ul.menu {
+  margin-bottom: 3em;
 }
 .fatmenu li.is-lvl2 {
   float: left;
