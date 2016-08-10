@@ -5677,9 +5677,8 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   }
 }
 .fatmenu__collapse:hover {
-  background-color: #0c5790;
-  border-color: #0c5790;
-  color: #FFF;
+  border-color: #979797;
+  color: #979797;
 }
 .fatmenu__collapse:before {
   display: inline-block;
@@ -6383,7 +6382,7 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   }
 }
 
-input.search-form__submit {
+.search-form__submit {
   border-radius: 0;
   display: inline-block;
   font-family: "hy-icons";
@@ -6401,7 +6400,7 @@ input.search-form__submit {
   right: 0;
   width: 2.5em;
 }
-.search-form__input:focus + input.search-form__submit:hover {
+.search-form__input:focus + .search-form__submit:hover {
   color: #FFF;
 }
 
