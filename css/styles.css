@@ -5513,10 +5513,6 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   border-color: #0c5790;
   color: #FFF;
 }
-.is-open > .main-menu__expand:hover:before {
-  background-color: #1073bf;
-  border-color: #1073bf;
-}
 
 /*
  section: 5.1.1
