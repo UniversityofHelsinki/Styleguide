@@ -5381,6 +5381,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   padding: 5px 30px 5px 80px;
   text-transform: none;
 }
+.main-menu li.is-lvl3 > ul.menu {
+  display: none;
+}
 
 @media (min-width: 48em) {
   li.main-menu__front {
