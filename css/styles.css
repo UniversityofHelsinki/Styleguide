@@ -2187,6 +2187,26 @@ video {
   content: "";
 }
 
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--youtube:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
 .icon--link-arrow-down:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -3283,6 +3303,26 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--youtube:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 .icon--link-arrow-down:after {
@@ -8387,41 +8427,10 @@ a:hover a.box-hero__link:after, a:hover
   }
 }
 .box-subtitle__link a {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  font-size: 13.125px;
-  font-size: 0.9375rem;
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-top: 0.8em;
-  position: relative;
   font-size: 14px;
   font-size: 1rem;
   font-weight: 600;
   font-style: normal;
-}
-@media (min-width: 48em) {
-  .box-subtitle__link a {
-    font-size: 15px;
-  }
-}
-.box-subtitle__link a:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  color: inherit;
-  font-weight: 200;
-  height: 100%;
-  margin-left: 1em;
-}
-a:hover .box-subtitle__link a:after, .box-subtitle__link a:hover:after {
-  color: #0c5790;
 }
 @media (min-width: 48em) {
   .box-subtitle__link a {
