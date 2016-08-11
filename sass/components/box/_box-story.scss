@@ -169,7 +169,6 @@
 }
 
 .box-story__link {
-  @include button-next-transparent;
   @include font-weight-medium;
   @include transition-duration(0.1s);
   @include transition-property(color);
