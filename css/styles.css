@@ -4958,14 +4958,11 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 .index__row {
   margin: 0.6em 0;
 }
-@media (min-width: 48em) {
-  .index__row {
-    padding-right: 8%;
-  }
-}
 
 .index__link {
   display: inline-block;
+  padding-bottom: 0;
+  padding-top: 0;
   overflow: visible;
 }
 
