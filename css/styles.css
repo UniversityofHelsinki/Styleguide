@@ -5312,41 +5312,10 @@ td.jobs-listing__date {
 }
 
 .list-of-links__link {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  font-size: 13.125px;
-  font-size: 0.9375rem;
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-top: 0.8em;
-  position: relative;
   font-weight: 600;
   font-style: normal;
   margin-bottom: 2px;
   padding-left: 10px;
-}
-@media (min-width: 48em) {
-  .list-of-links__link {
-    font-size: 15px;
-  }
-}
-.list-of-links__link:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  color: inherit;
-  font-weight: 200;
-  height: 100%;
-  margin-left: 1em;
-}
-a:hover .list-of-links__link:after, .list-of-links__link:hover:after {
-  color: #0c5790;
 }
 .list-of-links__link:hover:after {
   color: #FFF;
@@ -5425,39 +5394,8 @@ a:hover .theme-dark .list-of-links__link:after {
 }
 .theme-footer .list-of-links__link, .theme-info-footer .list-of-links__link {
   border-bottom: 1px solid #EBEBEB;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  font-size: 13.125px;
-  font-size: 0.9375rem;
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-top: 0.8em;
-  position: relative;
   border-bottom-color: #cccccc;
   color: #5c5c5c;
-}
-@media (min-width: 48em) {
-  .theme-footer .list-of-links__link, .theme-info-footer .list-of-links__link {
-    font-size: 15px;
-  }
-}
-.theme-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  color: inherit;
-  font-weight: 200;
-  height: 100%;
-  margin-left: 1em;
-}
-a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__link:hover:after, a:hover .theme-info-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:hover:after {
-  color: #0c5790;
 }
 .theme-footer .list-of-links__link:before, .theme-footer .list-of-links__link:after, .theme-info-footer .list-of-links__link:before, .theme-info-footer .list-of-links__link:after {
   color: #666;
