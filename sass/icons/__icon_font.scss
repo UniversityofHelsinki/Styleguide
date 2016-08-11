@@ -172,6 +172,8 @@
 .icon--arrow-left:after { @include icon("\EA67"); }
 .icon--arrow-right:after { @include icon("\EA68"); }
 .icon--arrow-up:after { @include icon("\EA69"); }
-.icon--greater-than:after { @include icon("\EA6A"); }
-.icon--less-than:after { @include icon("\EA6B"); }
 .icon--arrow-offsite:after { @include icon("\EA6C"); }
+.icon--caret-down:after { @include icon("\EA6D"); }
+.icon--caret-left:after { @include icon("\EA6E"); }
+.icon--caret-up:after { @include icon("\EA70"); }
+.icon--caret-right:after { @include icon("\EA71"); }
