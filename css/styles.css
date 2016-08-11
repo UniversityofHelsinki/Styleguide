@@ -2287,6 +2287,76 @@ video {
   content: "";
 }
 
+.icon--arrow-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-left:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-right:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-up:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--greater-than:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--less-than:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-offsite:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
 @font-face {
   font-family: 'hy-icons';
   src: url("../fonts/hy-icons.eot");
@@ -3313,6 +3383,76 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--arrow-down:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-left:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-right:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-up:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--greater-than:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--less-than:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--arrow-offsite:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 /*

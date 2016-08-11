@@ -168,3 +168,10 @@
 .icon--external-link:after { @include icon("\EA63"); }
 .icon--globe:after { @include icon("\EA64"); }
 .icon--image:after { @include icon("\EA65"); }
+.icon--arrow-down:after { @include icon("\EA66"); }
+.icon--arrow-left:after { @include icon("\EA67"); }
+.icon--arrow-right:after { @include icon("\EA68"); }
+.icon--arrow-up:after { @include icon("\EA69"); }
+.icon--greater-than:after { @include icon("\EA6A"); }
+.icon--less-than:after { @include icon("\EA6B"); }
+.icon--arrow-offsite:after { @include icon("\EA6C"); }
