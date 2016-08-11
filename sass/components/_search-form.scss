@@ -47,7 +47,7 @@
   }
 }
 
-input.search-form__submit {
+.search-form__submit {
   @include border-radius(0);
   @include icon(); // Unicode is provided by the form
   background-color: $blue;

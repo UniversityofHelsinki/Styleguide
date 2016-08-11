@@ -30,6 +30,7 @@
     border-bottom: 1px solid lighten($silver, 20%);
 
     @include breakpoint($small) {
+      @include container;
       border: none;
       display: flex;
       flex-flow: row wrap;
@@ -94,6 +95,10 @@
       color: $silver;
       padding: 5px 30px 5px 80px;
       text-transform: none;
+    }
+
+    > ul.menu {
+      display: none;
     }
   }
 }
@@ -182,11 +187,6 @@ li.main-menu__front {
       border-color: $darkblue;
       color: $white;
     }
-
-    &:hover:before {
-      background-color: $blue--active;
-      border-color: $blue--active;
-    }
   }
 }
 
@@ -205,10 +205,6 @@ li.main-menu__front {
   position: absolute;
   width: 100%;
   z-index: 11;
-
-  .logged-in & {
-    position: static;
-  }
 
   .stickynav-active & {
     position: fixed;
@@ -240,6 +236,10 @@ li.main-menu__front {
       display: block !important;
       margin-right: 0;
       visibility: visible;
+    }
+
+    > ul.menu {
+      margin-bottom: 3em;
     }
   }
 
@@ -289,6 +289,10 @@ li.main-menu__front {
         color: $darkblue;
       }
     }
+
+    > ul.menu {
+      display: none;
+    }
   }
 }
 
@@ -327,9 +331,8 @@ li.main-menu__front {
   width: 2em;
 
   &:hover {
-    background-color: $darkblue;
-    border-color: $darkblue;
-    color: $white;
+    border-color: $silver;
+    color: $silver;
   }
 
   &:before {

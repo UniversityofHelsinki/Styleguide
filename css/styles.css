@@ -5392,6 +5392,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
 }
 @media (min-width: 48em) {
   .main-menu > ul.menu {
+    margin: 0 auto;
+    max-width: 75em;
+    padding: 0 1em;
     border: none;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5450,6 +5453,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   color: #979797;
   padding: 5px 30px 5px 80px;
   text-transform: none;
+}
+.main-menu li.is-lvl3 > ul.menu {
+  display: none;
 }
 
 @media (min-width: 48em) {
@@ -5583,10 +5589,6 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   border-color: #0c5790;
   color: #FFF;
 }
-.is-open > .main-menu__expand:hover:before {
-  background-color: #1073bf;
-  border-color: #1073bf;
-}
 
 /*
  section: 5.1.1
@@ -5600,9 +5602,6 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   position: absolute;
   width: 100%;
   z-index: 11;
-}
-.logged-in .fatmenu {
-  position: static;
 }
 .stickynav-active .fatmenu {
   position: fixed;
@@ -5634,6 +5633,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   display: block !important;
   margin-right: 0;
   visibility: visible;
+}
+.fatmenu li.is-lvl1 > ul.menu {
+  margin-bottom: 3em;
 }
 .fatmenu li.is-lvl2 {
   float: left;
@@ -5686,6 +5688,9 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
 }
 .fatmenu li.is-lvl3 > a:hover, .fatmenu li.is-lvl3 > a.active-trail {
   color: #0c5790;
+}
+.fatmenu li.is-lvl3 > ul.menu {
+  display: none;
 }
 
 .fatmenu__title a {
@@ -5744,9 +5749,8 @@ a:hover .theme-footer .list-of-links__link:after, .theme-footer .list-of-links__
   }
 }
 .fatmenu__collapse:hover {
-  background-color: #0c5790;
-  border-color: #0c5790;
-  color: #FFF;
+  border-color: #979797;
+  color: #979797;
 }
 .fatmenu__collapse:before {
   display: inline-block;
@@ -6450,7 +6454,7 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   }
 }
 
-input.search-form__submit {
+.search-form__submit {
   border-radius: 0;
   display: inline-block;
   font-family: "hy-icons";
@@ -6468,7 +6472,7 @@ input.search-form__submit {
   right: 0;
   width: 2.5em;
 }
-.search-form__input:focus + input.search-form__submit:hover {
+.search-form__input:focus + .search-form__submit:hover {
   color: #FFF;
 }
 
