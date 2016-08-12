@@ -121,7 +121,12 @@
     padding-left: 0;
     padding-right: 0;
 
+    &:before {
+      display: none;
+    }
+
     &:after {
+      color: $blue;
       margin-left: 15px;
       line-height: 0;
       position: static;
@@ -131,10 +136,6 @@
     &:hover,
     &:before {
       background-color: transparent;
-    }
-
-    &:after {
-      color: $blue;
     }
 
     a:hover,
@@ -166,10 +167,15 @@
   &.theme-transparent {
     padding-left: 2em;
 
+    &:before {
+      display: none;
+    }
+
     &:after {
       margin: 0;
       position: absolute;
       text-align: left;
+      transform: none;
     }
   }
 }

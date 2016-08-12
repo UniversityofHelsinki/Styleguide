@@ -1,6 +1,7 @@
 /*
  section: 9.1
  title: Index
+*/
 
 /*
  section: 9.1.1
@@ -33,15 +34,12 @@
 
 .index__row {
   margin: 0.6em 0;
-
-  @include breakpoint($small) {
-    padding-right: 8%;
-  }
 }
 
 .index__link {
   display: inline-block;
-  overflow: visible;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 /*
