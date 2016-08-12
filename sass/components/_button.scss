@@ -13,6 +13,7 @@
 %button,
 .button {
   @include button;
+  @include font-family-main;
 
   &.theme-transparent {
     background-color: transparent;

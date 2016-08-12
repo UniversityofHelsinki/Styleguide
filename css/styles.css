@@ -3994,6 +3994,7 @@ dl, ol, ul {
   color: #FFF;
   cursor: pointer;
   padding: 0.8em 1em;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
 }
 @media (min-width: 48em) {
   .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .accordion__title,
