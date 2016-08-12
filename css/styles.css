@@ -7501,9 +7501,6 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   }
 }
 
-.box-hero.theme-prominent .box-hero__link > a {
-  margin-top: 21px;
-}
 .box-hero.theme-small {
   clear: none;
   float: none;
@@ -7553,6 +7550,7 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
 .box-hero.theme-small .box-hero__alt-title {
   font-size: 14px;
   font-size: 1rem;
+  margin: 0;
   padding: 0;
 }
 @media (min-width: 48em) {
