@@ -8431,7 +8431,7 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
 }
 
 .is-hidden {
-  display: none;
+  display: none !important;
 }
 
 .is-center {
