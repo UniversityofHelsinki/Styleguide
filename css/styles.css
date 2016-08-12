@@ -4339,6 +4339,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   font-size: 0.75rem;
   background: rgba(0, 0, 0, 0.6);
   bottom: 0;
+  color: #FFF;
   left: 0;
   padding: 10px 7px 10px 15px;
   position: absolute;
@@ -7335,13 +7336,10 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   font-style: normal;
   text-transform: capitalize;
 }
-.box-card__field:before, .box-card__fieldset:before {
-  font-weight: 400;
+.box-card__field:after, .box-card__fieldset:after {
   left: 0;
   position: absolute;
-  text-align: center;
   top: 1px;
-  width: 15px;
 }
 
 .box-card__fieldset a {
