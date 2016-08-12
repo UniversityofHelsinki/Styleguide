@@ -7674,90 +7674,12 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   }
 }
 
-a.box-hero__link,
-.box-hero__link > a {
-  transition-duration: 0.2s;
-  transition-property: color background-color;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  font-size: 13.125px;
-  font-size: 0.9375rem;
-  display: block;
-  line-height: normal;
-  overflow: hidden;
-  padding-bottom: 0.8em;
-  padding-left: 0;
-  padding-top: 0.8em;
-  position: relative;
-  background: #178feb;
-  color: #FFF;
-  overflow: visible;
-  padding-left: 1em;
-  padding-right: 4em;
+.box-hero__link {
   font-weight: 600;
   font-style: normal;
   display: inline-block;
   padding-right: 6em;
   text-align: left;
-}
-@media (min-width: 48em) {
-  a.box-hero__link,
-  .box-hero__link > a {
-    font-size: 15px;
-  }
-}
-a.box-hero__link:after,
-.box-hero__link > a:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  color: inherit;
-  font-weight: 200;
-  height: 100%;
-  margin-left: 1em;
-}
-a:hover a.box-hero__link:after, a.box-hero__link:hover:after, a:hover
-.box-hero__link > a:after,
-.box-hero__link > a:hover:after {
-  color: #0c5790;
-}
-a.box-hero__link:after,
-.box-hero__link > a:after {
-  transition-duration: 0.2s;
-  transition-property: color background-color;
-  background-color: #1073bf;
-  color: #FFF;
-  line-height: 2.8em;
-  margin-top: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-a.box-hero__link:hover,
-.box-hero__link > a:hover {
-  background-color: #0c5790;
-  color: #FFF;
-}
-a:hover a.box-hero__link:hover:after, a.box-hero__link:hover:after, a:hover
-.box-hero__link > a:hover:after,
-.box-hero__link > a:hover:after {
-  background: #083a61;
-  color: #FFF;
-}
-a:hover a.box-hero__link, a:hover
-.box-hero__link > a {
-  background-color: #0c5790;
-  color: #FFF;
-}
-a:hover a.box-hero__link:after, a:hover
-.box-hero__link > a:after {
-  background: #083a61;
-  color: #FFF;
 }
 
 .box-hero__link.is-videolink a:after {

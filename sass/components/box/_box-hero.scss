@@ -143,9 +143,7 @@
   margin-bottom: $vert-spacing-unit * 0.7;
 }
 
-a.box-hero__link,
-.box-hero__link > a {
-  @include button-next;
+.box-hero__link {
   @include font-weight-medium;
   display: inline-block;
   padding-right: 6em;
