@@ -9,7 +9,9 @@
   display: block;
   margin-bottom: 0.5em;
 
-  &.theme-colored {
+  &.theme-colored:after {
     float: left;
+    padding-right: 5px;
+    font-size: 2em;
   }
 }
