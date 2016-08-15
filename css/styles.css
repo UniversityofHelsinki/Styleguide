@@ -3983,7 +3983,7 @@ dl, ol, ul {
 .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .accordion__title,
 .button--accordion,
 .button--action-before,
-.button--action, .button--anchor, .button--expand, .horizontal-tabs .horizontal-tab-button > a,
+.button--action, .button--anchor, .button--expand, .button--icon, .horizontal-tabs .horizontal-tab-button > a,
 .button {
   transition-duration: 0.1s;
   transition-property: all;
@@ -4000,7 +4000,7 @@ dl, ol, ul {
   .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .accordion__title,
   .button--accordion,
   .button--action-before,
-  .button--action, .button--anchor, .button--expand, .horizontal-tabs .horizontal-tab-button > a,
+  .button--action, .button--anchor, .button--expand, .button--icon, .horizontal-tabs .horizontal-tab-button > a,
   .button {
     font-size: 15px;
   }
@@ -4008,7 +4008,7 @@ dl, ol, ul {
 input[type="submit"]:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
-.button--action:hover, .button--anchor:hover, .button--expand:hover, .horizontal-tabs .horizontal-tab-button > a:hover,
+.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, .horizontal-tabs .horizontal-tab-button > a:hover,
 .button:hover {
   background-color: #0c5790;
   color: #FFF;
@@ -4016,10 +4016,10 @@ input[type="submit"]:hover, .accordion__title:hover,
 .form-type-search input[type="submit"]:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .horizontal-tabs .horizontal-tab-button > a:before, .form-type-search input[type="submit"]:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .accordion__title:after,
+.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, .horizontal-tabs .horizontal-tab-button > a:before, .form-type-search input[type="submit"]:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .accordion__title:after,
 .button--accordion:after,
 .button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .horizontal-tabs .horizontal-tab-button > a:after,
+.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, .horizontal-tabs .horizontal-tab-button > a:after,
 .button:before,
 .button:after {
   transition-duration: 0.1s;
@@ -4028,7 +4028,7 @@ input[type="submit"]:hover, .accordion__title:hover,
 input.theme-transparent[type="submit"], .theme-transparent.accordion__title,
 .theme-transparent.button--accordion,
 .theme-transparent.button--action-before,
-.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .horizontal-tabs .horizontal-tab-button > a.theme-transparent,
+.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, .horizontal-tabs .horizontal-tab-button > a.theme-transparent,
 .button.theme-transparent {
   background-color: transparent;
   color: #178feb;
@@ -4036,17 +4036,17 @@ input.theme-transparent[type="submit"], .theme-transparent.accordion__title,
 input.theme-transparent[type="submit"]:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
 .button.theme-transparent:hover {
   background-color: #178feb;
 }
 input.theme-transparent[type="submit"] a:hover, .theme-transparent.accordion__title a:hover,
 .theme-transparent.button--accordion a:hover,
 .theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent.accordion__title:hover,
+.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover,
 .button.theme-transparent a:hover,
 .button.theme-transparent:hover {
   color: #FFF;
@@ -4268,8 +4268,74 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 /*
  section: 3.5.6
+ title: Button icon
+ template: 3_5_6-button--icon
+ description:
+*/
+.button--icon {
+  font-size: 24.5px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #FFF;
+  display: inline-block;
+  line-height: 0.8em;
+  padding: 0.5em 0.4em;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .button--icon {
+    font-size: 28px;
+  }
+}
+.button--icon:after {
+  padding-left: 2px;
+}
+.button--icon.icon--facebook {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #547bb9;
+}
+.button--icon.icon--facebook:hover {
+  background-color: #3f639b;
+}
+.button--icon.icon--twitter {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #5ea9dd;
+}
+.button--icon.icon--twitter:hover {
+  background-color: #3493d4;
+}
+.button--icon.icon--youtube {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #e6644a;
+}
+.button--icon.icon--youtube:hover {
+  background-color: #de3f1f;
+}
+.button--icon.icon--linkedin {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #1483c4;
+}
+.button--icon.icon--linkedin:hover {
+  background-color: #0f6496;
+}
+.button--icon.icon--instagram {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #125688;
+}
+.button--icon.icon--instagram:hover {
+  background-color: #0c3a5b;
+}
+
+/*
+ section: 3.5.7
  title: Button group
- template: 3_5_6-button-group
+ template: 3_5_7-button-group
  description:
 */
 .button-group--small,
@@ -4286,9 +4352,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.7
+ section: 3.5.8
  title: Button group small
- template: 3_5_7-button-group--small
+ template: 3_5_8-button-group--small
  description:
 */
 .button-group--small > .button {
