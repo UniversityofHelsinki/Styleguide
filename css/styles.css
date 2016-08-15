@@ -1453,6 +1453,16 @@ video {
   content: "";
 }
 
+.icon--google-plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
 @font-face {
   font-family: 'hy-icons';
   src: url("../fonts/hy-icons.eot");
@@ -2599,6 +2609,16 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--google-plus:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 .bar, .tube {
@@ -6839,12 +6859,6 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
 .some-links {
   margin-top: 1em;
 }
-.some-links .icon:before {
-  color: #178feb;
-}
-.some-links .icon:hover:before {
-  color: #0c5790;
-}
 
 .some-links__link {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
@@ -6859,6 +6873,9 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   .some-links__link {
     font-size: 13px;
   }
+}
+.some-links__link.theme-colored {
+  float: left;
 }
 
 /*
