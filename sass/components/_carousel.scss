@@ -120,9 +120,7 @@
       left: 0;
 
       &:before {
-        @include icon("\EA03");
-        transform: rotate(180deg) translateY(-50%);
-        transform-origin: 50% 0;
+        @include icon($icon-caret-left);
       }
     }
 
@@ -130,7 +128,7 @@
       right: 0;
 
       &:before {
-        @include icon("\EA03");
+        @include icon($icon-caret-right);
       }
     }
   }
@@ -229,9 +227,7 @@
       left: 0;
 
       &:before {
-        @include icon("\EA03");
-        transform: rotate(180deg) translateY(-50%);
-        transform-origin: 50% 0;
+        @include icon($icon-caret-left);
       }
     }
 
@@ -240,7 +236,7 @@
       right: 0;
 
       &:before {
-        @include icon("\EA03");
+        @include icon($icon-caret-right);
       }
     }
   }
