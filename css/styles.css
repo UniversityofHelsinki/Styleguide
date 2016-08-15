@@ -4289,7 +4289,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 .button--icon:after {
-  padding-left: 2px;
+  padding-left: 3px;
 }
 .button--icon.icon--facebook {
   transition-duration: 0.1s;
@@ -4405,6 +4405,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   font-size: 0.75rem;
   background: rgba(0, 0, 0, 0.6);
   bottom: 0;
+  color: #FFF;
   left: 0;
   padding: 10px 7px 10px 15px;
   position: absolute;
@@ -7401,13 +7402,10 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   font-style: normal;
   text-transform: capitalize;
 }
-.box-card__field:before, .box-card__fieldset:before {
-  font-weight: 400;
+.box-card__field:after, .box-card__fieldset:after {
   left: 0;
   position: absolute;
-  text-align: center;
   top: 1px;
-  width: 15px;
 }
 
 .box-card__fieldset a {
@@ -7569,9 +7567,6 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   }
 }
 
-.box-hero.theme-prominent .box-hero__link > a {
-  margin-top: 21px;
-}
 .box-hero.theme-small {
   clear: none;
   float: none;
@@ -7621,6 +7616,7 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
 .box-hero.theme-small .box-hero__alt-title {
   font-size: 14px;
   font-size: 1rem;
+  margin: 0;
   padding: 0;
 }
 @media (min-width: 48em) {
@@ -7681,6 +7677,8 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
   color: #FFF;
   letter-spacing: normal;
   line-height: 105%;
+  margin-bottom: 20px;
+  padding: 0;
   text-transform: none;
   word-wrap: break-word;
 }
