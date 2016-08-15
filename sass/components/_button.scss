@@ -236,7 +236,9 @@
   text-align: center;
 
   &:after {
+    @include font-size(28px);
     padding-left: 3px;
+    vertical-align: baseline
   }
 
   &.icon--facebook {

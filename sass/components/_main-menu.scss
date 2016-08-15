@@ -118,7 +118,7 @@ li.main-menu__front {
       padding-right: 19px;
 
       &:after {
-        @include icon("\EA16");
+        @include icon($icon-home);
         @include font-size(16px);
         @include font-weight-light;
         @include transition-element(opacity, 0.2s);
@@ -142,7 +142,7 @@ li.main-menu__front {
 
   &:before {
     @include font-size(14px);
-    @include icon("\EA2F");
+    @include icon($icon-plus);
     @include transition-duration(0.2s);
     @include transition-property(color, border-color);
     border: 1px solid lighten($silver, 20%);
@@ -182,7 +182,7 @@ li.main-menu__front {
 
   .is-open > & {
     &:before {
-      @include icon("\EA24");
+      @include icon($icon-minus);
       background-color: $darkblue;
       border-color: $darkblue;
       color: $white;
@@ -306,7 +306,7 @@ li.main-menu__front {
 
     &:after {
       @include font-size(16px);
-      @include icon("\EA1B");
+      @include icon($icon-link-arrow);
       margin-left: 1em;
       position: absolute;
     }
@@ -336,6 +336,6 @@ li.main-menu__front {
   }
 
   &:before {
-    @include icon("\EA24");
+    @include icon($icon-minus);
   }
 }

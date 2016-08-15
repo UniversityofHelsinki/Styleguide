@@ -150,7 +150,7 @@
 
 .box-hero__link.is-videolink {
   a:after {
-    @include icon('\f01d');
+    @include icon($icon-video);
     @include font-size(30px);
     @include font-weight-light;
     line-height: 45px;

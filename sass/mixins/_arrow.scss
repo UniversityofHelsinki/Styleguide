@@ -32,7 +32,7 @@
 }
 
 @mixin arrow-internal {
-  @include icon("\f061");
+  @include icon($icon-link-arrow);
   color: $blue;
 }
 
