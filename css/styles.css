@@ -5601,7 +5601,6 @@ a:hover .theme-dark .list-of-links__link:after {
   font-size: 0.875rem;
   padding-bottom: 0.8em;
   padding-top: 0.8em;
-  padding-left: 10px;
 }
 @media (min-width: 48em) {
   .list-of-links--condensed .list-of-links__link {
