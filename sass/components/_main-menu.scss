@@ -11,6 +11,10 @@
 
   @include breakpoint($small) {
     border-bottom: 1px solid lighten($silver, 20%);
+
+    &.is-open {
+      border-bottom: none;
+    }
   }
 
   li {

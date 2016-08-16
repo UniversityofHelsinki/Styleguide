@@ -5622,6 +5622,9 @@ a:hover .theme-dark .list-of-links__link:after {
   .main-menu {
     border-bottom: 1px solid #cacaca;
   }
+  .main-menu.is-open {
+    border-bottom: none;
+  }
 }
 .main-menu li {
   display: -webkit-flex;
