@@ -6873,8 +6873,10 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
     font-size: 13px;
   }
 }
-.some-links__link.theme-colored {
+.some-links__link.theme-colored:after {
   float: left;
+  padding-right: 5px;
+  font-size: 2em;
 }
 
 /*
