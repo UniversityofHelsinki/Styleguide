@@ -5616,8 +5616,15 @@ a:hover .theme-dark .list-of-links__link:after {
 */
 .main-menu {
   background-color: #FFF;
-  border-bottom: 1px solid #cacaca;
   overflow: hidden;
+}
+@media (min-width: 48em) {
+  .main-menu {
+    border-bottom: 1px solid #cacaca;
+  }
+  .main-menu.is-open {
+    border-bottom: none;
+  }
 }
 .main-menu li {
   display: -webkit-flex;
