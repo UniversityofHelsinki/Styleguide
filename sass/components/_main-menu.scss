@@ -9,6 +9,10 @@
   background-color: $white;
   overflow: hidden;
 
+  @include breakpoint($small) {
+    border-bottom: 1px solid lighten($silver, 20%);
+  }
+
   li {
     display: flex;
     flex-flow: column wrap;

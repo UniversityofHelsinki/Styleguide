@@ -5618,6 +5618,11 @@ a:hover .theme-dark .list-of-links__link:after {
   background-color: #FFF;
   overflow: hidden;
 }
+@media (min-width: 48em) {
+  .main-menu {
+    border-bottom: 1px solid #cacaca;
+  }
+}
 .main-menu li {
   display: -webkit-flex;
   display: -ms-flexbox;
