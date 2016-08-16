@@ -149,10 +149,9 @@ li.main-menu__front {
 
   &:before {
     @include font-size(14px);
-    @include icon($icon-plus);
+    @include icon($icon-caret-down);
     @include transition-duration(0.2s);
     @include transition-property(color, border-color);
-    border: 1px solid lighten($silver, 20%);
     color: lighten($silver, 20%);
     cursor: pointer;
     display: inline-block;
@@ -164,7 +163,6 @@ li.main-menu__front {
   }
 
   &:hover:before {
-    border-color: $silver;
     color: $silver;
   }
 
@@ -189,10 +187,12 @@ li.main-menu__front {
 
   .is-open > & {
     &:before {
-      @include icon($icon-minus);
-      background-color: $darkblue;
-      border-color: $darkblue;
-      color: $white;
+      @include icon($icon-caret-up);
+      color: $blue;
+    }
+
+    &:hover:before {
+      color: $darkblue;
     }
   }
 }
@@ -322,10 +322,9 @@ li.main-menu__front {
 
 .fatmenu__collapse {
   @include font-weight-medium;
-  @include font-size(16px);
+  @include font-size(20px);
   align-items: center;
-  border: 1px solid lighten($silver, 20%);
-  color: lighten($silver, 20%);
+  color: $blue;
   cursor: pointer;
   display: flex;
   height: 2em;
@@ -338,11 +337,10 @@ li.main-menu__front {
   width: 2em;
 
   &:hover {
-    border-color: $silver;
-    color: $silver;
+    color: $darkblue;
   }
 
   &:before {
-    @include icon($icon-minus);
+    @include icon($icon-caret-up);
   }
 }
