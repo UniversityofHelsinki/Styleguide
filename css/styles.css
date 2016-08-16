@@ -5616,7 +5616,6 @@ a:hover .theme-dark .list-of-links__link:after {
 */
 .main-menu {
   background-color: #FFF;
-  border-bottom: 1px solid #cacaca;
   overflow: hidden;
 }
 .main-menu li {
