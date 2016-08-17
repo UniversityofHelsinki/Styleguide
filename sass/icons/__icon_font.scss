@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'hy-icons';
+  src: url('../fonts/hy-icons.eot');
+  src: url('../fonts/hy-icons.eot?#iefix') format('eot'), url('../fonts/hy-icons.woff') format('woff'), url('../fonts/hy-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin icon($unicode : "") {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @if ($unicode) {
+    content: $unicode;
+  }
+}
+
+.icon-rotate-90:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180:after {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270:after {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+@-webkit-keyframes icon-spin {
+  from   { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes icon-spin {
+  from   { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-o-keyframes icon-spin {
+  from   { -o-transform: rotate(0deg); }
+  to { -o-transform: rotate(360deg); }
+}
+@keyframes icon-spin {
+  from   { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icon-spin:after {
+  -webkit-animation: icon-spin 2s infinite linear;
+  -moz-animation: icon-spin 2s infinite linear;
+  -ms-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+
+.icon:before {
+  box-sizing: border-box;
+}
+
+.icon-2x { font-size: 2em; }
+.icon-3x { font-size: 3em; }
+.icon-4x { font-size: 4em; }
+.icon-5x { font-size: 5em; }
+
+.icon--add-to-todo-list:after { @include icon("\EA01"); }
+.icon--arrow:after { @include icon("\EA03"); }
+.icon--avatar-group:after { @include icon("\EA04"); }
+.icon--avatar:after { @include icon("\EA05"); }
+.icon--bachelor:after { @include icon("\EA06"); }
+.icon--camera:after { @include icon("\EA07"); }
+.icon--chat:after { @include icon("\EA08"); }
+.icon--date:after { @include icon("\EA09"); }
+.icon--discover:after { @include icon("\EA0A"); }
+.icon--done:after { @include icon("\EA0B"); }
+.icon--download:after { @include icon("\EA0C"); }
+.icon--drag:after { @include icon("\EA0D"); }
+.icon--drop-down:after { @include icon("\EA0E"); }
+.icon--edit-event:after { @include icon("\EA0F"); }
+.icon--edit:after { @include icon("\EA10"); }
+.icon--events:after { @include icon("\EA11"); }
+.icon--facebook:after { @include icon("\EA12"); }
+.icon--favorites:after { @include icon("\EA13"); }
+.icon--grid:after { @include icon("\EA14"); }
+.icon--hamburger:after { @include icon("\EA15"); }
+.icon--home:after { @include icon("\EA16"); }
+.icon--hy-logo:after { @include icon("\EA17"); }
+.icon--info-stroke:after { @include icon("\EA18"); }
+.icon--info:after { @include icon("\EA19"); }
+.icon--link-arrow-offsite:after { @include icon("\EA1A"); }
+.icon--link-arrow:after { @include icon("\EA1B"); }
+.icon--linkedin:after { @include icon("\EA1C"); }
+.icon--list:after { @include icon("\EA1D"); }
+.icon--location:after { @include icon("\EA1E"); }
+.icon--log:after { @include icon("\EA1F"); }
+.icon--logout:after { @include icon("\EA20"); }
+.icon--magnify-minus:after { @include icon("\EA21"); }
+.icon--magnify-plus:after { @include icon("\EA22"); }
+.icon--master:after { @include icon("\EA23"); }
+.icon--minus:after { @include icon("\EA24"); }
+.icon--modify:after { @include icon("\EA25"); }
+.icon--navi-triangle:after { @include icon("\EA26"); }
+.icon--new-group:after { @include icon("\EA27"); }
+.icon--new-person:after { @include icon("\EA28"); }
+.icon--notification:after { @include icon("\EA29"); }
+.icon--opinder-logo-new:after { @include icon("\EA2A"); }
+.icon--pdf:after { @include icon("\EA2B"); }
+.icon--people:after { @include icon("\EA2C"); }
+.icon--person-outline:after { @include icon("\EA2D"); }
+.icon--person:after { @include icon("\EA2E"); }
+.icon--plus:after { @include icon("\EA2F"); }
+.icon--profile:after { @include icon("\EA30"); }
+.icon--question:after { @include icon("\EA31"); }
+.icon--remove:after { @include icon("\EA32"); }
+.icon--rotate-left:after { @include icon("\EA33"); }
+.icon--rotate-right:after { @include icon("\EA34"); }
+.icon--search:after { @include icon("\EA35"); }
+.icon--time:after { @include icon("\EA36"); }
+.icon--todo-list:after { @include icon("\EA37"); }
+.icon--tour:after { @include icon("\EA38"); }
+.icon--twitter:after { @include icon("\EA39"); }
+.icon--units-and-faculties:after { @include icon("\EA3A"); }
+.icon--video:after { @include icon("\EA3B"); }
+.icon--warning:after { @include icon("\EA3C"); }
+.icon--id-number:after { @include icon("\EA3E"); }
+.icon--mail:after { @include icon("\EA3F"); }
+.icon--mobile:after { @include icon("\EA40"); }
+.icon--opinder-logo:after { @include icon("\EA41"); }
+.icon--permission-all:after { @include icon("\EA42"); }
+.icon--permission-group:after { @include icon("\EA43"); }
+.icon--permission-private:after { @include icon("\EA44"); }
+.icon--phone:after { @include icon("\EA45"); }
+.icon--preview:after { @include icon("\EA46"); }
+.icon--url:after { @include icon("\EA47"); }
+.icon--instagram:after { @include icon("\EA48"); }
+.icon--login:after { @include icon("\EA49"); }
+.icon--spinner:after { @include icon("\EA4A"); }
+.icon--bullet-list:after { @include icon("\EA4C"); }
+.icon--contentlink:after { @include icon("\EA4D"); }
+.icon--customlink:after { @include icon("\EA4E"); }
+.icon--dragbutton:after { @include icon("\EA4F"); }
+.icon--embed:after { @include icon("\EA51"); }
+.icon--feed:after { @include icon("\EA52"); }
+.icon--file-text:after { @include icon("\EA53"); }
+.icon--helsinginyliopisto:after { @include icon("\EA54"); }
+.icon--horizontal-resize:after { @include icon("\EA55"); }
+.icon--image-gallery:after { @include icon("\EA56"); }
+.icon--images:after { @include icon("\EA57"); }
+.icon--leiki-list:after { @include icon("\EA58"); }
+.icon--listoflinks:after { @include icon("\EA59"); }
+.icon--play:after { @include icon("\EA5A"); }
+.icon--wrench:after { @include icon("\EA5B"); }
+.icon--youtube:after { @include icon("\EA5D"); }
+.icon--link-arrow-down:after { @include icon("\EA5E"); }
+.icon--link-arrow-left:after { @include icon("\EA5F"); }
+.icon--link-arrow-up:after { @include icon("\EA60"); }
+.icon--code-fork:after { @include icon("\EA61"); }
+.icon--cogs:after { @include icon("\EA62"); }
+.icon--external-link:after { @include icon("\EA63"); }
+.icon--globe:after { @include icon("\EA64"); }
+.icon--image:after { @include icon("\EA65"); }
+.icon--arrow-down:after { @include icon("\EA66"); }
+.icon--arrow-left:after { @include icon("\EA67"); }
+.icon--arrow-right:after { @include icon("\EA68"); }
+.icon--arrow-up:after { @include icon("\EA69"); }
+.icon--arrow-offsite:after { @include icon("\EA6C"); }
+.icon--caret-down:after { @include icon("\EA6D"); }
+.icon--caret-left:after { @include icon("\EA6E"); }
+.icon--caret-up:after { @include icon("\EA70"); }
+.icon--caret-right:after { @include icon("\EA71"); }
+.icon--list-as-blocks:after { @include icon("\EA72"); }
+.icon--social-media:after { @include icon("\EA73"); }
+.icon--dot:after { @include icon("\EA74"); }
+.icon--google-plus:after { @include icon("\EA75"); }

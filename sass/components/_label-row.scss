@@ -1,0 +1,42 @@
+/*
+ section: 14.1
+ title: Label row
+ template: 14_1_1-label-row
+*/
+
+.label-row {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.label-row__item {
+  @include label;
+  border-bottom: 1px solid $blue--active;
+  border-top: 1px solid $blue--active;
+  display: inline-block;
+  height: 2.2em;
+  position: relative;
+  z-index: 1;
+
+  &.theme-secondary {
+    background: none;
+    color: $blue--active;
+    left: 0;
+    padding-right: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &.theme-yliopisto-lehti {
+    background-color: $orange;
+    border-color: $orange;
+
+    &.theme-secondary {
+      background: none;
+      color: $orange;
+    }
+  }
+}

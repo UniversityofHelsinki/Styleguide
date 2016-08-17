@@ -1,0 +1,181 @@
+/*
+ section: 6.10.8
+ title: Box card
+ template: 6_10_8_box-card
+ description: Displays contact card type information.
+*/
+%box-card,
+.box-card {
+  @include border;
+  @include display-flex;
+  @include font-size(14px);
+  @include transition-duration(0.3s);
+  @include transition-property(all);
+  color: $black;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  line-height: 19px;
+
+  &.theme-plain {
+    border: none;
+    display: block;
+
+    .box-card__item {
+      @include breakpoint($small) {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+      }
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .box-card__section {
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      @include breakpoint($small) {
+        width: 60%;
+
+        &.theme-secondary {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+.box-card__header {
+  @include border-bottom;
+  background-color: $darkwhite;
+  font-weight: 700;
+  height: 55px;
+  line-height: 19px;
+  padding: 1.25em;
+}
+
+.box-card__content {
+  @include display-flex;
+  background-color: $white;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  line-height: 19px;
+  padding: 1.25em;
+}
+
+.box-card__item {
+  @include display-flex;
+  border-bottom: 1px solid $lightsilver;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+
+  @include breakpoint($small) {
+    .gridder-box-width-2 &,
+    .gridder-box-width-3 &,
+    .gridder-box-width-4 & {
+      flex-direction: row;
+      -webkit-flex-direction: row;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.box-card__section {
+  @include breakpoint($small) {
+    .gridder-box-width-2 &,
+    .gridder-box-width-3 &,
+    .gridder-box-width-4 & {
+      border-bottom: none;
+      border-right: 1px solid $lightsilver;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    .gridder-box-width-2 &,
+    .gridder-box-width-3 &,
+    .gridder-box-width-4 & {
+      width: 31%;
+
+      &.theme-secondary {
+        @include display-flex;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 66%;
+
+        .box-card__field-wrapper {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  &.theme-secondary {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.box-card__field {
+  margin-bottom: 1em;
+  padding: 0 2em;
+  position: relative;
+  word-wrap: break-word;
+
+  &.theme-small {
+    margin-bottom: 0.5em;
+  }
+
+  &.icon--units-and-faculties {
+    @include font-weight-bold;
+    text-transform: capitalize;
+  }
+
+  // Icons
+  &:after {
+    left: 0;
+    position: absolute;
+    top: 1px;
+  }
+}
+
+.box-card__fieldset {
+  @extend .box-card__field;
+
+  a {
+    display: block;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    position: relative;
+
+    &:before {
+      @include transform(translateY(-25%));
+      color: $silver;
+      content: 'L';
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+.box-card__link {
+  @include font-weight-medium;
+  @include transition-duration(0.1s);
+  @include transition-property(color);
+  align-self: flex-end;
+  margin-top: auto;
+}

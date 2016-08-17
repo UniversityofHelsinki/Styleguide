@@ -4,31 +4,29 @@
  description:
 */
 
-
 $messages: (
-	'status': (
-		'color': $black,
-		'color-alt': #81b43b,
-		'bg-color': #b2e576,
-		'bg-color-alt': #f2f7eb,
-		'icon': '\EA0B',
-	),
-	'info': (
-		'color': $white,
-		'color-alt': $black,
-		'bg-color': #52c6af,
-		'bg-color-alt': #f8f8f8,
-		'icon': '\EA18',
-	),
-	'error': (
-		'color': $white,
-		'color-alt': #964822,
-		'bg-color': #964822,
-		'bg-color-alt': #f4ece8,
-		'icon': '\EA3C',
-	)
+  "status": (
+    "color": $black,
+    "color-alt": #81b43b,
+    "bg-color": #b2e576,
+    "bg-color-alt": #f2f7eb,
+    "icon": $icon-done,
+  ),
+  "info": (
+    "color": $white,
+    "color-alt": $black,
+    "bg-color": #52c6af,
+    "bg-color-alt": #f8f8f8,
+    "icon": $icon-info,
+  ),
+  "error": (
+    "color": $white,
+    "color-alt": #964822,
+    "bg-color": #964822,
+    "bg-color-alt": #f4ece8,
+    "icon": $icon-warning,
+  )
 );
-
 
 /*
  section: 6.12.1
@@ -51,38 +49,43 @@ $messages: (
  description: Used for displaying error messages to the user.
 */
 .messages {
-	@include font-size(12px);
-	text-align: center;
-	padding: 1.3em 0;
-	p {
-		@include font-family-main;
-		margin: 0;
-		padding: 0;
-		font-size: inherit;
-	}
-	a {
-		@include font-weight-bold;
-	}
-	@each $name, $type in $messages {
-		&.#{$name} {
-			background-color: map-get(map-get($messages, $name), "bg-color");
-			color: map-get(map-get($messages, $name), "color");
-			* {
-				color: map-get(map-get($messages, $name), "color");
-			}
-			&.alternative {
-				background-color: map-get(map-get($messages, $name), "bg-color-alt");
-				color: map-get(map-get($messages, $name), "color-alt");
-				* {
-					color: map-get(map-get($messages, $name), "color-alt");
-				}
-			}
-			p:before,
-			li:before {
-				@include icon(map-get(map-get($messages, $name), "icon"));
-				font-size: 1.4em;
-				margin-right: 0.5em;
-			}
-		}
-	}
+  @include font-size(12px);
+  padding: 1.3em 0;
+  text-align: center;
+
+  p {
+    @include font-family-main;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    @include font-weight-bold;
+  }
+
+  @each $name, $type in $messages {
+    &.#{$name} {
+      background-color: map-get(map-get($messages, $name), "bg-color");
+      color: map-get(map-get($messages, $name), "color");
+      * {
+        color: map-get(map-get($messages, $name), "color");
+      }
+      &.alternative {
+        background-color: map-get(map-get($messages, $name), "bg-color-alt");
+        color: map-get(map-get($messages, $name), "color-alt");
+        * {
+          color: map-get(map-get($messages, $name), "color-alt");
+        }
+      }
+      p:before,
+      li:before {
+        @include icon(map-get(map-get($messages, $name), "icon"));
+        font-size: 1.4em;
+        margin-right: 0.5em;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
 }

@@ -1,0 +1,14 @@
+/*
+ section: 6.9
+ title: Tag list
+ template: 6_9_1-tag-list
+ description:
+*/
+.tag-list {
+  display: block;
+}
+
+.tag-list__item {
+  @include text-tag;
+  @include tb-ball("after");
+}

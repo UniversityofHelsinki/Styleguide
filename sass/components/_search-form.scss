@@ -23,8 +23,16 @@
   position: relative;
 }
 
+.search-form__label {
+  @include text-label;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
 .search-form__input {
+  @include border-radius(0);
   border: 2px solid $blue;
+  height: 40px;
   line-height: 34px;
   padding-left: 1em;
   padding-right: 3em;
@@ -39,15 +47,17 @@
   }
 }
 
-.search-form__submit {
+input[type="submit"].search-form__submit {
+  @include border-radius(0);
   @include icon(); // Unicode is provided by the form
   background-color: $blue;
+  bottom: 0;
   color: $white;
-  height: 100%;
+  height: 40px;
   padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
+  width: 2.5em;
 
   .search-form__input:focus + & {
     &:hover {
@@ -56,48 +66,71 @@
   }
 }
 
-// TODO: Should use .theme-dark instead
-%search-form-dark,
-.search-form-dark {
-  max-width: 50em;
-  position: relative;
+%search-form--dark,
+.search-form--dark {}
 
-  .search-form-dark__input {
-    background: $darkgray;
-    border: none;
-    color: $white;
-    line-height: 34px;
-    margin-bottom: 0;
-    max-width: 100%;
-    min-height: 34px;
-    padding-left: 1em;
-    padding-right: 3em;
-    width: 100%;
+.search-form--dark__input {
+  background: $darkgray;
+  border: none;
+  color: $white;
+  line-height: 34px;
+  margin-bottom: 0;
+  max-width: 100%;
+  min-height: 34px;
+  padding-left: 1em;
+  padding-right: 3em;
+  width: 100%;
 
-    &:focus {
-      outline-color: $blue;
-    }
-
-    @include breakpoint($small) {
-      @include font-size(12px);
-    }
+  &:focus {
+    outline-color: $blue;
   }
 
-  .search-form-dark__submit {
-    @include icon(); // Unicode is provided by the form
-    background-color: transparent;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
+  @include breakpoint($small) {
+    @include font-size(12px);
+  }
+}
 
-    .search-form-dark__input:focus + & {
-      color : $blue;
+input[type="submit"].search-form--dark__submit {
+  @include icon(); // Unicode is provided by the form
+  background-color: transparent;
+  height: 36px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34px;
 
-      &:hover {
-        color: $white;
-      }
+  .search-form--dark__input:focus + & {
+    color: $blue;
+
+    &:hover {
+      color: $white;
     }
   }
 }
 
+%search-form-large,
+.search-form-large {
+  @include border-bottom;
+  @include clearfix;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+.search-form-large__label {
+  @include text-label;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.search-form-large__input {
+  @include font-size(15px);
+  border: 2px solid $lightsilver;
+  color: $silver;
+  display: block;
+  line-height: 1.7em;
+  margin-bottom: $vert-spacing-unit;
+  max-width: 50em;
+  padding: 0.3em 0.5em;
+  width: 100%;
+}

@@ -1,0 +1,37 @@
+#
+# Project specific
+#
+/*.sublime-project
+/*.sublime-workspace
+/node_modules
+/*.log
+/.sass-cache
+#/index.html
+#/bower_components
+
+#
+# Mac OSX
+#
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+#
+# Windows
+#
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+#Idea
+.idea

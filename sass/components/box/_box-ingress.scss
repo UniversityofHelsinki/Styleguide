@@ -11,21 +11,20 @@
  */
 
 .box-ingress {
-	@include clearfix;
+  @include clearfix;
 }
 
 .box-ingress__image {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 
-	@include breakpoint($small) {
-		float: left;
-		margin-bottom: 0;
-		margin-right: 2em;
-		max-width: 270px;
-	}
+  @include breakpoint($small) {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 2em;
+    max-width: 270px;
+  }
 }
 
 .box-ingress__content {
   @extend %textarea;
-  @extend %textarea-ingress;
 }

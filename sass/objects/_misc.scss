@@ -1,102 +1,105 @@
 .ui-tabs-hide {
-	display: none;
+  display: none;
 }
 
 .border-bottom {
-	@include border-bottom;
+  @include border-bottom;
 }
 
 .regional-rule-top {
-	@include regional-rule-top($lightsilver);
+  @include regional-rule-top($lightsilver);
 }
 
 .regional-rule-bottom {
-	@include regional-rule-bottom($lightsilver);
+  @include regional-rule-bottom($lightsilver);
 }
 
 .horizontal-rule-top {
-	@include horizontal-rule(top);
+  @include horizontal-rule(top);
 }
 
 .horizontal-rule-bottom {
-	@include horizontal-rule(bottom);
+  @include horizontal-rule(bottom);
 }
 
 .tiedekulma-embed {
-	display: inline-block;
-	margin-bottom: 0.5em;
-	position: relative;
-	width: 100%;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  position: relative;
+  width: 100%;
 
-	&:after {
-		content: '';
-		display: block;
-		padding-top: 55%; // Aspect ratio of 322 x 190
-	}
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 55%; // Aspect ratio of 322 x 190
+  }
 
-	> * {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		top: 0;
-	}
+  > * {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .link-wrapper {
-	display: block;
-	height: 100%;
+  display: block;
+  height: 100%;
 }
 
 .float-left {
-	float:left;
+  float: left;
 }
 
 .float-right {
-	float:right;
+  float: right;
 }
+
 // Todo: Find better place for this.
 .element-invisible {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+  position: absolute !important;
 }
 
 // Todo: Find better place for this.
 @mixin triangle($size) {
-	&:before {
-		content : "";
-		position: absolute;
-		left: -$size/2;
-		top: -$size;
-		width: 0;
-		height: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-bottom: $size solid $lightsilver;
-	}
-	&:after {
-		content : "";
-		position: absolute;
-		left: -$size/2;
-		top: -$size + 1;
-		width: 0;
-		height: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-bottom: $size solid $white;
-	}
+  &:before {
+    border-bottom: $size solid $lightsilver;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    content: "";
+    height: 0;
+    left: -$size / 2;
+    position: absolute;
+    top: -$size;
+    width: 0;
+  }
+  &:after {
+    border-bottom: $size solid $white;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    content: "";
+    height: 0;
+    left: -$size / 2;
+    position: absolute;
+    top: -$size + 1;
+    width: 0;
+  }
 }
 
 // Todo: Find better place for this.
-@mixin center-vertical() {
-	top: 50%;
-	transform: translate(0, -50%);
+@mixin center-vertical {
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 // Todo: Find better place for this.
 @mixin all-link-states {
-  &:link, &:hover, &:active, &:visited {@content}
+  &:link, &:hover, &:active, &:visited {
+    @content;
+  }
 }
 
 /**
@@ -104,20 +107,21 @@
  * Include this rule to trigger hasLayout and contain floats.
  */
 @mixin clearfix {
-	*zoom: 1;
-	clear: both;
+  *zoom: 1;
+  clear: both;
 
-	&:before,
-	&:after {
-		content: " "; /* 1 */
-		display: table; /* 2 */
-	}
-	
-	&:after {
-		clear: both;
-	}
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+  &:after {
+    clear: both;
+  }
 }
+
 .clearfix {
-	@include clearfix;
-	clear: both;
+  @include clearfix;
+  clear: both;
 }

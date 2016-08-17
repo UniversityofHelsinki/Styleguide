@@ -8,19 +8,29 @@
 %box-subtitle,
 .box-subtitle {
   display: block;
+
+  &.gridder-box {
+    margin: 0 0 15px 0;
+  }
 }
 
 .box-subtitle__title {
-  @include label-rule(bottom);
   @include text-label;
+  @include font-size(16px);
+}
+
+.box-subtitle__link {
+  @include breakpoint($small) {
+    float: right;
+  }
+
+  a {
+    @include text-bold;
+  }
 }
 
 .box-subtitle__content {
-  @include font-weight-medium;
-
-  @include breakpoint($small) {
-    height: 3em;
-  }
+  @include text-bold;
 }
 
 .box-subtitle__ingress {

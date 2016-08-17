@@ -1,5 +1,5 @@
 // Use REMs with a pixel fallback for font sizing.
-@mixin font-size($font-size){
+@mixin font-size($font-size) {
   font-size: $font-size * ($mobile-font-size / $base-font-size);
   font-size: ($font-size / $base-font-size)*1rem;
 
@@ -15,18 +15,6 @@
 
 @mixin font-family-bodytext {
   font-family: Georgia;
-}
-
-// Icons
-@mixin icon($unicode : '') {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "icomoon";
-  line-height: 0;
-
-  @if ($unicode) {
-    content: $unicode;
-  }
 }
 
 // Weights
@@ -71,6 +59,7 @@
   text-transform: none;
 }
 
+// TODO: Seems obsolete
 @mixin text-bold {
   @include font-size(16px);
   @include font-weight-medium;
@@ -105,6 +94,13 @@
   color: $silver;
   display: block;
   margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+@mixin text-tag {
+  @include font-size(12px);
+  @include font-weight-medium;
+  color: $silver;
   text-transform: uppercase;
 }
 

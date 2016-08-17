@@ -7,86 +7,122 @@
  */
 
 /**
- * Generic grid classes for items without a wrapper (only use when you cannot easily get a wrapper around the items e.g. views)
+ * Gridder container and box classes
  */
-%l-grid-item-1,
-.l-grid-item-1 {
-	$grid-gutter: ($vert-spacing-unit);
-	padding-bottom: $grid-gutter;
-	margin-bottom: $grid-gutter;
+$grid-gutter: $vert-spacing-unit / 2;
+
+.gridder-container-4 {
+  &.theme-alt {
+    > .gridder-box {
+      > * {
+        border-bottom: 1px solid $lightsilver;
+      }
+
+      &:last-child > * {
+        border-bottom: none;
+      }
+
+      @include breakpoint($small) {
+        margin-bottom: 0;
+
+        &:nth-last-of-type(-n+2) > * {
+          border-bottom: none;
+        }
+      }
+
+      @include breakpoint($small-only) {
+        margin-bottom: 30px;
+        width: 50%;
+
+        &:nth-of-type(2n) > * {
+          border-right: none;
+        }
+      }
+
+      @include breakpoint($medium) {
+        > * {
+          border-bottom: none;
+          border-right: 1px solid $lightsilver;
+          padding-right: 15px;
+        }
+
+        &:last-child > * {
+          border-right: none;
+        }
+      }
+    }
+  }
 }
 
-%l-grid-item-2,
-.l-grid-item-2 {
-	$grid-gutter: ($vert-spacing-unit);
-	margin-bottom: $grid-gutter;
+.gridder-parent {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $grid-gutter;
 
-	@include breakpoint($small) {
-		@include layout($gutter: 1) {
-			@include float-span(8);
-
-			&:nth-of-type(2n) {
-				// omega
-				@include float-span(8);
-			}
-		}
-	}
+  @include breakpoint($small) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
-%l-grid-item-3,
-.l-grid-item-3 {
-	$grid-gutter: ($vert-spacing-unit);
-	margin-bottom: $grid-gutter;
-	@include breakpoint($small) {
-		@include layout($grid: 9, $gutter: 1/2) {
-			@include grid-span(3);
+.gridder-box {
+  @include display-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-bottom: $vert-spacing-unit;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+  padding: 0 $grid-gutter;
 
-			&:nth-of-type(3n) {
-				// omega
-				@include grid-span(3);
-			}
-		}
-	}
+  @include breakpoint($small) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  &.theme-compact {
+    margin-bottom: 0;
+  }
 }
 
-%l-grid-item-4,
-.l-grid-item-4 {
-	$grid-gutter: ($vert-spacing-unit);
-	margin-bottom: $grid-gutter;
+// Different widths
+@for $grid-columns from 1 through 4 {
+  $gridder-box-width: 100% / $grid-columns;
 
-	@include breakpoint($small) {
-		@include layout($gutter: 1) {
-			@include grid-span(4);
+  .gridder-container-#{$grid-columns} {
+    @include breakpoint($small) {
+      @include display-flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin: 0 (-$grid-gutter);
+    }
 
-			&:nth-of-type(4n) {
-				// omega
-				@include grid-span(4);
-			}
-		}
-	}
-}
+    > .gridder-box {
+      @include breakpoint($small) {
+        width: $gridder-box-width;
 
-/**
- * Generic grid classes for a wrapper
- */
-%grid-2,
-.grid-2 {
-	> * {
-		@extend %l-grid-item-2;
-	}
-}
+        &.gridder-box-width-#{$grid-columns} {
+          width: 100%;
+        }
 
-%grid-3,
-.grid-3 {
-	> * {
-		@extend %l-grid-item-3;
-	}
-}
+        @for $i from 1 through 4 {
+          &.gridder-box-width-#{$i} {
+            width: $gridder-box-width * $i;
+          }
+        }
+      }
+    }
 
-
-%grid-4,
-.grid-4 {
-	> * {
-		@extend %l-grid-item-4;
-	}
+    > .gridder-parent {
+      @include breakpoint($small) {
+        @for $i from 1 through 4 {
+          &.gridder-box-width-#{$i} {
+            width: $gridder-box-width * $i;
+          }
+        }
+      }
+    }
+  }
 }
