@@ -47,7 +47,7 @@
   }
 }
 
-input.search-form__submit {
+input[type="submit"].search-form__submit {
   @include border-radius(0);
   @include icon(); // Unicode is provided by the form
   background-color: $blue;
@@ -90,7 +90,7 @@ input.search-form__submit {
   }
 }
 
-.search-form--dark__submit {
+input[type="submit"].search-form--dark__submit {
   @include icon(); // Unicode is provided by the form
   background-color: transparent;
   height: 36px;

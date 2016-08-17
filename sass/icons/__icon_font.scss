@@ -18,25 +18,25 @@
   }
 }
 
-.icon-rotate-90 {
+.icon-rotate-90:after {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.icon-rotate-180 {
+.icon-rotate-180:after {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.icon-rotate-270 {
+.icon-rotate-270:after {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 @-webkit-keyframes icon-spin {
@@ -56,11 +56,11 @@
   to { transform: rotate(360deg); }
 }
 
-.icon-spin {
+.icon-spin:after {
   -webkit-animation: icon-spin 2s infinite linear;
   -moz-animation: icon-spin 2s infinite linear;
   -ms-animation: icon-spin 2s infinite linear;
-  -animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 .icon:before {
@@ -163,3 +163,21 @@
 .icon--link-arrow-down:after { @include icon("\EA5E"); }
 .icon--link-arrow-left:after { @include icon("\EA5F"); }
 .icon--link-arrow-up:after { @include icon("\EA60"); }
+.icon--code-fork:after { @include icon("\EA61"); }
+.icon--cogs:after { @include icon("\EA62"); }
+.icon--external-link:after { @include icon("\EA63"); }
+.icon--globe:after { @include icon("\EA64"); }
+.icon--image:after { @include icon("\EA65"); }
+.icon--arrow-down:after { @include icon("\EA66"); }
+.icon--arrow-left:after { @include icon("\EA67"); }
+.icon--arrow-right:after { @include icon("\EA68"); }
+.icon--arrow-up:after { @include icon("\EA69"); }
+.icon--arrow-offsite:after { @include icon("\EA6C"); }
+.icon--caret-down:after { @include icon("\EA6D"); }
+.icon--caret-left:after { @include icon("\EA6E"); }
+.icon--caret-up:after { @include icon("\EA70"); }
+.icon--caret-right:after { @include icon("\EA71"); }
+.icon--list-as-blocks:after { @include icon("\EA72"); }
+.icon--social-media:after { @include icon("\EA73"); }
+.icon--dot:after { @include icon("\EA74"); }
+.icon--google-plus:after { @include icon("\EA75"); }

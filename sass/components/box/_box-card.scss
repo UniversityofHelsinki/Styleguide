@@ -145,14 +145,11 @@
     text-transform: capitalize;
   }
 
-  // Icon
-  &:before {
-    font-weight: 400;
+  // Icons
+  &:after {
     left: 0;
     position: absolute;
-    text-align: center;
     top: 1px;
-    width: 15px;
   }
 }
 

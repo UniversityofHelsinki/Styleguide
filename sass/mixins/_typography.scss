@@ -17,17 +17,6 @@
   font-family: Georgia;
 }
 
-// Icons
-@mixin icon($unicode: "") {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "hy-icons";
-
-  @if ($unicode) {
-    content: $unicode;
-  }
-}
-
 // Weights
 @mixin font-weight-light {
   font-weight: 300;

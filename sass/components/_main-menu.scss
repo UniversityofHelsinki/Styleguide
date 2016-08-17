@@ -7,8 +7,15 @@
 
 .main-menu {
   background-color: $white;
-  border-bottom: 1px solid lighten($silver, 20%);
   overflow: hidden;
+
+  @include breakpoint($small) {
+    border-bottom: 1px solid lighten($silver, 20%);
+
+    &.is-open {
+      border-bottom: none;
+    }
+  }
 
   li {
     display: flex;
@@ -30,6 +37,7 @@
     border-bottom: 1px solid lighten($silver, 20%);
 
     @include breakpoint($small) {
+      @include container;
       border: none;
       display: flex;
       flex-flow: row wrap;
@@ -95,6 +103,10 @@
       padding: 5px 30px 5px 80px;
       text-transform: none;
     }
+
+    > ul.menu {
+      display: none;
+    }
   }
 }
 
@@ -113,7 +125,7 @@ li.main-menu__front {
       padding-right: 19px;
 
       &:after {
-        @include icon("\EA16");
+        @include icon($icon-home);
         @include font-size(16px);
         @include font-weight-light;
         @include transition-element(opacity, 0.2s);
@@ -137,10 +149,9 @@ li.main-menu__front {
 
   &:before {
     @include font-size(14px);
-    @include icon("\EA2F");
+    @include icon($icon-caret-down);
     @include transition-duration(0.2s);
     @include transition-property(color, border-color);
-    border: 1px solid lighten($silver, 20%);
     color: lighten($silver, 20%);
     cursor: pointer;
     display: inline-block;
@@ -152,7 +163,6 @@ li.main-menu__front {
   }
 
   &:hover:before {
-    border-color: $silver;
     color: $silver;
   }
 
@@ -177,15 +187,12 @@ li.main-menu__front {
 
   .is-open > & {
     &:before {
-      @include icon("\EA24");
-      background-color: $darkblue;
-      border-color: $darkblue;
-      color: $white;
+      @include icon($icon-caret-up);
+      color: $blue;
     }
 
     &:hover:before {
-      background-color: $blue--active;
-      border-color: $blue--active;
+      color: $darkblue;
     }
   }
 }
@@ -205,10 +212,6 @@ li.main-menu__front {
   position: absolute;
   width: 100%;
   z-index: 11;
-
-  .logged-in & {
-    position: static;
-  }
 
   .stickynav-active & {
     position: fixed;
@@ -240,6 +243,10 @@ li.main-menu__front {
       display: block !important;
       margin-right: 0;
       visibility: visible;
+    }
+
+    > ul.menu {
+      margin-bottom: 3em;
     }
   }
 
@@ -289,6 +296,10 @@ li.main-menu__front {
         color: $darkblue;
       }
     }
+
+    > ul.menu {
+      display: none;
+    }
   }
 }
 
@@ -302,7 +313,7 @@ li.main-menu__front {
 
     &:after {
       @include font-size(16px);
-      @include icon("\EA1B");
+      @include icon($icon-link-arrow);
       margin-left: 1em;
       position: absolute;
     }
@@ -311,10 +322,9 @@ li.main-menu__front {
 
 .fatmenu__collapse {
   @include font-weight-medium;
-  @include font-size(16px);
+  @include font-size(20px);
   align-items: center;
-  border: 1px solid lighten($silver, 20%);
-  color: lighten($silver, 20%);
+  color: $blue;
   cursor: pointer;
   display: flex;
   height: 2em;
@@ -327,12 +337,10 @@ li.main-menu__front {
   width: 2em;
 
   &:hover {
-    background-color: $darkblue;
-    border-color: $darkblue;
-    color: $white;
+    color: $darkblue;
   }
 
   &:before {
-    @include icon("\EA24");
+    @include icon($icon-caret-up);
   }
 }

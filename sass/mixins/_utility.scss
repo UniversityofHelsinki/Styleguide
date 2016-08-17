@@ -20,3 +20,13 @@
     background-color: $lightsilver;
   }
 }
+
+@mixin background-color($bg-color) {
+  @include transition-duration(0.1s);
+  @include transition-property(all);
+  background-color: $bg-color;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}

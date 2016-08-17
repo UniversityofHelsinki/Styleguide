@@ -1,10 +1,2 @@
 @import "__variables.scss";
 @import "__icon_font.scss";
-
-// Tweak icon--video size.
-.icon--video {
-  &:after {
-    @include icon($icon-video);
-    @include font-size(26px);
-  }
-}

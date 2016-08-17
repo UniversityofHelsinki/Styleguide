@@ -42,10 +42,6 @@
         @include font-size(60px);
       }
     }
-
-    .box-hero__link > a {
-      margin-top: 21px;
-    }
   }
 
   &.theme-small {
@@ -78,6 +74,7 @@
 
     .box-hero__alt-title {
       @include font-size(16px);
+      margin: 0;
       padding: 0;
 
       @include breakpoint($small) {
@@ -103,7 +100,6 @@
   color: $white;
   line-height: 105%;
   margin-bottom: $vert-spacing-unit * 0.5;
-  // 0.7 = 21px, 0.3 = 9px
   padding: 0;
   word-wrap: break-word;
 
@@ -121,6 +117,8 @@
   color: $white;
   letter-spacing: normal;
   line-height: 105%;
+  margin-bottom: 20px;
+  padding: 0;
   text-transform: none;
   word-wrap: break-word;
 
@@ -143,9 +141,7 @@
   margin-bottom: $vert-spacing-unit * 0.7;
 }
 
-a.box-hero__link,
-.box-hero__link > a {
-  @include button-next;
+.box-hero__link {
   @include font-weight-medium;
   display: inline-block;
   padding-right: 6em;
@@ -154,7 +150,7 @@ a.box-hero__link,
 
 .box-hero__link.is-videolink {
   a:after {
-    @include icon('\f01d');
+    @include icon($icon-video);
     @include font-size(30px);
     @include font-weight-light;
     line-height: 45px;

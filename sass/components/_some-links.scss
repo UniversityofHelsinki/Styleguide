@@ -1,17 +1,5 @@
 .some-links {
   margin-top: 1em;
-
-  .icon {
-    &:before {
-      color: $blue;
-    }
-
-    &:hover {
-      &:before {
-        color: $darkblue;
-      }
-    }
-  }
 }
 
 .some-links__link {
@@ -20,4 +8,10 @@
   @include font-weight-medium;
   display: block;
   margin-bottom: 0.5em;
+
+  &.theme-colored:after {
+    float: left;
+    padding-right: 5px;
+    font-size: 2em;
+  }
 }

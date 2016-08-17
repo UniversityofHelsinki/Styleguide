@@ -1,6 +1,6 @@
 %is-hidden,
 .is-hidden {
-  display: none;
+  display: none !important;
 }
 
 .is-center {
@@ -8,9 +8,11 @@
 }
 
 .is-center-mobile {
+  justify-content: center;
   text-align: center;
 
   @include breakpoint($small) {
+    justify-content: flex-start;
     text-align: left;
   }
 }

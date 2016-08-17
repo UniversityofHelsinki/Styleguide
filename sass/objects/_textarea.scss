@@ -25,7 +25,7 @@
 
       &:before {
         @include font-size(9px);
-        @include icon("\f111");
+        @include icon($icon-dot);
         left: 0;
         margin-top: 1px;
         position: absolute;
