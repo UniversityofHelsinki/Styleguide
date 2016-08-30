@@ -4706,7 +4706,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 .carousel-unwrapped__content.theme-raster:after {
-  background: url(images/raster.svg);
+  background: url(../images/raster.svg);
   background-size: 4px 4px;
   -webkit-background-size: 4px 4px;
   bottom: 0;
