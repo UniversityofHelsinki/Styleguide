@@ -2875,7 +2875,7 @@ video {
 */
 .textarea,
 .box-ingress__content {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   line-height: 1.8em;
 }
 .textarea ul, .textarea ol,
@@ -5181,7 +5181,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 .index-alpha__initial {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 35px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -5240,7 +5240,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 .index-alpha__subtitle {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
 }
 
 /*
@@ -5275,7 +5275,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   position: relative;
   margin-right: 0.5em;
   padding-right: 1.5em;
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
 }
 .index-topical__field:last-child:after {
   display: none;
@@ -6299,7 +6299,7 @@ a:hover .theme-dark .list-of-links__link:after {
   margin-bottom: 1em;
 }
 .page-title--listing .page-title__subheading {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 14px;
   font-size: 1rem;
   color: #979797;
@@ -6684,7 +6684,7 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
 }
 
 .post__content {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 13.125px;
   font-size: 0.9375rem;
   color: #666;
@@ -8181,7 +8181,7 @@ a:hover .box-application__link > a:after, .box-application__link > a:hover:after
 }
 
 .box-story__content {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   color: #666;
   line-height: 1.5em;
   margin-bottom: 0.4em;
