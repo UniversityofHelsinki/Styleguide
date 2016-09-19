@@ -135,3 +135,11 @@
   @include tb-ball("after");
   @include font-family-bodytext;
 }
+
+.index-topical__content {
+  margin-bottom: 0.5em;
+}
+
+.index-topical__description {
+  @include font-family-bodytext;
+}

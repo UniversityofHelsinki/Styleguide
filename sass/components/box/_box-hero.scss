@@ -85,9 +85,9 @@
 }
 
 .box-hero__shadow {
-  background: rgba($black, 0.3);
-  background: $raster-stripe;
-  background-position: -1px 100%;
+  background: none;
+  background: #000;
+  background: rgba(#000, 0.4);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: inline;
@@ -96,7 +96,7 @@
 }
 
 .box-hero__title {
-  @include font-size(40px);
+  @include font-size(48px);
   color: $white;
   line-height: 105%;
   margin-bottom: $vert-spacing-unit * 0.5;

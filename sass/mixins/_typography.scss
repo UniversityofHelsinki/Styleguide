@@ -73,7 +73,7 @@
 }
 
 @mixin text-liftup {
-  @include font-size(22px);
+  @include font-size(18px);
   @include font-weight-book;
   color: $silver;
   line-height: 1.5em;

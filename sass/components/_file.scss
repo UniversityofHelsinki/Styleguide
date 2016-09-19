@@ -1,0 +1,19 @@
+.file {
+  float: left;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.file__link {
+  @include font-family-main;
+  align-items: center;
+  background-color: lighten($lightsilver, 5%);
+  border: 1px solid $lightsilver;
+  display: flex;
+  padding: 10px 15px 10px 10px;
+}
+
+.file__icon {
+  @include font-size(30px);
+  margin-right: 10px;
+}

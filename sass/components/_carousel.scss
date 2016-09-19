@@ -39,14 +39,14 @@
 .carousel__credits {
   @include text-author;
   // @include transform(translateY(100%));
-  bottom: 0;
+  bottom: auto;
   color: $silver;
   height: $vert-spacing-unit + 10px;
   line-height: $vert-spacing-unit + 10px;
   margin-bottom: 0;
   margin-left: 0;
   position: absolute;
-  right: 10px;
+  right: 0;
   top: auto;
 }
 
