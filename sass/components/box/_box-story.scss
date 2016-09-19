@@ -13,9 +13,9 @@
 .box-story {
   @include transition-property(background-color);
   @include transition-duration(0.1s);
-  -webkit-flex: 1 1 auto;
+  display: flex;
   flex: 1 1 auto;
-  display: block;
+  flex-direction: column;
   position: relative;
 
   &:active .box-story__title,
@@ -69,9 +69,125 @@
       }
     }
   }
+
+  &.theme-plain-alt {
+    background-color: darken($lightsilver, 3%);
+
+    .box-story__link-wrapper {
+      padding: 1em;
+
+      &:after {
+        @include icon($icon-arrow-right);
+        color: $black;
+        float: right;
+        margin-bottom: 1em;
+      }
+    }
+
+    .box-story__date,
+    .box-story__tag,
+    .box-story__title,
+    .box-story__content,
+    .box-story__link > a,
+    .box-story__link > a:after {
+      color: $black;
+    }
+
+    .box-story__topical {
+      height: auto;
+    }
+
+    .box-story__label {
+      background: $white;
+      color: $blue--active;
+    }
+
+    .box-story__link {
+      bottom: 0.5em;
+      position: absolute;
+      right: 1.5em;
+    }
+
+    &:hover {
+      background-color: darken($lightsilver, 10%);
+    }
+
+    @include breakpoint($small) {
+      .box-story__title {
+        font-size: 170%;
+      }
+
+      .box-story__link-wrapper {
+        padding: 1.5em 1.5em 3.5em 1.5em;
+
+        &:after {
+          bottom: 1em;
+          margin: 0;
+          position: absolute;
+          right: 1.5em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($small) {
+    .gridder-box-width-3:not(.gridder-parent) &,
+    .gridder-box-width-4:not(.gridder-parent) & {
+      background: #000;
+      display: flex;
+
+      .box-story__link-wrapper {
+        width: 100%;
+
+        &:after {
+          @include icon($icon-arrow-right);
+          bottom: 1em;
+          color: $white;
+          position: absolute;
+          right: 1.5em;
+        }
+      }
+
+      .box-story__image {
+        border: none;
+        float: left;
+        margin-bottom: 0;
+        margin-right: 10px;
+        padding-right: 20px;
+
+        img {
+          border: 0;
+          margin: 0;
+        }
+      }
+
+      .box-story__title {
+        @include font-size(30px);
+        color: $white;
+        padding-right: 20px;
+        padding-top: 20px;
+      }
+
+      .box-story__content {
+        color: $white;
+        padding-right: 20px;
+      }
+    }
+    .gridder-box-width-3:not(.gridder-parent) & {
+      .box-story__image {
+        width: 33.3333%;
+      }
+    }
+    .gridder-box-width-4:not(.gridder-parent) & {
+      .box-story__image {
+        width: 25%;
+      }
+    }
+  }
 }
 
 .box-story__label {
+  @include font-size(11.2px);
   @include label;
   left: 1px;
   position: absolute;
@@ -79,7 +195,7 @@
   z-index: 10;
 
   .theme-thin {
-    font-weight: 400;
+    font-weight: 200;
     margin-left: 0.3em;
   }
 
@@ -102,6 +218,7 @@
 
   img {
     @include border;
+    margin-bottom: 2px;
     width: 100%;
   }
 
@@ -130,7 +247,7 @@
 .box-story__topical {
   @include font-size(12px);
   @include font-weight-medium;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
   overflow: hidden;
 
   @include breakpoint($small) {
@@ -144,6 +261,7 @@
 
 .box-story__date,
 .box-story__tag {
+  @include font-size(11.2px);
   @include text-tag;
   @include tb-ball('after');
 }
@@ -158,6 +276,7 @@
 
 .box-story__content {
   @include font-family-bodytext;
+  @include font-size(14px);
   color: $gray;
   line-height: 1.5em;
   margin-bottom: 0.4em;
@@ -165,6 +284,19 @@
 
   &:not(.textarea) a {
     @include link-concealed;
+  }
+}
+
+.box-story__link-wrapper {
+  display: block;
+  flex-grow: 1;
+
+  &:after {
+    @include icon($icon-arrow-right);
+    bottom: 1em;
+    color: $white;
+    position: absolute;
+    right: 1.5em;
   }
 }
 
@@ -301,7 +433,7 @@
 .box-story--constrained {
   @extend %box-story;
   @include border-bottom;
-  padding: 1em 0;
+  padding: 1em 0 0.5em;
 
   &:first-of-type {
     padding-top: 0;
@@ -361,11 +493,11 @@
   margin-bottom: $vert-spacing-unit;
   margin-left: auto;
   margin-right: auto;
-  max-width: 369px;
 
   @include breakpoint($small) {
     margin-left: 0;
     margin-right: 0;
+    max-width: 369px;
   }
 
   .box-story__image {
@@ -373,6 +505,7 @@
 
     img {
       border: none;
+      margin-bottom: 0;
     }
   }
 

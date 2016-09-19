@@ -27,9 +27,9 @@ h1, h2, h3, h4, h5, h6 {
   @include font-family-main;
   color: $darkgray;
   letter-spacing: -0.05em;
-  line-height: 1.1em;
+  line-height: 1.2em;
   margin: 0;
-  padding-bottom: 0.4em;
+  padding-bottom: 0.2em;
   text-transform: uppercase;
   word-wrap: break-word;
 
@@ -51,7 +51,7 @@ h1 {
   line-height: 1.15em;
 
   @include breakpoint($small) {
-    @include font-size(50px);
+    @include font-size(44px);
   }
 }
 
@@ -59,16 +59,16 @@ h2 {
   @include font-size(25px);
 
   @include breakpoint($medium) {
-    @include font-size(38px);
+    @include font-size(35px);
   }
 }
 
 h3 {
-  @include font-size(32px);
+  @include font-size(28px);
 }
 
 h4 {
-  @include font-size(21px);
+  @include font-size(18.375px);
 }
 
 /*
