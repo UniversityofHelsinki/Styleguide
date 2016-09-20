@@ -129,59 +129,59 @@
       }
     }
   }
+}
 
-  @include breakpoint($small) {
-    .gridder-box-width-3:not(.gridder-parent) &,
-    .gridder-box-width-4:not(.gridder-parent) & {
-      background: #000;
-      display: flex;
+@include breakpoint($small) {
+  .gridder-box-width-3:not(.gridder-parent) .box-story,
+  .gridder-box-width-4:not(.gridder-parent) .box-story {
+    background: #000;
+    display: flex;
 
-      .box-story__link-wrapper {
-        width: 100%;
+    .box-story__link-wrapper {
+      width: 100%;
 
-        &:after {
-          @include icon($icon-arrow-right);
-          bottom: 1em;
-          color: $white;
-          position: absolute;
-          right: 1.5em;
-        }
-      }
-
-      .box-story__image {
-        border: none;
-        float: left;
-        margin-bottom: 0;
-        margin-right: 10px;
-        padding-right: 20px;
-
-        img {
-          border: 0;
-          margin: 0;
-        }
-      }
-
-      .box-story__title {
-        @include font-size(30px);
+      &:after {
+        @include icon($icon-arrow-right);
+        bottom: 1em;
         color: $white;
-        padding-right: 20px;
-        padding-top: 20px;
-      }
-
-      .box-story__content {
-        color: $white;
-        padding-right: 20px;
+        position: absolute;
+        right: 1.5em;
       }
     }
-    .gridder-box-width-3:not(.gridder-parent) & {
-      .box-story__image {
-        width: 33.3333%;
+
+    .box-story__image {
+      border: none;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 10px;
+      padding-right: 20px;
+
+      img {
+        border: 0;
+        margin: 0;
       }
     }
-    .gridder-box-width-4:not(.gridder-parent) & {
-      .box-story__image {
-        width: 25%;
-      }
+
+    .box-story__title {
+      @include font-size(30px);
+      color: $white;
+      padding-right: 20px;
+      padding-top: 20px;
+    }
+
+    .box-story__content {
+      color: $white;
+      padding-right: 20px;
+    }
+  }
+  .gridder-box-width-3:not(.gridder-parent) .box-story {
+    .box-story__image {
+      width: 33.3333%;
+    }
+  }
+  .gridder-box-width-4:not(.gridder-parent) .box-story {
+    .box-story__image {
+      width: 25%;
     }
   }
 }

@@ -292,7 +292,8 @@ li.main-menu__front {
       text-transform: none;
 
       &:hover,
-      &.active-trail {
+      &.active-trail,
+      &.active {
         color: $darkblue;
       }
     }
