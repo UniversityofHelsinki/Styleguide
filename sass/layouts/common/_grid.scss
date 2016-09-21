@@ -92,6 +92,10 @@ $grid-gutter: $vert-spacing-unit / 2;
   $gridder-box-width: 100% / $grid-columns;
 
   .gridder-container-#{$grid-columns} {
+    .gridder-parent & {
+      margin: 0 (-$grid-gutter);
+    }
+
     @include breakpoint($small) {
       @include display-flex;
       -webkit-flex-flow: row wrap;
