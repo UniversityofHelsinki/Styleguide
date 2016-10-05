@@ -7548,11 +7548,6 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
     width: 50%;
   }
 }
-.box-card__section.theme-secondary {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
 
 .box-card__field, .box-card__fieldset {
   margin-bottom: 1em;
