@@ -4908,7 +4908,6 @@ dl, ol, ul {
  description:
 */
 .carousel-unwrapped--teaser {
-  background-color: #222;
   overflow: hidden;
   position: relative;
 }
@@ -4920,8 +4919,14 @@ dl, ol, ul {
 .carousel-unwrapped--teaser .l-subregion:before, .carousel-unwrapped--teaser .l-subregion:after {
   display: none;
 }
-.carousel-unwrapped--teaser .carousel-unwrapped__content {
-  height: 88px;
+.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion-wrapper {
+  padding: 2em 0 0 0;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion {
+  padding: 0 1em;
 }
 .carousel-unwrapped--teaser .carousel-unwrapped__image {
   max-height: 90px;
@@ -7721,81 +7726,108 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   width: auto;
 }
 .box-hero.theme-prominent .box-hero__title {
-  margin-bottom: 0;
-  padding-bottom: 0.4em;
+  font-size: 15.75px;
+  font-size: 1.125rem;
+  letter-spacing: -0.5px;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .box-hero.theme-prominent .box-hero__title {
-    font-size: 52.5px;
-    font-size: 3.75rem;
+    font-size: 18px;
   }
 }
-@media (min-width: 62.5em) and (min-width: 48em) {
+@media (min-width: 48em) {
   .box-hero.theme-prominent .box-hero__title {
-    font-size: 60px;
+    font-size: 19.25px;
+    font-size: 1.375rem;
+    letter-spacing: -1px;
+  }
+}
+@media (min-width: 48em) and (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__title {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 75em) {
+  .box-hero.theme-prominent .box-hero__title {
+    font-size: 28px;
+    font-size: 2rem;
+    letter-spacing: -2px;
+  }
+}
+@media (min-width: 75em) and (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__title {
+    font-size: 32px;
+  }
+}
+
+.box-hero.theme-prominent .box-hero__alt-title {
+  font-size: 11.375px;
+  font-size: 0.8125rem;
+}
+@media (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__alt-title {
+    font-size: 13px;
+  }
+}
+@media (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__alt-title {
+    font-size: 12.25px;
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 48em) and (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__alt-title {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 75em) {
+  .box-hero.theme-prominent .box-hero__alt-title {
+    font-size: 15.75px;
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 75em) and (min-width: 48em) {
+  .box-hero.theme-prominent .box-hero__alt-title {
+    font-size: 18px;
   }
 }
 
 .box-hero.theme-small {
   clear: none;
   float: none;
-  text-align: center;
+  text-align: left;
   width: auto;
 }
 @media (min-width: 48em) {
   .box-hero.theme-small {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    padding: 0 1em;
     text-align: left;
   }
 }
 .box-hero.theme-small .box-hero__title {
-  font-size: 22.75px;
-  font-size: 1.625rem;
+  font-size: 14px;
+  font-size: 1rem;
+  color: #222;
   margin: 0;
+  letter-spacing: -0.5px;
   padding-bottom: 0.25em;
 }
 @media (min-width: 48em) {
   .box-hero.theme-small .box-hero__title {
-    font-size: 26px;
+    font-size: 16px;
   }
 }
-@media (min-width: 48em) {
-  .box-hero.theme-small .box-hero__title {
-    font-size: 31.5px;
-    font-size: 2.25rem;
-    margin-right: 1em;
-    padding: 0;
-  }
-}
-@media (min-width: 48em) and (min-width: 48em) {
-  .box-hero.theme-small .box-hero__title {
-    font-size: 36px;
-  }
-}
-
 .box-hero.theme-small .box-hero__alt-title {
-  font-size: 14px;
-  font-size: 1rem;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  color: #222;
   margin: 0;
   padding: 0;
 }
 @media (min-width: 48em) {
   .box-hero.theme-small .box-hero__alt-title {
-    font-size: 16px;
-  }
-}
-@media (min-width: 48em) {
-  .box-hero.theme-small .box-hero__alt-title {
-    width: 30%;
+    font-size: 14px;
   }
 }
 
