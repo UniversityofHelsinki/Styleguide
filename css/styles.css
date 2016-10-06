@@ -7824,7 +7824,7 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 .box-hero.theme-small .box-hero__title {
   font-size: 14px;
   font-size: 1rem;
-  color: #222;
+  color: #424242;
   margin: 0;
   letter-spacing: -0.5px;
   padding-bottom: 0.25em;
@@ -7837,7 +7837,8 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 .box-hero.theme-small .box-hero__alt-title {
   font-size: 12.25px;
   font-size: 0.875rem;
-  color: #222;
+  color: #424242;
+  line-height: 130%;
   margin: 0;
   padding: 0;
 }
