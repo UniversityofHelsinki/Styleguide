@@ -35,11 +35,28 @@
     width: auto;
 
     .box-hero__title {
-      margin-bottom: 0;
-      padding-bottom: 0.4em;
+      @include font-size(18px);
+      letter-spacing: -0.5px;
 
-      @include breakpoint($medium) {
-        @include font-size(60px);
+      @include breakpoint($small) {
+        @include font-size(22px);
+        letter-spacing: -1px;
+      }
+
+      @include breakpoint($large) {
+        @include font-size(32px);
+        letter-spacing: -2px;
+      }
+    }
+
+    .box-hero__alt-title {
+      @include font-size(13px);
+
+      @include breakpoint($small) {
+        @include font-size(14px);
+      }
+      @include breakpoint($large) {
+        @include font-size(18px);
       }
     }
   }
@@ -47,39 +64,26 @@
   &.theme-small {
     clear: none;
     float: none;
-    text-align: center;
+    text-align: left;
     width: auto;
 
     @include breakpoint($small) {
-      @include display-flex;
-      align-items: center;
-      -webkit-align-items: center;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      padding: 0 1em;
       text-align: left;
     }
 
     .box-hero__title {
-      @include font-size(26px);
+      @include font-size(16px);
+      color: $black;
       margin: 0;
+      letter-spacing: -0.5px;
       padding-bottom: 0.25em;
-
-      @include breakpoint($small) {
-        @include font-size(36px);
-        margin-right: 1em;
-        padding: 0;
-      }
     }
 
     .box-hero__alt-title {
-      @include font-size(16px);
+      @include font-size(14px);
+      color: $black;
       margin: 0;
       padding: 0;
-
-      @include breakpoint($small) {
-        width: 30%;
-      }
     }
   }
 }

@@ -345,7 +345,6 @@
  description:
 */
 .carousel-unwrapped--teaser {
-  background-color: $black;
   overflow: hidden;
   position: relative;
 
@@ -361,7 +360,14 @@
   }
 
   .carousel-unwrapped__content {
-    height: 88px;
+    .l-subregion-wrapper {
+      padding: 2em 0 0 0;
+      transform: none;
+    }
+
+    .l-subregion {
+      padding: 0 1em;
+    }
   }
 
   .carousel-unwrapped__image {
