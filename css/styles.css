@@ -8380,8 +8380,8 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 @media (min-width: 62.5em) {
   .gridder-box-width-3:not(.gridder-parent) .box-story__image, .gridder-box-width-4:not(.gridder-parent) .box-story__image {
-    border-right: 1em solid #FFFFFF;
     float: left;
+    margin-right: 1em;
   }
 }
 .box-story__image img {

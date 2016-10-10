@@ -201,8 +201,8 @@
   @include breakpoint($medium) {
     .gridder-box-width-3:not(.gridder-parent) &,
     .gridder-box-width-4:not(.gridder-parent) & {
-      border-right: 1em solid #FFFFFF;
       float: left;
+      margin-right: 1em;
     }
   }
 
