@@ -8277,21 +8277,20 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
     right: 1.5em;
   }
 }
-
 @media (min-width: 48em) {
-  .gridder-box-width-3:not(.gridder-parent) .box-story,
-  .gridder-box-width-4:not(.gridder-parent) .box-story {
+  .theme-black.box-story--liftup, .theme-black.box-story--constrained,
+  .box-story.theme-black {
     background: #000;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__link-wrapper,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__link-wrapper {
+  .theme-black.box-story--liftup .box-story__link-wrapper, .theme-black.box-story--constrained .box-story__link-wrapper,
+  .box-story.theme-black .box-story__link-wrapper {
     width: 100%;
   }
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__link-wrapper:after,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__link-wrapper:after {
+  .theme-black.box-story--liftup .box-story__link-wrapper:after, .theme-black.box-story--constrained .box-story__link-wrapper:after,
+  .box-story.theme-black .box-story__link-wrapper:after {
     display: inline-block;
     font-family: "hy-icons";
     font-style: normal;
@@ -8304,21 +8303,22 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
     position: absolute;
     right: 1.5em;
   }
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__image,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__image {
+  .theme-black.box-story--liftup .box-story__image, .theme-black.box-story--constrained .box-story__image,
+  .box-story.theme-black .box-story__image {
     border: none;
     float: left;
     margin-bottom: 0;
     margin-right: 10px;
     padding-right: 20px;
+    width: 33.3333%;
   }
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__image img,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__image img {
+  .theme-black.box-story--liftup .box-story__image img, .theme-black.box-story--constrained .box-story__image img,
+  .box-story.theme-black .box-story__image img {
     border: 0;
     margin: 0;
   }
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__title,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__title {
+  .theme-black.box-story--liftup .box-story__title, .theme-black.box-story--constrained .box-story__title,
+  .box-story.theme-black .box-story__title {
     font-size: 26.25px;
     font-size: 1.875rem;
     color: #FFF;
@@ -8327,26 +8327,19 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   }
 }
 @media (min-width: 48em) and (min-width: 48em) {
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__title,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__title {
+  .theme-black.box-story--liftup .box-story__title, .theme-black.box-story--constrained .box-story__title,
+  .box-story.theme-black .box-story__title {
     font-size: 30px;
   }
 }
 @media (min-width: 48em) {
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__content,
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__content {
+  .theme-black.box-story--liftup .box-story__content, .theme-black.box-story--constrained .box-story__content,
+  .box-story.theme-black .box-story__content {
     color: #FFF;
     padding-right: 20px;
   }
-
-  .gridder-box-width-3:not(.gridder-parent) .box-story .box-story__image {
-    width: 33.3333%;
-  }
-
-  .gridder-box-width-4:not(.gridder-parent) .box-story .box-story__image {
-    width: 25%;
-  }
 }
+
 .box-story__label {
   font-size: 9.8px;
   font-size: 0.7rem;
@@ -8387,8 +8380,8 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 @media (min-width: 62.5em) {
   .gridder-box-width-3:not(.gridder-parent) .box-story__image, .gridder-box-width-4:not(.gridder-parent) .box-story__image {
-    border-right: 1em solid #FFFFFF;
     float: left;
+    margin-right: 1em;
   }
 }
 .box-story__image img {
