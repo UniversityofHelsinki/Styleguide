@@ -12,28 +12,11 @@
 */
 %button,
 .button {
-  @include transition-duration(0.1s);
-  @include transition-property(all);
-  @include font-size(15px);
-  background-color: $blue;
-  border: none;
-  color: $white;
-  cursor: pointer;
-  padding: 0.8em 1em;
-
-  &:hover {
-    background-color: $darkblue;
-    color: $white;
-  }
-
-  &:before,
-  &:after {
-    @include transition-duration(0.1s);
-    @include transition-property(all);
-  }
+  @include button;
+  @include font-family-main;
 
   &.theme-transparent {
-    background-color: $white;
+    background-color: transparent;
     color: $blue;
 
     &:hover {
@@ -65,10 +48,10 @@
   position: relative;
 
   &:before {
-    @include icon($hy-arrow);
+    @include icon($icon-link-arrow);
     @include transform(translateY(-50%) rotate(270deg));
     @include transition-duration(0.1s);
-    top: 50%;
+    @include vertically-center;
     left: 1em;
     position: absolute;
   }
@@ -99,6 +82,7 @@
 .button--action {
   @extend %button;
   display: block;
+  font-weight: 600;
   padding-left: 1em;
   padding-right: 4em;
   position: relative;
@@ -133,17 +117,26 @@
   }
 
   &.theme-transparent {
-    display: inline-block;
+    align-items: center;
+    display: flex;
     padding-left: 0;
-    padding-right: 3em;
+    padding-right: 0;
 
-    &:hover,
     &:before {
-      background-color: transparent;
+      display: none;
     }
 
     &:after {
       color: $blue;
+      margin-left: 15px;
+      line-height: 0;
+      position: static;
+      width: auto;
+    }
+
+    &:hover,
+    &:before {
+      background-color: transparent;
     }
 
     a:hover,
@@ -173,10 +166,18 @@
   }
 
   &.theme-transparent {
-    &:after {
-      width: auto;
-    }
     padding-left: 2em;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      transform: none;
+    }
   }
 }
 
@@ -208,10 +209,63 @@
   }
 }
 
+.button--expand {
+  @extend %button;
+
+  .is-overflow-expandable & {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
 /*
  section: 3.5.6
+ title: Button icon
+ template: 3_5_6-button--icon
+ description:
+*/
+.button--icon {
+  @extend %button;
+  @include font-size(28px);
+  @include font-weight-medium;
+  color: $white;
+  display: inline-block;
+  line-height: 0.8em;
+  padding: 0.5em 0.4em;
+  text-align: center;
+
+  &:after {
+    @include font-size(28px);
+    padding-left: 3px;
+    vertical-align: baseline
+  }
+
+  &.icon--facebook {
+    @include background-color(#547bb9);
+  }
+
+  &.icon--twitter {
+    @include background-color(#5ea9dd);
+  }
+
+  &.icon--youtube {
+    @include background-color(#e6644a);
+  }
+
+  &.icon--linkedin {
+    @include background-color(#1483c4);
+  }
+
+  &.icon--instagram {
+    @include background-color(#125688);
+  }
+}
+
+/*
+ section: 3.5.7
  title: Button group
- template: 3_5_6-button-group
+ template: 3_5_7-button-group
  description:
 */
 %button-group,
@@ -220,7 +274,7 @@
   position: relative;
   vertical-align: middle;
 
-  > * {
+  > .button {
     display: inline-block;
     margin-bottom: 0.3em;
     position: relative;
@@ -228,15 +282,14 @@
 }
 
 /*
- section: 3.5.7
+ section: 3.5.8
  title: Button group small
- template: 3_5_7-button-group--small
+ template: 3_5_8-button-group--small
  description:
 */
 .button-group--small {
   @extend %button-group;
-
-  > * {
+  > .button {
     @include font-size(15px);
     padding: 0.3em 0.7em;
   }

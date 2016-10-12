@@ -4,41 +4,49 @@
  description:
 */
 
-
 /*
  section: 6.3.1
  title: Accordion
  template: 6_3_1_accordion
  description:
 */
-ul%accordion,
-ul.accordion {
-  &:focus {
+.accordion {
+  :focus {
     outline: none;
-  }
-  > li {
-    margin-bottom: ($vert-spacing-unit)/2;
-
-    &.is-active {
-      color: $white;
-    }
   }
 }
 
+.accordion__item {
+  margin-bottom: $vert-spacing-unit / 2;
+}
+
 .accordion__title {
+  @extend %button--accordion;
   @include font-weight-medium;
   @include font-size(14px);
   text-transform: uppercase;
 }
 
 .accordion__content {
-  padding-top: 2em;
-  padding-left: 1em;
+  > .textarea {
+    padding: 20px 10px;
 
-  > p {
-    padding-left: 1em;
-    padding-right: 2em;
-    @include font-family-bodytext();
+    @include breakpoint($small) {
+      padding: 20px 40px;
+    }
+  }
+}
+
+.accordion--dark {
+  .accordion__title {
+    @extend %button;
+    height: auto;
+    line-height: 100%;
+    padding: 0;
+
+    &.ui-state-active {
+      background-color: $blue--active;
+    }
   }
 }
 

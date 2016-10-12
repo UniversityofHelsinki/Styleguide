@@ -10,7 +10,7 @@
 }
 
 @mixin transition-element($property, $time) {
-  @include transform(translate3d(0,0,0));
+  @include transform(translate3d(0, 0, 0));
   -webkit-transition: $property $time ease;
   -moz-transition: $property $time ease;
   -ms-transition: $property $time ease;

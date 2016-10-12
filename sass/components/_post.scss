@@ -1,0 +1,26 @@
+/*
+ section: 15.1
+ title: Post
+ template: 15_1_post
+ description: Social media post
+*/
+.post {
+  margin-bottom: 1em;
+}
+
+.post__date {
+  @include font-size(12px);
+  @include font-weight-medium;
+  color: $silver;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.post__content {
+  @include font-family-bodytext;
+  @include font-size(15px);
+  color: $gray;
+  line-height: 1.5em;
+  margin-bottom: 0.4em;
+  overflow: hidden;
+}

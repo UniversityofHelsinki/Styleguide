@@ -1,0 +1,17 @@
+.some-links {
+  margin-top: 1em;
+}
+
+.some-links__link {
+  @include font-family-main;
+  @include font-size(13px);
+  @include font-weight-medium;
+  display: block;
+  margin-bottom: 0.5em;
+
+  &.theme-colored:after {
+    float: left;
+    padding-right: 5px;
+    font-size: 2em;
+  }
+}

@@ -7,50 +7,41 @@
 
 %box-data,
 .box-data {
-	display: block;
-	padding: 15px 0;
+  @include display-flex;
+  padding: 0 0 15px 0;
 
-	@include breakpoint($small) {
-		display: table;
-		width: 100%;
-	}
+  @include breakpoint($small) {
+    width: 100%;
+  }
 }
 
 .box-data__title {
-	@include text-informative;
-	@include font-family-main;
-	@include font-weight-medium;
+  @include text-informative;
+  @include font-family-main;
+  @include font-weight-medium;
 }
 
 .box-data__date {
-	@extend .box-data__title;
-	background-color: $gray;
-	color: $white;
-	display: block;
-	float: left;
-	height: 55px;
-	line-height: 1em;
-	margin: 0 20px 0px 0;
-	width: 55px;
-	position: relative;
+  @include display-flex;
+  @extend .box-data__title;
+  align-items: center;
+  background-color: $gray;
+  color: $white;
+  flex-shrink: 0;
+  height: 55px;
+  line-height: 1em;
+  margin: 0 20px 0px 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 55px;
 
-	@include breakpoint($small) {
-		margin: 0 15px 0 0;
-	}
-
-	> span {
-      @include vertically-center;
-      text-align: center;
-      width: 100%;
-	}
-}
-
-.box-data__grade {
-  @extend .box-data__date;
-  @include font-size(30px);
+  @include breakpoint($small) {
+    margin: 0 15px 0 0;
+  }
 }
 
 .box-data__content {
-	@include text-informative;
-	@include font-family-main;
+  @include text-informative;
+  @include font-family-main;
 }

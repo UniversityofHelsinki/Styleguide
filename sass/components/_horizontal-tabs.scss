@@ -5,20 +5,31 @@
  description:
 */
 // NOTE: this is not smacss because the field group horizontal-tabs.js produces shitty markup
-ul.horizontal-tabs {
-  box-shadow: 0 -10px 16px -18px $black inset;
-  margin-bottom: $vert-spacing-unit*2;
+.horizontal-tabs {
+  margin-bottom: $vert-spacing-unit;
 
-  > li {
+  .horizontal-tabs-list {
+    @include box-shadow(0 -1px 0 0 $lightsilver inset);
+    margin-bottom: $vert-spacing-unit * 2;
+  }
+
+  .horizontal-tabs-pane {
+    legend {
+      display: none;
+    }
+  }
+
+  .horizontal-tab-button {
     margin-bottom: 2px;
     outline: none;
 
     > a {
       @extend %button;
       @include link-heading;
+      display: block;
     }
 
-    &.is-active {
+    &.selected {
       > a {
         background-color: $darkblue;
         color: $white;
@@ -27,7 +38,7 @@ ul.horizontal-tabs {
   }
 
   @include breakpoint($small) {
-    > li {
+    .horizontal-tab-button {
       @include link-heading;
       background: none;
       border-bottom: none;
@@ -44,18 +55,16 @@ ul.horizontal-tabs {
         padding: 1em 3em;
       }
 
-      &.is-active a,
+      &.selected a,
       &:hover > a {
-        transition-property: all;
-        background-color: rgba(255,255,255,1);
+        @include transition-property(all);
+        background-color: rgba(255, 255, 255, 1);
         color: $darkblue;
       }
 
       &:not(.selected) {
-        box-shadow: 11px 5px 13px -18px $black inset;
-
         &:first-child {
-          box-shadow: none;
+          @include box-shadow(none);
         }
       }
 

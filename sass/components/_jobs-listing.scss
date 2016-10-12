@@ -7,177 +7,15 @@
 // TODO: Refactoring needed
 $jobs-listing-header-padding: 14px 10px;
 
-%jobs-listing,
-.jobs-listing {
+table.jobs-listing {
   height: inherit;
-}
 
-.jobs-listing h3 {
-  @include font-size(20px);
-  margin-bottom: 0;
-}
+  thead {
+    display: none;
 
-.jobs-listing__item {
-  @include border-side(bottom);
-  padding: 10px 4px;
-
-  &:last-child {
-    border-bottom: 0;
-  }
-
-  @include breakpoint($medium) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      @include light-zebra-color;
-      display: table;
-      padding: 0; // Add padding to child elements
+    @include breakpoint($medium) {
+      display: table-header-group;
       width: 100%;
-
-      > div {
-        padding: $jobs-listing-header-padding;
-      }
-    }
-  }
-}
-
-.jobs-listing__title {
-  @extend .box-data__title;
-  @include font-size(14px);
-  display: block;
-  width: 100%;
-
-  @include breakpoint($medium) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      display: table-cell;
-      vertical-align: middle;
-      width: 40%;
-    }
-  }
-}
-
-.jobs-listing .more-link {
-  display:none;
-
-  @include breakpoint($medium) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      display: inline-block;
-      float:right;
-      position: relative;
-    }
-  }
-
-  a {
-    border-bottom: none;
-
-    @include breakpoint($medium) {
-      position: absolute;
-      min-width: 240px;
-      right: 0;
-      top: -84px;
-    }
-  }
-}
-
-.jobs-listing__content {
-  @extend .box-data__content;
-  @include font-size(14px);
-  display: inline;
-
-  // Remove default font size because of Markus.
-  p {
-    font-size: inherit;
-    display: inline;
-  }
-
-  @include breakpoint($medium) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      display: table-cell;
-      vertical-align: middle;
-      width: 40%;
-    }
-  }
-}
-
-.jobs-listing__date {
-  @extend .box-data__content;
-  @include font-size(14px);
-  display: inline;
-
-  // Remove default font size because of Markus.
-  p {
-    font-size: inherit;
-    display: inline;
-  }
-
-  @include breakpoint($medium) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      display: table-cell;
-      vertical-align: middle;
-      width: 20%;
-
-      &:before {
-        content: '';
-      }
-    }
-  }
-}
-.jobs-listing {
-  .jobs-listing__footer-more-link .more-link {
-    float: left;
-    position: static;
-    display: inline-block;
-
-    @include breakpoint($medium) {
-      display: none;
-    }
-  }
-}
-
-// Show headers only when they fit.
-// @todo refactor.
-.jobs-listing {
-  .jobs-listing__item--header {
-    display:none;
-    @include breakpoint($medium) {
-      .gridder-box-width-2 &,
-      .gridder-box-width-3 &,
-      .gridder-box-width-4 & {
-        background-color: $darkgray;
-        display: table;
-        margin-top: 10px;
-        text-transform: uppercase;
-
-        & > div {
-          @include font-size(12px);
-          @include font-weight-bold;
-          color: $white;
-        }
-      }
-    }
-  }
-}
-
-.jobs-listing__header {
-  display:none;
-  .gridder-box-width-2 &,
-  .gridder-box-width-3 &,
-  .gridder-box-width-4 & {
-    @include breakpoint($medium) {
-      display: table;
-      width: 100%;
-    }
-
-    tr {
-      display: table-row;
     }
 
     th {
@@ -193,6 +31,58 @@ $jobs-listing-header-padding: 14px 10px;
       &:last-child {
         width: 20%;
       }
+    }
+  }
+
+  td {
+    @include breakpoint($medium) {
+      padding: $jobs-listing-header-padding;
+    }
+  }
+}
+
+tr.jobs-listing__item {
+  @include border-side(bottom);
+  display: block;
+  padding: 10px 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  @include breakpoint($medium) {
+    @include light-zebra-color;
+    display: table-row;
+    padding: 0; // Add padding to child elements
+    width: 100%;
+  }
+}
+
+td.jobs-listing__title {
+  @extend .box-data__title;
+  @include font-size(14px);
+  display: block;
+  width: 100%;
+
+  @include breakpoint($medium) {
+    display: table-cell;
+    vertical-align: middle;
+    width: 40%;
+  }
+}
+
+td.jobs-listing__date {
+  @extend .box-data__content;
+  @include font-size(14px);
+  display: inline;
+
+  @include breakpoint($medium) {
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%;
+
+    &:before {
+      content: '';
     }
   }
 }

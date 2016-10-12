@@ -1,0 +1,32 @@
+.l-subregion-wrapper {
+  @include line-break($lightsilver);
+  padding: $vert-spacing-unit 0;
+  position: relative;
+
+  @include breakpoint($small) {
+    padding: ($vert-spacing-unit + 10) 0;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: $darkwhite;
+  }
+
+  .l-before-content & {
+    border-bottom: 2px solid $lightsilver;
+    border-top: none;
+  }
+
+  &.theme-plain {
+    background-color: transparent;
+
+    &:first-of-type {
+      border-top: 0 none;
+      padding-top: 0;
+    }
+  }
+}
+
+.l-subregion {
+  @include clearfix;
+  @include container;
+}

@@ -2,40 +2,345 @@
  section: 5.1
  title: Main menu
  template: 5_1_main-menu
- description: The main menu.
+ description: The main menu. To see the mobile menu, resize your browser to mobile width.
 */
 
-ul.main-menu {
-  @include clearfix();
+.main-menu {
+  background-color: $white;
+  overflow: hidden;
+
+  @include breakpoint($small) {
+    border-bottom: 1px solid lighten($silver, 20%);
+
+    &.is-open {
+      border-bottom: none;
+    }
+  }
 
   li {
-    display: block;
-    float: left;
+    display: flex;
+    flex-flow: column wrap;
     list-style: none;
+    position: relative;
 
-    &:first-of-type {
-      a {
-        padding-left: 0;
-        span {
-          display: none;
-        }
-      }
+    @include breakpoint($small) {
+      align-items: center;
+      flex-flow: row wrap;
     }
   }
 
   a {
-    @include font-size(15px);
-    line-height: 1.25em;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    font-style: normal;
-    display: block;
-    padding: 1.6em 1.5em;
+    @include link-menu;
+  }
 
-    &.active {
+  > ul.menu {
+    border-bottom: 1px solid lighten($silver, 20%);
+
+    @include breakpoint($small) {
+      @include container;
+      border: none;
+      display: flex;
+      flex-flow: row wrap;
+      height: 100%;
+      padding: 0.6em 2em 0.6em 2em;
+      position: relative;
+    }
+  }
+
+  li.is-lvl1 {
+    border-top: 1px solid darken($lightsilver, 10%);
+
+    &.is-open {
+      background: darken($white, 5%);
+    }
+
+    > a {
+      padding: 15px 20px 15px 60px;
+    }
+
+    @include breakpoint($small) {
+      border: none;
+
+      &.is-open {
+        background: none;
+      }
+
+      > a {
+        padding: 0.6em 0.55em 0.6em 1.25em;
+      }
+    }
+
+    @include breakpoint($medium) {
+      > a {
+        padding: 0.6em 1em 0.6em 1.8em;
+      }
+    }
+  }
+
+  li.is-lvl2 {
+    > .main-menu__expand {
+      left: 25px;
+    }
+
+    > a {
+      padding: 15px 30px 15px 80px;
+      text-transform: none;
+    }
+
+    @include breakpoint($small) {
+      display: none;
+    }
+
+    > ul.menu {
+      padding-bottom: 10px;
+    }
+  }
+
+  li.is-lvl3 {
+    > a {
+      @include font-weight-book;
+      color: $silver;
+      padding: 5px 30px 5px 80px;
+      text-transform: none;
+    }
+
+    > ul.menu {
+      display: none;
+    }
+  }
+}
+
+li.main-menu__front {
+  @include breakpoint($small) {
+    display: inline-block;
+    left: 1em;
+    position: absolute;
+    top: 50%;
+  }
+
+  > a {
+    @include breakpoint($small) {
+      font-size: 0;
+      padding-left: 0;
+      padding-right: 19px;
+
+      &:after {
+        @include icon($icon-home);
+        @include font-size(16px);
+        @include font-weight-light;
+        @include transition-element(opacity, 0.2s);
+      }
+    }
+
+    @include breakpoint($medium) {
+      padding-right: 35px;
+    }
+  }
+}
+
+.main-menu__expand {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 50px;
+  z-index: 10;
+
+  &:before {
+    @include font-size(14px);
+    @include icon($icon-caret-down);
+    @include transition-duration(0.2s);
+    @include transition-property(color, border-color);
+    color: lighten($silver, 20%);
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    top: 10px;
+    width: 2em;
+  }
+
+  &:hover:before {
+    color: $silver;
+  }
+
+  @include breakpoint($small) {
+    align-items: center;
+    display: flex;
+    height: 1.2em;
+    justify-content: center;
+    order: 2;
+    position: static;
+    width: 1.2em;
+
+    &:before {
+      @include font-size(12px);
+      height: auto;
+      line-height: normal;
+      padding: 2px;
+      top: auto;
+      width: auto;
+    }
+  }
+
+  .is-open > & {
+    &:before {
+      @include icon($icon-caret-up);
+      color: $blue;
+    }
+
+    &:hover:before {
       color: $darkblue;
     }
+  }
+}
+
+
+
+/*
+ section: 5.1.1
+ title: Fatmenu
+ template: 5_1_1_fatmenu
+ description: The fatmenu.
+*/
+
+.fatmenu {
+  background-color: $white;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+
+  .stickynav-active & {
+    position: fixed;
+  }
+
+  &.is-open {
+    border-bottom: 1px solid lighten($silver, 20%);
+  }
+
+  @include breakpoint($small) {
+    display: block;
+  }
+
+  > ul.menu {
+    @include container;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  li.is-lvl1 {
+    float: left;
+    margin-right: -100%;
+    padding: 2em 0 20px;
+    visibility: hidden;
+    width: 100%;
+
+    &.is-open {
+      display: block !important;
+      margin-right: 0;
+      visibility: visible;
+    }
+
+    > ul.menu {
+      margin-bottom: 3em;
+    }
+  }
+
+  li.is-lvl2 {
+    float: left;
+    margin-right: 10px;
+    padding: 0 0 0.8em 0;
+    width: 30%;
+
+    > a {
+      @include font-weight-bold;
+      @include font-size(15px);
+      display: block;
+      letter-spacing: 0;
+      line-height: 1.25em;
+      padding: ($vert-spacing-unit)/2 0 0;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        color: $darkblue;
+      }
+
+      &.active-trail {
+        color: $darkblue;
+      }
+    }
+
+    > ul.menu {
+      margin: 0.5em 0 0 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  li.is-lvl3 {
+    > a {
+      @include font-size(14px);
+      @include font-weight-book;
+      color: $lightgray;
+      padding: ($vert-spacing-unit)/7 0 ($vert-spacing-unit)/7 0;
+      position: relative;
+      text-transform: none;
+
+      &:hover,
+      &.active-trail {
+        color: $darkblue;
+      }
+    }
+
+    > ul.menu {
+      display: none;
+    }
+  }
+}
+
+.fatmenu__title {
+  a {
+    color: $blue;
+
+    &:hover {
+      color: $darkblue;
+    }
+
+    &:after {
+      @include font-size(16px);
+      @include icon($icon-link-arrow);
+      margin-left: 1em;
+      position: absolute;
+    }
+  }
+}
+
+.fatmenu__collapse {
+  @include font-weight-medium;
+  @include font-size(20px);
+  align-items: center;
+  color: $blue;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 15px;
+  width: 2em;
+
+  &:hover {
+    color: $darkblue;
+  }
+
+  &:before {
+    @include icon($icon-caret-up);
   }
 }
