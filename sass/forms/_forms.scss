@@ -148,7 +148,7 @@
   }
 
   @include breakpoint($small) {
-    @include grid-span(8);
+    //@include grid-span(8);
 
     &:nth-child(even) {
       // Todo: what's omega?
