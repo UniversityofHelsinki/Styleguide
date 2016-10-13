@@ -1,7 +1,7 @@
 @mixin transition-scale($amount) {
   @include transform(translateZ(0));
-  @include transition-duration(0.1s);
-  @include transition-property(transform);
+  ////@include transition-duration(0.1s);
+  //@include transition-property(transform);
 
   &:active,
   &:hover {

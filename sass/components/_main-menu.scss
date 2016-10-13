@@ -128,7 +128,7 @@ li.main-menu__front {
         @include icon($icon-home);
         @include font-size(16px);
         @include font-weight-light;
-        @include transition-element(opacity, 0.2s);
+        //@include transition-element(opacity, 0.2s);
       }
     }
 
@@ -150,8 +150,8 @@ li.main-menu__front {
   &:before {
     @include font-size(14px);
     @include icon($icon-caret-down);
-    @include transition-duration(0.2s);
-    @include transition-property(color, border-color);
+    //@include transition-duration(0.2s);
+    //@include transition-property(color, border-color);
     color: lighten($silver, 20%);
     cursor: pointer;
     display: inline-block;

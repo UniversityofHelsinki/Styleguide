@@ -160,7 +160,7 @@
   }
 
   &:before {
-    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
+    //@include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
     content: " ";
     height: 100%;
     left: 35%;
@@ -172,7 +172,7 @@
   }
 
   &:after {
-    @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
+    //@include background-image(linear-gradient(right, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%));
     content: " ";
     height: 100%;
     position: absolute;

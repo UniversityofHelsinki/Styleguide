@@ -6,10 +6,10 @@
 */
 %box-card,
 .box-card {
-  @include display-flex;
+  //@include display-flex;
   @include font-size(14px);
-  @include transition-duration(0.3s);
-  @include transition-property(all);
+  //@include transition-duration(0.3s);
+  //@include transition-property(all);
   border: none;
   color: $black;
   flex: 1 1 auto;
@@ -62,7 +62,7 @@
 }
 
 .box-card__content {
-  @include display-flex;
+  //@include display-flex;
   background-color: lighten($lightsilver, 5%);
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -73,7 +73,7 @@
 }
 
 .box-card__item {
-  @include display-flex;
+  //@include display-flex;
   border: none;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -144,7 +144,7 @@
       width: 31%;
 
       &.theme-secondary {
-        @include display-flex;
+        //@include display-flex;
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
         width: 66%;
@@ -211,8 +211,8 @@
 .box-card__link {
   @include font-weight-medium;
   @include font-size(14px);
-  @include transition-duration(0.1s);
-  @include transition-property(color);
+  //@include transition-duration(0.1s);
+  //@include transition-property(color);
   align-self: flex-end;
   color: $white !important;
   font-weight: 400;
