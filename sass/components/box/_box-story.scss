@@ -367,6 +367,7 @@
 .box-story--liftup {
   @extend %box-story;
   clear: both;
+  display: block;
   overflow: visible;
 
   .box-story__image {
