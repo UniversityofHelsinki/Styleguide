@@ -223,7 +223,7 @@
     }
 
     &.carousel-unwrapped__prev {
-      background-image: linear-gradient('to left', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
       left: 0;
 
       &:before {
@@ -323,8 +323,8 @@
     z-index: 10;
 
     &:before {
-      //@include transition-property(opacity);
-      //@include transition-duration(0.2s);
+      transition-property: opacity;
+      transition-duration: 0.2s;
       opacity: 0.6;
     }
 
