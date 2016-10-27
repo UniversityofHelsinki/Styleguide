@@ -2805,9 +2805,8 @@ video {
   -moz-osx-font-smoothing: grayscale;
   content: "";
   -webkit-transform: translateY(-50%) rotate(270deg);
-  -moz-transform: translateY(-50%) rotate(270deg);
   -ms-transform: translateY(-50%) rotate(270deg);
-  -transform: translateY(-50%) rotate(270deg);
+  transform: translateY(-50%) rotate(270deg);
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   -webkit-transform: translateY(-50%);
@@ -2826,9 +2825,8 @@ video {
 .is-active.accordion__title:before,
 .button--accordion.is-active:before {
   -webkit-transform: translateY(-50%) rotate(90deg);
-  -moz-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
-  -transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   color: #FFF;
 }
 a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
@@ -4845,9 +4843,8 @@ dl, ol, ul {
 
 .carousel-unwrapped__image {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
-  -transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   left: 70%;
   max-height: 350px;
   min-width: 48em;
@@ -7668,9 +7665,8 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 .box-card__fieldset a:before {
   -webkit-transform: translateY(-25%);
-  -moz-transform: translateY(-25%);
   -ms-transform: translateY(-25%);
-  -transform: translateY(-25%);
+  transform: translateY(-25%);
   color: #979797;
   content: 'L';
   left: 0;
@@ -8713,6 +8709,7 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 */
 .box-story--liftup {
   clear: both;
+  display: block;
   overflow: visible;
 }
 .box-story--liftup .box-story__image {
