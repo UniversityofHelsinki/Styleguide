@@ -71,8 +71,8 @@
   > a {
     @include button-next-transparent;
     @include font-weight-medium;
-    //@include transition-duration(0.1s);
-    //@include transition-property(color);
+    transition-duration: 0.1s;
+    transition-property: color;
     text-align: right;
   }
 }

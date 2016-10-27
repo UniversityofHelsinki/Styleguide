@@ -1,15 +1,15 @@
 @mixin shadow-under {
-  //@include box-shadow(0 15px 25px -27px $gray);
+  box-shadow: 0 15px 25px -27px $gray;
 }
 
 @mixin tab-shadow {
-  //@include box-shadow(1px 1px 2px -1px rgba(0, 0, 0, 0.25));
+  box-shadow: 1px 1px 2px -1px rgba(0, 0, 0, 0.25);
 }
 
 @mixin box-shadow-outline {
-  //@include box-shadow(0 0 2px $darkgray);
+  box-shadow: 0 0 2px $darkgray;
 }
 
 @mixin bubble-shadow {
-  //@include box-shadow((-1px) 1px 10px rgba(17, 17, 17, 0.2));
+  box-shadow: (-1px) 1px 10px rgba(17, 17, 17, 0.2);
 }

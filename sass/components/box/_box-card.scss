@@ -8,8 +8,8 @@
 .box-card {
   //@include display-flex;
   @include font-size(14px);
-  //@include transition-duration(0.3s);
-  //@include transition-property(all);
+  transition-duration: 0.3s;
+  transition-property: all;
   border: none;
   color: $black;
   flex: 1 1 auto;
@@ -211,8 +211,8 @@
 .box-card__link {
   @include font-weight-medium;
   @include font-size(14px);
-  //@include transition-duration(0.1s);
-  //@include transition-property(color);
+  transition-duration: 0.1s;
+  transition-property: color;
   align-self: flex-end;
   color: $white !important;
   font-weight: 400;

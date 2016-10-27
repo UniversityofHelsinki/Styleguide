@@ -11,8 +11,8 @@
 */
 %box-story,
 .box-story {
-  //@include transition-property(background-color);
-  //@include transition-duration(0.1s);
+  transition-property: background-color;
+  transition-duration: 0.1s;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -258,8 +258,8 @@
 
 .box-story__title {
   //@include display-flex;
-  //@include transition-property(color);
-  //@include transition-duration(0.1s);
+  transition-property: color;
+  transition-duration: 0.1s;
   align-items: center;
   overflow: hidden;
 }
@@ -292,8 +292,8 @@
 
 .box-story__link {
   @include font-weight-medium;
-  //@include transition-duration(0.1s);
-  //@include transition-property(color);
+  transition-duration: 0.1s;
+  transition-property: color;
   color: $darkgray;
 
   .box-story:active &,

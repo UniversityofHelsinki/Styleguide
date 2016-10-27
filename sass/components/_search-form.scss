@@ -30,7 +30,7 @@
 }
 
 .search-form__input {
-  //@include border-radius(0);
+  border-radius: 0;
   border: 2px solid $blue;
   height: 40px;
   line-height: 34px;
@@ -48,7 +48,7 @@
 }
 
 input[type="submit"].search-form__submit {
-  //@include border-radius(0);
+  border-radius: 0;
   @include icon(); // Unicode is provided by the form
   background-color: $blue;
   bottom: 0;
