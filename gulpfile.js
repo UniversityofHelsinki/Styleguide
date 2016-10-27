@@ -56,7 +56,7 @@ gulp.task('compass', function () {
     ).pipe(
       autoPrefixer(
         {
-          browsers: ['last 4 versions'],
+          browsers: ['last 3 versions'],
           cascade: false
         }
       )
