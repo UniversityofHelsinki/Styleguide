@@ -67,7 +67,7 @@ $grid-gutter: $vert-spacing-unit / 2;
 }
 
 .gridder-box {
-  //@include display-flex;
+  display: flex;
   flex-direction: column;
   -webkit-flex-direction: column;
   margin-bottom: $vert-spacing-unit;
@@ -97,7 +97,7 @@ $grid-gutter: $vert-spacing-unit / 2;
     }
 
     @include breakpoint($small) {
-      //@include display-flex;
+      display: flex;
       -webkit-flex-flow: row wrap;
       flex-flow: row wrap;
       margin: 0 (-$grid-gutter);

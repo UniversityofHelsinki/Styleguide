@@ -223,7 +223,7 @@
     text-align: right;
 
     &.theme-bold {
-      //@include text-shadow-outline-small;
+      text-shadow: 1px 1px 1px #222, 0px 0px 1px rgba(0, 0, 0, 0.6);
       background: none;
       font-size: 1.05em;
       font-weight: bold;
@@ -257,7 +257,7 @@
 }
 
 .box-story__title {
-  //@include display-flex;
+  display: flex;
   transition-property: color;
   transition-duration: 0.1s;
   align-items: center;

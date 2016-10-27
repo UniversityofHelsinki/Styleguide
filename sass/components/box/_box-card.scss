@@ -6,7 +6,7 @@
 */
 %box-card,
 .box-card {
-  //@include display-flex;
+  display: flex;
   @include font-size(14px);
   transition-duration: 0.3s;
   transition-property: all;
@@ -62,7 +62,7 @@
 }
 
 .box-card__content {
-  //@include display-flex;
+  display: flex;
   background-color: lighten($lightsilver, 5%);
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -73,7 +73,7 @@
 }
 
 .box-card__item {
-  //@include display-flex;
+  display: flex;
   border: none;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -144,7 +144,7 @@
       width: 31%;
 
       &.theme-secondary {
-        //@include display-flex;
+        display: flex;
         -webkit-flex: 1 1 auto;
         flex: 1 1 auto;
         width: 66%;

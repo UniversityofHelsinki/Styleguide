@@ -86,7 +86,7 @@
   a {
     @include font-size(40px);
     @include font-weight-bold;
-    //@include text-shadow;
+    text-shadow: 0px 0px 1px #aaaaaa;
     transition-scale: 1.15;
     transition-property: all;
     color: $white;

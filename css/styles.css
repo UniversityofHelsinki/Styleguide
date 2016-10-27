@@ -3487,6 +3487,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 .gridder-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -3514,6 +3518,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .gridder-container-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -3560,6 +3568,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .gridder-container-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -3606,6 +3618,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .gridder-container-3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -3652,6 +3668,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .gridder-container-4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
@@ -4613,6 +4633,7 @@ dl, ol, ul {
   font-size: 2.5rem;
   font-weight: 700;
   font-style: normal;
+  text-shadow: 0px 0px 1px #aaaaaa;
   transition-scale: 1.15;
   -webkit-transition-property: all;
   transition-property: all;
@@ -7403,6 +7424,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
  description: Displays contact card type information.
 */
 .box-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 12.25px;
   font-size: 0.875rem;
   -webkit-transition-duration: 0.3s;
@@ -7479,6 +7504,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 
 .box-card__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #f8f8f8;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -7494,6 +7523,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 
 .box-card__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   border: none;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -7568,6 +7601,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
     width: 31%;
   }
   .gridder-box-width-2 .box-card__section.theme-secondary, .gridder-box-width-3 .box-card__section.theme-secondary, .gridder-box-width-4 .box-card__section.theme-secondary {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex: 1 1 auto;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -7656,6 +7693,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
  description: Data is story-like component, but mainly with data insertions e.g. event list.
 */
 .box-data {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0 0 15px 0;
 }
 @media (min-width: 48em) {
@@ -7682,6 +7723,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 
 .box-data__date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -8425,6 +8470,7 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   text-align: right;
 }
 .box-story__image .box-story__overlay.theme-bold {
+  text-shadow: 1px 1px 1px #222, 0px 0px 1px rgba(0, 0, 0, 0.6);
   background: none;
   font-size: 1.05em;
   font-weight: bold;
@@ -8517,6 +8563,10 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 
 .box-story__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.1s;
