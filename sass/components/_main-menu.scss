@@ -128,7 +128,7 @@ li.main-menu__front {
         @include icon($icon-home);
         @include font-size(16px);
         @include font-weight-light;
-        transition-element: opacity, 0.2s;
+        @include transition-element(opacity, 0.2s);
       }
     }
 

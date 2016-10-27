@@ -87,7 +87,7 @@
     @include font-size(40px);
     @include font-weight-bold;
     text-shadow: 0px 0px 1px #aaaaaa;
-    transition-scale: 1.15;
+    @include transition-scale(1.15);
     transition-property: all;
     color: $white;
     display: block;
@@ -193,7 +193,7 @@
   a {
     @include font-size(40px);
     @include font-weight-bold;
-    transition-scale: 1.15;
+    @include transition-scale(1.15);
     transition-property: all;
     color: $white;
     display: block;
@@ -223,7 +223,7 @@
     }
 
     &.carousel-unwrapped__prev {
-      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
       left: 0;
 
       &:before {
@@ -232,7 +232,7 @@
     }
 
     &.carousel-unwrapped__next {
-      background-image: linear-gradient('to right', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
       right: 0;
 
       &:before {
