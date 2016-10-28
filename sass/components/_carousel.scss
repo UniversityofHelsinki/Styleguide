@@ -38,7 +38,7 @@
 
 .carousel__credits {
   @include text-author;
-  transform: translateY(100%);
+  // @include transform(translateY(100%));
   bottom: auto;
   color: $silver;
   height: $vert-spacing-unit + 10px;
