@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var sass = require('gulp-ruby-sass');
-var compass = require('gulp-compass');
+var sass = require('gulp-sass');
+var globbing = require('node-sass-globbing');
 var concat = require('gulp-concat');
 var autoPrefixer = require('gulp-autoprefixer');
 
@@ -29,44 +29,26 @@ var generateIconSrcPath = iconFontSettings.iconsPath + 'src';
 var generateIconDestPath = iconFontSettings.iconsPath + 'dest';
 var unicodesJsonFileName = iconFontSettings.iconsPath + 'unicodes.json';
 
-// Compass task
-gulp.task('compass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(
-      compass(
-        {
-          config_file: './config.rb',
-          environment: 'production',
-          css: './css',
-          sass: './sass',
-          debug: false,
-          time: true,
-          src: [
-            "**/*.scss",
-            "!**/__*.scss"
-          ]
-        }
-      )
-    ).on(
-      'error',
-      function (error) {
-        console.log(error.message);
-        this.emit('end');
-      }
-    ).pipe(
-      autoPrefixer(
-        {
-          browsers: ['last 3 versions'],
-          cascade: false
-        }
-      )
-    ).pipe(
-      gulp.dest(
-        './css'
-      )
-    )
-});
+var sass_config = {
+  importer: globbing,
+  outputStyle: 'expanded',
+  includePaths: [
+    'node_modules/normalize.css/',
+    'node_modules/breakpoint-sass/stylesheets/',
+    'node_modules/singularitygs/stylesheets/'
+  ]
+};
 
+// Compile sass.
+gulp.task('sass', function () {
+  gulp.src('sass/**/*.scss')
+    .pipe(sass(sass_config)
+    .on('error', sass.logError))
+    .pipe(autoPrefixer({
+      browsers: ['last 4 versions']
+    }))
+    .pipe(gulp.dest('css'));
+});
 
 // Generate icons.
 gulp.task('generateUnicodeIconFiles', ['clean'], function () {
@@ -139,7 +121,7 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('build', ['clean', 'generateUnicodeIconFiles', 'iconFont', 'compass'], function () {
+gulp.task('build', ['clean', 'generateUnicodeIconFiles', 'iconFont', 'sass'], function () {
   return gulp.src('')
     .pipe(shell(['node build'], {cwd: './styleguide'}));
 });
