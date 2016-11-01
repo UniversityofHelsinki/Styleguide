@@ -6,21 +6,72 @@
 */
 .post {
   margin-bottom: 1em;
+  padding-top: 25px;
+  position: relative;
 }
 
 .post__date {
   @include font-size(12px);
   @include font-weight-medium;
   color: $silver;
+  float: right;
+  line-height: 100%;
   margin-bottom: 0.5em;
   overflow: hidden;
 }
 
+.post__header {
+  @include font-size(11px);
+  font-style: italic;
+  position: absolute;
+  top: 6px;
+}
+
+.post__retweeter {
+  @include font-size(10px);
+  display: inline;
+  font-style: normal;
+}
+
+.post__image {
+  float: left;
+  margin-right: 1em;
+}
+
 .post__content {
-  @include font-family-bodytext;
-  @include font-size(15px);
   color: $gray;
-  line-height: 1.5em;
+  line-height: 1.2em;
   margin-bottom: 0.4em;
   overflow: hidden;
+}
+
+.post__author {
+  padding-bottom: 0;
+}
+
+.post__account {
+  @include font-size(12px);
+}
+
+.post__message {
+  @include font-size(12px);
+  color: $black;
+  line-height: 1.5em;
+  margin-top: 10px;
+}
+
+.post__media {
+
+}
+
+.post__footer {
+
+}
+
+.post__action {
+  @include font-size(12px);
+  @include font-weight-medium;
+  color: darken($lightsilver, 10%);
+  float: left;
+  margin-right: 10px;
 }
