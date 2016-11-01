@@ -25,6 +25,15 @@
   font-style: italic;
   position: absolute;
   top: 6px;
+
+  .icon {
+    @include font-size(16px);
+    color: $silver;
+    display: inline-block;
+    line-height: 0;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
 }
 
 .post__retweeter {
@@ -57,21 +66,27 @@
   @include font-size(12px);
   color: $black;
   line-height: 1.5em;
+  margin-bottom: 10px;
   margin-top: 10px;
 }
 
 .post__media {
-
 }
 
 .post__footer {
-
 }
 
 .post__action {
   @include font-size(12px);
   @include font-weight-medium;
+  align-items: center;
+  display: flex;
   color: darken($lightsilver, 10%);
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
+
+  .icon {
+    @include font-size(14px);
+    margin-right: 3px;
+  }
 }

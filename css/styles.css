@@ -6540,6 +6540,20 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
     font-size: 11px;
   }
 }
+.post__header .icon {
+  font-size: 14px;
+  font-size: 1rem;
+  color: #979797;
+  display: inline-block;
+  line-height: 0;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+@media (min-width: 48em) {
+  .post__header .icon {
+    font-size: 16px;
+  }
+}
 
 .post__retweeter {
   font-size: 8.75px;
@@ -6584,6 +6598,7 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   font-size: 0.75rem;
   color: #222;
   line-height: 1.5em;
+  margin-bottom: 10px;
   margin-top: 10px;
 }
 @media (min-width: 48em) {
@@ -6597,13 +6612,29 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   color: #d2d2d2;
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
 }
 @media (min-width: 48em) {
   .post__action {
     font-size: 12px;
+  }
+}
+.post__action .icon {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  margin-right: 3px;
+}
+@media (min-width: 48em) {
+  .post__action .icon {
+    font-size: 14px;
   }
 }
 
