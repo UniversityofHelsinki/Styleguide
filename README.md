@@ -51,13 +51,11 @@ Submit changes with pull requests.
 
 ### Dependencies ###
 
-1. ruby & rubygems
 2. node & npm
 3. gulp
 
 ### Setting up ###
 
-1. `bundle install`
 2. `npm install`
 3. `gulp serve` (to compile the css and launch server)
 
