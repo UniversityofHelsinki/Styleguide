@@ -6510,6 +6510,9 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   padding-top: 25px;
   position: relative;
 }
+.post.post--facebook {
+  padding-top: 0;
+}
 
 .post__date {
   font-size: 10.5px;
@@ -6526,6 +6529,9 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   .post__date {
     font-size: 12px;
   }
+}
+.post--facebook .post__date {
+  float: none;
 }
 
 .post__header {
@@ -6577,6 +6583,16 @@ a:hover .panel > .more-link a:after, .feed-listing__more-link a:hover:after,
   line-height: 1.2em;
   margin-bottom: 0.4em;
   overflow: hidden;
+}
+.post--facebook .post__content {
+  font-size: 13.125px;
+  font-size: 0.9375rem;
+  line-height: 1.5em;
+}
+@media (min-width: 48em) {
+  .post--facebook .post__content {
+    font-size: 15px;
+  }
 }
 
 .post__author {

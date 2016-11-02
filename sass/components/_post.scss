@@ -8,6 +8,10 @@
   margin-bottom: 1em;
   padding-top: 25px;
   position: relative;
+
+  &.post--facebook {
+    padding-top: 0;
+  }
 }
 
 .post__date {
@@ -18,6 +22,10 @@
   line-height: 100%;
   margin-bottom: 0.5em;
   overflow: hidden;
+
+  .post--facebook & {
+    float: none;
+  }
 }
 
 .post__header {
@@ -52,6 +60,11 @@
   line-height: 1.2em;
   margin-bottom: 0.4em;
   overflow: hidden;
+
+  .post--facebook & {
+    @include font-size(15px);
+    line-height: 1.5em;
+  }
 }
 
 .post__author {
