@@ -2912,7 +2912,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 .button--action-before:hover:before,
 .button--action:hover:before {
-  background: 3146;
+  background: #003146;
 }
 .theme-transparent.button--action-before,
 .button--action.theme-transparent {
@@ -5401,7 +5401,7 @@ a:hover .theme-dark .list-of-links__link:after, .theme-dark .list-of-links__link
   color: #FFF;
 }
 a:hover .theme-dark .list-of-links__link:hover:after, .theme-dark .list-of-links__link:hover:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 a:hover .theme-dark .list-of-links__link {
@@ -5409,7 +5409,7 @@ a:hover .theme-dark .list-of-links__link {
   color: #FFF;
 }
 a:hover .theme-dark .list-of-links__link:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 .theme-footer .list-of-links__link, .theme-info-footer .list-of-links__link {
@@ -6315,7 +6315,7 @@ ul.pager > li.pager__previous a:hover {
 a:hover
 ul.pager > li.pager__previous a:hover:after,
 ul.pager > li.pager__previous a:hover:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 a:hover
@@ -6325,7 +6325,7 @@ ul.pager > li.pager__previous a {
 }
 a:hover
 ul.pager > li.pager__previous a:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 ul.pager > li.pager__previous a:after {
@@ -6403,7 +6403,7 @@ ul.pager > li.pager__next a:hover {
 a:hover
 ul.pager > li.pager__next a:hover:after,
 ul.pager > li.pager__next a:hover:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 a:hover
@@ -6413,7 +6413,7 @@ ul.pager > li.pager__next a {
 }
 a:hover
 ul.pager > li.pager__next a:after {
-  background: 3146;
+  background: #003146;
   color: #FFF;
 }
 ul.pager > li.pager__previous a,
