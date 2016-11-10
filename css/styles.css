@@ -7284,21 +7284,21 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
  description: Displays contact card type information.
 */
 .box-card {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 12.25px;
   font-size: 0.875rem;
   transition-duration: 0.3s;
   transition-property: all;
   border: none;
   color: #222;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex-direction: column;
   line-height: 19px;
 }
 @media (min-width: 48em) {
@@ -7312,9 +7312,9 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 @media (min-width: 48em) {
   .box-card.theme-plain .box-card__item {
+    -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-direction: row;
   }
 }
 .box-card.theme-plain .box-card__item:last-of-type {
@@ -7356,44 +7356,39 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 
 .box-card__content {
+  background-color: #f8f8f8;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #f8f8f8;
+  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex-direction: column;
   line-height: 19px;
   padding: 0.75em 1.25em;
 }
 
 .box-card__item {
+  border: none;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: none;
+  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex-direction: column;
   margin: 0;
   padding: 0;
 }
 @media (min-width: 48em) {
   .box-card__item {
+    -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-direction: row;
-  }
-  .gridder-box-width-1 .box-card__item {
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-direction: column;
   }
 }
 .box-card__item:last-of-type {
@@ -7415,40 +7410,6 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   .box-card__section:last-of-type {
     border: none;
     padding-left: 2em;
-  }
-  .gridder-box-width-1 .box-card__section {
-    border: none;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    padding: 0;
-    width: auto;
-  }
-  .gridder-box-width-1 .box-card__section.theme-secondary {
-    border: none;
-    padding: 0;
-    width: auto;
-  }
-  .gridder-box-width-2 .box-card__section, .gridder-box-width-3 .box-card__section, .gridder-box-width-4 .box-card__section {
-    border-bottom: none;
-    border-right: 1px solid #EBEBEB;
-    margin-bottom: 0;
-    margin-right: 30px;
-  }
-  .gridder-box-width-2 .box-card__section, .gridder-box-width-3 .box-card__section, .gridder-box-width-4 .box-card__section {
-    width: 31%;
-  }
-  .gridder-box-width-2 .box-card__section.theme-secondary, .gridder-box-width-3 .box-card__section.theme-secondary, .gridder-box-width-4 .box-card__section.theme-secondary {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    width: 66%;
-  }
-  .gridder-box-width-2 .box-card__section.theme-secondary .box-card__field-wrapper, .gridder-box-width-3 .box-card__section.theme-secondary .box-card__field-wrapper, .gridder-box-width-4 .box-card__section.theme-secondary .box-card__field-wrapper {
-    width: 50%;
   }
 }
 
