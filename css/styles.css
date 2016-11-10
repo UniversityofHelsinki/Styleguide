@@ -7507,6 +7507,7 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   color: #FFF !important;
   font-weight: 400;
   float: right;
+  height: 18px;
   margin-top: auto;
   padding: 0;
 }
