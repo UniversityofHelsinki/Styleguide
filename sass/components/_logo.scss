@@ -65,13 +65,11 @@
     content: $icon-helsinginyliopisto;
     font-family: "hy-icons";
     font-weight: 300;
-    line-height: 46px;
   }
 
   &.theme-big {
     &:before {
       @include font-size(100px);
-      line-height: 95px;
     }
   }
 }
@@ -83,7 +81,7 @@
   letter-spacing: -0.05em;
   line-height: 1.1em;
   margin-top: 0;
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 15px 11px;
 
   @include breakpoint($small) {
     @include font-size(17px);

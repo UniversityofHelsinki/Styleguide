@@ -5858,7 +5858,6 @@ a:hover .theme-dark .list-of-links__link:after {
   content: "";
   font-family: "hy-icons";
   font-weight: 300;
-  line-height: 46px;
 }
 @media (min-width: 48em) {
   .logo:before {
@@ -5868,7 +5867,6 @@ a:hover .theme-dark .list-of-links__link:after {
 .logo.theme-big:before {
   font-size: 87.5px;
   font-size: 6.25rem;
-  line-height: 95px;
 }
 @media (min-width: 48em) {
   .logo.theme-big:before {
@@ -5885,7 +5883,7 @@ a:hover .theme-dark .list-of-links__link:after {
   letter-spacing: -0.05em;
   line-height: 1.1em;
   margin-top: 0;
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 15px 11px;
 }
 @media (min-width: 48em) {
   .logo__sitename {
