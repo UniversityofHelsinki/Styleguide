@@ -5867,6 +5867,7 @@ a:hover .theme-dark .list-of-links__link:after {
 .logo.theme-big:before {
   font-size: 87.5px;
   font-size: 6.25rem;
+  line-height: 100px;
 }
 @media (min-width: 48em) {
   .logo.theme-big:before {
