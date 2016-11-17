@@ -35,11 +35,28 @@
     width: auto;
 
     .box-hero__title {
-      margin-bottom: 0;
-      padding-bottom: 0.4em;
+      @include font-size(18px);
+      letter-spacing: -0.5px;
 
-      @include breakpoint($medium) {
-        @include font-size(60px);
+      @include breakpoint($small) {
+        @include font-size(22px);
+        letter-spacing: -1px;
+      }
+
+      @include breakpoint($large) {
+        @include font-size(32px);
+        letter-spacing: -2px;
+      }
+    }
+
+    .box-hero__alt-title {
+      @include font-size(13px);
+
+      @include breakpoint($small) {
+        @include font-size(14px);
+      }
+      @include breakpoint($large) {
+        @include font-size(18px);
       }
     }
   }
@@ -47,47 +64,35 @@
   &.theme-small {
     clear: none;
     float: none;
-    text-align: center;
+    text-align: left;
     width: auto;
 
     @include breakpoint($small) {
-      @include display-flex;
-      align-items: center;
-      -webkit-align-items: center;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      padding: 0 1em;
       text-align: left;
     }
 
     .box-hero__title {
-      @include font-size(26px);
+      @include font-size(16px);
+      color: $darkgray;
       margin: 0;
+      letter-spacing: -0.5px;
       padding-bottom: 0.25em;
-
-      @include breakpoint($small) {
-        @include font-size(36px);
-        margin-right: 1em;
-        padding: 0;
-      }
     }
 
     .box-hero__alt-title {
-      @include font-size(16px);
+      @include font-size(14px);
+      color: $darkgray;
+      line-height: 130%;
       margin: 0;
       padding: 0;
-
-      @include breakpoint($small) {
-        width: 30%;
-      }
     }
   }
 }
 
 .box-hero__shadow {
-  background: rgba($black, 0.3);
-  background: $raster-stripe;
-  background-position: -1px 100%;
+  background: none;
+  background: #000;
+  background: rgba(#000, 0.4);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: inline;
@@ -96,7 +101,7 @@
 }
 
 .box-hero__title {
-  @include font-size(40px);
+  @include font-size(48px);
   color: $white;
   line-height: 105%;
   margin-bottom: $vert-spacing-unit * 0.5;

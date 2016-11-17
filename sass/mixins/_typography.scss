@@ -14,9 +14,9 @@
 }
 
 @mixin font-family-bodytext {
-  font-family: Georgia;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  // font-family: 'Lora', Georgia, serif;
 }
-
 // Weights
 @mixin font-weight-light {
   font-weight: 300;
@@ -73,7 +73,7 @@
 }
 
 @mixin text-liftup {
-  @include font-size(22px);
+  @include font-size(18px);
   @include font-weight-book;
   color: $silver;
   line-height: 1.5em;

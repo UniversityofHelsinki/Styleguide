@@ -1,8 +1,8 @@
-@mixin transform($transform) {
+@mixin transform($transform, $only3d: false) {
   -webkit-transform: $transform;
   -moz-transform: $transform;
   -ms-transform: $transform;
-  -transform: $transform;
+  transform: $transform;
 }
 
 @mixin vertically-center {

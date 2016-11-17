@@ -6,11 +6,11 @@
 */
 %box-card,
 .box-card {
-  @include border;
   @include display-flex;
   @include font-size(14px);
   @include transition-duration(0.3s);
   @include transition-property(all);
+  border: none;
   color: $black;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -51,51 +51,84 @@
 
 .box-card__header {
   @include border-bottom;
-  background-color: $darkwhite;
-  font-weight: 700;
-  height: 55px;
+  @include font-size(16px);
+  background-color: $black;
+  border: none;
+  color: $white;
+  font-weight: 400;
+  height: auto;
   line-height: 19px;
-  padding: 1.25em;
+  padding: 0.6em 1em 0.6em 1.8em;
 }
 
 .box-card__content {
   @include display-flex;
-  background-color: $white;
+  background-color: lighten($lightsilver, 5%);
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   flex-direction: column;
   -webkit-flex-direction: column;
   line-height: 19px;
-  padding: 1.25em;
+  padding: 0.75em 1.25em;
 }
 
 .box-card__item {
   @include display-flex;
-  border-bottom: 1px solid $lightsilver;
+  border: none;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   flex-direction: column;
   -webkit-flex-direction: column;
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em;
+  margin: 0;
+  padding: 0;
 
   @include breakpoint($small) {
-    .gridder-box-width-2 &,
-    .gridder-box-width-3 &,
-    .gridder-box-width-4 & {
-      flex-direction: row;
-      -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+
+    .gridder-box-width-1 & {
+      flex-direction: column;
+      -webkit-flex-direction: column;
     }
   }
 
   &:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 
 .box-card__section {
   @include breakpoint($small) {
+    border-right: 1px solid $lightsilver;
+    width: 35%;
+
+    &.theme-secondary {
+      border-right: 1px solid $lightsilver;
+      padding-left: 2em;
+      width: 30%;
+    }
+
+    &:last-of-type {
+      border: none;
+      padding-left: 2em;
+    }
+
+    .gridder-box-width-1 & {
+      border: none;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      padding: 0;
+      width: auto;
+
+      &.theme-secondary {
+        border: none;
+        padding: 0;
+        width: auto;
+      }
+    }
+
     .gridder-box-width-2 &,
     .gridder-box-width-3 &,
     .gridder-box-width-4 & {
@@ -121,12 +154,6 @@
         }
       }
     }
-  }
-
-  &.theme-secondary {
-    border: none;
-    margin: 0;
-    padding: 0;
   }
 }
 
@@ -157,6 +184,7 @@
   @extend .box-card__field;
 
   a {
+    @extend a;
     display: block;
     margin-bottom: 0.5em;
     padding-left: 1em;
@@ -169,13 +197,30 @@
       left: 0;
       position: absolute;
     }
+
+    &:first-of-type {
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 
 .box-card__link {
   @include font-weight-medium;
+  @include font-size(14px);
   @include transition-duration(0.1s);
   @include transition-property(color);
   align-self: flex-end;
+  color: $white !important;
+  font-weight: 400;
+  float: right;
   margin-top: auto;
+  padding: 0;
+
+  &:after {
+    color: $white !important;
+  }
 }
