@@ -6078,6 +6078,7 @@ a:hover .theme-dark .list-of-links__link:after {
 
 .main-menu__expand {
   bottom: 0;
+  cursor: pointer;
   left: 0;
   position: absolute;
   text-align: center;
