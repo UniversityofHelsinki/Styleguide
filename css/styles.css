@@ -2733,20 +2733,20 @@ video {
 }
 
 /*
- section: 3.5
+ section: 3.7
  title: Buttons
  description:
 */
 /*
- section: 3.5.1
+ section: 3.7.1
  title: Button
- template: 3_5_1-button
+ template: 3_7_1-button
  description:
 */
 .accordion__title,
 .button--accordion,
 .button--action-before,
-.button--action, .button--anchor, .button--expand, .button--icon, .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
+.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
 .button {
   transition-duration: 0.1s;
   transition-property: all;
@@ -2763,7 +2763,7 @@ video {
   .accordion__title,
   .button--accordion,
   .button--action-before,
-  .button--action, .button--anchor, .button--expand, .button--icon, .form-type-search input[type="submit"], input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
+  .button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
   .button {
     font-size: 15px;
   }
@@ -2779,10 +2779,10 @@ video {
 .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, .form-type-search input[type="submit"]:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .horizontal-tabs .horizontal-tab-button > a:before, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:before, .accordion__title:after,
+.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .horizontal-tabs .horizontal-tab-button > a:before, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:before, .accordion__title:after,
 .button--accordion:after,
 .button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, .form-type-search input[type="submit"]:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .horizontal-tabs .horizontal-tab-button > a:after, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:after,
+.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .horizontal-tabs .horizontal-tab-button > a:after, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:after,
 .button:before,
 .button:after {
   transition-duration: 0.1s;
@@ -2816,9 +2816,9 @@ video {
 }
 
 /*
- section: 3.5.2
+ section: 3.7.2
  title: Button accordion
-  template: 3_5_2-button--accordion
+  template: 3_7_2-button--accordion
  description:
 */
 .accordion__title,
@@ -2871,9 +2871,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.3
+ section: 3.7.3
  title: Button action
-  template: 3_5_3-button--action
+  template: 3_7_3-button--action
  description:
 */
 .button--action-before,
@@ -2953,9 +2953,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.4
+ section: 3.7.4
  title: Button action before
-  template: 3_5_4-button--action-before
+  template: 3_7_4-button--action-before
  description:
 */
 .button--action-before {
@@ -2984,9 +2984,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.5
+ section: 3.7.5
  title: Button anchor
- template: 3_5_5-button--anchor
+ template: 3_7_5-button--anchor
  description:
 */
 .button--anchor {
@@ -3029,9 +3029,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.6
+ section: 3.7.6
  title: Button icon
- template: 3_5_6-button--icon
+ template: 3_7_6-button--icon
  description:
 */
 .button--icon {
@@ -3103,9 +3103,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.7
+ section: 3.7.7
  title: Button group
- template: 3_5_7-button-group
+ template: 3_7_7-button-group
  description:
 */
 .button-group--small,
@@ -3122,9 +3122,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 3.5.8
+ section: 3.7.8
  title: Button group small
- template: 3_5_8-button-group--small
+ template: 3_7_8-button-group--small
  description:
 */
 .button-group--small > .button {
@@ -3276,25 +3276,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   border-bottom: 1px solid #EBEBEB;
   margin-bottom: 30px;
   padding-bottom: 30px;
-}
-
-.tiedekulma-embed {
-  display: inline-block;
-  margin-bottom: 0.5em;
-  position: relative;
-  width: 100%;
-}
-.tiedekulma-embed:after {
-  content: '';
-  display: block;
-  padding-top: 55%;
-}
-.tiedekulma-embed > * {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .link-wrapper {
@@ -3455,22 +3436,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   margin-bottom: 0;
 }
 
-/*
- section: 2
- title: Typography
- description: Description about typography.
-*/
-/*
- section: 2.1
- title: Fonts
- description: Helsingin yliopisto - Julkiset uses "Open sans" for most of the typography, the other font used is "Georgia".
-*/
-/*
- section: 2.2
- title: Icons
- template: 2_2_icons
- description: HY icons
-*/
+/* No files to import found in typography/**\/* */
 /*
  section: 16.2
  title: Footer
@@ -3720,304 +3686,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 /*
- section: 4
- title: Forms
- description: Description about forms.
-*/
-/*
- section: 4.1
- title: Forms, Basic
- description: Basic form elements.
-*/
-/*
- section: 4.1.1
- title: Forms, Select
- template: 4_1_1_forms-select
- description: Select form element.
-*/
-/*
- section: 4.1.2
- title: Forms, Checkbox
- template: 4_1_2_forms-checkbox
- description: Checkbox form element.
-*/
-.form-type-checkbox input {
-  display: none;
-}
-.form-type-checkbox input[type=checkbox]:checked + label:before {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 14px;
-  font-size: 1rem;
-  color: #178feb;
-  content: "x";
-  line-height: 11px;
-  text-align: center;
-}
-@media (min-width: 48em) {
-  .form-type-checkbox input[type=checkbox]:checked + label:before {
-    font-size: 16px;
-  }
-}
-.form-type-checkbox label {
-  font-size: 11.375px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  font-style: normal;
-  color: #666;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 19px;
-  margin-bottom: 10px;
-  margin-right: 15px;
-  padding-left: 25px;
-  position: relative;
-}
-@media (min-width: 48em) {
-  .form-type-checkbox label {
-    font-size: 13px;
-  }
-}
-.form-type-checkbox label:before {
-  border: 1px solid #178feb;
-  content: "";
-  display: inline-block;
-  height: 17px;
-  left: 0;
-  margin-right: 10px;
-  position: absolute;
-  top: 2px;
-  width: 16px;
-}
-@media (min-width: 48em) {
-  .form-type-checkbox {
-    clear: both;
-  }
-}
-
-/*
- section: 4.1.3
- title: Forms, Radio
- template: 4_1_3_forms-radio
- description: Radio form element.
-*/
-.form-type-radio {
-  clear: right;
-}
-.form-type-radio:last-child {
-  margin-bottom: 1em;
-}
-.form-type-radio input {
-  display: none;
-}
-.form-type-radio input[type=radio]:checked + label:before {
-  font-size: 26.25px;
-  font-size: 1.875rem;
-  color: #178feb;
-  content: "\2022";
-  line-height: 14px;
-  text-align: center;
-}
-@media (min-width: 48em) {
-  .form-type-radio input[type=radio]:checked + label:before {
-    font-size: 30px;
-  }
-}
-.form-type-radio label {
-  font-size: 11.375px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  font-style: normal;
-  color: #666;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 19px;
-  margin-bottom: 5px;
-  margin-right: 15px;
-  padding-left: 25px;
-  position: relative;
-}
-@media (min-width: 48em) {
-  .form-type-radio label {
-    font-size: 13px;
-  }
-}
-.form-type-radio label:before {
-  border: 1px solid #178feb;
-  border-radius: 8px;
-  content: "";
-  display: inline-block;
-  height: 16px;
-  left: 0;
-  margin-right: 10px;
-  position: absolute;
-  top: 2px;
-  width: 16px;
-}
-
-/*
- section: 4.1.4
- title: Forms, Input
- template: 4_1_4_forms-input
- description: input form element.
-*/
-.form-type-text input {
-  font-size: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-style: normal;
-  border: 1px solid #b8b8b8;
-  color: #666;
-  padding: 10px;
-  width: 100%;
-}
-@media (min-width: 48em) {
-  .form-type-text input {
-    font-size: 16px;
-  }
-}
-.form-type-text input.form-submit {
-  background-color: #178feb;
-  color: #FFF;
-  padding: 10px 30px;
-  width: auto;
-}
-.form-type-text input.error {
-  border: 1px solid #974822;
-}
-@media (min-width: 48em) {
-  .form-type-text {
-    width: 49.36709%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
-}
-.form-type-text label {
-  font-weight: 300;
-  font-style: normal;
-  color: #767676;
-  font-size: 1.1em;
-  line-height: 2.4em;
-  padding: 0;
-  margin: 0;
-}
-.form-type-text label .form-required {
-  font-weight: 600;
-  font-style: normal;
-  color: #767676;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  padding: 0;
-  margin: 0;
-  color: #178feb;
-}
-.form-type-text .description {
-  font-size: 10.5px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-style: normal;
-  color: #666;
-  margin-top: 5px;
-}
-@media (min-width: 48em) {
-  .form-type-text .description {
-    font-size: 12px;
-  }
-}
-
-/*
- section: 4.1.5
- title: Forms, Textarea
- template: 4_1_5_forms-textarea
- description: Textarea form element.
-*/
-/*
- section: 4.1.6
- title: Forms, Submit
- template: 4_1_6_forms-submit
- description: Submit form element.
-*/
-/*
- section: 4.2
- title: Search form
- template: 4_2_search-form
- description: The search form for normal and mobile browsers.
-*/
-.form-type-search {
-  position: relative;
-}
-@media (max-width: 48em) {
-  .form-type-search {
-    background-color: #222;
-    display: block;
-    margin: 0;
-    max-width: 100%;
-    padding: 14px 52px;
-    width: 100%;
-  }
-  .form-type-search form {
-    position: relative;
-  }
-}
-@media (min-width: 48em) {
-  .form-type-search {
-    position: relative;
-  }
-}
-
-.form-type-search input[type="text"] {
-  background: #424242;
-  border: none;
-  color: #FFF;
-  line-height: 34px;
-  margin-bottom: 0;
-  max-width: 100%;
-  min-height: 34px;
-  padding-left: 12px;
-  padding-right: 34px;
-  width: 100%;
-}
-.form-type-search input[type="text"]:focus {
-  outline-color: #178feb;
-}
-@media (min-width: 48em) {
-  .form-type-search input[type="text"] {
-    font-size: 10.5px;
-    font-size: 0.75rem;
-  }
-}
-@media (min-width: 48em) and (min-width: 48em) {
-  .form-type-search input[type="text"] {
-    font-size: 12px;
-  }
-}
-
-.form-type-search input[type="submit"] {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  background-color: transparent;
-  height: 36px;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 34px;
-}
-.search-form__input:focus + .form-type-search input[type="submit"] {
-  color: #178feb;
-}
-.search-form__input:focus + .form-type-search input[type="submit"]:hover {
-  color: #FFF;
-}
-
-/*
   section: 3
   title: Common elements
   description: Description about common elements.
@@ -4219,9 +3887,10 @@ blockquote p {
 }
 
 /*
-  section: 3.4.3
+  section: 3.5
   title: Form components
-  description:
+  template: 3_5_form-components
+  description: Basic form components
 */
 button, input, select, textarea {
   font-family: inherit;
@@ -4258,6 +3927,9 @@ textarea {
   }
 }
 
+/*
+  title: Tables
+*/
 table {
   width: 100%;
 }
@@ -7224,8 +6896,7 @@ input[type="submit"].search-form--dark__submit {
   margin-bottom: 2em;
   padding-bottom: 2em;
 }
-.search-form-large:before,
-.search-form-large:after {
+.search-form-large:before, .search-form-large:after {
   content: " ";
   /* 1 */
   display: table;
@@ -9194,10 +8865,6 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
   .box-subtitle__ingress {
     font-size: 18px;
   }
-}
-
-.theme-transparent {
-  background-color: transparent;
 }
 
 .is-hidden {
