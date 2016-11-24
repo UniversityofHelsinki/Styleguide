@@ -62,8 +62,6 @@
     text-align: center;
 
     @include breakpoint($small) {
-      @include add-grid(12);
-      @include float-span(4, 'last');
       padding: 0 0 16px 20px;
       text-align: left;
       margin-top: -50px;

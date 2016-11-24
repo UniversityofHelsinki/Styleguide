@@ -12,8 +12,4 @@ $small-only: (min-width $bp-small) (max-width $bp-medium);
 $medium: $bp-medium, "no-query" ".lt-ie9";
 $large: $bp-large;
 
-@include add-grid(12);
-@include add-grid(16 at $bp-small);
-$output: "float";
-
 $gutters: $horz-spacing-unit;
