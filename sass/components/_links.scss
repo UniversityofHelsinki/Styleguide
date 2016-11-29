@@ -1,0 +1,66 @@
+/*
+ section: 16.1.1
+ title: Links
+ template: 16_1_1_links
+ description: Links compontent is used in the top bar.
+*/
+
+.links {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  @include breakpoint($small) {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  @include breakpoint($large) {
+    flex-direction: row;
+  }
+}
+
+.links__link {
+  @include font-weight-medium;
+  @include font-size(12px);
+  color: $darkgray;
+  display: inline-block;
+  padding: 16px 5px 16px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black;
+  }
+
+  @include breakpoint($small) {
+    color: darken($white, 20%);
+    padding: 5px 0 5px 9px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Language selection.
+.links__link.theme-language {
+  &.active {
+    display: none;
+  }
+
+  abbr[title] {
+    border: none;
+  }
+
+  @include breakpoint($medium) {
+    abbr[title] {
+      font-size: 0;
+
+      &:after {
+        @include font-size(12px);
+        content: attr(title);
+      }
+    }
+  }
+}

@@ -22,30 +22,8 @@
   @include horizontal-rule(bottom);
 }
 
-.tiedekulma-embed {
-  display: inline-block;
-  margin-bottom: 0.5em;
-  position: relative;
-  width: 100%;
-
-  &:after {
-    content: '';
-    display: block;
-    padding-top: 55%; // Aspect ratio of 322 x 190
-  }
-
-  > * {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-}
-
 .link-wrapper {
   display: block;
-  height: 100%;
 }
 
 .float-left {

@@ -17,7 +17,6 @@
  template: 12_1_2_search-form-dark
  description:
 */
-%search-form,
 .search-form {
   max-width: 50em;
   position: relative;
@@ -66,7 +65,6 @@ input[type="submit"].search-form__submit {
   }
 }
 
-%search-form--dark,
 .search-form--dark {}
 
 .search-form--dark__input {
@@ -109,7 +107,6 @@ input[type="submit"].search-form--dark__submit {
   }
 }
 
-%search-form-large,
 .search-form-large {
   @include border-bottom;
   @include clearfix;

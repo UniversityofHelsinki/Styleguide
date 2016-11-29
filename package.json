@@ -26,7 +26,6 @@
     "mkdirp": "^0.5.1",
     "node-sass-globbing": "0.0.23",
     "normalize.css": "^3.0.0",
-    "recursive-readdir-sync": "1.0.6",
-    "singularitygs": "^1.7.0"
+    "recursive-readdir-sync": "1.0.6"
   }
 }

@@ -60,7 +60,6 @@
   width: 100%;
 
   @include breakpoint($small) {
-    @include float-span(4, 13, $gutter: 0);
     height: $vert-spacing-unit * 1.5;
     line-height: $vert-spacing-unit * 1.5;
   }

@@ -96,7 +96,7 @@ h4 {
 */
 
 p {
-  @include text-paragraph; //TODO: Needs a section
+  @include text-paragraph;
 }
 
 /*
@@ -157,9 +157,10 @@ blockquote p {
 }
 
 /*
-  section: 3.4.3
+  section: 3.5
   title: Form components
-  description:
+  template: 3_5_form-components
+  description: Basic form components
 */
 
 button, input, select, textarea {
@@ -171,6 +172,10 @@ button, input, select, textarea {
 
 input {
   -webkit-appearance: none;
+}
+
+input[type="submit"] {
+  @extend %button;
 }
 
 select {
@@ -190,9 +195,9 @@ textarea {
   width: 100%;
 }
 
-input[type="submit"] {
-  @extend %button;
-}
+/*
+  title: Tables
+*/
 
 table {
   width: 100%;

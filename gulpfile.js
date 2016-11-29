@@ -35,7 +35,6 @@ var sass_config = {
   includePaths: [
     'node_modules/normalize.css/',
     'node_modules/breakpoint-sass/stylesheets/',
-    'node_modules/singularitygs/stylesheets/'
   ]
 };
 

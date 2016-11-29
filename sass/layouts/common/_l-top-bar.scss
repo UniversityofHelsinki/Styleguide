@@ -1,0 +1,67 @@
+/*
+ section: 16.1
+ title: Top bar
+ template: 16_1_top-bar
+ description: The top bar.
+*/
+
+
+.l-top-bar {
+  @include breakpoint($small) {
+    background-color: $black;
+  }
+}
+
+.l-top-bar__subregion {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    @include container;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.l-top-bar__main {
+  align-items: center;
+  background-color: $black;
+  display: flex;
+  flex: 1 1 auto;
+  height: 70px;
+  order: 2;
+  padding-left: 15px;
+  position: relative;
+  z-index: 25;
+
+  @include breakpoint($small) {
+    order: 1;
+    padding-left: 0;
+  }
+}
+
+.l-top-bar__sub {
+  align-items: center;
+  display: flex;
+  order: 1;
+  padding: 0 15px;
+
+  @include breakpoint($small) {
+    order: 2;
+    padding: 0;
+  }
+}
+
+.l-top-bar__subleft {
+  flex: 1 1 auto;
+  @include breakpoint($small) {
+  }
+}
+
+.l-top-bar__subright {
+  @include breakpoint($small) {
+    border-left: 1px solid $gray;
+    margin-left: 15px;
+    padding-left: 5px;
+  }
+}
