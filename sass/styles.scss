@@ -5,14 +5,10 @@
 */
 
 // Import external libraries.
-@import "compass";
 @import "breakpoint";
-@import "toolkit";
 
 // Generate normalize.css.
 @import "normalize";
-
-@import "toolkit/kickstart";
 
 @import "variables/**/*";
 @import "mixins/**/*";

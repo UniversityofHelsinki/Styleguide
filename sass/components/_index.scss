@@ -15,7 +15,7 @@
   padding: 2em 0;
 
   @include breakpoint($small) {
-    @include columns(2);
+    columns: 2;
   }
 }
 

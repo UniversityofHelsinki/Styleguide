@@ -20,7 +20,7 @@ Here's an example bower.json file (you'll need to change out the hash-string "re
 ```
 Depending on how you use the styleguide, you can either have it as a dev dependency or a dependency (i.e. if you're  referencing the .sass files or using the compiled `main.css`).
 
-Once you run `bower install` you should be able to use the style guide from your bower components folder. 
+Once you run `bower install` you should be able to use the style guide from your bower components folder.
 
 ### Using git submodules ###
 
@@ -51,15 +51,13 @@ Submit changes with pull requests.
 
 ### Dependencies ###
 
-1. ruby & rubygems
-2. node & npm
-3. gulp
+1. node & npm
+2. gulp
 
 ### Setting up ###
 
-1. `bundle install`
-2. `npm install`
-3. `gulp serve` (to compile the css and launch server)
+1. `npm install`
+2. `gulp serve` (to compile the css and launch server)
 
 ## Style guide documentation: ##
 

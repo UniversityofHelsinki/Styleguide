@@ -49,11 +49,11 @@
 
   &:before {
     @include icon($icon-link-arrow);
-    @include transform(translateY(-50%) rotate(270deg));
-    @include transition-duration(0.1s);
     @include vertically-center;
     left: 1em;
     position: absolute;
+    transform: translateY(-50%) rotate(270deg);
+    transition-duration: 0.1s;
   }
 
   &.is-active {
@@ -61,7 +61,7 @@
     color: $white;
 
     &:before {
-      @include transform(translateY(-50%) rotate(90deg));
+      transform: translateY(-50%) rotate(90deg);
       color: $white;
     }
   }

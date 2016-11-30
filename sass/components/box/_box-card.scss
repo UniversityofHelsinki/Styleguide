@@ -7,8 +7,8 @@
 %box-card,
 .box-card {
   @include font-size(14px);
-  @include transition-duration(0.3s);
-  @include transition-property(all);
+  transition-duration: 0.3s;
+  transition-property: all;
   border: none;
   color: $black;
   display: flex;
@@ -138,11 +138,11 @@
     position: relative;
 
     &:before {
-      @include transform(translateY(-25%));
       color: $silver;
       content: 'L';
       left: 0;
       position: absolute;
+      transform: translateY(-25%);
     }
 
     &:first-of-type {
@@ -158,8 +158,8 @@
 .box-card__link {
   @include font-weight-medium;
   @include font-size(14px);
-  @include transition-duration(0.1s);
-  @include transition-property(color);
+  transition-duration: 0.1s;
+  transition-property: color;
   align-self: flex-end;
   color: $white !important;
   font-weight: 400;

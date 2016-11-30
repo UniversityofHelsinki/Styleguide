@@ -151,8 +151,8 @@ li.main-menu__front {
   &:before {
     @include font-size(14px);
     @include icon($icon-caret-down);
-    @include transition-duration(0.2s);
-    @include transition-property(color, border-color);
+    transition-duration: 0.2s;
+    transition-property: color, border-color;
     color: lighten($silver, 20%);
     cursor: pointer;
     display: inline-block;
