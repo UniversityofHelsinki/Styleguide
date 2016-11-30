@@ -457,38 +457,6 @@ th {
   src: url("../fonts/Open-Sans-700/Open-Sans-700.eot?#iefix") format("embedded-opentype"), local("Open Sans Bold"), local("Open-Sans-700"), url("../fonts/Open-Sans-700/Open-Sans-700.ttf") format("truetype"), url("../fonts/Open-Sans-700/Open-Sans-700.woff2") format("woff2"), url("../fonts/Open-Sans-700/Open-Sans-700.woff") format("woff"), url("../fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans") format("svg");
 }
 
-@font-face {
-  font-family: 'Lora';
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/Lora-regular/Lora-regular.eot");
-  src: url("../fonts/Lora-regular/Lora-regular.eot?#iefix") format("embedded-opentype"), local("Lora"), local("Lora-regular"), url("../fonts/Lora-regular/Lora-regular.ttf") format("truetype"), url("../fonts/Lora-regular/Lora-regular.woff2") format("woff2"), url("../fonts/Lora-regular/Lora-regular.woff") format("woff"), url("../fonts/Lora-regular/Lora-regular.svg#Lora") format("svg");
-}
-
-@font-face {
-  font-family: 'Lora';
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/Lora-700/Lora-700.eot");
-  src: url("../fonts/Lora-700/Lora-700.eot?#iefix") format("embedded-opentype"), local("Lora Bold"), local("Lora-700"), url("../fonts/Lora-700/Lora-700.ttf") format("truetype"), url("../fonts/Lora-700/Lora-700.woff2") format("woff2"), url("../fonts/Lora-700/Lora-700.woff") format("woff"), url("../fonts/Lora-700/Lora-700.svg#Lora") format("svg");
-}
-
-@font-face {
-  font-family: 'Lora';
-  font-weight: 400;
-  font-style: italic;
-  src: url("../fonts/Lora-italic/Lora-italic.eot");
-  src: url("../fonts/Lora-italic/Lora-italic.eot?#iefix") format("embedded-opentype"), local("Lora Italic"), local("Lora-italic"), url("../fonts/Lora-italic/Lora-italic.ttf") format("truetype"), url("../fonts/Lora-italic/Lora-italic.woff2") format("woff2"), url("../fonts/Lora-italic/Lora-italic.woff") format("woff"), url("../fonts/Lora-italic/Lora-italic.svg#Lora") format("svg");
-}
-
-@font-face {
-  font-family: 'Lora';
-  font-weight: 700;
-  font-style: italic;
-  src: url("../fonts/Lora-700italic/Lora-700italic.eot");
-  src: url("../fonts/Lora-700italic/Lora-700italic.eot?#iefix") format("embedded-opentype"), local("Lora Bold Italic"), local("Lora-700italic"), url("../fonts/Lora-700italic/Lora-700italic.ttf") format("truetype"), url("../fonts/Lora-700italic/Lora-700italic.woff2") format("woff2"), url("../fonts/Lora-700italic/Lora-700italic.woff") format("woff"), url("../fonts/Lora-700italic/Lora-700italic.svg#Lora") format("svg");
-}
-
 /**
  * Mixin for subtitle
  */
