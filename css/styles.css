@@ -1654,6 +1654,17 @@ th {
   content: "";
 }
 
+/*
+  section: 2
+  title: Icons
+  description:
+*/
+/*
+  section: 2.1
+  title: Icons
+  template: 2_1_icons
+  description:
+*/
 @font-face {
   font-family: 'hy-icons';
   src: url("../fonts/hy-icons.eot");

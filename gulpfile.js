@@ -1,16 +1,15 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var globbing = require('node-sass-globbing');
-var concat = require('gulp-concat');
 var autoPrefixer = require('gulp-autoprefixer');
-
 var browserSync = require('browser-sync').create();
-var shell = require('gulp-shell');
-
-var iconFont = require('gulp-iconfont');
-var consolidate = require('gulp-consolidate');
 var clean = require('gulp-clean');
+var concat = require('gulp-concat');
+var consolidate = require('gulp-consolidate');
 var fs = require('fs');
+var globbing = require('node-sass-globbing');
+var gulp = require('gulp');
+var iconFont = require('gulp-iconfont');
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var shell = require('gulp-shell');
 var _ = require('lodash');
 
 var iconFontSettings = {
@@ -49,7 +48,7 @@ gulp.task('sass', function () {
 });
 
 // Generate icons.
-gulp.task('generateUnicodeIconFiles', ['clean'], function () {
+gulp.task('generateUnicodeIconFiles', function () {
 
   if (!fs.existsSync(generateIconDestPath)) {
     fs.mkdirSync(generateIconDestPath);
@@ -81,7 +80,7 @@ gulp.task('generateUnicodeIconFiles', ['clean'], function () {
 });
 
 // Create icon font from generated icons.
-gulp.task('iconFont', ['generateUnicodeIconFiles'], function () {
+gulp.task('iconFont', function () {
   gulp.src([iconFontSettings.svgSrc])
     .pipe(iconFont({
       fontName: iconFontSettings.fontFileName,
@@ -119,9 +118,13 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('build', ['clean', 'generateUnicodeIconFiles', 'iconFont', 'sass'], function () {
+gulp.task('nodeBuild', function () {
   return gulp.src('')
     .pipe(shell(['node build'], {cwd: './styleguide'}));
+});
+
+gulp.task('build', function(cb) {
+  runSequence('clean', 'generateUnicodeIconFiles', 'iconFont', 'sass', 'nodeBuild', cb);
 });
 
 gulp.task('serve', ['build'], function () {
