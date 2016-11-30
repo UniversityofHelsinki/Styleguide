@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /*
  section: 1.1
  title: Colors
@@ -50,17 +48,17 @@ $brown: #974822;
 */
 
 $lightblue      : #3a75c4; // Humanistinen tiedekunta
-$darkgreen      : #009e60; // Eläinlääketieteellinen tiedekunta
-$yellow         : #fcd116; // Käyttäytymistieteellinen tiedekunta
+$darkgreen      : #009e60; // Elainlaaketieteellinen tiedekunta
+$yellow         : #fcd116; // Kayttaytymistieteellinen tiedekunta
 $lila           : #9258c8; // Teologinen tiedekunta
 $darkred        : #8c0032; // Oikeustieteellinen tiedekunta
 $red            : #e5053a; // Valtiotieteellinen tiedekunta
 $orange         : #fca311; // Matemaattisluonnontieteellinen tiedekunta
-$turquoise      : #00b08c; // Maatalous-metsätieteellinen tiedekunta
-$darkturquoise  : #00a39a; // Lääketieteellinen tiedekunta
+$turquoise      : #00b08c; // Maatalous-metsatieteellinen tiedekunta
+$darkturquoise  : #00a39a; // Laaketieteellinen tiedekunta
 $lightturquoise : #00bd9d; // Farmasian tiedekunta
-$limegreen      : #5bbf21; // Bio- ja ympäristötieteellinen tiedekunta
-$pink           : #e63375; // Svenska social och kommunalhögskolan
+$limegreen      : #5bbf21; // Bio- ja ymparistotieteellinen tiedekunta
+$pink           : #e63375; // Svenska social och kommunalhogskolan
 
 // Faculty colours in a array-map for easier looping. REQUIRES SASS 3.3.
 
