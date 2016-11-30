@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var sass = require('gulp-sass');
 var globbing = require('node-sass-globbing');
 var concat = require('gulp-concat');
