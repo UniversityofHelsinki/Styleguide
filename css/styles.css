@@ -3665,9 +3665,9 @@ a:hover
 }
 
 /*
- section: 16.2
+ section: 15.2
  title: Footer
- template: 16_2_footer
+ template: 15_2_footer
  description: The footer.
 */
 .l-footer {
@@ -3831,9 +3831,9 @@ a:hover
 }
 
 /*
- section: 16.1
+ section: 15.1
  title: Top bar
- template: 16_1_top-bar
+ template: 15_1_top-bar
  description: The top bar.
 */
 @media (min-width: 48em) {
@@ -4324,14 +4324,14 @@ dl, ol, ul {
 }
 
 /*
- section: 13.1
+ section: 12.1
  title: Avatar image
  description:
 */
 /*
- section: 13.1.1
+ section: 12.1.1
  title: Avatar image
- template: 13_1_1_avatar-image
+ template: 12_1_1_avatar-image
  description:
 */
 .avatar-image {
@@ -5520,9 +5520,9 @@ td.jobs-listing__date {
 }
 
 /*
- section: 14.1
+ section: 13.1
  title: Label row
- template: 14_1_1-label-row
+ template: 13_1_1-label-row
 */
 .label-row {
   margin-bottom: 0.5em;
@@ -5575,9 +5575,9 @@ td.jobs-listing__date {
 }
 
 /*
- section: 16.1.1
+ section: 15.1.1
  title: Links
- template: 16_1_1_links
+ template: 15_1_1_links
  description: Links compontent is used in the top bar.
 */
 .links {
@@ -7235,9 +7235,9 @@ a:hover .feed-listing__more-link a:after, .box-card__fieldset a:hover .feed-list
 }
 
 /*
- section: 15.1
+ section: 14.1
  title: Post
- template: 15_1_post
+ template: 14_1_post
  description: Social media post
 */
 .post {
@@ -7404,20 +7404,20 @@ a:hover .feed-listing__more-link a:after, .box-card__fieldset a:hover .feed-list
 }
 
 /*
- section: 12.1
+ section: 4.1
  title: Search form
  description:
 */
 /*
- section: 12.1.1
+ section: 4.1.1
  title: Search form
- template: 12_1_1_search-form
+ template: 4_1_1_search-form
  description:
 */
 /*
- section: 12.1.2
+ section: 4.1.2
  title: Search form dark
- template: 12_1_2_search-form-dark
+ template: 4_1_2_search-form-dark
  description:
 */
 .search-form {
