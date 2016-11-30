@@ -3537,10 +3537,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .l-footer__copyright p {
-    width: 24.05063%;
-    clear: right;
-    float: right;
-    margin-right: 0;
     padding: 0 0 16px 20px;
     text-align: left;
     margin-top: -50px;
@@ -4222,10 +4218,6 @@ dl, ol, ul {
 }
 @media (min-width: 48em) {
   .carousel__control-nav {
-    width: 25%;
-    clear: right;
-    float: right;
-    margin-right: 0;
     height: 45px;
     line-height: 45px;
   }
@@ -7674,12 +7666,8 @@ a:hover .box-application__link > a:after, a:hover .box-card__fieldset .box-appli
 }
 @media (min-width: 75em) {
   .box-hero {
-    width: 43.03797%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
     margin: 0;
+    width: 43%;
   }
 }
 .box-hero.theme-prominent {
