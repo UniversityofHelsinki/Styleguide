@@ -1,5 +1,5 @@
 @mixin transition-scale($amount) {
-  @include transform(translateZ(0));
+  transform: translateZ(0);
   transition-duration: 0.1s;
   transition-property: transform;
 
@@ -10,10 +10,6 @@
 }
 
 @mixin transition-element($property, $time) {
-  @include transform(translate3d(0, 0, 0));
-  -webkit-transition: $property $time ease;
-  -moz-transition: $property $time ease;
-  -ms-transition: $property $time ease;
-  -o-transition: $property $time ease;
+  transform: translate3d(0, 0, 0);
   transition: $property $time ease;
 }

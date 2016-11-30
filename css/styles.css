@@ -3015,10 +3015,6 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
-  -webkit-transform: translateY(-50%) rotate(270deg);
-  -ms-transform: translateY(-50%) rotate(270deg);
-  transform: translateY(-50%) rotate(270deg);
-  transition-duration: 0.1s;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -3026,6 +3022,10 @@ th {
   top: 50%;
   left: 1em;
   position: absolute;
+  -webkit-transform: translateY(-50%) rotate(270deg);
+      -ms-transform: translateY(-50%) rotate(270deg);
+          transform: translateY(-50%) rotate(270deg);
+  transition-duration: 0.1s;
 }
 
 .is-active.accordion__title,
@@ -3037,8 +3037,8 @@ th {
 .is-active.accordion__title:before,
 .button--accordion.is-active:before {
   -webkit-transform: translateY(-50%) rotate(90deg);
-  -ms-transform: translateY(-50%) rotate(90deg);
-  transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
   color: #FFF;
 }
 
@@ -4586,13 +4586,12 @@ dl, ol, ul {
   font-size: 2.5rem;
   font-weight: 700;
   font-style: normal;
-  text-shadow: 0px 0px 1px #aaaaaa;
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   transition-duration: 0.1s;
   transition-property: -webkit-transform;
   transition-property: transform;
+  text-shadow: 0px 0px 1px #aaaaaa;
   transition-property: all;
   color: #FFF;
   display: block;
@@ -4735,8 +4734,7 @@ dl, ol, ul {
   font-weight: 700;
   font-style: normal;
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   transition-duration: 0.1s;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -4819,8 +4817,7 @@ dl, ol, ul {
 
 .carousel-unwrapped__image {
   -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   left: 70%;
   max-height: 350px;
   min-width: 48em;
@@ -6222,8 +6219,7 @@ a:hover .theme-dark .list-of-links__link:after {
     font-weight: 300;
     font-style: normal;
     -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     transition: opacity 0.2s ease;
   }
 }
@@ -8276,13 +8272,13 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 .box-card__fieldset a:before {
-  -webkit-transform: translateY(-25%);
-  -ms-transform: translateY(-25%);
-  transform: translateY(-25%);
   color: #979797;
   content: 'L';
   left: 0;
   position: absolute;
+  -webkit-transform: translateY(-25%);
+      -ms-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .box-card__fieldset a:first-of-type {
