@@ -3537,9 +3537,11 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 @media (min-width: 48em) {
   .l-footer__copyright p {
+    float: right;
+    margin-top: -50px;
     padding: 0 0 16px 20px;
     text-align: left;
-    margin-top: -50px;
+    width: 24%;
   }
 }
 
