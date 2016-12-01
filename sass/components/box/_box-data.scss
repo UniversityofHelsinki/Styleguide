@@ -7,7 +7,7 @@
 
 %box-data,
 .box-data {
-  @include display-flex;
+  display: flex;
   padding: 0 0 15px 0;
 
   @include breakpoint($small) {
@@ -22,7 +22,7 @@
 }
 
 .box-data__date {
-  @include display-flex;
+  display: flex;
   @extend .box-data__title;
   align-items: center;
   background-color: $gray;

@@ -1,0 +1,72 @@
+/*
+ section: 15.2
+ title: Footer
+ template: 15_2_footer
+ description: The footer.
+*/
+
+.l-footer {
+  background-color: $black;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 2em;
+}
+
+.l-footer__subregion {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.l-footer__column {
+  margin-bottom: 2em;
+
+  @include breakpoint($small) {
+    margin-bottom: 0;
+    width: 31%;
+  }
+
+  &.theme-sub {
+    margin-bottom: 0;
+    order: 3;
+
+    @include breakpoint($small) {
+      order: 0;
+    }
+  }
+
+  &.theme-center {
+    text-align: center;
+
+    @include breakpoint($small) {
+      text-align: left;
+    }
+  }
+}
+
+.l-footer__copyright {
+  @include container;
+
+  p {
+    @include text-informative;
+    @include font-size(12px);
+    color: $lightsilver;
+    font-weight: 500;
+    padding: 16px 0;
+    text-align: center;
+
+    @include breakpoint($small) {
+      float: right;
+      margin-top: -50px;
+      padding: 0 0 16px 20px;
+      text-align: left;
+      width: 24%;
+    }
+  }
+}

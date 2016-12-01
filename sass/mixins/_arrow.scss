@@ -2,13 +2,13 @@
   &:after {
     @include border-side(left);
     @include border-side(bottom);
-    @include transform(rotate(45deg));
-    @include transform-origin(0%, 0%);
     content: '';
     height: 19px;
     left: 0;
     position: absolute;
     top: 0;
+    transform-origin: 0% 0%;
+    transform: rotate(45deg);
     width: 19px;
     z-index: -20;
   }

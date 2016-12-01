@@ -38,7 +38,6 @@
 
 .carousel__credits {
   @include text-author;
-  // @include transform(translateY(100%));
   bottom: auto;
   color: $silver;
   height: $vert-spacing-unit + 10px;
@@ -60,7 +59,6 @@
   width: 100%;
 
   @include breakpoint($small) {
-    @include float-span(4, 13, $gutter: 0);
     height: $vert-spacing-unit * 1.5;
     line-height: $vert-spacing-unit * 1.5;
   }
@@ -86,9 +84,9 @@
   a {
     @include font-size(40px);
     @include font-weight-bold;
-    @include text-shadow;
     @include transition-scale(1.15);
-    @include transition-property("all");
+    text-shadow: 0px 0px 1px #aaaaaa;
+    transition-property: all;
     color: $white;
     display: block;
     height: 100%;
@@ -194,7 +192,7 @@
     @include font-size(40px);
     @include font-weight-bold;
     @include transition-scale(1.15);
-    @include transition-property("all");
+    transition-property: all;
     color: $white;
     display: block;
     height: 100%;
@@ -223,7 +221,7 @@
     }
 
     &.carousel-unwrapped__prev {
-      @include background-image(linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%));
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
       left: 0;
 
       &:before {
@@ -232,7 +230,7 @@
     }
 
     &.carousel-unwrapped__next {
-      @include background-image(linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%));
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
       right: 0;
 
       &:before {
@@ -243,7 +241,7 @@
 }
 
 .carousel-unwrapped__image {
-  @include transform(translate3d(0, 0, 0));
+  transform: translate3d(0, 0, 0);
   left: 70%;
   max-height: 350px;
   min-width: $bp-small;
@@ -323,8 +321,8 @@
     z-index: 10;
 
     &:before {
-      @include transition-property(opacity);
-      @include transition-duration(0.2s);
+      transition-property: opacity;
+      transition-duration: 0.2s;
       opacity: 0.6;
     }
 

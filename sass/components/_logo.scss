@@ -1,0 +1,91 @@
+.logo-block {
+  align-items: flex-start;
+  display: flex;
+}
+
+.logo-block__logo {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: block;
+    margin-right: 0.5em;
+  }
+
+  @include breakpoint($large) {
+    margin-right: 1.5em;
+  }
+}
+
+.logo-block__content {
+  width: 100%;
+
+  h4, p {
+    text-align: center;
+    color: $white;
+  }
+
+  @include breakpoint($small) {
+    float: left;
+
+    h4, p {
+      text-align: left;
+    }
+  }
+
+  h4 {
+    @include font-size(16px);
+  }
+
+  p {
+    @include font-size(14px);
+    line-height: 1.2em;
+  }
+
+  br {
+    display: block;
+  }
+
+  a.is-tel {
+    color: $white;
+
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+
+  &:before {
+    @include font-size(54px);
+    color: #fff;
+    content: $icon-helsinginyliopisto;
+    font-family: "hy-icons";
+    font-weight: 300;
+  }
+
+  &.theme-big {
+    &:before {
+      @include font-size(100px);
+      line-height: 100px;
+    }
+  }
+}
+
+.logo__sitename {
+  @include font-weight-bold;
+  @include font-size(16px);
+  color: $white;
+  letter-spacing: -0.05em;
+  line-height: 1.1em;
+  margin-top: 0;
+  padding: 15px 0 15px 11px;
+
+  @include breakpoint($small) {
+    @include font-size(17px);
+    padding-right: 0;
+  }
+}
