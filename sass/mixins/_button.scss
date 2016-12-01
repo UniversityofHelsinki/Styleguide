@@ -1,6 +1,6 @@
 @mixin button {
-  @include transition-duration(0.1s);
-  @include transition-property(all);
+  transition-duration: 0.1s;
+  transition-property: all;
   @include font-size(15px);
   background-color: $blue;
   border: none;
@@ -14,8 +14,8 @@
   }
 
   &:before, &:after {
-    @include transition-duration(0.1s);
-    @include transition-property(all);
+    transition-duration: 0.1s;
+    transition-property: all;
   }
 }
 
@@ -35,11 +35,11 @@
 
   &:before {
     @include icon($icon-arrow);
-    @include transition-duration(0.1s);
     @include vertically-center;
     color: $blue;
     left: 1em;
     position: absolute;
+    transition-duration: 0.1s;
   }
 
   &.is-active {
@@ -47,8 +47,8 @@
     color: $white;
 
     &:before {
-      @include transform(translateY(-50%) rotate(90deg));
       color: $white;
+      transform: translateY(-50%) rotate(90deg);
     }
   }
 
@@ -88,8 +88,8 @@
 }
 
 @mixin button-next {
-  @include transition-duration(0.2s);
-  @include transition-property(color background-color);
+  transition-duration: 0.2s;
+  transition-property: color background-color;
   @include button-next-transparent;
   background: $blue;
   color: $white;
@@ -98,8 +98,8 @@
   padding-right: 4em;
 
   &:after {
-    @include transition-duration(0.2s);
-    @include transition-property(color background-color);
+    transition-duration: 0.2s;
+    transition-property: color background-color;
     background-color: $blue--active;
     color: $white;
     line-height: 2.8em;

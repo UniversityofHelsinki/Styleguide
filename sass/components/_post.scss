@@ -1,26 +1,105 @@
 /*
- section: 15.1
+ section: 14.1
  title: Post
- template: 15_1_post
+ template: 14_1_post
  description: Social media post
 */
 .post {
   margin-bottom: 1em;
+  padding-top: 25px;
+  position: relative;
+
+  &.post--facebook {
+    padding-top: 0;
+  }
 }
 
 .post__date {
   @include font-size(12px);
   @include font-weight-medium;
   color: $silver;
+  float: right;
+  line-height: 100%;
   margin-bottom: 0.5em;
   overflow: hidden;
+
+  .post--facebook & {
+    float: none;
+  }
+}
+
+.post__header {
+  @include font-size(11px);
+  font-style: italic;
+  position: absolute;
+  top: 6px;
+
+  .icon {
+    @include font-size(16px);
+    color: $silver;
+    display: inline-block;
+    line-height: 0;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+}
+
+.post__retweeter {
+  @include font-size(10px);
+  display: inline;
+  font-style: normal;
+}
+
+.post__image {
+  float: left;
+  margin-right: 1em;
 }
 
 .post__content {
-  @include font-family-bodytext;
-  @include font-size(15px);
   color: $gray;
-  line-height: 1.5em;
+  line-height: 1.2em;
   margin-bottom: 0.4em;
   overflow: hidden;
+
+  .post--facebook & {
+    @include font-size(15px);
+    line-height: 1.5em;
+  }
+}
+
+.post__author {
+  padding-bottom: 0;
+}
+
+.post__account {
+  @include font-size(12px);
+}
+
+.post__message {
+  @include font-size(12px);
+  color: $black;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.post__media {
+}
+
+.post__footer {
+}
+
+.post__action {
+  @include font-size(12px);
+  @include font-weight-medium;
+  align-items: center;
+  display: flex;
+  color: darken($lightsilver, 10%);
+  float: left;
+  margin-right: 1em;
+
+  .icon {
+    @include font-size(14px);
+    margin-right: 3px;
+  }
 }
