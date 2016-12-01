@@ -1,7 +1,7 @@
 /*
- section: 16.2
+ section: 15.2
  title: Footer
- template: 16_2_footer
+ template: 15_2_footer
  description: The footer.
 */
 
@@ -62,11 +62,11 @@
     text-align: center;
 
     @include breakpoint($small) {
-      @include add-grid(12);
-      @include float-span(4, 'last');
+      float: right;
+      margin-top: -50px;
       padding: 0 0 16px 20px;
       text-align: left;
-      margin-top: -50px;
+      width: 24%;
     }
   }
 }
