@@ -5062,7 +5062,6 @@ dl, ol, ul {
 .hero {
   background-color: #0098d0;
   overflow: hidden;
-  padding: 1.5em;
   position: relative;
 }
 
@@ -5070,6 +5069,7 @@ dl, ol, ul {
   margin: 0 auto;
   max-width: 75em;
   padding: 0 1em;
+  padding: 1.5em;
 }
 
 .hero .hero__title {

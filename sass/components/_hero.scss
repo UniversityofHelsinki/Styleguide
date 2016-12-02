@@ -7,11 +7,11 @@
 .hero {
   background-color: $blue;
   overflow: hidden;
-  padding: 1.5em;
   position: relative;
 
   .hero__content {
     @include container;
+    padding: 1.5em;
   }
 
   .hero__title {
