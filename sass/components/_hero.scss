@@ -1,0 +1,33 @@
+/*
+ section: 16.1.1
+ title: Hero
+ template: 16_1_1-hero
+ description:
+*/
+.hero {
+  background-color: $blue;
+  overflow: hidden;
+  padding: 1.5em;
+  position: relative;
+
+  .hero__content {
+    @include container;
+  }
+
+  .hero__title {
+    @include font-size(20px);
+    color: $white;
+    margin: 0;
+    letter-spacing: -0.5px;
+    padding-bottom: 0.25em;
+  }
+
+  .hero__alt-title {
+    @include font-size(14px);
+    color: $white;
+    line-height: 130%;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+  }
+}
