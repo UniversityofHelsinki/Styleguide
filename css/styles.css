@@ -5665,6 +5665,10 @@ td.jobs-listing__date {
   }
 }
 
+span.links__link.theme-language {
+  color: #424242;
+}
+
 /*
  section: 6.2
  title: List of links
