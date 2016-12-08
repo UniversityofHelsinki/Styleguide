@@ -5069,7 +5069,7 @@ dl, ol, ul {
   margin: 0 auto;
   max-width: 75em;
   padding: 0 1em;
-  padding: 1.5em 2em;
+  padding: 1.5em 1em;
 }
 
 .hero .hero__title {
@@ -5663,6 +5663,10 @@ td.jobs-listing__date {
   .links__link.theme-language abbr[title]:after {
     font-size: 12px;
   }
+}
+
+span.links__link.theme-language {
+  color: #424242;
 }
 
 /*
