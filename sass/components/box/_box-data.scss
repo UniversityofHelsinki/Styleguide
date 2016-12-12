@@ -32,11 +32,11 @@
     margin: 0 15px 0 0;
   }
 
-  &.theme-orange {
+  .box-data.theme-orange & {
     background-color: $orange;
   }
 
-  &.theme-black {
+  .box-data.theme-black & {
     background-color: $black;
   }
 }
