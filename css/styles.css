@@ -3877,6 +3877,9 @@ a:hover
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: 70px;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
