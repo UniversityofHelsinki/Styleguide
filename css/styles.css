@@ -5022,10 +5022,6 @@ dl, ol, ul {
   }
 }
 
-.feed-listing__content p:last-child {
-  margin: 0 0 30px 0;
-}
-
 /*
  section: 11.1.1
  title: File
