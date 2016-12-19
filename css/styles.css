@@ -4949,12 +4949,16 @@ dl, ol, ul {
   clear: both;
 }
 
+.feed-listing__item {
+  margin-bottom: 30px;
+}
+
 .feed-listing__title {
   font-size: 13.125px;
   font-size: 0.9375rem;
   font-weight: 600;
   font-style: normal;
-  float: left;
+  display: inline;
   line-height: 1.1em;
   margin-right: 1em;
 }
@@ -4970,6 +4974,7 @@ dl, ol, ul {
   font-size: 0.8125rem;
   font-weight: 600;
   font-style: normal;
+  display: inline;
 }
 
 @media (min-width: 48em) {
@@ -5015,10 +5020,6 @@ dl, ol, ul {
   .feed-listing__content p.type {
     font-size: 12px;
   }
-}
-
-.feed-listing__content p:last-child {
-  margin: 0 0 30px 0;
 }
 
 /*

@@ -10,10 +10,14 @@
   position: relative;
 }
 
+.feed-listing__item {
+  margin-bottom: 30px;
+}
+
 .feed-listing__title {
   @include font-size(15px);
   @include font-weight-medium;
-  float: left;
+  display: inline;
   line-height: 1.1em;
   margin-right: 1em;
 }
@@ -21,6 +25,7 @@
 .feed-listing__date {
   @include font-size(13px);
   @include font-weight-medium;
+  display: inline;
 }
 
 .feed-listing__content {
@@ -43,10 +48,6 @@
       @include font-weight-medium;
       @include font-size(12px);
       color: $silver;
-    }
-
-    &:last-child {
-      margin: 0 0 $vert-spacing-unit 0;
     }
   }
 }
