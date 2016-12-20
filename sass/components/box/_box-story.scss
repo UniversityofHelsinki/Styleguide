@@ -33,6 +33,17 @@
     background-color: $blue--active;
     padding: 3.5em 1.5em;
 
+    .box-story__link-wrapper {
+      &:after {
+        @include icon($icon-arrow-right);
+        color: $white;
+        bottom: 1em;
+        margin: 0;
+        position: absolute;
+        right: 1.5em;
+      }
+    }
+
     .box-story__date,
     .box-story__tag,
     .box-story__title,
@@ -59,14 +70,6 @@
 
     &:hover {
       background-color: $darkblue;
-
-      .box-story__link > a {
-        color: $white;
-
-        &:after {
-          color: $white;
-        }
-      }
     }
   }
 
@@ -80,7 +83,6 @@
         @include icon($icon-arrow-right);
         color: $black;
         float: right;
-        margin-bottom: 1em;
       }
     }
 
@@ -280,14 +282,6 @@
 .box-story__link-wrapper {
   display: block;
   flex-grow: 1;
-
-  &:after {
-    @include icon($icon-arrow-right);
-    bottom: 1em;
-    color: $white;
-    position: absolute;
-    right: 1.5em;
-  }
 }
 
 .box-story__link {
