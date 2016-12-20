@@ -3877,6 +3877,9 @@ a:hover
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: 70px;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -4905,55 +4908,6 @@ dl, ol, ul {
   opacity: 0.5;
 }
 
-/*
- section: 7.1.3
- title: Carousel unwrapped teaser
- template: 7_1_3-carousel-unwrapped--teaser
- description:
-*/
-.carousel-unwrapped--teaser {
-  overflow: hidden;
-  position: relative;
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .l-subregion {
-    padding: 0 1em;
-  }
-}
-
-.carousel-unwrapped--teaser .l-subregion:before, .carousel-unwrapped--teaser .l-subregion:after {
-  display: none;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion-wrapper {
-  padding: 2em 0 0 0;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion {
-  padding: 0 1em;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__image {
-  max-height: 90px;
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .carousel-unwrapped__image {
-    min-width: 1750px;
-    opacity: 0.9;
-  }
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .carousel-unwrapped__image img {
-    width: 100%;
-  }
-}
-
 .date {
   font-size: 12.25px;
   font-size: 0.875rem;
@@ -4995,12 +4949,16 @@ dl, ol, ul {
   clear: both;
 }
 
+.feed-listing__item {
+  margin-bottom: 30px;
+}
+
 .feed-listing__title {
   font-size: 13.125px;
   font-size: 0.9375rem;
   font-weight: 600;
   font-style: normal;
-  float: left;
+  display: inline;
   line-height: 1.1em;
   margin-right: 1em;
 }
@@ -5016,6 +4974,7 @@ dl, ol, ul {
   font-size: 0.8125rem;
   font-weight: 600;
   font-style: normal;
+  display: inline;
 }
 
 @media (min-width: 48em) {
@@ -5063,10 +5022,6 @@ dl, ol, ul {
   }
 }
 
-.feed-listing__content p:last-child {
-  margin: 0 0 30px 0;
-}
-
 /*
  section: 11.1.1
  title: File
@@ -5099,6 +5054,56 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .file__icon {
     font-size: 30px;
+  }
+}
+
+/*
+ section: 16.1.1
+ title: Hero
+ template: 16_1_1-hero
+ description:
+*/
+.hero {
+  background-color: #0098d0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero .hero__content {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 0 1em;
+  padding: 1.5em 1em;
+}
+
+.hero .hero__title {
+  font-size: 17.5px;
+  font-size: 1.25rem;
+  color: #FFF;
+  margin: 0;
+  letter-spacing: -0.5px;
+  padding-bottom: 0.25em;
+}
+
+@media (min-width: 48em) {
+  .hero .hero__title {
+    font-size: 20px;
+  }
+}
+
+.hero .hero__alt-title {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  color: #FFF;
+  line-height: 130%;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+@media (min-width: 48em) {
+  .hero .hero__alt-title {
+    font-size: 14px;
   }
 }
 
@@ -5476,10 +5481,25 @@ tr.jobs-listing__item:last-child {
 }
 
 td.jobs-listing__title {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 12.25px;
   font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
   display: block;
   width: 100%;
+}
+
+@media (min-width: 48em) {
+  td.jobs-listing__title {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 48em) {
@@ -5497,9 +5517,22 @@ td.jobs-listing__title {
 }
 
 td.jobs-listing__date {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 12.25px;
   font-size: 0.875rem;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
   display: inline;
+}
+
+@media (min-width: 48em) {
+  td.jobs-listing__date {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 48em) {
@@ -5662,6 +5695,10 @@ td.jobs-listing__date {
   .links__link.theme-language abbr[title]:after {
     font-size: 12px;
   }
+}
+
+span.links__link.theme-language {
+  color: #424242;
 }
 
 /*
@@ -8319,7 +8356,84 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   }
 }
 
-.box-data__title, td.jobs-listing__title, .box-data__date {
+.box-data__left {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #666;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 55px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px 0px 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 55px;
+}
+
+@media (min-width: 48em) {
+  .box-data__left {
+    margin: 0 15px 0 0;
+  }
+}
+
+.box-data.theme-orange .box-data__left {
+  background-color: #fca311;
+}
+
+.box-data.theme-black .box-data__left {
+  background-color: #222;
+}
+
+.box-data__date {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-weight: 600;
+  font-style: normal;
+  color: #FFF;
+}
+
+@media (min-width: 48em) {
+  .box-data__date {
+    font-size: 14px;
+  }
+}
+
+.box-data__icon {
+  color: #FFF;
+}
+
+.box-data__icon:after {
+  font-size: 33.25px;
+  font-size: 2.375rem;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+@media (min-width: 48em) {
+  .box-data__icon:after {
+    font-size: 38px;
+  }
+}
+
+.box-data__title {
   font-size: 12.25px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -8332,39 +8446,12 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 @media (min-width: 48em) {
-  .box-data__title, td.jobs-listing__title, .box-data__date {
+  .box-data__title {
     font-size: 14px;
   }
 }
 
-.box-data__date {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #666;
-  color: #FFF;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  height: 55px;
-  line-height: 1em;
-  margin: 0 20px 0px 0;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  width: 55px;
-}
-
-@media (min-width: 48em) {
-  .box-data__date {
-    margin: 0 15px 0 0;
-  }
-}
-
-.box-data__content, td.jobs-listing__date {
+.box-data__content {
   font-size: 12.25px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -8375,7 +8462,7 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 @media (min-width: 48em) {
-  .box-data__content, td.jobs-listing__date {
+  .box-data__content {
     font-size: 14px;
   }
 }
@@ -8890,6 +8977,23 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 
+.theme-plain.box-story--liftup .box-story__link-wrapper:after, .theme-plain.box-story--constrained .box-story__link-wrapper:after,
+.box-story.theme-plain .box-story__link-wrapper:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: #FFF;
+  bottom: 1em;
+  margin: 0;
+  position: absolute;
+  right: 1.5em;
+}
+
+
 .theme-plain.box-story--liftup .box-story__date, .theme-plain.box-story--constrained .box-story__date,
 .theme-plain.box-story--liftup .box-story__tag, .theme-plain.box-story--constrained .box-story__tag,
 .theme-plain.box-story--liftup .box-story__title, .theme-plain.box-story--constrained .box-story__title,
@@ -8937,22 +9041,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 
-.theme-plain.box-story--liftup:hover .box-story__link > a, .theme-plain.box-story--constrained:hover .box-story__link > a,
-.theme-plain.box-story--liftup:hover .box-card__fieldset .box-story__link > a, .theme-plain.box-story--constrained:hover .box-card__fieldset .box-story__link > a,
-.box-story.theme-plain:hover .box-story__link > a,
-.box-story.theme-plain:hover .box-card__fieldset .box-story__link > a {
-  color: #FFF;
-}
-
-
-.theme-plain.box-story--liftup:hover .box-story__link > a:after, .theme-plain.box-story--constrained:hover .box-story__link > a:after,
-.theme-plain.box-story--liftup:hover .box-card__fieldset .box-story__link > a:after, .theme-plain.box-story--constrained:hover .box-card__fieldset .box-story__link > a:after,
-.box-story.theme-plain:hover .box-story__link > a:after,
-.box-story.theme-plain:hover .box-card__fieldset .box-story__link > a:after {
-  color: #FFF;
-}
-
-
 .theme-plain-alt.box-story--liftup, .theme-plain-alt.box-story--constrained,
 .box-story.theme-plain-alt {
   background-color: #e3e3e3;
@@ -8976,7 +9064,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   content: "";
   color: #222;
   float: right;
-  margin-bottom: 1em;
 }
 
 
@@ -9332,20 +9419,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.box-story__link-wrapper:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  bottom: 1em;
-  color: #FFF;
-  position: absolute;
-  right: 1.5em;
 }
 
 .box-story__link {

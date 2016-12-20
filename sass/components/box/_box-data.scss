@@ -15,21 +15,13 @@
   }
 }
 
-.box-data__title {
-  @include text-informative;
-  @include font-family-main;
-  @include font-weight-medium;
-}
-
-.box-data__date {
-  display: flex;
-  @extend .box-data__title;
+.box-data__left {
   align-items: center;
   background-color: $gray;
-  color: $white;
+  display: flex;
   flex-shrink: 0;
   height: 55px;
-  line-height: 1em;
+  justify-content: center;
   margin: 0 20px 0px 0;
   padding: 5px;
   position: relative;
@@ -39,6 +31,36 @@
   @include breakpoint($small) {
     margin: 0 15px 0 0;
   }
+
+  .box-data.theme-orange & {
+    background-color: $orange;
+  }
+
+  .box-data.theme-black & {
+    background-color: $black;
+  }
+}
+
+.box-data__date {
+  @include text-informative;
+  @include font-family-main;
+  @include font-weight-medium;
+  color: $white;
+}
+
+.box-data__icon {
+  color: $white;
+
+  &:after {
+    @include font-size(38px);
+    @include icon($icon-helsinginyliopisto);
+  }
+}
+
+.box-data__title {
+  @include text-informative;
+  @include font-family-main;
+  @include font-weight-medium;
 }
 
 .box-data__content {

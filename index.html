@@ -3877,6 +3877,9 @@ a:hover
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   height: 70px;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -4905,55 +4908,6 @@ dl, ol, ul {
   opacity: 0.5;
 }
 
-/*
- section: 7.1.3
- title: Carousel unwrapped teaser
- template: 7_1_3-carousel-unwrapped--teaser
- description:
-*/
-.carousel-unwrapped--teaser {
-  overflow: hidden;
-  position: relative;
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .l-subregion {
-    padding: 0 1em;
-  }
-}
-
-.carousel-unwrapped--teaser .l-subregion:before, .carousel-unwrapped--teaser .l-subregion:after {
-  display: none;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion-wrapper {
-  padding: 2em 0 0 0;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__content .l-subregion {
-  padding: 0 1em;
-}
-
-.carousel-unwrapped--teaser .carousel-unwrapped__image {
-  max-height: 90px;
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .carousel-unwrapped__image {
-    min-width: 1750px;
-    opacity: 0.9;
-  }
-}
-
-@media (min-width: 48em) {
-  .carousel-unwrapped--teaser .carousel-unwrapped__image img {
-    width: 100%;
-  }
-}
-
 .date {
   font-size: 12.25px;
   font-size: 0.875rem;
@@ -4995,12 +4949,16 @@ dl, ol, ul {
   clear: both;
 }
 
+.feed-listing__item {
+  margin-bottom: 30px;
+}
+
 .feed-listing__title {
   font-size: 13.125px;
   font-size: 0.9375rem;
   font-weight: 600;
   font-style: normal;
-  float: left;
+  display: inline;
   line-height: 1.1em;
   margin-right: 1em;
 }
@@ -5016,6 +4974,7 @@ dl, ol, ul {
   font-size: 0.8125rem;
   font-weight: 600;
   font-style: normal;
+  display: inline;
 }
 
 @media (min-width: 48em) {
@@ -5063,10 +5022,6 @@ dl, ol, ul {
   }
 }
 
-.feed-listing__content p:last-child {
-  margin: 0 0 30px 0;
-}
-
 /*
  section: 11.1.1
  title: File
@@ -5099,6 +5054,56 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .file__icon {
     font-size: 30px;
+  }
+}
+
+/*
+ section: 16.1.1
+ title: Hero
+ template: 16_1_1-hero
+ description:
+*/
+.hero {
+  background-color: #0098d0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero .hero__content {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 0 1em;
+  padding: 1.5em 1em;
+}
+
+.hero .hero__title {
+  font-size: 17.5px;
+  font-size: 1.25rem;
+  color: #FFF;
+  margin: 0;
+  letter-spacing: -0.5px;
+  padding-bottom: 0.25em;
+}
+
+@media (min-width: 48em) {
+  .hero .hero__title {
+    font-size: 20px;
+  }
+}
+
+.hero .hero__alt-title {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  color: #FFF;
+  line-height: 130%;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+@media (min-width: 48em) {
+  .hero .hero__alt-title {
+    font-size: 14px;
   }
 }
 
@@ -5476,10 +5481,25 @@ tr.jobs-listing__item:last-child {
 }
 
 td.jobs-listing__title {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 12.25px;
   font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
   display: block;
   width: 100%;
+}
+
+@media (min-width: 48em) {
+  td.jobs-listing__title {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 48em) {
@@ -5497,9 +5517,22 @@ td.jobs-listing__title {
 }
 
 td.jobs-listing__date {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
   font-size: 12.25px;
   font-size: 0.875rem;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
   display: inline;
+}
+
+@media (min-width: 48em) {
+  td.jobs-listing__date {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 48em) {
@@ -5662,6 +5695,10 @@ td.jobs-listing__date {
   .links__link.theme-language abbr[title]:after {
     font-size: 12px;
   }
+}
+
+span.links__link.theme-language {
+  color: #424242;
 }
 
 /*
@@ -8319,7 +8356,84 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   }
 }
 
-.box-data__title, td.jobs-listing__title, .box-data__date {
+.box-data__left {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #666;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 55px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px 0px 0;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 55px;
+}
+
+@media (min-width: 48em) {
+  .box-data__left {
+    margin: 0 15px 0 0;
+  }
+}
+
+.box-data.theme-orange .box-data__left {
+  background-color: #fca311;
+}
+
+.box-data.theme-black .box-data__left {
+  background-color: #222;
+}
+
+.box-data__date {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #777777;
+  line-height: 1.5em;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-weight: 600;
+  font-style: normal;
+  color: #FFF;
+}
+
+@media (min-width: 48em) {
+  .box-data__date {
+    font-size: 14px;
+  }
+}
+
+.box-data__icon {
+  color: #FFF;
+}
+
+.box-data__icon:after {
+  font-size: 33.25px;
+  font-size: 2.375rem;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+@media (min-width: 48em) {
+  .box-data__icon:after {
+    font-size: 38px;
+  }
+}
+
+.box-data__title {
   font-size: 12.25px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -8332,39 +8446,12 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 @media (min-width: 48em) {
-  .box-data__title, td.jobs-listing__title, .box-data__date {
+  .box-data__title {
     font-size: 14px;
   }
 }
 
-.box-data__date {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #666;
-  color: #FFF;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  height: 55px;
-  line-height: 1em;
-  margin: 0 20px 0px 0;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  width: 55px;
-}
-
-@media (min-width: 48em) {
-  .box-data__date {
-    margin: 0 15px 0 0;
-  }
-}
-
-.box-data__content, td.jobs-listing__date {
+.box-data__content {
   font-size: 12.25px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -8375,7 +8462,7 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 @media (min-width: 48em) {
-  .box-data__content, td.jobs-listing__date {
+  .box-data__content {
     font-size: 14px;
   }
 }
@@ -8890,6 +8977,23 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 
+.theme-plain.box-story--liftup .box-story__link-wrapper:after, .theme-plain.box-story--constrained .box-story__link-wrapper:after,
+.box-story.theme-plain .box-story__link-wrapper:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  color: #FFF;
+  bottom: 1em;
+  margin: 0;
+  position: absolute;
+  right: 1.5em;
+}
+
+
 .theme-plain.box-story--liftup .box-story__date, .theme-plain.box-story--constrained .box-story__date,
 .theme-plain.box-story--liftup .box-story__tag, .theme-plain.box-story--constrained .box-story__tag,
 .theme-plain.box-story--liftup .box-story__title, .theme-plain.box-story--constrained .box-story__title,
@@ -8937,22 +9041,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
 }
 
 
-.theme-plain.box-story--liftup:hover .box-story__link > a, .theme-plain.box-story--constrained:hover .box-story__link > a,
-.theme-plain.box-story--liftup:hover .box-card__fieldset .box-story__link > a, .theme-plain.box-story--constrained:hover .box-card__fieldset .box-story__link > a,
-.box-story.theme-plain:hover .box-story__link > a,
-.box-story.theme-plain:hover .box-card__fieldset .box-story__link > a {
-  color: #FFF;
-}
-
-
-.theme-plain.box-story--liftup:hover .box-story__link > a:after, .theme-plain.box-story--constrained:hover .box-story__link > a:after,
-.theme-plain.box-story--liftup:hover .box-card__fieldset .box-story__link > a:after, .theme-plain.box-story--constrained:hover .box-card__fieldset .box-story__link > a:after,
-.box-story.theme-plain:hover .box-story__link > a:after,
-.box-story.theme-plain:hover .box-card__fieldset .box-story__link > a:after {
-  color: #FFF;
-}
-
-
 .theme-plain-alt.box-story--liftup, .theme-plain-alt.box-story--constrained,
 .box-story.theme-plain-alt {
   background-color: #e3e3e3;
@@ -8976,7 +9064,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   content: "";
   color: #222;
   float: right;
-  margin-bottom: 1em;
 }
 
 
@@ -9332,20 +9419,6 @@ a:hover .box-application__link > a:after, .box-card__fieldset a:hover .box-appli
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.box-story__link-wrapper:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-  bottom: 1em;
-  color: #FFF;
-  position: absolute;
-  right: 1.5em;
 }
 
 .box-story__link {
@@ -10506,7 +10579,7 @@ table[class*="idean-styleguide"] {
 	display: inherit !important;
 }
 
-</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-3" data-page="section-1">Section 1-1-3: Faculty colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form components</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group small</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1-1" data-page="section-4">Section 4-1-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-1-2" data-page="section-4">Section 4-1-2: Search form dark</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Fatmenu</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-3" data-page="section-7">Section 7-1-3: Carousel unwrapped teaser</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#EBEBEB"><span class="idean-styleguide-colors-list-label">$lightsilver #EBEBEB</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#888888"><span class="idean-styleguide-colors-list-label">$darksilver #888888</span></li><li class="idean-styleguide-colors-list-sample" style="background:#777777"><span class="idean-styleguide-colors-list-label">$lightgray #777777</span></li><li class="idean-styleguide-colors-list-sample" style="background:#666"><span class="idean-styleguide-colors-list-label">$gray #666</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#4FB151"><span class="idean-styleguide-colors-list-label">$green #4FB151</span></li><li class="idean-styleguide-colors-list-sample" style="background:#974822"><span class="idean-styleguide-colors-list-label">$brown #974822</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-3">Section 1-1-3: Faculty colors</a></h2><p class="idean-styleguide-description"><table><tr><th>Faculty</th><th>Color variable</th></tr><tr><td>humanistinen</td><td>$lightblue</td></tr><tr><td>oikeustieteellinen</td><td>$darkred</td></tr><tr><td>kayttaytymistieteellinen</td><td>$yellow</td></tr><tr><td>laaketieteellinen</td><td>$darkturquoise</td></tr><tr><td>maatalous-metsatieteellinen </td><td>$turquoise</td></tr><tr><td>matemaattis-luonnontieteellinen</td><td>$orange</td></tr><tr><td>svenska-social--och-kommunalhogskolan</td><td>$pink</td></tr><tr><td>farmasian</td><td>$lightturquoise</td></tr><tr><td>valtiotieteellinen</td><td>$red</td></tr><tr><td>teologinen</td><td>$lila</td></tr><tr><td>elainlaaketieteellinen</td><td>$darkgreen</td></tr><tr><td>bio--ja-ymparistotieteellinen  </td><td>$limegreen</td></tr></table></p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#3a75c4"><span class="idean-styleguide-colors-list-label">$lightblue #3a75c4</span></li><li class="idean-styleguide-colors-list-sample" style="background:#009e60"><span class="idean-styleguide-colors-list-label">$darkgreen #009e60</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fcd116"><span class="idean-styleguide-colors-list-label">$yellow #fcd116</span></li><li class="idean-styleguide-colors-list-sample" style="background:#9258c8"><span class="idean-styleguide-colors-list-label">$lila #9258c8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#8c0032"><span class="idean-styleguide-colors-list-label">$darkred #8c0032</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00b08c"><span class="idean-styleguide-colors-list-label">$turquoise #00b08c</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00a39a"><span class="idean-styleguide-colors-list-label">$darkturquoise #00a39a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00bd9d"><span class="idean-styleguide-colors-list-label">$lightturquoise #00bd9d</span></li><li class="idean-styleguide-colors-list-sample" style="background:#5bbf21"><span class="idean-styleguide-colors-list-label">$limegreen #5bbf21</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e63375"><span class="idean-styleguide-colors-list-label">$pink #e63375</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
+</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-3" data-page="section-1">Section 1-1-3: Faculty colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form components</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group small</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1-1" data-page="section-4">Section 4-1-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-1-2" data-page="section-4">Section 4-1-2: Search form dark</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Fatmenu</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16" data-page="section-16">Section 16</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1" data-page="section-16">Section 16-1</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-1" data-page="section-16">Section 16-1-1: Hero</a></li></ul></ul></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#EBEBEB"><span class="idean-styleguide-colors-list-label">$lightsilver #EBEBEB</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#888888"><span class="idean-styleguide-colors-list-label">$darksilver #888888</span></li><li class="idean-styleguide-colors-list-sample" style="background:#777777"><span class="idean-styleguide-colors-list-label">$lightgray #777777</span></li><li class="idean-styleguide-colors-list-sample" style="background:#666"><span class="idean-styleguide-colors-list-label">$gray #666</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#4FB151"><span class="idean-styleguide-colors-list-label">$green #4FB151</span></li><li class="idean-styleguide-colors-list-sample" style="background:#974822"><span class="idean-styleguide-colors-list-label">$brown #974822</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-3">Section 1-1-3: Faculty colors</a></h2><p class="idean-styleguide-description"><table><tr><th>Faculty</th><th>Color variable</th></tr><tr><td>humanistinen</td><td>$lightblue</td></tr><tr><td>oikeustieteellinen</td><td>$darkred</td></tr><tr><td>kayttaytymistieteellinen</td><td>$yellow</td></tr><tr><td>laaketieteellinen</td><td>$darkturquoise</td></tr><tr><td>maatalous-metsatieteellinen </td><td>$turquoise</td></tr><tr><td>matemaattis-luonnontieteellinen</td><td>$orange</td></tr><tr><td>svenska-social--och-kommunalhogskolan</td><td>$pink</td></tr><tr><td>farmasian</td><td>$lightturquoise</td></tr><tr><td>valtiotieteellinen</td><td>$red</td></tr><tr><td>teologinen</td><td>$lila</td></tr><tr><td>elainlaaketieteellinen</td><td>$darkgreen</td></tr><tr><td>bio--ja-ymparistotieteellinen  </td><td>$limegreen</td></tr></table></p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#3a75c4"><span class="idean-styleguide-colors-list-label">$lightblue #3a75c4</span></li><li class="idean-styleguide-colors-list-sample" style="background:#009e60"><span class="idean-styleguide-colors-list-label">$darkgreen #009e60</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fcd116"><span class="idean-styleguide-colors-list-label">$yellow #fcd116</span></li><li class="idean-styleguide-colors-list-sample" style="background:#9258c8"><span class="idean-styleguide-colors-list-label">$lila #9258c8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#8c0032"><span class="idean-styleguide-colors-list-label">$darkred #8c0032</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00b08c"><span class="idean-styleguide-colors-list-label">$turquoise #00b08c</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00a39a"><span class="idean-styleguide-colors-list-label">$darkturquoise #00a39a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#00bd9d"><span class="idean-styleguide-colors-list-label">$lightturquoise #00bd9d</span></li><li class="idean-styleguide-colors-list-sample" style="background:#5bbf21"><span class="idean-styleguide-colors-list-label">$limegreen #5bbf21</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e63375"><span class="idean-styleguide-colors-list-label">$pink #e63375</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
 
 <div>
     <span class="icon--add-to-todo-list"></span>
@@ -11891,16 +11964,44 @@ table[class*="idean-styleguide"] {
   &lt;/div&gt;
   &lt;div class="box-application__link"&gt;&lt;a class="button--action icon--arrow-right theme-transparent" href="#"&gt;Read application instructions&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-2">Section 6-10-2: Box data</a></h2><p class="idean-styleguide-description">Data is story-like component, but mainly with data insertions e.g. event list.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-data">
-  <div class="box-data__date"><span>28.6. 2016</span></div>
+  <div class="box-data__left"><span class="box-data__date">28.6. 2016</span></div>
   <div class="box-data__container">
     <div class="box-data__title"><a href="#">Gianluca Paolini: Independence in Model Theory and Team Semantics</a></div>
     <span class="box-data__content">ti 28.6.2016   12:00-14:00 Exactum, Auditorio CK112, Gustaf Hällströmin katu 2 BM....</span>
   </div>
+</div>
+
+<div class="box-data theme-orange">
+  <div class="box-data__left"><span class="box-data__icon"></span></div>
+  <div class="box-data__container">
+    <div class="box-data__title"><a href="#">Väitös: Oma etu menee kaavoitukseen osallistumisessa helposti yhteisen hyvän edelle</a></div>
+  </div>
+</div>
+
+<div class="box-data theme-black">
+  <div class="box-data__left"><span class="box-data__icon"></span></div>
+  <div class="box-data__container">
+    <div class="box-data__title"><a href="#">Teoreettisten ja laskennallisten menetelmien maisteriohjelma, filosofian maisteri (2 v)</a></div>
+  </div>
 </div></div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="box-data"&gt;
-  &lt;div class="box-data__date"&gt;&lt;span&gt;28.6. 2016&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="box-data__left"&gt;&lt;span class="box-data__date"&gt;28.6. 2016&lt;/span&gt;&lt;/div&gt;
   &lt;div class="box-data__container"&gt;
     &lt;div class="box-data__title"&gt;&lt;a href="#"&gt;Gianluca Paolini: Independence in Model Theory and Team Semantics&lt;/a&gt;&lt;/div&gt;
     &lt;span class="box-data__content"&gt;ti 28.6.2016   12:00-14:00 Exactum, Auditorio CK112, Gustaf Hällströmin katu 2 BM....&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="box-data theme-orange"&gt;
+  &lt;div class="box-data__left"&gt;&lt;span class="box-data__icon"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="box-data__container"&gt;
+    &lt;div class="box-data__title"&gt;&lt;a href="#"&gt;Väitös: Oma etu menee kaavoitukseen osallistumisessa helposti yhteisen hyvän edelle&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="box-data theme-black"&gt;
+  &lt;div class="box-data__left"&gt;&lt;span class="box-data__icon"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="box-data__container"&gt;
+    &lt;div class="box-data__title"&gt;&lt;a href="#"&gt;Teoreettisten ja laskennallisten menetelmien maisteriohjelma, filosofian maisteri (2 v)&lt;/a&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-3">Section 6-10-3: Box hero</a></h2><p class="idean-styleguide-description">Box-hero is the main story (for example, front page carousel content)</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-hero">
 	<h1 class="box-hero__title">
@@ -11953,7 +12054,7 @@ table[class*="idean-styleguide"] {
     </div>
   </a>
 </div>
-
+<p></p>
 <div class="box-story theme-plain">
   <div class="box-story__label">
     Uutinen
@@ -11970,11 +12071,17 @@ table[class*="idean-styleguide"] {
       The University of Helsinki receives the largest amount of competitive research funding of all Finnish universities.
     </div>
   </a>
-  <div class="box-story__link">
-    <a href="" class="button--action icon--arrow-right theme-transparent">
-      Read more
-    </a>
-  </div>
+</div>
+<p></p>
+<div class="box-story theme-plain-alt">
+  <a href="#" class="box-story__link-wrapper">
+    <h4 class="box-story__title">
+      Research funding
+    </h4>
+    <div class="box-story__content">
+      The University of Helsinki receives the largest amount of competitive research funding of all Finnish universities.
+    </div>
+  </a>
 </div>
 </div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="box-story"&gt;
   &lt;a href="#" class="box-story__link-wrapper"&gt;
@@ -11989,7 +12096,7 @@ table[class*="idean-styleguide"] {
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
-
+&lt;p&gt;&lt;/p&gt;
 &lt;div class="box-story theme-plain"&gt;
   &lt;div class="box-story__label"&gt;
     Uutinen
@@ -12006,11 +12113,17 @@ table[class*="idean-styleguide"] {
       The University of Helsinki receives the largest amount of competitive research funding of all Finnish universities.
     &lt;/div&gt;
   &lt;/a&gt;
-  &lt;div class="box-story__link"&gt;
-    &lt;a href="" class="button--action icon--arrow-right theme-transparent"&gt;
-      Read more
-    &lt;/a&gt;
-  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div class="box-story theme-plain-alt"&gt;
+  &lt;a href="#" class="box-story__link-wrapper"&gt;
+    &lt;h4 class="box-story__title"&gt;
+      Research funding
+    &lt;/h4&gt;
+    &lt;div class="box-story__content"&gt;
+      The University of Helsinki receives the largest amount of competitive research funding of all Finnish universities.
+    &lt;/div&gt;
+  &lt;/a&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-5-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-5-2">Section 6-10-5-2: Box story liftup</a></h2><p class="idean-styleguide-description">box-story--liftup is a more prominent display of content</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-story--liftup">
   <a href="#" class="box-story__link-wrapper">
@@ -12474,49 +12587,13 @@ table[class*="idean-styleguide"] {
   &lt;div class="carousel-unwrapped__image"&gt;
     &lt;img src="images/wide_322x190.jpg"&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-7-1-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-7-1-3">Section 7-1-3: Carousel unwrapped teaser</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="carousel-unwrapped--teaser">
-  <div class="carousel-unwrapped__content theme-raster">
-    <div class="l-subregion-wrapper">
-      <div class="l-subregion">
-        <div class="box-hero theme-small">
-          <h1 class="box-hero__title">
-            Va­rieng
-          </h1>
-          <h2 class="box-hero__alt-title">
-            Alt title
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-unwrapped__image">
-    <img src="images/wide_322x190.jpg">
-  </div>
-</div></div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="carousel-unwrapped--teaser"&gt;
-  &lt;div class="carousel-unwrapped__content theme-raster"&gt;
-    &lt;div class="l-subregion-wrapper"&gt;
-      &lt;div class="l-subregion"&gt;
-        &lt;div class="box-hero theme-small"&gt;
-          &lt;h1 class="box-hero__title"&gt;
-            Va­rieng
-          &lt;/h1&gt;
-          &lt;h2 class="box-hero__alt-title"&gt;
-            Alt title
-          &lt;/h2&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="carousel-unwrapped__image"&gt;
-    &lt;img src="images/wide_322x190.jpg"&gt;
-  &lt;/div&gt;
 &lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></div></section><section class="idean-styleguide-page" id="section-8"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-8">University of Helsinki: 8</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-8-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-8-1">Section 8-1: Feed listing</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="feed-listing">
   <div class="feed-listing__item">
     <div class="feed-listing__title"><a href="http://tuhat.halvi.helsinki.fi/portal/fi/publications/ways-of-agreeing-wi(355326f3-119d-474a-a386-74f484eb493a).html" target="_new">Ways of agreeing with negative stancetaking</a></div>
     <div class="feed-listing__date">1.1.2011</div>
     <div class="feed-listing__content">
       <div class="rendering rendering_publication  rendering_publication_short rendering_contribtobookanthology rendering_short rendering_contribtobookanthology_short">
-        <p><a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person">Hakulinen, A.</a> &amp; <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person">Sorjonen, M-L.</a> 2011 <em>The morality of knowledge in conversation.</em> Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä<br></p>
+        <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person">Hakulinen, A.</a> &amp; <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person">Sorjonen, M-L.</a> 2011 <em>The morality of knowledge in conversation.</em> Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä<br>
         <p class="type">Julkaisu: Julkaisu kirjassa/kokoomateoksessa › A3 Kirjan tai muun kokoomateoksen osa (vertaisarvioitu)</p>
       </div>
     </div>
@@ -12526,7 +12603,7 @@ table[class*="idean-styleguide"] {
     <div class="feed-listing__date">1.1.2011</div>
     <div class="feed-listing__content">
       <div class="rendering rendering_publication  rendering_publication_short rendering_contribtobookanthology rendering_short rendering_contribtobookanthology_short">
-        <p><a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person">Hakulinen, A.</a> &amp; <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person">Sorjonen, M-L.</a> 2011 <em>The morality of knowledge in conversation.</em> Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä<br></p>
+        <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person">Hakulinen, A.</a> &amp; <a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person">Sorjonen, M-L.</a> 2011 <em>The morality of knowledge in conversation.</em> Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä<br>
         <p class="type">Julkaisu: Julkaisu kirjassa/kokoomateoksessa › A3 Kirjan tai muun kokoomateoksen osa (vertaisarvioitu)</p>
       </div>
     </div>
@@ -12537,7 +12614,7 @@ table[class*="idean-styleguide"] {
     &lt;div class="feed-listing__date"&gt;1.1.2011&lt;/div&gt;
     &lt;div class="feed-listing__content"&gt;
       &lt;div class="rendering rendering_publication  rendering_publication_short rendering_contribtobookanthology rendering_short rendering_contribtobookanthology_short"&gt;
-        &lt;p&gt;&lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person"&gt;Hakulinen, A.&lt;/a&gt; &amp; &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person"&gt;Sorjonen, M-L.&lt;/a&gt; 2011 &lt;em&gt;The morality of knowledge in conversation.&lt;/em&gt; Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä&lt;br&gt;&lt;/p&gt;
+        &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person"&gt;Hakulinen, A.&lt;/a&gt; &amp; &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person"&gt;Sorjonen, M-L.&lt;/a&gt; 2011 &lt;em&gt;The morality of knowledge in conversation.&lt;/em&gt; Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä&lt;br&gt;
         &lt;p class="type"&gt;Julkaisu: Julkaisu kirjassa/kokoomateoksessa › A3 Kirjan tai muun kokoomateoksen osa (vertaisarvioitu)&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -12547,7 +12624,7 @@ table[class*="idean-styleguide"] {
     &lt;div class="feed-listing__date"&gt;1.1.2011&lt;/div&gt;
     &lt;div class="feed-listing__content"&gt;
       &lt;div class="rendering rendering_publication  rendering_publication_short rendering_contribtobookanthology rendering_short rendering_contribtobookanthology_short"&gt;
-        &lt;p&gt;&lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person"&gt;Hakulinen, A.&lt;/a&gt; &amp; &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person"&gt;Sorjonen, M-L.&lt;/a&gt; 2011 &lt;em&gt;The morality of knowledge in conversation.&lt;/em&gt; Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä&lt;br&gt;&lt;/p&gt;
+        &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/auli-hakulinen(7eb84f0f-ce77-43fd-bc47-d2cb71edd87b).html" class="link person"&gt;Hakulinen, A.&lt;/a&gt; &amp; &lt;a rel="Person" href="http://tuhat.halvi.helsinki.fi/portal/fi/persons/marjaleena-sorjonen(90f422bd-b7e3-42e8-abc2-01ee5b32bb43).html" class="link person"&gt;Sorjonen, M-L.&lt;/a&gt; 2011 &lt;em&gt;The morality of knowledge in conversation.&lt;/em&gt; Stivers, T., Mondada, L. &amp; Steensig, J. (toim.). 1. toim. Cambridge, UK: Cambridge University Press, Vuosikerta 2011, s. 235-256 21 Sivumäärä&lt;br&gt;
         &lt;p class="type"&gt;Julkaisu: Julkaisu kirjassa/kokoomateoksessa › A3 Kirjan tai muun kokoomateoksen osa (vertaisarvioitu)&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -12916,7 +12993,7 @@ table[class*="idean-styleguide"] {
             </div>
             <div class="l-top-bar__subright">
                 <div class="links">
-                    <a class="links__link theme-language" href="/en" lang="en"><abbr title="English">en</abbr></a>
+                    <span class="links__link theme-language" href="/en" lang="en"><abbr title="English">en</abbr></span>
                     <a class="links__link theme-language active" href="/fi" lang="fi"><abbr title="Suomi">fi</abbr></a>
                     <a class="links__link theme-language" href="/sv" lang="sv"><abbr title="Svenska">sv</abbr></a>
                 </div>
@@ -12940,7 +13017,7 @@ table[class*="idean-styleguide"] {
             &lt;/div&gt;
             &lt;div class="l-top-bar__subright"&gt;
                 &lt;div class="links"&gt;
-                    &lt;a class="links__link theme-language" href="/en" lang="en"&gt;&lt;abbr title="English"&gt;en&lt;/abbr&gt;&lt;/a&gt;
+                    &lt;span class="links__link theme-language" href="/en" lang="en"&gt;&lt;abbr title="English"&gt;en&lt;/abbr&gt;&lt;/span&gt;
                     &lt;a class="links__link theme-language active" href="/fi" lang="fi"&gt;&lt;abbr title="Suomi"&gt;fi&lt;/abbr&gt;&lt;/a&gt;
                     &lt;a class="links__link theme-language" href="/sv" lang="sv"&gt;&lt;abbr title="Svenska"&gt;sv&lt;/abbr&gt;&lt;/a&gt;
                 &lt;/div&gt;
@@ -13038,7 +13115,25 @@ table[class*="idean-styleguide"] {
     &lt;div class="l-footer__copyright"&gt;
         &lt;p&gt;© Helsingin yliopisto 2016&lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section></div><div class="idean-styleguide-popup" style="display:none;"><a href="#" class="idean-styleguide-popup-close">Close</a><div class="idean-styleguide-popup-code"></div></div><footer class="idean-styleguide-footer"><a href="http://www.idean.com" class="idean-styleguide-branding">Idean</a></footer><script src="styleguide/js/jquery-1.11.0.min.js"></script><script>(function(){
+&lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-16"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-16">University of Helsinki: 16</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-16-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-16-1">Section 16-1</a></h2><div class="idean-styleguide-subsection" id="section-16-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-16-1-1">Section 16-1-1: Hero</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="hero">
+  <div class="hero__content">
+    <h4 class="hero__title">
+      Va­rieng
+    </h1>
+    <h5 class="hero__alt-title">
+      Alt title
+    </h5>
+  </div>
+</div></div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="hero"&gt;
+  &lt;div class="hero__content"&gt;
+    &lt;h4 class="hero__title"&gt;
+      Va­rieng
+    &lt;/h1&gt;
+    &lt;h5 class="hero__alt-title"&gt;
+      Alt title
+    &lt;/h5&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></div></section></div><div class="idean-styleguide-popup" style="display:none;"><a href="#" class="idean-styleguide-popup-close">Close</a><div class="idean-styleguide-popup-code"></div></div><footer class="idean-styleguide-footer"><a href="http://www.idean.com" class="idean-styleguide-branding">Idean</a></footer><script src="styleguide/js/jquery-1.11.0.min.js"></script><script>(function(){
 
 	var sections;
 	var popup;
