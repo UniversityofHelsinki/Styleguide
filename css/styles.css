@@ -4103,16 +4103,11 @@ p {
 */
 a, .box-card__fieldset a {
   color: #0098d0;
-  outline: 0;
   text-decoration: none;
 }
 
 a:hover {
   color: #005479;
-}
-
-a:hover, a:active, a:focus {
-  outline: 0;
 }
 
 /*
