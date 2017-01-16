@@ -1654,16 +1654,6 @@ th {
   content: "";
 }
 
-.icon--checked:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
-}
-
 .icon--square-checked:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -2884,16 +2874,6 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
-}
-
-.icon--checked:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "";
 }
 
 .icon--square-checked:after {
