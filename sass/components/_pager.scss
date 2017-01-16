@@ -7,24 +7,19 @@
 %ul.pager,
 ul.pager {
   @include font-size(15px);
+  align-items: center;
   color: $white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: $vert-spacing-unit 0;
 
   > li {
-    display: inline-block;
-    margin-bottom: 0.3em;
+    margin-right: 4px;
 
-    > a {
-      position: relative;
-    }
-
-    &.is-active {
-      @include button;
-      background-color: $darkblue;
-
-      > a {
-        background-color: inherit;
-      }
+    &:last-of-type {
+      margin: 0;
     }
 
     &.pager__ellipsis {
@@ -32,7 +27,7 @@ ul.pager {
       display: none;
 
       @include breakpoint($small) {
-        display: inline-block;
+        display: block;
       }
     }
 
@@ -40,29 +35,9 @@ ul.pager {
       display: none;
 
       @include breakpoint($small) {
-        display: inline-block;
-      }
-
-      a {
-        @include button;
         display: block;
       }
-    }
 
-    &.pager__previous {
-      a {
-        @include button-previous;
-      }
-    }
-
-    &.pager__next {
-      a {
-        @include button-next;
-      }
-    }
-
-    &.pager__previous,
-    &.pager__next {
       a {
         display: block;
       }

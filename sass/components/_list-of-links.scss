@@ -37,10 +37,6 @@
     height: auto;
   }
 
-  .theme-dark & {
-    @include button-next;
-  }
-
   // Theme info footer
   .theme-footer &,
   .theme-info-footer & {
