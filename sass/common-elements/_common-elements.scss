@@ -108,16 +108,11 @@ p {
 
 a {
   color: $blue;
-  outline: 0;
   text-decoration: none;
 
   &:hover {
     color: $darkblue;
   }
-}
-
-a:hover, a:active, a:focus {
-  outline: 0;
 }
 
 /*

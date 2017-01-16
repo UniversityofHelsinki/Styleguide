@@ -1654,6 +1654,26 @@ th {
   content: "";
 }
 
+.icon--square-checked:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--square:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
 /*
   section: 2
   title: Icons
@@ -2854,6 +2874,26 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "";
+}
+
+.icon--square-checked:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+}
+
+.icon--square:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
 }
 
 .bar, .tube {
@@ -4110,16 +4150,11 @@ p {
 */
 a, .box-card__fieldset a {
   color: #0098d0;
-  outline: 0;
   text-decoration: none;
 }
 
 a:hover {
   color: #005479;
-}
-
-a:hover, a:active, a:focus {
-  outline: 0;
 }
 
 /*
