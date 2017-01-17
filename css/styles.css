@@ -5317,6 +5317,10 @@ dl, ol, ul {
   }
 }
 
+.form__item .form__item {
+  width: auto;
+}
+
 @media (min-width: 48em) {
   .form__actions {
     width: 50%;

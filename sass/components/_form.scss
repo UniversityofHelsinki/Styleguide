@@ -29,6 +29,10 @@
   @include breakpoint($small) {
     width: 50%;
   }
+
+  .form__item {
+    width: auto;
+  }
 }
 
 .form__actions {
