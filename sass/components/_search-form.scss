@@ -1,20 +1,20 @@
 /*
- section: 4.1
+ section: 4.2
  title: Search form
  description:
 */
 
 /*
- section: 4.1.1
+ section: 4.2.1
  title: Search form
- template: 4_1_1_search-form
+ template: 4_2_1_search-form
  description:
 */
 
 /*
- section: 4.1.2
+ section: 4.2.2
  title: Search form dark
- template: 4_1_2_search-form-dark
+ template: 4_2_2_search-form-dark
  description:
 */
 .search-form {
@@ -23,12 +23,9 @@
 }
 
 .search-form__label {
-  @include text-label;
-  display: block;
-  padding-bottom: 0.5em;
 }
 
-.search-form__input {
+input[type="text"].search-form__input {
   border-radius: 0;
   border: 2px solid $blue;
   height: 40px;
@@ -67,7 +64,7 @@ input[type="submit"].search-form__submit {
 
 .search-form--dark {}
 
-.search-form--dark__input {
+input[type="text"].search-form--dark__input {
   background: $darkgray;
   border: none;
   color: $white;
@@ -120,7 +117,7 @@ input[type="submit"].search-form--dark__submit {
   padding-bottom: 0.5em;
 }
 
-.search-form-large__input {
+input[type="text"].search-form-large__input {
   @include font-size(15px);
   border: 2px solid $lightsilver;
   color: $silver;

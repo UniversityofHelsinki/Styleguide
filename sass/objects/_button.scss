@@ -37,7 +37,8 @@
     transition-property: all;
   }
 
-  &.theme-transparent {
+  &.theme-transparent,
+  &.theme-transparent-alt {
     background-color: transparent;
     color: $blue;
 
@@ -154,7 +155,8 @@
     }
   }
 
-  &.theme-transparent {
+  &.theme-transparent,
+  &.theme-transparent-alt {
     align-items: center;
     display: flex;
     padding-left: 0;
@@ -178,6 +180,15 @@
     &:hover,
     &:hover:after {
       color: $darkblue;
+    }
+  }
+
+  &.theme-transparent-alt {
+    border-bottom: 1px solid $lightsilver;
+    padding-right: 1rem;
+
+    &:after {
+      position: absolute;
     }
   }
 }

@@ -174,6 +174,13 @@ label {
   padding: 0;
   margin: 0;
 
+  &.theme-small {
+    @include font-size(14px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+  }
+
   .is-required {
     color: $blue;
     font-size: 1.2em;
@@ -184,6 +191,8 @@ label {
 
 input[type="submit"] {
   @extend %button;
+  font-weight: 600;
+  padding: 10px 30px;
 }
 
 input[type="text"],
@@ -191,10 +200,15 @@ textarea {
   @include font-size(16px);
   border: 1px solid $silver;
   color: $gray;
-  font-weight: 600;
-  opacity: 1;
   padding: 10px;
+  transition-duration: 0.2s;
+  transition-property: border-color;
   width: 100%;
+
+  &:focus {
+    border-color: $black;
+    outline: none;
+  }
 }
 
 input[type="radio"],
@@ -204,29 +218,27 @@ input[type="checkbox"] {
   + label {
     @include font-size(13px);
     align-items: center;
+    cursor: pointer;
     display: flex;
     font-weight: 600;
-
-    &:before {
-      @include font-size(15px);
-      border: 1px solid $blue;
-      color: $blue;
-      content: "";
-      display: inline-block;
-      height: 1em;
-      margin-right: 0.5em;
-      text-align: center;
-      transition-duration: 0.1s;
-      transition-property: all;
-      width: 1em;
-    }
   }
 }
 
 input[type="radio"] {
   + label {
     &:before {
+      @include font-size(16px);
+      border: 1px solid $blue;
       border-radius: 100%;
+      color: $blue;
+      content: "";
+      display: inline-block;
+      height: 0.9em;
+      margin-right: 10px;
+      text-align: center;
+      transition-duration: 0.1s;
+      transition-property: all;
+      width: 0.9em;
     }
   }
 
@@ -242,21 +254,17 @@ input[type="radio"] {
 
 input[type="checkbox"] {
   + label {
-    &:after {
-      @include icon($icon-done);
-      @include font-size(9px);
+    &:before {
+      @include icon($icon-square);
       color: $blue;
-      left: 3px;
-      opacity: 0;
-      position: absolute;
-      transition-property: all;
-      transition-duration: 0.1s;
+      margin-right: 10px;
     }
   }
 
   &:checked {
     + label {
-      &:after {
+      &:before {
+        @include icon($icon-square-checked);
         opacity: 1;
       }
     }
@@ -269,6 +277,17 @@ select {
   border-radius: 0;
   padding: 10px 5px;
   width: 100%;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  @extend h4;
+  font-weight: 800;
 }
 
 /*

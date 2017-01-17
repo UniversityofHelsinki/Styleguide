@@ -23,7 +23,6 @@
 }
 
 .list-of-links__link {
-  @include font-weight-medium;
   margin-bottom: 2px;
   padding-left: 10px;
 
@@ -33,22 +32,14 @@
     }
   }
 
-  &:after {
-    height: auto;
-  }
-
   // Theme info footer
-  .theme-footer &,
   .theme-info-footer & {
-    @include border-side(bottom);
-    border-bottom-color: lighten($gray, 40%);
+    border-bottom-color: $silver;
     color: lighten($darkgray, 10%);
 
     &:before,
     &:after {
       color: $gray;
-      position: absolute;
-      right: 0;
     }
 
     &:hover {
@@ -65,7 +56,6 @@
   .theme-footer & {
     border-bottom-color: darken($black, 20%);
     color: $white;
-    display: block;
 
     &:before,
     &:after {
@@ -92,7 +82,7 @@
 
 /*
  section: 6.2.2
- title: List of links (with transparent buttons)
+ title: List of links (with transparent and transparent-alt buttons)
  template: 6_2_2_list-of-links-transparent
  description:
 */
@@ -101,7 +91,7 @@
  section: 6.2.3
  title: List of links condensed
  template: 6_2_2_list-of-links-condensed
- description:
+ description: Condensed version with footer themes applied. Also uses transparent-alt theme on the buttons.
 */
 
 .list-of-links--condensed {
