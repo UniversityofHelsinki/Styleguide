@@ -4307,6 +4307,7 @@ input[type="submit"] {
   padding: 10px 30px;
 }
 
+input[type="email"],
 input[type="text"],
 textarea {
   font-size: 14px;
@@ -4320,12 +4321,14 @@ textarea {
 }
 
 @media (min-width: 48em) {
+  input[type="email"],
   input[type="text"],
   textarea {
     font-size: 16px;
   }
 }
 
+input[type="email"]:focus,
 input[type="text"]:focus,
 textarea:focus {
   border-color: #222;
@@ -4349,6 +4352,7 @@ input[type="checkbox"] + label {
   display: -ms-flexbox;
   display: flex;
   font-weight: 600;
+  line-height: normal;
 }
 
 @media (min-width: 48em) {
@@ -4366,6 +4370,9 @@ input[type="radio"] + label:before {
   color: #0098d0;
   content: "";
   display: inline-block;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   height: 0.9em;
   margin-right: 10px;
   text-align: center;
@@ -4394,6 +4401,9 @@ input[type="checkbox"] + label:before {
   -moz-osx-font-smoothing: grayscale;
   content: "";
   color: #0098d0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   margin-right: 10px;
 }
 

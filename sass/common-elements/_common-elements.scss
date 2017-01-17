@@ -195,6 +195,7 @@ input[type="submit"] {
   padding: 10px 30px;
 }
 
+input[type="email"],
 input[type="text"],
 textarea {
   @include font-size(16px);
@@ -221,6 +222,7 @@ input[type="checkbox"] {
     cursor: pointer;
     display: flex;
     font-weight: 600;
+    line-height: normal;
   }
 }
 
@@ -233,6 +235,7 @@ input[type="radio"] {
       color: $blue;
       content: "";
       display: inline-block;
+      flex-shrink: 0;
       height: 0.9em;
       margin-right: 10px;
       text-align: center;
@@ -257,6 +260,7 @@ input[type="checkbox"] {
     &:before {
       @include icon($icon-square);
       color: $blue;
+      flex-shrink: 0;
       margin-right: 10px;
     }
   }
