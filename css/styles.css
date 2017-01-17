@@ -2942,6 +2942,7 @@ th {
   border: none;
   color: #FFF;
   cursor: pointer;
+  display: inline-block;
   padding: 0.8em 1em;
   transition-duration: 0.1s;
   transition-property: all;
@@ -4373,12 +4374,12 @@ input[type="radio"] + label:before {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  height: 0.9em;
+  height: 14px;
   margin-right: 10px;
   text-align: center;
   transition-duration: 0.1s;
   transition-property: all;
-  width: 0.9em;
+  width: 14px;
 }
 
 @media (min-width: 48em) {
