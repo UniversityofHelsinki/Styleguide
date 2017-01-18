@@ -3046,7 +3046,8 @@ th {
 .button--small {
   background-color: #EBEBEB;
   color: #424242;
-  padding: .3em .7em;
+  line-height: 1;
+  padding: .5em .7em;
 }
 
 .button--small.is-active {

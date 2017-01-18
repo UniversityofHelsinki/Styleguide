@@ -65,7 +65,8 @@
   @extend %button;
   background-color: $lightsilver;
   color: $darkgray;
-  padding: .3em .7em;
+  line-height: 1;
+  padding: .5em .7em;
 
   &.is-active {
     background-color: $darkgray;
