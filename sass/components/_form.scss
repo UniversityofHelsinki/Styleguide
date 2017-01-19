@@ -2,7 +2,7 @@
  section: 4.1
  title: Form
  template: 4_1_form
- description: Form component
+ description: Form component with child components like descriptions and fieldsets.
 */
 
 .form {
@@ -33,6 +33,13 @@
   .form__item {
     width: auto;
   }
+}
+
+.form__description {
+  @include font-size(14px);
+  color: $gray;
+  font-weight: 300;
+  padding-top: 0.3em;
 }
 
 .form__actions {

@@ -5553,7 +5553,7 @@ dl, ol, ul {
  section: 4.1
  title: Form
  template: 4_1_form
- description: Form component
+ description: Form component with child components like descriptions and fieldsets.
 */
 .form__fieldset {
   border-bottom: 1px solid #EBEBEB;
@@ -5579,6 +5579,20 @@ dl, ol, ul {
 
 .form__item .form__item {
   width: auto;
+}
+
+.form__description {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 300;
+  padding-top: 0.3em;
+}
+
+@media (min-width: 48em) {
+  .form__description {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 48em) {
