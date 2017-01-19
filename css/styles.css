@@ -3174,6 +3174,10 @@ th {
   padding: 0.8em 1em;
   transition-duration: 0.1s;
   transition-property: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 48em) {

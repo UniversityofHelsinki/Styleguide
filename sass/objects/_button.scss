@@ -22,6 +22,7 @@
   padding: 0.8em 1em;
   transition-duration: 0.1s;
   transition-property: all;
+  user-select: none;
 
   &:focus,
   &:hover {
