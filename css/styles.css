@@ -4513,20 +4513,6 @@ label {
   }
 }
 
-label.theme-small {
-  font-size: 12.25px;
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: .5em;
-}
-
-@media (min-width: 48em) {
-  label.theme-small {
-    font-size: 14px;
-  }
-}
-
 label .is-required {
   color: #0098d0;
   font-size: 1.2em;
@@ -4632,6 +4618,24 @@ input[type="checkbox"] + label:before {
   top: 50%;
   position: absolute;
   left: 0;
+}
+
+input[type="radio"][disabled] + label, input[type="radio"][disabled]:active + label, input[type="radio"][disabled]:focus + label, input[type="radio"][disabled]:hover + label,
+input[type="checkbox"][disabled] + label,
+input[type="checkbox"][disabled]:active + label,
+input[type="checkbox"][disabled]:focus + label,
+input[type="checkbox"][disabled]:hover + label {
+  color: #979797;
+  cursor: default;
+}
+
+input[type="radio"][disabled] + label:before, input[type="radio"][disabled]:active + label:before, input[type="radio"][disabled]:focus + label:before, input[type="radio"][disabled]:hover + label:before,
+input[type="checkbox"][disabled] + label:before,
+input[type="checkbox"][disabled]:active + label:before,
+input[type="checkbox"][disabled]:focus + label:before,
+input[type="checkbox"][disabled]:hover + label:before {
+  border-color: #979797;
+  color: #979797;
 }
 
 input[type="radio"] + label:before {

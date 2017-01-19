@@ -174,13 +174,6 @@ label {
   padding: 0;
   margin: 0;
 
-  &.theme-small {
-    @include font-size(14px);
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: .5em;
-  }
-
   .is-required {
     color: $blue;
     font-size: 1.2em;
@@ -251,6 +244,21 @@ input[type="checkbox"] {
       @include vertically-center;
       position: absolute;
       left: 0;
+    }
+  }
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    + label {
+      color: $silver;
+      cursor: default;
+
+      &:before {
+        border-color: $silver;
+        color: $silver;
+      }
     }
   }
 }
