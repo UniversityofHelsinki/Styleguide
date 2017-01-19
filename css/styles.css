@@ -3186,14 +3186,6 @@ th {
   }
 }
 
-.is-active.button--small, .is-active.accordion__title,
-.is-active.button--accordion,
-.is-active.button--action-before,
-.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"], .horizontal-tabs .horizontal-tab-button > a.is-active, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.is-active,
-.button.is-active {
-  background-color: #003146;
-}
-
 .button--small:focus, .accordion__title:focus,
 .button--accordion:focus,
 .button--action-before:focus,
@@ -3205,6 +3197,18 @@ th {
 .button:hover {
   background-color: #005479;
   color: #FFF;
+}
+
+.button--small:active, .accordion__title:active,
+.button--accordion:active,
+.button--action-before:active,
+.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .horizontal-tabs .horizontal-tab-button > a:active, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:active, .is-active.button--small, .is-active.accordion__title,
+.is-active.button--accordion,
+.is-active.button--action-before,
+.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"], .horizontal-tabs .horizontal-tab-button > a.is-active, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.is-active,
+.button:active,
+.button.is-active {
+  background-color: #003146;
 }
 
 .button--small:before, .accordion__title:before,
@@ -3278,13 +3282,13 @@ th {
   padding: .4em .7em;
 }
 
-.button--small.is-active {
-  background-color: #424242;
+.button--small:focus, .button--small:hover {
+  background-color: #979797;
   color: #FFF;
 }
 
-.button--small:focus, .button--small:hover {
-  background-color: #979797;
+.button--small:active, .button--small.is-active {
+  background-color: #424242;
   color: #FFF;
 }
 

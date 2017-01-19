@@ -23,14 +23,15 @@
   transition-duration: 0.1s;
   transition-property: all;
 
-  &.is-active {
-    background-color: $darkblue--active;
-  }
-
   &:focus,
   &:hover {
     background-color: $darkblue;
     color: $white;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $darkblue--active;
   }
 
   &:before, &:after {
@@ -68,14 +69,15 @@
   line-height: 1;
   padding: .4em .7em;
 
-  &.is-active {
-    background-color: $darkgray;
-    color: $white;
-  }
-
   &:focus,
   &:hover {
     background-color: $silver;
+    color: $white;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $darkgray;
     color: $white;
   }
 }
