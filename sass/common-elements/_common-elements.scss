@@ -195,20 +195,27 @@ input[type="submit"] {
   padding: 10px 30px;
 }
 
+select,
 input[type="email"],
 input[type="text"],
 textarea {
   @include font-size(16px);
+  background: none;
+  border-radius: 0;
   border: 1px solid $silver;
   color: $gray;
+  outline-color: rgba($blue, 0);
+  outline-offset: -2px;
+  outline-style: solid;
+  outline-width: 2px;
   padding: 10px;
   transition-duration: 0.2s;
-  transition-property: border-color;
+  transition-property: all;
   width: 100%;
 
   &:focus {
-    border-color: $black;
-    outline: none;
+    border-color: transparent;
+    outline-color: rgba($blue, 255);
   }
 }
 
@@ -220,9 +227,17 @@ input[type="checkbox"] {
     @include font-size(13px);
     align-items: center;
     cursor: pointer;
-    display: flex;
+    display: block;
     font-weight: 600;
     line-height: normal;
+    padding-left: 1.5rem;
+    position: relative;
+
+    &:before {
+      @include vertically-center;
+      position: absolute;
+      left: 0;
+    }
   }
 }
 
@@ -234,8 +249,6 @@ input[type="radio"] {
       border-radius: 100%;
       color: $blue;
       content: "";
-      display: inline-block;
-      flex-shrink: 0;
       height: 14px;
       margin-right: 10px;
       text-align: center;
@@ -260,7 +273,7 @@ input[type="checkbox"] {
     &:before {
       @include icon($icon-square);
       color: $blue;
-      flex-shrink: 0;
+      left: 1px;
       margin-right: 10px;
     }
   }
@@ -268,20 +281,19 @@ input[type="checkbox"] {
   &:checked {
     + label {
       &:before {
-        @include icon($icon-square-checked);
-        opacity: 1;
+        content: $icon-square-checked;
       }
     }
   }
 }
 
-select {
-  background: transparent;
-  border: 1px solid $silver;
-  border-radius: 0;
-  padding: 10px 5px;
-  width: 100%;
-}
+// select {
+//   background: transparent;
+//   border: 1px solid $silver;
+//   border-radius: 0;
+//   padding: 10px 5px;
+//   width: 100%;
+// }
 
 fieldset {
   border: 0;
