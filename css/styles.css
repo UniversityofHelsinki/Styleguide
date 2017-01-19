@@ -4539,6 +4539,10 @@ input[type="submit"] {
   padding: 10px 30px;
 }
 
+input[type="submit"][disabled], input[type="submit"][disabled]:active, input[type="submit"][disabled]:focus, input[type="submit"][disabled]:hover {
+  background-color: #EBEBEB;
+}
+
 select,
 input[type="email"],
 input[type="text"],
@@ -4574,6 +4578,22 @@ input[type="text"]:focus,
 textarea:focus {
   border-color: transparent;
   outline-color: #0098d0;
+}
+
+select[disabled], select[disabled]:active, select[disabled]:focus, select[disabled]:hover,
+input[type="email"][disabled],
+input[type="email"][disabled]:active,
+input[type="email"][disabled]:focus,
+input[type="email"][disabled]:hover,
+input[type="text"][disabled],
+input[type="text"][disabled]:active,
+input[type="text"][disabled]:focus,
+input[type="text"][disabled]:hover,
+textarea[disabled],
+textarea[disabled]:active,
+textarea[disabled]:focus,
+textarea[disabled]:hover {
+  background-color: #EBEBEB;
 }
 
 input[type="radio"],

@@ -193,6 +193,13 @@ input[type="submit"] {
   @extend %button;
   font-weight: 600;
   padding: 10px 30px;
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $lightsilver;
+  }
 }
 
 select,
@@ -216,6 +223,13 @@ textarea {
   &:focus {
     border-color: transparent;
     outline-color: rgba($blue, 255);
+  }
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $lightsilver;
   }
 }
 
