@@ -6525,7 +6525,7 @@ span.links__link.theme-language {
     border-bottom: 1px solid #cacaca;
   }
   .main-menu.is-open {
-    border-bottom: none;
+    border-bottom-color: #FFF;
   }
 }
 
