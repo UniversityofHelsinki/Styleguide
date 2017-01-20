@@ -84,24 +84,24 @@
   a {
     @include font-size(40px);
     @include font-weight-bold;
-    @include transition-scale(1.15);
-    text-shadow: 0px 0px 1px #aaaaaa;
-    transition-property: all;
     color: $white;
     display: block;
     height: 100%;
     position: absolute;
     text-align: center;
+    text-shadow: 0px 0px 1px #aaaaaa;
     top: 0;
+    transition-duration: 0.1s;
+    transition-property: all;
     width: 10%;
     z-index: 10;
 
-    &:active {
-      color: $silver;
+    &:hover {
+      transform: scale(1.15);
     }
 
-    &:hover {
-      color: $white;
+    &:active {
+      transform: scale(1.05);
     }
 
     &:before {
@@ -191,7 +191,6 @@
   a {
     @include font-size(40px);
     @include font-weight-bold;
-    @include transition-scale(1.15);
     transition-property: all;
     color: $white;
     display: block;
@@ -199,15 +198,17 @@
     position: absolute;
     text-align: center;
     top: 0;
+    transition-property: transform, color;
+    transition-duration: 0.1s;
     width: 10%;
     z-index: 10;
 
-    &:active {
-      color: $silver;
+    &:hover {
+      transform: scale(1.15);
     }
 
-    &:hover {
-      color: $white;
+    &:active {
+      transform: scale(1.05);
     }
 
     &:before {

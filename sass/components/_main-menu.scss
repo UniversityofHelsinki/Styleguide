@@ -151,8 +151,6 @@ li.main-menu__front {
   &:before {
     @include font-size(14px);
     @include icon($icon-caret-down);
-    transition-duration: 0.2s;
-    transition-property: color, border-color;
     color: lighten($silver, 20%);
     cursor: pointer;
     display: inline-block;
@@ -160,6 +158,8 @@ li.main-menu__front {
     line-height: 2em;
     position: relative;
     top: 10px;
+    transition-duration: 0.2s;
+    transition-property: color, border-color, transform;
     width: 2em;
   }
 
@@ -188,8 +188,8 @@ li.main-menu__front {
 
   .is-open > & {
     &:before {
-      @include icon($icon-caret-up);
       color: $blue;
+      transform: rotate3d(1,0,0,180deg);
     }
 
     &:hover:before {
