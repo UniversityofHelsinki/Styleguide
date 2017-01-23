@@ -6193,8 +6193,8 @@ td.jobs-listing__date {
   color: #FFF;
   padding: 0.3em 0.7em;
   text-transform: uppercase;
-  border-bottom: 1px solid #0882B3;
-  border-top: 1px solid #0882B3;
+  border-bottom: 1px solid #0098d0;
+  border-top: 1px solid #0098d0;
   display: inline-block;
   height: 2.2em;
   position: relative;
@@ -6209,7 +6209,7 @@ td.jobs-listing__date {
 
 .label-row__item.theme-secondary {
   background: none;
-  color: #0882B3;
+  color: #0098d0;
   left: 0;
   padding-right: 0;
   position: absolute;
