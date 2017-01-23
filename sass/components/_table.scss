@@ -15,10 +15,10 @@
 .table-sortable {
   thead {
     tr {
-      border: 2px solid $gray;
+      border: 2px solid $lightgray;
 
       th {
-        background: $darkgray;
+        background: $black;
         color: $white;
         padding: 0.6em 0.9em;
 
@@ -45,8 +45,8 @@
     tr {
       td {
         @include font-size(13px);
-        border: 2px dotted $lightsilver;
-        color: $gray;
+        border: 2px dotted $mediumsilver;
+        color: $lightgray;
         padding: 1.2em 0.9em;
 
         a, a.active {
@@ -60,15 +60,15 @@
         }
 
         &.active {
-          color: $gray;
+          color: $lightgray;
         }
       }
 
       &.odd {
-        background-color: darken($white, 5%);
+        background-color: $lightsilver;
 
         td.active {
-          background-color: darken($white, 10%);
+          background-color: $mediumsilver;
         }
       }
 
@@ -76,7 +76,7 @@
         background-color: $white;
 
         td.active {
-          background-color: darken($white, 5%);
+          background-color: $lightsilver;
         }
       }
     }
@@ -95,25 +95,25 @@
   @include font-size(14px);
 
   tr {
-    background-color: darken($white, 2%);
+    background-color: $lightsilver;
 
     th {
-      background-color: darken($white, 5%);
+      background-color: $lightsilver;
     }
 
     &:nth-of-type(2n) {
       background-color: $white;
 
       th {
-        background-color: darken($white, 2%);
+        background-color: $lightsilver;
       }
     }
   }
 
   td, th {
     @include font-family-main;
-    border: 2px dotted $lightsilver;
-    color: $gray;
+    border: 2px dotted $mediumsilver;
+    color: $lightgray;
     padding: 0.7em 0.9em;
     vertical-align: top;
 
@@ -128,7 +128,7 @@
     }
 
     &.active {
-      color: $gray;
+      color: $lightgray;
     }
 
     &:first-child {

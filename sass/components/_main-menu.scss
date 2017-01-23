@@ -10,7 +10,7 @@
   overflow: hidden;
 
   @include breakpoint($small) {
-    border-bottom: 1px solid lighten($silver, 20%);
+    border-bottom: 1px solid $mediumsilver;
 
     &.is-open {
       border-bottom-color: $white;
@@ -34,7 +34,7 @@
   }
 
   > ul.menu {
-    border-bottom: 1px solid lighten($silver, 20%);
+    border-bottom: 1px solid $mediumsilver;
 
     @include breakpoint($small) {
       @include container;
@@ -48,10 +48,10 @@
   }
 
   li.is-lvl1 {
-    border-top: 1px solid darken($lightsilver, 10%);
+    border-top: 1px solid $mediumsilver;
 
     &.is-open {
-      background: darken($white, 5%);
+      background: $lightsilver;
     }
 
     > a {
@@ -151,7 +151,7 @@ li.main-menu__front {
   &:before {
     @include font-size(14px);
     @include icon($icon-caret-down);
-    color: lighten($silver, 20%);
+    color: $mediumsilver;
     cursor: pointer;
     display: inline-block;
     height: 2em;
@@ -219,7 +219,7 @@ li.main-menu__front {
   }
 
   &.is-open {
-    border-bottom: 1px solid lighten($silver, 20%);
+    border-bottom: 1px solid $mediumsilver;
   }
 
   @include breakpoint($small) {

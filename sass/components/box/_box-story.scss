@@ -74,7 +74,7 @@
   }
 
   &.theme-plain-alt {
-    background-color: darken($lightsilver, 3%);
+    background-color: $mediumsilver;
 
     .box-story__link-wrapper {
       padding: 1em;
@@ -111,7 +111,7 @@
     }
 
     &:hover {
-      background-color: darken($lightsilver, 10%);
+      background-color: $silver;
     }
 
     @include breakpoint($small) {
@@ -269,7 +269,7 @@
 .box-story__content {
   @include font-family-bodytext;
   @include font-size(14px);
-  color: $gray;
+  color: $lightgray;
   line-height: 1.5em;
   margin-bottom: 0.4em;
   overflow: hidden;
@@ -288,7 +288,7 @@
   @include font-weight-medium;
   transition-duration: 0.1s;
   transition-property: color;
-  color: $darkgray;
+  color: $black;
 
   .box-story:active &,
   .box-story:hover & {
@@ -339,7 +339,7 @@
 }
 
 .box-story__creator {
-  color: $gray;
+  color: $lightgray;
   font-size: 0.9em;
   font-weight: 600;
   margin-bottom: 0.5em;
@@ -495,7 +495,7 @@
   }
 
   .box-story__content-wrapper {
-    background-color: $darkwhite;
+    background-color: $lightsilver;
     padding: 1.5em;
   }
 

@@ -73,7 +73,7 @@
 
     .box-hero__title {
       @include font-size(16px);
-      color: $darkgray;
+      color: $black;
       margin: 0;
       letter-spacing: -0.5px;
       padding-bottom: 0.25em;
@@ -81,7 +81,7 @@
 
     .box-hero__alt-title {
       @include font-size(14px);
-      color: $darkgray;
+      color: $black;
       line-height: 130%;
       margin: 0;
       padding: 0;

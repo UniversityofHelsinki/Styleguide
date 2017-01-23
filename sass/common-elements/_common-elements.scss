@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  color: $gray;
+  color: $lightgray;
 }
 
 img {
@@ -46,7 +46,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   @include font-family-main;
-  color: $darkgray;
+  color: $black;
   letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 0;
@@ -56,11 +56,11 @@ h1, h2, h3, h4, h5, h6 {
 
   a {
     // TODO: Color inherit
-    color: $darkgray;
+    color: $black;
     text-decoration: none;
 
     &:hover {
-      color: $darkgray;
+      color: $black;
       cursor: pointer;
     }
   }
@@ -180,7 +180,7 @@ button, input, select, textarea {
 
 label {
   @include font-size(18px);
-  color: $gray;
+  color: $lightgray;
   font-weight: 300;
   line-height: 2.4em;
   padding: 0;
@@ -215,7 +215,7 @@ textarea {
   background: none;
   border-radius: 0;
   border: 1px solid $silver;
-  color: $gray;
+  color: $lightgray;
   outline-color: rgba($blue, 0);
   outline-offset: -2px;
   outline-style: solid;
@@ -353,6 +353,7 @@ tbody {}
 th {
   background: none;
   padding: 0;
+  text-align: left;
 }
 
 tr {}

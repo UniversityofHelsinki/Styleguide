@@ -19,66 +19,18 @@ $black: #222;
  title: Other colors
  description: The colors used through out the theme.
  color-list: list
- colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $silver, $darksilver, $lightgray, $gray, $darkgray, $green, $brown
+ colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $mediumsilver, $silver, $lightgray, $red, $orange
 */
 $blue:              #0098d0;
 $blue--active:      #0882B3;
 $darkblue:          #005479;
 $darkblue--active:  #003146;
 
-// 6 shades of gray. Still 44 to go.
-$darkwhite     : #FAFAFA;
-$lightsilver   : #EBEBEB;
+$red            : #e5053a;
+$orange         : #fca311;
+
+// 4 shades of gray. Still 44 to go.
+$lightsilver   : #F8F8F8;
+$mediumsilver  : #D2D2D2;
 $silver        : #979797;
-$darksilver    : #888888;
 $lightgray     : #777777;
-$gray          : #666;
-$darkgray      : #424242;
-$grayturquoise : #566467;
-
-$green: #4FB151;
-$brown: #974822;
-
-/*
- section: 1.1.3
- title: Faculty colors
- description:  <table><tr><th>Faculty</th><th>Color variable</th></tr><tr><td>humanistinen</td><td>$lightblue</td></tr><tr><td>oikeustieteellinen</td><td>$darkred</td></tr><tr><td>kayttaytymistieteellinen</td><td>$yellow</td></tr><tr><td>laaketieteellinen</td><td>$darkturquoise</td></tr><tr><td>maatalous-metsatieteellinen </td><td>$turquoise</td></tr><tr><td>matemaattis-luonnontieteellinen</td><td>$orange</td></tr><tr><td>svenska-social--och-kommunalhogskolan</td><td>$pink</td></tr><tr><td>farmasian</td><td>$lightturquoise</td></tr><tr><td>valtiotieteellinen</td><td>$red</td></tr><tr><td>teologinen</td><td>$lila</td></tr><tr><td>elainlaaketieteellinen</td><td>$darkgreen</td></tr><tr><td>bio--ja-ymparistotieteellinen  </td><td>$limegreen</td></tr></table>
- color-list: list
- colors: $lightblue,$darkgreen,$yellow,$lila,$darkred,$red,$orange,$turquoise,$darkturquoise,$lightturquoise,$limegreen,$pink
-*/
-
-$lightblue      : #3a75c4; // Humanistinen tiedekunta
-$darkgreen      : #009e60; // Elainlaaketieteellinen tiedekunta
-$yellow         : #fcd116; // Kayttaytymistieteellinen tiedekunta
-$lila           : #9258c8; // Teologinen tiedekunta
-$darkred        : #8c0032; // Oikeustieteellinen tiedekunta
-$red            : #e5053a; // Valtiotieteellinen tiedekunta
-$orange         : #fca311; // Matemaattisluonnontieteellinen tiedekunta
-$turquoise      : #00b08c; // Maatalous-metsatieteellinen tiedekunta
-$darkturquoise  : #00a39a; // Laaketieteellinen tiedekunta
-$lightturquoise : #00bd9d; // Farmasian tiedekunta
-$limegreen      : #5bbf21; // Bio- ja ymparistotieteellinen tiedekunta
-$pink           : #e63375; // Svenska social och kommunalhogskolan
-
-// Faculty colours in a array-map for easier looping. REQUIRES SASS 3.3.
-
-// $faculty_colours: (
-//   humanistinen                          : $lightblue,
-//   oikeustieteellinen                    : $darkred,
-//   kayttaytymistieteellinen              : $yellow,
-//   laaketieteellinen                     : $darkturquoise,
-//   maatalous-metsatieteellinen           : $turquoise,
-//   matemaattis-luonnontieteellinen       : $orange,
-//   svenska-social--och-kommunalhogskolan : $pink,
-//   farmasian                             : $lightturquoise,
-//   valtiotieteellinen                    : $red,
-//   teologinen                            : $lila,
-//   elainlaaketieteellinen                : $darkgreen
-//   bio--ja-ymparistotieteellinen         : $limegreen,
-// );
-
-// Probably not the best place to have these but anyhow...
-$faculty_names: "humanistinen" "oikeustieteellinen" "kayttaytymistieteellinen" "laaketieteellinen" "maatalous-metsatieteellinen" "matemaattis-luonnontieteellinen" "svenska-social--och-kommunalhogskolan" "farmasian" "valtiotieteellinen" "teologinen" "elainlaaketieteellinen" "bio--ja-ymparistotieteellinen";
-$faculty_colors: $lightblue $darkred $yellow $darkturquoise $turquoise $orange $pink $lightturquoise $red $lila $darkgreen $limegreen;
-$faculty_color_names: "lightblue" "darkred" "yellow" "darkturquoise" "turquoise" "orange" "pink" "lightturquoise" "red" "lila" "darkgreen" "limegreen";
-$faculty_colour_count: length($faculty_colors);

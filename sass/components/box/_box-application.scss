@@ -29,7 +29,7 @@
 }
 
 .box-application__tr {
-  background-color: darken($white, 2%);
+  background-color: $lightsilver;
   display: table-row;
 
   &:nth-of-type(2n) {
@@ -39,8 +39,8 @@
 
 .box-application__td {
   @include font-family-main;
-  border: 2px dotted $lightsilver;
-  color: $gray;
+  border: 2px dotted $mediumsilver;
+  color: $lightgray;
   display: table-cell;
   padding: 0.7em 0.9em;
   vertical-align: top;
@@ -57,7 +57,7 @@
   }
 
   &.active {
-    color: $gray;
+    color: $lightgray;
   }
 
   &:first-child {
