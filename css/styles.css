@@ -6515,7 +6515,7 @@ span.links__link.theme-language {
 
 @media (min-width: 48em) {
   .main-menu {
-    border-bottom: 1px solid #F8F8F8;
+    border-bottom: 1px solid #D2D2D2;
   }
   .main-menu.is-open {
     border-bottom-color: #FFF;
@@ -6568,7 +6568,7 @@ span.links__link.theme-language {
 }
 
 .main-menu > ul.menu {
-  border-bottom: 1px solid #F8F8F8;
+  border-bottom: 1px solid #D2D2D2;
 }
 
 @media (min-width: 48em) {

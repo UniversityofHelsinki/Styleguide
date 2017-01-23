@@ -10,7 +10,7 @@
   overflow: hidden;
 
   @include breakpoint($small) {
-    border-bottom: 1px solid $lightsilver;
+    border-bottom: 1px solid $mediumsilver;
 
     &.is-open {
       border-bottom-color: $white;
@@ -34,7 +34,7 @@
   }
 
   > ul.menu {
-    border-bottom: 1px solid $lightsilver;
+    border-bottom: 1px solid $mediumsilver;
 
     @include breakpoint($small) {
       @include container;
