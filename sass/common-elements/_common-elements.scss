@@ -1,6 +1,11 @@
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  @include font-family-main;
+  box-sizing: border-box;
+  font-size: $base-font-size-mobile;
+
+  @include breakpoint($small) {
+   font-size: $base-font-size;
+  }
 }
 
 *, *:before, *:after {

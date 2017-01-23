@@ -4283,7 +4283,15 @@ a:hover
 }
 
 html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   box-sizing: border-box;
+  font-size: 14px;
+}
+
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
 }
 
 *, *:before, *:after {
@@ -4350,7 +4358,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, legend a:hover,
 
 h1 {
   font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 2.85714rem;
   letter-spacing: -2px;
   line-height: 1.15em;
 }
@@ -4364,7 +4372,7 @@ h1 {
 
 h2 {
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 2.28571rem;
 }
 
 @media (min-width: 48em) {
@@ -4376,7 +4384,7 @@ h2 {
 
 h3 {
   font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 1.85714rem;
 }
 
 @media (min-width: 48em) {
@@ -4434,7 +4442,7 @@ h6 {
 */
 p {
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.07143rem;
   margin: 0 0 15px 0;
   letter-spacing: 0;
   line-height: 1.3em;
@@ -4495,7 +4503,7 @@ blockquote {
 blockquote,
 blockquote p {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.14286rem;
   font-weight: 400;
   font-style: normal;
   color: #979797;
