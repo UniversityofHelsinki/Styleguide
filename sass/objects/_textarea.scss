@@ -5,7 +5,8 @@
 .textarea,
 %textarea {
   @include font-family-bodytext;
-  line-height: 1.8em;
+  @include font-size(18px);
+  line-height: 1.5em;
 
   ul, ol {
     margin-bottom: $vert-spacing-unit;
@@ -53,6 +54,10 @@
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 32px;
+  }
+
   h3 {
     @include font-size(24px);
   }
@@ -82,14 +87,11 @@
  */
 
 %textarea-ingress,
-.textarea-ingress {
+.textarea-ingress,
+.textarea-ingress p {
   color: $gray;
   letter-spacing: 0.01em;
   line-height: 1.7em;
-
-  p {
-    @extend .textarea-ingress;
-  }
 }
 
 %textarea-infobox,
