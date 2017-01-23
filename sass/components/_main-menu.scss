@@ -219,7 +219,7 @@ li.main-menu__front {
   }
 
   &.is-open {
-    border-bottom: 1px solid $lightsilver;
+    border-bottom: 1px solid $mediumsilver;
   }
 
   @include breakpoint($small) {
