@@ -4703,6 +4703,7 @@ table {
 th {
   background: none;
   padding: 0;
+  text-align: left;
 }
 
 dl, ol, ul {
@@ -7890,7 +7891,7 @@ input[type="text"].search-form-large__input {
 .table-simple td,
 .table-simple th {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
-  border: 2px dotted #F8F8F8;
+  border: 2px dotted #D2D2D2;
   color: #777777;
   padding: 0.7em 0.9em;
   vertical-align: top;
