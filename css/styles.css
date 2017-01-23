@@ -7569,34 +7569,10 @@ ul.pager > li.pager__page a {
 }
 
 input[type="text"].search-form__input {
-  border-radius: 0;
-  border: 2px solid #0098d0;
-  height: 40px;
-  line-height: 34px;
-  padding-left: 1em;
-  padding-right: 3em;
-  width: 100%;
-}
-
-input[type="text"].search-form__input:focus {
-  outline-color: #0098d0;
-}
-
-@media (min-width: 48em) {
-  input[type="text"].search-form__input {
-    font-size: 10.5px;
-    font-size: 0.75rem;
-  }
-}
-
-@media (min-width: 48em) and (min-width: 48em) {
-  input[type="text"].search-form__input {
-    font-size: 12px;
-  }
+  height: 3rem;
 }
 
 input[type="submit"].search-form__submit {
-  border-radius: 0;
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -7605,25 +7581,37 @@ input[type="submit"].search-form__submit {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
-  background-color: #0098d0;
+  background-color: transparent;
+  border-radius: 0;
   bottom: 0;
-  color: #FFF;
-  height: 40px;
+  color: #0098d0;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  width: 2.5em;
+  width: 3rem;
+}
+
+input[type="submit"].search-form__submit:hover,
+.search-form__input:focus + input[type="submit"].search-form__submit {
+  background-color: #0098d0;
+  color: #FFF;
 }
 
 .search-form__input:focus + input[type="submit"].search-form__submit:hover {
-  color: #FFF;
+  background-color: #005479;
+}
+
+.search-form--dark {
+  max-width: 50em;
+  position: relative;
 }
 
 input[type="text"].search-form--dark__input {
   background: #424242;
   border: none;
   color: #FFF;
-  line-height: 34px;
+  height: 3rem;
   margin-bottom: 0;
   max-width: 100%;
   min-height: 34px;
@@ -7636,19 +7624,6 @@ input[type="text"].search-form--dark__input:focus {
   outline-color: #0098d0;
 }
 
-@media (min-width: 48em) {
-  input[type="text"].search-form--dark__input {
-    font-size: 10.5px;
-    font-size: 0.75rem;
-  }
-}
-
-@media (min-width: 48em) and (min-width: 48em) {
-  input[type="text"].search-form--dark__input {
-    font-size: 12px;
-  }
-}
-
 input[type="submit"].search-form--dark__submit {
   display: inline-block;
   font-family: "hy-icons";
@@ -7659,20 +7634,20 @@ input[type="submit"].search-form--dark__submit {
   vertical-align: bottom;
   content: "";
   background-color: transparent;
-  height: 36px;
+  bottom: 0;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
-  width: 34px;
+  width: 3rem;
 }
 
 .search-form--dark__input:focus + input[type="submit"].search-form--dark__submit {
-  color: #0098d0;
+  color: #FFF;
 }
 
 .search-form--dark__input:focus + input[type="submit"].search-form--dark__submit:hover {
-  color: #FFF;
+  color: #0098d0;
 }
 
 .search-form-large {

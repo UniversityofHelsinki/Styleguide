@@ -26,49 +26,43 @@
 }
 
 input[type="text"].search-form__input {
-  border-radius: 0;
-  border: 2px solid $blue;
-  height: 40px;
-  line-height: 34px;
-  padding-left: 1em;
-  padding-right: 3em;
-  width: 100%;
-
-  &:focus {
-    outline-color: $blue;
-  }
-
-  @include breakpoint($small) {
-    @include font-size(12px);
-  }
+  height: 3rem;
 }
 
 input[type="submit"].search-form__submit {
-  border-radius: 0;
   @include icon(); // Unicode is provided by the form
-  background-color: $blue;
+  background-color: transparent;
+  border-radius: 0;
   bottom: 0;
-  color: $white;
-  height: 40px;
+  color: $blue;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  width: 2.5em;
+  width: 3rem;
 
+  &:hover,
   .search-form__input:focus + & {
-    &:hover {
-      color: $white;
-    }
+    background-color: $blue;
+    color: $white;
+  }
+
+  .search-form__input:focus + &:hover {
+    background-color: $darkblue;
   }
 }
 
-.search-form--dark {}
+// TODO: do this with a theme-class
+.search-form--dark {
+  max-width: 50em;
+  position: relative;
+}
 
 input[type="text"].search-form--dark__input {
   background: $darkgray;
   border: none;
   color: $white;
-  line-height: 34px;
+  height: 3rem;
   margin-bottom: 0;
   max-width: 100%;
   min-height: 34px;
@@ -79,27 +73,23 @@ input[type="text"].search-form--dark__input {
   &:focus {
     outline-color: $blue;
   }
-
-  @include breakpoint($small) {
-    @include font-size(12px);
-  }
 }
 
 input[type="submit"].search-form--dark__submit {
   @include icon(); // Unicode is provided by the form
   background-color: transparent;
-  height: 36px;
+  bottom: 0;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
-  width: 34px;
+  width: 3rem;
 
   .search-form--dark__input:focus + & {
-    color: $blue;
+    color: $white;
 
     &:hover {
-      color: $white;
+      color: $blue;
     }
   }
 }
