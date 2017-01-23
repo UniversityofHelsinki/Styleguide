@@ -1,17 +1,12 @@
-// Use REMs with a pixel fallback for font sizing.
+// Calculate rem (root em) units from pixel values with option for desired mobile size.
 @mixin font-size($font-size, $desired-mobile-size: "") {
-  @if $desired-mobile-size != "" {
-    font-size: $desired-mobile-size;
-    font-size: ($desired-mobile-size / $base-font-size-mobile)*1rem;
-  } @else {
-    font-size: $font-size * ($base-font-size-mobile / $base-font-size);
-    font-size: ($font-size / $base-font-size)*1rem;
+  @include breakpoint($mobile-only) {
+    @if $desired-mobile-size != "" {
+      font-size: ($desired-mobile-size / $base-font-size-mobile)*1rem;
+    }
   }
 
-  @include breakpoint($small) {
-    font-size: $font-size;
-    font-size: ($font-size / $base-font-size)*1rem;
-  }
+  font-size: ($font-size / $base-font-size)*1rem;
 }
 
 // Fonts
