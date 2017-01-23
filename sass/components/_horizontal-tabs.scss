@@ -9,8 +9,15 @@
   margin-bottom: $vert-spacing-unit;
 
   .horizontal-tabs-list {
-    box-shadow: 0 -1px 0 0 $lightsilver inset;
+    box-shadow: 0 -1px 0 0 $mediumsilver inset;
     margin-bottom: $vert-spacing-unit * 2;
+
+    @include breakpoint($small) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0 $vert-spacing-unit;
+    }
   }
 
   .horizontal-tabs-pane {
@@ -42,11 +49,12 @@
       @include link-heading;
       background: none;
       border-bottom: none;
-      border-right: 1px solid $lightsilver;
-      border-top: 1px solid $lightsilver;
+      border-right: 1px solid $mediumsilver;
+      border-top: 1px solid $mediumsilver;
       color: $white;
-      display: inline-block;
+      flex-grow: 1;
       margin: 0;
+      text-align: center;
 
       > a {
         background: none;
@@ -69,7 +77,7 @@
       }
 
       &:first-child {
-        border-left: 1px solid $lightsilver;
+        border-left: 1px solid $mediumsilver;
       }
     }
   }
