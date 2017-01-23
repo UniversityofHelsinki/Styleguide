@@ -5708,17 +5708,30 @@ dl, ol, ul {
     text-align: center;
   }
   .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: none;
     color: #0098d0;
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1em 3em;
+  }
+  .horizontal-tabs .horizontal-tab-button > a:focus, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:focus {
+    background-color: transparent;
+    color: #0098d0;
   }
   .horizontal-tabs .horizontal-tab-button.selected a,
   .horizontal-tabs .horizontal-tab-button:hover > a,
   .horizontal-tabs .box-card__fieldset .horizontal-tab-button:hover > a {
-    transition-property: all;
     background-color: white;
     color: #005479;
+    transition-property: all;
   }
   .horizontal-tabs .horizontal-tab-button:not(.selected):first-child {
     box-shadow: none;
