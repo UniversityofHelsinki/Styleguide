@@ -15,10 +15,10 @@
 .table-sortable {
   thead {
     tr {
-      border: 2px solid $gray;
+      border: 2px solid $lightgray;
 
       th {
-        background: $darkgray;
+        background: $black;
         color: $white;
         padding: 0.6em 0.9em;
 
@@ -46,7 +46,7 @@
       td {
         @include font-size(13px);
         border: 2px dotted $lightsilver;
-        color: $gray;
+        color: $lightgray;
         padding: 1.2em 0.9em;
 
         a, a.active {
@@ -60,7 +60,7 @@
         }
 
         &.active {
-          color: $gray;
+          color: $lightgray;
         }
       }
 
@@ -113,7 +113,7 @@
   td, th {
     @include font-family-main;
     border: 2px dotted $lightsilver;
-    color: $gray;
+    color: $lightgray;
     padding: 0.7em 0.9em;
     vertical-align: top;
 
@@ -128,7 +128,7 @@
     }
 
     &.active {
-      color: $gray;
+      color: $lightgray;
     }
 
     &:first-child {

@@ -40,7 +40,7 @@
 .box-application__td {
   @include font-family-main;
   border: 2px dotted $lightsilver;
-  color: $gray;
+  color: $lightgray;
   display: table-cell;
   padding: 0.7em 0.9em;
   vertical-align: top;
@@ -57,7 +57,7 @@
   }
 
   &.active {
-    color: $gray;
+    color: $lightgray;
   }
 
   &:first-child {

@@ -17,7 +17,7 @@
 .list-of-links__subtitle {
   @include font-size(11px);
   @include font-weight-medium;
-  color: $darksilver;
+  color: $silver;
   margin-bottom: 1em;
   text-transform: uppercase;
 }
@@ -35,11 +35,11 @@
   // Theme info footer
   .theme-info-footer & {
     border-bottom-color: $silver;
-    color: lighten($darkgray, 10%);
+    color: lighten($black, 10%);
 
     &:before,
     &:after {
-      color: $gray;
+      color: $lightgray;
     }
 
     &:hover {

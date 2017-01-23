@@ -55,7 +55,7 @@
 @mixin text-label {
   @include font-size(18px);
   @include font-weight-book;
-  color: $gray;
+  color: $lightgray;
   text-transform: none;
 }
 
