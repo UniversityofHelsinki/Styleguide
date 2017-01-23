@@ -107,7 +107,7 @@
 
 /*
  section: 9.1.3
- title: Index
+ title: Index topical
  template: 9_1_3-index-topical
  description: Topical index of content
 */
@@ -128,8 +128,10 @@
 }
 
 .index-topical__field {
+  @include font-size(14px);
   @include tb-ball("after");
-  @include font-family-bodytext;
+  color: $silver;
+  font-weight: 600;
 }
 
 .index-topical__content {

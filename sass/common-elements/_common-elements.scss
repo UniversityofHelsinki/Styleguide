@@ -63,29 +63,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include font-size(36px);
+  @include font-size(40px);
   letter-spacing: -2px;
   line-height: 1.15em;
 
   @include breakpoint($small) {
-    @include font-size(44px);
+    @include font-size(50px);
   }
 }
 
 h2 {
-  @include font-size(25px);
+  @include font-size(32px);
 
-  @include breakpoint($medium) {
-    @include font-size(35px);
+  @include breakpoint($small) {
+    @include font-size(40px);
   }
 }
 
 h3 {
-  @include font-size(28px);
+  @include font-size(26px);
+
+  @include breakpoint($small) {
+    @include font-size(30px);
+  }
 }
 
 h4 {
-  @include font-size(19.2px);
+  @include font-size(20px);
+}
+
+h5 {
+  @include font-size(16px);
+}
+
+h6 {
+  @include font-size(14px);
 }
 
 /*
@@ -96,7 +108,16 @@ h4 {
 */
 
 p {
-  @include text-paragraph;
+  @include font-size(15px);
+  margin: 0 0 15px 0;
+  letter-spacing: 0;
+  line-height: 1.3em;
+
+  @include breakpoint($small) {
+    @include font-size(16px);
+    line-height: 1.5em;
+    margin: 0 0 16px 0;
+  }
 }
 
 /*
@@ -128,11 +149,7 @@ a {
   description:
 */
 blockquote {
-  @include font-size(20px);
-  @include font-weight-book;
   border-left: 10px solid $silver;
-  color: $silver;
-  line-height: 1.1em;
   margin: 20px 10px;
   padding: 10px 25px;
 }
@@ -141,14 +158,26 @@ blockquote {
   section: 3.4.2
   title: Blockquote paragraph
   template: 3_4_2_blockquote-paragraph
-  description: Blockquote with a p-element inside.
+  description: Blockquote with a p-elements inside.
 */
+blockquote,
 blockquote p {
-  @include font-size(22px);
+  @include font-size(16px);
   @include font-weight-book;
   color: $silver;
-  display: inline;
-  line-height: 1.1em;
+  line-height: 1.5em;
+
+  @include breakpoint($small) {
+    @include font-size(18px);
+  }
+}
+
+blockquote p {
+  margin-bottom: 32px;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
 
 /*
@@ -231,11 +260,11 @@ input[type="checkbox"] {
   display: none;
 
   + label {
-    @include font-size(13px);
+    @include font-size(14px);
     align-items: center;
     cursor: pointer;
     display: block;
-    font-weight: 600;
+    font-weight: normal;
     line-height: normal;
     padding-left: 1.5rem;
     position: relative;

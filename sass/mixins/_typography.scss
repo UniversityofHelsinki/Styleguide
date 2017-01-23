@@ -10,11 +10,11 @@
 
 // Fonts
 @mixin font-family-main {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 @mixin font-family-bodytext {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 // Weights
@@ -45,13 +45,6 @@
 }
 
 // Common text stylings
-@mixin text-paragraph {
-  @include font-size(16px);
-  margin: 0 0 $vert-spacing-unit 0;
-  letter-spacing: 0.01em;
-  line-height: 1.6em;
-}
-
 @mixin text-label {
   @include font-size(18px);
   @include font-weight-book;
@@ -66,7 +59,7 @@
 }
 
 @mixin text-informative {
-  @include font-size(14px);
+  @include font-size(16px);
   @include font-weight-book;
   color: $lightgray;
   line-height: 1.5em;
