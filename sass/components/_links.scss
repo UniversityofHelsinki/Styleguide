@@ -34,7 +34,7 @@
   }
 
   @include breakpoint($small) {
-    color: darken($white, 20%);
+    color: $mediumsilver;
     padding: 5px 0 5px 9px;
 
     &:hover {
@@ -66,5 +66,5 @@
 }
 
 span.links__link.theme-language {
-  color: $black;
+  color: $lightgray;
 }

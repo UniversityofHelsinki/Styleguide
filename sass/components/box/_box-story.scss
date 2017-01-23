@@ -74,7 +74,7 @@
   }
 
   &.theme-plain-alt {
-    background-color: darken($lightsilver, 3%);
+    background-color: $mediumsilver;
 
     .box-story__link-wrapper {
       padding: 1em;
@@ -111,7 +111,7 @@
     }
 
     &:hover {
-      background-color: darken($lightsilver, 10%);
+      background-color: $silver;
     }
 
     @include breakpoint($small) {

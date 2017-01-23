@@ -12,7 +12,7 @@
 .file__link {
   @include font-family-main;
   align-items: center;
-  background-color: lighten($lightsilver, 5%);
+  background-color: $lightsilver;
   border: 1px solid $lightsilver;
   display: flex;
   padding: 10px 15px 10px 10px;

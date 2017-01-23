@@ -110,7 +110,7 @@
 
 @mixin subtitle {
   @include font-weight-medium;
-  color: lighten($black, 33%);
+  color: $lightgray;
   font-size: 1.2em;
   line-height: 1.2em;
   padding: 0;
@@ -123,7 +123,7 @@
 
 @mixin subtitle-thin {
   @include font-weight-light;
-  color: lighten($black, 33%);
+  color: $lightgray;
   font-size: 1.1em;
   line-height: 2.4em;
   padding: 0;

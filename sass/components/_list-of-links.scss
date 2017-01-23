@@ -35,7 +35,7 @@
   // Theme info footer
   .theme-info-footer & {
     border-bottom-color: $silver;
-    color: lighten($black, 10%);
+    color: $black;
 
     &:before,
     &:after {
@@ -54,7 +54,7 @@
 
   // Theme footer
   .theme-footer & {
-    border-bottom-color: darken($black, 20%);
+    border-bottom-color: $lightgray;
     color: $white;
 
     &:before,
@@ -63,11 +63,11 @@
     }
 
     &:hover {
-      color: darken($white, 20%);
+      color: $mediumsilver;
 
       &:before,
       &:after {
-        color: darken($white, 20%);
+        color: $mediumsilver;
       }
     }
   }

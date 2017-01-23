@@ -65,10 +65,10 @@
       }
 
       &.odd {
-        background-color: darken($white, 5%);
+        background-color: $lightsilver;
 
         td.active {
-          background-color: darken($white, 10%);
+          background-color: $mediumsilver;
         }
       }
 
@@ -76,7 +76,7 @@
         background-color: $white;
 
         td.active {
-          background-color: darken($white, 5%);
+          background-color: $lightsilver;
         }
       }
     }
@@ -95,17 +95,17 @@
   @include font-size(14px);
 
   tr {
-    background-color: darken($white, 2%);
+    background-color: $lightsilver;
 
     th {
-      background-color: darken($white, 5%);
+      background-color: $lightsilver;
     }
 
     &:nth-of-type(2n) {
       background-color: $white;
 
       th {
-        background-color: darken($white, 2%);
+        background-color: $lightsilver;
       }
     }
   }
