@@ -74,3 +74,37 @@
     z-index: 1000;
   }
 }
+
+.is-slidein {
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-name: slideIn;
+}
+
+.is-slideout {
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-name: slideOut;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

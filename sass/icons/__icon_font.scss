@@ -13,6 +13,7 @@
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
   @if ($unicode) {
     content: $unicode;
   }
@@ -184,5 +185,5 @@
 .icon--share:after { @include icon("\EA76"); }
 .icon--heart:after { @include icon("\EA77"); }
 .icon--retweet:after { @include icon("\EA78"); }
-.icon--square-checked:after { @include icon("\EA7A"); }
-.icon--square:after { @include icon("\EA7B"); }
+.icon--square-checked:after { @include icon("\EA79"); }
+.icon--square:after { @include icon("\EA7A"); }

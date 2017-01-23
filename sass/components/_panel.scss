@@ -8,18 +8,8 @@
 .panel {
   @include clearfix;
   position: relative;
-
-  // Drupal workaround
-  > .more-link {
-    @extend %panel__more-link;
-  }
 }
 
-%panel__more-link,
 .panel__more-link {
-  a {
-    @include button-next-transparent;
-    @include text-bold;
-    border-bottom: 0 none;
-  }
+  float: right;
 }
