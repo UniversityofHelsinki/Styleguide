@@ -3892,6 +3892,14 @@ a:hover
   position: absolute;
 }
 
+.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea
+.box-logo > a, .textarea .box-card__fieldset
+.box-logo > a, .textarea h5, .textarea h6, .box-ingress__content h1, .box-ingress__content h2, .box-ingress__content h3, .box-ingress__content h4, .box-ingress__content legend, .box-ingress__content
+.box-logo > a, .box-ingress__content .box-card__fieldset
+.box-logo > a, .box-ingress__content h5, .box-ingress__content h6 {
+  padding-top: 32px;
+}
+
 .textarea h3, .box-ingress__content h3 {
   font-size: 1.5rem;
 }
