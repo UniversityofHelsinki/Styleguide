@@ -7807,7 +7807,7 @@ input[type="text"].search-form-large__input {
 .table-sortable tbody tr td {
   font-size: 11.375px;
   font-size: 0.8125rem;
-  border: 2px dotted #F8F8F8;
+  border: 2px dotted #D2D2D2;
   color: #777777;
   padding: 1.2em 0.9em;
 }
