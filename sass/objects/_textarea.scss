@@ -5,7 +5,8 @@
 .textarea,
 %textarea {
   @include font-family-bodytext;
-  line-height: 1.8em;
+  @include font-size(18px);
+  line-height: 1.5em;
 
   ul, ol {
     margin-bottom: $vert-spacing-unit;
@@ -53,6 +54,10 @@
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 32px;
+  }
+
   h3 {
     @include font-size(24px);
   }
@@ -61,49 +66,5 @@
     @extend %table-simple;
     line-height: normal;
     margin-bottom: 2em;
-  }
-}
-
-/**
- * textarea-initial
- * An element (usually an image) floated left before a textarea.
- */
-
-%textarea-initial,
-.textarea-initial {
-  float: left;
-  margin-bottom: 2em;
-  margin-right: 2em;
-}
-
-/**
- * textarea-ingress
- *
- */
-
-%textarea-ingress,
-.textarea-ingress {
-  color: $lightgray;
-  letter-spacing: 0.01em;
-  line-height: 1.7em;
-
-  p {
-    @extend .textarea-ingress;
-  }
-}
-
-%textarea-infobox,
-.textarea-infobox {
-  @include font-family-main;
-  background-color: $lightsilver;
-  margin-bottom: 2em;
-  padding: 1.5em;
-
-  p {
-    line-height: normal;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }
