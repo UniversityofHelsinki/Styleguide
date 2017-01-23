@@ -3187,6 +3187,7 @@ th {
   .button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
   .button {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -3526,6 +3527,7 @@ a:hover
 @media (min-width: 48em) {
   .button--anchor {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -3542,6 +3544,7 @@ a:hover
 @media (min-width: 48em) {
   .button--anchor:after {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -3572,6 +3575,7 @@ a:hover
 @media (min-width: 48em) {
   .button--icon {
     font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 
@@ -3585,6 +3589,7 @@ a:hover
 @media (min-width: 48em) {
   .button--icon:after {
     font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 
@@ -3882,6 +3887,7 @@ a:hover
   .textarea,
   .box-ingress__content {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -3922,6 +3928,7 @@ a:hover
 @media (min-width: 48em) {
   .textarea ul li:before, .box-ingress__content ul li:before {
     font-size: 9px;
+    font-size: 0.5625rem;
   }
 }
 
@@ -3954,6 +3961,7 @@ a:hover
 @media (min-width: 48em) {
   .textarea h3, .box-ingress__content h3 {
     font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -4102,12 +4110,14 @@ a:hover
 @media (min-width: 48em) {
   .l-footer__copyright p {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 48em) {
   .l-footer__copyright p {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -4339,7 +4349,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, legend a:hover,
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 40px;
   font-size: 2.5rem;
   letter-spacing: -2px;
   line-height: 1.15em;
@@ -4347,68 +4357,32 @@ h1 {
 
 @media (min-width: 48em) {
   h1 {
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 48em) {
-  h1 {
-    font-size: 43.75px;
+    font-size: 50px;
     font-size: 3.125rem;
   }
 }
 
-@media (min-width: 48em) and (min-width: 48em) {
-  h1 {
-    font-size: 50px;
-  }
-}
-
 h2 {
-  font-size: 28px;
+  font-size: 32px;
   font-size: 2rem;
 }
 
 @media (min-width: 48em) {
   h2 {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 48em) {
-  h2 {
-    font-size: 35px;
+    font-size: 40px;
     font-size: 2.5rem;
   }
 }
 
-@media (min-width: 48em) and (min-width: 48em) {
-  h2 {
-    font-size: 40px;
-  }
-}
-
 h3 {
-  font-size: 22.75px;
+  font-size: 26px;
   font-size: 1.625rem;
 }
 
 @media (min-width: 48em) {
   h3 {
-    font-size: 26px;
-  }
-}
-
-@media (min-width: 48em) {
-  h3 {
-    font-size: 26.25px;
-    font-size: 1.875rem;
-  }
-}
-
-@media (min-width: 48em) and (min-width: 48em) {
-  h3 {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -4424,6 +4398,7 @@ h4, legend,
   .box-logo > a, .box-card__fieldset
   .box-logo > a {
     font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -4435,6 +4410,7 @@ h5 {
 @media (min-width: 48em) {
   h5 {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -4446,6 +4422,7 @@ h6 {
 @media (min-width: 48em) {
   h6 {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -4456,7 +4433,7 @@ h6 {
   description: Description about paragraph.
 */
 p {
-  font-size: 13.125px;
+  font-size: 15px;
   font-size: 0.9375rem;
   margin: 0 0 15px 0;
   letter-spacing: 0;
@@ -4465,22 +4442,15 @@ p {
 
 @media (min-width: 48em) {
   p {
-    font-size: 15px;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 48em) {
   p {
-    font-size: 14px;
-    font-size: 1rem;
     line-height: 1.5em;
     margin: 0 0 16px 0;
-  }
-}
-
-@media (min-width: 48em) and (min-width: 48em) {
-  p {
-    font-size: 16px;
   }
 }
 
@@ -4524,7 +4494,7 @@ blockquote {
 */
 blockquote,
 blockquote p {
-  font-size: 14px;
+  font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
@@ -4535,22 +4505,8 @@ blockquote p {
 @media (min-width: 48em) {
   blockquote,
   blockquote p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 48em) {
-  blockquote,
-  blockquote p {
-    font-size: 15.75px;
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 48em) and (min-width: 48em) {
-  blockquote,
-  blockquote p {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -4589,6 +4545,7 @@ label {
 @media (min-width: 48em) {
   label {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -4634,6 +4591,7 @@ textarea {
   input[type="text"],
   textarea {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -4685,6 +4643,7 @@ input[type="checkbox"] + label {
   input[type="radio"] + label,
   input[type="checkbox"] + label {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -4735,6 +4694,7 @@ input[type="radio"] + label:before {
 @media (min-width: 48em) {
   input[type="radio"] + label:before {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -4819,6 +4779,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .accordion__title {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -4882,6 +4843,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .author {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -4942,6 +4904,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .breadcrumbs {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -5033,6 +4996,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .carousel__content {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -5046,6 +5010,7 @@ dl, ol, ul {
 @media (min-width: 48em) and (min-width: 48em) {
   .carousel__content {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -5072,6 +5037,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .carousel__credits {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -5114,12 +5080,14 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .carousel__control-nav li a {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
 @media (min-width: 48em) {
   .carousel__control-nav li a {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -5149,6 +5117,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .carousel__direction-nav a {
     font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -5293,6 +5262,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .carousel-unwrapped__direction-nav a {
     font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -5480,6 +5450,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .date {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -5523,6 +5494,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .feed-listing__title {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -5537,6 +5509,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .feed-listing__date {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -5554,6 +5527,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .feed-listing__content p {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -5576,6 +5550,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .feed-listing__content p.type {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -5615,6 +5590,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .file__icon {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -5661,6 +5637,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .form__description {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -5701,6 +5678,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .hero .hero__title {
     font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -5717,6 +5695,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .hero .hero__alt-title {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -5826,6 +5805,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .index__label {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -5887,6 +5867,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .index-alpha__initial {
     font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -5905,6 +5886,7 @@ dl, ol, ul {
 @media (min-width: 48em) and (min-width: 48em) {
   .index-alpha__initial {
     font-size: 80px;
+    font-size: 5rem;
   }
 }
 
@@ -5938,6 +5920,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .index-alpha__title > a, .box-card__fieldset .index-alpha__title > a {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -5971,6 +5954,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .index-topical__title > a, .box-card__fieldset .index-topical__title > a {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -5988,6 +5972,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .index-topical__field {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -6065,6 +6050,7 @@ table.jobs-listing thead th {
 @media (min-width: 48em) {
   table.jobs-listing thead th {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -6121,12 +6107,14 @@ td.jobs-listing__title {
 @media (min-width: 48em) {
   td.jobs-listing__title {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 48em) {
   td.jobs-listing__title {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -6154,12 +6142,14 @@ td.jobs-listing__date {
 @media (min-width: 48em) {
   td.jobs-listing__date {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 48em) {
   td.jobs-listing__date {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -6204,6 +6194,7 @@ td.jobs-listing__date {
 @media (min-width: 48em) {
   .label-row__item {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -6277,6 +6268,7 @@ td.jobs-listing__date {
 @media (min-width: 48em) {
   .links__link {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -6316,6 +6308,7 @@ td.jobs-listing__date {
 @media (min-width: 62.5em) and (min-width: 48em) {
   .links__link.theme-language abbr[title]:after {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -6351,6 +6344,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .list-of-links__subtitle {
     font-size: 11px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -6431,6 +6425,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .list-of-links--condensed .list-of-links__link {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -6494,6 +6489,7 @@ span.links__link.theme-language {
   .box-logo > a, .logo-block__content .box-card__fieldset
   .box-logo > a {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -6506,6 +6502,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .logo-block__content p {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -6542,6 +6539,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .logo:before {
     font-size: 54px;
+    font-size: 3.375rem;
   }
 }
 
@@ -6554,6 +6552,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .logo.theme-big:before {
     font-size: 100px;
+    font-size: 6.25rem;
   }
 }
 
@@ -6572,6 +6571,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .logo__sitename {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -6586,6 +6586,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) and (min-width: 48em) {
   .logo__sitename {
     font-size: 17px;
+    font-size: 1.0625rem;
   }
 }
 
@@ -6647,6 +6648,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .main-menu a {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -6774,6 +6776,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) and (min-width: 48em) {
   li.main-menu__front > a:after, .box-card__fieldset li.main-menu__front > a:after {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -6821,6 +6824,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .main-menu__expand:before {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -6860,6 +6864,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) and (min-width: 48em) {
   .main-menu__expand:before {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -6951,6 +6956,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .fatmenu li.is-lvl2 > a, .fatmenu .box-card__fieldset li.is-lvl2 > a {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -6982,6 +6988,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .fatmenu li.is-lvl3 > a, .fatmenu .box-card__fieldset li.is-lvl3 > a {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -7019,6 +7026,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .fatmenu__title a:after {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -7050,6 +7058,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .fatmenu__collapse {
     font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -7101,6 +7110,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .messages {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -7251,6 +7261,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .page-title--small {
     font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -7270,6 +7281,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .page-title--suffix {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -7285,6 +7297,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .page-title--suffix .page-title__secondrow {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -7298,6 +7311,7 @@ span.links__link.theme-language {
 @media (min-width: 62.5em) and (min-width: 48em) {
   .page-title--suffix .page-title__secondrow {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -7319,6 +7333,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .page-title--listing .page-title__subheading {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -7355,6 +7370,7 @@ ul.pager {
   
   ul.pager {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -7461,6 +7477,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__date {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -7479,6 +7496,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__header {
     font-size: 11px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -7495,6 +7513,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__header .icon {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -7508,6 +7527,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__retweeter {
     font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
@@ -7532,6 +7552,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post--facebook .post__content {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -7547,6 +7568,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__account {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -7562,6 +7584,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__message {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -7584,6 +7607,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__action {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -7596,6 +7620,7 @@ ul.pager > li.pager__page a {
 @media (min-width: 48em) {
   .post__action .icon {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -7739,6 +7764,7 @@ input[type="submit"].search-form--dark__submit {
 @media (min-width: 48em) {
   .search-form-large__label {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -7758,6 +7784,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   input[type="text"].search-form-large__input {
     font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -7778,6 +7805,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .some-links__link {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -7821,6 +7849,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .table-sortable thead tr th, .table-sortable thead tr th a, .table-sortable thead tr th a.active {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -7843,6 +7872,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .table-sortable tbody tr td {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -7892,6 +7922,7 @@ input[type="text"].search-form-large__input {
   .textarea table, .box-ingress__content table, .box-application__table,
   .table-simple {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -7978,6 +8009,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .is-table-wrapped table {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -8072,6 +8104,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .tag-list__item {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -8131,6 +8164,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-application__title > a, .box-card__fieldset .box-application__title > a {
     font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -8213,6 +8247,7 @@ input[type="text"].search-form-large__input {
   
   .box-card {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -8273,6 +8308,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-card__header {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -8405,6 +8441,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-card__link {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -8485,6 +8522,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-data__date {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -8508,6 +8546,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-data__icon:after {
     font-size: 38px;
+    font-size: 2.375rem;
   }
 }
 
@@ -8526,6 +8565,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-data__title {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -8542,6 +8582,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-data__content {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -8600,6 +8641,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__title {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -8616,6 +8658,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__title {
     font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 
@@ -8632,6 +8675,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__title {
     font-size: 32px;
+    font-size: 2rem;
   }
 }
 
@@ -8645,6 +8689,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__alt-title {
     font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
 
@@ -8660,6 +8705,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__alt-title {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -8675,6 +8721,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-prominent .box-hero__alt-title {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -8707,6 +8754,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-small .box-hero__title {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -8724,6 +8772,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero.theme-small .box-hero__alt-title {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -8751,6 +8800,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-hero__title {
     font-size: 48px;
+    font-size: 3rem;
   }
 }
 
@@ -8764,6 +8814,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) and (min-width: 48em) {
   .box-hero__title {
     font-size: 48px;
+    font-size: 3rem;
   }
 }
 
@@ -8786,6 +8837,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-hero__alt-title {
     font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -8799,6 +8851,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) and (min-width: 48em) {
   .box-hero__alt-title {
     font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -8812,6 +8865,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 62.5em) and (min-width: 48em) {
   .box-hero__alt-title {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -8834,12 +8888,14 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-hero__content {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 48em) {
   .box-hero__content {
     font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -8871,6 +8927,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-hero__link.is-videolink a:after {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -8990,6 +9047,7 @@ input[type="text"].search-form-large__input {
   .box-logo > a, .box-card__fieldset
   .box-logo > a {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -9045,6 +9103,7 @@ input[type="text"].search-form-large__input {
   .theme-small.box-story--liftup .box-story__title, .theme-small.box-story--constrained .box-story__title,
   .box-story.theme-small .box-story__title {
     font-size: 21px;
+    font-size: 1.3125rem;
   }
 }
 
@@ -9277,6 +9336,7 @@ input[type="text"].search-form-large__input {
   .theme-black.box-story--liftup .box-story__title, .theme-black.box-story--constrained .box-story__title,
   .box-story.theme-black .box-story__title {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -9309,12 +9369,14 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-story__label {
     font-size: 11.2px;
+    font-size: 0.7rem;
   }
 }
 
 @media (min-width: 48em) {
   .box-story__label {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -9379,6 +9441,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-story__topical {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -9414,6 +9477,7 @@ input[type="text"].search-form-large__input {
   .box-story__date,
   .box-story__tag {
     font-size: 11.2px;
+    font-size: 0.7rem;
   }
 }
 
@@ -9421,6 +9485,7 @@ input[type="text"].search-form-large__input {
   .box-story__date,
   .box-story__tag {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -9485,6 +9550,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-story__content {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -9615,6 +9681,7 @@ input[type="text"].search-form-large__input {
   
   .box-story--liftup .box-story__title {
     font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
@@ -9635,6 +9702,7 @@ input[type="text"].search-form-large__input {
   
   .box-story--liftup .box-story__content {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -9754,6 +9822,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-story--related .box-story__content {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -9765,6 +9834,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-story--related .box-story__content p {
     font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -9794,6 +9864,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subsection__title {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -9810,6 +9881,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subsection__content {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -9821,6 +9893,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subsection__content.theme-plain {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -9872,12 +9945,14 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subtitle__title {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 48em) {
   .box-subtitle__title {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -9897,6 +9972,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subtitle__link a {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -9910,6 +9986,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subtitle__content {
     font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -9926,6 +10003,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .box-subtitle__ingress {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -9977,6 +10055,7 @@ input[type="text"].search-form-large__input {
 @media (min-width: 48em) {
   .is-toggleable-mobile:after {
     font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 

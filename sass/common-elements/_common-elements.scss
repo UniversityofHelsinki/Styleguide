@@ -63,29 +63,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include font-size(40px);
+  @include font-size(50px, 40px);
   letter-spacing: -2px;
   line-height: 1.15em;
-
-  @include breakpoint($small) {
-    @include font-size(50px);
-  }
 }
 
 h2 {
-  @include font-size(32px);
-
-  @include breakpoint($small) {
-    @include font-size(40px);
-  }
+  @include font-size(40px, 32px);
 }
 
 h3 {
-  @include font-size(26px);
-
-  @include breakpoint($small) {
-    @include font-size(30px);
-  }
+  @include font-size(30px, 26px);
 }
 
 h4 {
@@ -108,13 +96,12 @@ h6 {
 */
 
 p {
-  @include font-size(15px);
+  @include font-size(16px, 15px);
   margin: 0 0 15px 0;
   letter-spacing: 0;
   line-height: 1.3em;
 
   @include breakpoint($small) {
-    @include font-size(16px);
     line-height: 1.5em;
     margin: 0 0 16px 0;
   }
@@ -162,14 +149,10 @@ blockquote {
 */
 blockquote,
 blockquote p {
-  @include font-size(16px);
+  @include font-size(18px, 16px);
   @include font-weight-book;
   color: $silver;
   line-height: 1.5em;
-
-  @include breakpoint($small) {
-    @include font-size(18px);
-  }
 }
 
 blockquote p {
