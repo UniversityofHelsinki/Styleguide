@@ -87,7 +87,7 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-a, .box-card__fieldset a {
+a {
   background-color: transparent;
 }
 
@@ -3154,7 +3154,7 @@ th {
 .button--small, .accordion__title,
 .button--accordion,
 .button--action-before,
-.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a,
+.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a,
 .button {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 0.9375rem;
@@ -3175,10 +3175,10 @@ th {
 .button--small:focus, .accordion__title:focus,
 .button--accordion:focus,
 .button--action-before:focus,
-.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, input[type="submit"]:focus, .horizontal-tabs .horizontal-tab-button > a:focus, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:focus, .button--small:hover, .accordion__title:hover,
+.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, input[type="submit"]:focus, .horizontal-tabs .horizontal-tab-button > a:focus, .button--small:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
-.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, input[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:hover,
+.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, input[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a:hover,
 .button:focus,
 .button:hover {
   background-color: #005479;
@@ -3188,10 +3188,10 @@ th {
 .button--small:active, .accordion__title:active,
 .button--accordion:active,
 .button--action-before:active,
-.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .horizontal-tabs .horizontal-tab-button > a:active, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:active, .is-active.button--small, .is-active.accordion__title,
+.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .horizontal-tabs .horizontal-tab-button > a:active, .is-active.button--small, .is-active.accordion__title,
 .is-active.button--accordion,
 .is-active.button--action-before,
-.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"], .horizontal-tabs .horizontal-tab-button > a.is-active, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.is-active,
+.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"], .horizontal-tabs .horizontal-tab-button > a.is-active,
 .button:active,
 .button.is-active {
   background-color: #003146;
@@ -3200,10 +3200,10 @@ th {
 .button--small:before, .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .horizontal-tabs .horizontal-tab-button > a:before, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:before, .button--small:after, .accordion__title:after,
+.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .horizontal-tabs .horizontal-tab-button > a:before, .button--small:after, .accordion__title:after,
 .button--accordion:after,
 .button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .horizontal-tabs .horizontal-tab-button > a:after, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:after,
+.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .horizontal-tabs .horizontal-tab-button > a:after,
 .button:before,
 .button:after {
   transition-duration: 0.1s;
@@ -3213,10 +3213,10 @@ th {
 .theme-transparent.button--small, .theme-transparent.accordion__title,
 .theme-transparent.button--accordion,
 .theme-transparent.button--action-before,
-.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, input.theme-transparent[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent, .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
+.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, input.theme-transparent[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent, .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
 .theme-transparent-alt.button--accordion,
 .theme-transparent-alt.button--action-before,
-.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, input.theme-transparent-alt[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent-alt,
+.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, input.theme-transparent-alt[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt,
 .button.theme-transparent,
 .button.theme-transparent-alt {
   background-color: transparent;
@@ -3226,10 +3226,10 @@ th {
 .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent-alt:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt:hover {
   background-color: #0098d0;
@@ -3238,16 +3238,16 @@ th {
 .theme-transparent.button--small a:hover, .theme-transparent.accordion__title a:hover,
 .theme-transparent.button--accordion a:hover,
 .theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, input.theme-transparent[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
+.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, input.theme-transparent[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
 .theme-transparent-alt.button--accordion a:hover,
 .theme-transparent-alt.button--action-before a:hover,
-.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, input.theme-transparent-alt[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt a:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent-alt a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, input.theme-transparent-alt[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a.theme-transparent-alt:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover,
 .button.theme-transparent a:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt a:hover,
@@ -3332,8 +3332,7 @@ th {
   color: #FFF;
 }
 
-a:hover .accordion__title:before, .accordion__title:hover:before,
-a:hover
+a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 .button--accordion:before,
 .button--accordion:hover:before {
   color: #FFF;
@@ -3822,87 +3821,6 @@ a:hover
 }
 
 /*
- Basic component used in multiple row textareas with links, headings, lists and so on.
-*/
-.textarea,
-.box-ingress__content {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.5em;
-}
-
-.textarea ul, .textarea ol, .box-ingress__content ul, .box-ingress__content ol {
-  margin-bottom: 30px;
-}
-
-.textarea li, .box-ingress__content li {
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.textarea ul, .box-ingress__content ul {
-  padding-left: 1.5em;
-  position: relative;
-}
-
-.textarea ul li, .box-ingress__content ul li {
-  list-style-type: none;
-}
-
-.textarea ul li:before, .box-ingress__content ul li:before {
-  font-size: 0.5625rem;
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
-  left: 0;
-  margin-top: 1px;
-  position: absolute;
-}
-
-.textarea ol, .box-ingress__content ol {
-  counter-reset: item;
-  padding-left: 1.5em;
-  position: relative;
-}
-
-.textarea ol li, .box-ingress__content ol li {
-  display: block;
-}
-
-.textarea ol li:before, .box-ingress__content ol li:before {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  content: counter(item) ". ";
-  counter-increment: item;
-  left: 1px;
-  line-height: 1.7em;
-  position: absolute;
-}
-
-.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea
-.box-logo > a, .textarea .box-card__fieldset
-.box-logo > a, .textarea h5, .textarea h6, .box-ingress__content h1, .box-ingress__content h2, .box-ingress__content h3, .box-ingress__content h4, .box-ingress__content legend, .box-ingress__content
-.box-logo > a, .box-ingress__content .box-card__fieldset
-.box-logo > a, .box-ingress__content h5, .box-ingress__content h6 {
-  padding-top: 32px;
-}
-
-.textarea h3, .box-ingress__content h3 {
-  font-size: 1.5rem;
-}
-
-.textarea table, .box-ingress__content table {
-  line-height: normal;
-  margin-bottom: 2em;
-}
-
-/*
  section: 15.2
  title: Footer
  template: 15_2_footer
@@ -4203,9 +4121,7 @@ img {
   title: Headings
   template: 3_1_headings
 */
-h1, h2, h3, h4, legend,
-.box-logo > a, .box-card__fieldset
-.box-logo > a, h5, h6 {
+h1, h2, h3, h4, legend, h5, h6 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   color: #222;
   letter-spacing: -0.05em;
@@ -4216,16 +4132,12 @@ h1, h2, h3, h4, legend,
   word-wrap: break-word;
 }
 
-h1 a, h1 .box-card__fieldset a, .box-card__fieldset h1 a, h2 a, h2 .box-card__fieldset a, .box-card__fieldset h2 a, h3 a, h3 .box-card__fieldset a, .box-card__fieldset h3 a, h4 a, legend a,
-.box-logo > a a, h4 .box-card__fieldset a, .box-card__fieldset h4 a, legend .box-card__fieldset a, .box-card__fieldset legend a, .box-card__fieldset
-.box-logo > a a, h5 a, h5 .box-card__fieldset a, .box-card__fieldset h5 a, h6 a, h6 .box-card__fieldset a, .box-card__fieldset h6 a {
+h1 a, h2 a, h3 a, h4 a, legend a, h5 a, h6 a {
   color: #222;
   text-decoration: none;
 }
 
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, legend a:hover,
-.box-logo > a a:hover, .box-card__fieldset
-.box-logo > a a:hover, h5 a:hover, h6 a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, legend a:hover, h5 a:hover, h6 a:hover {
   color: #222;
   cursor: pointer;
 }
@@ -4262,16 +4174,12 @@ h3 {
   }
 }
 
-h4, legend,
-.box-logo > a, .box-card__fieldset
-.box-logo > a {
+h4, legend {
   font-size: 1.25rem;
 }
 
 @media (max-width: 48em) {
-  h4, legend,
-  .box-logo > a, .box-card__fieldset
-  .box-logo > a {
+  h4, legend {
     font-size: 1.42857rem;
   }
 }
@@ -4326,7 +4234,7 @@ p {
   title: Links
   template: 3_3_links
 */
-a, .box-card__fieldset a {
+a {
   color: #0098d0;
   text-decoration: none;
 }
@@ -4422,6 +4330,7 @@ input[type="submit"][disabled], input[type="submit"][disabled]:active, input[typ
 select,
 input[type="email"],
 input[type="text"],
+input[type="password"],
 textarea {
   font-size: 1rem;
   background: none;
@@ -4441,6 +4350,7 @@ textarea {
 select:focus,
 input[type="email"]:focus,
 input[type="text"]:focus,
+input[type="password"]:focus,
 textarea:focus {
   border-color: transparent;
   outline-color: #0098d0;
@@ -4455,6 +4365,10 @@ input[type="text"][disabled],
 input[type="text"][disabled]:active,
 input[type="text"][disabled]:focus,
 input[type="text"][disabled]:hover,
+input[type="password"][disabled],
+input[type="password"][disabled]:active,
+input[type="password"][disabled]:focus,
+input[type="password"][disabled]:hover,
 textarea[disabled],
 textarea[disabled]:active,
 textarea[disabled]:focus,
@@ -5413,13 +5327,13 @@ dl, ol, ul {
   outline: none;
 }
 
-.horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a {
+.horizontal-tabs .horizontal-tab-button > a {
   font-weight: 600;
   text-transform: uppercase;
   display: block;
 }
 
-.horizontal-tabs .horizontal-tab-button.selected > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button.selected > a {
+.horizontal-tabs .horizontal-tab-button.selected > a {
   background-color: #005479;
   color: #FFF;
 }
@@ -5439,7 +5353,7 @@ dl, ol, ul {
     margin: 0;
     text-align: center;
   }
-  .horizontal-tabs .horizontal-tab-button > a, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a {
+  .horizontal-tabs .horizontal-tab-button > a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
@@ -5454,13 +5368,12 @@ dl, ol, ul {
             justify-content: center;
     padding: 1em 3em;
   }
-  .horizontal-tabs .horizontal-tab-button > a:focus, .horizontal-tabs .box-card__fieldset .horizontal-tab-button > a:focus {
+  .horizontal-tabs .horizontal-tab-button > a:focus {
     background-color: transparent;
     color: #0098d0;
   }
   .horizontal-tabs .horizontal-tab-button.selected a,
-  .horizontal-tabs .horizontal-tab-button:hover > a,
-  .horizontal-tabs .box-card__fieldset .horizontal-tab-button:hover > a {
+  .horizontal-tabs .horizontal-tab-button:hover > a {
     background-color: white;
     color: #005479;
     transition-property: all;
@@ -5592,7 +5505,7 @@ dl, ol, ul {
   }
 }
 
-.index-alpha__title > a, .box-card__fieldset .index-alpha__title > a {
+.index-alpha__title > a {
   font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
@@ -5618,7 +5531,7 @@ dl, ol, ul {
   margin-bottom: 0.25em;
 }
 
-.index-topical__title > a, .box-card__fieldset .index-topical__title > a {
+.index-topical__title > a {
   font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
@@ -6037,9 +5950,7 @@ span.links__link.theme-language {
   width: 100%;
 }
 
-.logo-block__content h4, .logo-block__content legend, .logo-block__content
-.box-logo > a, .logo-block__content .box-card__fieldset
-.box-logo > a, .logo-block__content p {
+.logo-block__content h4, .logo-block__content legend, .logo-block__content p {
   text-align: center;
   color: #FFF;
 }
@@ -6048,16 +5959,12 @@ span.links__link.theme-language {
   .logo-block__content {
     float: left;
   }
-  .logo-block__content h4, .logo-block__content legend, .logo-block__content
-  .box-logo > a, .logo-block__content .box-card__fieldset
-  .box-logo > a, .logo-block__content p {
+  .logo-block__content h4, .logo-block__content legend, .logo-block__content p {
     text-align: left;
   }
 }
 
-.logo-block__content h4, .logo-block__content legend, .logo-block__content
-.box-logo > a, .logo-block__content .box-card__fieldset
-.box-logo > a {
+.logo-block__content h4, .logo-block__content legend {
   font-size: 1rem;
 }
 
@@ -6206,7 +6113,7 @@ span.links__link.theme-language {
   background: #F8F8F8;
 }
 
-.main-menu li.is-lvl1 > a, .main-menu .box-card__fieldset li.is-lvl1 > a {
+.main-menu li.is-lvl1 > a {
   padding: 15px 20px 15px 60px;
 }
 
@@ -6217,13 +6124,13 @@ span.links__link.theme-language {
   .main-menu li.is-lvl1.is-open {
     background: none;
   }
-  .main-menu li.is-lvl1 > a, .main-menu .box-card__fieldset li.is-lvl1 > a {
+  .main-menu li.is-lvl1 > a {
     padding: 0.6em 0.55em 0.6em 1.25em;
   }
 }
 
 @media (min-width: 62.5em) {
-  .main-menu li.is-lvl1 > a, .main-menu .box-card__fieldset li.is-lvl1 > a {
+  .main-menu li.is-lvl1 > a {
     padding: 0.6em 1em 0.6em 1.8em;
   }
 }
@@ -6232,7 +6139,7 @@ span.links__link.theme-language {
   left: 25px;
 }
 
-.main-menu li.is-lvl2 > a, .main-menu .box-card__fieldset li.is-lvl2 > a {
+.main-menu li.is-lvl2 > a {
   padding: 15px 30px 15px 80px;
   text-transform: none;
 }
@@ -6247,7 +6154,7 @@ span.links__link.theme-language {
   padding-bottom: 10px;
 }
 
-.main-menu li.is-lvl3 > a, .main-menu .box-card__fieldset li.is-lvl3 > a {
+.main-menu li.is-lvl3 > a {
   font-weight: 400;
   font-style: normal;
   color: #979797;
@@ -6269,12 +6176,12 @@ span.links__link.theme-language {
 }
 
 @media (min-width: 48em) {
-  li.main-menu__front > a, .box-card__fieldset li.main-menu__front > a {
+  li.main-menu__front > a {
     font-size: 0;
     padding-left: 0;
     padding-right: 19px;
   }
-  li.main-menu__front > a:after, .box-card__fieldset li.main-menu__front > a:after {
+  li.main-menu__front > a:after {
     display: inline-block;
     font-family: "hy-icons";
     font-style: normal;
@@ -6293,7 +6200,7 @@ span.links__link.theme-language {
 }
 
 @media (min-width: 62.5em) {
-  li.main-menu__front > a, .box-card__fieldset li.main-menu__front > a {
+  li.main-menu__front > a {
     padding-right: 35px;
   }
 }
@@ -6436,7 +6343,7 @@ span.links__link.theme-language {
   width: 30%;
 }
 
-.fatmenu li.is-lvl2 > a, .fatmenu .box-card__fieldset li.is-lvl2 > a {
+.fatmenu li.is-lvl2 > a {
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
@@ -6448,11 +6355,11 @@ span.links__link.theme-language {
   text-decoration: none;
 }
 
-.fatmenu li.is-lvl2 > a:hover, .fatmenu .box-card__fieldset li.is-lvl2 > a:hover {
+.fatmenu li.is-lvl2 > a:hover {
   color: #005479;
 }
 
-.fatmenu li.is-lvl2 > a.active-trail, .fatmenu .box-card__fieldset li.is-lvl2 > a.active-trail {
+.fatmenu li.is-lvl2 > a.active-trail {
   color: #005479;
 }
 
@@ -6462,7 +6369,7 @@ span.links__link.theme-language {
   position: relative;
 }
 
-.fatmenu li.is-lvl3 > a, .fatmenu .box-card__fieldset li.is-lvl3 > a {
+.fatmenu li.is-lvl3 > a {
   font-size: 0.875rem;
   font-weight: 400;
   font-style: normal;
@@ -6472,7 +6379,7 @@ span.links__link.theme-language {
   text-transform: none;
 }
 
-.fatmenu li.is-lvl3 > a:hover, .fatmenu .box-card__fieldset li.is-lvl3 > a:hover, .fatmenu li.is-lvl3 > a.active-trail, .fatmenu .box-card__fieldset li.is-lvl3 > a.active-trail, .fatmenu li.is-lvl3 > a.active, .fatmenu .box-card__fieldset li.is-lvl3 > a.active {
+.fatmenu li.is-lvl3 > a:hover, .fatmenu li.is-lvl3 > a.active-trail, .fatmenu li.is-lvl3 > a.active {
   color: #005479;
 }
 
@@ -6818,7 +6725,6 @@ ul.pager > li.pager__page {
 }
 
 
-ul.pager > li.pager__page a, .box-card__fieldset
 ul.pager > li.pager__page a {
   display: block;
 }
@@ -7208,32 +7114,32 @@ input[type="text"].search-form-large__input {
  template: 6_1_2_table-simple
  description:
 */
-.textarea table, .box-ingress__content table, .box-application__table,
+.textarea table, .box-application__table,
 .table-simple {
   font-size: 0.875rem;
 }
 
-.textarea table tr, .box-ingress__content table tr, .box-application__table tr,
+.textarea table tr, .box-application__table tr,
 .table-simple tr {
   background-color: #F8F8F8;
 }
 
-.textarea table tr th, .box-ingress__content table tr th, .box-application__table tr th,
+.textarea table tr th, .box-application__table tr th,
 .table-simple tr th {
   background-color: #F8F8F8;
 }
 
-.textarea table tr:nth-of-type(2n), .box-ingress__content table tr:nth-of-type(2n), .box-application__table tr:nth-of-type(2n),
+.textarea table tr:nth-of-type(2n), .box-application__table tr:nth-of-type(2n),
 .table-simple tr:nth-of-type(2n) {
   background-color: #FFF;
 }
 
-.textarea table tr:nth-of-type(2n) th, .box-ingress__content table tr:nth-of-type(2n) th, .box-application__table tr:nth-of-type(2n) th,
+.textarea table tr:nth-of-type(2n) th, .box-application__table tr:nth-of-type(2n) th,
 .table-simple tr:nth-of-type(2n) th {
   background-color: #F8F8F8;
 }
 
-.textarea table td, .box-ingress__content table td, .box-application__table td, .textarea table th, .box-ingress__content table th, .box-application__table th,
+.textarea table td, .box-application__table td, .textarea table th, .box-application__table th,
 .table-simple td,
 .table-simple th {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -7243,7 +7149,7 @@ input[type="text"].search-form-large__input {
   vertical-align: top;
 }
 
-.textarea table td a, .box-ingress__content table td a, .box-application__table td a, .textarea table td a.active, .box-ingress__content table td a.active, .box-application__table td a.active, .textarea table th a, .box-ingress__content table th a, .box-application__table th a, .textarea table th a.active, .box-ingress__content table th a.active, .box-application__table th a.active,
+.textarea table td a, .box-application__table td a, .textarea table td a.active, .box-application__table td a.active, .textarea table th a, .box-application__table th a, .textarea table th a.active, .box-application__table th a.active,
 .table-simple td a,
 .table-simple td a.active,
 .table-simple th a,
@@ -7252,7 +7158,7 @@ input[type="text"].search-form-large__input {
   text-decoration: none;
 }
 
-.textarea table td a:hover, .box-ingress__content table td a:hover, .box-application__table td a:hover, .textarea table td a.active:hover, .box-ingress__content table td a.active:hover, .box-application__table td a.active:hover, .textarea table th a:hover, .box-ingress__content table th a:hover, .box-application__table th a:hover, .textarea table th a.active:hover, .box-ingress__content table th a.active:hover, .box-application__table th a.active:hover,
+.textarea table td a:hover, .box-application__table td a:hover, .textarea table td a.active:hover, .box-application__table td a.active:hover, .textarea table th a:hover, .box-application__table th a:hover, .textarea table th a.active:hover, .box-application__table th a.active:hover,
 .table-simple td a:hover,
 .table-simple td a.active:hover,
 .table-simple th a:hover,
@@ -7261,13 +7167,13 @@ input[type="text"].search-form-large__input {
   text-decoration: none;
 }
 
-.textarea table td.active, .box-ingress__content table td.active, .box-application__table td.active, .textarea table th.active, .box-ingress__content table th.active, .box-application__table th.active,
+.textarea table td.active, .box-application__table td.active, .textarea table th.active, .box-application__table th.active,
 .table-simple td.active,
 .table-simple th.active {
   color: #777777;
 }
 
-.textarea table td:first-child, .box-ingress__content table td:first-child, .box-application__table td:first-child, .textarea table th:first-child, .box-ingress__content table th:first-child, .box-application__table th:first-child,
+.textarea table td:first-child, .box-application__table td:first-child, .textarea table th:first-child, .box-application__table th:first-child,
 .table-simple td:first-child,
 .table-simple th:first-child {
   font-weight: 700;
@@ -7410,6 +7316,139 @@ input[type="text"].search-form-large__input {
 }
 
 /*
+ section: 6.11.1
+ title: Textarea
+ template: 6_11_1_textarea
+ description: Basic component used in multiple row textareas with links, headings, lists and so on. Class .theme-ingress is used on textarea without p-tags inside. Class .dropcap is an optional class for the first letter to make dropcaps.
+*/
+.textarea {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+}
+
+.textarea ul, .textarea ol {
+  margin-bottom: 30px;
+}
+
+.textarea li {
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.textarea ul {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.textarea ul li {
+  list-style-type: none;
+}
+
+.textarea ul li:before {
+  font-size: 0.5625rem;
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+}
+
+.textarea ol {
+  counter-reset: item;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.textarea ol li {
+  display: block;
+}
+
+.textarea ol li:before {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  content: counter(item) ". ";
+  counter-increment: item;
+  left: 1px;
+  line-height: 1.7em;
+  position: absolute;
+}
+
+.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea h5, .textarea h6 {
+  margin-top: 32px;
+}
+
+.textarea h1:first-child, .textarea h2:first-child, .textarea h3:first-child, .textarea h4:first-child, .textarea legend:first-child, .textarea h5:first-child, .textarea h6:first-child {
+  margin-top: 0;
+}
+
+.textarea table {
+  line-height: normal;
+  margin-bottom: 2em;
+}
+
+.textarea.theme-ingress {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 48em) {
+  .textarea .dropcap {
+    font-size: 4.6875rem;
+    font-weight: 700;
+    font-style: normal;
+    float: left;
+    line-height: 65px;
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
+}
+
+/**
+ * textarea-initial
+ * An element (usually an image) floated left before a textarea.
+ */
+
+.textarea-initial {
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
+/*
+ section: 6.11.2
+ title: Textarea infobox
+ template: 6_11_2_textarea-infobox
+ description: Infobox type textarea.
+*/
+
+.textarea-infobox {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+  margin-bottom: 2em;
+  padding: 1.5em;
+}
+
+
+.textarea-infobox p {
+  line-height: normal;
+}
+
+
+.textarea-infobox p:last-of-type {
+  margin-bottom: 0;
+}
+
+/*
  section: 6.10.1
  title: Box application
  template: 6_10_1_box-application
@@ -7425,7 +7464,7 @@ input[type="text"].search-form-large__input {
   margin-bottom: 1em;
 }
 
-.box-application__title > a, .box-card__fieldset .box-application__title > a {
+.box-application__title > a {
   font-size: 1.5rem;
   font-weight: 700;
   font-style: normal;
@@ -7713,6 +7752,7 @@ input[type="text"].search-form-large__input {
       -ms-flex-align: center;
           align-items: center;
   background-color: #777777;
+  color: #FFF;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -7745,19 +7785,9 @@ input[type="text"].search-form-large__input {
 }
 
 .box-data__date {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #777777;
-  line-height: 1.5em;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: #FFF;
-}
-
-.box-data__icon {
-  color: #FFF;
+  font-size: 0.875rem;
 }
 
 .box-data__icon:after {
@@ -7772,24 +7802,17 @@ input[type="text"].search-form-large__input {
   content: "";
 }
 
+.box-data__container {
+  font-size: 0.875rem;
+}
+
 .box-data__title {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #777777;
-  line-height: 1.5em;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .box-data__content {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
   color: #777777;
-  line-height: 1.5em;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -8037,12 +8060,8 @@ input[type="text"].search-form-large__input {
  section: 6.10.4
  title: Box ingress
  template: 6_10_4_box-ingress
- description: TODO: write documentation
+ description: Image on the left, ingress text on the right
 */
-/**
- * box-ingress
- * TODO: write documentation
- */
 .box-ingress {
   *zoom: 1;
   clear: both;
@@ -8072,6 +8091,10 @@ input[type="text"].search-form-large__input {
   }
 }
 
+.box-ingress__content p {
+  font-size: 1.125rem;
+}
+
 /*
  section: 6.10.9
  title: Box logo
@@ -8094,20 +8117,22 @@ input[type="text"].search-form-large__input {
 }
 
 
-.box-logo.theme-transparent > a, .box-card__fieldset
 .box-logo.theme-transparent > a {
   padding: 0;
 }
 
 
-.box-logo > a, .box-card__fieldset
 .box-logo > a {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
+  color: #222;
   display: table-cell;
   font-weight: bold;
+  letter-spacing: -0.05em;
+  line-height: 1.2em;
   padding: 10px;
   text-align: center;
+  text-transform: uppercase;
   vertical-align: middle;
 }
 
@@ -8188,17 +8213,13 @@ input[type="text"].search-form-large__input {
 .theme-plain.box-story--liftup .box-story__title, .theme-plain.box-story--constrained .box-story__title,
 .theme-plain.box-story--liftup .box-story__content, .theme-plain.box-story--constrained .box-story__content,
 .theme-plain.box-story--liftup .box-story__link > a, .theme-plain.box-story--constrained .box-story__link > a,
-.theme-plain.box-story--liftup .box-card__fieldset .box-story__link > a, .theme-plain.box-story--constrained .box-card__fieldset .box-story__link > a,
 .theme-plain.box-story--liftup .box-story__link > a:after, .theme-plain.box-story--constrained .box-story__link > a:after,
-.theme-plain.box-story--liftup .box-card__fieldset .box-story__link > a:after, .theme-plain.box-story--constrained .box-card__fieldset .box-story__link > a:after,
 .box-story.theme-plain .box-story__date,
 .box-story.theme-plain .box-story__tag,
 .box-story.theme-plain .box-story__title,
 .box-story.theme-plain .box-story__content,
 .box-story.theme-plain .box-story__link > a,
-.box-story.theme-plain .box-card__fieldset .box-story__link > a,
-.box-story.theme-plain .box-story__link > a:after,
-.box-story.theme-plain .box-card__fieldset .box-story__link > a:after {
+.box-story.theme-plain .box-story__link > a:after {
   color: #FFF;
 }
 
@@ -8262,17 +8283,13 @@ input[type="text"].search-form-large__input {
 .theme-plain-alt.box-story--liftup .box-story__title, .theme-plain-alt.box-story--constrained .box-story__title,
 .theme-plain-alt.box-story--liftup .box-story__content, .theme-plain-alt.box-story--constrained .box-story__content,
 .theme-plain-alt.box-story--liftup .box-story__link > a, .theme-plain-alt.box-story--constrained .box-story__link > a,
-.theme-plain-alt.box-story--liftup .box-card__fieldset .box-story__link > a, .theme-plain-alt.box-story--constrained .box-card__fieldset .box-story__link > a,
 .theme-plain-alt.box-story--liftup .box-story__link > a:after, .theme-plain-alt.box-story--constrained .box-story__link > a:after,
-.theme-plain-alt.box-story--liftup .box-card__fieldset .box-story__link > a:after, .theme-plain-alt.box-story--constrained .box-card__fieldset .box-story__link > a:after,
 .box-story.theme-plain-alt .box-story__date,
 .box-story.theme-plain-alt .box-story__tag,
 .box-story.theme-plain-alt .box-story__title,
 .box-story.theme-plain-alt .box-story__content,
 .box-story.theme-plain-alt .box-story__link > a,
-.box-story.theme-plain-alt .box-card__fieldset .box-story__link > a,
-.box-story.theme-plain-alt .box-story__link > a:after,
-.box-story.theme-plain-alt .box-card__fieldset .box-story__link > a:after {
+.box-story.theme-plain-alt .box-story__link > a:after {
   color: #222;
 }
 
