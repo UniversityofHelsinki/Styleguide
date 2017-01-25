@@ -5382,7 +5382,8 @@ dl, ol, ul {
     transition-property: all;
     transition-duration: 0.1s;
   }
-  .horizontal-tabs .horizontal-tab-button > a:focus {
+  .horizontal-tabs .horizontal-tab-button > a:active, .horizontal-tabs .horizontal-tab-button > a:focus {
+    background-color: #FFF;
     color: #0098d0;
   }
   .horizontal-tabs .horizontal-tab-button.selected {
@@ -9023,15 +9024,6 @@ input[type="text"].search-form-large__input {
           animation-name: slideIn;
 }
 
-.is-slideout {
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-name: slideOut;
-          animation-name: slideOut;
-}
-
 @-webkit-keyframes slideIn {
   0% {
     opacity: 0;
@@ -9058,6 +9050,15 @@ input[type="text"].search-form-large__input {
   }
 }
 
+.is-slideout {
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: slideOut;
+          animation-name: slideOut;
+}
+
 @-webkit-keyframes slideOut {
   0% {
     opacity: 1;
@@ -9081,5 +9082,32 @@ input[type="text"].search-form-large__input {
     opacity: 0;
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
+  }
+}
+
+.is-fadein {
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
