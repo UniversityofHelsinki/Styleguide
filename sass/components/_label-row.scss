@@ -11,8 +11,8 @@
 
 .label-row__item {
   @include label;
-  border-bottom: 1px solid $blue--active;
-  border-top: 1px solid $blue--active;
+  border-bottom: 1px solid $blue;
+  border-top: 1px solid $blue;
   display: inline-block;
   height: 2.2em;
   position: relative;
@@ -20,7 +20,7 @@
 
   &.theme-secondary {
     background: none;
-    color: $blue--active;
+    color: $blue;
     left: 0;
     padding-right: 0;
     position: absolute;

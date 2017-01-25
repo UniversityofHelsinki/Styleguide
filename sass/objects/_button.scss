@@ -12,10 +12,36 @@
 */
 %button,
 .button {
-  @include button;
   @include font-family-main;
+  @include font-size(15px);
+  background-color: $blue;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8em 1em;
+  transition-duration: 0.1s;
+  transition-property: all;
+  user-select: none;
 
-  &.theme-transparent {
+  &:focus,
+  &:hover {
+    background-color: $darkblue;
+    color: $white;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $darkblue--active;
+  }
+
+  &:before, &:after {
+    transition-duration: 0.1s;
+    transition-property: all;
+  }
+
+  &.theme-transparent,
+  &.theme-transparent-alt {
     background-color: transparent;
     color: $blue;
 
@@ -27,6 +53,33 @@
     &:hover {
       color: $white;
     }
+  }
+}
+
+/*
+ section: 3.7.1.1
+ title: Button small
+ template: 3_7_1_1-button--small
+ description:
+*/
+
+.button--small {
+  @extend %button;
+  background-color: $lightsilver;
+  color: $black;
+  line-height: 1;
+  padding: .4em .7em;
+
+  &:focus,
+  &:hover {
+    background-color: $silver;
+    color: $white;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -87,46 +140,35 @@
   padding-right: 4em;
   position: relative;
 
-  &:before,
+  // Icon + background
   &:after {
+    align-items: center;
+    background-color: $blue--active;
+    color: $white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
     position: absolute;
     right: 0;
     top: 0;
     width: 3rem;
   }
 
-  // Icon background
-  &:before {
-    background-color: $blue--active;
-    content: "";
-    height: 100%;
-  }
-
-  // Icon
-  &:after {
-    @include vertically-center;
-    color: $white;
-    right: -2px;
-    text-align: center;
-  }
-
   &:hover {
-    &:before {
+    &:after {
       background: $darkblue--active;
     }
   }
 
-  &.theme-transparent {
+  &.theme-transparent,
+  &.theme-transparent-alt {
     align-items: center;
     display: flex;
     padding-left: 0;
     padding-right: 0;
 
-    &:before {
-      display: none;
-    }
-
     &:after {
+      background: none;
       color: $blue;
       margin-left: 15px;
       line-height: 0;
@@ -145,6 +187,15 @@
       color: $darkblue;
     }
   }
+
+  &.theme-transparent-alt {
+    border-bottom: 1px solid $lightsilver;
+    padding-right: 1rem;
+
+    &:after {
+      position: absolute;
+    }
+  }
 }
 
 /*
@@ -159,7 +210,6 @@
   padding-left: 4em;
   padding-right: 1em;
 
-  &:before,
   &:after {
     left: 0;
     right: auto;
@@ -168,10 +218,6 @@
   &.theme-transparent {
     display: block;
     padding-left: 2em;
-
-    &:before {
-      display: none;
-    }
 
     &:after {
       margin: 0;
@@ -271,27 +317,22 @@
 */
 %button-group,
 .button-group {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   position: relative;
-  vertical-align: middle;
 
-  > .button {
-    display: inline-block;
-    margin-bottom: 0.3em;
+  > .button-group__button {
+    margin-right: 4px;
+    margin-bottom: 4px;
     position: relative;
   }
 }
 
 /*
  section: 3.7.8
- title: Button group small
+ title: Button group (small buttons)
  template: 3_7_8-button-group--small
  description:
 */
-.button-group--small {
-  @extend %button-group;
-  > .button {
-    @include font-size(15px);
-    padding: 0.3em 0.7em;
-  }
-}
+

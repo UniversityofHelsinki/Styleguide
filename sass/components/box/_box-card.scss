@@ -59,7 +59,7 @@
 }
 
 .box-card__content {
-  background-color: lighten($lightsilver, 5%);
+  background-color: $lightsilver;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;

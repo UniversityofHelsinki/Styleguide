@@ -1,20 +1,20 @@
 /*
- section: 4.1
+ section: 4.2
  title: Search form
  description:
 */
 
 /*
- section: 4.1.1
+ section: 4.2.1
  title: Search form
- template: 4_1_1_search-form
+ template: 4_2_1_search-form
  description:
 */
 
 /*
- section: 4.1.2
+ section: 4.2.2
  title: Search form dark
- template: 4_1_2_search-form-dark
+ template: 4_2_2_search-form-dark
  description:
 */
 .search-form {
@@ -23,55 +23,46 @@
 }
 
 .search-form__label {
-  @include text-label;
-  display: block;
-  padding-bottom: 0.5em;
 }
 
-.search-form__input {
-  border-radius: 0;
-  border: 2px solid $blue;
-  height: 40px;
-  line-height: 34px;
-  padding-left: 1em;
-  padding-right: 3em;
-  width: 100%;
-
-  &:focus {
-    outline-color: $blue;
-  }
-
-  @include breakpoint($small) {
-    @include font-size(12px);
-  }
+input[type="text"].search-form__input {
+  height: 3rem;
 }
 
 input[type="submit"].search-form__submit {
-  border-radius: 0;
   @include icon(); // Unicode is provided by the form
-  background-color: $blue;
+  background-color: transparent;
+  border-radius: 0;
   bottom: 0;
-  color: $white;
-  height: 40px;
+  color: $blue;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  width: 2.5em;
+  width: 3rem;
 
+  &:hover,
   .search-form__input:focus + & {
-    &:hover {
-      color: $white;
-    }
+    background-color: $blue;
+    color: $white;
+  }
+
+  .search-form__input:focus + &:hover {
+    background-color: $darkblue;
   }
 }
 
-.search-form--dark {}
+// TODO: do this with a theme-class
+.search-form--dark {
+  max-width: 50em;
+  position: relative;
+}
 
-.search-form--dark__input {
-  background: $darkgray;
+input[type="text"].search-form--dark__input {
+  background: $black;
   border: none;
   color: $white;
-  line-height: 34px;
+  height: 3rem;
   margin-bottom: 0;
   max-width: 100%;
   min-height: 34px;
@@ -82,27 +73,23 @@ input[type="submit"].search-form__submit {
   &:focus {
     outline-color: $blue;
   }
-
-  @include breakpoint($small) {
-    @include font-size(12px);
-  }
 }
 
 input[type="submit"].search-form--dark__submit {
   @include icon(); // Unicode is provided by the form
   background-color: transparent;
-  height: 36px;
+  bottom: 0;
+  height: 3rem;
   padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
-  width: 34px;
+  width: 3rem;
 
   .search-form--dark__input:focus + & {
-    color: $blue;
+    color: $white;
 
     &:hover {
-      color: $white;
+      color: $blue;
     }
   }
 }
@@ -120,7 +107,7 @@ input[type="submit"].search-form--dark__submit {
   padding-bottom: 0.5em;
 }
 
-.search-form-large__input {
+input[type="text"].search-form-large__input {
   @include font-size(15px);
   border: 2px solid $lightsilver;
   color: $silver;

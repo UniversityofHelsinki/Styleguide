@@ -1,5 +1,5 @@
 @mixin shadow-under {
-  box-shadow: 0 15px 25px -27px $gray;
+  box-shadow: 0 15px 25px -27px $lightgray;
 }
 
 @mixin tab-shadow {
@@ -7,7 +7,7 @@
 }
 
 @mixin box-shadow-outline {
-  box-shadow: 0 0 2px $darkgray;
+  box-shadow: 0 0 2px $black;
 }
 
 @mixin bubble-shadow {

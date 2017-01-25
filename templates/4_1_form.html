@@ -1,0 +1,65 @@
+<form class="form">
+  <fieldset class="form__fieldset">
+    <div class="form__item">
+      <label>
+        Tilausvaihtoehto
+        <span class="is-required" title="Kenttä on pakollinen.">*</span>
+      </label>
+      <div class="form__item">
+        <input required="required" id="form_radio" type="radio" name="name" value="value">
+        <label for="form_radio">Radio 1</label>
+      </div>
+      <div class="form__item">
+        <input required="required" id="form_radio2" type="radio" name="name" value="value">
+        <label for="form_radio2">Radio 2</label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Lehden saaja</legend>
+    <div class="form__item">
+      <label for="form_name">
+        Nimi
+        <span class="is-required" title="Kenttä on pakollinen.">*</span>
+      </label>
+      <input id="form_name" type="text" name="Text">
+    </div>
+    <div class="form__item">
+      <label for="form_address">
+        Osoite
+        <span class="is-required" title="Kenttä on pakollinen.">*</span>
+      </label>
+      <input id="form_address" type="text" name="Text">
+    </div>
+  </fieldset>
+  <fieldset class="form__fieldset">
+    <legend class="form__legend">Lehden maksaja</legend>
+    <div class="form__item">
+      <label for="form_name_2">
+        Nimi
+      </label>
+      <input id="form_name_2" type="text" name="Text">
+      <div class="form__description">Kentän kuvausteksti.</div>
+    </div>
+    <div class="form__item">
+      <label for="form_address_2">
+        Osoite
+      </label>
+      <input id="form_address_2" type="text" name="Text">
+    </div>
+  </fieldset>
+  <fieldset class="form__fieldset">
+    <div class="form__item">
+      <label>
+        Markkinointi
+      </label>
+      <div class="form__item">
+        <input required="required" id="form_checkbox" type="checkbox" name="name" value="value">
+        <label for="form_checkbox">Checkbox</label>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form__actions">
+    <input type="submit" value="Lähetä">
+  </div>
+</form>

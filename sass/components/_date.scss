@@ -1,7 +1,7 @@
 .date {
   @include font-size(14px);
   @include font-weight-bold;
-  color: $gray;
+  color: $lightgray;
   font-weight: 500;
   letter-spacing: 0.01em;
   margin: 0 0 1em 0;

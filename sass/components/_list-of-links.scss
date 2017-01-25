@@ -17,13 +17,12 @@
 .list-of-links__subtitle {
   @include font-size(11px);
   @include font-weight-medium;
-  color: $darksilver;
+  color: $silver;
   margin-bottom: 1em;
   text-transform: uppercase;
 }
 
 .list-of-links__link {
-  @include font-weight-medium;
   margin-bottom: 2px;
   padding-left: 10px;
 
@@ -33,26 +32,14 @@
     }
   }
 
-  &:after {
-    height: auto;
-  }
-
-  .theme-dark & {
-    @include button-next;
-  }
-
   // Theme info footer
-  .theme-footer &,
   .theme-info-footer & {
-    @include border-side(bottom);
-    border-bottom-color: lighten($gray, 40%);
-    color: lighten($darkgray, 10%);
+    border-bottom-color: $mediumsilver;
+    color: $black;
 
     &:before,
     &:after {
-      color: $gray;
-      position: absolute;
-      right: 0;
+      color: $lightgray;
     }
 
     &:hover {
@@ -67,9 +54,8 @@
 
   // Theme footer
   .theme-footer & {
-    border-bottom-color: darken($black, 20%);
+    border-bottom-color: $lightgray;
     color: $white;
-    display: block;
 
     &:before,
     &:after {
@@ -77,11 +63,11 @@
     }
 
     &:hover {
-      color: darken($white, 20%);
+      color: $mediumsilver;
 
       &:before,
       &:after {
-        color: darken($white, 20%);
+        color: $mediumsilver;
       }
     }
   }
@@ -96,7 +82,7 @@
 
 /*
  section: 6.2.2
- title: List of links (with transparent buttons)
+ title: List of links (with transparent and transparent-alt buttons)
  template: 6_2_2_list-of-links-transparent
  description:
 */
@@ -105,7 +91,7 @@
  section: 6.2.3
  title: List of links condensed
  template: 6_2_2_list-of-links-condensed
- description:
+ description: Condensed version with footer themes applied. Also uses transparent-alt theme on the buttons.
 */
 
 .list-of-links--condensed {

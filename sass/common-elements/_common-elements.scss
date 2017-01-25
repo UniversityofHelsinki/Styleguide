@@ -1,6 +1,11 @@
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  @include font-family-main;
+  box-sizing: border-box;
+  font-size: $base-font-size-mobile;
+
+  @include breakpoint($small) {
+   font-size: $base-font-size;
+  }
 }
 
 *, *:before, *:after {
@@ -18,7 +23,7 @@ video {
 /*
   section: 3
   title: Common elements
-  description: Description about common elements.
+  description: Common HTML-elements.
 */
 
 html {
@@ -26,7 +31,7 @@ html {
 }
 
 body {
-  color: $gray;
+  color: $lightgray;
 }
 
 img {
@@ -37,12 +42,11 @@ img {
   section: 3.1
   title: Headings
   template: 3_1_headings
-  description: Description about headings.
 */
 
 h1, h2, h3, h4, h5, h6 {
   @include font-family-main;
-  color: $darkgray;
+  color: $black;
   letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 0;
@@ -52,58 +56,64 @@ h1, h2, h3, h4, h5, h6 {
 
   a {
     // TODO: Color inherit
-    color: $darkgray;
+    color: $black;
     text-decoration: none;
 
     &:hover {
-      color: $darkgray;
+      color: $black;
       cursor: pointer;
     }
   }
 }
 
 h1 {
-  @include font-size(36px);
+  @include font-size(50px, 40px);
   letter-spacing: -2px;
   line-height: 1.15em;
-
-  @include breakpoint($small) {
-    @include font-size(44px);
-  }
 }
 
 h2 {
-  @include font-size(25px);
-
-  @include breakpoint($medium) {
-    @include font-size(35px);
-  }
+  @include font-size(40px, 32px);
 }
 
 h3 {
-  @include font-size(28px);
+  @include font-size(30px, 26px);
 }
 
 h4 {
-  @include font-size(19.2px);
+  @include font-size(20px, 20px);
+}
+
+h5 {
+  @include font-size(16px, 16px);
+}
+
+h6 {
+  @include font-size(14px, 14px);
 }
 
 /*
   section: 3.2
   title: Paragraph
   template: 3_2_paragraphs
-  description: Description about paragraph.
 */
 
 p {
-  @include text-paragraph;
+  @include font-size(16px, 15px);
+  margin: 0 0 15px 0;
+  letter-spacing: 0;
+  line-height: 1.3em;
+
+  @include breakpoint($small) {
+    line-height: 1.5em;
+    margin: 0 0 16px 0;
+  }
 }
 
 /*
   section: 3.3
   title: Links
   template: 3_3_links
-  description:
 */
 
 a {
@@ -118,21 +128,15 @@ a {
 /*
   section: 3.4
   title: Blockquote
-  description:
 */
 
 /*
   section: 3.4.1
   title: Blockquote
   template: 3_4_1_blockquote
-  description:
 */
 blockquote {
-  @include font-size(20px);
-  @include font-weight-book;
   border-left: 10px solid $silver;
-  color: $silver;
-  line-height: 1.1em;
   margin: 20px 10px;
   padding: 10px 25px;
 }
@@ -141,53 +145,199 @@ blockquote {
   section: 3.4.2
   title: Blockquote paragraph
   template: 3_4_2_blockquote-paragraph
-  description: Blockquote with a p-element inside.
+  description: Blockquote with a p-elements inside.
 */
+blockquote,
 blockquote p {
-  @include font-size(22px);
+  @include font-size(18px, 16px);
   @include font-weight-book;
   color: $silver;
-  display: inline;
-  line-height: 1.1em;
+  line-height: 1.5em;
+}
+
+blockquote p {
+  margin-bottom: 32px;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
 
 /*
   section: 3.5
-  title: Form components
-  template: 3_5_form-components
-  description: Basic form components
+  title: Form elements
+  template: 3_5_form-elements
+  description: Basic form elements
 */
 
 button, input, select, textarea {
+  -webkit-appearance: none;
   font-family: inherit;
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
 }
 
-input {
-  -webkit-appearance: none;
+label {
+  @include font-size(18px);
+  color: $lightgray;
+  font-weight: 300;
+  line-height: 2.4em;
+  padding: 0;
+  margin: 0;
+
+  .is-required {
+    color: $blue;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.2em;
+  }
 }
 
 input[type="submit"] {
   @extend %button;
+  font-weight: 600;
+  padding: 10px 30px;
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $lightsilver;
+  }
 }
 
-select {
-  background: transparent;
-  border: 1px solid darken($lightsilver, 20%);
-  padding: 10px 5px;
-  width: 100%;
-}
-
+select,
+input[type="email"],
+input[type="text"],
 textarea {
   @include font-size(16px);
-  @include font-weight-medium;
-  border: 1px solid darken($lightsilver, 20%);
-  color: $gray;
-  opacity: 1;
+  background: none;
+  border-radius: 0;
+  border: 1px solid $silver;
+  color: $lightgray;
+  outline-color: rgba($blue, 0);
+  outline-offset: -2px;
+  outline-style: solid;
+  outline-width: 2px;
   padding: 10px;
+  transition-duration: 0.2s;
+  transition-property: all;
   width: 100%;
+
+  &:focus {
+    border-color: transparent;
+    outline-color: rgba($blue, 255);
+  }
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $lightsilver;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+
+  + label {
+    @include font-size(14px);
+    align-items: center;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    line-height: normal;
+    padding-left: 1.5rem;
+    position: relative;
+
+    &:before {
+      @include vertically-center;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &[disabled],
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    + label {
+      color: $silver;
+      cursor: default;
+
+      &:before {
+        border-color: $silver;
+        color: $silver;
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  + label {
+    &:before {
+      @include font-size(16px);
+      border: 1px solid $blue;
+      border-radius: 100%;
+      color: $blue;
+      content: "";
+      height: 14px;
+      margin-right: 10px;
+      text-align: center;
+      transition-duration: 0.1s;
+      transition-property: all;
+      width: 14px;
+    }
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        background-color: $blue;
+        box-shadow: inset 0 0 0 3px #FFF;
+      }
+    }
+  }
+}
+
+input[type="checkbox"] {
+  + label {
+    &:before {
+      @include icon($icon-square);
+      color: $blue;
+      left: 1px;
+      margin-right: 10px;
+    }
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        content: $icon-square-checked;
+      }
+    }
+  }
+}
+
+// select {
+//   background: transparent;
+//   border: 1px solid $silver;
+//   border-radius: 0;
+//   padding: 10px 5px;
+//   width: 100%;
+// }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  @extend h4;
+  font-weight: 800;
 }
 
 /*
@@ -203,6 +353,7 @@ tbody {}
 th {
   background: none;
   padding: 0;
+  text-align: left;
 }
 
 tr {}
