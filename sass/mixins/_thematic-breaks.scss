@@ -65,7 +65,7 @@
   &:after,
   &:before {
     @include border;
-    border-color: darken($lightsilver, 10%);
+    border-color: $mediumsilver;
     border-radius: 50%;
     height: 6px;
     margin-top: -3px;

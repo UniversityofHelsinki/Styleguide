@@ -1,0 +1,49 @@
+/*
+ section: 4.1
+ title: Form
+ template: 4_1_form
+ description: Form component with child components like descriptions and fieldsets.
+*/
+
+.form {
+}
+
+.form__fieldset {
+  border-bottom: 1px solid $lightsilver;
+  margin: 0 0 1.5em;
+  padding: .5em 0 1em;
+  width: 100%;
+
+  &:last-of-type {
+    border: none;
+    margin: 0;
+  }
+}
+
+.form__legend {
+}
+
+.form__item {
+  margin-bottom: 1em;
+
+  @include breakpoint($small) {
+    width: 50%;
+  }
+
+  .form__item {
+    width: auto;
+  }
+}
+
+.form__description {
+  @include font-size(14px);
+  color: $lightgray;
+  font-weight: 300;
+  padding-top: 0.3em;
+}
+
+.form__actions {
+  @include breakpoint($small) {
+    width: 50%;
+  }
+}

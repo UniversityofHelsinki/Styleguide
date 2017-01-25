@@ -61,7 +61,7 @@
 
 .l-top-bar__subright {
   @include breakpoint($small) {
-    border-left: 1px solid $gray;
+    border-left: 1px solid $lightgray;
     margin-left: 15px;
     padding-left: 5px;
   }

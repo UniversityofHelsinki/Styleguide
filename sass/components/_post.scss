@@ -56,7 +56,7 @@
 }
 
 .post__content {
-  color: $gray;
+  color: $lightgray;
   line-height: 1.2em;
   margin-bottom: 0.4em;
   overflow: hidden;
@@ -94,7 +94,7 @@
   @include font-weight-medium;
   align-items: center;
   display: flex;
-  color: darken($lightsilver, 10%);
+  color: $mediumsilver;
   float: left;
   margin-right: 1em;
 

@@ -41,7 +41,7 @@
     }
 
     a {
-      color: $darkgray;
+      color: $black;
     }
 
     &.type {
@@ -53,5 +53,5 @@
 }
 
 .feed-listing__more-link {
-  @extend %panel__more-link;
+  float: right;
 }

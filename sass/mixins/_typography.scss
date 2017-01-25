@@ -1,20 +1,21 @@
-// Use REMs with a pixel fallback for font sizing.
-@mixin font-size($font-size) {
-  font-size: $font-size * ($mobile-font-size / $base-font-size);
-  font-size: ($font-size / $base-font-size)*1rem;
-
-  @include breakpoint($small) {
-    font-size: $font-size;
+// Calculate rem (root em) units from pixel values with option for desired mobile size.
+@mixin font-size($font-size, $desired-mobile-size: "") {
+  @include breakpoint($mobile-only) {
+    @if $desired-mobile-size != "" {
+      font-size: ($desired-mobile-size / $base-font-size-mobile)*1rem;
+    }
   }
+
+  font-size: ($font-size / $base-font-size)*1rem;
 }
 
 // Fonts
 @mixin font-family-main {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 @mixin font-family-bodytext {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif, Nimbus Sans L;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 // Weights
@@ -45,17 +46,10 @@
 }
 
 // Common text stylings
-@mixin text-paragraph {
-  @include font-size(16px);
-  margin: 0 0 $vert-spacing-unit 0;
-  letter-spacing: 0.01em;
-  line-height: 1.6em;
-}
-
 @mixin text-label {
   @include font-size(18px);
   @include font-weight-book;
-  color: $gray;
+  color: $lightgray;
   text-transform: none;
 }
 
@@ -66,7 +60,7 @@
 }
 
 @mixin text-informative {
-  @include font-size(14px);
+  @include font-size(16px);
   @include font-weight-book;
   color: $lightgray;
   line-height: 1.5em;
@@ -110,7 +104,7 @@
 
 @mixin subtitle {
   @include font-weight-medium;
-  color: lighten($black, 33%);
+  color: $lightgray;
   font-size: 1.2em;
   line-height: 1.2em;
   padding: 0;
@@ -123,7 +117,7 @@
 
 @mixin subtitle-thin {
   @include font-weight-light;
-  color: lighten($black, 33%);
+  color: $lightgray;
   font-size: 1.1em;
   line-height: 2.4em;
   padding: 0;
