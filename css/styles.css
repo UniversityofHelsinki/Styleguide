@@ -5330,6 +5330,10 @@ dl, ol, ul {
   }
 }
 
+.horizontal-tabs .horizontal-tabs-panes {
+  overflow: hidden;
+}
+
 .horizontal-tabs .horizontal-tabs-pane legend {
   display: none;
 }
