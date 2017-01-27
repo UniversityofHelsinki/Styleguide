@@ -2,13 +2,8 @@
  section: 6.10.4
  title: Box ingress
  template: 6_10_4_box-ingress
- description: TODO: write documentation
+ description: Image on the left, ingress text on the right
 */
-
-/**
- * box-ingress
- * TODO: write documentation
- */
 
 .box-ingress {
   @include clearfix;
@@ -26,5 +21,7 @@
 }
 
 .box-ingress__content {
-  @extend %textarea;
+  p {
+    @include font-size(18px);
+  }
 }

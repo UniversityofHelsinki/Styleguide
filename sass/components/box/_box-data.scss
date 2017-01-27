@@ -18,6 +18,7 @@
 .box-data__left {
   align-items: center;
   background-color: $lightgray;
+  color: $white;
   display: flex;
   flex-shrink: 0;
   height: 55px;
@@ -42,28 +43,25 @@
 }
 
 .box-data__date {
-  @include text-informative;
-  @include font-family-main;
   @include font-weight-medium;
-  color: $white;
+  @include font-size(14px);
 }
 
 .box-data__icon {
-  color: $white;
-
   &:after {
     @include font-size(38px);
     @include icon($icon-helsinginyliopisto);
   }
 }
 
+.box-data__container {
+  @include font-size(14px);
+}
+
 .box-data__title {
-  @include text-informative;
-  @include font-family-main;
   @include font-weight-medium;
 }
 
 .box-data__content {
-  @include text-informative;
-  @include font-family-main;
+  color: $lightgray;
 }

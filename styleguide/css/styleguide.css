@@ -1,42 +1,42 @@
-/** 
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) 
- * http://cssreset.com 
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
  * Adapted for the idean-styleguide namespace
  */
 
 #idean-styleguide [class*="idean-styleguide"] {
-	margin: 0;	
-	padding: 0;	
-	border: 0;	
-	font-size: 100%;	
-	font: inherit;	
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 	font-family: 'Open Sans', sans-serif;
-	color: #3d423d;
+	/* color: #3d423d; */
 	line-height: 1.4;
 	float: none;
 	text-align: left;
 }
 
 /* HTML5 display-role reset for older browsers */
-#idean-styleguide {	
+#idean-styleguide {
 	line-height: 1;
 	background: white;
 }
-article[class*="idean-styleguide"], aside[class*="idean-styleguide"], details[class*="idean-styleguide"], figcaption[class*="idean-styleguide"], figure[class*="idean-styleguide"], footer[class*="idean-styleguide"], header[class*="idean-styleguide"], hgroup[class*="idean-styleguide"], menu[class*="idean-styleguide"], nav[class*="idean-styleguide"], section[class*="idean-styleguide"] {	
+article[class*="idean-styleguide"], aside[class*="idean-styleguide"], details[class*="idean-styleguide"], figcaption[class*="idean-styleguide"], figure[class*="idean-styleguide"], footer[class*="idean-styleguide"], header[class*="idean-styleguide"], hgroup[class*="idean-styleguide"], menu[class*="idean-styleguide"], nav[class*="idean-styleguide"], section[class*="idean-styleguide"] {
 	display: block;
 }
-ol[class*="idean-styleguide"], ul[class*="idean-styleguide"] {	
+ol[class*="idean-styleguide"], ul[class*="idean-styleguide"] {
 	list-style: none;
 }
-blockquote[class*="idean-styleguide"], q[class*="idean-styleguide"] {	
+blockquote[class*="idean-styleguide"], q[class*="idean-styleguide"] {
 	quotes: none;
 }
-blockquote[class*="idean-styleguide"]:before, blockquote[class*="idean-styleguide"]:after,q[class*="idean-styleguide"]:before, q[class*="idean-styleguide"]:after {	
-	content: '';	
+blockquote[class*="idean-styleguide"]:before, blockquote[class*="idean-styleguide"]:after,q[class*="idean-styleguide"]:before, q[class*="idean-styleguide"]:after {
+	content: '';
 	content: none;
 }
-table[class*="idean-styleguide"] {	
+table[class*="idean-styleguide"] {
 	border-collapse: collapse;	border-spacing: 0;
 }
 #idean-styleguide .idean-styleguide-link{
@@ -226,7 +226,7 @@ table[class*="idean-styleguide"] {
 }
 #idean-styleguide .idean-styleguide-menu-button:hover{ opacity: 1; }
 
-#idean-styleguide .idean-styleguide-menu-button .lines{ 
+#idean-styleguide .idean-styleguide-menu-button .lines{
     display: inline-block;
     width: 35px;
     height: 5px;
@@ -235,7 +235,7 @@ table[class*="idean-styleguide"] {
     position: relative;
     transition: background .3s .4s ease;
 }
-#idean-styleguide .idean-styleguide-menu-button .lines:before, 
+#idean-styleguide .idean-styleguide-menu-button .lines:before,
 #idean-styleguide .idean-styleguide-menu-button .lines:after{
 	display: inline-block;
     width: 35px;
@@ -255,18 +255,18 @@ table[class*="idean-styleguide"] {
 #idean-styleguide .idean-styleguide-menu-button:hover .lines:after{ top: -10px; }
 
 
-#idean-styleguide .idean-styleguide-menu-button.close .lines{ 
+#idean-styleguide .idean-styleguide-menu-button.close .lines{
 	transition: background .3s 0s ease;
 	background: transparent;
 }
 #idean-styleguide .idean-styleguide-menu-button.close .lines:before,
 #idean-styleguide .idean-styleguide-menu-button.close .lines:after{
-	transition: top .3s ease, transform .3s .5s ease;      
+	transition: top .3s ease, transform .3s .5s ease;
 	top:0;
 	width: 35px;
 }
-#idean-styleguide .idean-styleguide-menu-button.close .lines:before{ transform: rotate3d(0,0,1,45deg); } 
-#idean-styleguide .idean-styleguide-menu-button.close .lines:after{ transform: rotate3d(0,0,1,-45deg); } 
+#idean-styleguide .idean-styleguide-menu-button.close .lines:before{ transform: rotate3d(0,0,1,45deg); }
+#idean-styleguide .idean-styleguide-menu-button.close .lines:after{ transform: rotate3d(0,0,1,-45deg); }
 
 
 
