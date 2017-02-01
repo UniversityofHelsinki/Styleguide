@@ -5449,6 +5449,7 @@ dl, ol, ul {
 
 .index__row {
   margin: 0 0 0.6em 0;
+  page-break-inside: avoid;
 }
 
 .index__link {
@@ -7865,7 +7866,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero {
     margin: 0;
-    width: 43%;
+    width: 50%;
   }
 }
 
@@ -7970,12 +7971,6 @@ input[type="text"].search-form-large__input {
   margin-bottom: 15px;
   padding: 0;
   word-wrap: break-word;
-}
-
-@media (min-width: 48em) {
-  .box-hero__title {
-    font-size: 3rem;
-  }
 }
 
 .box-hero__title:only-child {
