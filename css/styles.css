@@ -5334,6 +5334,10 @@ dl, ol, ul {
   overflow: hidden;
 }
 
+.horizontal-tabs .horizontal-tabs-pane {
+  min-width: 0;
+}
+
 .horizontal-tabs .horizontal-tabs-pane legend {
   display: none;
 }
@@ -7865,7 +7869,7 @@ input[type="text"].search-form-large__input {
   
   .box-hero {
     margin: 0;
-    width: 43%;
+    width: 50%;
   }
 }
 
@@ -7970,12 +7974,6 @@ input[type="text"].search-form-large__input {
   margin-bottom: 15px;
   padding: 0;
   word-wrap: break-word;
-}
-
-@media (min-width: 48em) {
-  .box-hero__title {
-    font-size: 3rem;
-  }
 }
 
 .box-hero__title:only-child {

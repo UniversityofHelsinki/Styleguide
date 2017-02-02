@@ -36,6 +36,8 @@
   }
 
   .horizontal-tabs-pane {
+    min-width: 0;
+
     legend {
       display: none;
     }
