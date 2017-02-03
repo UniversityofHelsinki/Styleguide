@@ -5334,6 +5334,10 @@ dl, ol, ul {
   overflow: hidden;
 }
 
+.horizontal-tabs .horizontal-tabs-pane {
+  min-width: 0;
+}
+
 .horizontal-tabs .horizontal-tabs-pane legend {
   display: none;
 }
