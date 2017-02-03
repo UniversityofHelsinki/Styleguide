@@ -5848,6 +5848,12 @@ span.links__link.theme-language {
   color: #D2D2D2;
 }
 
+@media (min-width: 48em) {
+  span.links__link.theme-language {
+    color: #777777;
+  }
+}
+
 /*
  section: 6.2
  title: List of links
