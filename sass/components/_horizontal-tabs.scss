@@ -21,6 +21,7 @@
       position: relative;
 
       &:after {
+        bottom: 0;
         box-shadow: 0 -1px 0 0 $mediumsilver inset;
         content: "";
         height: 1px;
@@ -29,10 +30,6 @@
         right: 0;
       }
     }
-  }
-
-  .horizontal-tabs-panes {
-    overflow: hidden;
   }
 
   .horizontal-tabs-pane {
