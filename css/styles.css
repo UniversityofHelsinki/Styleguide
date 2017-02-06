@@ -416,7 +416,7 @@ th {
  title: Other colors
  description: The colors used through out the theme.
  color-list: list
- colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $mediumsilver, $silver, $lightgray, $red, $orange
+ colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $mediumsilver, $silver, $lightgray, $darkgray, $red, $orange
 */
 @font-face {
   font-family: 'Open Sans';
@@ -4726,9 +4726,9 @@ dl, ol, ul {
   bottom: auto;
   color: #979797;
   height: 40px;
-  line-height: 40px;
   margin-bottom: 0;
   margin-left: 0;
+  margin-top: 1em;
   position: absolute;
   right: 0;
   top: auto;
@@ -5832,7 +5832,13 @@ td.jobs-listing__date {
 }
 
 span.links__link.theme-language {
-  color: #777777;
+  color: #D2D2D2;
+}
+
+@media (min-width: 48em) {
+  span.links__link.theme-language {
+    color: #777777;
+  }
 }
 
 /*
