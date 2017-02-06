@@ -62,7 +62,6 @@ td.jobs-listing__title {
   @include font-family-main;
   @include font-size(14px);
   @include font-weight-medium;
-  @include text-informative;
   display: block;
   width: 100%;
 
@@ -76,7 +75,6 @@ td.jobs-listing__title {
 td.jobs-listing__date {
   @include font-family-main;
   @include font-size(14px);
-  @include text-informative;
   display: inline;
 
   @include breakpoint($medium) {

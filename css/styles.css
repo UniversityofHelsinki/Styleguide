@@ -5321,6 +5321,7 @@ dl, ol, ul {
     position: relative;
   }
   .horizontal-tabs .horizontal-tabs-list:after {
+    bottom: 0;
     box-shadow: 0 -1px 0 0 #D2D2D2 inset;
     content: "";
     height: 1px;
@@ -5328,10 +5329,6 @@ dl, ol, ul {
     position: absolute;
     right: 0;
   }
-}
-
-.horizontal-tabs .horizontal-tabs-panes {
-  overflow: hidden;
 }
 
 .horizontal-tabs .horizontal-tabs-pane {
@@ -5681,11 +5678,6 @@ td.jobs-listing__title {
   font-size: 0.875rem;
   font-weight: 600;
   font-style: normal;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #777777;
-  line-height: 1.5em;
   display: block;
   width: 100%;
 }
@@ -5701,11 +5693,6 @@ td.jobs-listing__title {
 td.jobs-listing__date {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #777777;
-  line-height: 1.5em;
   display: inline;
 }
 
