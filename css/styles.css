@@ -7406,6 +7406,10 @@ input[type="text"].search-form-large__input {
   margin-top: 0;
 }
 
+.textarea a {
+  word-wrap: break-word;
+}
+
 .textarea table {
   line-height: normal;
   margin-bottom: 2em;

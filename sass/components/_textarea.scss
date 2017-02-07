@@ -64,6 +64,10 @@
     }
   }
 
+  a {
+    word-wrap: break-word;
+  }
+
   table {
     @extend %table-simple;
     line-height: normal;
