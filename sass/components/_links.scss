@@ -66,5 +66,9 @@
 }
 
 span.links__link.theme-language {
-  color: $lightgray;
+  color: $mediumsilver;
+
+  @include breakpoint($small) {
+    color: $lightgray;
+  }
 }
