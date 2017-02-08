@@ -4333,7 +4333,7 @@ input[type="text"],
 input[type="password"],
 textarea {
   font-size: 1rem;
-  background: none;
+  background: #FFF;
   border-radius: 0;
   border: 1px solid #979797;
   color: #777777;
