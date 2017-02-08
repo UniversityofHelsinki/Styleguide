@@ -8135,6 +8135,11 @@ input[type="text"].search-form-large__input {
   transition-property: background-color;
 }
 
+
+.box-liftup:hover {
+  background-color: #005479;
+}
+
 @media (min-width: 48em) {
   
   .box-liftup {

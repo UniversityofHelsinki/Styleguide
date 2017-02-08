@@ -16,6 +16,10 @@
   transition-duration: 0.1s;
   transition-property: background-color;
 
+  &:hover {
+    background-color: $darkblue;
+  }
+
   @include breakpoint($small) {
     padding: 1.25em;
   }
