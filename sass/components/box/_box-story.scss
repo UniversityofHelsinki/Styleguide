@@ -11,12 +11,12 @@
 */
 %box-story,
 .box-story {
-  transition-property: background-color;
-  transition-duration: 0.1s;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
+  flex: 1 1 auto;
   position: relative;
+  transition-duration: 0.1s;
+  transition-property: background-color;
 
   &:active .box-story__title,
   &:hover .box-story__title {
