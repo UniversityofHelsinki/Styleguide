@@ -30,6 +30,8 @@
 
 .index__row {
   margin: 0 0 0.6em 0;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
 }
 
 .index__link {

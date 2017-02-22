@@ -22,13 +22,16 @@
   }
 
   > a {
-    @extend h4;
     @include font-family-main;
     @include font-size(18px);
+    color: $black;
     display: table-cell;
     font-weight: bold;
+    letter-spacing: -0.05em;
+    line-height: 1.2em;
     padding: 10px;
     text-align: center;
+    text-transform: uppercase;
     vertical-align: middle;
   }
 

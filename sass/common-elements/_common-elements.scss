@@ -210,9 +210,10 @@ input[type="submit"] {
 select,
 input[type="email"],
 input[type="text"],
+input[type="password"],
 textarea {
   @include font-size(16px);
-  background: none;
+  background: $white;
   border-radius: 0;
   border: 1px solid $silver;
   color: $lightgray;

@@ -1,0 +1,131 @@
+/*
+ section: 6.11.1
+ title: Textarea
+ template: 6_11_1_textarea
+ description: Basic component used in multiple row textareas with links, headings, lists and so on. Class .theme-ingress is used on textarea without p-tags inside. Class .dropcap is an optional class for the first letter to make dropcaps.
+*/
+
+.textarea,
+%textarea {
+  @include font-family-bodytext;
+  line-height: 1.5em;
+
+  ul, ol {
+    margin-bottom: $vert-spacing-unit;
+  }
+
+  li {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    padding-left: 1.5em;
+    position: relative;
+
+    li {
+      list-style-type: none;
+
+      &:before {
+        @include font-size(9px);
+        @include icon($icon-dot);
+        left: 0;
+        margin-top: 1px;
+        position: absolute;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    padding-left: 1.5em;
+    position: relative;
+
+    li {
+      display: block;
+
+      &:before {
+        @include font-family-main;
+        @include font-weight-bold;
+        content: counter(item) ". ";
+        counter-increment: item;
+        left: 1px;
+        line-height: 1.7em;
+        position: absolute;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 32px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  table {
+    @extend %table-simple;
+    line-height: normal;
+    margin-bottom: 2em;
+  }
+
+  &.theme-ingress {
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.5em;
+    margin-bottom: $vert-spacing-unit;
+  }
+
+  .dropcap {
+    @include breakpoint($small) {
+      @include font-size(75px);
+      @include font-weight-bold;
+      float: left;
+      line-height: 65px;
+      padding-right: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/**
+ * textarea-initial
+ * An element (usually an image) floated left before a textarea.
+ */
+
+%textarea-initial,
+.textarea-initial {
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
+}
+
+
+/*
+ section: 6.11.2
+ title: Textarea infobox
+ template: 6_11_2_textarea-infobox
+ description: Infobox type textarea.
+*/
+
+%textarea-infobox,
+.textarea-infobox {
+  @include font-family-main;
+  background-color: $lightsilver;
+  margin-bottom: 2em;
+  padding: 1.5em;
+
+  p {
+    line-height: normal;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

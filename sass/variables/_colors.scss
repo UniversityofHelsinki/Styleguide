@@ -19,18 +19,18 @@ $black: #222;
  title: Other colors
  description: The colors used through out the theme.
  color-list: list
- colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $mediumsilver, $silver, $lightgray, $red, $orange
+ colors: $blue, $blue--active, $darkblue, $darkblue--active, $lightsilver, $mediumsilver, $silver, $lightgray, $darkgray, $red, $orange
 */
-$blue:              #0098d0;
-$blue--active:      #0882B3;
-$darkblue:          #005479;
-$darkblue--active:  #003146;
+$blue: #0098d0;
+$blue--active: #0882B3;
+$darkblue: #005479;
+$darkblue--active: #003146;
 
-$red            : #e5053a;
-$orange         : #fca311;
+$lightsilver: #F8F8F8;
+$mediumsilver: #D2D2D2;
+$silver: #979797;
+$lightgray: #777777;
+$darkgray: #424242;
 
-// 4 shades of gray. Still 44 to go.
-$lightsilver   : #F8F8F8;
-$mediumsilver  : #D2D2D2;
-$silver        : #979797;
-$lightgray     : #777777;
+$red: #e5053a;
+$orange: #fca311;

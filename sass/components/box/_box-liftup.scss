@@ -1,0 +1,62 @@
+/*
+ section: 6.10.10
+ title: Box liftup
+ template: 6_10_10_box-liftup
+ description: Prominent liftup for e.g. ongoing Unitube live video.
+*/
+
+%box-liftup,
+.box-liftup {
+  background-color: $blue--active;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  padding: 1em 1em 1em 0.5em;
+  position: relative;
+  transition-duration: 0.1s;
+  transition-property: background-color;
+
+  &:hover {
+    background-color: $darkblue;
+  }
+
+  @include breakpoint($small) {
+    padding: 1.25em;
+  }
+}
+
+.box-liftup__left {
+  flex-shrink: 0;
+  margin-right: 0.5em;
+
+  @include breakpoint($small) {
+    margin-right: 1.25em;
+  }
+}
+
+.box-liftup__icon {
+  @include font-size(92px, 44px);
+  color: $white;
+  line-height: 1;
+}
+
+.box-liftup__right {
+}
+
+.box-liftup__precontent {
+  @include font-size(13px);
+  color: $white;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.box-liftup__title {
+  color: $white;
+  padding-bottom: 5px;
+}
+
+.box-liftup__content {
+  @include font-size(13px);
+  color: $white;
+  text-transform: uppercase;
+}
