@@ -4333,7 +4333,7 @@ input[type="text"],
 input[type="password"],
 textarea {
   font-size: 1rem;
-  background: none;
+  background: #FFF;
   border-radius: 0;
   border: 1px solid #979797;
   color: #777777;
@@ -6946,7 +6946,7 @@ input[type="submit"].search-form__submit:hover,
 }
 
 input[type="text"].search-form--dark__input {
-  background: #222;
+  background: #424242;
   border: none;
   color: #FFF;
   height: 3rem;
@@ -8112,6 +8112,85 @@ input[type="text"].search-form-large__input {
 }
 
 /*
+ section: 6.10.10
+ title: Box liftup
+ template: 6_10_10_box-liftup
+ description: Prominent liftup for e.g. ongoing Unitube live video.
+*/
+
+.box-liftup {
+  background-color: #0882B3;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 1em 1em 1em 0.5em;
+  position: relative;
+  transition-duration: 0.1s;
+  transition-property: background-color;
+}
+
+
+.box-liftup:hover {
+  background-color: #005479;
+}
+
+@media (min-width: 48em) {
+  
+  .box-liftup {
+    padding: 1.25em;
+  }
+}
+
+.box-liftup__left {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-right: 0.5em;
+}
+
+@media (min-width: 48em) {
+  .box-liftup__left {
+    margin-right: 1.25em;
+  }
+}
+
+.box-liftup__icon {
+  font-size: 5.75rem;
+  color: #FFF;
+  line-height: 1;
+}
+
+@media (max-width: 48em) {
+  .box-liftup__icon {
+    font-size: 3.14286rem;
+  }
+}
+
+.box-liftup__precontent {
+  font-size: 0.8125rem;
+  color: #FFF;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.box-liftup__title {
+  color: #FFF;
+  padding-bottom: 5px;
+}
+
+.box-liftup__content {
+  font-size: 0.8125rem;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+/*
  section: 6.10.9
  title: Box logo
  template: 6_10_9-box-logo
@@ -8170,18 +8249,18 @@ input[type="text"].search-form-large__input {
 
 .box-story--liftup, .box-story--constrained,
 .box-story {
-  transition-property: background-color;
-  transition-duration: 0.1s;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   position: relative;
+  transition-duration: 0.1s;
+  transition-property: background-color;
 }
 
 
