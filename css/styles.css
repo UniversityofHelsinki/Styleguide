@@ -4133,12 +4133,12 @@ h1, h2, h3, h4, legend, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, legend a, h5 a, h6 a {
-  color: #222;
+  color: inherit;
   text-decoration: none;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, legend a:hover, h5 a:hover, h6 a:hover {
-  color: #222;
+  color: inherit;
   cursor: pointer;
 }
 
