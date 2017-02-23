@@ -8244,10 +8244,8 @@ input[type="text"].search-form-large__input {
  section: 6.10.5.1
  title: Box story
  template: 6_10_5_1-box-story
- description: Displays content as a liftup in e.g. gridder-fields and news listings. ".theme-plain" modifier is for pictureless stories.
+ description: Displays content as a liftup in e.g. gridder-fields. ".theme-plain-alt" modifier is for pictureless stories. ".theme-black" is also possible.
 */
-
-.box-story--liftup, .box-story--constrained,
 .box-story {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8263,102 +8261,14 @@ input[type="text"].search-form-large__input {
   transition-property: background-color;
 }
 
-
-.box-story--liftup:active .box-story__title, .box-story--constrained:active .box-story__title,
-.box-story--liftup:hover .box-story__title, .box-story--constrained:hover .box-story__title,
-.box-story:active .box-story__title,
-.box-story:hover .box-story__title {
-  color: #005479;
-}
-
-
-.theme-small.box-story--liftup .box-story__title, .theme-small.box-story--constrained .box-story__title,
-.box-story.theme-small .box-story__title {
-  font-size: 1.3125rem;
-}
-
-
-.theme-plain.box-story--liftup, .theme-plain.box-story--constrained,
-.box-story.theme-plain {
-  background-color: #0882B3;
-  padding: 3.5em 1.5em;
-}
-
-
-.theme-plain.box-story--liftup .box-story__link-wrapper:after, .theme-plain.box-story--constrained .box-story__link-wrapper:after,
-.box-story.theme-plain .box-story__link-wrapper:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
-  color: #FFF;
-  bottom: 1em;
-  margin: 0;
-  position: absolute;
-  right: 1.5em;
-}
-
-
-.theme-plain.box-story--liftup .box-story__date, .theme-plain.box-story--constrained .box-story__date,
-.theme-plain.box-story--liftup .box-story__tag, .theme-plain.box-story--constrained .box-story__tag,
-.theme-plain.box-story--liftup .box-story__title, .theme-plain.box-story--constrained .box-story__title,
-.theme-plain.box-story--liftup .box-story__content, .theme-plain.box-story--constrained .box-story__content,
-.theme-plain.box-story--liftup .box-story__link > a, .theme-plain.box-story--constrained .box-story__link > a,
-.theme-plain.box-story--liftup .box-story__link > a:after, .theme-plain.box-story--constrained .box-story__link > a:after,
-.box-story.theme-plain .box-story__date,
-.box-story.theme-plain .box-story__tag,
-.box-story.theme-plain .box-story__title,
-.box-story.theme-plain .box-story__content,
-.box-story.theme-plain .box-story__link > a,
-.box-story.theme-plain .box-story__link > a:after {
-  color: #FFF;
-}
-
-
-.theme-plain.box-story--liftup .box-story__topical, .theme-plain.box-story--constrained .box-story__topical,
-.box-story.theme-plain .box-story__topical {
-  height: auto;
-}
-
-
-.theme-plain.box-story--liftup .box-story__label, .theme-plain.box-story--constrained .box-story__label,
-.box-story.theme-plain .box-story__label {
-  background: #FFF;
-  color: #0098d0;
-}
-
-
-.theme-plain.box-story--liftup .box-story__link, .theme-plain.box-story--constrained .box-story__link,
-.box-story.theme-plain .box-story__link {
-  bottom: 0.5em;
-  position: absolute;
-  right: 1.5em;
-}
-
-
-.theme-plain.box-story--liftup:hover, .theme-plain.box-story--constrained:hover,
-.box-story.theme-plain:hover {
-  background-color: #005479;
-}
-
-
-.theme-plain-alt.box-story--liftup, .theme-plain-alt.box-story--constrained,
 .box-story.theme-plain-alt {
   background-color: #D2D2D2;
 }
 
-
-.theme-plain-alt.box-story--liftup .box-story__link-wrapper, .theme-plain-alt.box-story--constrained .box-story__link-wrapper,
 .box-story.theme-plain-alt .box-story__link-wrapper {
   padding: 1em;
 }
 
-
-.theme-plain-alt.box-story--liftup .box-story__link-wrapper:after, .theme-plain-alt.box-story--constrained .box-story__link-wrapper:after,
 .box-story.theme-plain-alt .box-story__link-wrapper:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -8372,62 +8282,40 @@ input[type="text"].search-form-large__input {
   float: right;
 }
 
-
-.theme-plain-alt.box-story--liftup .box-story__date, .theme-plain-alt.box-story--constrained .box-story__date,
-.theme-plain-alt.box-story--liftup .box-story__tag, .theme-plain-alt.box-story--constrained .box-story__tag,
-.theme-plain-alt.box-story--liftup .box-story__title, .theme-plain-alt.box-story--constrained .box-story__title,
-.theme-plain-alt.box-story--liftup .box-story__content, .theme-plain-alt.box-story--constrained .box-story__content,
-.theme-plain-alt.box-story--liftup .box-story__link > a, .theme-plain-alt.box-story--constrained .box-story__link > a,
-.theme-plain-alt.box-story--liftup .box-story__link > a:after, .theme-plain-alt.box-story--constrained .box-story__link > a:after,
-.box-story.theme-plain-alt .box-story__date,
-.box-story.theme-plain-alt .box-story__tag,
-.box-story.theme-plain-alt .box-story__title,
-.box-story.theme-plain-alt .box-story__content,
-.box-story.theme-plain-alt .box-story__link > a,
-.box-story.theme-plain-alt .box-story__link > a:after {
+.box-story.theme-plain-alt .box-story__link-wrapper:hover .box-story__title {
   color: #222;
 }
 
+.box-story.theme-plain-alt * {
+  color: #222;
+}
 
-.theme-plain-alt.box-story--liftup .box-story__topical, .theme-plain-alt.box-story--constrained .box-story__topical,
 .box-story.theme-plain-alt .box-story__topical {
   height: auto;
 }
 
-
-.theme-plain-alt.box-story--liftup .box-story__label, .theme-plain-alt.box-story--constrained .box-story__label,
 .box-story.theme-plain-alt .box-story__label {
   background: #FFF;
   color: #0882B3;
 }
 
-
-.theme-plain-alt.box-story--liftup .box-story__link, .theme-plain-alt.box-story--constrained .box-story__link,
 .box-story.theme-plain-alt .box-story__link {
   bottom: 0.5em;
   position: absolute;
   right: 1.5em;
 }
 
-
-.theme-plain-alt.box-story--liftup:hover, .theme-plain-alt.box-story--constrained:hover,
 .box-story.theme-plain-alt:hover {
   background-color: #979797;
 }
 
 @media (min-width: 48em) {
-  
-  .theme-plain-alt.box-story--liftup .box-story__title, .theme-plain-alt.box-story--constrained .box-story__title,
   .box-story.theme-plain-alt .box-story__title {
     font-size: 170%;
   }
-  
-  .theme-plain-alt.box-story--liftup .box-story__link-wrapper, .theme-plain-alt.box-story--constrained .box-story__link-wrapper,
   .box-story.theme-plain-alt .box-story__link-wrapper {
     padding: 1.5em 1.5em 3.5em 1.5em;
   }
-  
-  .theme-plain-alt.box-story--liftup .box-story__link-wrapper:after, .theme-plain-alt.box-story--constrained .box-story__link-wrapper:after,
   .box-story.theme-plain-alt .box-story__link-wrapper:after {
     bottom: 1em;
     margin: 0;
@@ -8437,21 +8325,15 @@ input[type="text"].search-form-large__input {
 }
 
 @media (min-width: 48em) {
-  
-  .theme-black.box-story--liftup, .theme-black.box-story--constrained,
   .box-story.theme-black {
     background: #000;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  
-  .theme-black.box-story--liftup .box-story__link-wrapper, .theme-black.box-story--constrained .box-story__link-wrapper,
   .box-story.theme-black .box-story__link-wrapper {
     width: 100%;
   }
-  
-  .theme-black.box-story--liftup .box-story__link-wrapper:after, .theme-black.box-story--constrained .box-story__link-wrapper:after,
   .box-story.theme-black .box-story__link-wrapper:after {
     display: inline-block;
     font-family: "hy-icons";
@@ -8466,8 +8348,9 @@ input[type="text"].search-form-large__input {
     position: absolute;
     right: 1.5em;
   }
-  
-  .theme-black.box-story--liftup .box-story__image, .theme-black.box-story--constrained .box-story__image,
+  .box-story.theme-black .box-story__link-wrapper:hover .box-story__title {
+    color: #FFF;
+  }
   .box-story.theme-black .box-story__image {
     border: none;
     float: left;
@@ -8476,14 +8359,14 @@ input[type="text"].search-form-large__input {
     padding-right: 20px;
     width: 33.3333%;
   }
-  
-  .theme-black.box-story--liftup .box-story__image img, .theme-black.box-story--constrained .box-story__image img,
   .box-story.theme-black .box-story__image img {
     border: 0;
     margin: 0;
   }
-  
-  .theme-black.box-story--liftup .box-story__title, .theme-black.box-story--constrained .box-story__title,
+  .box-story.theme-black .box-story__content {
+    color: #FFF;
+    padding-right: 20px;
+  }
   .box-story.theme-black .box-story__title {
     font-size: 1.875rem;
     color: #FFF;
@@ -8519,14 +8402,6 @@ input[type="text"].search-form-large__input {
 .box-story__image {
   margin-bottom: 0.5em;
   position: relative;
-}
-
-@media (min-width: 62.5em) {
-  .gridder-box-width-3:not(.gridder-parent) .box-story__image,
-  .gridder-box-width-4:not(.gridder-parent) .box-story__image {
-    float: left;
-    margin-right: 1em;
-  }
 }
 
 .box-story__image img {
@@ -8638,6 +8513,11 @@ input[type="text"].search-form-large__input {
   overflow: hidden;
 }
 
+.box-story__link-wrapper:active .box-story__title,
+.box-story__link-wrapper:hover .box-story__title {
+  color: #005479;
+}
+
 .box-story__content {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -8668,11 +8548,6 @@ input[type="text"].search-form-large__input {
   transition-duration: 0.1s;
   transition-property: color;
   color: #222;
-}
-
-.box-story:active .box-story__link,
-.box-story:hover .box-story__link {
-  color: #005479;
 }
 
 .box-story__embed {
@@ -8730,17 +8605,69 @@ input[type="text"].search-form-large__input {
 
 /*
  section: 6.10.5.2
+ title: Box story topical
+ template: 6_10_5_2-box-story--topical
+ description: Box story variant for topical items like news stories. ".theme-plain" modifier is for pictureless topical stories.
+*/
+.box-story--topical.theme-plain {
+  background-color: #0882B3;
+  padding: 3.5em 1.5em;
+}
+
+.box-story--topical.theme-plain .box-story__link-wrapper:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  color: #FFF;
+  bottom: 1em;
+  margin: 0;
+  position: absolute;
+  right: 1.5em;
+}
+
+.box-story--topical.theme-plain .box-story__link-wrapper:hover .box-story__title {
+  color: #FFF;
+}
+
+.box-story--topical.theme-plain * {
+  color: #FFF;
+}
+
+.box-story--topical.theme-plain .box-story__topical {
+  height: auto;
+}
+
+.box-story--topical.theme-plain .box-story__label {
+  background: #FFF;
+  color: #0098d0;
+}
+
+.box-story--topical.theme-plain .box-story__link {
+  bottom: 0.5em;
+  position: absolute;
+  right: 1.5em;
+}
+
+.box-story--topical.theme-plain:hover {
+  background-color: #005479;
+}
+
+/*
+ section: 6.10.5.3
  title: Box story liftup
- template: 6_10_5_2-box-story--liftup
+ template: 6_10_5_3-box-story--liftup
  description: box-story--liftup is a more prominent display of content
 */
-
 .box-story--liftup {
   clear: both;
   display: block;
   overflow: visible;
 }
-
 
 .box-story--liftup .box-story__image {
   float: right;
@@ -8750,25 +8677,20 @@ input[type="text"].search-form-large__input {
 }
 
 @media (min-width: 48em) {
-  
   .box-story--liftup .box-story__image {
     margin-bottom: 0;
     max-width: 270px;
   }
 }
 
-
 .box-story--liftup .box-story__image img {
   vertical-align: middle;
   width: auto;
 }
 
-
 .box-story--liftup .box-story__title {
-  font-size: 1.875rem;
   height: auto;
 }
-
 
 .box-story--liftup .box-story__content {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -8782,28 +8704,15 @@ input[type="text"].search-form-large__input {
 }
 
 @media (min-width: 62.5em) {
-  
   .box-story--liftup .box-story__content {
     overflow: hidden;
   }
 }
 
-
-.box-story--liftup:active .box-story__link,
-.box-story--liftup:hover .box-story__link {
-  color: #005479;
-}
-
-
-.box-story--liftup:active .box-story__title,
-.box-story--liftup:hover .box-story__title {
-  color: #005479;
-}
-
 /*
- section: 6.10.5.3
+ section: 6.10.5.4
  title: Box story constrained
- template: 6_10_5_3-box-story--constrained
+ template: 6_10_5_4-box-story--constrained
  description: Constrained story has content that is not full width
 */
 .box-story--constrained {
@@ -8842,22 +8751,10 @@ input[type="text"].search-form-large__input {
   text-align: left;
 }
 
-@media (min-width: 48em) {
-  .gridder-box-width-1 .box-story--constrained .box-story__content {
-    display: none;
-  }
-}
-
-@media (min-width: 62.5em) {
-  .gridder-box-width-1 .box-story--constrained .box-story__content {
-    display: block;
-  }
-}
-
 /*
- section: 6.10.5.4
+ section: 6.10.5.5
  title: Box story related
- template: 6_10_5_4-box-story--related
+ template: 6_10_5_5-box-story--related
  description: ...
 */
 .box-story--related {
