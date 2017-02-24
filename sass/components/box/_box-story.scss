@@ -40,7 +40,7 @@
       color: $black;
     }
 
-    .box-story__topical {
+    .box-story__meta {
       height: auto;
     }
 
@@ -179,7 +179,7 @@
   }
 }
 
-.box-story__topical {
+.box-story__meta {
   @include font-size(12px);
   @include font-weight-medium;
   margin-bottom: 0.6em;
@@ -326,7 +326,7 @@
       color: $white;
     }
 
-    .box-story__topical {
+    .box-story__meta {
       height: auto;
     }
 
@@ -416,7 +416,7 @@
     padding-bottom: 0;
   }
 
-  .box-story__topical {
+  .box-story__meta {
     display: inline-block;
     height: auto;
     margin: 0;
