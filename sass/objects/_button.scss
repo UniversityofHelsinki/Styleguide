@@ -154,6 +154,11 @@
     width: 3rem;
   }
 
+  &:focus:after,
+  &:active:after {
+    background: $darkblue--active;
+  }
+
   &:hover {
     &:after {
       background: $darkblue--active;
