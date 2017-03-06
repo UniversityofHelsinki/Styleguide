@@ -7580,7 +7580,7 @@ input[type="text"].search-form-large__input {
   display: block;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62.5em) {
   
   .box-card.theme-plain .box-card__item {
     -webkit-flex-direction: row;
@@ -7601,7 +7601,7 @@ input[type="text"].search-form-large__input {
   padding: 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62.5em) {
   
   .box-card.theme-plain .box-card__section {
     width: 60%;
@@ -7625,6 +7625,27 @@ input[type="text"].search-form-large__input {
   height: auto;
   line-height: 19px;
   padding: 0.6em 1em 0.6em 1.8em;
+}
+
+.box-card__link {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.875rem;
+  transition-duration: 0.1s;
+  transition-property: color;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  color: #FFF !important;
+  font-weight: 400;
+  float: right;
+  height: 18px;
+  margin-top: auto;
+  padding: 0;
+}
+
+.box-card__link:after {
+  color: #FFF !important;
 }
 
 .box-card__content {
@@ -7657,7 +7678,7 @@ input[type="text"].search-form-large__input {
   padding: 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62.5em) {
   .box-card__item {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -7671,7 +7692,7 @@ input[type="text"].search-form-large__input {
   padding: 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62.5em) {
   .box-card__section {
     border-right: 1px solid #F8F8F8;
     width: 35%;
@@ -7733,27 +7754,6 @@ input[type="text"].search-form-large__input {
 
 .box-card__fieldset a:first-of-type:before {
   display: none;
-}
-
-.box-card__link {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 0.875rem;
-  transition-duration: 0.1s;
-  transition-property: color;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-  color: #FFF !important;
-  font-weight: 400;
-  float: right;
-  height: 18px;
-  margin-top: auto;
-  padding: 0;
-}
-
-.box-card__link:after {
-  color: #FFF !important;
 }
 
 /*
