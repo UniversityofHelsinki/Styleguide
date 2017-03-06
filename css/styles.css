@@ -3376,6 +3376,14 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 
+.button--action-before:focus:after,
+.button--action-before:active:after,
+.button--action:focus:after,
+.button--action:active:after {
+  background: #003146;
+}
+
+
 .button--action-before:hover:after,
 .button--action:hover:after {
   background: #003146;
