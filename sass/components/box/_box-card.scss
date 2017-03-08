@@ -21,7 +21,7 @@
     display: block;
 
     .box-card__item {
-      @include breakpoint($small) {
+      @include breakpoint($medium) {
         flex-direction: row;
       }
 
@@ -35,7 +35,7 @@
       margin: 0;
       padding: 0;
 
-      @include breakpoint($small) {
+      @include breakpoint($medium) {
         width: 60%;
 
         &.theme-secondary {
@@ -58,6 +58,24 @@
   padding: 0.6em 1em 0.6em 1.8em;
 }
 
+.box-card__link {
+  @include font-weight-medium;
+  @include font-size(14px);
+  transition-duration: 0.1s;
+  transition-property: color;
+  align-self: flex-end;
+  color: $white !important;
+  font-weight: 400;
+  float: right;
+  height: 18px;
+  margin-top: auto;
+  padding: 0;
+
+  &:after {
+    color: $white !important;
+  }
+}
+
 .box-card__content {
   background-color: $lightsilver;
   display: flex;
@@ -75,7 +93,7 @@
   margin: 0;
   padding: 0;
 
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     flex-direction: row;
   }
 
@@ -87,7 +105,7 @@
 }
 
 .box-card__section {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     border-right: 1px solid $lightsilver;
     width: 35%;
 
@@ -151,23 +169,5 @@
         display: none;
       }
     }
-  }
-}
-
-.box-card__link {
-  @include font-weight-medium;
-  @include font-size(14px);
-  transition-duration: 0.1s;
-  transition-property: color;
-  align-self: flex-end;
-  color: $white !important;
-  font-weight: 400;
-  float: right;
-  height: 18px;
-  margin-top: auto;
-  padding: 0;
-
-  &:after {
-    color: $white !important;
   }
 }
