@@ -5558,13 +5558,10 @@ dl, ol, ul {
 }
 
 .index-topical__title {
-  margin-bottom: 0.25em;
-}
-
-.index-topical__title > a {
   font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
+  margin-bottom: 0.25em;
 }
 
 .index-topical__field {

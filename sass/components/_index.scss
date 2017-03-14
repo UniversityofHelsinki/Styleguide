@@ -121,12 +121,9 @@
 }
 
 .index-topical__title {
+  @include font-size(15px);
+  @include font-weight-bold;
   margin-bottom: 0.25em;
-
-  > a {
-    @include font-size(15px);
-    @include font-weight-bold;
-  }
 }
 
 .index-topical__field {
