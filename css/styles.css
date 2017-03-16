@@ -4865,7 +4865,7 @@ dl, ol, ul {
 
 .carousel-unwrapped,
 .carousel-unwrapped--horizontal {
-  background-color: #222;
+  background-color: #F8F8F8;
   height: 350px;
   overflow: hidden;
   position: relative;
@@ -8875,6 +8875,7 @@ input[type="text"].search-form-large__input {
   color: #555555;
   text-transform: none;
   font-size: 1rem;
+  margin-bottom: 0.2em;
 }
 
 @media (min-width: 48em) {
