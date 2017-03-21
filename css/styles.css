@@ -7622,27 +7622,25 @@ input[type="text"].search-form-large__input {
   height: auto;
   line-height: 19px;
   padding: 0.6em 1em 0.6em 1.8em;
-}
-
-.box-card__link {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 0.875rem;
   transition-duration: 0.1s;
-  transition-property: color;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-  color: #FFF !important;
-  font-weight: 400;
-  float: right;
-  height: 18px;
-  margin-top: auto;
-  padding: 0;
+  transition-property: background-color;
 }
 
-.box-card__link:after {
-  color: #FFF !important;
+.box-card__header:hover {
+  background-color: #424242;
+  color: #FFF;
+}
+
+.box-card__header:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  float: right;
 }
 
 .box-card__content {
