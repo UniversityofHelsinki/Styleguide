@@ -4639,11 +4639,16 @@ dl, ol, ul {
   }
 }
 
-.l-subregion-wrapper .breadcrumbs {
-  margin-bottom: 1em;
-  position: absolute;
-  top: -2em;
-  z-index: 10;
+.breadcrumbs.theme-hero .breadcrumbs__divider {
+  color: #FFF;
+}
+
+.breadcrumbs.theme-hero .breadcrumbs__item a {
+  color: #FFF;
+}
+
+.breadcrumbs.theme-hero .breadcrumbs__item a:hover {
+  color: #D2D2D2;
 }
 
 .breadcrumbs__item {
@@ -7967,6 +7972,10 @@ input[type="text"].search-form-large__input {
   display: inline;
   line-height: 150%;
   padding: 0 0.5rem;
+}
+
+.box-hero__pretitle {
+  margin-bottom: 0.4em;
 }
 
 .box-hero__title {
