@@ -100,6 +100,10 @@
   padding: 0 0.5rem;
 }
 
+.box-hero__pretitle {
+  margin-bottom: 0.4em;
+}
+
 .box-hero__title {
   @include font-size(48px);
   color: $white;

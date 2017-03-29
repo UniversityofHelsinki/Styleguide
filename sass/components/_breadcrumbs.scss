@@ -12,11 +12,19 @@
     margin: 0;
   }
 
-  .l-subregion-wrapper & {
-    margin-bottom: 1em;
-    position: absolute;
-    top: -2em;
-    z-index: 10;
+  &.theme-hero {
+    .breadcrumbs__divider {
+      color: $white;
+    }
+    .breadcrumbs__item {
+      a {
+        color: $white;
+
+        &:hover {
+          color: $mediumsilver;
+        }
+      }
+    }
   }
 }
 
