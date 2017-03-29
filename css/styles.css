@@ -6181,7 +6181,7 @@ span.links__link.theme-language {
 }
 
 .main-menu li.is-lvl3 > ul.menu {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 48em) {
