@@ -6190,6 +6190,10 @@ span.links__link.theme-language {
   text-transform: none;
 }
 
+.main-menu li.is-lvl3 > a:hover, .main-menu li.is-lvl3 > a.active-trail, .main-menu li.is-lvl3 > a.active {
+  color: #005479;
+}
+
 .main-menu li.is-lvl3 > ul.menu {
   display: none !important;
 }

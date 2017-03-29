@@ -102,6 +102,12 @@
       color: $silver;
       padding: 5px 30px 5px 80px;
       text-transform: none;
+
+      &:hover,
+      &.active-trail,
+      &.active {
+        color: $darkblue;
+      }
     }
 
     > ul.menu {
