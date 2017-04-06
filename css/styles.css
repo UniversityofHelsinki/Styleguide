@@ -4639,11 +4639,16 @@ dl, ol, ul {
   }
 }
 
-.l-subregion-wrapper .breadcrumbs {
-  margin-bottom: 1em;
-  position: absolute;
-  top: -2em;
-  z-index: 10;
+.breadcrumbs.theme-hero .breadcrumbs__divider {
+  color: #FFF;
+}
+
+.breadcrumbs.theme-hero .breadcrumbs__item a {
+  color: #FFF;
+}
+
+.breadcrumbs.theme-hero .breadcrumbs__item a:hover {
+  color: #D2D2D2;
 }
 
 .breadcrumbs__item {
@@ -4865,7 +4870,7 @@ dl, ol, ul {
 
 .carousel-unwrapped,
 .carousel-unwrapped--horizontal {
-  background-color: #222;
+  background-color: #F8F8F8;
   height: 350px;
   overflow: hidden;
   position: relative;
@@ -5558,13 +5563,10 @@ dl, ol, ul {
 }
 
 .index-topical__title {
-  margin-bottom: 0.25em;
-}
-
-.index-topical__title > a {
   font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
+  margin-bottom: 0.25em;
 }
 
 .index-topical__field {
@@ -6188,8 +6190,12 @@ span.links__link.theme-language {
   text-transform: none;
 }
 
+.main-menu li.is-lvl3 > a:hover, .main-menu li.is-lvl3 > a.active-trail, .main-menu li.is-lvl3 > a.active {
+  color: #005479;
+}
+
 .main-menu li.is-lvl3 > ul.menu {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 48em) {
@@ -7625,27 +7631,25 @@ input[type="text"].search-form-large__input {
   height: auto;
   line-height: 19px;
   padding: 0.6em 1em 0.6em 1.8em;
-}
-
-.box-card__link {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 0.875rem;
   transition-duration: 0.1s;
-  transition-property: color;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-  color: #FFF !important;
-  font-weight: 400;
-  float: right;
-  height: 18px;
-  margin-top: auto;
-  padding: 0;
+  transition-property: background-color;
 }
 
-.box-card__link:after {
-  color: #FFF !important;
+.box-card__header:hover {
+  background-color: #424242;
+  color: #FFF;
+}
+
+.box-card__header:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  float: right;
 }
 
 .box-card__content {
@@ -7972,6 +7976,10 @@ input[type="text"].search-form-large__input {
   display: inline;
   line-height: 150%;
   padding: 0 0.5rem;
+}
+
+.box-hero__pretitle {
+  margin-bottom: 0.4em;
 }
 
 .box-hero__title {
@@ -8878,6 +8886,7 @@ input[type="text"].search-form-large__input {
   color: #555555;
   text-transform: none;
   font-size: 1rem;
+  margin-bottom: 0.2em;
 }
 
 @media (min-width: 48em) {

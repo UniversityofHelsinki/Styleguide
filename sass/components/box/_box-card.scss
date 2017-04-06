@@ -56,23 +56,17 @@
   height: auto;
   line-height: 19px;
   padding: 0.6em 1em 0.6em 1.8em;
-}
-
-.box-card__link {
-  @include font-weight-medium;
-  @include font-size(14px);
   transition-duration: 0.1s;
-  transition-property: color;
-  align-self: flex-end;
-  color: $white !important;
-  font-weight: 400;
-  float: right;
-  height: 18px;
-  margin-top: auto;
-  padding: 0;
+  transition-property: background-color;
+
+  &:hover {
+    background-color: $darkgray;
+    color: $white;
+  }
 
   &:after {
-    color: $white !important;
+    @include icon($icon-arrow-right);
+    float: right;
   }
 }
 
