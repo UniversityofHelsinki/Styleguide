@@ -17,6 +17,7 @@
 .box-subtitle__title {
   @include text-label;
   @include font-size(16px);
+  margin-bottom: 0.2em;
 }
 
 .box-subtitle__link {
