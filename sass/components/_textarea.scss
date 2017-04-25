@@ -2,7 +2,7 @@
  section: 6.11.1
  title: Textarea
  template: 6_11_1_textarea
- description: Basic component used in multiple row textareas with links, headings, lists and so on. Class .theme-ingress is used on textarea without p-tags inside. Class .dropcap is an optional class for the first letter to make dropcaps.
+ description: Basic component used in multiple row textareas with links, headings, lists and so on.
 */
 
 .textarea,
@@ -74,14 +74,6 @@
     margin-bottom: 2em;
   }
 
-  &.theme-ingress {
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    line-height: 1.5em;
-    margin-bottom: $vert-spacing-unit;
-  }
-
   .dropcap {
     @include breakpoint($small) {
       @include font-size(75px);
@@ -126,6 +118,38 @@
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+}
+
+/*
+ section: 6.11.3
+ title: Textarea ingress
+ template: 6_11_3_textarea-ingress
+ description: Ingress textarea. Can be used with links, headings, lists or without. Class 'theme-bold' is available.
+*/
+
+.textarea-ingress {
+  @extend %textarea;
+  @include font-size(18px);
+  @include font-weight-book;
+  color: $lightgray;
+  line-height: 1.5em;
+  margin-bottom: $vert-spacing-unit;
+
+  ul, ol, li,p {
+    font-size: inherit;
+  }
+
+  &.theme-bold {
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.5em;
+    margin-bottom: $vert-spacing-unit;
+
+    ul, ol, li, p {
+      font-size: inherit;
     }
   }
 }
