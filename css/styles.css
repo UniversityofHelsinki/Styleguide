@@ -5873,6 +5873,7 @@ td.jobs-listing__date {
 
 .links__link.theme-language abbr[title] {
   border: none;
+  text-decoration: none;
 }
 
 @media (min-width: 62.5em) {
@@ -7413,7 +7414,7 @@ input[type="text"].search-form-large__input {
 }
 
 .textarea ul, .textarea-ingress ul {
-  padding-left: 1.5em;
+  padding-left: 2em;
   position: relative;
 }
 
@@ -7438,7 +7439,7 @@ input[type="text"].search-form-large__input {
 
 .textarea ol, .textarea-ingress ol {
   counter-reset: item;
-  padding-left: 1.5em;
+  padding-left: 2em;
   position: relative;
 }
 
@@ -7453,7 +7454,6 @@ input[type="text"].search-form-large__input {
   content: counter(item) ". ";
   counter-increment: item;
   left: 1px;
-  line-height: 1.7em;
   position: absolute;
 }
 
