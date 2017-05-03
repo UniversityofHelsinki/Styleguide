@@ -66,13 +66,6 @@
   line-height: 1.5em;
 }
 
-@mixin text-liftup {
-  @include font-size(18px);
-  @include font-weight-book;
-  color: $lightgray;
-  line-height: 1.5em;
-}
-
 @mixin text-filter-label {
   @include font-size(14px);
   @include font-weight-book;

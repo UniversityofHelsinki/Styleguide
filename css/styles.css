@@ -5873,6 +5873,7 @@ td.jobs-listing__date {
 
 .links__link.theme-language abbr[title] {
   border: none;
+  text-decoration: none;
 }
 
 @media (min-width: 62.5em) {
@@ -7190,32 +7191,32 @@ input[type="text"].search-form-large__input {
  template: 6_1_2_table-simple
  description:
 */
-.textarea table, .box-application__table,
+.textarea table, .textarea-ingress table, .box-application__table,
 .table-simple {
   font-size: 0.875rem;
 }
 
-.textarea table tr, .box-application__table tr,
+.textarea table tr, .textarea-ingress table tr, .box-application__table tr,
 .table-simple tr {
   background-color: #F8F8F8;
 }
 
-.textarea table tr th, .box-application__table tr th,
+.textarea table tr th, .textarea-ingress table tr th, .box-application__table tr th,
 .table-simple tr th {
   background-color: #F8F8F8;
 }
 
-.textarea table tr:nth-of-type(2n), .box-application__table tr:nth-of-type(2n),
+.textarea table tr:nth-of-type(2n), .textarea-ingress table tr:nth-of-type(2n), .box-application__table tr:nth-of-type(2n),
 .table-simple tr:nth-of-type(2n) {
   background-color: #FFF;
 }
 
-.textarea table tr:nth-of-type(2n) th, .box-application__table tr:nth-of-type(2n) th,
+.textarea table tr:nth-of-type(2n) th, .textarea-ingress table tr:nth-of-type(2n) th, .box-application__table tr:nth-of-type(2n) th,
 .table-simple tr:nth-of-type(2n) th {
   background-color: #F8F8F8;
 }
 
-.textarea table td, .box-application__table td, .textarea table th, .box-application__table th,
+.textarea table td, .textarea-ingress table td, .box-application__table td, .textarea table th, .textarea-ingress table th, .box-application__table th,
 .table-simple td,
 .table-simple th {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -7225,7 +7226,7 @@ input[type="text"].search-form-large__input {
   vertical-align: top;
 }
 
-.textarea table td a, .box-application__table td a, .textarea table td a.active, .box-application__table td a.active, .textarea table th a, .box-application__table th a, .textarea table th a.active, .box-application__table th a.active,
+.textarea table td a, .textarea-ingress table td a, .box-application__table td a, .textarea table td a.active, .textarea-ingress table td a.active, .box-application__table td a.active, .textarea table th a, .textarea-ingress table th a, .box-application__table th a, .textarea table th a.active, .textarea-ingress table th a.active, .box-application__table th a.active,
 .table-simple td a,
 .table-simple td a.active,
 .table-simple th a,
@@ -7234,7 +7235,7 @@ input[type="text"].search-form-large__input {
   text-decoration: none;
 }
 
-.textarea table td a:hover, .box-application__table td a:hover, .textarea table td a.active:hover, .box-application__table td a.active:hover, .textarea table th a:hover, .box-application__table th a:hover, .textarea table th a.active:hover, .box-application__table th a.active:hover,
+.textarea table td a:hover, .textarea-ingress table td a:hover, .box-application__table td a:hover, .textarea table td a.active:hover, .textarea-ingress table td a.active:hover, .box-application__table td a.active:hover, .textarea table th a:hover, .textarea-ingress table th a:hover, .box-application__table th a:hover, .textarea table th a.active:hover, .textarea-ingress table th a.active:hover, .box-application__table th a.active:hover,
 .table-simple td a:hover,
 .table-simple td a.active:hover,
 .table-simple th a:hover,
@@ -7243,13 +7244,13 @@ input[type="text"].search-form-large__input {
   text-decoration: none;
 }
 
-.textarea table td.active, .box-application__table td.active, .textarea table th.active, .box-application__table th.active,
+.textarea table td.active, .textarea-ingress table td.active, .box-application__table td.active, .textarea table th.active, .textarea-ingress table th.active, .box-application__table th.active,
 .table-simple td.active,
 .table-simple th.active {
   color: #555555;
 }
 
-.textarea table td:first-child, .box-application__table td:first-child, .textarea table th:first-child, .box-application__table th:first-child,
+.textarea table td:first-child, .textarea-ingress table td:first-child, .box-application__table td:first-child, .textarea table th:first-child, .textarea-ingress table th:first-child, .box-application__table th:first-child,
 .table-simple td:first-child,
 .table-simple th:first-child {
   font-weight: 700;
@@ -7395,32 +7396,33 @@ input[type="text"].search-form-large__input {
  section: 6.11.1
  title: Textarea
  template: 6_11_1_textarea
- description: Basic component used in multiple row textareas with links, headings, lists and so on. Class .theme-ingress is used on textarea without p-tags inside. Class .dropcap is an optional class for the first letter to make dropcaps.
+ description: Basic component used in multiple row textareas with links, headings, lists and so on.
 */
-.textarea {
+.textarea,
+.textarea-ingress {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   line-height: 1.5em;
 }
 
-.textarea ul, .textarea ol {
+.textarea ul, .textarea ol, .textarea-ingress ul, .textarea-ingress ol {
   margin-bottom: 30px;
 }
 
-.textarea li {
+.textarea li, .textarea-ingress li {
   line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
-.textarea ul {
-  padding-left: 1.5em;
+.textarea ul, .textarea-ingress ul {
+  padding-left: 2em;
   position: relative;
 }
 
-.textarea ul li {
+.textarea ul li, .textarea-ingress ul li {
   list-style-type: none;
 }
 
-.textarea ul li:before {
+.textarea ul li:before, .textarea-ingress ul li:before {
   font-size: 0.5625rem;
   display: inline-block;
   font-family: "hy-icons";
@@ -7435,54 +7437,45 @@ input[type="text"].search-form-large__input {
   position: absolute;
 }
 
-.textarea ol {
+.textarea ol, .textarea-ingress ol {
   counter-reset: item;
-  padding-left: 1.5em;
+  padding-left: 2em;
   position: relative;
 }
 
-.textarea ol li {
+.textarea ol li, .textarea-ingress ol li {
   display: block;
 }
 
-.textarea ol li:before {
+.textarea ol li:before, .textarea-ingress ol li:before {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   content: counter(item) ". ";
   counter-increment: item;
   left: 1px;
-  line-height: 1.7em;
   position: absolute;
 }
 
-.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea h5, .textarea h6 {
+.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea h5, .textarea h6, .textarea-ingress h1, .textarea-ingress h2, .textarea-ingress h3, .textarea-ingress h4, .textarea-ingress legend, .textarea-ingress h5, .textarea-ingress h6 {
   margin-top: 32px;
 }
 
-.textarea h1:first-child, .textarea h2:first-child, .textarea h3:first-child, .textarea h4:first-child, .textarea legend:first-child, .textarea h5:first-child, .textarea h6:first-child {
+.textarea h1:first-child, .textarea h2:first-child, .textarea h3:first-child, .textarea h4:first-child, .textarea legend:first-child, .textarea h5:first-child, .textarea h6:first-child, .textarea-ingress h1:first-child, .textarea-ingress h2:first-child, .textarea-ingress h3:first-child, .textarea-ingress h4:first-child, .textarea-ingress legend:first-child, .textarea-ingress h5:first-child, .textarea-ingress h6:first-child {
   margin-top: 0;
 }
 
-.textarea a {
+.textarea a, .textarea-ingress a {
   word-wrap: break-word;
 }
 
-.textarea table {
+.textarea table, .textarea-ingress table {
   line-height: normal;
   margin-bottom: 2em;
 }
 
-.textarea.theme-ingress {
-  font-size: 1.2em;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  line-height: 1.5em;
-  margin-bottom: 30px;
-}
-
 @media (min-width: 48em) {
-  .textarea .dropcap {
+  .textarea .dropcap, .textarea-ingress .dropcap {
     font-size: 4.6875rem;
     font-weight: 700;
     font-style: normal;
@@ -7526,6 +7519,37 @@ input[type="text"].search-form-large__input {
 
 .textarea-infobox p:last-of-type {
   margin-bottom: 0;
+}
+
+/*
+ section: 6.11.3
+ title: Textarea ingress
+ template: 6_11_3_textarea-ingress
+ description: Ingress textarea. Can be used with links, headings, lists or without. Class 'theme-bold' is available.
+*/
+.textarea-ingress {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #555555;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+.textarea-ingress ul, .textarea-ingress ol, .textarea-ingress li, .textarea-ingress p {
+  font-size: inherit;
+}
+
+.textarea-ingress.theme-bold {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+.textarea-ingress.theme-bold ul, .textarea-ingress.theme-bold ol, .textarea-ingress.theme-bold li, .textarea-ingress.theme-bold p {
+  font-size: inherit;
 }
 
 /*
@@ -8064,11 +8088,6 @@ input[type="text"].search-form-large__input {
 
 .box-hero__content {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #555555;
-  line-height: 1.5em;
   font-size: 1.25rem;
   color: #FFF;
   font-weight: 600;
@@ -8165,10 +8184,6 @@ input[type="text"].search-form-large__input {
     margin-right: 2em;
     max-width: 270px;
   }
-}
-
-.box-ingress__content p {
-  font-size: 1.125rem;
 }
 
 /*
@@ -8753,13 +8768,6 @@ input[type="text"].search-form-large__input {
 }
 
 .box-story--liftup .box-story__content {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #555555;
-  line-height: 1.5em;
-  color: #555555;
   overflow: visible;
 }
 
@@ -8949,15 +8957,6 @@ input[type="text"].search-form-large__input {
   font-size: 1rem;
   font-weight: 600;
   font-style: normal;
-}
-
-.box-subtitle__ingress {
-  font-size: 1.125rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #555555;
-  line-height: 1.5em;
-  margin-bottom: 30px;
 }
 
 
