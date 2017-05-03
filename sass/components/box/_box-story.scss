@@ -380,9 +380,6 @@
   }
 
   .box-story__content {
-    @include font-family-main;
-    @include text-liftup;
-    color: $lightgray;
     overflow: visible;
 
     @include breakpoint($medium) {

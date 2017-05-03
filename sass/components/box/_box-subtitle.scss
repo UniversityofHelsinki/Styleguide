@@ -33,8 +33,3 @@
 .box-subtitle__content {
   @include text-bold;
 }
-
-.box-subtitle__ingress {
-  @include text-liftup;
-  margin-bottom: $vert-spacing-unit;
-}

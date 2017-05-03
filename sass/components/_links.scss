@@ -51,6 +51,7 @@
 
   abbr[title] {
     border: none;
+    text-decoration: none;
   }
 
   @include breakpoint($medium) {
