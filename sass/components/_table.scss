@@ -59,6 +59,10 @@
           }
         }
 
+        p {
+          font-size: inherit;
+        }
+
         &.active {
           color: $lightgray;
         }
@@ -125,6 +129,10 @@
         color: $blue--active;
         text-decoration: none;
       }
+    }
+
+    p {
+      font-size: inherit;
     }
 
     &.active {

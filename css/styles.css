@@ -7165,6 +7165,10 @@ input[type="text"].search-form-large__input {
   text-decoration: none;
 }
 
+.table-sortable tbody tr td p {
+  font-size: inherit;
+}
+
 .table-sortable tbody tr td.active {
   color: #555555;
 }
@@ -7242,6 +7246,12 @@ input[type="text"].search-form-large__input {
 .table-simple th a.active:hover {
   color: #0882B3;
   text-decoration: none;
+}
+
+.textarea table td p, .textarea-ingress table td p, .box-application__table td p, .textarea table th p, .textarea-ingress table th p, .box-application__table th p,
+.table-simple td p,
+.table-simple th p {
+  font-size: inherit;
 }
 
 .textarea table td.active, .textarea-ingress table td.active, .box-application__table td.active, .textarea table th.active, .textarea-ingress table th.active, .box-application__table th.active,
