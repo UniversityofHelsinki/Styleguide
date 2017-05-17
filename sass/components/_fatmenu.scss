@@ -1,0 +1,146 @@
+/*
+ section: 5.2
+ title: Fatmenu
+ template: 5_2_fatmenu
+ description: The fatmenu.
+*/
+
+.fatmenu {
+  background-color: $white;
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+
+  .stickynav-active & {
+    position: fixed;
+  }
+
+  &.is-open {
+    border-bottom: 1px solid $mediumsilver;
+  }
+
+  @include breakpoint($small) {
+    display: block;
+  }
+
+  > ul.menu {
+    @include container;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  li.is-lvl1 {
+    float: left;
+    margin-right: -100%;
+    padding: 2em 0 20px;
+    visibility: hidden;
+    width: 100%;
+
+    &.is-open {
+      display: block !important;
+      margin-right: 0;
+      visibility: visible;
+    }
+
+    > ul.menu {
+      margin-bottom: 3em;
+    }
+  }
+
+  li.is-lvl2 {
+    float: left;
+    margin-right: 10px;
+    padding: 0 0 0.8em 0;
+    width: 30%;
+
+    > a {
+      @include font-weight-bold;
+      @include font-size(15px);
+      display: block;
+      letter-spacing: 0;
+      line-height: 1.25em;
+      padding: ($vert-spacing-unit)/2 0 0;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        color: $darkblue;
+      }
+
+      &.active-trail {
+        color: $darkblue;
+      }
+    }
+
+    > ul.menu {
+      margin: 0.5em 0 0 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  li.is-lvl3 {
+    > a {
+      @include font-size(14px);
+      @include font-weight-book;
+      color: $lightgray;
+      padding: ($vert-spacing-unit)/7 0 ($vert-spacing-unit)/7 0;
+      position: relative;
+      text-transform: none;
+
+      &:hover,
+      &.active-trail,
+      &.active {
+        color: $darkblue;
+      }
+    }
+
+    > ul.menu {
+      display: none;
+    }
+  }
+}
+
+.fatmenu__title {
+  a {
+    color: $blue;
+
+    &:hover {
+      color: $darkblue;
+    }
+
+    &:after {
+      @include font-size(16px);
+      @include icon($icon-link-arrow);
+      margin-left: 1em;
+      position: absolute;
+    }
+  }
+}
+
+.fatmenu__collapse {
+  @include font-weight-medium;
+  @include font-size(20px);
+  align-items: center;
+  color: $blue;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 15px;
+  width: 2em;
+
+  &:hover {
+    color: $darkblue;
+  }
+
+  &:before {
+    @include icon($icon-caret-up);
+  }
+}

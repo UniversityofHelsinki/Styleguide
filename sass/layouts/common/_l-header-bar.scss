@@ -1,0 +1,45 @@
+/*
+ section: 15.1.2
+ title: Header bar
+ template: 15_1_2_header-bar
+ description: The header bar with logo & navigation.
+*/
+
+.l-header-bar {
+  align-items: center;
+  background: $black;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+}
+
+.l-header-bar__left {
+  flex-grow: 1;
+
+  @include breakpoint($medium) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 240px;
+  }
+}
+
+.l-header-bar__middle {
+  display: none;
+  flex-grow: 1;
+
+  @include breakpoint($medium) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.l-header-bar__right {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  @include breakpoint($medium) {
+    width: 240px;
+  }
+}

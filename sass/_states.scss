@@ -59,6 +59,14 @@
   }
 }
 
+.is-hidden--tablet {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: inherit;
+  }
+}
+
 .is-tel {
   @include breakpoint($small) {
     color: $black;
