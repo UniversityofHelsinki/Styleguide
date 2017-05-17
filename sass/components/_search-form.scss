@@ -125,16 +125,6 @@ input[type="text"].search-form-large__input {
   height: 40px;
   position: relative;
 
-  &.is-open {
-    box-shadow: -4px 0 7px 0 rgba($black, 0.4);
-
-    input[type="text"].search-form__input {
-      opacity: 1;
-      visibility: visible;
-      width: 220px;
-    }
-  }
-
   input[type="text"].search-form__input {
     border-radius: 0;
     border: none;
@@ -147,6 +137,13 @@ input[type="text"].search-form-large__input {
     visibility: hidden;
     width: 0px;
     z-index: 25;
+
+    &.is-open {
+      box-shadow: -3px 3px 7px 0 rgba($black, 0.4);
+      opacity: 1;
+      visibility: visible;
+      width: 220px;
+    }
   }
 
   .search-form__search-button {
@@ -160,7 +157,7 @@ input[type="text"].search-form-large__input {
     position: relative;
     transition-duration: 0.2s;
     transition-property: color, background-color;
-    z-index: 25;
+    z-index: 20;
 
     &:before {
       @include icon($icon-search);
@@ -173,6 +170,7 @@ input[type="text"].search-form-large__input {
 
     &.is-active {
       background-color: $white;
+      box-shadow: -3px 3px 7px 0 rgba($black, 0.4);
       color: $silver;
 
       &:hover {
