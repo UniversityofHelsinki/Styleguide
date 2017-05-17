@@ -4220,21 +4220,12 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 
-.l-top-bar--small .l-top-bar__sub {
+.l-top-bar--small .l-top-bar__subregion {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-.l-top-bar--small .l-top-bar__subleft {
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-}
-
-.l-top-bar--small .l-top-bar__subright {
-  border: none;
   margin: 0;
+  max-width: none;
   padding: 0;
 }
 
