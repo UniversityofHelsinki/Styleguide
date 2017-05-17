@@ -179,7 +179,7 @@ input[type="text"].search-form-large__input {
     }
   }
 
-  .search-form__submit {
+  input[type="submit"].search-form__submit {
     display: none;
   }
 }
