@@ -7321,18 +7321,7 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--new .search-form__submit {
-  background: none;
-  color: transparent;
-  height: 40px;
-  position: absolute;
-  right: 0;
-  top: 8px;
-  width: 40px;
-  z-index: 20;
-}
-
-.stickynav-active .search-form--new .search-form__submit {
-  top: 0px;
+  display: none;
 }
 
 .some-links {
