@@ -21,6 +21,12 @@
     display: block;
     position: relative;
     text-transform: uppercase;
+    transition-duration: 0.2s;
+    transition-property: color;
+
+    &:hover {
+      color: $mediumsilver;
+    }
 
     &.active {
       &:before {

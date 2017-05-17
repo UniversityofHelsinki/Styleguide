@@ -7089,6 +7089,12 @@ ul.pager > li.pager__page a {
   display: block;
   position: relative;
   text-transform: uppercase;
+  transition-duration: 0.2s;
+  transition-property: color;
+}
+
+.quick-menu a:hover {
+  color: #D2D2D2;
 }
 
 .quick-menu a.active:before {
