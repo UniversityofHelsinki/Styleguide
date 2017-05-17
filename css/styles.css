@@ -7263,7 +7263,7 @@ input[type="text"].search-form-large__input {
   position: absolute;
   right: 100%;
   transition-duration: 0.2s;
-  transition-property: width, opacity;
+  transition-property: width, opacity, visibility;
   visibility: hidden;
   width: 0px;
   z-index: 25;
