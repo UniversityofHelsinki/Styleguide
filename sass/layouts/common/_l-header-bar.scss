@@ -10,7 +10,7 @@
   background: $black;
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
+  padding: 8px 30px;
 }
 
 .l-header-bar__left {
@@ -19,7 +19,7 @@
   @include breakpoint($medium) {
     flex-grow: 0;
     flex-shrink: 0;
-    width: 240px;
+    width: 300px;
   }
 }
 
@@ -40,6 +40,6 @@
   justify-content: flex-end;
 
   @include breakpoint($medium) {
-    width: 240px;
+    width: 300px;
   }
 }

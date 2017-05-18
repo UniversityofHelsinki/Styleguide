@@ -3993,7 +3993,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0 20px;
+  padding: 8px 30px;
 }
 
 .l-header-bar__left {
@@ -4010,7 +4010,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    width: 240px;
+    width: 300px;
   }
 }
 
@@ -4049,7 +4049,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-header-bar__right {
-    width: 240px;
+    width: 300px;
   }
 }
 
