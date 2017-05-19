@@ -1,0 +1,41 @@
+/*
+ section: 5.1.1
+ title: Quick menu
+ template: 5_1_1_quick-menu
+ description: The quick menu. Shows only the first level of navigation. To be used as a main navigation element.
+*/
+
+.quick-menu {
+  ul.menu {
+    display: flex;
+  }
+
+  li {
+    padding: 0.6em;
+  }
+
+  a {
+    @include font-size(15px);
+    @include font-weight-bold;
+    color: $white;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    transition-property: color;
+
+    &:hover {
+      color: $mediumsilver;
+    }
+
+    &.active {
+      &:before {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid $white;
+        bottom: -3px;
+        width: 100%;
+      }
+    }
+  }
+}
