@@ -10,7 +10,11 @@
   background: $black;
   display: flex;
   flex-direction: row;
-  padding: 8px 30px;
+  padding: 10px 15px;
+
+  @include breakpoint($small) {
+    padding: 10px 30px;
+  }
 }
 
 .l-header-bar__left {

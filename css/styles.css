@@ -3993,7 +3993,13 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 8px 30px;
+  padding: 10px 15px;
+}
+
+@media (min-width: 48em) {
+  .l-header-bar {
+    padding: 10px 30px;
+  }
 }
 
 .l-header-bar__left {
