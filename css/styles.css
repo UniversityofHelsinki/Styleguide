@@ -5646,6 +5646,29 @@ dl, ol, ul {
   }
 }
 
+.hero-big:after {
+  background: black;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  z-index: 1;
+}
+
+@media (min-width: 48em) {
+  .hero-big:after {
+    opacity: 0.2;
+  }
+  .hero-big:hover:after {
+    opacity: 0.3;
+  }
+}
+
 .hero-big__top {
   margin: 0 auto;
   max-width: 75em;
@@ -5757,28 +5780,6 @@ dl, ol, ul {
   content: "";
   font-size: 3.625rem;
   margin-right: 10px;
-}
-
-.hero-big__background {
-  background: black;
-  bottom: 0;
-  left: 0;
-  opacity: 0.3;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition-duration: 0.2s;
-  transition-property: opacity;
-  z-index: 1;
-}
-
-@media (min-width: 48em) {
-  .hero-big__background {
-    opacity: 0.2;
-  }
-  .hero-big:hover .hero-big__background {
-    opacity: 0.3;
-  }
 }
 
 .hero-big__video {
