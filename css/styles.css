@@ -5745,7 +5745,15 @@ dl, ol, ul {
 .hero-big__link {
   font-weight: 700;
   font-style: normal;
+  margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  .hero-big__link {
+    margin-bottom: 0;
+    margin-right: 4em;
+  }
 }
 
 .hero-big__play {
@@ -5758,15 +5766,7 @@ dl, ol, ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
   text-transform: uppercase;
-}
-
-@media (min-width: 48em) {
-  .hero-big__play {
-    margin-top: 0;
-    margin-left: 4em;
-  }
 }
 
 .hero-big__play:before {

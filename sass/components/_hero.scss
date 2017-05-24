@@ -131,7 +131,13 @@
 
 .hero-big__link {
   @include font-weight-bold;
+  margin-bottom: 10px;
   text-transform: uppercase;
+
+  @include breakpoint($small) {
+    margin-bottom: 0;
+    margin-right: 4em;
+  }
 }
 
 .hero-big__play {
@@ -139,13 +145,7 @@
   align-items: center;
   color: $white;
   display: flex;
-  margin-top: 10px;
   text-transform: uppercase;
-
-  @include breakpoint($small) {
-    margin-top: 0;
-    margin-left: 4em;
-  }
 
   &:before {
     @include icon($icon-video);
