@@ -8,26 +8,175 @@
   background-color: $blue;
   overflow: hidden;
   position: relative;
+}
 
-  .hero__content {
-    @include container;
-    padding: 1.5em 1em;
+.hero__content {
+  @include container;
+  padding: 1.5em 1em;
+}
+
+.hero__title {
+  @include font-size(20px);
+  color: $white;
+  margin: 0;
+  letter-spacing: -0.5px;
+  padding-bottom: 0.25em;
+}
+
+.hero__alt-title {
+  @include font-size(14px);
+  color: $white;
+  line-height: 130%;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+/*
+ section: 16.1.2
+ title: Hero big
+ template: 16_1_2-hero-big
+ description:
+*/
+.hero-big {
+  align-items: flex-end;
+  background-position-x: 50%;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($medium) {
+    height: 800px;
   }
 
-  .hero__title {
-    @include font-size(20px);
-    color: $white;
-    margin: 0;
-    letter-spacing: -0.5px;
-    padding-bottom: 0.25em;
+  &:after {
+    background: black;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    z-index: 1;
   }
 
-  .hero__alt-title {
-    @include font-size(14px);
-    color: $white;
-    line-height: 130%;
-    margin: 0;
-    padding: 0;
-    text-transform: none;
+  @include breakpoint($small) {
+    &:after {
+      opacity: 0.2;
+    }
+
+    &:hover:after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.hero-big__top {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+
+  @include breakpoint($small) {
+    margin-bottom: 9em;
+  }
+}
+
+.hero-big__content {
+  max-width: 40em;
+}
+
+.hero-big__title {
+  @include font-size(42px);
+  @include font-weight-bold;
+  color: $white;
+  line-height: 1em;
+  margin-bottom: 10px;
+  padding: 0;
+
+  @include breakpoint($small) {
+    @include font-size(80px);
+    margin-bottom: 30px;
+  }
+}
+
+.hero-big__ingress {
+  @include font-size(18px);
+  @include font-weight-medium;
+  color: $white;
+  margin-bottom: 10px;
+
+  @include breakpoint($small) {
+    margin-bottom: 30px;
+  }
+}
+
+.hero-big__content-bottom {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.hero-big__link {
+  @include font-weight-bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  @include breakpoint($small) {
+    margin-bottom: 0;
+    margin-right: 4em;
+  }
+}
+
+.hero-big__play {
+  @include font-weight-bold;
+  align-items: center;
+  color: $white;
+  display: flex;
+  text-transform: uppercase;
+
+  &:before {
+    @include icon($icon-video);
+    @include font-size(58px);
+    margin-right: 10px;
+  }
+}
+
+.hero-big__video {
+  bottom: 0;
+  display: none;
+  left: 50%;
+  min-width: 178vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  z-index: 0;
+
+  @include breakpoint($small) {
+    display: block;
+  }
+
+  @include breakpoint($medium) {
+    min-width: 89em;
+  }
+
+  video {
+    display: block;
+    margin-left: -50%;
+    width: 100%;
   }
 }
