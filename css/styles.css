@@ -4079,10 +4079,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   overflow-y: scroll;
   position: fixed;
   top: 0;
-  transition: opacity 0.5s, visibility 0s 0.5s;
   visibility: hidden;
   width: 100%;
-  z-index: 50;
+  z-index: 300;
 }
 
 .l-overlay.is-open {
