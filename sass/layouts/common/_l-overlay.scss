@@ -1,0 +1,77 @@
+/*
+ section: 17.1
+ title: Overlay
+ template: 17_1_overlay
+ description: Full screen overlay for menu, etc.
+*/
+
+.l-overlay {
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 50;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  button.overlay-close {
+    align-items: center;
+    border: none;
+    background: none;
+    color: $white;
+    display: flex;
+    font-size: 0;
+    height: 40px;
+    margin-left: 20px;
+    padding: 0 0 0 1em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $mediumsilver;
+    }
+
+    &:after {
+      @include icon($icon-remove);
+      @include font-size(14px);
+      padding: 0 10px;
+    }
+
+    @include breakpoint($medium) {
+      @include font-size(14px);
+      margin-left: 40px;
+    }
+  }
+}
+
+.l-overlay__top {
+  margin-bottom: 40px;
+}
+
+.l-overlay__main {
+  margin: 0 auto;
+  max-width: 408px;
+  padding: 0 1em;
+
+  @include breakpoint($medium) {
+    max-width: 75em;
+  }
+}
+
+.l-overlay__bottom {
+  margin-top: auto;
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+}

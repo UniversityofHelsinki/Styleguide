@@ -22,10 +22,30 @@
   &.theme-plain {
     align-items: center;
     flex-direction: row;
+    justify-content: center;
 
     .links__link {
       @include font-size(11px);
+      color: $mediumsilver;
       margin-left: 5px;
+      padding: 16px 5px 16px 10px;
+
+      &:hover {
+        color: $white;
+      }
+
+      @include breakpoint($medium) {
+        padding: 5px 6px;
+      }
+
+      &.theme-button {
+        color: $white;
+        padding: 10px 25px;
+      }
+    }
+
+    span.links__link.theme-language {
+      color: $lightgray;
     }
   }
 }
@@ -50,11 +70,6 @@
     &:hover {
       color: $white;
     }
-  }
-
-  &.theme-button {
-    color: $white;
-    padding: 10px 25px;
   }
 }
 
