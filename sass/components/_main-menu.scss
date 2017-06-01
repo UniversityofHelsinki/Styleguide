@@ -340,10 +340,6 @@ li.main-menu__front {
     width: 32px;
   }
 
-  &:hover:before {
-    color: $silver;
-  }
-
   @include breakpoint($medium) {
     display: none;
   }

@@ -4059,6 +4059,14 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 
+.l-header-bar__right > * {
+  margin-left: 1em;
+}
+
+.l-header-bar__right > *:first-child {
+  margin-left: 0;
+}
+
 /*
  section: 17.1
  title: Overlay
@@ -4073,7 +4081,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: 101%;
   left: 0;
   opacity: 0;
   overflow-y: hidden;
@@ -4096,6 +4104,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
           animation: fadeIn 0.25s;
 }
 
+.l-overlay.is-closing {
+  opacity: 0;
+}
+
 @media (min-width: 62.5em) {
   .l-overlay {
     opacity: 1;
@@ -4106,6 +4118,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
             transform: translateY(35px);
   }
   .l-overlay.is-closing {
+    opacity: 1;
     overflow-y: hidden;
   }
 }
@@ -4161,7 +4174,13 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
           align-self: center;
   margin: 0 auto;
   max-width: 408px;
-  padding: 0 1em;
+  padding: 0 15px;
+}
+
+@media (min-width: 48em) {
+  .l-overlay__main {
+    padding: 0 30px;
+  }
 }
 
 @media (min-width: 62.5em) {
@@ -7122,10 +7141,6 @@ span.links__link.theme-language {
   width: 32px;
 }
 
-.main-menu-v2__expand:hover:before {
-  color: #979797;
-}
-
 @media (min-width: 62.5em) {
   .main-menu-v2__expand {
     display: none;
@@ -7565,6 +7580,12 @@ ul.pager > li.pager__page a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .quick-menu li {
