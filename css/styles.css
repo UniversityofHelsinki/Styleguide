@@ -4097,19 +4097,15 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 @media (min-width: 62.5em) {
-  .l-overlay.is-open {
+  .l-overlay {
     opacity: 1;
   }
-  body:not(.is-scrolled) .l-overlay.is-open {
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-duration: 0.25s;
-    transition-delay: 0.25s;
+  body:not(.is-scrolled) .l-overlay {
     -webkit-transform: translateY(35px);
         -ms-transform: translateY(35px);
             transform: translateY(35px);
   }
-  .l-overlay.is-open.is-closing {
+  .l-overlay.is-closing {
     overflow-y: hidden;
   }
 }

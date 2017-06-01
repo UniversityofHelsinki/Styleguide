@@ -28,20 +28,17 @@
     .l-overlay__main {
       animation: fadeIn 0.25s;
     }
+  }
 
-    @include breakpoint($medium) {
-      opacity: 1;
+  @include breakpoint($medium) {
+    opacity: 1;
 
-      body:not(.is-scrolled) & {
-        transition-property: transform;
-        transition-duration: 0.25s;
-        transition-delay: 0.25s;
-        transform: translateY(35px);
-      }
+    body:not(.is-scrolled) & {
+      transform: translateY(35px);
+    }
 
-      &.is-closing {
-        overflow-y: hidden;
-      }
+    &.is-closing {
+      overflow-y: hidden;
     }
   }
 
