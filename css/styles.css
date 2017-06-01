@@ -4076,9 +4076,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   height: 100%;
   left: 0;
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: hidden;
   position: fixed;
   top: 0;
+  transition: opacity 0.25s;
   visibility: hidden;
   width: 100%;
   z-index: 300;
@@ -4086,7 +4087,31 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 .l-overlay.is-open {
   opacity: 1;
+  overflow-y: scroll;
   visibility: visible;
+}
+
+.l-overlay.is-open .l-overlay__main {
+  -webkit-animation: fadeIn 0.25s;
+          animation: fadeIn 0.25s;
+}
+
+@media (min-width: 62.5em) {
+  .l-overlay.is-open {
+    opacity: 1;
+  }
+  body:not(.is-scrolled) .l-overlay.is-open {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: 0.25s;
+    transition-delay: 0.25s;
+    -webkit-transform: translateY(35px);
+        -ms-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+  .l-overlay.is-open.is-closing {
+    overflow-y: hidden;
+  }
 }
 
 .l-overlay button.overlay-close {
@@ -4135,6 +4160,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 .l-overlay__main {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   margin: 0 auto;
   max-width: 408px;
   padding: 0 1em;
@@ -9876,4 +9904,8 @@ input[type="text"].search-form-large__input {
   100% {
     opacity: 1;
   }
+}
+
+.is-noscroll {
+  overflow: hidden;
 }
