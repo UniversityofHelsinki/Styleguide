@@ -223,9 +223,14 @@ li.main-menu__front {
     color: $white;
     display: block;
     letter-spacing: 0.01em;
+    transition: color 0.2s;
 
     &:hover {
       color: $mediumsilver;
+    }
+
+    &.active {
+      color: $blue;
     }
   }
 
@@ -235,6 +240,7 @@ li.main-menu__front {
     opacity: 0.5;
     padding-left: 64px;
     position: relative;
+    transition: opacity 0.2s;
     width: 100%;
 
     @include breakpoint($small) {
@@ -290,12 +296,7 @@ li.main-menu__front {
     > a {
       @include font-size(16px);
       @include font-weight-bold;
-      color: $white;
       margin-bottom: 1em;
-
-      &:hover {
-        color: $mediumsilver;
-      }
     }
 
     @include breakpoint($medium) {
