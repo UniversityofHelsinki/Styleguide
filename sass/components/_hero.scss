@@ -261,11 +261,11 @@
     content: '';
     box-sizing: border-box;
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    bottom: 0;
+    right: 0;
     width: 50%;
     height: 50%;
-    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
     border-bottom: 20px solid #fff;
 
     @include breakpoint($small) {
@@ -277,11 +277,11 @@
     box-sizing: border-box;
     content: '';
     position: absolute;
-    top: 0px;
-    right: 0;
+    top: 0;
+    left: 0;
     width: 50%;
     height: 50%;
-    border-right: 20px solid #fff;
+    border-left: 20px solid #fff;
     border-top: 20px solid #fff;
 
     @include breakpoint($small) {
