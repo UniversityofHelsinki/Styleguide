@@ -5951,6 +5951,136 @@ dl, ol, ul {
 }
 
 /*
+ section: 16.1.3
+ title: Hero big centered
+ template: 16_1_3-hero-big-centered
+ description:
+*/
+.hero-big--centered {
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-big--centered .hero-big__content {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+  padding: 1em;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 62.5em) {
+  .hero-big--centered .hero-big__content {
+    max-width: 50em;
+  }
+}
+
+.hero-big--centered .hero-big__title {
+  font-size: 2.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__title {
+    font-size: 4.375rem;
+  }
+}
+
+.hero-big--centered .hero-big__link {
+  font-size: 1.125rem;
+  border: 2px solid #FFF;
+  color: #FFF;
+  display: inline-block;
+  margin: 20px 0 0 0;
+  padding: 10px 25px;
+  transition: background-color, color, 0.2s, 0.2s;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__link {
+    margin-top: 40px;
+  }
+}
+
+.hero-big--centered .hero-big__link:hover {
+  background-color: #FFF;
+  color: #222;
+}
+
+.hero-big--centered .hero-big__corners {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  top: 96px;
+  background-color: transparent;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__corners {
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    top: 112px;
+  }
+}
+
+.hero-big--centered .hero-big__corners:after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  border-left: 20px solid #fff;
+  border-bottom: 20px solid #fff;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__corners:after {
+    border-width: 40px;
+  }
+}
+
+.hero-big--centered .hero-big__corners:before {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  border-right: 20px solid #fff;
+  border-top: 20px solid #fff;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__corners:before {
+    border-width: 40px;
+  }
+}
+
+/*
  section: 6.7
  title: Horizontal tabs
  template: 6_7_horizontal-tabs
