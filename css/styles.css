@@ -4113,11 +4113,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   .l-overlay {
     opacity: 1;
   }
-  body:not(.is-scrolled) .l-overlay {
-    -webkit-transform: translateY(35px);
-        -ms-transform: translateY(35px);
-            transform: translateY(35px);
-  }
   .l-overlay.is-closing {
     opacity: 1;
     overflow-y: hidden;
@@ -7029,6 +7024,10 @@ span.links__link.theme-language {
   color: #0098d0;
 }
 
+.main-menu-v2 a.active:hover {
+  color: #0882B3;
+}
+
 .main-menu-v2 li.is-lvl1 {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -7110,6 +7109,9 @@ span.links__link.theme-language {
     font-weight: 600;
     font-style: normal;
     color: #979797;
+  }
+  .main-menu-v2 li.is-lvl2.theme-minor > a:hover {
+    color: #FFF;
   }
 }
 
@@ -7582,9 +7584,6 @@ ul.pager > li.pager__page a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;

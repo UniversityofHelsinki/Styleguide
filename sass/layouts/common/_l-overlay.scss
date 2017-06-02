@@ -38,10 +38,6 @@
   @include breakpoint($medium) {
     opacity: 1;
 
-    body:not(.is-scrolled) & {
-      transform: translateY(35px);
-    }
-
     &.is-closing {
       opacity: 1;
       overflow-y: hidden;

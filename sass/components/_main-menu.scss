@@ -204,8 +204,6 @@ li.main-menu__front {
   }
 }
 
-
-
 .main-menu-v2 {
   > .menu {
     display: flex;
@@ -231,6 +229,10 @@ li.main-menu__front {
 
     &.active {
       color: $blue;
+
+      &:hover {
+        color: $blue--active;
+      }
     }
   }
 
@@ -300,20 +302,19 @@ li.main-menu__front {
     }
 
     @include breakpoint($medium) {
-
       > a {
         margin-bottom: 0.5em;
       }
 
       &.theme-minor {
         > a {
-          @include font-size(14px);
-          @include font-weight-medium;
-          color: $silver;
-
           &:hover {
             color: $white;
           }
+
+          @include font-size(14px);
+          @include font-weight-medium;
+          color: $silver;
         }
       }
     }
