@@ -206,9 +206,9 @@ li.main-menu__front {
 
 .main-menu-v2 {
   > .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include breakpoint($medium) {
+      margin: 0 -16px;
+    }
 
     &.is-default {
       > li {
@@ -237,7 +237,6 @@ li.main-menu__front {
   }
 
   li.is-lvl1 {
-    flex-shrink: 0;
     margin-bottom: 48px;
     opacity: 0.5;
     padding-left: 64px;
@@ -250,10 +249,11 @@ li.main-menu__front {
     }
 
     @include breakpoint($medium) {
+      float: left;
       opacity: 1;
-      padding: 0;
+      padding: 0 16px;
       min-height: 280px;
-      width: 31%;
+      width: 33%;
     }
 
     > a {

@@ -82,6 +82,7 @@
   margin: 0 auto;
   max-width: 408px;
   padding: 0 15px;
+  width: 100%;
 
   @include breakpoint($small) {
     padding: 0 30px;
