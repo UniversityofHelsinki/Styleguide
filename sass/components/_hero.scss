@@ -180,3 +180,112 @@
     width: 100%;
   }
 }
+
+/*
+ section: 16.1.3
+ title: Hero big centered
+ template: 16_1_3-hero-big-centered
+ description:
+*/
+
+.hero-big--centered {
+  position: relative;
+  padding-top: 80px;
+
+  .hero-big__content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+    padding: 1em;
+    position: relative;
+    z-index: 10;
+
+    @include breakpoint($medium) {
+      max-width: 50em;
+    }
+  }
+
+  .hero-big__title {
+    @include font-size(36px);
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint($small) {
+      @include font-size(70px);
+    }
+  }
+
+  .hero-big__link {
+    @include font-size(18px);
+    border: 2px solid $white;
+    color: $white;
+    display: inline-block;
+    margin: 20px 0 0 0;
+    padding: 10px 25px;
+    transition: background-color, color, 0.2s, 0.2s;
+
+    @include breakpoint($small) {
+      margin-top: 40px;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  .hero-big__corners {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    top: 96px;
+    background-color: transparent;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    @include breakpoint($small) {
+      bottom: 32px;
+      left: 32px;
+      right: 32px;
+      top: 112px;
+    }
+  }
+
+  .hero-big__corners:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-right: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+
+    @include breakpoint($small) {
+      border-width: 40px;
+    }
+  }
+
+  .hero-big__corners:before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    border-left: 20px solid #fff;
+    border-top: 20px solid #fff;
+
+    @include breakpoint($small) {
+      border-width: 40px;
+    }
+  }
+}
