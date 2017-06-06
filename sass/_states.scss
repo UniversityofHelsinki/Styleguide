@@ -63,7 +63,7 @@
   display: none;
 
   @include breakpoint($medium) {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -130,4 +130,8 @@
   100% {
     opacity: 1;
   }
+}
+
+.is-noscroll {
+  overflow: hidden;
 }

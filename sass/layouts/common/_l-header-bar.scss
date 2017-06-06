@@ -46,4 +46,12 @@
   @include breakpoint($medium) {
     width: 300px;
   }
+
+  > * {
+    margin-left: 1em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

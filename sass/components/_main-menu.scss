@@ -203,3 +203,155 @@ li.main-menu__front {
     }
   }
 }
+
+.main-menu-v2 {
+  > .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &.is-default {
+      > li {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+    display: block;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $mediumsilver;
+    }
+
+    &.active {
+      color: $blue;
+
+      &:hover {
+        color: $blue--active;
+      }
+    }
+  }
+
+  li.is-lvl1 {
+    flex-shrink: 0;
+    margin-bottom: 48px;
+    opacity: 0.5;
+    padding-left: 64px;
+    position: relative;
+    transition: opacity 0.2s;
+    width: 100%;
+
+    @include breakpoint($small) {
+      padding-left: 96px;
+    }
+
+    @include breakpoint($medium) {
+      opacity: 1;
+      padding: 0;
+      min-height: 280px;
+      width: 31%;
+    }
+
+    > a {
+      @include font-size(18px);
+      @include font-weight-bold;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &.is-open {
+      opacity: 1;
+
+      > ul {
+        display: block;
+      }
+    }
+
+    > ul {
+      display: none;
+      margin-top: 24px;
+
+      @include breakpoint($medium) {
+        display: block;
+      }
+    }
+
+    &.theme-quicklinks {
+      > a {
+        @include font-size(14px);
+        color: $silver;
+        line-height: 25px;
+      }
+
+      > ul a {
+        @include font-size(14px);
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  li.is-lvl2 {
+    > a {
+      @include font-size(16px);
+      @include font-weight-bold;
+      margin-bottom: 1em;
+    }
+
+    @include breakpoint($medium) {
+      > a {
+        margin-bottom: 0.5em;
+      }
+
+      &.theme-minor {
+        > a {
+          &:hover {
+            color: $white;
+          }
+
+          @include font-size(14px);
+          @include font-weight-medium;
+          color: $silver;
+        }
+      }
+    }
+  }
+}
+
+.main-menu-v2__expand {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  width: 32px;
+  z-index: 10;
+
+  &:before {
+    @include font-size(16px);
+    @include icon($icon-caret-down);
+    color: $white;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: color, border-color, transform;
+    width: 32px;
+  }
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+
+  .is-open > & {
+    &:before {
+      transform: rotate3d(1,0,0,180deg);
+    }
+
+    &:hover:before {
+    }
+  }
+}
