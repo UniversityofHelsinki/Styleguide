@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<base target="_parent" />
+	<link rel="stylesheet" type="text/css" href="http://universityofhelsinki.github.io/Styleguide/css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>header proto</title>
+</head>
+<body>
+	<div id="navi">
+		<div class="l-top-bar">
+		    <div class="l-top-bar__subregion">
+		        <div class="l-top-bar__main">
+		            <a class="logo" href="/fi">
+		                <h1 class="logo__sitename">OPINNOT</h1>
+		            </a>
+		        </div>
+		    </div>
+		</div>
+		<div class="l-menu-bar with-top-bar">
+			<nav class="main-menu">
+		  		<ul class="menu">
+		  			<li class="is-lvl1 is-active main-menu__front">
+		      			<span class="main-menu__home"></span>
+		      			<a href="https://student.helsinki.fi/" title="" class="active">Etusivu</a>
+		    		</li>
+		  			<li class="is-lvl1">
+		      			<a href="https://sis-helsinki.funidata.fi/student/degree" title="Tutkimus">Opintojen suunnittelu</a>
+		    		</li>
+		    		<li class="is-lvl1">
+		      			<a href="https://guide.student.helsinki.fi/fi" title="Opiskelu">Opiskelun ohjeet</a>
+		    		</li>
+		    		<li class="last is-lvl1 is-expandable">
+		      			<span class="main-menu__expand"></span>
+		      			<a href="" title="Ajankohtaista">Työkalut</a>
+		      			<ul class="menu">
+							<li class="is-lvl2">
+								<a href="https://sis-helsinki.funidata.fi/student/degree">Opintojen suunnittelu</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://weboodi.helsinki.fi/hy/">Suoritukset</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://moodle.helsinki.fi/">Moodle</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://helsinkifi-my.sharepoint.com/">Onedrive</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://wiki.helsinki.fi/">Wiki</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://blogs.helsinki.fi/">Blogi</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://www.helsinki.fi/kirjasto/fi/etusivu/">Kirjasto</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://helka.finna.fi/">Helka</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://www.helsinki.fi/kirjasto/fi/avuksi/viitteidenhallinta/">Viitteidenhallinta</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://mot.kielikone.fi/mot/hy/netmot.exe?motportal=80">NetMOD</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://opinder.helsinki.fi/">Opinder</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://www.yammer.com/helsinki.fi/">Yammer</a>
+							</li>
+						</ul>
+		        	</li>			
+				</ul>
+			</nav>
+			<nav class="fatmenu">
+				<ul class="menu is-open expandthis">
+					<li class="is-lvl1 is-active fatmenu__front">
+						<span class="fatmenu__home"></span>
+						<a href="#" class="active">Etusivu</a>
+					</li>
+					<li class="is-lvl1 last is-expandable">
+						<ul class="menu">
+							<li class="is-lvl2">
+								<a href="https://sis-helsinki.funidata.fi/student/degree">Opintojen suunnittelu</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://weboodi.helsinki.fi/hy/">Suoritukset</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://moodle.helsinki.fi/">Moodle</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://helsinkifi-my.sharepoint.com/">Onedrive</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://wiki.helsinki.fi/">Wiki</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://blogs.helsinki.fi/">Blogi</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://www.helsinki.fi/kirjasto/fi/etusivu/">Kirjasto</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://helka.finna.fi/">Helka</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="http://www.helsinki.fi/kirjasto/fi/avuksi/viitteidenhallinta/">Viitteidenhallinta</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://mot.kielikone.fi/mot/hy/netmot.exe?motportal=80">NetMOD</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://opinder.helsinki.fi/">Opinder</a>
+							</li>
+							<li class="is-lvl2">
+								<a href="https://www.yammer.com/helsinki.fi/">Yammer</a>
+							</li>
+						</ul>
+					</li>
+					<span class="fatmenu__collapse"></span>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<script>
+		window.addEventListener("message", receiveMessage, false);
+		var IFRAME_OPEN = false;
+		var SET_TO_MOBILE_SIZE = false;
+		var FATMENU_OPEN = false;
+		var sisWindow;
+		var validSisOrigin = 'https://sis-helsinki-test.funidata.fi'; // NOTE: use a real origin instead of the wildcard
+		var naviEl;
+		var iframeHeight = 0;
+
+		function receiveMessage(message) {
+			if (message.origin !== validSisOrigin && validSisOrigin !== '*')
+				return;
+
+			sisWindow = message.source;
+			naviEl = document.querySelector('#navi');
+
+
+			if (message.data === 'open') {
+				IFRAME_OPEN = true;
+				iframeHeight = naviEl.style.height;
+				sisWindow.postMessage('height-'+Number(iframeHeight), validSisOrigin);
+				sendOpenAck();
+			}
+		}
+
+		function sendCloseMessage() {
+			sisWindow.postMessage('close', validSisOrigin);
+			naviEl.style.height = '0px';
+		}
+
+		document.body.addEventListener('click', function(ev) {
+		// If user clicks below the nav bar, close it
+			if (ev.target.tagName === 'BODY') {
+			sendCloseMessage();
+			}
+		});
+
+		window.addEventListener("keyup", escHandler);
+		function escHandler(event) {
+			if (event.keyCode == 27) {
+				sendCloseMessage();
+			}
+		}
+
+		function sendOpenAck() {
+			sisWindow.postMessage('opened', validSisOrigin);
+		}
+
+		function responsiveResize(){
+
+        	console.log(SET_TO_MOBILE_SIZE)
+			if (window.innerWidth < 768) {
+				$(".nav-toggle").css("visibility", "visible");
+				if (FATMENU_OPEN){
+        			$("#navi").css( "height", 810 );
+        			updateIframe()
+        		} else {
+        			$("#navi").css( "height", 260 );
+        			updateIframe()
+        		}
+			} else {
+				$(".nav-toggle").css("visibility", "hidden");
+				if (FATMENU_OPEN){
+        			$("#navi").css( "height", 400 );
+        			updateIframe()
+        		} else {
+        			$("#navi").css( "height", 126 );
+        			updateIframe()
+        		}
+			}
+		}
+
+		function openMenu() {
+	    	FATMENU_OPEN = true;
+	    	responsiveResize();
+			$(".fatmenu").removeClass("is-slideout");
+			$(".fatmenu").addClass("is-open is-slidein");
+			$(".expandthis").css( "height", 275 );
+			updateIframe()
+			$(".last").addClass("is-open");
+			$(".main-menu").addClass("is-open");
+		}
+
+		function closeMenu(){
+			FATMENU_OPEN = false;
+	    	responsiveResize();
+			$(".fatmenu").removeClass("is-open is-slidein");
+			$(".fatmenu").addClass("is-slideout");
+			$(".last").removeClass("is-open");
+			$(".main-menu").removeClass("is-open");
+			$(".expandthis").css( "height", 0 );
+			updateIframe()
+		}
+
+
+		function updateIframe() {	
+			if (sisWindow !== undefined) {
+				iframeHeight = $("#navi").height();
+				sisWindow.postMessage('height-'+Number(iframeHeight), validSisOrigin)
+			}
+		}
+
+		$(document).ready(function(){
+			responsiveResize();
+			$(window).resize(responsiveResize)
+
+			$(".main-menu__expand").click(function(){
+				if (FATMENU_OPEN) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			});
+
+			$(".fatmenu__collapse").click(function(){
+				closeMenu();
+			});
+		});
+
+	</script>
+
+	<style>
+		body {
+			margin: 0;
+			height: 100%; /* needed in firefox */
+			background: #FFF;
+		}
+		#container {
+			margin: 10px;
+		}
+		#navi {
+			opacity: 1;
+			box-sizing: border-box;
+			font-family: sans-serif;
+			/*transition: height 0.4s;*/
+			overflow: hidden;
+			box-shadow: 10px 10px 5px #888888;
+		}
+		.nav-toggle{
+			visibility:hidden;
+		}
+		.l-menu-bar{
+			display: block;
+		}
+	</style>
+
+</body>
+</html>
