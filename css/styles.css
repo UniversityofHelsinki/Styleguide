@@ -6546,6 +6546,132 @@ td.jobs-listing__date {
 }
 
 /*
+ section: 18.1
+ title: Liftup grid
+ template: 18_1_liftup-grid
+ description: Grid of three liftups.
+*/
+.liftup-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .liftup-grid {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.liftup-grid__item {
+  background-size: cover;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vw;
+  max-height: 100vh;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 3vw;
+  position: relative;
+}
+
+@media (min-width: 48em) {
+  .liftup-grid__item {
+    height: 33vw;
+    max-height: none;
+    width: 33%;
+  }
+}
+
+.liftup-grid__item:before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+
+.liftup-grid__item:hover:before {
+  opacity: 0.2;
+}
+
+.liftup-grid__content {
+  position: relative;
+  z-index: 2;
+}
+
+.liftup-grid__title {
+  font-size: 1.875rem;
+  color: #FFF;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .liftup-grid__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .liftup-grid__title {
+    font-size: 1.875rem;
+  }
+}
+
+.liftup-grid__ingress {
+  font-size: 1.125rem;
+  color: #FFF;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .liftup-grid__ingress {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .liftup-grid__ingress {
+    font-size: 1.125rem;
+  }
+}
+
+.liftup-grid__image {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.liftup-grid__image img {
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.8;
+}
+
+/*
  section: 15.3
  title: Links
  template: 15_3_links
