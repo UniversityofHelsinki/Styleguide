@@ -29,7 +29,6 @@
   @include breakpoint($small) {
     height: 33vw;
     max-height: none;
-    width: 33%;
   }
 
   &:before {
