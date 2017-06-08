@@ -27,8 +27,10 @@
   position: relative;
 
   @include breakpoint($small) {
+    flex-basis: 34%;
     height: 33vw;
     max-height: none;
+    width: 34%;
   }
 
   &:before {
