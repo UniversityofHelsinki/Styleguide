@@ -4006,6 +4006,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 
 @media (min-width: 62.5em) {
@@ -4029,6 +4032,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: auto;
   }
 }
 
@@ -8010,7 +8014,7 @@ ul.pager > li.pager__page a {
 }
 
 .quick-menu li {
-  padding: 0.6em;
+  padding: 0.5em 0.6em;
 }
 
 .quick-menu a {
@@ -8019,7 +8023,7 @@ ul.pager > li.pager__page a {
   font-style: normal;
   color: #FFF;
   display: block;
-  line-height: 1;
+  line-height: 115%;
   position: relative;
   text-align: center;
   text-transform: uppercase;

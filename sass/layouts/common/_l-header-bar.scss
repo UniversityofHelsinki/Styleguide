@@ -19,6 +19,7 @@
 
 .l-header-bar__left {
   flex-grow: 1;
+  flex-shrink: 0;
 
   @include breakpoint($medium) {
     max-width: 300px;
@@ -32,6 +33,7 @@
   @include breakpoint($medium) {
     display: flex;
     justify-content: center;
+    margin-bottom: auto;
   }
 }
 
