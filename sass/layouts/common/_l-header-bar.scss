@@ -21,9 +21,8 @@
   flex-grow: 1;
 
   @include breakpoint($medium) {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 300px;
+    flex-grow: 1;
+    max-width: 300px;
   }
 }
 
@@ -44,7 +43,9 @@
   justify-content: flex-end;
 
   @include breakpoint($medium) {
-    width: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 300px;
   }
 
   > * {

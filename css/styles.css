@@ -4010,13 +4010,10 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-header-bar__left {
-    -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    width: 300px;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 300px;
   }
 }
 
@@ -4055,7 +4052,13 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-header-bar__right {
-    width: 300px;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    max-width: 300px;
   }
 }
 
@@ -7990,6 +7993,9 @@ ul.pager > li.pager__page a {
  description: The quick menu. Shows only the first level of navigation. To be used as a main navigation element.
 */
 .quick-menu ul.menu {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
