@@ -4010,9 +4010,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-header-bar__left {
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     max-width: 300px;
   }
 }
@@ -7992,6 +7989,14 @@ ul.pager > li.pager__page a {
  template: 5_1_1_quick-menu
  description: The quick menu. Shows only the first level of navigation. To be used as a main navigation element.
 */
+.quick-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0;
+  padding: 0 1em;
+}
+
 .quick-menu ul.menu {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -8014,6 +8019,7 @@ ul.pager > li.pager__page a {
   font-style: normal;
   color: #FFF;
   display: block;
+  line-height: 1;
   position: relative;
   text-align: center;
   text-transform: uppercase;

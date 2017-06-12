@@ -6,6 +6,10 @@
 */
 
 .quick-menu {
+  display: flex;
+  height: 0;
+  padding: 0 1em;
+
   ul.menu {
     align-items: center;
     display: flex;
@@ -21,6 +25,7 @@
     @include font-weight-bold;
     color: $white;
     display: block;
+    line-height: 1;
     position: relative;
     text-align: center;
     text-transform: uppercase;
