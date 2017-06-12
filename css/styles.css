@@ -3993,12 +3993,12 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 10px 15px;
+  padding: 0 15px;
 }
 
 @media (min-width: 48em) {
   .l-header-bar {
-    padding: 10px 30px;
+    padding: 0 30px;
   }
 }
 
@@ -4009,6 +4009,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  padding: 10px 0;
 }
 
 @media (min-width: 62.5em) {
@@ -7999,7 +8000,6 @@ ul.pager > li.pager__page a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 1em;
   padding: 0 1em;
 }
 

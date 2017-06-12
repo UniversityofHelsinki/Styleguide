@@ -10,16 +10,17 @@
   background: $black;
   display: flex;
   flex-direction: row;
-  padding: 10px 15px;
+  padding: 0 15px;
 
   @include breakpoint($small) {
-    padding: 10px 30px;
+    padding: 0 30px;
   }
 }
 
 .l-header-bar__left {
   flex-grow: 1;
   flex-shrink: 0;
+  padding: 10px 0;
 
   @include breakpoint($medium) {
     max-width: 300px;
