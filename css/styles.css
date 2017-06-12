@@ -4032,7 +4032,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: auto;
   }
 }
 
@@ -7994,10 +7993,13 @@ ul.pager > li.pager__page a {
  description: The quick menu. Shows only the first level of navigation. To be used as a main navigation element.
 */
 .quick-menu {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 0;
+  max-height: 1em;
   padding: 0 1em;
 }
 
@@ -8008,6 +8010,9 @@ ul.pager > li.pager__page a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;

@@ -6,13 +6,15 @@
 */
 
 .quick-menu {
+  align-items: center;
   display: flex;
-  height: 0;
+  max-height: 1em;
   padding: 0 1em;
 
   ul.menu {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
