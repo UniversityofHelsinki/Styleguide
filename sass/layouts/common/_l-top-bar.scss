@@ -66,3 +66,25 @@
     padding-left: 5px;
   }
 }
+
+/*
+ section: 15.1.1
+ title: Top bar small
+ template: 15_1_1_top-bar-small
+ description: The top bar small variant
+*/
+
+.l-top-bar--small {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: block;
+  }
+
+  .l-top-bar__subregion {
+    justify-content: flex-end;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+}
