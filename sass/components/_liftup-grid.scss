@@ -1,0 +1,101 @@
+/*
+ section: 18.1
+ title: Liftup grid
+ template: 18_1_liftup-grid
+ description: Grid of three liftups.
+*/
+
+.liftup-grid {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+}
+
+.liftup-grid__item {
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vw;
+  max-height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3vw;
+  position: relative;
+
+  @include breakpoint($small) {
+    flex-basis: 34%;
+    height: 33vw;
+    max-height: none;
+    width: 34%;
+  }
+
+  &:before {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+
+  &:hover:before {
+    opacity: 0.2;
+  }
+}
+
+.liftup-grid__content {
+  position: relative;
+  z-index: 2;
+}
+
+.liftup-grid__title {
+  @include font-size(30px);
+  color: $white;
+  text-align: center;
+
+  @include breakpoint($small) {
+    @include font-size(20px);
+  }
+
+  @include breakpoint($medium) {
+    @include font-size(30px);
+  }
+}
+
+.liftup-grid__ingress {
+  @include font-size(18px);
+  color: $white;
+  text-align: center;
+
+  @include breakpoint($small) {
+    @include font-size(14px);
+  }
+
+  @include breakpoint($medium) {
+    @include font-size(18px);
+  }
+}
+
+.liftup-grid__image {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+
+  img {
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.8;
+  }
+}

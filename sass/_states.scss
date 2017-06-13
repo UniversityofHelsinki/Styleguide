@@ -59,6 +59,14 @@
   }
 }
 
+.is-hidden--tablet {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: block;
+  }
+}
+
 .is-tel {
   @include breakpoint($small) {
     color: $black;
@@ -122,4 +130,8 @@
   100% {
     opacity: 1;
   }
+}
+
+.is-noscroll {
+  overflow: hidden;
 }

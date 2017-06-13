@@ -1,7 +1,7 @@
 /*
- section: 15.1.1
+ section: 15.3
  title: Links
- template: 15_1_1_links
+ template: 15_3_links
  description: Links compontent is used in the top bar.
 */
 
@@ -17,6 +17,36 @@
 
   @include breakpoint($large) {
     flex-direction: row;
+  }
+
+  &.theme-plain {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    .links__link {
+      @include font-size(11px);
+      color: $mediumsilver;
+      margin-left: 5px;
+      padding: 16px 5px 16px 10px;
+
+      &:hover {
+        color: $white;
+      }
+
+      @include breakpoint($medium) {
+        padding: 5px 6px;
+      }
+
+      &.theme-button {
+        color: $white;
+        padding: 10px 25px;
+      }
+    }
+
+    span.links__link.theme-language {
+      color: $lightgray;
+    }
   }
 }
 
@@ -35,7 +65,7 @@
 
   @include breakpoint($small) {
     color: $mediumsilver;
-    padding: 5px 0 5px 9px;
+    padding: 5px 6px;
 
     &:hover {
       color: $white;

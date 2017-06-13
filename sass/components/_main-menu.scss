@@ -204,151 +204,154 @@ li.main-menu__front {
   }
 }
 
+.main-menu-v2 {
+  > .menu {
+    @include breakpoint($medium) {
+      margin: 0 -16px;
+    }
 
-
-/*
- section: 5.1.1
- title: Fatmenu
- template: 5_1_1_fatmenu
- description: The fatmenu.
-*/
-
-.fatmenu {
-  background-color: $white;
-  display: none;
-  position: absolute;
-  width: 100%;
-  z-index: 11;
-
-  .stickynav-active & {
-    position: fixed;
+    &.is-default {
+      > li {
+        opacity: 1;
+      }
+    }
   }
 
-  &.is-open {
-    border-bottom: 1px solid $mediumsilver;
-  }
-
-  @include breakpoint($small) {
+  a {
+    color: $white;
     display: block;
-  }
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
 
-  > ul.menu {
-    @include container;
-    height: 0;
-    overflow: hidden;
-    position: relative;
+    &:hover {
+      color: $mediumsilver;
+    }
+
+    &.active {
+      color: $blue;
+
+      &:hover {
+        color: $blue--active;
+      }
+    }
   }
 
   li.is-lvl1 {
-    float: left;
-    margin-right: -100%;
-    padding: 2em 0 20px;
-    visibility: hidden;
+    margin-bottom: 48px;
+    opacity: 0.5;
+    padding-left: 64px;
+    position: relative;
+    transition: opacity 0.2s;
     width: 100%;
 
-    &.is-open {
-      display: block !important;
-      margin-right: 0;
-      visibility: visible;
+    @include breakpoint($small) {
+      padding-left: 96px;
     }
 
-    > ul.menu {
-      margin-bottom: 3em;
+    @include breakpoint($medium) {
+      float: left;
+      opacity: 1;
+      padding: 0 16px;
+      min-height: 280px;
+      width: 33%;
+    }
+
+    > a {
+      @include font-size(18px);
+      @include font-weight-bold;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &.is-open {
+      opacity: 1;
+
+      > ul {
+        display: block;
+      }
+    }
+
+    > ul {
+      display: none;
+      margin-top: 24px;
+
+      @include breakpoint($medium) {
+        display: block;
+      }
+    }
+
+    &.theme-quicklinks {
+      > a {
+        @include font-size(14px);
+        color: $silver;
+        line-height: 25px;
+      }
+
+      > ul a {
+        @include font-size(14px);
+        margin-bottom: 0.5em;
+      }
     }
   }
 
   li.is-lvl2 {
-    float: left;
-    margin-right: 10px;
-    padding: 0 0 0.8em 0;
-    width: 30%;
-
     > a {
-      @include font-weight-bold;
-      @include font-size(15px);
-      display: block;
-      letter-spacing: 0;
-      line-height: 1.25em;
-      padding: ($vert-spacing-unit)/2 0 0;
-      position: relative;
-      text-decoration: none;
-
-      &:hover {
-        color: $darkblue;
-      }
-
-      &.active-trail {
-        color: $darkblue;
-      }
-    }
-
-    > ul.menu {
-      margin: 0.5em 0 0 0;
-      padding: 0;
-      position: relative;
-    }
-  }
-
-  li.is-lvl3 {
-    > a {
-      @include font-size(14px);
-      @include font-weight-book;
-      color: $lightgray;
-      padding: ($vert-spacing-unit)/7 0 ($vert-spacing-unit)/7 0;
-      position: relative;
-      text-transform: none;
-
-      &:hover,
-      &.active-trail,
-      &.active {
-        color: $darkblue;
-      }
-    }
-
-    > ul.menu {
-      display: none;
-    }
-  }
-}
-
-.fatmenu__title {
-  a {
-    color: $blue;
-
-    &:hover {
-      color: $darkblue;
-    }
-
-    &:after {
       @include font-size(16px);
-      @include icon($icon-link-arrow);
-      margin-left: 1em;
-      position: absolute;
+      @include font-weight-bold;
+      margin-bottom: 1em;
+    }
+
+    @include breakpoint($medium) {
+      > a {
+        margin-bottom: 0.5em;
+      }
+
+      &.theme-minor {
+        > a {
+          &:hover {
+            color: $white;
+          }
+
+          @include font-size(14px);
+          @include font-weight-medium;
+          color: $silver;
+        }
+      }
     }
   }
 }
 
-.fatmenu__collapse {
-  @include font-weight-medium;
-  @include font-size(20px);
-  align-items: center;
-  color: $blue;
+.main-menu-v2__expand {
+  bottom: 0;
   cursor: pointer;
-  display: flex;
-  height: 2em;
-  justify-content: center;
-  margin: 0;
+  left: 0;
   position: absolute;
-  right: 10px;
   text-align: center;
-  top: 15px;
-  width: 2em;
-
-  &:hover {
-    color: $darkblue;
-  }
+  top: 2px;
+  width: 32px;
+  z-index: 10;
 
   &:before {
-    @include icon($icon-caret-up);
+    @include font-size(16px);
+    @include icon($icon-caret-down);
+    color: $white;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: color, border-color, transform;
+    width: 32px;
+  }
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+
+  .is-open > & {
+    &:before {
+      transform: rotate3d(1,0,0,180deg);
+    }
+
+    &:hover:before {
+    }
   }
 }
