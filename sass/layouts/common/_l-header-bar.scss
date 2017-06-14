@@ -10,20 +10,20 @@
   background: $black;
   display: flex;
   flex-direction: row;
-  padding: 10px 15px;
+  padding: 0 15px;
 
   @include breakpoint($small) {
-    padding: 10px 30px;
+    padding: 0 30px;
   }
 }
 
 .l-header-bar__left {
   flex-grow: 1;
+  flex-shrink: 0;
+  padding: 10px 0;
 
   @include breakpoint($medium) {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 300px;
+    max-width: 300px;
   }
 }
 
@@ -44,11 +44,13 @@
   justify-content: flex-end;
 
   @include breakpoint($medium) {
-    width: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 300px;
   }
 
   > * {
-    margin-left: 1em;
+    margin-left: 16px;
 
     &:first-child {
       margin-left: 0;

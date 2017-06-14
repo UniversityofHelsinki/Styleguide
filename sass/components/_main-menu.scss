@@ -207,6 +207,8 @@ li.main-menu__front {
 .main-menu-v2 {
   > .menu {
     @include breakpoint($medium) {
+      display: flex;
+      flex-wrap: wrap;
       margin: 0 -16px;
     }
 
@@ -249,10 +251,8 @@ li.main-menu__front {
     }
 
     @include breakpoint($medium) {
-      float: left;
       opacity: 1;
       padding: 0 16px;
-      min-height: 280px;
       width: 33%;
     }
 

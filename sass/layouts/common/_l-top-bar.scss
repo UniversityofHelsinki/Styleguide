@@ -78,6 +78,7 @@
   display: none;
 
   @include breakpoint($medium) {
+    background-color: $pitchblack;
     display: block;
   }
 

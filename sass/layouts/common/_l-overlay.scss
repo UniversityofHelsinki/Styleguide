@@ -43,34 +43,6 @@
       overflow-y: hidden;
     }
   }
-
-  button.overlay-close {
-    align-items: center;
-    border: none;
-    background: none;
-    color: $white;
-    display: flex;
-    font-size: 0;
-    height: 40px;
-    margin-left: 20px;
-    padding: 0 0 0 1em;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $mediumsilver;
-    }
-
-    &:after {
-      @include icon($icon-remove);
-      @include font-size(14px);
-      padding: 0 10px;
-    }
-
-    @include breakpoint($medium) {
-      @include font-size(14px);
-      margin-left: 40px;
-    }
-  }
 }
 
 .l-overlay__top {

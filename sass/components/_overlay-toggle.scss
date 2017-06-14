@@ -1,0 +1,120 @@
+// Burger menu button
+.overlay-toggle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  flex-shrink: 0;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  z-index: 15;
+
+  span {
+    background: $white;
+    display: block;
+    height: 3px;
+    width: 30px;
+    transition-duration: 0.25s;
+    transition-property: background-color, transform;
+
+    &:after,
+    &:before {
+      background-color: $white;
+      content: "";
+      display: block;
+      height: 3px;
+      position: absolute;
+      transition-duration: 0.25s;
+      transition-property: background-color, transform;
+      width: inherit;
+    }
+
+    &:before {
+      transform: translateY(-10px);
+    }
+
+    &:after {
+      transform: translateY(10px);
+    }
+  }
+
+  &.is-active {
+    span {
+      animation: burgerCloseA 0.3s;
+      animation-fill-mode: forwards;
+
+      &:after,
+      &:before {
+        animation: burgerCloseB 0.3s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &.is-closing {
+    span {
+      animation: burgerOpenA 0.3s;
+      animation-fill-mode: forwards;
+
+      &:after,
+      &:before {
+        animation: burgerOpenB 0.3s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &:hover {
+    span,
+    span:after,
+    span:before {
+      background-color: $mediumsilver;
+    }
+  }
+}
+
+@keyframes burgerCloseA {
+  0% {
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes burgerCloseB {
+  0% {
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes burgerOpenA {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+  }
+}
+
+@keyframes burgerOpenB {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+  }
+}

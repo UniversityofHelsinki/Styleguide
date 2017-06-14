@@ -6,13 +6,19 @@
 */
 
 .quick-menu {
+  align-items: center;
+  display: flex;
+  padding: 0 1em;
+
   ul.menu {
+    align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   li {
-    padding: 0.6em;
+    padding: 0.5em 0.6em;
   }
 
   a {
@@ -20,7 +26,9 @@
     @include font-weight-bold;
     color: $white;
     display: block;
+    line-height: 115%;
     position: relative;
+    text-align: center;
     text-transform: uppercase;
     transition-duration: 0.2s;
     transition-property: color;
