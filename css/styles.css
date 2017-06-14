@@ -10156,6 +10156,39 @@ input[type="text"].search-form-large__input {
   font-style: normal;
 }
 
+/*
+ section:  6.10.7.1
+ title: Box subtitle icon
+ template: 6_10_7_1-box-subtitle-icon
+ description: Provides supplementary information (and a link) below an icon
+*/
+.box-subtitle--icon {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box-subtitle--icon .box-subtitle__icon {
+  font-size: 2.25rem;
+}
+
+.box-subtitle--icon .box-subtitle__title {
+  letter-spacing: -0.51px;
+}
+
+.box-subtitle--icon .box-subtitle__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 
 .is-hidden {
   display: none !important;
