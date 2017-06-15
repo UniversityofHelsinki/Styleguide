@@ -8291,7 +8291,6 @@ input[type="text"].search-form-large__input {
 
 .search-form--minimal input[type="text"].search-form__input {
   border: none;
-  border-bottom: 1px solid #FFF;
   color: #FFF;
   height: 3rem;
   outline: none;
@@ -8300,6 +8299,7 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--minimal input[type="text"].search-form__input:focus {
+  border-bottom: 1px solid #FFF;
   outline: none;
 }
 
@@ -10296,6 +10296,16 @@ input[type="text"].search-form-large__input {
 @media (min-width: 62.5em) {
   .is-hidden--tablet {
     display: block;
+  }
+}
+
+.is-hidden--desktop {
+  display: block;
+}
+
+@media (min-width: 62.5em) {
+  .is-hidden--desktop {
+    display: none;
   }
 }
 
