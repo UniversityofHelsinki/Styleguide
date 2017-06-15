@@ -10172,6 +10172,7 @@ input[type="text"].search-form-large__input {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 .box-subtitle--icon .box-subtitle__icon {

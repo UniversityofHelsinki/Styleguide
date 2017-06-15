@@ -46,6 +46,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   .box-subtitle__icon {
     @include font-size(36px);
