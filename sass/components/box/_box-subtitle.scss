@@ -33,3 +33,32 @@
 .box-subtitle__content {
   @include text-bold;
 }
+
+
+/*
+ section:  6.10.7.1
+ title: Box subtitle icon
+ template: 6_10_7_1-box-subtitle-icon
+ description: Provides supplementary information (and a link) below an icon
+*/
+
+.box-subtitle--icon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .box-subtitle__icon {
+    @include font-size(36px);
+  }
+
+  .box-subtitle__title {
+    letter-spacing: -0.51px;
+  }
+
+  .box-subtitle__link {
+    @include font-size(14px);
+    @include font-weight-bold;
+    text-transform: uppercase;
+  }
+}
