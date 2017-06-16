@@ -8066,6 +8066,12 @@ ul.pager > li.pager__page a {
  template: 4_2_2_search-form-dark
  description:
 */
+/*
+ section: 4.2.3
+ title: Search form minimal
+ template: 4_2_3_search-form-minimal
+ description:
+*/
 .search-form {
   max-width: 50em;
   position: relative;
@@ -8276,6 +8282,54 @@ input[type="text"].search-form-large__input {
 
 .search-form--new input[type="submit"].search-form__submit {
   display: none;
+}
+
+.search-form--minimal {
+  max-width: 100%;
+  position: relative;
+}
+
+.search-form--minimal input[type="text"].search-form__input {
+  border: none;
+  color: #FFF;
+  height: 3rem;
+  outline: none;
+  border-color: white;
+  background: none;
+}
+
+.search-form--minimal input[type="text"].search-form__input:focus {
+  border-bottom: 1px solid #FFF;
+  outline: none;
+}
+
+.search-form--minimal input[type="submit"].search-form__submit {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  background-color: transparent;
+  border-radius: 0;
+  bottom: 0;
+  color: #FFF;
+  height: 3rem;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 3rem;
+}
+
+.search-form--minimal input[type="submit"].search-form__submit:hover,
+.search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit {
+  background-color: transparent;
+}
+
+.search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit:hover {
+  background-color: transparent;
 }
 
 .some-links {
@@ -10276,6 +10330,16 @@ input[type="text"].search-form-large__input {
 @media (min-width: 62.5em) {
   .is-hidden--tablet {
     display: block;
+  }
+}
+
+.is-hidden--desktop {
+  display: block;
+}
+
+@media (min-width: 62.5em) {
+  .is-hidden--desktop {
+    display: none;
   }
 }
 
