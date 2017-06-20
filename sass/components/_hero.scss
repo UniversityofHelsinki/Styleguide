@@ -217,22 +217,40 @@
     }
   }
 
+  .hero-big__content-bottom {
+    align-items: center;
+    margin: 20px 0 0 0;
+    justify-content: center;
+
+    @include breakpoint($small) {
+      margin-top: 40px;
+    }
+  }
+
   .hero-big__link {
     @include font-size(18px);
     border: 2px solid $white;
     color: $white;
     display: inline-block;
-    margin: 20px 0 0 0;
+    margin: 0;
     padding: 10px 25px;
     transition: background-color, color, 0.2s, 0.2s;
-
-    @include breakpoint($small) {
-      margin-top: 40px;
-    }
 
     &:hover {
       background-color: $white;
       color: $black;
+    }
+  }
+
+  .hero-big__play {
+    transition: color 0.2s;
+
+    &:hover {
+      color: $silver;
+    }
+
+    @include breakpoint($small) {
+      margin-left: 40px;
     }
   }
 
