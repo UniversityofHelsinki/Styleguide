@@ -232,5 +232,6 @@ input[type="text"].search-form-large__input {
 
   .search-form__input:focus + input[type="submit"].search-form__submit:hover {
     background-color: transparent;
+    color: $blue;
   }
 }
