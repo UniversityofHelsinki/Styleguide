@@ -3983,9 +3983,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
  description: The header bar with logo & navigation.
 */
 .l-header-bar {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #222;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4084,7 +4081,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 }
 
 .l-header-bar__bottom {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-bottom: 30px;
 }
 
 /*
@@ -8374,6 +8373,89 @@ input[type="text"].search-form-large__input {
 .search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit:active {
   background-color: transparent;
   color: #0098d0;
+}
+
+.search-form-toggle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: color, background-color;
+  z-index: 20;
+}
+
+.search-form-toggle:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 1.375rem;
+}
+
+.search-form-toggle:hover {
+  color: #D2D2D2;
+}
+
+.search-form-toggle.is-active {
+  color: #979797;
+}
+
+.search-form-toggle.is-active:hover {
+  color: #FFF;
+}
+
+.search-toggle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: -webkit-transform, color, background-color;
+  transition-property: transform, color, background-color;
+  z-index: 20;
+}
+
+.search-toggle:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 1.375rem;
+}
+
+.search-toggle:hover {
+  color: #D2D2D2;
+}
+
+.search-toggle.is-active {
+  color: #979797;
+  -webkit-animation: click 0.25s;
+          animation: click 0.25s;
 }
 
 .some-links {

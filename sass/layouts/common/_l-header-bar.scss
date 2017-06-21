@@ -6,7 +6,6 @@
 */
 
 .l-header-bar {
-  align-items: center;
   background: $black;
   display: flex;
   flex-direction: column;
@@ -65,5 +64,7 @@
 }
 
 .l-header-bar__bottom {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-bottom: 30px;
 }
