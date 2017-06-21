@@ -5959,25 +5959,49 @@ dl, ol, ul {
   }
 }
 
+.hero-big--centered .hero-big__content-bottom {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__content-bottom {
+    margin-top: 40px;
+  }
+}
+
 .hero-big--centered .hero-big__link {
   font-size: 1.125rem;
   border: 2px solid #FFF;
   color: #FFF;
   display: inline-block;
-  margin: 20px 0 0 0;
+  margin: 0;
   padding: 10px 25px;
   transition: background-color, color, 0.2s, 0.2s;
-}
-
-@media (min-width: 48em) {
-  .hero-big--centered .hero-big__link {
-    margin-top: 40px;
-  }
 }
 
 .hero-big--centered .hero-big__link:hover {
   background-color: #FFF;
   color: #222;
+}
+
+.hero-big--centered .hero-big__play {
+  transition: color 0.2s;
+}
+
+.hero-big--centered .hero-big__play:hover {
+  color: #979797;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__play {
+    margin-left: 40px;
+  }
 }
 
 .hero-big--centered .hero-big__corners {
