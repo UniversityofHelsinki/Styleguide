@@ -193,19 +193,21 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--minimal {
+  background-color: $black;
   max-width: 100%;
   position: relative;
 
   input[type="text"].search-form__input {
+    background: none;
     border: none;
+    border-bottom: 1px solid $white;
+    border-color: white;
     color: $white;
     height: 3rem;
     outline: none;
-    border-color: white;
-    background: none;
 
     &:focus {
-      border-bottom: 1px solid $white;
+      border-color: $blue;
       outline: none;
     }
   }

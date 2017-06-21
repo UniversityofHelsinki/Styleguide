@@ -8285,21 +8285,23 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--minimal {
+  background-color: #222;
   max-width: 100%;
   position: relative;
 }
 
 .search-form--minimal input[type="text"].search-form__input {
+  background: none;
   border: none;
+  border-bottom: 1px solid #FFF;
+  border-color: white;
   color: #FFF;
   height: 3rem;
   outline: none;
-  border-color: white;
-  background: none;
 }
 
 .search-form--minimal input[type="text"].search-form__input:focus {
-  border-bottom: 1px solid #FFF;
+  border-color: #0098d0;
   outline: none;
 }
 
