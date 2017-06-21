@@ -230,7 +230,8 @@ input[type="text"].search-form-large__input {
     background-color: transparent;
   }
 
-  .search-form__input:focus + input[type="submit"].search-form__submit:hover {
+  .search-form__input:focus + input[type="submit"].search-form__submit:hover,
+  .search-form__input:focus + input[type="submit"].search-form__submit:active {
     background-color: transparent;
     color: $blue;
   }
