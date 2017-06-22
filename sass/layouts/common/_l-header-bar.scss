@@ -6,15 +6,20 @@
 */
 
 .l-header-bar {
-  align-items: center;
   background: $black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0 15px;
 
   @include breakpoint($small) {
     padding: 0 30px;
   }
+}
+
+.l-header-bar__top {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .l-header-bar__left {
@@ -56,4 +61,9 @@
       margin-left: 0;
     }
   }
+}
+
+.l-header-bar__bottom {
+  margin: 0 auto;
+  max-width: 500px;
 }

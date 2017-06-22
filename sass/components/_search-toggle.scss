@@ -1,0 +1,27 @@
+.search-toggle {
+  align-items: center;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: transform, color, background-color;
+  z-index: 20;
+
+  &:before {
+    @include icon($icon-search);
+    @include font-size(22px);
+  }
+
+  &:hover {
+    color: $mediumsilver;
+  }
+
+  &.is-active {
+    color: $silver;
+    animation: click 0.25s;
+  }
+}
