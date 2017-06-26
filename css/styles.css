@@ -6093,6 +6093,75 @@ dl, ol, ul {
 }
 
 /*
+ section: 19.1
+ title: Highlight
+ template: 19_1_highlight
+ description: Highlight.
+*/
+.highlight {
+  background-position-x: 50%;
+  background-size: cover;
+  display: block;
+  height: 100vh;
+  padding-top: 40px;
+  position: relative;
+}
+
+.highlight:after {
+  background: black;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  z-index: 1;
+}
+
+@media (min-width: 48em) {
+  .highlight {
+    max-height: 480px;
+  }
+  .highlight:after {
+    opacity: 0.2;
+  }
+  .highlight:hover:after {
+    opacity: 0.3;
+  }
+}
+
+.highlight__content {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.highlight__title {
+  font-size: 5rem;
+  color: #FFF;
+  line-height: 1;
+  max-width: 720px;
+}
+
+@media (max-width: 48em) {
+  .highlight__title {
+    font-size: 3.42857rem;
+  }
+}
+
+.highlight__ingress {
+  font-size: 1.125rem;
+  color: #FFF;
+  max-width: 720px;
+}
+
+/*
  section: 6.7
  title: Horizontal tabs
  template: 6_7_horizontal-tabs
