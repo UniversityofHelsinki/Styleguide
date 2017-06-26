@@ -6103,7 +6103,7 @@ dl, ol, ul {
   background-size: cover;
   display: block;
   height: 100vh;
-  padding-top: 40px;
+  padding-top: 60px;
   position: relative;
 }
 
@@ -6152,6 +6152,12 @@ dl, ol, ul {
 @media (max-width: 48em) {
   .highlight__title {
     font-size: 3.42857rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .highlight__title {
+    margin-bottom: 20px;
   }
 }
 
