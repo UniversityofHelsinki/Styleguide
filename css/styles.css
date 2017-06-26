@@ -4652,6 +4652,14 @@ textarea[disabled]:hover {
   background-color: #F8F8F8;
 }
 
+select::-ms-clear,
+input[type="email"]::-ms-clear,
+input[type="text"]::-ms-clear,
+input[type="password"]::-ms-clear,
+textarea::-ms-clear {
+  display: none;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   display: none;

@@ -236,6 +236,10 @@ textarea {
   &[disabled]:hover {
     background-color: $lightsilver;
   }
+
+  &::-ms-clear {
+    display: none;
+  }
 }
 
 input[type="radio"],
