@@ -46,6 +46,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
   text-align: center;
 
   .box-subtitle__icon {
@@ -59,6 +60,7 @@
   .box-subtitle__link {
     @include font-size(14px);
     @include font-weight-bold;
+    margin-top: auto;
     text-transform: uppercase;
   }
 }

@@ -10352,6 +10352,7 @@ input[type="text"].search-form-large__input {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
   text-align: center;
 }
 
@@ -10367,6 +10368,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.875rem;
   font-weight: 700;
   font-style: normal;
+  margin-top: auto;
   text-transform: uppercase;
 }
 
