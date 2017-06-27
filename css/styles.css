@@ -6099,11 +6099,17 @@ dl, ol, ul {
  description: Highlight.
 */
 .highlight {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-position-x: 50%;
   background-size: cover;
-  display: block;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100vh;
-  padding-top: 60px;
+  padding-bottom: 50px;
+  padding-top: 30px;
   position: relative;
 }
 
@@ -6124,6 +6130,7 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .highlight {
     max-height: 480px;
+    min-height: 480px;
   }
   .highlight:after {
     opacity: 0.2;

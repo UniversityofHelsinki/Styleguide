@@ -6,11 +6,13 @@
 */
 
 .highlight {
+  align-items: center;
   background-position-x: 50%;
   background-size: cover;
-  display: block;
+  display: flex;
   height: 100vh;
-  padding-top: 60px;
+  padding-bottom: 50px;
+  padding-top: 30px;
   position: relative;
 
   &:after {
@@ -29,6 +31,7 @@
 
   @include breakpoint($small) {
     max-height: 480px;
+    min-height: 480px;
 
     &:after {
       opacity: 0.2;
