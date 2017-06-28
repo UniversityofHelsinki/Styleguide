@@ -7,8 +7,7 @@
 
 .highlight {
   align-items: center;
-  background-position-x: 50%;
-  background-size: cover;
+  background-color: #000;
   display: flex;
   height: 100vh;
   padding-bottom: 50px;
@@ -20,7 +19,7 @@
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0.3;
+    opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
@@ -29,17 +28,13 @@
     z-index: 1;
   }
 
+  &:hover:after {
+    opacity: 0.2;
+  }
+
   @include breakpoint($small) {
     max-height: 480px;
     min-height: 480px;
-
-    &:after {
-      opacity: 0.2;
-    }
-
-    &:hover:after {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -67,4 +62,19 @@
   @include font-size(18px);
   color: $white;
   max-width: 720px;
+}
+
+.highlight__bgoverlay {
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position-x: 50%;
+  background-size: cover;
+
+  @include breakpoint($small) {
+    opacity: 0.8;
+  }
 }
