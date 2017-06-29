@@ -6798,6 +6798,7 @@ td.jobs-listing__date {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 -20px;
 }
 
 @media (min-width: 48em) {
