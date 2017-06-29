@@ -6827,9 +6827,6 @@ td.jobs-listing__date {
 
 @media (min-width: 48em) {
   .link-grid__item {
-    -webkit-flex-basis: 33.33%;
-        -ms-flex-preferred-size: 33.33%;
-            flex-basis: 33.33%;
     width: 33.33%;
   }
 }

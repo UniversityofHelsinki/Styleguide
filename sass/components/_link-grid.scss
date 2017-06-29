@@ -29,7 +29,6 @@
   }
 
   @include breakpoint($small) {
-    flex-basis: 33.33%;
     width: 33.33%;
   }
 }
