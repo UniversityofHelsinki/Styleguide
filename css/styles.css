@@ -5817,9 +5817,8 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
-  font-weight: 700;
-  font-style: normal;
   color: #FFF;
+  font-weight: 700;
   line-height: 1em;
   margin-bottom: 10px;
   padding: 0;
@@ -6152,7 +6151,7 @@ dl, ol, ul {
 .highlight__title {
   font-size: 5rem;
   color: #FFF;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -1px;
   line-height: 1;
   max-width: 720px;
