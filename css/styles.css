@@ -6834,15 +6834,6 @@ td.jobs-listing__date {
 
 @media (min-width: 48em) {
   .link-grid__item {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-    width: 50%;
-  }
-}
-
-@media (min-width: 62.5em) {
-  .link-grid__item {
     -webkit-flex-basis: 33.33%;
         -ms-flex-preferred-size: 33.33%;
             flex-basis: 33.33%;
