@@ -4206,11 +4206,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   background-color: transparent;
 }
 
-.l-subregion-wrapper.theme-plain:first-of-type {
-  border-top: 0 none;
-  padding-top: 0;
-}
-
 .l-subregion {
   *zoom: 1;
   clear: both;
