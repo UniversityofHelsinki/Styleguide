@@ -4206,11 +4206,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   background-color: transparent;
 }
 
-.l-subregion-wrapper.theme-plain:first-of-type {
-  border-top: 0 none;
-  padding-top: 0;
-}
-
 .l-subregion {
   *zoom: 1;
   clear: both;
@@ -5822,9 +5817,8 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
-  font-weight: 700;
-  font-style: normal;
   color: #FFF;
+  font-weight: 700;
   line-height: 1em;
   margin-bottom: 10px;
   padding: 0;
@@ -6157,8 +6151,7 @@ dl, ol, ul {
 .highlight__title {
   font-size: 5rem;
   color: #FFF;
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-weight: 700;
   line-height: 1;
   max-width: 720px;
 }
@@ -6790,6 +6783,83 @@ td.jobs-listing__date {
   min-height: 100%;
   min-width: 100%;
   opacity: 0.8;
+}
+
+/*
+ section: 20.1
+ title: Link grid
+ template: 20_1_link-grid
+ description: Grid of three links.
+*/
+.link-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 -20px;
+}
+
+@media (min-width: 48em) {
+  .link-grid {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.link-grid__item {
+  color: #222;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 20px 0;
+  padding: 0 17px;
+}
+
+.link-grid__item:hover .link-grid__content {
+  border-color: #0098d0;
+  color: #0098d0;
+}
+
+@media (min-width: 48em) {
+  .link-grid__item {
+    width: 33.33%;
+  }
+}
+
+.link-grid__content {
+  border-bottom: 8px solid #F8F8F8;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding-bottom: 16px;
+  transition-duration: 0.1s;
+  transition-property: border-color, color;
+}
+
+.link-grid__figure {
+  font-size: 3.75rem;
+  color: #0098d0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.link-grid__title {
+  color: inherit;
+  margin-top: auto;
+  max-width: 600px;
 }
 
 /*
