@@ -67,6 +67,14 @@
   }
 }
 
+.is-hidden--desktop {
+  display: block;
+
+  @include breakpoint($medium) {
+    display: none;
+  }
+}
+
 .is-tel {
   @include breakpoint($small) {
     color: $black;

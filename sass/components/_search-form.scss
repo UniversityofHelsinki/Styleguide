@@ -17,6 +17,13 @@
  template: 4_2_2_search-form-dark
  description:
 */
+
+/*
+ section: 4.2.3
+ title: Search form minimal
+ template: 4_2_3_search-form-minimal
+ description:
+*/
 .search-form {
   max-width: 50em;
   position: relative;
@@ -182,5 +189,83 @@ input[type="text"].search-form-large__input {
 
   input[type="submit"].search-form__submit {
     display: none;
+  }
+}
+
+.search-form--minimal {
+  background-color: $black;
+  max-width: 100%;
+  position: relative;
+
+  input[type="text"].search-form__input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $white;
+    border-color: white;
+    color: $white;
+    height: 3rem;
+    outline: none;
+
+    &:focus {
+      border-color: $blue;
+      outline: none;
+    }
+  }
+
+  input[type="submit"].search-form__submit {
+    @include icon(); // Unicode is provided by the form
+    background-color: transparent;
+    border-radius: 0;
+    bottom: 0;
+    color: $white;
+    height: 3rem;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 3rem;
+  }
+
+  input[type="submit"].search-form__submit:hover,
+  .search-form__input:focus + input[type="submit"].search-form__submit {
+    background-color: transparent;
+  }
+
+  .search-form__input:focus + input[type="submit"].search-form__submit:hover,
+  .search-form__input:focus + input[type="submit"].search-form__submit:active {
+    background-color: transparent;
+    color: $blue;
+  }
+}
+
+//
+
+.search-form-toggle {
+  align-items: center;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: color, background-color;
+  z-index: 20;
+
+  &:before {
+    @include icon($icon-search);
+    @include font-size(22px);
+  }
+
+  &:hover {
+    color: $mediumsilver;
+  }
+
+  &.is-active {
+    color: $silver;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
