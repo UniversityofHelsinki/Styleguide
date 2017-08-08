@@ -1,0 +1,61 @@
+/*
+ section: 20.1
+ title: Link grid
+ template: 20_1_link-grid
+ description: Grid of three links.
+*/
+
+.link-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -20px;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.link-grid__item {
+  color: $black;
+  flex-grow: 1;
+  margin: 20px 0;
+  padding: 0 17px;
+
+  &:hover {
+    .link-grid__content {
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  @include breakpoint($small) {
+    width: 33.33%;
+  }
+}
+
+.link-grid__content {
+  border-bottom: 8px solid #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 16px;
+  transition-duration: 0.1s;
+  transition-property: border-color, color;
+}
+
+.link-grid__figure {
+  @include font-size(60px);
+  color: $blue;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.link-grid__title {
+  color: inherit;
+  margin-top: auto;
+  max-width: 600px;
+}

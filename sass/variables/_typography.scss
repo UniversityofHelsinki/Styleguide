@@ -54,5 +54,19 @@
   url('../fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans') format('svg');
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../fonts/Open-Sans-800/Open-Sans-800.eot');
+  src: url('../fonts/Open-Sans-800/Open-Sans-800.eot?#iefix') format('embedded-opentype'),
+  local('Open Sans ExtraBold'),
+  local('Open-Sans-800'),
+  url('../fonts/Open-Sans-800/Open-Sans-800.ttf') format('truetype'),
+  url('../fonts/Open-Sans-800/Open-Sans-800.woff2') format('woff2'),
+  url('../fonts/Open-Sans-800/Open-Sans-800.woff') format('woff'),
+  url('../fonts/Open-Sans-800/Open-Sans-800.svg#OpenSans') format('svg');
+}
+
 $base-font-size-mobile: 14px;
 $base-font-size: 16px;
