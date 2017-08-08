@@ -450,6 +450,14 @@ th {
   src: url("fonts/Open-Sans-700/Open-Sans-700.eot?#iefix") format("embedded-opentype"), local("Open Sans Bold"), local("Open-Sans-700"), url("fonts/Open-Sans-700/Open-Sans-700.ttf") format("truetype"), url("fonts/Open-Sans-700/Open-Sans-700.woff2") format("woff2"), url("fonts/Open-Sans-700/Open-Sans-700.woff") format("woff"), url("fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans") format("svg");
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-style: normal;
+  src: url("fonts/Open-Sans-800/Open-Sans-800.eot");
+  src: url("fonts/Open-Sans-800/Open-Sans-800.eot?#iefix") format("embedded-opentype"), local("Open Sans ExtraBold"), local("Open-Sans-800"), url("fonts/Open-Sans-800/Open-Sans-800.ttf") format("truetype"), url("fonts/Open-Sans-800/Open-Sans-800.woff2") format("woff2"), url("fonts/Open-Sans-800/Open-Sans-800.woff") format("woff"), url("fonts/Open-Sans-800/Open-Sans-800.svg#OpenSans") format("svg");
+}
+
 /**
  * Mixin for subtitle
  */
@@ -3983,40 +3991,47 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
  description: The header bar with logo & navigation.
 */
 .l-header-bar {
+  background: #222;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 15px;
+}
+
+@media (min-width: 48em) {
+  .l-header-bar {
+    padding: 0 30px;
+  }
+}
+
+.l-header-bar__top {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #222;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 10px 15px;
-}
-
-@media (min-width: 48em) {
-  .l-header-bar {
-    padding: 10px 30px;
-  }
 }
 
 .l-header-bar__left {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding: 10px 0;
 }
 
 @media (min-width: 62.5em) {
   .l-header-bar__left {
-    -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    width: 300px;
+    max-width: 300px;
   }
 }
 
@@ -4055,16 +4070,28 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-header-bar__right {
-    width: 300px;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    max-width: 300px;
   }
 }
 
 .l-header-bar__right > * {
-  margin-left: 1em;
+  margin-left: 16px;
 }
 
 .l-header-bar__right > *:first-child {
   margin-left: 0;
+}
+
+.l-header-bar__bottom {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 /*
@@ -4116,47 +4143,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   .l-overlay.is-closing {
     opacity: 1;
     overflow-y: hidden;
-  }
-}
-
-.l-overlay button.overlay-close {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: none;
-  background: none;
-  color: #FFF;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0;
-  height: 40px;
-  margin-left: 20px;
-  padding: 0 0 0 1em;
-  text-transform: uppercase;
-}
-
-.l-overlay button.overlay-close:hover {
-  color: #D2D2D2;
-}
-
-.l-overlay button.overlay-close:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
-  font-size: 0.875rem;
-  padding: 0 10px;
-}
-
-@media (min-width: 62.5em) {
-  .l-overlay button.overlay-close {
-    font-size: 0.875rem;
-    margin-left: 40px;
   }
 }
 
@@ -4218,11 +4204,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 .l-subregion-wrapper.theme-plain {
   background-color: transparent;
-}
-
-.l-subregion-wrapper.theme-plain:first-of-type {
-  border-top: 0 none;
-  padding-top: 0;
 }
 
 .l-subregion {
@@ -4359,6 +4340,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-top-bar--small {
+    background-color: #000;
     display: block;
   }
 }
@@ -4671,6 +4653,14 @@ textarea[disabled]:active,
 textarea[disabled]:focus,
 textarea[disabled]:hover {
   background-color: #F8F8F8;
+}
+
+select::-ms-clear,
+input[type="email"]::-ms-clear,
+input[type="text"]::-ms-clear,
+input[type="password"]::-ms-clear,
+textarea::-ms-clear {
+  display: none;
 }
 
 input[type="radio"],
@@ -5827,9 +5817,8 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
-  font-weight: 700;
-  font-style: normal;
   color: #FFF;
+  font-weight: 700;
   line-height: 1em;
   margin-bottom: 10px;
   padding: 0;
@@ -5995,25 +5984,49 @@ dl, ol, ul {
   }
 }
 
+.hero-big--centered .hero-big__content-bottom {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__content-bottom {
+    margin-top: 40px;
+  }
+}
+
 .hero-big--centered .hero-big__link {
   font-size: 1.125rem;
   border: 2px solid #FFF;
   color: #FFF;
   display: inline-block;
-  margin: 20px 0 0 0;
+  margin: 0;
   padding: 10px 25px;
   transition: background-color, color, 0.2s, 0.2s;
-}
-
-@media (min-width: 48em) {
-  .hero-big--centered .hero-big__link {
-    margin-top: 40px;
-  }
 }
 
 .hero-big--centered .hero-big__link:hover {
   background-color: #FFF;
   color: #222;
+}
+
+.hero-big--centered .hero-big__play {
+  transition: color 0.2s;
+}
+
+.hero-big--centered .hero-big__play:hover {
+  color: #979797;
+}
+
+@media (min-width: 48em) {
+  .hero-big--centered .hero-big__play {
+    margin-left: 40px;
+  }
 }
 
 .hero-big--centered .hero-big__corners {
@@ -6078,6 +6091,103 @@ dl, ol, ul {
 @media (min-width: 48em) {
   .hero-big--centered .hero-big__corners:before {
     border-width: 40px;
+  }
+}
+
+/*
+ section: 19.1
+ title: Highlight
+ template: 19_1_highlight
+ description: Highlight.
+*/
+.highlight {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.highlight:after {
+  background: black;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  z-index: 1;
+}
+
+.highlight:hover:after {
+  opacity: 0.2;
+}
+
+@media (min-width: 48em) {
+  .highlight {
+    max-height: 480px;
+    min-height: 480px;
+  }
+}
+
+.highlight__content {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.highlight__title {
+  font-size: 5rem;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 1;
+  max-width: 720px;
+}
+
+@media (max-width: 48em) {
+  .highlight__title {
+    font-size: 3.42857rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .highlight__title {
+    margin-bottom: 20px;
+  }
+}
+
+.highlight__ingress {
+  font-size: 1.125rem;
+  color: #FFF;
+  max-width: 720px;
+}
+
+.highlight__bgoverlay {
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position-x: 50%;
+  background-size: cover;
+}
+
+@media (min-width: 48em) {
+  .highlight__bgoverlay {
+    opacity: 0.8;
   }
 }
 
@@ -6619,6 +6729,7 @@ td.jobs-listing__date {
 
 .liftup-grid__content {
   position: relative;
+  width: 100%;
   z-index: 2;
 }
 
@@ -6672,6 +6783,83 @@ td.jobs-listing__date {
   min-height: 100%;
   min-width: 100%;
   opacity: 0.8;
+}
+
+/*
+ section: 20.1
+ title: Link grid
+ template: 20_1_link-grid
+ description: Grid of three links.
+*/
+.link-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 -20px;
+}
+
+@media (min-width: 48em) {
+  .link-grid {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.link-grid__item {
+  color: #222;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 20px 0;
+  padding: 0 17px;
+}
+
+.link-grid__item:hover .link-grid__content {
+  border-color: #0098d0;
+  color: #0098d0;
+}
+
+@media (min-width: 48em) {
+  .link-grid__item {
+    width: 33.33%;
+  }
+}
+
+.link-grid__content {
+  border-bottom: 8px solid #F8F8F8;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding-bottom: 16px;
+  transition-duration: 0.1s;
+  transition-property: border-color, color;
+}
+
+.link-grid__figure {
+  font-size: 3.75rem;
+  color: #0098d0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.link-grid__title {
+  color: inherit;
+  margin-top: auto;
+  max-width: 600px;
 }
 
 /*
@@ -7255,6 +7443,12 @@ span.links__link.theme-language {
 
 @media (min-width: 62.5em) {
   .main-menu-v2 > .menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin: 0 -16px;
   }
 }
@@ -7299,10 +7493,8 @@ span.links__link.theme-language {
 
 @media (min-width: 62.5em) {
   .main-menu-v2 li.is-lvl1 {
-    float: left;
     opacity: 1;
     padding: 0 16px;
-    min-height: 280px;
     width: 33%;
   }
 }
@@ -7549,6 +7741,199 @@ span.links__link.theme-language {
   margin-right: 0.5em;
   position: relative;
   top: 2px;
+}
+
+.overlay-toggle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 40px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 40px;
+  z-index: 15;
+}
+
+.overlay-toggle span {
+  background: #FFF;
+  display: block;
+  height: 3px;
+  width: 30px;
+  transition-duration: 0.25s;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+}
+
+.overlay-toggle span:after, .overlay-toggle span:before {
+  background-color: #FFF;
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  transition-duration: 0.25s;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  width: inherit;
+}
+
+.overlay-toggle span:before {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.overlay-toggle span:after {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.overlay-toggle.is-active span {
+  -webkit-animation: burgerCloseA 0.3s;
+          animation: burgerCloseA 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.overlay-toggle.is-active span:after, .overlay-toggle.is-active span:before {
+  -webkit-animation: burgerCloseB 0.3s;
+          animation: burgerCloseB 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.overlay-toggle.is-closing span {
+  -webkit-animation: burgerOpenA 0.3s;
+          animation: burgerOpenA 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.overlay-toggle.is-closing span:after, .overlay-toggle.is-closing span:before {
+  -webkit-animation: burgerOpenB 0.3s;
+          animation: burgerOpenB 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.overlay-toggle:hover span,
+.overlay-toggle:hover span:after,
+.overlay-toggle:hover span:before {
+  background-color: #D2D2D2;
+}
+
+@-webkit-keyframes burgerCloseA {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes burgerCloseA {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes burgerCloseB {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes burgerCloseB {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+}
+
+@-webkit-keyframes burgerOpenA {
+  0% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+  }
+}
+
+@keyframes burgerOpenA {
+  0% {
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes burgerOpenB {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+  }
+}
+
+@keyframes burgerOpenB {
+  0% {
+    -webkit-transform: translateY(0) rotate(90deg);
+            transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+  }
 }
 
 /*
@@ -7832,17 +8217,33 @@ ul.pager > li.pager__page a {
  template: 5_1_1_quick-menu
  description: The quick menu. Shows only the first level of navigation. To be used as a main navigation element.
 */
-.quick-menu ul.menu {
+.quick-menu {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 1em;
+}
+
+.quick-menu ul.menu {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .quick-menu li {
-  padding: 0.6em;
+  padding: 0.5em 0.6em;
 }
 
 .quick-menu a {
@@ -7851,7 +8252,9 @@ ul.pager > li.pager__page a {
   font-style: normal;
   color: #FFF;
   display: block;
+  line-height: 115%;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
   transition-duration: 0.2s;
   transition-property: color;
@@ -7884,6 +8287,12 @@ ul.pager > li.pager__page a {
  section: 4.2.2
  title: Search form dark
  template: 4_2_2_search-form-dark
+ description:
+*/
+/*
+ section: 4.2.3
+ title: Search form minimal
+ template: 4_2_3_search-form-minimal
  description:
 */
 .search-form {
@@ -8096,6 +8505,141 @@ input[type="text"].search-form-large__input {
 
 .search-form--new input[type="submit"].search-form__submit {
   display: none;
+}
+
+.search-form--minimal {
+  background-color: #222;
+  max-width: 100%;
+  position: relative;
+}
+
+.search-form--minimal input[type="text"].search-form__input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  border-color: white;
+  color: #FFF;
+  height: 3rem;
+  outline: none;
+}
+
+.search-form--minimal input[type="text"].search-form__input:focus {
+  border-color: #0098d0;
+  outline: none;
+}
+
+.search-form--minimal input[type="submit"].search-form__submit {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  background-color: transparent;
+  border-radius: 0;
+  bottom: 0;
+  color: #FFF;
+  height: 3rem;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 3rem;
+}
+
+.search-form--minimal input[type="submit"].search-form__submit:hover,
+.search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit {
+  background-color: transparent;
+}
+
+.search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit:hover,
+.search-form--minimal .search-form__input:focus + input[type="submit"].search-form__submit:active {
+  background-color: transparent;
+  color: #0098d0;
+}
+
+.search-form-toggle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: color, background-color;
+  z-index: 20;
+}
+
+.search-form-toggle:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 1.375rem;
+}
+
+.search-form-toggle:hover {
+  color: #D2D2D2;
+}
+
+.search-form-toggle.is-active {
+  color: #979797;
+}
+
+.search-form-toggle.is-active:hover {
+  color: #FFF;
+}
+
+.search-toggle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: -webkit-transform, color, background-color;
+  transition-property: transform, color, background-color;
+  z-index: 20;
+}
+
+.search-toggle:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 1.375rem;
+}
+
+.search-toggle:hover {
+  color: #D2D2D2;
+}
+
+.search-toggle.is-active {
+  color: #979797;
+  -webkit-animation: click 0.25s;
+          animation: click 0.25s;
 }
 
 .some-links {
@@ -9976,6 +10520,42 @@ input[type="text"].search-form-large__input {
   font-style: normal;
 }
 
+/*
+ section:  6.10.7.1
+ title: Box subtitle icon
+ template: 6_10_7_1-box-subtitle-icon
+ description: Provides supplementary information (and a link) below an icon
+*/
+.box-subtitle--icon {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.box-subtitle--icon .box-subtitle__icon {
+  font-size: 2.25rem;
+}
+
+.box-subtitle--icon .box-subtitle__title {
+  letter-spacing: -0.51px;
+}
+
+.box-subtitle--icon .box-subtitle__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
 
 .is-hidden {
   display: none !important;
@@ -10062,6 +10642,16 @@ input[type="text"].search-form-large__input {
 @media (min-width: 62.5em) {
   .is-hidden--tablet {
     display: block;
+  }
+}
+
+.is-hidden--desktop {
+  display: block;
+}
+
+@media (min-width: 62.5em) {
+  .is-hidden--desktop {
+    display: none;
   }
 }
 
@@ -10814,7 +11404,7 @@ table[class*="idean-styleguide"] {
 	display: inherit !important;
 }
 
-</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form elements</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1-1" data-page="section-3">Section 3-7-1-1: Button small</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group (small buttons)</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2" data-page="section-4">Section 4-2: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-1" data-page="section-4">Section 4-2-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-2" data-page="section-4">Section 4-2-2: Search form dark</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Quick menu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5-2" data-page="section-5">Section 5-2: Fatmenu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent and transparent-alt buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story topical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-5" data-page="section-6">Section 6-10-5-5: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-10" data-page="section-6">Section 6-10-10: Box liftup</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11" data-page="section-6">Section 6-11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-1" data-page="section-6">Section 6-11-1: Textarea</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-2" data-page="section-6">Section 6-11-2: Textarea infobox</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-3" data-page="section-6">Section 6-11-3: Textarea ingress</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index topical</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Top bar small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-2" data-page="section-15">Section 15-1-2: Header bar</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-3" data-page="section-15">Section 15-3: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16" data-page="section-16">Section 16</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1" data-page="section-16">Section 16-1</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-1" data-page="section-16">Section 16-1-1: Hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-2" data-page="section-16">Section 16-1-2: Hero big</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-3" data-page="section-16">Section 16-1-3: Hero big centered</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-17" data-page="section-17">Section 17</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-17-1" data-page="section-17">Section 17-1: Overlay</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18" data-page="section-18">Section 18</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-18-1" data-page="section-18">Section 18-1: Liftup grid</a></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#F8F8F8"><span class="idean-styleguide-colors-list-label">$lightsilver #F8F8F8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#D2D2D2"><span class="idean-styleguide-colors-list-label">$mediumsilver #D2D2D2</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#555555"><span class="idean-styleguide-colors-list-label">$lightgray #555555</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
+</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form elements</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1-1" data-page="section-3">Section 3-7-1-1: Button small</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group (small buttons)</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2" data-page="section-4">Section 4-2: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-1" data-page="section-4">Section 4-2-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-2" data-page="section-4">Section 4-2-2: Search form dark</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-3" data-page="section-4">Section 4-2-3: Search form minimal</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Quick menu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5-2" data-page="section-5">Section 5-2: Fatmenu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent and transparent-alt buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story topical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-5" data-page="section-6">Section 6-10-5-5: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7-1" data-page="section-6">Section 6-10-7-1: Box subtitle icon</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-10" data-page="section-6">Section 6-10-10: Box liftup</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11" data-page="section-6">Section 6-11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-1" data-page="section-6">Section 6-11-1: Textarea</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-2" data-page="section-6">Section 6-11-2: Textarea infobox</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-3" data-page="section-6">Section 6-11-3: Textarea ingress</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index topical</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Top bar small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-2" data-page="section-15">Section 15-1-2: Header bar</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-3" data-page="section-15">Section 15-3: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16" data-page="section-16">Section 16</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1" data-page="section-16">Section 16-1</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-1" data-page="section-16">Section 16-1-1: Hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-2" data-page="section-16">Section 16-1-2: Hero big</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-3" data-page="section-16">Section 16-1-3: Hero big centered</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-17" data-page="section-17">Section 17</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-17-1" data-page="section-17">Section 17-1: Overlay</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18" data-page="section-18">Section 18</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-18-1" data-page="section-18">Section 18-1: Liftup grid</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-19" data-page="section-19">Section 19</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-19-1" data-page="section-19">Section 19-1: Highlight</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-20" data-page="section-20">Section 20</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-20-1" data-page="section-20">Section 20-1: Link grid</a></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#F8F8F8"><span class="idean-styleguide-colors-list-label">$lightsilver #F8F8F8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#D2D2D2"><span class="idean-styleguide-colors-list-label">$mediumsilver #D2D2D2</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#555555"><span class="idean-styleguide-colors-list-label">$lightgray #555555</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
 
 <div>
     <span class="icon--add-to-todo-list"></span>
@@ -11755,6 +12345,14 @@ table[class*="idean-styleguide"] {
   &lt;label class="search-form--dark__label" for="search-form__input-demo"&gt;Hae tutkimuksia TUHAT-järjestelmästä&lt;/label&gt;
   &lt;input placeholder="Hae tutkimuksia" class="search-form--dark__input" type="text" name="searchall" value="" maxlength="128"&gt;
   &lt;input class="search-form--dark__submit" type="submit" value="&#xEA35"&gt;
+&lt;/form&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-4-2-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-4-2-3">Section 4-2-3: Search form minimal</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><form class="search-form search-form--minimal" action="#" method="get" accept-charset="UTF-8">
+  <input placeholder="Hae" class="search-form__input" type="text" name="searchall" value="" maxlength="128">
+  <input class="search-form__submit" type="submit" value="&#xEA35">
+</form>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;form class="search-form search-form--minimal" action="#" method="get" accept-charset="UTF-8"&gt;
+  &lt;input placeholder="Hae" class="search-form__input" type="text" name="searchall" value="" maxlength="128"&gt;
+  &lt;input class="search-form__submit" type="submit" value="&#xEA35"&gt;
 &lt;/form&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></div></section><section class="idean-styleguide-page" id="section-5"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-5">University of Helsinki: 5</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-5-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-5-1">Section 5-1: Main menu</a></h2><p class="idean-styleguide-description">The main menu. To see the mobile menu, resize your browser to mobile width.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><nav role="navigation" class="main-menu">
   <ul class="menu">
@@ -13002,7 +13600,43 @@ table[class*="idean-styleguide"] {
 		180+120 opintopistettä, 5 vuotta
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-8"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-8">Section 6-10-8: Box card</a></h2><p class="idean-styleguide-description">Displays contact card type information.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-card">
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div><div class="idean-styleguide-subsection" id="section-6-10-7-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-7-1">Section 6-10-7-1: Box subtitle icon</a></h2><p class="idean-styleguide-description">Provides supplementary information (and a link) below an icon</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-subtitle box-subtitle--icon">
+  <div class="box-subtitle__icon"><span class="icon--time"></span></div>
+  <div class="box-subtitle__title">
+    Tänään avoinna 10-17
+  </div>
+  <a href="#" class="box-subtitle__link">Aukioloajat</a>
+</div>
+<div class="box-subtitle box-subtitle--icon">
+  <div class="box-subtitle__icon"><span class="icon--location"></span></div>
+  <div class="box-subtitle__title">
+    Aleksanterinkatu 7, Helsinki
+  </div>
+  <a href="#" class="box-subtitle__link">Sijainti kartalla</a>
+</div>
+<div class="box-subtitle box-subtitle--icon">
+  <div class="box-subtitle__icon"><span class="icon--mail"></span></div>
+  <a href="#" class="box-subtitle__link">Tilaa uutiskirje</a>
+</div>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="box-subtitle box-subtitle--icon"&gt;
+  &lt;div class="box-subtitle__icon"&gt;&lt;span class="icon--time"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="box-subtitle__title"&gt;
+    Tänään avoinna 10-17
+  &lt;/div&gt;
+  &lt;a href="#" class="box-subtitle__link"&gt;Aukioloajat&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="box-subtitle box-subtitle--icon"&gt;
+  &lt;div class="box-subtitle__icon"&gt;&lt;span class="icon--location"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="box-subtitle__title"&gt;
+    Aleksanterinkatu 7, Helsinki
+  &lt;/div&gt;
+  &lt;a href="#" class="box-subtitle__link"&gt;Sijainti kartalla&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="box-subtitle box-subtitle--icon"&gt;
+  &lt;div class="box-subtitle__icon"&gt;&lt;span class="icon--mail"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;a href="#" class="box-subtitle__link"&gt;Tilaa uutiskirje&lt;/a&gt;
+&lt;/div&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-8"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-8">Section 6-10-8: Box card</a></h2><p class="idean-styleguide-description">Displays contact card type information.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-card">
   <a href="#" class="box-card__header">
     Matti Meikäläinen
   </a>
@@ -14199,9 +14833,20 @@ table[class*="idean-styleguide"] {
     <h2 class="hero-big__title">
       Lorem est notare nuam littera gothica nonummy dolor
     </h2>
-    <a href="#" class="hero-big__link">
-      Lorem ipsum dolor
-    </a>
+    <div class="hero-big__content-bottom">
+      <a href="#" class="hero-big__link">
+        Lorem ipsum dolor
+      </a>
+      <a href="#" class="hero-big__play">
+        Katso video
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-big__video">
+    <video autoplay muted loop width="1920" height="1080" preload="auto">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f3/Big_Buck_Bunny_first_23_seconds_1080p.ogv/Big_Buck_Bunny_first_23_seconds_1080p.ogv.1080p.webm" type="video/mp4">
+    </video>
   </div>
 </div>
 </div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="hero-big hero-big--centered" style="background-image: url(images/opiskelu_hero.png);"&gt;
@@ -14211,9 +14856,20 @@ table[class*="idean-styleguide"] {
     &lt;h2 class="hero-big__title"&gt;
       Lorem est notare nuam littera gothica nonummy dolor
     &lt;/h2&gt;
-    &lt;a href="#" class="hero-big__link"&gt;
-      Lorem ipsum dolor
-    &lt;/a&gt;
+    &lt;div class="hero-big__content-bottom"&gt;
+      &lt;a href="#" class="hero-big__link"&gt;
+        Lorem ipsum dolor
+      &lt;/a&gt;
+      &lt;a href="#" class="hero-big__play"&gt;
+        Katso video
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="hero-big__video"&gt;
+    &lt;video autoplay muted loop width="1920" height="1080" preload="auto"&gt;
+      &lt;source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f3/Big_Buck_Bunny_first_23_seconds_1080p.ogv/Big_Buck_Bunny_first_23_seconds_1080p.ogv.1080p.webm" type="video/mp4"&gt;
+    &lt;/video&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></div></section><section class="idean-styleguide-page" id="section-17"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-17">University of Helsinki: 17</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-17-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-17-1">Section 17-1: Overlay</a></h2><p class="idean-styleguide-description">Full screen overlay for menu, etc.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="l-overlay is-open">
@@ -14245,7 +14901,7 @@ table[class*="idean-styleguide"] {
           <a class="search-form__search-button"></a>
           <input class="search-form__submit is-hidden" name="op" type="submit" value="">
         </form>
-        <button class="overlay-close">Close</button>
+        <span class="overlay-toggle is-active"><span></span></span>
       </div>
     </div>
   </div>
@@ -14443,7 +15099,7 @@ table[class*="idean-styleguide"] {
           &lt;a class="search-form__search-button"&gt;&lt;/a&gt;
           &lt;input class="search-form__submit is-hidden" name="op" type="submit" value=""&gt;
         &lt;/form&gt;
-        &lt;button class="overlay-close"&gt;Close&lt;/button&gt;
+        &lt;span class="overlay-toggle is-active"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -14675,6 +15331,228 @@ table[class*="idean-styleguide"] {
       &lt;div class="liftup-grid__ingress"&gt;
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
       &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-19"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-19">University of Helsinki: 19</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-19-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-19-1">Section 19-1: Highlight</a></h2><p class="idean-styleguide-description">Highlight.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><a class="highlight" href="#">
+  <div class="highlight__content">
+    <h4 class="highlight__title">
+      Helsinki opiskelijakaupunkina
+    </h4>
+    <div class="highlight__ingress">
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    </div>
+  </div>
+  <div class="highlight__bgoverlay" style="background-image: url(images/test-image.jpg);"></div>
+</a>
+
+<a class="highlight" href="#" style="background-color: #0098d0;">
+  <div class="highlight__content">
+    <h4 class="highlight__title">
+      Helsinki opiskelijakaupunkina
+    </h4>
+    <div class="highlight__ingress">
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    </div>
+  </div>
+</a>
+
+<a class="highlight" href="#" style="background-color: #222222;">
+  <div class="highlight__content">
+    <h4 class="highlight__title">
+      Helsinki opiskelijakaupunkina
+    </h4>
+    <div class="highlight__ingress">
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    </div>
+  </div>
+</a>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;a class="highlight" href="#"&gt;
+  &lt;div class="highlight__content"&gt;
+    &lt;h4 class="highlight__title"&gt;
+      Helsinki opiskelijakaupunkina
+    &lt;/h4&gt;
+    &lt;div class="highlight__ingress"&gt;
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="highlight__bgoverlay" style="background-image: url(images/test-image.jpg);"&gt;&lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="highlight" href="#" style="background-color: #0098d0;"&gt;
+  &lt;div class="highlight__content"&gt;
+    &lt;h4 class="highlight__title"&gt;
+      Helsinki opiskelijakaupunkina
+    &lt;/h4&gt;
+    &lt;div class="highlight__ingress"&gt;
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="highlight" href="#" style="background-color: #222222;"&gt;
+  &lt;div class="highlight__content"&gt;
+    &lt;h4 class="highlight__title"&gt;
+      Helsinki opiskelijakaupunkina
+    &lt;/h4&gt;
+    &lt;div class="highlight__ingress"&gt;
+      Helsinki on toimiva ja turvallinen opiskelukaupunki. Opiskelijalle se tarjoaa monenlaisia vapaa-ajanviettomahdollisuuksia sekä vilkkaan opiskelijaelämän. Tutustu yliopistoon, opiskeluun ja Helsinkiin.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-20"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-20">University of Helsinki: 20</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-20-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-20-1">Section 20-1: Link grid</a></h2><p class="idean-styleguide-description">Grid of three links.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="link-grid">
+  <a class="link-grid__item theme-prominent" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        Paras 1%
+      </div>
+      <h4 class="link-grid__title">
+        Helsingin yliopisto kuuluu maailman tutkimusyliopistojen parhaan 1% joukkoon
+      </h4>
+    </div>
+  </a>
+</div>
+
+<div class="link-grid">
+  <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        15/29
+      </div>
+      <h4 class="link-grid__title">
+        Suomen akatemian huippuyksikköä
+      </h4>
+    </div>
+  </a>
+<!--   <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        19/41
+      </div>
+      <h4 class="link-grid__title">
+        Akatemiaprofessoria
+      </h4>
+    </div>
+  </a> -->
+  <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        10 500
+      </div>
+      <h4 class="link-grid__title">
+        Julkaisua vuodessa
+      </h4>
+    </div>
+  </a>
+</div>
+
+<div class="link-grid">
+  <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        4 621
+      </div>
+      <h4 class="link-grid__title">
+        Henkilöä opetuksessa ja tutkimuksessa
+      </h4>
+    </div>
+  </a>
+  <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        22%
+      </div>
+      <h4 class="link-grid__title">
+        Opettajista ja tutkijoista muualta kuin Suomesta
+      </h4>
+    </div>
+  </a>
+  <a class="link-grid__item" href="#">
+    <div class="link-grid__content">
+      <div class="link-grid__figure">
+        1 992
+      </div>
+      <h4 class="link-grid__title">
+        Kansainvälistä maisteri- ja tohtoriopiskelijaa
+      </h4>
+    </div>
+  </a>
+</div>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="link-grid"&gt;
+  &lt;a class="link-grid__item theme-prominent" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        Paras 1%
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Helsingin yliopisto kuuluu maailman tutkimusyliopistojen parhaan 1% joukkoon
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="link-grid"&gt;
+  &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        15/29
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Suomen akatemian huippuyksikköä
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;!--   &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        19/41
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Akatemiaprofessoria
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt; --&gt;
+  &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        10 500
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Julkaisua vuodessa
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="link-grid"&gt;
+  &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        4 621
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Henkilöä opetuksessa ja tutkimuksessa
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+  &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        22%
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Opettajista ja tutkijoista muualta kuin Suomesta
+      &lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+  &lt;a class="link-grid__item" href="#"&gt;
+    &lt;div class="link-grid__content"&gt;
+      &lt;div class="link-grid__figure"&gt;
+        1 992
+      &lt;/div&gt;
+      &lt;h4 class="link-grid__title"&gt;
+        Kansainvälistä maisteri- ja tohtoriopiskelijaa
+      &lt;/h4&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
