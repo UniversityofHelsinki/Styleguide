@@ -6452,6 +6452,39 @@ dl, ol, ul {
   position: relative;
 }
 
+.index-topical.theme-prominent {
+  border-bottom: 2px solid #F8F8F8;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.index-topical.theme-prominent .index-topical__title {
+  font-size: 1.625rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+}
+
+.index-topical.theme-prominent .index-topical__content {
+  margin: 0;
+}
+
+.index-topical.theme-prominent .index-topical__field {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.index-topical.theme-prominent .index-topical__field:after {
+  border: none;
+  content: "|";
+  margin-left: 3px;
+  position: static;
+}
+
 .index-topical__title {
   font-size: 0.9375rem;
   font-weight: 700;
