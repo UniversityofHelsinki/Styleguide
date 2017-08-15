@@ -307,3 +307,129 @@
     }
   }
 }
+
+/*
+ section: 16.1.4
+ title: Hero medium
+ template: 16_1_4-hero-medium
+ description:
+*/
+.hero-medium {
+  align-items: flex-end;
+  background-position-x: 50%;
+  background-size: cover;
+  display: flex;
+  height: 464px;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    background: black;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.hero-medium__top {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-medium__content {
+  margin-bottom: 5rem;
+}
+
+.hero-medium__breadcrumbs {
+  margin-bottom: 0.5em;
+}
+
+.hero-medium__title {
+  @include font-size(50px);
+  @include font-weight-bold;
+  color: $white;
+  line-height: 1em;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.hero-medium__ingress {
+  @include font-size(30px, 24px);
+  @include font-weight-bold;
+  color: $white;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-medium__content-bottom {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.hero-medium__link {
+  @include font-weight-bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  @include breakpoint($small) {
+    margin-bottom: 0;
+    margin-right: 4em;
+  }
+}
+
+.hero-medium__play {
+  @include font-weight-bold;
+  align-items: center;
+  color: $white;
+  display: flex;
+  text-transform: uppercase;
+
+  &:before {
+    @include icon($icon-video);
+    @include font-size(58px);
+    margin-right: 10px;
+  }
+}
+
+.hero-medium__video {
+  bottom: 0;
+  display: none;
+  left: 50%;
+  min-width: 178vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  z-index: 0;
+
+  @include breakpoint($small) {
+    display: block;
+  }
+
+  @include breakpoint($medium) {
+    min-width: 89em;
+  }
+
+  video {
+    display: block;
+    margin-left: -50%;
+    width: 100%;
+  }
+}
