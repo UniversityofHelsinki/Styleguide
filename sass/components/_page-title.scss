@@ -62,6 +62,7 @@
 .page-title--listing {
   border-bottom: 1px solid $lightsilver;
   margin-bottom: 1em;
+  text-transform: none;
 
   .page-title__subheading {
     @include font-size(16px);

@@ -8028,6 +8028,7 @@ span.links__link.theme-language {
 .page-title--listing {
   border-bottom: 1px solid #F8F8F8;
   margin-bottom: 1em;
+  text-transform: none;
 }
 
 .page-title--listing .page-title__subheading {
