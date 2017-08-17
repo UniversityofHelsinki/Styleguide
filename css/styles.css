@@ -4340,16 +4340,24 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-top-bar--small {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #000;
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
-.l-top-bar--small .l-top-bar__subregion {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.l-top-bar--small .l-top-bar__left {
   margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.l-top-bar--small .l-top-bar__right {
+  margin: 0 0 0 auto;
   max-width: none;
   padding: 0;
 }
