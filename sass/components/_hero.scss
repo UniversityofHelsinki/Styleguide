@@ -307,3 +307,66 @@
     }
   }
 }
+
+/*
+ section: 16.1.4
+ title: Hero medium
+ template: 16_1_4-hero-medium
+ description:
+*/
+.hero-medium {
+  align-items: flex-end;
+  background-position-x: 50%;
+  background-size: cover;
+  display: flex;
+  height: 464px;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    background: black;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.hero-medium__top {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-medium__content {
+  margin-bottom: 5rem;
+}
+
+.hero-medium__breadcrumbs {
+  margin-bottom: 0.5em;
+}
+
+.hero-medium__title {
+  @include font-size(50px);
+  @include font-weight-bold;
+  color: $white;
+  line-height: 1em;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.hero-medium__ingress {
+  @include font-size(30px, 24px);
+  @include font-weight-bold;
+  color: $white;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
