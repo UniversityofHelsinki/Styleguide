@@ -118,6 +118,37 @@
   display: block;
   margin-bottom: 1.5em;
   position: relative;
+
+  &.theme-prominent {
+    border-bottom: 2px solid $lightsilver;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+
+    .index-topical__title {
+      @include font-size(26px);
+      @include font-weight-medium;
+      margin: 0;
+    }
+
+    .index-topical__content {
+      margin: 0;
+    }
+
+    .index-topical__field {
+      @include font-size(12px);
+      @include font-weight-medium;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+
+      &:after {
+        border: none;
+        content: "|";
+        margin-left: 3px;
+        position: static;
+      }
+    }
+  }
 }
 
 .index-topical__title {
