@@ -4340,16 +4340,24 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 62.5em) {
   .l-top-bar--small {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #000;
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
-.l-top-bar--small .l-top-bar__subregion {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.l-top-bar--small .l-top-bar__left {
   margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.l-top-bar--small .l-top-bar__right {
+  margin: 0 0 0 auto;
   max-width: none;
   padding: 0;
 }
@@ -6095,6 +6103,81 @@ dl, ol, ul {
 }
 
 /*
+ section: 16.1.4
+ title: Hero medium
+ template: 16_1_4-hero-medium
+ description:
+*/
+.hero-medium {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-position-x: 50%;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 464px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-medium:after {
+  background: black;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hero-medium__top {
+  margin: 0 auto;
+  max-width: 75em;
+  padding: 1em;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-medium__content {
+  margin-bottom: 5rem;
+}
+
+.hero-medium__breadcrumbs {
+  margin-bottom: 0.5em;
+}
+
+.hero-medium__title {
+  font-size: 3.125rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFF;
+  line-height: 1em;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.hero-medium__ingress {
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFF;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 48em) {
+  .hero-medium__ingress {
+    font-size: 1.71429rem;
+  }
+}
+
+/*
  section: 19.1
  title: Highlight
  template: 19_1_highlight
@@ -6450,6 +6533,39 @@ dl, ol, ul {
   display: block;
   margin-bottom: 1.5em;
   position: relative;
+}
+
+.index-topical.theme-prominent {
+  border-bottom: 2px solid #F8F8F8;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.index-topical.theme-prominent .index-topical__title {
+  font-size: 1.625rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+}
+
+.index-topical.theme-prominent .index-topical__content {
+  margin: 0;
+}
+
+.index-topical.theme-prominent .index-topical__field {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.index-topical.theme-prominent .index-topical__field:after {
+  border: none;
+  content: "|";
+  margin-left: 3px;
+  position: static;
 }
 
 .index-topical__title {
@@ -7995,6 +8111,7 @@ span.links__link.theme-language {
 .page-title--listing {
   border-bottom: 1px solid #F8F8F8;
   margin-bottom: 1em;
+  text-transform: none;
 }
 
 .page-title--listing .page-title__subheading {
@@ -10536,7 +10653,6 @@ input[type="text"].search-form-large__input {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   text-align: center;
 }
 
