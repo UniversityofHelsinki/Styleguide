@@ -8,7 +8,7 @@
 .link-grid {
   display: flex;
   flex-direction: column;
-  margin: 0 -20px;
+  margin: 0 -1em;
 
   @include breakpoint($small) {
     flex-direction: row;
@@ -19,7 +19,7 @@
 .link-grid__item {
   color: $black;
   flex-grow: 1;
-  margin: 20px 0;
+  margin: 1em 0;
   padding: 0 17px;
 
   &:hover {
