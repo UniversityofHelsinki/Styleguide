@@ -12,9 +12,13 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-bottom: $vert-spacing-unit * 2;
+    margin-bottom: $vert-spacing-unit;
     overflow: hidden;
     position: relative;
+
+    @include breakpoint($small) {
+      margin-bottom: $vert-spacing-unit * 2;
+    }
   }
 
   .horizontal-tabs-pane {

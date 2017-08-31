@@ -6294,9 +6294,15 @@ dl, ol, ul {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   overflow: hidden;
   position: relative;
+}
+
+@media (min-width: 48em) {
+  .horizontal-tabs .horizontal-tabs-list {
+    margin-bottom: 60px;
+  }
 }
 
 .horizontal-tabs .horizontal-tabs-pane {
