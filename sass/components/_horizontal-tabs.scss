@@ -59,7 +59,7 @@
 
       &[href='#programme'] {
         &:before {
-          @include icon($icon-master);
+          @include icon($icon-todo-list);
           font-size: 2em;
           margin-bottom: 5px;
         }

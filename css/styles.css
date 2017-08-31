@@ -6363,7 +6363,7 @@ dl, ol, ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
-  content: "";
+  content: "";
   font-size: 2em;
   margin-bottom: 5px;
 }
