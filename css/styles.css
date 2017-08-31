@@ -3206,7 +3206,7 @@ th {
 .button--small, .accordion__title,
 .button--accordion,
 .button--action-before,
-.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title, .horizontal-tabs .horizontal-tab-button > a,
+.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title,
 .button {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 0.9375rem;
@@ -3227,10 +3227,10 @@ th {
 .button--small:focus, .accordion__title:focus,
 .button--accordion:focus,
 .button--action-before:focus,
-.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, input[type="submit"]:focus, .horizontal-tabs .horizontal-tab-button > a:focus, .button--small:hover, .accordion__title:hover,
+.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, input[type="submit"]:focus, .button--small:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
-.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, input[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a:hover,
+.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, input[type="submit"]:hover,
 .button:focus,
 .button:hover {
   background-color: #005479;
@@ -3240,10 +3240,10 @@ th {
 .button--small:active, .accordion__title:active,
 .button--accordion:active,
 .button--action-before:active,
-.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .horizontal-tabs .horizontal-tab-button > a:active, .is-active.button--small, .is-active.accordion__title,
+.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .is-active.button--small, .is-active.accordion__title,
 .is-active.button--accordion,
 .is-active.button--action-before,
-.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"], .horizontal-tabs .horizontal-tab-button > a.is-active,
+.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"],
 .button:active,
 .button.is-active {
   background-color: #003146;
@@ -3252,10 +3252,10 @@ th {
 .button--small:before, .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .horizontal-tabs .horizontal-tab-button > a:before, .button--small:after, .accordion__title:after,
+.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .button--small:after, .accordion__title:after,
 .button--accordion:after,
 .button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after, .horizontal-tabs .horizontal-tab-button > a:after,
+.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after,
 .button:before,
 .button:after {
   transition-duration: 0.1s;
@@ -3265,10 +3265,10 @@ th {
 .theme-transparent.button--small, .theme-transparent.accordion__title,
 .theme-transparent.button--accordion,
 .theme-transparent.button--action-before,
-.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, input.theme-transparent[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent, .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
+.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, input.theme-transparent[type="submit"], .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
 .theme-transparent-alt.button--accordion,
 .theme-transparent-alt.button--action-before,
-.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, input.theme-transparent-alt[type="submit"], .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt,
+.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, input.theme-transparent-alt[type="submit"],
 .button.theme-transparent,
 .button.theme-transparent-alt {
   background-color: transparent;
@@ -3278,10 +3278,10 @@ th {
 .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt:hover {
   background-color: #0098d0;
@@ -3290,16 +3290,16 @@ th {
 .theme-transparent.button--small a:hover, .theme-transparent.accordion__title a:hover,
 .theme-transparent.button--accordion a:hover,
 .theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, input.theme-transparent[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
+.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, input.theme-transparent[type="submit"] a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
 .theme-transparent-alt.button--accordion a:hover,
 .theme-transparent-alt.button--action-before a:hover,
-.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, input.theme-transparent-alt[type="submit"] a:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, input.theme-transparent-alt[type="submit"] a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover, .horizontal-tabs .horizontal-tab-button > a.theme-transparent-alt:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover,
 .button.theme-transparent a:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt a:hover,
@@ -6285,36 +6285,18 @@ dl, ol, ul {
 }
 
 .horizontal-tabs .horizontal-tabs-list {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 60px;
-}
-
-@media (min-width: 48em) {
-  .horizontal-tabs .horizontal-tabs-list {
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    overflow: hidden;
-    padding: 1px 30px 0;
-    position: relative;
-  }
-  .horizontal-tabs .horizontal-tabs-list:after {
-    bottom: 0;
-    box-shadow: 0 -1px 0 0 #D2D2D2 inset;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    right: 0;
-  }
+  overflow: hidden;
+  position: relative;
 }
 
 .horizontal-tabs .horizontal-tabs-pane {
@@ -6326,70 +6308,104 @@ dl, ol, ul {
 }
 
 .horizontal-tabs .horizontal-tab-button {
-  margin-bottom: 2px;
-  outline: none;
+  border: 1px solid #eaeaea;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.horizontal-tabs .horizontal-tab-button:not(:last-child) {
+  border-right: none;
 }
 
 .horizontal-tabs .horizontal-tab-button > a {
+  font-size: 0.875rem;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F8F8F8;
+  color: #979797;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-weight: 600;
-  text-transform: uppercase;
-  display: block;
+  height: 5rem;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  transition-duration: 0.2s;
+  transition-property: color, background-color;
 }
 
-.horizontal-tabs .horizontal-tab-button.selected > a {
-  background-color: #005479;
-  color: #FFF;
+.horizontal-tabs .horizontal-tab-button > a > strong {
+  font-weight: 400;
 }
 
-@media (min-width: 48em) {
-  .horizontal-tabs .horizontal-tab-button {
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    margin: 0;
-    text-align: center;
-  }
-  .horizontal-tabs .horizontal-tab-button > a {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #FFF;
-    box-shadow: 0px 0px 0px 1px #D2D2D2;
-    color: #0098d0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 3rem;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0;
-    -webkit-transform: translateY(5px);
-        -ms-transform: translateY(5px);
-            transform: translateY(5px);
-    transition-property: all;
-    transition-duration: 0.1s;
-  }
-  .horizontal-tabs .horizontal-tab-button > a:active, .horizontal-tabs .horizontal-tab-button > a:focus {
-    background-color: #FFF;
-    color: #0098d0;
-  }
-  .horizontal-tabs .horizontal-tab-button.selected {
-    z-index: 2;
-  }
-  .horizontal-tabs .horizontal-tab-button.selected a {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .horizontal-tabs .horizontal-tab-button.selected a,
-  .horizontal-tabs .horizontal-tab-button:hover > a {
-    background-color: #FFF;
-    color: #005479;
-  }
+.horizontal-tabs .horizontal-tab-button > a[href='#programme']:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.horizontal-tabs .horizontal-tab-button > a[href='#applying']:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.horizontal-tabs .horizontal-tab-button > a[href='#organisation']:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.horizontal-tabs .horizontal-tab-button.selected {
+  border-top-color: #0098d0;
+  border-bottom-color: transparent;
+  z-index: 2;
+}
+
+.horizontal-tabs .horizontal-tab-button.selected a {
+  background-color: #FFF;
+  box-shadow: inset 0 3px 0 #0098d0;
+  color: #0098d0;
+}
+
+.horizontal-tabs .horizontal-tab-button:hover > a {
+  color: #0098d0;
 }
 
 /*
