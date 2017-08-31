@@ -6280,10 +6280,6 @@ dl, ol, ul {
  template: 6_7_horizontal-tabs
  description:
 */
-.horizontal-tabs {
-  margin-bottom: 30px;
-}
-
 .horizontal-tabs .horizontal-tabs-list {
   -webkit-align-items: center;
       -ms-flex-align: center;

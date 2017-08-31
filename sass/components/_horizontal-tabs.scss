@@ -6,8 +6,6 @@
 */
 // NOTE: this is not smacss because the field group horizontal-tabs.js produces shitty markup
 .horizontal-tabs {
-  margin-bottom: $vert-spacing-unit;
-
   .horizontal-tabs-list {
     align-items: center;
     display: flex;
