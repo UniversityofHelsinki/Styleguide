@@ -4153,10 +4153,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.l-overlay__top {
-  margin-bottom: 40px;
+  height: 100%;
 }
 
 .l-overlay__main {
@@ -4165,7 +4162,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
           align-self: center;
   margin: 0 auto;
   overflow-y: scroll;
-  padding: 0 15px;
+  padding: 40px 15px 0;
   width: 100%;
 }
 
