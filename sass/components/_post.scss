@@ -18,14 +18,8 @@
   @include font-size(12px);
   @include font-weight-medium;
   color: $silver;
-  float: right;
   line-height: 100%;
   margin-bottom: 0.5em;
-  overflow: hidden;
-
-  .post--facebook & {
-    float: none;
-  }
 }
 
 .post__header {

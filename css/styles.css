@@ -8261,14 +8261,8 @@ ul.pager > li.pager__page a {
   font-weight: 600;
   font-style: normal;
   color: #979797;
-  float: right;
   line-height: 100%;
   margin-bottom: 0.5em;
-  overflow: hidden;
-}
-
-.post--facebook .post__date {
-  float: none;
 }
 
 .post__header {
