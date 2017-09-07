@@ -68,6 +68,7 @@
 
   @include breakpoint($medium) {
     max-width: 75em;
+    overflow-y: visible;
   }
 }
 

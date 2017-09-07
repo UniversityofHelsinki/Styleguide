@@ -4179,6 +4179,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 @media (min-width: 62.5em) {
   .l-overlay__main {
     max-width: 75em;
+    overflow-y: visible;
   }
 }
 
