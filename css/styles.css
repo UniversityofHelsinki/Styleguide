@@ -4164,7 +4164,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
       -ms-flex-item-align: center;
           align-self: center;
   margin: 0 auto;
-  max-width: 408px;
   overflow-y: scroll;
   padding: 0 15px;
   width: 100%;
