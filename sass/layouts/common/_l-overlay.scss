@@ -45,6 +45,11 @@
   }
 }
 
+.l-overlay__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .l-overlay__top {
   margin-bottom: 40px;
 }
@@ -53,6 +58,7 @@
   align-self: center;
   margin: 0 auto;
   max-width: 408px;
+  overflow-y: scroll;
   padding: 0 15px;
   width: 100%;
 
