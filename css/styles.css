@@ -4146,8 +4146,14 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 
-.l-overlay__top {
-  margin-bottom: 40px;
+.l-overlay__container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .l-overlay__main {
@@ -4155,8 +4161,8 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
       -ms-flex-item-align: center;
           align-self: center;
   margin: 0 auto;
-  max-width: 408px;
-  padding: 0 15px;
+  overflow-y: scroll;
+  padding: 40px 15px 0;
   width: 100%;
 }
 
@@ -4169,6 +4175,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 @media (min-width: 62.5em) {
   .l-overlay__main {
     max-width: 75em;
+    overflow-y: visible;
   }
 }
 
@@ -4296,6 +4303,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FFF;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4307,6 +4315,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 48em) {
   .l-top-bar__sub {
+    background-color: transparent;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;

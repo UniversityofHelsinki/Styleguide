@@ -45,15 +45,20 @@
   }
 }
 
+.l-overlay__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .l-overlay__top {
-  margin-bottom: 40px;
 }
 
 .l-overlay__main {
   align-self: center;
   margin: 0 auto;
-  max-width: 408px;
-  padding: 0 15px;
+  overflow-y: scroll;
+  padding: 40px 15px 0;
   width: 100%;
 
   @include breakpoint($small) {
@@ -62,6 +67,7 @@
 
   @include breakpoint($medium) {
     max-width: 75em;
+    overflow-y: visible;
   }
 }
 
