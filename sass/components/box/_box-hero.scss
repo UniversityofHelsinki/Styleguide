@@ -145,11 +145,45 @@
   margin-bottom: $vert-spacing-unit * 0.7;
 }
 
+.box-hero__content-bottom {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($small) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .box-hero__link {
+    margin-bottom: 10px;
+
+    @include breakpoint($small) {
+      margin-bottom: 0;
+      margin-right: 4em;
+    }
+  }
+}
+
 .box-hero__link {
   @include font-weight-medium;
   display: inline-block;
   padding-right: 6em;
   text-align: left;
+}
+
+.box-hero__play {
+  @include font-weight-bold;
+  align-items: center;
+  color: $white;
+  display: flex;
+  text-transform: uppercase;
+
+  &:before {
+    @include icon($icon-video);
+    @include font-size(58px);
+    margin-right: 10px;
+  }
 }
 
 .box-hero__link.is-videolink {
