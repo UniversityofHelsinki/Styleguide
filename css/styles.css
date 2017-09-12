@@ -4424,7 +4424,6 @@ h1, h2, h3, h4, legend, h5, h6 {
   line-height: 1.2em;
   margin: 0;
   padding-bottom: 0.2em;
-  text-transform: uppercase;
   word-wrap: break-word;
 }
 
@@ -4442,6 +4441,7 @@ h1 {
   font-size: 3.125rem;
   letter-spacing: -2px;
   line-height: 1.15em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 48em) {
@@ -4452,6 +4452,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 @media (max-width: 48em) {
@@ -4772,7 +4773,7 @@ fieldset {
 }
 
 legend {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /*
@@ -5753,6 +5754,7 @@ dl, ol, ul {
   margin: 0;
   letter-spacing: -0.5px;
   padding-bottom: 0.25em;
+  text-transform: uppercase;
 }
 
 .hero__alt-title {
@@ -5761,7 +5763,6 @@ dl, ol, ul {
   line-height: 130%;
   margin: 0;
   padding: 0;
-  text-transform: none;
 }
 
 /*
@@ -6880,6 +6881,7 @@ td.jobs-listing__date {
   font-size: 1.875rem;
   color: #FFF;
   text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 48em) {
@@ -8138,7 +8140,6 @@ span.links__link.theme-language {
 .page-title--listing {
   border-bottom: 1px solid #F8F8F8;
   margin-bottom: 1em;
-  text-transform: none;
 }
 
 .page-title--listing .page-title__subheading {
@@ -8147,7 +8148,6 @@ span.links__link.theme-language {
   float: right;
   font-weight: 400;
   letter-spacing: normal;
-  text-transform: none;
 }
 
 /*
@@ -8245,6 +8245,10 @@ ul.pager > li.pager__page a {
   clear: both;
 }
 
+.panel__title {
+  text-transform: uppercase;
+}
+
 .panel__more-link {
   float: right;
 }
@@ -8315,6 +8319,7 @@ ul.pager > li.pager__page a {
 
 .post__author {
   padding-bottom: 0;
+  text-transform: uppercase;
 }
 
 .post__account {
