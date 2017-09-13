@@ -7275,6 +7275,7 @@ span.links__link.theme-language {
 
 .logo-block__content h4, .logo-block__content legend {
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .logo-block__content p {
