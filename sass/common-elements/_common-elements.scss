@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   margin: 0;
   padding-bottom: 0.2em;
-  text-transform: uppercase;
   word-wrap: break-word;
 
   a {
@@ -69,10 +68,12 @@ h1 {
   @include font-size(50px, 40px);
   letter-spacing: -2px;
   line-height: 1.15em;
+  text-transform: uppercase;
 }
 
 h2 {
   @include font-size(40px, 32px);
+  text-transform: uppercase;
 }
 
 h3 {
@@ -341,7 +342,7 @@ fieldset {
 
 legend {
   @extend h4;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /*
