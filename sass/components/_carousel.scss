@@ -12,7 +12,6 @@
 */
 .carousel {
   @include clearfix;
-  margin-bottom: $vert-spacing-unit * 1.5;
   position: relative;
 }
 
@@ -36,16 +35,21 @@
   }
 }
 
+.carousel__image {
+  img {
+    width: 100%;
+  }
+}
+
 .carousel__credits {
   @include text-author;
   bottom: auto;
   color: $silver;
-  height: $vert-spacing-unit + 10px;
   margin-bottom: 0;
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: 0.4em;
   position: absolute;
-  right: 0;
+  right: 1em;
   top: auto;
 }
 
