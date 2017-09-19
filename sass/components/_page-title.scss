@@ -36,6 +36,11 @@
   line-height: 1em;
 }
 
+.page-title--lowercase {
+  @include font-size(50px, 30px);
+  text-transform: none;
+}
+
 .page-title--suffix {
   @include border-side(bottom);
   @include font-size(18px);

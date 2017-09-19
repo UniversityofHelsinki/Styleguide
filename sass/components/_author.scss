@@ -7,7 +7,6 @@
 .author {
   @include text-author;
   margin-bottom: 0.4em;
-  margin-top: 0.7em;
 
   .author__label {
     &:after {

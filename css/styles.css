@@ -4874,7 +4874,6 @@ dl, ol, ul {
   margin-bottom: 1em;
   text-transform: uppercase;
   margin-bottom: 0.4em;
-  margin-top: 0.7em;
 }
 
 .author .author__label:after {
@@ -4988,7 +4987,6 @@ dl, ol, ul {
 .carousel {
   *zoom: 1;
   clear: both;
-  margin-bottom: 45px;
   position: relative;
 }
 
@@ -5025,6 +5023,10 @@ dl, ol, ul {
   }
 }
 
+.carousel__image img {
+  width: 100%;
+}
+
 .carousel__credits {
   font-size: 0.75rem;
   font-weight: 600;
@@ -5035,12 +5037,11 @@ dl, ol, ul {
   text-transform: uppercase;
   bottom: auto;
   color: #979797;
-  height: 40px;
   margin-bottom: 0;
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: 0.4em;
   position: absolute;
-  right: 0;
+  right: 1em;
   top: auto;
 }
 
@@ -8112,6 +8113,17 @@ span.links__link.theme-language {
   line-height: 1em;
 }
 
+.page-title--lowercase {
+  font-size: 3.125rem;
+  text-transform: none;
+}
+
+@media (max-width: 48em) {
+  .page-title--lowercase {
+    font-size: 2.14286rem;
+  }
+}
+
 .page-title--suffix {
   border-bottom: 1px solid #F8F8F8;
   font-size: 1.125rem;
@@ -9053,6 +9065,7 @@ input[type="text"].search-form-large__input {
 */
 .tag-list {
   display: block;
+  margin-bottom: 1rem;
 }
 
 .tag-list__item {
@@ -9061,40 +9074,32 @@ input[type="text"].search-form-large__input {
   font-style: normal;
   color: #979797;
   text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tag-list__item a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #979797;
+  text-transform: uppercase;
+  color: #979797;
+  transition: color, 0.2s;
+}
+
+.tag-list__item a:hover {
+  color: #555555;
+}
+
+.tag-list__item:after {
+  content: "|";
   display: inline-block;
-  position: relative;
-  margin-right: 0.5em;
-  padding-right: 1.5em;
+  margin: 0 2px;
 }
 
 .tag-list__item:last-child:after {
   display: none;
-}
-
-.tag-list__item:after {
-  content: " ";
-  right: 0;
-}
-
-.tag-list__item:after, .tag-list__item:before {
-  border: 1px solid #F8F8F8;
-  border-color: #D2D2D2;
-  border-radius: 50%;
-  height: 6px;
-  margin-top: -3px;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  z-index: 10;
-}
-
-.tag-list__item a {
-  color: inherit;
-}
-
-.tag-list__item a:hover {
-  color: #005479;
 }
 
 /*
