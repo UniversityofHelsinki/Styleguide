@@ -43,11 +43,13 @@
 
 .l-top-bar__sub {
   align-items: center;
+  background-color: $white;
   display: flex;
   order: 1;
   padding: 0 15px;
 
   @include breakpoint($small) {
+    background-color: transparent;
     order: 2;
     padding: 0;
   }

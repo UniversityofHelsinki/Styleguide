@@ -36,6 +36,11 @@
   line-height: 1em;
 }
 
+.page-title--lowercase {
+  @include font-size(50px, 30px);
+  text-transform: none;
+}
+
 .page-title--suffix {
   @include border-side(bottom);
   @include font-size(18px);
@@ -62,7 +67,6 @@
 .page-title--listing {
   border-bottom: 1px solid $lightsilver;
   margin-bottom: 1em;
-  text-transform: none;
 
   .page-title__subheading {
     @include font-size(16px);
@@ -70,6 +74,5 @@
     float: right;
     font-weight: 400;
     letter-spacing: normal;
-    text-transform: none;
   }
 }
