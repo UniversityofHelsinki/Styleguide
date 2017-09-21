@@ -4146,8 +4146,14 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   }
 }
 
-.l-overlay__top {
-  margin-bottom: 40px;
+.l-overlay__container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .l-overlay__main {
@@ -4155,8 +4161,8 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
       -ms-flex-item-align: center;
           align-self: center;
   margin: 0 auto;
-  max-width: 408px;
-  padding: 0 15px;
+  overflow-y: scroll;
+  padding: 40px 15px 0;
   width: 100%;
 }
 
@@ -4169,6 +4175,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 @media (min-width: 62.5em) {
   .l-overlay__main {
     max-width: 75em;
+    overflow-y: visible;
   }
 }
 
@@ -4296,6 +4303,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FFF;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4307,6 +4315,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 @media (min-width: 48em) {
   .l-top-bar__sub {
+    background-color: transparent;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
@@ -4415,7 +4424,6 @@ h1, h2, h3, h4, legend, h5, h6 {
   line-height: 1.2em;
   margin: 0;
   padding-bottom: 0.2em;
-  text-transform: uppercase;
   word-wrap: break-word;
 }
 
@@ -4433,6 +4441,7 @@ h1 {
   font-size: 3.125rem;
   letter-spacing: -2px;
   line-height: 1.15em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 48em) {
@@ -4443,6 +4452,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 @media (max-width: 48em) {
@@ -4763,7 +4773,7 @@ fieldset {
 }
 
 legend {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /*
@@ -4864,7 +4874,6 @@ dl, ol, ul {
   margin-bottom: 1em;
   text-transform: uppercase;
   margin-bottom: 0.4em;
-  margin-top: 0.7em;
 }
 
 .author .author__label:after {
@@ -4978,7 +4987,6 @@ dl, ol, ul {
 .carousel {
   *zoom: 1;
   clear: both;
-  margin-bottom: 45px;
   position: relative;
 }
 
@@ -5015,6 +5023,10 @@ dl, ol, ul {
   }
 }
 
+.carousel__image img {
+  width: 100%;
+}
+
 .carousel__credits {
   font-size: 0.75rem;
   font-weight: 600;
@@ -5025,12 +5037,11 @@ dl, ol, ul {
   text-transform: uppercase;
   bottom: auto;
   color: #979797;
-  height: 40px;
   margin-bottom: 0;
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: 0.4em;
   position: absolute;
-  right: 0;
+  right: 1em;
   top: auto;
 }
 
@@ -5744,6 +5755,7 @@ dl, ol, ul {
   margin: 0;
   letter-spacing: -0.5px;
   padding-bottom: 0.25em;
+  text-transform: uppercase;
 }
 
 .hero__alt-title {
@@ -5752,7 +5764,6 @@ dl, ol, ul {
   line-height: 130%;
   margin: 0;
   padding: 0;
-  text-transform: none;
 }
 
 /*
@@ -6871,6 +6882,7 @@ td.jobs-listing__date {
   font-size: 1.875rem;
   color: #FFF;
   text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 48em) {
@@ -7264,6 +7276,7 @@ span.links__link.theme-language {
 
 .logo-block__content h4, .logo-block__content legend {
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .logo-block__content p {
@@ -8100,6 +8113,17 @@ span.links__link.theme-language {
   line-height: 1em;
 }
 
+.page-title--lowercase {
+  font-size: 3.125rem;
+  text-transform: none;
+}
+
+@media (max-width: 48em) {
+  .page-title--lowercase {
+    font-size: 2.14286rem;
+  }
+}
+
 .page-title--suffix {
   border-bottom: 1px solid #F8F8F8;
   font-size: 1.125rem;
@@ -8129,7 +8153,6 @@ span.links__link.theme-language {
 .page-title--listing {
   border-bottom: 1px solid #F8F8F8;
   margin-bottom: 1em;
-  text-transform: none;
 }
 
 .page-title--listing .page-title__subheading {
@@ -8138,7 +8161,6 @@ span.links__link.theme-language {
   float: right;
   font-weight: 400;
   letter-spacing: normal;
-  text-transform: none;
 }
 
 /*
@@ -8236,6 +8258,10 @@ ul.pager > li.pager__page a {
   clear: both;
 }
 
+.panel__title {
+  text-transform: uppercase;
+}
+
 .panel__more-link {
   float: right;
 }
@@ -8248,7 +8274,7 @@ ul.pager > li.pager__page a {
 */
 .post {
   margin-bottom: 1em;
-  padding-top: 25px;
+  padding-top: 15px;
   position: relative;
 }
 
@@ -8261,14 +8287,8 @@ ul.pager > li.pager__page a {
   font-weight: 600;
   font-style: normal;
   color: #979797;
-  float: right;
   line-height: 100%;
   margin-bottom: 0.5em;
-  overflow: hidden;
-}
-
-.post--facebook .post__date {
-  float: none;
 }
 
 .post__header {
@@ -8312,6 +8332,7 @@ ul.pager > li.pager__page a {
 
 .post__author {
   padding-bottom: 0;
+  text-transform: uppercase;
 }
 
 .post__account {
@@ -9044,6 +9065,7 @@ input[type="text"].search-form-large__input {
 */
 .tag-list {
   display: block;
+  margin-bottom: 1rem;
 }
 
 .tag-list__item {
@@ -9052,40 +9074,32 @@ input[type="text"].search-form-large__input {
   font-style: normal;
   color: #979797;
   text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tag-list__item a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #979797;
+  text-transform: uppercase;
+  color: #979797;
+  transition: color, 0.2s;
+}
+
+.tag-list__item a:hover {
+  color: #555555;
+}
+
+.tag-list__item:after {
+  content: "|";
   display: inline-block;
-  position: relative;
-  margin-right: 0.5em;
-  padding-right: 1.5em;
+  margin: 0 2px;
 }
 
 .tag-list__item:last-child:after {
   display: none;
-}
-
-.tag-list__item:after {
-  content: " ";
-  right: 0;
-}
-
-.tag-list__item:after, .tag-list__item:before {
-  border: 1px solid #F8F8F8;
-  border-color: #D2D2D2;
-  border-radius: 50%;
-  height: 6px;
-  margin-top: -3px;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  z-index: 10;
-}
-
-.tag-list__item a {
-  color: inherit;
-}
-
-.tag-list__item a:hover {
-  color: #005479;
 }
 
 /*
@@ -9791,12 +9805,72 @@ input[type="text"].search-form-large__input {
   margin-bottom: 21px;
 }
 
+.box-hero__content-bottom {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 48em) {
+  .box-hero__content-bottom {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.box-hero__content-bottom .box-hero__link {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 48em) {
+  .box-hero__content-bottom .box-hero__link {
+    margin-bottom: 0;
+    margin-right: 4em;
+  }
+}
+
 .box-hero__link {
   font-weight: 600;
   font-style: normal;
   display: inline-block;
   padding-right: 6em;
   text-align: left;
+}
+
+.box-hero__play {
+  font-weight: 700;
+  font-style: normal;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFF;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.box-hero__play:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 3.625rem;
+  margin-right: 10px;
 }
 
 .box-hero__link.is-videolink a:after {
@@ -13367,6 +13441,19 @@ table[class*="idean-styleguide"] {
 	</div>
   <a class="box-hero__link button--action icon--arrow-right" href="#">See the instructions and offering</a>
 </div>
+<br/>
+<div class="box-hero theme-prominent">
+  <h1 class="box-hero__title">
+    Apply for studies
+  </h1>
+  <div class="box-hero__content">
+    Apply for exchange studies now! The application round starts 2.3.2015.
+  </div>
+  <div class="box-hero__content-bottom">
+    <a class="box-hero__link button--action icon--arrow-right" href="#">See the instructions and offering</a>
+    <a href="#" class="box-hero__play" title="Play an introduction video of the programme">Play an introduction video of the programme</a>
+  </div>
+</div>
 </div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="box-hero"&gt;
 	&lt;h1 class="box-hero__title"&gt;
 		Apply for studies
@@ -13375,6 +13462,19 @@ table[class*="idean-styleguide"] {
 		Apply for exchange studies now! The application round starts 2.3.2015.
 	&lt;/div&gt;
   &lt;a class="box-hero__link button--action icon--arrow-right" href="#"&gt;See the instructions and offering&lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="box-hero theme-prominent"&gt;
+  &lt;h1 class="box-hero__title"&gt;
+    Apply for studies
+  &lt;/h1&gt;
+  &lt;div class="box-hero__content"&gt;
+    Apply for exchange studies now! The application round starts 2.3.2015.
+  &lt;/div&gt;
+  &lt;div class="box-hero__content-bottom"&gt;
+    &lt;a class="box-hero__link button--action icon--arrow-right" href="#"&gt;See the instructions and offering&lt;/a&gt;
+    &lt;a href="#" class="box-hero__play" title="Play an introduction video of the programme"&gt;Play an introduction video of the programme&lt;/a&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-4"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-4">Section 6-10-4: Box ingress</a></h2><p class="idean-styleguide-description">Image on the left, ingress text on the right</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-ingress">
 	<div class="box-ingress__image">
@@ -14858,35 +14958,65 @@ Theme prominent
         Uutinen
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-14"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-14">University of Helsinki: 14</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-14-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-14-1">Section 14-1: Post</a></h2><p class="idean-styleguide-description">Social media post</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><ul>
-    <li class="post">
-        <div class="post__date">27.6 - 15:20</div>
-        <div class="post__content">Lukivaikeus eli lukihäiriö on yleinen oppimisvaikeus, jonka tiedetään olevan hyvin perinnöllinen. Juha Keren johtama tutkimusryhmä on paljastanut ensimmäisenä maailmassa lukivaikeuden taakse kätkeytyviä geenejä.
-            Videoidussa haastattelussa Kere kertoo, miten geenit vaikuttavat lukemistaitoihin ja miten lukivaikeuden perinnöllisyyttä tutkitaan.
-        </div>
-    </li>
-    <li class="post">
-        <div class="post__date">27.6 - 11:30</div>
-        <div class="post__content">Tutkija Henry Pihlström on kahden apulaisensa kanssa käärinyt hihat ja ryhtynyt käymään läpi Luonnontieteellisen museon kellareissa säilytettävää luukokoelmaa.
-            Anatomian professori Evert Julius Bonsdorffin kokoelmassa oli laajimmillaan noin 2000 luustoa ja nahkaa. Kokoelman nykyistä laajuutta tai sitä, kuinka moni kokoelmayksilö lopulta päätyi 1960-luvulla eläinmuseolle, ei ole tähän asti tiedetty.
-            – Kokoelmissa on paljon yksilöitä, joita ei yksinkertaisesti ole sata vuotta sitten pystytty määrittämään tai ne on määritetty nykykäsityksen mukaan virheellisesti, Pihlström kertoo.
-        </div>
-    </li>
-</ul></div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;ul&gt;
-    &lt;li class="post"&gt;
-        &lt;div class="post__date"&gt;27.6 - 15:20&lt;/div&gt;
-        &lt;div class="post__content"&gt;Lukivaikeus eli lukihäiriö on yleinen oppimisvaikeus, jonka tiedetään olevan hyvin perinnöllinen. Juha Keren johtama tutkimusryhmä on paljastanut ensimmäisenä maailmassa lukivaikeuden taakse kätkeytyviä geenejä.
-            Videoidussa haastattelussa Kere kertoo, miten geenit vaikuttavat lukemistaitoihin ja miten lukivaikeuden perinnöllisyyttä tutkitaan.
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class="post"&gt;
-        &lt;div class="post__date"&gt;27.6 - 11:30&lt;/div&gt;
-        &lt;div class="post__content"&gt;Tutkija Henry Pihlström on kahden apulaisensa kanssa käärinyt hihat ja ryhtynyt käymään läpi Luonnontieteellisen museon kellareissa säilytettävää luukokoelmaa.
-            Anatomian professori Evert Julius Bonsdorffin kokoelmassa oli laajimmillaan noin 2000 luustoa ja nahkaa. Kokoelman nykyistä laajuutta tai sitä, kuinka moni kokoelmayksilö lopulta päätyi 1960-luvulla eläinmuseolle, ei ole tähän asti tiedetty.
-            – Kokoelmissa on paljon yksilöitä, joita ei yksinkertaisesti ole sata vuotta sitten pystytty määrittämään tai ne on määritetty nykykäsityksen mukaan virheellisesti, Pihlström kertoo.
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-15"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-15">University of Helsinki: 15</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-15-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-15-1">Section 15-1: Top bar</a></h2><p class="idean-styleguide-description">The top bar.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="l-top-bar">
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-14"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-14">University of Helsinki: 14</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-14-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-14-1">Section 14-1: Post</a></h2><p class="idean-styleguide-description">Social media post</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="post">
+  <img class="post__image" data-src="https://pbs.twimg.com/profile_images/851407702769250304/dA8NaETZ_normal.jpg" src="https://pbs.twimg.com/profile_images/851407702769250304/dA8NaETZ_normal.jpg">
+  <div class="post__content">
+    <div class="post__date">1h</div>
+    <h5 class="post__author">Hel&shy;sin&shy;ki Uni&shy;ver&shy;si&shy;ty</h5>
+    <a class="post__account" href="https://www.twitter.com/helsinkiuni">@helsinkiuni</a>
+    <p class="post__message">Morphology archives <a href="https://www.twitter.com/HYhumtdk" title="Humanistinen tdk, HY">@HYhumtdk</a> preserve forms of speech from 50 years ago <a href="https://twitter.com/search?q=%23language&amp;src=hash">#language</a> <a href="https://twitter.com/search?q=%23dialects&amp;src=hash">#dialects</a>
+    <a href="https://t.co/p0lHkAdIpl">helsinki.fi/en/news/morpho…</a></p>
+    <div class="post__footer">
+      <div class="post__action"><span class="is-hidden">Favorites </span><span class="icon icon--heart"></span>2</div>
+      <div class="post__action"><span class="is-hidden">Retweets </span><span class="icon icon--retweet"></span>1</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="post">
+  <img class="post__image" data-src="https://pbs.twimg.com/profile_images/903681500029349888/3eVHSAPd_normal.jpg" src="https://pbs.twimg.com/profile_images/903681500029349888/3eVHSAPd_normal.jpg">
+  <div class="post__content">
+    <div class="post__date">20h</div>
+    <h5 class="post__author">Lii­sa Kon­tu­nen</h5>
+    <a class="post__account" href="https://www.twitter.com/LiisaKontunen">@LiisaKontunen</a>
+    <p class="post__message">Täysi sali <a href="https://twitter.com/search?q=%23DaretoLearn2017&amp;src=hash">#DaretoLearn2017</a>:ssa kuulemassa <a href="https://www.twitter.com/helsinkiuni" title="Helsinki University">@helsinkiuni</a>'n <a href="https://www.twitter.com/KirstiLonka" title="Kirsti Lonka">@KirstiLonka</a>'n näkemyksiä tulevaisuuden koulutuksen taido… <a href="https://t.co/XRULrDhFNp">twitter.com/i/web/status/9…</a></p>
+    <div class="post__footer">
+      <div class="post__action"><span class="is-hidden">Favorites </span><span class="icon icon--heart"></span>18</div>
+      <div class="post__action"><span class="is-hidden">Retweets </span><span class="icon icon--retweet"></span>6</div>
+    </div>
+  </div>
+</div>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="post"&gt;
+  &lt;img class="post__image" data-src="https://pbs.twimg.com/profile_images/851407702769250304/dA8NaETZ_normal.jpg" src="https://pbs.twimg.com/profile_images/851407702769250304/dA8NaETZ_normal.jpg"&gt;
+  &lt;div class="post__content"&gt;
+    &lt;div class="post__date"&gt;1h&lt;/div&gt;
+    &lt;h5 class="post__author"&gt;Hel&shy;sin&shy;ki Uni&shy;ver&shy;si&shy;ty&lt;/h5&gt;
+    &lt;a class="post__account" href="https://www.twitter.com/helsinkiuni"&gt;@helsinkiuni&lt;/a&gt;
+    &lt;p class="post__message"&gt;Morphology archives &lt;a href="https://www.twitter.com/HYhumtdk" title="Humanistinen tdk, HY"&gt;@HYhumtdk&lt;/a&gt; preserve forms of speech from 50 years ago &lt;a href="https://twitter.com/search?q=%23language&amp;src=hash"&gt;#language&lt;/a&gt; &lt;a href="https://twitter.com/search?q=%23dialects&amp;src=hash"&gt;#dialects&lt;/a&gt;
+    &lt;a href="https://t.co/p0lHkAdIpl"&gt;helsinki.fi/en/news/morpho…&lt;/a&gt;&lt;/p&gt;
+    &lt;div class="post__footer"&gt;
+      &lt;div class="post__action"&gt;&lt;span class="is-hidden"&gt;Favorites &lt;/span&gt;&lt;span class="icon icon--heart"&gt;&lt;/span&gt;2&lt;/div&gt;
+      &lt;div class="post__action"&gt;&lt;span class="is-hidden"&gt;Retweets &lt;/span&gt;&lt;span class="icon icon--retweet"&gt;&lt;/span&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="post"&gt;
+  &lt;img class="post__image" data-src="https://pbs.twimg.com/profile_images/903681500029349888/3eVHSAPd_normal.jpg" src="https://pbs.twimg.com/profile_images/903681500029349888/3eVHSAPd_normal.jpg"&gt;
+  &lt;div class="post__content"&gt;
+    &lt;div class="post__date"&gt;20h&lt;/div&gt;
+    &lt;h5 class="post__author"&gt;Lii­sa Kon­tu­nen&lt;/h5&gt;
+    &lt;a class="post__account" href="https://www.twitter.com/LiisaKontunen"&gt;@LiisaKontunen&lt;/a&gt;
+    &lt;p class="post__message"&gt;Täysi sali &lt;a href="https://twitter.com/search?q=%23DaretoLearn2017&amp;src=hash"&gt;#DaretoLearn2017&lt;/a&gt;:ssa kuulemassa &lt;a href="https://www.twitter.com/helsinkiuni" title="Helsinki University"&gt;@helsinkiuni&lt;/a&gt;'n &lt;a href="https://www.twitter.com/KirstiLonka" title="Kirsti Lonka"&gt;@KirstiLonka&lt;/a&gt;'n näkemyksiä tulevaisuuden koulutuksen taido… &lt;a href="https://t.co/XRULrDhFNp"&gt;twitter.com/i/web/status/9…&lt;/a&gt;&lt;/p&gt;
+    &lt;div class="post__footer"&gt;
+      &lt;div class="post__action"&gt;&lt;span class="is-hidden"&gt;Favorites &lt;/span&gt;&lt;span class="icon icon--heart"&gt;&lt;/span&gt;18&lt;/div&gt;
+      &lt;div class="post__action"&gt;&lt;span class="is-hidden"&gt;Retweets &lt;/span&gt;&lt;span class="icon icon--retweet"&gt;&lt;/span&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-15"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-15">University of Helsinki: 15</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-15-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-15-1">Section 15-1: Top bar</a></h2><p class="idean-styleguide-description">The top bar.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="l-top-bar">
   <div class="l-top-bar__subregion">
     <div class="l-top-bar__main">
       <a class="logo" href="/fi">
@@ -14965,60 +15095,64 @@ Theme prominent
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-15-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-15-1-2">Section 15-1-2: Header bar</a></h2><p class="idean-styleguide-description">The header bar with logo & navigation.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="l-header-bar">
-  <div class="l-header-bar__left">
-    <a class="logo" href="/fi">
-      <h1 class="logo__sitename">Helsingin yliopisto</h1>
-    </a>
-  </div>
+  <div class="l-header-bar__top">
+    <div class="l-header-bar__left">
+      <a class="logo" href="/fi">
+        <h1 class="logo__sitename">Helsingin yliopisto</h1>
+      </a>
+    </div>
 
-  <div class="l-header-bar__middle">
-    <nav role="navigation" class="quick-menu">
-      <ul class="menu">
-        <li><a href="#" title="Ajankohtaista">Ajankohtaista</a></li>
-        <li><a href="#" title="Tutkimus">Tutkimus</a></li>
-        <li class="is-active"><a href="#" title="Opiskelu" class="active">Opiskelu</a></li>
-        <li><a href="#" title="Yhteistyö">Yhteistyö</a></li>
-        <li><a href="#" title="Yliopisto">Yliopisto</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="l-header-bar__middle">
+      <nav role="navigation" class="quick-menu">
+        <ul class="menu">
+          <li><a href="#" title="Ajankohtaista">Ajankohtaista</a></li>
+          <li><a href="#" title="Tutkimus">Tutkimus</a></li>
+          <li class="is-active"><a href="#" title="Opiskelu" class="active">Opiskelu</a></li>
+          <li><a href="#" title="Yhteistyö">Yhteistyö</a></li>
+          <li><a href="#" title="Yliopisto">Yliopisto</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class="l-header-bar__right">
-    <div class="is-hidden--tablet">
-      <form class="search-form--new">
-        <input class="search-form__input form-text" maxlength="128" name="search_string" placeholder="Hae" size="60" type="text" value="">
-        <a class="search-form__search-button"></a>
-        <input class="search-form__submit is-hidden" name="op" type="submit" value="">
-      </form>
+    <div class="l-header-bar__right">
+      <div class="is-hidden--tablet">
+        <form class="search-form--new">
+          <input class="search-form__input form-text" maxlength="128" name="search_string" placeholder="Hae" size="60" type="text" value="">
+          <a class="search-form__search-button"></a>
+          <input class="search-form__submit is-hidden" name="op" type="submit" value="">
+        </form>
+      </div>
     </div>
   </div>
 </div>
 </div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="l-header-bar"&gt;
-  &lt;div class="l-header-bar__left"&gt;
-    &lt;a class="logo" href="/fi"&gt;
-      &lt;h1 class="logo__sitename"&gt;Helsingin yliopisto&lt;/h1&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
+  &lt;div class="l-header-bar__top"&gt;
+    &lt;div class="l-header-bar__left"&gt;
+      &lt;a class="logo" href="/fi"&gt;
+        &lt;h1 class="logo__sitename"&gt;Helsingin yliopisto&lt;/h1&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
 
-  &lt;div class="l-header-bar__middle"&gt;
-    &lt;nav role="navigation" class="quick-menu"&gt;
-      &lt;ul class="menu"&gt;
-        &lt;li&gt;&lt;a href="#" title="Ajankohtaista"&gt;Ajankohtaista&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#" title="Tutkimus"&gt;Tutkimus&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="is-active"&gt;&lt;a href="#" title="Opiskelu" class="active"&gt;Opiskelu&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#" title="Yhteistyö"&gt;Yhteistyö&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#" title="Yliopisto"&gt;Yliopisto&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/div&gt;
+    &lt;div class="l-header-bar__middle"&gt;
+      &lt;nav role="navigation" class="quick-menu"&gt;
+        &lt;ul class="menu"&gt;
+          &lt;li&gt;&lt;a href="#" title="Ajankohtaista"&gt;Ajankohtaista&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#" title="Tutkimus"&gt;Tutkimus&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="is-active"&gt;&lt;a href="#" title="Opiskelu" class="active"&gt;Opiskelu&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#" title="Yhteistyö"&gt;Yhteistyö&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#" title="Yliopisto"&gt;Yliopisto&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
 
-  &lt;div class="l-header-bar__right"&gt;
-    &lt;div class="is-hidden--tablet"&gt;
-      &lt;form class="search-form--new"&gt;
-        &lt;input class="search-form__input form-text" maxlength="128" name="search_string" placeholder="Hae" size="60" type="text" value=""&gt;
-        &lt;a class="search-form__search-button"&gt;&lt;/a&gt;
-        &lt;input class="search-form__submit is-hidden" name="op" type="submit" value=""&gt;
-      &lt;/form&gt;
+    &lt;div class="l-header-bar__right"&gt;
+      &lt;div class="is-hidden--tablet"&gt;
+        &lt;form class="search-form--new"&gt;
+          &lt;input class="search-form__input form-text" maxlength="128" name="search_string" placeholder="Hae" size="60" type="text" value=""&gt;
+          &lt;a class="search-form__search-button"&gt;&lt;/a&gt;
+          &lt;input class="search-form__submit is-hidden" name="op" type="submit" value=""&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
