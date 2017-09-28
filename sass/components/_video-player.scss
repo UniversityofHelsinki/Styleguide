@@ -1,0 +1,68 @@
+/*
+ section: 21.1
+ title: Video player
+ template: 21_1-video-player
+ description:
+*/
+.video-player {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 464px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-player__play {
+  @include font-weight-bold;
+  color: $white;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: color, 0.2s;
+
+  &:before {
+    @include icon($icon-video);
+    @include font-size(80px);
+    display: block;
+    text-align: center;
+  }
+}
+
+.video-player__content {
+  height: 100%;
+  width: 100%;
+}
+
+.video-player__image {
+  background-position: 50%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+
+  &:after {
+    background: black;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.video-player__video {
+  height: 100%;
+  width: 100%;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
