@@ -11,6 +11,11 @@
   height: 464px;
   overflow: hidden;
   position: relative;
+  transition: height, 0.3s;
+
+  &.is-active {
+    height: 80vh;
+  }
 }
 
 .video-player__play {

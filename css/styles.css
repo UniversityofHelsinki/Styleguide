@@ -9281,6 +9281,11 @@ input[type="text"].search-form-large__input {
   height: 464px;
   overflow: hidden;
   position: relative;
+  transition: height, 0.3s;
+}
+
+.video-player.is-active {
+  height: 80vh;
 }
 
 .video-player__play {
