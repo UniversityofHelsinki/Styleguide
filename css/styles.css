@@ -4424,7 +4424,7 @@ h1, h2, h3, h4, legend, h5, h6 {
   letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 0;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.4em;
   word-wrap: break-word;
 }
 
@@ -9167,7 +9167,6 @@ input[type="text"].search-form-large__input {
 }
 
 .textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea h5, .textarea h6, .textarea-ingress h1, .textarea-ingress h2, .textarea-ingress h3, .textarea-ingress h4, .textarea-ingress legend, .textarea-ingress h5, .textarea-ingress h6 {
-  margin-bottom: 16px;
   margin-top: 32px;
 }
 
