@@ -9292,7 +9292,6 @@ input[type="text"].search-form-large__input {
   font-weight: 700;
   font-style: normal;
   color: #FFF;
-  position: absolute;
   text-transform: uppercase;
   z-index: 1;
   transition: color, 0.2s;
@@ -9313,7 +9312,12 @@ input[type="text"].search-form-large__input {
 }
 
 .video-player__content {
+  bottom: 0;
   height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
 }
 
