@@ -460,10 +460,10 @@
 
   .box-story__content {
     @include font-family-main;
-    @include font-size(14px);
+    @include font-size(14px, 14px);
 
     p {
-      @include font-size(14px);
+      @include font-size(14px, 14px);
     }
   }
 }

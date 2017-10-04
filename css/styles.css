@@ -10716,8 +10716,20 @@ input[type="text"].search-form-large__input {
   font-size: 0.875rem;
 }
 
+@media (max-width: 48em) {
+  .box-story--related .box-story__content {
+    font-size: 1rem;
+  }
+}
+
 .box-story--related .box-story__content p {
   font-size: 0.875rem;
+}
+
+@media (max-width: 48em) {
+  .box-story--related .box-story__content p {
+    font-size: 1rem;
+  }
 }
 
 /*
