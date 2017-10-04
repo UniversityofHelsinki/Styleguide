@@ -60,10 +60,6 @@
     }
 
     @include breakpoint($small) {
-      .box-story__title {
-        font-size: 170%;
-      }
-
       .box-story__link-wrapper {
         padding: 1.5em 1.5em 3.5em 1.5em;
 
