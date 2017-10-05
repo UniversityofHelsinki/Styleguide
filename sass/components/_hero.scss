@@ -176,7 +176,9 @@
 
   video {
     display: block;
+    height: 100%;
     margin-left: -50%;
+    object-fit: cover;
     width: 100%;
   }
 }
