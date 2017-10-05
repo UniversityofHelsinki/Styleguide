@@ -157,8 +157,6 @@
 .hero-big__video {
   bottom: 0;
   display: none;
-  left: 50%;
-  min-width: 178vh;
   position: absolute;
   right: 0;
   top: 0;
@@ -170,14 +168,9 @@
     display: block;
   }
 
-  @include breakpoint($medium) {
-    min-width: 89em;
-  }
-
   video {
     display: block;
     height: 100%;
-    margin-left: -50%;
     object-fit: cover;
     width: 100%;
   }

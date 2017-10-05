@@ -5924,8 +5924,6 @@ dl, ol, ul {
 .hero-big__video {
   bottom: 0;
   display: none;
-  left: 50%;
-  min-width: 178vh;
   position: absolute;
   right: 0;
   top: 0;
@@ -5941,16 +5939,9 @@ dl, ol, ul {
   }
 }
 
-@media (min-width: 62.5em) {
-  .hero-big__video {
-    min-width: 89em;
-  }
-}
-
 .hero-big__video video {
   display: block;
   height: 100%;
-  margin-left: -50%;
   object-fit: cover;
   width: 100%;
 }
