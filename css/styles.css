@@ -1481,6 +1481,17 @@ th {
   content: "";
 }
 
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .icon--youtube:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -2826,6 +2837,17 @@ th {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
+}
+
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
 }
 
 .icon--youtube:after {
@@ -5813,7 +5835,6 @@ dl, ol, ul {
   line-height: 1em;
   margin-bottom: 10px;
   padding: 0;
-  word-wrap: unset;
 }
 
 @media (min-width: 48em) {
@@ -6223,7 +6244,6 @@ dl, ol, ul {
   line-height: 1;
   max-width: 720px;
   text-transform: uppercase;
-  word-wrap: unset;
 }
 
 @media (max-width: 48em) {
