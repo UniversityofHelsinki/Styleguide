@@ -4066,6 +4066,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-left: auto;
 }
 
 @media (min-width: 62.5em) {
@@ -4423,7 +4424,7 @@ h1, h2, h3, h4, legend, h5, h6 {
   letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 0;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.4em;
   word-wrap: break-word;
 }
 
@@ -4508,21 +4509,14 @@ h6 {
 */
 p {
   font-size: 1rem;
-  margin: 0 0 15px 0;
+  margin: 0 0 24px 0;
   letter-spacing: 0;
-  line-height: 1.3em;
+  line-height: 1.7em;
 }
 
 @media (max-width: 48em) {
   p {
-    font-size: 1.07143rem;
-  }
-}
-
-@media (min-width: 48em) {
-  p {
-    line-height: 1.5em;
-    margin: 0 0 16px 0;
+    font-size: 1.14286rem;
   }
 }
 
@@ -5930,8 +5924,6 @@ dl, ol, ul {
 .hero-big__video {
   bottom: 0;
   display: none;
-  left: 50%;
-  min-width: 178vh;
   position: absolute;
   right: 0;
   top: 0;
@@ -5947,16 +5939,18 @@ dl, ol, ul {
   }
 }
 
-@media (min-width: 62.5em) {
-  .hero-big__video {
-    min-width: 89em;
-  }
-}
-
 .hero-big__video video {
-  display: block;
-  margin-left: -50%;
-  width: 100%;
+  height: auto;
+  left: 50%;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: auto;
 }
 
 /*
@@ -6202,7 +6196,7 @@ dl, ol, ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 50px;
   padding-top: 30px;
   position: relative;
@@ -6217,6 +6211,8 @@ dl, ol, ul {
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   transition-duration: 0.2s;
   transition-property: opacity;
   z-index: 1;
@@ -6228,7 +6224,6 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .highlight {
-    max-height: 480px;
     min-height: 480px;
   }
 }
@@ -6248,6 +6243,7 @@ dl, ol, ul {
   font-weight: 700;
   line-height: 1;
   max-width: 720px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 48em) {
@@ -6864,6 +6860,8 @@ td.jobs-listing__date {
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   transition: opacity 0.2s;
   z-index: 1;
 }
@@ -10247,9 +10245,6 @@ input[type="text"].search-form-large__input {
 }
 
 @media (min-width: 48em) {
-  .box-story.theme-plain-alt .box-story__title {
-    font-size: 170%;
-  }
   .box-story.theme-plain-alt .box-story__link-wrapper {
     padding: 1.5em 1.5em 3.5em 1.5em;
   }
@@ -10720,8 +10715,20 @@ input[type="text"].search-form-large__input {
   font-size: 0.875rem;
 }
 
+@media (max-width: 48em) {
+  .box-story--related .box-story__content {
+    font-size: 1rem;
+  }
+}
+
 .box-story--related .box-story__content p {
   font-size: 0.875rem;
+}
+
+@media (max-width: 48em) {
+  .box-story--related .box-story__content p {
+    font-size: 1rem;
+  }
 }
 
 /*

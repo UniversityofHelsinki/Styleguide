@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.05em;
   line-height: 1.2em;
   margin: 0;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.4em;
   word-wrap: break-word;
 
   a {
@@ -99,15 +99,10 @@ h6 {
 */
 
 p {
-  @include font-size(16px, 15px);
-  margin: 0 0 15px 0;
+  @include font-size(16px, 16px);
+  margin: 0 0 24px 0;
   letter-spacing: 0;
-  line-height: 1.3em;
-
-  @include breakpoint($small) {
-    line-height: 1.5em;
-    margin: 0 0 16px 0;
-  }
+  line-height: 1.7em;
 }
 
 /*
