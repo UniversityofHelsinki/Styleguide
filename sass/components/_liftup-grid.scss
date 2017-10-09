@@ -23,13 +23,14 @@
   max-height: 100vh;
   justify-content: center;
   overflow: hidden;
-  padding: 3vw;
+  padding: 3em;
   position: relative;
 
   @include breakpoint($small) {
     flex-basis: 34%;
     height: 33vw;
     max-height: none;
+    padding: 3vw;
     width: 34%;
   }
 

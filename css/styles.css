@@ -6836,7 +6836,7 @@ td.jobs-listing__date {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  padding: 3vw;
+  padding: 3em;
   position: relative;
 }
 
@@ -6847,6 +6847,7 @@ td.jobs-listing__date {
             flex-basis: 34%;
     height: 33vw;
     max-height: none;
+    padding: 3vw;
     width: 34%;
   }
 }
