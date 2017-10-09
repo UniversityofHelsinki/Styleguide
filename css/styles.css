@@ -6870,6 +6870,11 @@ td.jobs-listing__date {
   opacity: 0.2;
 }
 
+.liftup-grid__item.theme-small {
+  background-color: #222 !important;
+  height: auto;
+}
+
 .liftup-grid__content {
   position: relative;
   width: 100%;
