@@ -152,3 +152,32 @@
     }
   }
 }
+
+.textarea-readmore {
+  @include font-family-main;
+  background-color: $lightsilver;
+  border-bottom: 1px solid $mediumsilver;
+  border-top: 1px solid $mediumsilver;
+  display: block;
+  font-weight: bold;
+  line-height: normal;
+  margin: 2em 0;
+  padding: 2.5rem 2rem;
+  transition: color 0.2s;
+
+  @include breakpoint($small) {
+    margin: 4em 0;
+  }
+}
+
+.textarea-readmore__title {
+  @include font-size(12px);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.textarea-readmore__text {
+  @include font-size(30px, 20px);
+  color: $black;
+  max-width: 20em;
+}
