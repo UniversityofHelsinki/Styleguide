@@ -6836,7 +6836,7 @@ td.jobs-listing__date {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  padding: 3vw;
+  padding: 3em;
   position: relative;
 }
 
@@ -6847,6 +6847,7 @@ td.jobs-listing__date {
             flex-basis: 34%;
     height: 33vw;
     max-height: none;
+    padding: 3vw;
     width: 34%;
   }
 }
@@ -6868,6 +6869,11 @@ td.jobs-listing__date {
 
 .liftup-grid__item:hover:before {
   opacity: 0.2;
+}
+
+.liftup-grid__item.theme-small {
+  background-color: #222 !important;
+  height: auto;
 }
 
 .liftup-grid__content {
