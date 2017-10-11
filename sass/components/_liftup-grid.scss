@@ -55,6 +55,17 @@
   &.theme-small {
     background-color: $black !important;
     height: auto;
+
+    .liftup-grid__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .liftup-grid__button {
+      align-self: flex-start;
+      margin: 0 auto;
+      padding-right: 6em;
+    }
   }
 }
 

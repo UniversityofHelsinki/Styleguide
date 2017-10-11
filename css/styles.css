@@ -6876,6 +6876,23 @@ td.jobs-listing__date {
   height: auto;
 }
 
+.liftup-grid__item.theme-small .liftup-grid__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.liftup-grid__item.theme-small .liftup-grid__button {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  margin: 0 auto;
+  padding-right: 6em;
+}
+
 .liftup-grid__content {
   position: relative;
   width: 100%;
