@@ -402,26 +402,17 @@
     border: 0;
   }
 
-  .box-story__title {
-    display: inline-block;
-    height: auto;
-    margin-right: 2em;
-    padding-bottom: 0;
-  }
-
   .box-story__meta {
     display: inline-block;
     height: auto;
     margin: 0;
+    padding-bottom: 0.6rem;
   }
 
-  .box-story__content {
-    .more-link {
-      display: inline;
-      float: none;
-      margin-left: 1em;
-      text-align: left;
-    }
+  .box-story__title {
+    display: inline-block;
+    height: auto;
+    margin-right: 2em;
   }
 }
 
