@@ -10676,6 +10676,10 @@ input[type="text"].search-form-large__input {
   margin-right: 2em;
 }
 
+.box-story--constrained .box-story__title:hover {
+  color: #005479;
+}
+
 /*
  section: 6.10.5.5
  title: Box story related

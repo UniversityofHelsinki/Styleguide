@@ -402,6 +402,10 @@
     display: inline-block;
     height: auto;
     margin-right: 2em;
+
+    &:hover {
+      color: $darkblue;
+    }
   }
 }
 
