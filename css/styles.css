@@ -10663,22 +10663,6 @@ input[type="text"].search-form-large__input {
  template: 6_10_5_4-box-story--constrained
  description: Constrained story has content that is not full width
 */
-.box-story--constrained {
-  border-bottom: 1px solid #F8F8F8;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  padding: 1em 0 0.5em;
-}
-
-.box-story--constrained:first-of-type {
-  padding-top: 0;
-}
-
-.box-story--constrained:last-of-type {
-  border: 0;
-}
-
 .box-story--constrained .box-story__meta {
   display: inline-block;
   height: auto;

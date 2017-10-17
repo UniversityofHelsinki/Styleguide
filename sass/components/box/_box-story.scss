@@ -391,17 +391,6 @@
  description: Constrained story has content that is not full width
 */
 .box-story--constrained {
-  @include border-bottom;
-  padding: 1em 0 0.5em;
-
-  &:first-of-type {
-    padding-top: 0;
-  }
-
-  &:last-of-type {
-    border: 0;
-  }
-
   .box-story__meta {
     display: inline-block;
     height: auto;
