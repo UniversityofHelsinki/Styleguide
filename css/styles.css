@@ -9283,6 +9283,45 @@ input[type="text"].search-form-large__input {
   font-size: inherit;
 }
 
+.textarea-readmore {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  display: block;
+  font-weight: bold;
+  line-height: normal;
+  margin: 2em 0;
+  padding: 2.5rem 2rem;
+  transition: color 0.2s;
+}
+
+@media (min-width: 48em) {
+  .textarea-readmore {
+    margin: 4em 0;
+  }
+}
+
+.textarea-readmore__title {
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.textarea-readmore__text {
+  font-size: 1.875rem;
+  color: #222;
+  display: block;
+  max-width: 20em;
+}
+
+@media (max-width: 48em) {
+  .textarea-readmore__text {
+    font-size: 1.42857rem;
+  }
+}
+
 /*
  section: 21.1
  title: Video player
