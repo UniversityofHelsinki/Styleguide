@@ -172,6 +172,7 @@
 
 .textarea-readmore__title {
   @include font-size(12px);
+  display: block;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -179,5 +180,6 @@
 .textarea-readmore__text {
   @include font-size(30px, 20px);
   color: $black;
+  display: block;
   max-width: 20em;
 }

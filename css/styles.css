@@ -9281,6 +9281,7 @@ input[type="text"].search-form-large__input {
 
 .textarea-readmore__title {
   font-size: 0.75rem;
+  display: block;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -9288,6 +9289,7 @@ input[type="text"].search-form-large__input {
 .textarea-readmore__text {
   font-size: 1.875rem;
   color: #222;
+  display: block;
   max-width: 20em;
 }
 
