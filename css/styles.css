@@ -7024,6 +7024,12 @@ td.jobs-listing__date {
   }
 }
 
+@media (min-width: 75em) {
+  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
+    font-size: 2vw;
+  }
+}
+
 .liftup-mosaic__item.theme-video:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -7033,18 +7039,24 @@ td.jobs-listing__date {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
-  text-shadow: 1px 1px 1px #222, 0px 0px 1px rgba(0, 0, 0, 0.6);
   color: #FFF;
-  font-size: 6em;
-  left: 50%;
+  font-size: 2em;
+  line-height: normal;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  right: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  top: 8px;
   transition-duration: 0.2s;
   transition-property: color;
   z-index: 1;
+}
+
+@media (min-width: 62.5em) {
+  .liftup-mosaic__item.theme-video:after {
+    font-size: 4vw;
+    right: 16px;
+    top: 16px;
+  }
 }
 
 .liftup-mosaic__item.theme-video:hover:after {
@@ -7076,6 +7088,12 @@ td.jobs-listing__date {
   font-weight: 600;
   position: relative;
   z-index: 2;
+}
+
+@media (min-width: 75em) {
+  .liftup-mosaic__title {
+    font-size: 1.3vw;
+  }
 }
 
 /*
