@@ -6764,7 +6764,7 @@ td.jobs-listing__date {
   font-style: normal;
   background-color: #0098d0;
   color: #FFF;
-  padding: 0.3em 0.7em;
+  padding: 0.3em 1em;
   text-transform: uppercase;
   border-bottom: 1px solid #0098d0;
   border-top: 1px solid #0098d0;
@@ -6950,6 +6950,150 @@ td.jobs-listing__date {
   min-height: 100%;
   min-width: 100%;
   opacity: 0.8;
+}
+
+/*
+ section: 18.2
+ title: Liftup mosaic
+ template: 18_2_liftup-mosaic
+ description: Mosaic of five liftups.
+*/
+.liftup-mosaic {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media (min-width: 48em) {
+  .liftup-mosaic {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.liftup-mosaic__item {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  padding: 2rem;
+  position: relative;
+}
+
+.liftup-mosaic__item:before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+
+.liftup-mosaic__item:hover:before {
+  opacity: 0.4;
+}
+
+@media (min-width: 48em) {
+  .liftup-mosaic__item {
+    height: 36vw;
+    width: 33.33%;
+  }
+  .liftup-mosaic__item:nth-of-type(2) {
+    width: 66.66%;
+  }
+  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
+    font-size: 2vw;
+  }
+}
+
+.liftup-mosaic__item.theme-video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  color: #FFF;
+  font-size: 2em;
+  line-height: normal;
+  position: absolute;
+  right: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  top: 8px;
+  transition-duration: 0.2s;
+  transition-property: color;
+  z-index: 1;
+}
+
+@media (min-width: 62.5em) {
+  .liftup-mosaic__item.theme-video:after {
+    font-size: 4vw;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.liftup-mosaic__item.theme-video:hover:after {
+  color: #D2D2D2;
+}
+
+.liftup-mosaic__item.theme-plain {
+  background-color: #222;
+}
+
+.liftup-mosaic__label {
+  font-size: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #0098d0;
+  color: #FFF;
+  padding: 0.3em 1em;
+  text-transform: uppercase;
+  left: 0;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+}
+
+.liftup-mosaic__title {
+  color: #FFF;
+  padding: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 75em) {
+  .liftup-mosaic__title {
+    font-size: 1.3vw;
+  }
 }
 
 /*
@@ -10376,7 +10520,7 @@ input[type="text"].search-form-large__input {
   font-style: normal;
   background-color: #0098d0;
   color: #FFF;
-  padding: 0.3em 0.7em;
+  padding: 0.3em 1em;
   text-transform: uppercase;
   left: 1px;
   position: absolute;
