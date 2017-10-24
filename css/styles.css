@@ -9283,6 +9283,45 @@ input[type="text"].search-form-large__input {
   font-size: inherit;
 }
 
+.textarea-readmore {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  display: block;
+  font-weight: bold;
+  line-height: normal;
+  margin: 2em 0;
+  padding: 2.5rem 2rem;
+  transition: color 0.2s;
+}
+
+@media (min-width: 48em) {
+  .textarea-readmore {
+    margin: 4em 0;
+  }
+}
+
+.textarea-readmore__title {
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.textarea-readmore__text {
+  font-size: 1.875rem;
+  color: #222;
+  display: block;
+  max-width: 20em;
+}
+
+@media (max-width: 48em) {
+  .textarea-readmore__text {
+    font-size: 1.42857rem;
+  }
+}
+
 /*
  section: 21.1
  title: Video player
@@ -10663,40 +10702,21 @@ input[type="text"].search-form-large__input {
  template: 6_10_5_4-box-story--constrained
  description: Constrained story has content that is not full width
 */
-.box-story--constrained {
-  border-bottom: 1px solid #F8F8F8;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  padding: 1em 0 0.5em;
-}
-
-.box-story--constrained:first-of-type {
-  padding-top: 0;
-}
-
-.box-story--constrained:last-of-type {
-  border: 0;
+.box-story--constrained .box-story__meta {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  padding-bottom: 0.6rem;
 }
 
 .box-story--constrained .box-story__title {
   display: inline-block;
   height: auto;
   margin-right: 2em;
-  padding-bottom: 0;
 }
 
-.box-story--constrained .box-story__meta {
-  display: inline-block;
-  height: auto;
-  margin: 0;
-}
-
-.box-story--constrained .box-story__content .more-link {
-  display: inline;
-  float: none;
-  margin-left: 1em;
-  text-align: left;
+.box-story--constrained .box-story__title:hover {
+  color: #005479;
 }
 
 /*
