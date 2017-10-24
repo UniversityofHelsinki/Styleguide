@@ -7024,6 +7024,37 @@ td.jobs-listing__date {
   }
 }
 
+.liftup-mosaic__item.theme-video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  text-shadow: 1px 1px 1px #222, 0px 0px 1px rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  font-size: 6em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  transition-duration: 0.2s;
+  transition-property: color;
+  z-index: 1;
+}
+
+.liftup-mosaic__item.theme-video:hover:after {
+  color: #D2D2D2;
+}
+
+.liftup-mosaic__item.theme-plain {
+  background-color: #222;
+}
+
 .liftup-mosaic__label {
   font-size: 0.75rem;
   font-size: 0.75rem;

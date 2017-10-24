@@ -54,6 +54,32 @@
       }
     }
   }
+
+  &.theme-video {
+    &:after {
+      @include icon($icon-video);
+      @include text-shadow-outline-small;
+      color: $white;
+      font-size: 6em;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition-duration: 0.2s;
+      transition-property: color;
+      z-index: 1;
+    }
+
+    &:hover {
+      &:after {
+        color: $mediumsilver;
+      }
+    }
+  }
+
+  &.theme-plain {
+    background-color: $black;
+  }
 }
 
 .liftup-mosaic__label {
