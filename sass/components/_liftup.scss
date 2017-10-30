@@ -20,7 +20,7 @@
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0;
+    opacity: 0.2;
     position: absolute;
     right: 0;
     top: 0;
@@ -30,7 +30,7 @@
   }
 
   &:hover:before {
-    opacity: 0.2;
+    opacity: 0.4;
   }
 
   &:after {
