@@ -41,11 +41,15 @@
 }
 
 .liftup__title {
-  @include font-size(17px);
+  @include font-size(14px);
   color: $white;
-  padding: 0;
+  padding: 10px;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
   z-index: 1;
+
+  @include breakpoint($medium) {
+    @include font-size(17px);
+  }
 }

@@ -7002,13 +7002,19 @@ td.jobs-listing__date {
 }
 
 .liftup__title {
-  font-size: 1.0625rem;
+  font-size: 0.875rem;
   color: #FFF;
-  padding: 0;
+  padding: 10px;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
   z-index: 1;
+}
+
+@media (min-width: 62.5em) {
+  .liftup__title {
+    font-size: 1.0625rem;
+  }
 }
 
 /*
