@@ -1,0 +1,55 @@
+/*
+ section: 22.1
+ title: Media item
+ template: 22_1-media-item
+ description: A media item shows a picture, content and (optional) action link.
+*/
+
+.media-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.media-item__image {
+  border-radius: 30px;
+  flex-shrink: 0;
+  height: 60px;
+  overflow: hidden;
+  width: 60px;
+}
+
+.media-item__middle {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.media-item__content {
+  flex-grow: 1;
+  margin-bottom: 8px;
+  line-height: 25px;
+
+  @include breakpoint($small) {
+    line-height: 30px;
+  }
+}
+
+.media-item__heading {
+  letter-spacing: 0;
+  padding-bottom: 0;
+}
+
+.media-item__subheading {
+  @include font-size(20px, 14px);
+}
+
+.media-item__link {
+  display: block;
+  text-decoration: underline;
+}
+
+.media-item__sublink {
+  display: block;
+}
