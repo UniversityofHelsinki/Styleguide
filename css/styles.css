@@ -7928,7 +7928,7 @@ span.links__link.theme-language {
 }
 
 .media-item__image {
-  background-image: url("images/defaultprofile.svg");
+  background-image: url("../images/defaultprofile.svg");
   border-radius: 30px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
