@@ -21,10 +21,13 @@
 
 .media-item__middle {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
-  flex-wrap: wrap;
   margin-left: 20px;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
 }
 
 .media-item__content {

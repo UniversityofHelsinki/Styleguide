@@ -7942,9 +7942,9 @@ span.links__link.theme-language {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -7952,6 +7952,14 @@ span.links__link.theme-language {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-left: 20px;
+}
+
+@media (min-width: 48em) {
+  .media-item__middle {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .media-item__content {
