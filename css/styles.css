@@ -6984,26 +6984,34 @@ td.jobs-listing__date {
   opacity: 0.4;
 }
 
-.liftup:after {
-  content: "";
-  display: block;
-  padding-top: 60%;
+@media (min-width: 48em) {
+  .liftup:after {
+    content: "";
+    display: block;
+    padding-top: 60%;
+  }
 }
 
 .liftup__title {
   font-size: 0.875rem;
   color: #FFF;
-  left: 50%;
   padding: 10px;
-  position: absolute;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
   width: 100%;
   z-index: 1;
+}
+
+@media (min-width: 48em) {
+  .liftup__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 @media (min-width: 62.5em) {
