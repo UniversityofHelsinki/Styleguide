@@ -7913,6 +7913,91 @@ span.links__link.theme-language {
 }
 
 /*
+ section: 22.1
+ title: Media item
+ template: 22_1-media-item
+ description: A media item shows a picture, content and (optional) action link.
+*/
+.media-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.media-item__image {
+  background-image: url("../images/defaultprofile.svg");
+  border-radius: 30px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 60px;
+  overflow: hidden;
+  width: 60px;
+}
+
+.media-item__middle {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 20px;
+}
+
+@media (min-width: 48em) {
+  .media-item__middle {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.media-item__content {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 8px;
+  line-height: 25px;
+}
+
+@media (min-width: 48em) {
+  .media-item__content {
+    line-height: 30px;
+  }
+}
+
+.media-item__heading {
+  letter-spacing: 0;
+  padding-bottom: 0;
+}
+
+.media-item__subheading {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 48em) {
+  .media-item__subheading {
+    font-size: 1rem;
+  }
+}
+
+.media-item__link {
+  display: block;
+  text-decoration: underline;
+}
+
+.media-item__sublink {
+  display: block;
+}
+
+/*
  section: 6.12
  title: Messages
  description:
