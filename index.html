@@ -3688,6 +3688,25 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   padding: 1em;
 }
 
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #0098d0;
+  color: #FFF;
+  padding: 0.3em 1em;
+  text-transform: uppercase;
+}
+
+a.label {
+  transition: background-color 0.1s;
+}
+
+a.label:hover {
+  background-color: #005479;
+  color: #FFF;
+}
+
 .inline-list > *, .tag-list > * {
   margin-left: 6px;
   margin-right: 6px;
@@ -6764,7 +6783,7 @@ td.jobs-listing__date {
   font-style: normal;
   background-color: #0098d0;
   color: #FFF;
-  padding: 0.3em 0.7em;
+  padding: 0.3em 1em;
   text-transform: uppercase;
   border-bottom: 1px solid #0098d0;
   border-top: 1px solid #0098d0;
@@ -6876,6 +6895,23 @@ td.jobs-listing__date {
   height: auto;
 }
 
+.liftup-grid__item.theme-small .liftup-grid__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.liftup-grid__item.theme-small .liftup-grid__button {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  margin: 0 auto;
+  padding-right: 6em;
+}
+
 .liftup-grid__content {
   position: relative;
   width: 100%;
@@ -6933,6 +6969,218 @@ td.jobs-listing__date {
   min-height: 100%;
   min-width: 100%;
   opacity: 0.8;
+}
+
+/*
+ section: 18.3
+ title: Liftup mosaic
+ template: 18_3_liftup-mosaic
+ description: Mosaic of five liftups.
+*/
+.liftup-mosaic {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media (min-width: 48em) {
+  .liftup-mosaic {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.liftup-mosaic__item {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  padding: 2rem;
+  position: relative;
+}
+
+.liftup-mosaic__item:before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+
+.liftup-mosaic__item:hover:before {
+  opacity: 0.4;
+}
+
+@media (min-width: 48em) {
+  .liftup-mosaic__item {
+    height: 36vw;
+    width: 33.33%;
+  }
+  .liftup-mosaic__item:nth-of-type(2) {
+    width: 66.66%;
+  }
+  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
+    font-size: 2vw;
+  }
+}
+
+.liftup-mosaic__item.theme-video:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  color: #FFF;
+  font-size: 2em;
+  line-height: normal;
+  position: absolute;
+  right: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  top: 8px;
+  transition-duration: 0.2s;
+  transition-property: color;
+  z-index: 1;
+}
+
+@media (min-width: 62.5em) {
+  .liftup-mosaic__item.theme-video:after {
+    font-size: 4vw;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.liftup-mosaic__item.theme-video:hover:after {
+  color: #D2D2D2;
+}
+
+.liftup-mosaic__item.theme-plain {
+  background-color: #222;
+}
+
+.liftup-mosaic__label {
+  font-size: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #0098d0;
+  color: #FFF;
+  padding: 0.3em 1em;
+  text-transform: uppercase;
+  left: 0;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+}
+
+.liftup-mosaic__title {
+  color: #FFF;
+  padding: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 75em) {
+  .liftup-mosaic__title {
+    font-size: 1.3vw;
+  }
+}
+
+/*
+ section: 18.2
+ title: Liftup
+ template: 18_2_liftup
+ description: A liftup.
+*/
+.liftup {
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.liftup:before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+
+.liftup:hover:before {
+  opacity: 0.4;
+}
+
+@media (min-width: 48em) {
+  .liftup:after {
+    content: "";
+    display: block;
+    padding-top: 60%;
+  }
+}
+
+.liftup__title {
+  font-size: 0.875rem;
+  color: #FFF;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 48em) {
+  .liftup__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@media (min-width: 62.5em) {
+  .liftup__title {
+    font-size: 1.0625rem;
+  }
 }
 
 /*
@@ -7749,6 +7997,91 @@ span.links__link.theme-language {
 .is-open > .main-menu-v2__expand:before {
   -webkit-transform: rotate3d(1, 0, 0, 180deg);
           transform: rotate3d(1, 0, 0, 180deg);
+}
+
+/*
+ section: 22.1
+ title: Media item
+ template: 22_1-media-item
+ description: A media item shows a picture, content and (optional) action link.
+*/
+.media-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.media-item__image {
+  background-image: url("images/defaultprofile.svg");
+  border-radius: 30px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  height: 60px;
+  overflow: hidden;
+  width: 60px;
+}
+
+.media-item__middle {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 20px;
+}
+
+@media (min-width: 48em) {
+  .media-item__middle {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.media-item__content {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 8px;
+  line-height: 25px;
+}
+
+@media (min-width: 48em) {
+  .media-item__content {
+    line-height: 30px;
+  }
+}
+
+.media-item__heading {
+  letter-spacing: 0;
+  padding-bottom: 0;
+}
+
+.media-item__subheading {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 48em) {
+  .media-item__subheading {
+    font-size: 1rem;
+  }
+}
+
+.media-item__link {
+  display: block;
+  text-decoration: underline;
+}
+
+.media-item__sublink {
+  display: block;
 }
 
 /*
@@ -9266,6 +9599,45 @@ input[type="text"].search-form-large__input {
   font-size: inherit;
 }
 
+.textarea-readmore {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  display: block;
+  font-weight: bold;
+  line-height: normal;
+  margin: 2em 0;
+  padding: 2.5rem 2rem;
+  transition: color 0.2s;
+}
+
+@media (min-width: 48em) {
+  .textarea-readmore {
+    margin: 4em 0;
+  }
+}
+
+.textarea-readmore__title {
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.textarea-readmore__text {
+  font-size: 1.875rem;
+  color: #222;
+  display: block;
+  max-width: 20em;
+}
+
+@media (max-width: 48em) {
+  .textarea-readmore__text {
+    font-size: 1.42857rem;
+  }
+}
+
 /*
  section: 21.1
  title: Video player
@@ -10320,7 +10692,7 @@ input[type="text"].search-form-large__input {
   font-style: normal;
   background-color: #0098d0;
   color: #FFF;
-  padding: 0.3em 0.7em;
+  padding: 0.3em 1em;
   text-transform: uppercase;
   left: 1px;
   position: absolute;
@@ -10646,40 +11018,21 @@ input[type="text"].search-form-large__input {
  template: 6_10_5_4-box-story--constrained
  description: Constrained story has content that is not full width
 */
-.box-story--constrained {
-  border-bottom: 1px solid #F8F8F8;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  padding: 1em 0 0.5em;
-}
-
-.box-story--constrained:first-of-type {
-  padding-top: 0;
-}
-
-.box-story--constrained:last-of-type {
-  border: 0;
+.box-story--constrained .box-story__meta {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  padding-bottom: 0.6rem;
 }
 
 .box-story--constrained .box-story__title {
   display: inline-block;
   height: auto;
   margin-right: 2em;
-  padding-bottom: 0;
 }
 
-.box-story--constrained .box-story__meta {
-  display: inline-block;
-  height: auto;
-  margin: 0;
-}
-
-.box-story--constrained .box-story__content .more-link {
-  display: inline;
-  float: none;
-  margin-left: 1em;
-  text-align: left;
+.box-story--constrained .box-story__title:hover {
+  color: #005479;
 }
 
 /*
@@ -11717,7 +12070,7 @@ table[class*="idean-styleguide"] {
 	display: inherit !important;
 }
 
-</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form elements</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1-1" data-page="section-3">Section 3-7-1-1: Button small</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group (small buttons)</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2" data-page="section-4">Section 4-2: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-1" data-page="section-4">Section 4-2-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-2" data-page="section-4">Section 4-2-2: Search form dark</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-3" data-page="section-4">Section 4-2-3: Search form minimal</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Quick menu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5-2" data-page="section-5">Section 5-2: Fatmenu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent and transparent-alt buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story topical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-5" data-page="section-6">Section 6-10-5-5: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7-1" data-page="section-6">Section 6-10-7-1: Box subtitle icon</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-10" data-page="section-6">Section 6-10-10: Box liftup</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11" data-page="section-6">Section 6-11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-1" data-page="section-6">Section 6-11-1: Textarea</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-2" data-page="section-6">Section 6-11-2: Textarea infobox</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-3" data-page="section-6">Section 6-11-3: Textarea ingress</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index topical</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Top bar small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-2" data-page="section-15">Section 15-1-2: Header bar</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-3" data-page="section-15">Section 15-3: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16" data-page="section-16">Section 16</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1" data-page="section-16">Section 16-1</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-1" data-page="section-16">Section 16-1-1: Hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-2" data-page="section-16">Section 16-1-2: Hero big</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-3" data-page="section-16">Section 16-1-3: Hero big centered</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-4" data-page="section-16">Section 16-1-4: Hero medium</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-17" data-page="section-17">Section 17</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-17-1" data-page="section-17">Section 17-1: Overlay</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18" data-page="section-18">Section 18</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-18-1" data-page="section-18">Section 18-1: Liftup grid</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-19" data-page="section-19">Section 19</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-19-1" data-page="section-19">Section 19-1: Highlight</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-20" data-page="section-20">Section 20</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-20-1" data-page="section-20">Section 20-1: Link grid</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-21" data-page="section-21">Section 21</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-21-1" data-page="section-21">Section 21-1: Video player</a></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#F8F8F8"><span class="idean-styleguide-colors-list-label">$lightsilver #F8F8F8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#D2D2D2"><span class="idean-styleguide-colors-list-label">$mediumsilver #D2D2D2</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#555555"><span class="idean-styleguide-colors-list-label">$lightgray #555555</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
+</style></head><body id="idean-styleguide" class="idean-styleguide-body"><div class="idean-styleguide-menu"><a href="#" class="idean-styleguide-menu-button lines-button"><span class="lines"></span></a><div class="idean-styleguide-menu-container"><ul><li><a class="idean-styleguide-link" href="#section-1" data-page="section-1">Section 1: Global</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1" data-page="section-1">Section 1-1: Colors</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-1" data-page="section-1">Section 1-1-1: Text colors</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-1-1-2" data-page="section-1">Section 1-1-2: Other colors</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-2" data-page="section-2">Section 2: Icons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-2-1" data-page="section-2">Section 2-1: Icons</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3" data-page="section-3">Section 3: Common elements</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-1" data-page="section-3">Section 3-1: Headings</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-2" data-page="section-3">Section 3-2: Paragraph</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-3" data-page="section-3">Section 3-3: Links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4" data-page="section-3">Section 3-4: Blockquote</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-1" data-page="section-3">Section 3-4-1: Blockquote</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-4-2" data-page="section-3">Section 3-4-2: Blockquote paragraph</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-5" data-page="section-3">Section 3-5: Form elements</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6" data-page="section-3">Section 3-6: Page title</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-1" data-page="section-3">Section 3-6-1: Page title</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-2" data-page="section-3">Section 3-6-2: Page title small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-3" data-page="section-3">Section 3-6-3: Page title suffix</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-6-4" data-page="section-3">Section 3-6-4: Page title listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7" data-page="section-3">Section 3-7: Buttons</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1" data-page="section-3">Section 3-7-1: Button</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-1-1" data-page="section-3">Section 3-7-1-1: Button small</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-2" data-page="section-3">Section 3-7-2: Button accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-3" data-page="section-3">Section 3-7-3: Button action</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-4" data-page="section-3">Section 3-7-4: Button action before</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-5" data-page="section-3">Section 3-7-5: Button anchor</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-6" data-page="section-3">Section 3-7-6: Button icon</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-7" data-page="section-3">Section 3-7-7: Button group</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-3-7-8" data-page="section-3">Section 3-7-8: Button group (small buttons)</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4" data-page="section-4">Section 4</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-1" data-page="section-4">Section 4-1: Form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2" data-page="section-4">Section 4-2: Search form</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-1" data-page="section-4">Section 4-2-1: Search form</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-2" data-page="section-4">Section 4-2-2: Search form dark</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-4-2-3" data-page="section-4">Section 4-2-3: Search form minimal</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5" data-page="section-5">Section 5</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1" data-page="section-5">Section 5-1: Main menu</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-5-1-1" data-page="section-5">Section 5-1-1: Quick menu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-5-2" data-page="section-5">Section 5-2: Fatmenu</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6" data-page="section-6">Section 6</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1" data-page="section-6">Section 6-1: Table</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-1" data-page="section-6">Section 6-1-1: Table sortable</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-1-2" data-page="section-6">Section 6-1-2: Table simple</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2" data-page="section-6">Section 6-2: List of links</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-1" data-page="section-6">Section 6-2-1: List of links</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-2" data-page="section-6">Section 6-2-2: List of links (with transparent and transparent-alt buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-2-3" data-page="section-6">Section 6-2-3: List of links condensed</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3" data-page="section-6">Section 6-3: Accordion</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-1" data-page="section-6">Section 6-3-1: Accordion</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-2" data-page="section-6">Section 6-3-2: Accordion (with transparent buttons)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-3" data-page="section-6">Section 6-3-3: Accordion (nested)</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-3-4" data-page="section-6">Section 6-3-4: Accordion (nested with transparent buttons)</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-4" data-page="section-6">Section 6-4: Author</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-5" data-page="section-6">Section 6-5: Breadcrumbs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-7" data-page="section-6">Section 6-7: Horizontal tabs</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-8" data-page="section-6">Section 6-8: Pagination</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-9" data-page="section-6">Section 6-9: Tag list</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10" data-page="section-6">Section 6-10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-1" data-page="section-6">Section 6-10-1: Box application</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-2" data-page="section-6">Section 6-10-2: Box data</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-3" data-page="section-6">Section 6-10-3: Box hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-4" data-page="section-6">Section 6-10-4: Box ingress</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5" data-page="section-6">Section 6-10-5: Box story</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-1" data-page="section-6">Section 6-10-5-1: Box story</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-2" data-page="section-6">Section 6-10-5-2: Box story topical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-3" data-page="section-6">Section 6-10-5-3: Box story liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-4" data-page="section-6">Section 6-10-5-4: Box story constrained</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-5-5" data-page="section-6">Section 6-10-5-5: Box story related</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-6" data-page="section-6">Section 6-10-6: Box subsection</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7" data-page="section-6">Section 6-10-7: Box subtitle</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-7-1" data-page="section-6">Section 6-10-7-1: Box subtitle icon</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-8" data-page="section-6">Section 6-10-8: Box card</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-9" data-page="section-6">Section 6-10-9: Box logo</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-10-10" data-page="section-6">Section 6-10-10: Box liftup</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11" data-page="section-6">Section 6-11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-1" data-page="section-6">Section 6-11-1: Textarea</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-2" data-page="section-6">Section 6-11-2: Textarea infobox</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-11-3" data-page="section-6">Section 6-11-3: Textarea ingress</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12" data-page="section-6">Section 6-12: Messages</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-1" data-page="section-6">Section 6-12-1: Status message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-2" data-page="section-6">Section 6-12-2: Info message</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-6-12-3" data-page="section-6">Section 6-12-3: Error message</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7" data-page="section-7">Section 7</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1" data-page="section-7">Section 7-1: Carousel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-1" data-page="section-7">Section 7-1-1: Carousel</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-7-1-2" data-page="section-7">Section 7-1-2: Carousel unwrapped</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-8" data-page="section-8">Section 8</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-8-1" data-page="section-8">Section 8-1: Feed listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9" data-page="section-9">Section 9</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1" data-page="section-9">Section 9-1: Index</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-1" data-page="section-9">Section 9-1-1: Index</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-2" data-page="section-9">Section 9-1-2: Index alphabetical</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-9-1-3" data-page="section-9">Section 9-1-3: Index topical</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-10" data-page="section-10">Section 10</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-10-1" data-page="section-10">Section 10-1: Jobs listing</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-11" data-page="section-11">Section 11</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1" data-page="section-11">Section 11-1: Panel</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-11-1-1" data-page="section-11">Section 11-1-1: File</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-12" data-page="section-12">Section 12</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1" data-page="section-12">Section 12-1: Avatar image</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-12-1-1" data-page="section-12">Section 12-1-1: Avatar image</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-13" data-page="section-13">Section 13</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-13-1" data-page="section-13">Section 13-1: Label row</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-14" data-page="section-14">Section 14</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-14-1" data-page="section-14">Section 14-1: Post</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15" data-page="section-15">Section 15</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1" data-page="section-15">Section 15-1: Top bar</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-1" data-page="section-15">Section 15-1-1: Top bar small</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-1-2" data-page="section-15">Section 15-1-2: Header bar</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-2" data-page="section-15">Section 15-2: Footer</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-15-3" data-page="section-15">Section 15-3: Links</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16" data-page="section-16">Section 16</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1" data-page="section-16">Section 16-1</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-1" data-page="section-16">Section 16-1-1: Hero</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-2" data-page="section-16">Section 16-1-2: Hero big</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-3" data-page="section-16">Section 16-1-3: Hero big centered</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-16-1-4" data-page="section-16">Section 16-1-4: Hero medium</a></li></ul></ul></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-17" data-page="section-17">Section 17</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-17-1" data-page="section-17">Section 17-1: Overlay</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18" data-page="section-18">Section 18</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-18-1" data-page="section-18">Section 18-1: Liftup grid</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18-2" data-page="section-18">Section 18-2: Liftup</a></li></ul><ul><li><a class="idean-styleguide-link" href="#section-18-3" data-page="section-18">Section 18-3: Liftup mosaic</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-19" data-page="section-19">Section 19</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-19-1" data-page="section-19">Section 19-1: Highlight</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-20" data-page="section-20">Section 20</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-20-1" data-page="section-20">Section 20-1: Link grid</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-21" data-page="section-21">Section 21</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-21-1" data-page="section-21">Section 21-1: Video player</a></li></ul></ul></li></ul><ul><li><a class="idean-styleguide-link" href="#section-22" data-page="section-22">Section 22</a></li><li><ul><ul><li><a class="idean-styleguide-link" href="#section-22-1" data-page="section-22">Section 22-1: Media item</a></li></ul></ul></li></ul></div></div><div class="idean-styleguide-responsive-section"><section class="idean-styleguide-page" id="section-1"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-1">University of Helsinki: 1: Global</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1">Section 1-1: Colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><div class="idean-styleguide-subsection" id="section-1-1-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-1">Section 1-1-1: Text colors</a></h2><p class="idean-styleguide-description">Main text colors for Helsingin yliopisto - Julkiset</p><ul class="idean-styleguide-colors-grid clearfix"><li class="idean-styleguide-colors-grid-sample" style="background:#FFF"><span class="idean-styleguide-colors-grid-label">$white #FFF</span></li><li class="idean-styleguide-colors-grid-sample" style="background:#222"><span class="idean-styleguide-colors-grid-label">$black #222</span></li></ul></div><div class="idean-styleguide-subsection" id="section-1-1-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-1-1-2">Section 1-1-2: Other colors</a></h2><p class="idean-styleguide-description">The colors used through out the theme.</p><ul class="idean-styleguide-colors-list clearfix"><li class="idean-styleguide-colors-list-sample" style="background:#0098d0"><span class="idean-styleguide-colors-list-label">$blue #0098d0</span></li><li class="idean-styleguide-colors-list-sample" style="background:#0882B3"><span class="idean-styleguide-colors-list-label">$blue--active #0882B3</span></li><li class="idean-styleguide-colors-list-sample" style="background:#005479"><span class="idean-styleguide-colors-list-label">$darkblue #005479</span></li><li class="idean-styleguide-colors-list-sample" style="background:#003146"><span class="idean-styleguide-colors-list-label">$darkblue--active #003146</span></li><li class="idean-styleguide-colors-list-sample" style="background:#F8F8F8"><span class="idean-styleguide-colors-list-label">$lightsilver #F8F8F8</span></li><li class="idean-styleguide-colors-list-sample" style="background:#D2D2D2"><span class="idean-styleguide-colors-list-label">$mediumsilver #D2D2D2</span></li><li class="idean-styleguide-colors-list-sample" style="background:#979797"><span class="idean-styleguide-colors-list-label">$silver #979797</span></li><li class="idean-styleguide-colors-list-sample" style="background:#555555"><span class="idean-styleguide-colors-list-label">$lightgray #555555</span></li><li class="idean-styleguide-colors-list-sample" style="background:#424242"><span class="idean-styleguide-colors-list-label">$darkgray #424242</span></li><li class="idean-styleguide-colors-list-sample" style="background:#e5053a"><span class="idean-styleguide-colors-list-label">$red #e5053a</span></li><li class="idean-styleguide-colors-list-sample" style="background:#fca311"><span class="idean-styleguide-colors-list-label">$orange #fca311</span></li></ul></div></div></section><section class="idean-styleguide-page" id="section-2"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-2">University of Helsinki: 2: Icons</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-2-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-2-1">Section 2-1: Icons</a></h2><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example">
 
 <div>
     <span class="icon--add-to-todo-list"></span>
@@ -13798,54 +14151,42 @@ table[class*="idean-styleguide"] {
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-5-4"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-5-4">Section 6-10-5-4: Box story constrained</a></h2><p class="idean-styleguide-description">Constrained story has content that is not full width</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><article about="#" role="article" class="box-story box-story--constrained">
-  <h4 class="box-story__title">
-    <a href="#">Hyötypelit hiipivät kouluihin</a>
-  </h4>
   <div class="box-story__meta">
     <span class="box-story__date">13.10.2015</span>
     <a href="#" class="box-story__tag"><span>Ympäristö &amp; luonnontiede</span></a>
   </div>
-  <div class="box-story__content">
-    <a href="#">Tuoreet tiedot sekä mikrobien vaikutuksesta radionuklidien käyttäytymiseen pohjoisessa suoympäristössä että bakteerien kyvystä poistaa...</a>
-  </div>
+  <h4 class="box-story__title">
+    <a href="#">Hyötypelit hiipivät kouluihin</a>
+  </h4>
 </article>
 
 <article about="#" role="article" class="box-story box-story--constrained">
-  <h4 class="box-story__title">
-    <a href="#">Hyötypelit hiipivät kouluihin</a>
-  </h4>
   <div class="box-story__meta">
     <span class="box-story__date">13.10.2015</span>
     <a href="#" class="box-story__tag"><span>Ympäristö &amp; luonnontiede</span></a>
   </div>
-  <div class="box-story__content">
-    <a href="#">Tuoreet tiedot sekä mikrobien vaikutuksesta radionuklidien käyttäytymiseen pohjoisessa suoympäristössä että bakteerien kyvystä poistaa...</a>
-  </div>
+  <h4 class="box-story__title">
+    <a href="#">Hyötypelit hiipivät kouluihin</a>
+  </h4>
 </article>
 </div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;article about="#" role="article" class="box-story box-story--constrained"&gt;
-  &lt;h4 class="box-story__title"&gt;
-    &lt;a href="#"&gt;Hyötypelit hiipivät kouluihin&lt;/a&gt;
-  &lt;/h4&gt;
   &lt;div class="box-story__meta"&gt;
     &lt;span class="box-story__date"&gt;13.10.2015&lt;/span&gt;
     &lt;a href="#" class="box-story__tag"&gt;&lt;span&gt;Ympäristö &amp; luonnontiede&lt;/span&gt;&lt;/a&gt;
   &lt;/div&gt;
-  &lt;div class="box-story__content"&gt;
-    &lt;a href="#"&gt;Tuoreet tiedot sekä mikrobien vaikutuksesta radionuklidien käyttäytymiseen pohjoisessa suoympäristössä että bakteerien kyvystä poistaa...&lt;/a&gt;
-  &lt;/div&gt;
+  &lt;h4 class="box-story__title"&gt;
+    &lt;a href="#"&gt;Hyötypelit hiipivät kouluihin&lt;/a&gt;
+  &lt;/h4&gt;
 &lt;/article&gt;
 
 &lt;article about="#" role="article" class="box-story box-story--constrained"&gt;
-  &lt;h4 class="box-story__title"&gt;
-    &lt;a href="#"&gt;Hyötypelit hiipivät kouluihin&lt;/a&gt;
-  &lt;/h4&gt;
   &lt;div class="box-story__meta"&gt;
     &lt;span class="box-story__date"&gt;13.10.2015&lt;/span&gt;
     &lt;a href="#" class="box-story__tag"&gt;&lt;span&gt;Ympäristö &amp; luonnontiede&lt;/span&gt;&lt;/a&gt;
   &lt;/div&gt;
-  &lt;div class="box-story__content"&gt;
-    &lt;a href="#"&gt;Tuoreet tiedot sekä mikrobien vaikutuksesta radionuklidien käyttäytymiseen pohjoisessa suoympäristössä että bakteerien kyvystä poistaa...&lt;/a&gt;
-  &lt;/div&gt;
+  &lt;h4 class="box-story__title"&gt;
+    &lt;a href="#"&gt;Hyötypelit hiipivät kouluihin&lt;/a&gt;
+  &lt;/h4&gt;
 &lt;/article&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-6-10-5-5"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-6-10-5-5">Section 6-10-5-5: Box story related</a></h2><p class="idean-styleguide-description">...</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="box-story box-story--related">
   <div class="box-story__image">
@@ -14142,6 +14483,11 @@ table[class*="idean-styleguide"] {
 
   <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
 
+  <a class="textarea-readmore" href="#">
+    <span class="textarea-readmore__title">Read more</span>
+    <span class="textarea-readmore__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+  </a>
+
   <h3>Heading Level 3</h3>
 
   <ul>
@@ -14198,6 +14544,11 @@ table[class*="idean-styleguide"] {
   &lt;/ol&gt;
 
   &lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+
+  &lt;a class="textarea-readmore" href="#"&gt;
+    &lt;span class="textarea-readmore__title"&gt;Read more&lt;/span&gt;
+    &lt;span class="textarea-readmore__text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/span&gt;
+  &lt;/a&gt;
 
   &lt;h3&gt;Heading Level 3&lt;/h3&gt;
 
@@ -15959,6 +16310,112 @@ Theme prominent
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-18-2"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-18-2">Section 18-2: Liftup</a></h2><p class="idean-styleguide-description">A liftup.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><a class="liftup" href="#" style="background-color: #0098d0">
+  <h5 class="liftup__title">
+    Tutkimuksenhuiput
+  </h5>
+</a>
+
+<a class="liftup" href="#" style="background-image: url(images/wide_322x190.jpg)">
+  <h5 class="liftup__title">
+    Korkeakoulu- & Tiedepolitiikka
+  </h5>
+</a>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;a class="liftup" href="#" style="background-color: #0098d0"&gt;
+  &lt;h5 class="liftup__title"&gt;
+    Tutkimuksenhuiput
+  &lt;/h5&gt;
+&lt;/a&gt;
+
+&lt;a class="liftup" href="#" style="background-image: url(images/wide_322x190.jpg)"&gt;
+  &lt;h5 class="liftup__title"&gt;
+    Korkeakoulu- & Tiedepolitiikka
+  &lt;/h5&gt;
+&lt;/a&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div><div class="idean-styleguide-subsection" id="section-18-3"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-18-3">Section 18-3: Liftup mosaic</a></h2><p class="idean-styleguide-description">Mosaic of five liftups.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="liftup-mosaic">
+  <a class="liftup-mosaic__item theme-video" href="#" style="background-image: url('images/squarepic.png');">
+    <div class="liftup-mosaic__label">
+      Tutkijan ääni
+    </div>
+    <h4 class="liftup-mosaic__title">
+      B-vitamiinien liikakäyttö voi jopa nelinkertaistaa keuhkosyövän riskin miehillä – suomalaisprofessori pitää tulosta yllättävänä
+    </h4>
+  </a>
+  <a class="liftup-mosaic__item theme-video" href="#" style="background-image: url('images/squarepic.png');">
+    <div class="liftup-mosaic__label">
+      Tutkijan ääni
+    </div>
+    <h4 class="liftup-mosaic__title">
+      Dinosaurukset kuolivat kylmässä ja pimeässä – uusi tutkimus valaisee asteroidin törmäyksen kaameita vaikutuksia
+    </h4>
+  </a>
+  <a class="liftup-mosaic__item theme-plain" href="#">
+    <div class="liftup-mosaic__label">
+      Tutkijan ääni
+    </div>
+    <h4 class="liftup-mosaic__title">
+      Kaksi Pirate Bayn perustajajäsentä tuomittiin lähes puolen miljoonan euron korvauksiin Helsingissä
+    </h4>
+  </a>
+  <a class="liftup-mosaic__item" href="#" style="background-image: url('images/squarepic.png');">
+    <div class="liftup-mosaic__label">
+      Tutkijan ääni
+    </div>
+    <h4 class="liftup-mosaic__title">
+      Muumien sensuroidut jaksot tulevat nähtäväksi Suomessa – mukana puukkoja ja demoni
+    </h4>
+  </a>
+  <a class="liftup-mosaic__item" href="#" style="background-image: url('images/squarepic.png');">
+    <div class="liftup-mosaic__label">
+      Tutkijan ääni
+    </div>
+    <h4 class="liftup-mosaic__title">
+      B-vitamiinien liikakäyttö voi jopa nelinkertaistaa keuhkosyövän riskin miehillä – suomalaisprofessori pitää tulosta yllättävänä
+    </h4>
+  </a>
+</div>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="liftup-mosaic"&gt;
+  &lt;a class="liftup-mosaic__item theme-video" href="#" style="background-image: url('images/squarepic.png');"&gt;
+    &lt;div class="liftup-mosaic__label"&gt;
+      Tutkijan ääni
+    &lt;/div&gt;
+    &lt;h4 class="liftup-mosaic__title"&gt;
+      B-vitamiinien liikakäyttö voi jopa nelinkertaistaa keuhkosyövän riskin miehillä – suomalaisprofessori pitää tulosta yllättävänä
+    &lt;/h4&gt;
+  &lt;/a&gt;
+  &lt;a class="liftup-mosaic__item theme-video" href="#" style="background-image: url('images/squarepic.png');"&gt;
+    &lt;div class="liftup-mosaic__label"&gt;
+      Tutkijan ääni
+    &lt;/div&gt;
+    &lt;h4 class="liftup-mosaic__title"&gt;
+      Dinosaurukset kuolivat kylmässä ja pimeässä – uusi tutkimus valaisee asteroidin törmäyksen kaameita vaikutuksia
+    &lt;/h4&gt;
+  &lt;/a&gt;
+  &lt;a class="liftup-mosaic__item theme-plain" href="#"&gt;
+    &lt;div class="liftup-mosaic__label"&gt;
+      Tutkijan ääni
+    &lt;/div&gt;
+    &lt;h4 class="liftup-mosaic__title"&gt;
+      Kaksi Pirate Bayn perustajajäsentä tuomittiin lähes puolen miljoonan euron korvauksiin Helsingissä
+    &lt;/h4&gt;
+  &lt;/a&gt;
+  &lt;a class="liftup-mosaic__item" href="#" style="background-image: url('images/squarepic.png');"&gt;
+    &lt;div class="liftup-mosaic__label"&gt;
+      Tutkijan ääni
+    &lt;/div&gt;
+    &lt;h4 class="liftup-mosaic__title"&gt;
+      Muumien sensuroidut jaksot tulevat nähtäväksi Suomessa – mukana puukkoja ja demoni
+    &lt;/h4&gt;
+  &lt;/a&gt;
+  &lt;a class="liftup-mosaic__item" href="#" style="background-image: url('images/squarepic.png');"&gt;
+    &lt;div class="liftup-mosaic__label"&gt;
+      Tutkijan ääni
+    &lt;/div&gt;
+    &lt;h4 class="liftup-mosaic__title"&gt;
+      B-vitamiinien liikakäyttö voi jopa nelinkertaistaa keuhkosyövän riskin miehillä – suomalaisprofessori pitää tulosta yllättävänä
+    &lt;/h4&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-19"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-19">University of Helsinki: 19</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-19-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-19-1">Section 19-1: Highlight</a></h2><p class="idean-styleguide-description">Highlight.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><a class="highlight" href="#">
   <div class="highlight__content">
     <h4 class="highlight__title">
@@ -16197,6 +16654,82 @@ Theme prominent
       &lt;!-- &lt;img typeof="foaf:Image" src="http://local.uusiwww.helsinki.fi/sites/default/files/opiskelijoita_2608-13_1_photo_hy_ari_aalto_testi_0.jpg" width="1920" height="620" alt=""&gt; --&gt;
     &lt;/div&gt;
     &lt;div class="video-player__video"&gt;&lt;iframe class="" src="//www.youtube.com/embed/ukWiKrTlMzQ?width=640&amp;height=360&amp;autoplay=0&amp;vq=large&amp;rel=0&amp;controls=1&amp;autohide=2&amp;showinfo=1&amp;modestbranding=0&amp;theme=dark&amp;iv_load_policy=1&amp;wmode=opaque" width="640" height="360" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section><section class="idean-styleguide-page" id="section-22"><header class="idean-styleguide-header"><h1 class="idean-styleguide-title"><a class="idean-styleguide-link" href="#section-22">University of Helsinki: 22</a></h1></header><a href="#" class="idean-styleguide-link idean-styleguide-collapse all">Collapse Section</a><div class="idean-styleguide-subsection" id="section-22-1"><h2 class="idean-styleguide-section-title"><a class="idean-styleguide-link" href="#section-22-1">Section 22-1: Media item</a></h2><p class="idean-styleguide-description">A media item shows a picture, content and (optional) action link.</p><div><div class="idean-styleguide-demo-block"><div class="idean-styleguide-demo-example"><div class="media-item">
+  <div class="media-item__image">
+  </div>
+  <div class="media-item__middle">
+    <div class="media-item__content">
+      <h4 class="media-item__heading">Mikael Foigelholm </h4>
+      <div class="media-item__subheading">Professor of nutrition science </div>
+      <div class="media-item__link"><a href="#" target="_blank">mikael.folgelholm@helsinki.fi</a></div>
+      <div class="media-item__sublink"><a href="#" target="_blank">Link text</a></div>
+    </div>
+    <div class="media-item__action"><a href="#" class="label">Follow</a></div>
+  </div>
+</div>
+<div class="media-item">
+  <div class="media-item__image"><img src="images/square_250x250.jpg">
+  </div>
+  <div class="media-item__middle">
+    <div class="media-item__content">
+      <h4 class="media-item__heading">Mikael Foigelholm </h4>
+      <div class="media-item__subheading">Professor of nutrition science  / Vice President Professor Life Coach Student Manager of nutrition science</div>
+      <div class="media-item__link"><a href="#" target="_blank">mikael.folgelholm@helsinki.fi</a></div>
+      <div class="media-item__sublink"><a href="#" target="_blank">Link text</a></div>
+    </div>
+  </div>
+</div>
+<div class="media-item">
+  <div class="media-item__image"><img src="images/square_250x250.jpg">
+  </div>
+  <div class="media-item__middle">
+    <div class="media-item__content">
+      <h4 class="media-item__heading">Mikael Foigelholm </h4>
+      <div class="media-item__subheading">Professor of nutrition science </div>
+      <div class="media-item__link"><a href="#" target="_blank">mikael.folgelholm@helsinki.fi</a></div>
+      <div class="media-item__sublink"><a href="#" target="_blank">Link text</a></div>
+    </div>
+    <div class="media-item__action"><a href="#" class="label">Follow</a></div>
+  </div>
+</div>
+</div><a href="#" class="idean-styleguide-fullscreen idean-styleguide-link">Full Screen</a></div><div class="idean-styleguide-code"><a href="#" class="idean-styleguide-collapse idean-styleguide-link">Collapse</a><pre style="display:none;"><code class="language-markup">&lt;div class="media-item"&gt;
+  &lt;div class="media-item__image"&gt;
+  &lt;/div&gt;
+  &lt;div class="media-item__middle"&gt;
+    &lt;div class="media-item__content"&gt;
+      &lt;h4 class="media-item__heading"&gt;Mikael Foigelholm &lt;/h4&gt;
+      &lt;div class="media-item__subheading"&gt;Professor of nutrition science &lt;/div&gt;
+      &lt;div class="media-item__link"&gt;&lt;a href="#" target="_blank"&gt;mikael.folgelholm@helsinki.fi&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="media-item__sublink"&gt;&lt;a href="#" target="_blank"&gt;Link text&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="media-item__action"&gt;&lt;a href="#" class="label"&gt;Follow&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="media-item"&gt;
+  &lt;div class="media-item__image"&gt;&lt;img src="images/square_250x250.jpg"&gt;
+  &lt;/div&gt;
+  &lt;div class="media-item__middle"&gt;
+    &lt;div class="media-item__content"&gt;
+      &lt;h4 class="media-item__heading"&gt;Mikael Foigelholm &lt;/h4&gt;
+      &lt;div class="media-item__subheading"&gt;Professor of nutrition science  / Vice President Professor Life Coach Student Manager of nutrition science&lt;/div&gt;
+      &lt;div class="media-item__link"&gt;&lt;a href="#" target="_blank"&gt;mikael.folgelholm@helsinki.fi&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="media-item__sublink"&gt;&lt;a href="#" target="_blank"&gt;Link text&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="media-item"&gt;
+  &lt;div class="media-item__image"&gt;&lt;img src="images/square_250x250.jpg"&gt;
+  &lt;/div&gt;
+  &lt;div class="media-item__middle"&gt;
+    &lt;div class="media-item__content"&gt;
+      &lt;h4 class="media-item__heading"&gt;Mikael Foigelholm &lt;/h4&gt;
+      &lt;div class="media-item__subheading"&gt;Professor of nutrition science &lt;/div&gt;
+      &lt;div class="media-item__link"&gt;&lt;a href="#" target="_blank"&gt;mikael.folgelholm@helsinki.fi&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="media-item__sublink"&gt;&lt;a href="#" target="_blank"&gt;Link text&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="media-item__action"&gt;&lt;a href="#" class="label"&gt;Follow&lt;/a&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p class="idean-styleguide-selected-message">Code block selected, Ctrl+C/Cmd+C to copy</p></div></div></div></section></div><div class="idean-styleguide-popup" style="display:none;"><a href="#" class="idean-styleguide-popup-close">Close</a><div class="idean-styleguide-popup-code"></div></div><footer class="idean-styleguide-footer"><a href="http://www.idean.com" class="idean-styleguide-branding">Idean</a></footer><script src="styleguide/js/jquery-1.11.0.min.js"></script><script>(function(){
