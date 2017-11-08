@@ -1,0 +1,118 @@
+/*
+ section: 18.3
+ title: Liftup mosaic
+ template: 18_3_liftup-mosaic
+ description: Mosaic of five liftups.
+*/
+
+.liftup-mosaic {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+}
+
+.liftup-mosaic__item {
+  align-items: flex-end;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  padding: 2rem;
+  position: relative;
+
+  &:before {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate3d(0,0,0);
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+
+  &:hover:before {
+    opacity: 0.4;
+  }
+
+  @include breakpoint($small) {
+    height: 36vw;
+    width: 33.33%;
+
+    &:nth-of-type(2) {
+      width: 66.66%;
+
+      .liftup-mosaic__title {
+        @include font-size(28px);
+      }
+    }
+  }
+
+  @include breakpoint($large) {
+    &:nth-of-type(2) {
+      .liftup-mosaic__title {
+        font-size: 2vw;
+      }
+    }
+  }
+
+  &.theme-video {
+    &:after {
+      @include icon($icon-video);
+      color: $white;
+      font-size: 2em;
+      line-height: normal;
+      position: absolute;
+      right: 8px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+      top: 8px;
+      transition-duration: 0.2s;
+      transition-property: color;
+      z-index: 1;
+
+      @include breakpoint($medium) {
+        font-size: 4vw;
+        right: 16px;
+        top: 16px;
+      }
+    }
+
+    &:hover {
+      &:after {
+        color: $mediumsilver;
+      }
+    }
+  }
+
+  &.theme-plain {
+    background-color: $black;
+  }
+}
+
+.liftup-mosaic__label {
+  @include font-size(12px);
+  @include label;
+  left: 0;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+}
+
+.liftup-mosaic__title {
+  color: $white;
+  padding: 0;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+
+  @include breakpoint($large) {
+    font-size: 1.3vw;
+  }
+}
