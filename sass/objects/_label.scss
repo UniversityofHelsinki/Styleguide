@@ -1,0 +1,12 @@
+.label {
+  @include label;
+
+  @at-root a#{&} {
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: $darkblue;
+      color: $white;
+    }
+  }
+}

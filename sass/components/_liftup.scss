@@ -1,0 +1,61 @@
+/*
+ section: 18.2
+ title: Liftup
+ template: 18_2_liftup
+ description: A liftup.
+*/
+
+.liftup {
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate3d(0,0,0);
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+
+  &:hover:before {
+    opacity: 0.4;
+  }
+
+  @include breakpoint($small) {
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 60%;
+    }
+  }
+}
+
+.liftup__title {
+  @include font-size(14px);
+  color: $white;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+
+  @include breakpoint($small) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  @include breakpoint($medium) {
+    @include font-size(17px);
+  }
+}
