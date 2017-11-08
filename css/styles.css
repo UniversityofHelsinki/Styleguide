@@ -3707,6 +3707,11 @@ a.label:hover {
   color: #FFF;
 }
 
+.label.theme-alert {
+  background-color: red;
+  border-color: red;
+}
+
 .inline-list > *, .tag-list > * {
   margin-left: 6px;
   margin-right: 6px;
@@ -7087,14 +7092,6 @@ td.jobs-listing__date {
 }
 
 .liftup-mosaic__label {
-  font-size: 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-style: normal;
-  background-color: #0098d0;
-  color: #FFF;
-  padding: 0.3em 1em;
-  text-transform: uppercase;
   left: 0;
   position: absolute;
   top: 1em;

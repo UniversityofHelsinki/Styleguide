@@ -9,4 +9,9 @@
       color: $white;
     }
   }
+
+  &.theme-alert {
+    background-color: red;
+    border-color: red;
+  }
 }
