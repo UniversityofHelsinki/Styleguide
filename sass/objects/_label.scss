@@ -1,5 +1,6 @@
 .label {
   @include label;
+  display: inline-block;
 
   @at-root a#{&} {
     transition: background-color 0.1s;
