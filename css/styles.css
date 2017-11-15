@@ -3920,7 +3920,7 @@ a.label:hover {
 
 .l-footer__subregion {
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 75em, "no-query" ".lt-ie9";
   padding: 0 1em;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3982,7 +3982,7 @@ a.label:hover {
 
 .l-footer__copyright {
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 75em, "no-query" ".lt-ie9";
   padding: 0 1em;
 }
 
@@ -4243,7 +4243,7 @@ a.label:hover {
   *zoom: 1;
   clear: both;
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 75em, "no-query" ".lt-ie9";
   padding: 0 1em;
 }
 
@@ -4282,7 +4282,7 @@ a.label:hover {
 @media (min-width: 48em) {
   .l-top-bar__subregion {
     margin: 0 auto;
-    max-width: 75em;
+    max-width: 75em, "no-query" ".lt-ie9";
     padding: 0 1em;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -5467,7 +5467,7 @@ dl, ol, ul {
 
 .fatmenu > ul.menu {
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 75em, "no-query" ".lt-ie9";
   padding: 0 1em;
   height: 0;
   overflow: hidden;
@@ -5763,7 +5763,7 @@ dl, ol, ul {
 
 .hero__content {
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 75em, "no-query" ".lt-ie9";
   padding: 0 1em;
   padding: 1.5em 1em;
 }
@@ -5855,6 +5855,7 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-weight: 700;
   line-height: 1em;
@@ -5873,6 +5874,7 @@ dl, ol, ul {
   font-size: 1.125rem;
   font-weight: 600;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   margin-bottom: 10px;
 }
@@ -5923,6 +5925,7 @@ dl, ol, ul {
 .hero-big__play {
   font-weight: 700;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5931,6 +5934,7 @@ dl, ol, ul {
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .hero-big__play:before {
@@ -6040,6 +6044,7 @@ dl, ol, ul {
 
 .hero-big--centered .hero-big__link {
   font-size: 1.125rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid #FFF;
   color: #FFF;
   display: inline-block;
@@ -6051,14 +6056,6 @@ dl, ol, ul {
 .hero-big--centered .hero-big__link:hover {
   background-color: #FFF;
   color: #222;
-}
-
-.hero-big--centered .hero-big__play {
-  transition: color 0.2s;
-}
-
-.hero-big--centered .hero-big__play:hover {
-  color: #979797;
 }
 
 @media (min-width: 48em) {
@@ -6185,6 +6182,7 @@ dl, ol, ul {
   font-size: 3.125rem;
   font-weight: 700;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1em;
   margin-bottom: 10px;
@@ -6195,6 +6193,7 @@ dl, ol, ul {
   font-size: 1.875rem;
   font-weight: 700;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1.1em;
   margin-bottom: 10px;
@@ -6264,6 +6263,7 @@ dl, ol, ul {
 
 .highlight__title {
   font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-weight: 700;
   line-height: 1;
@@ -6285,6 +6285,7 @@ dl, ol, ul {
 
 .highlight__ingress {
   font-size: 1.125rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   max-width: 720px;
 }
@@ -6871,7 +6872,7 @@ td.jobs-listing__date {
         -ms-flex-preferred-size: 34%;
             flex-basis: 34%;
     height: 33vw;
-    max-height: none;
+    max-height: 480px;
     padding: 3vw;
     width: 34%;
   }
@@ -6926,6 +6927,7 @@ td.jobs-listing__date {
 
 .liftup-grid__title {
   font-size: 1.875rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
@@ -6945,6 +6947,7 @@ td.jobs-listing__date {
 
 .liftup-grid__ingress {
   font-size: 1.125rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-align: center;
 }
@@ -7003,6 +7006,14 @@ td.jobs-listing__date {
   }
 }
 
+@media (min-width: 100em) {
+  .liftup-mosaic {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+}
+
 .liftup-mosaic__item {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -7039,6 +7050,7 @@ td.jobs-listing__date {
 @media (min-width: 48em) {
   .liftup-mosaic__item {
     height: 36vw;
+    max-height: 480px;
     width: 33.33%;
   }
   .liftup-mosaic__item:nth-of-type(2) {
@@ -7046,12 +7058,6 @@ td.jobs-listing__date {
   }
   .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
     font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
-    font-size: 2vw;
   }
 }
 
@@ -7064,12 +7070,12 @@ td.jobs-listing__date {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-size: 2em;
   line-height: normal;
   position: absolute;
   right: 8px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   top: 8px;
   transition-duration: 0.2s;
   transition-property: color;
@@ -7078,7 +7084,7 @@ td.jobs-listing__date {
 
 @media (min-width: 62.5em) {
   .liftup-mosaic__item.theme-video:after {
-    font-size: 4vw;
+    font-size: 36px;
     right: 16px;
     top: 16px;
   }
@@ -7100,17 +7106,12 @@ td.jobs-listing__date {
 }
 
 .liftup-mosaic__title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   padding: 0;
   font-weight: 600;
   position: relative;
   z-index: 2;
-}
-
-@media (min-width: 75em) {
-  .liftup-mosaic__title {
-    font-size: 1.3vw;
-  }
 }
 
 /*
@@ -7155,6 +7156,7 @@ td.jobs-listing__date {
 
 .liftup__title {
   font-size: 0.875rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   padding: 10px;
   position: relative;
@@ -7643,7 +7645,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .main-menu > ul.menu {
     margin: 0 auto;
-    max-width: 75em;
+    max-width: 75em, "no-query" ".lt-ie9";
     padding: 0 1em;
     border: none;
     display: -webkit-flex;
@@ -9665,6 +9667,7 @@ input[type="text"].search-form-large__input {
 .video-player__play {
   font-weight: 700;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-transform: uppercase;
   z-index: 1;
