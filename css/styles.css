@@ -5829,9 +5829,6 @@ dl, ol, ul {
   .hero-big:after {
     opacity: 0.2;
   }
-  .hero-big:hover:after {
-    opacity: 0.3;
-  }
 }
 
 .hero-big__top {
