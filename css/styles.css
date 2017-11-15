@@ -3696,6 +3696,7 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   color: #FFF;
   padding: 0.3em 1em;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 a.label {
@@ -3705,6 +3706,11 @@ a.label {
 a.label:hover {
   background-color: #005479;
   color: #FFF;
+}
+
+.label.theme-alert {
+  background-color: red;
+  border-color: red;
 }
 
 .inline-list > *, .tag-list > * {
@@ -7087,14 +7093,6 @@ td.jobs-listing__date {
 }
 
 .liftup-mosaic__label {
-  font-size: 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-style: normal;
-  background-color: #0098d0;
-  color: #FFF;
-  padding: 0.3em 1em;
-  text-transform: uppercase;
   left: 0;
   position: absolute;
   top: 1em;
@@ -10761,8 +10759,7 @@ input[type="text"].search-form-large__input {
   }
 }
 
-.box-story__date,
-.box-story__tag {
+.box-story__meta-item {
   font-size: 0.7rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -10775,20 +10772,16 @@ input[type="text"].search-form-large__input {
   padding-right: 1.5em;
 }
 
-.box-story__date:last-child:after,
-.box-story__tag:last-child:after {
+.box-story__meta-item:last-child:after {
   display: none;
 }
 
-.box-story__date:after,
-.box-story__tag:after {
+.box-story__meta-item:after {
   content: " ";
   right: 0;
 }
 
-.box-story__date:after, .box-story__date:before,
-.box-story__tag:after,
-.box-story__tag:before {
+.box-story__meta-item:after, .box-story__meta-item:before {
   border: 1px solid #F8F8F8;
   border-color: #D2D2D2;
   border-radius: 50%;
@@ -10801,13 +10794,11 @@ input[type="text"].search-form-large__input {
   z-index: 10;
 }
 
-.box-story__date a,
-.box-story__tag a {
+.box-story__meta-item a {
   color: inherit;
 }
 
-.box-story__date a:hover,
-.box-story__tag a:hover {
+.box-story__meta-item a:hover {
   color: #005479;
 }
 

@@ -190,8 +190,7 @@
   }
 }
 
-.box-story__date,
-.box-story__tag {
+.box-story__meta-item {
   @include font-size(11.2px);
   @include text-tag;
   @include tb-ball('after');

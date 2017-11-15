@@ -97,8 +97,6 @@
 }
 
 .liftup-mosaic__label {
-  @include font-size(12px);
-  @include label;
   left: 0;
   position: absolute;
   top: 1em;
