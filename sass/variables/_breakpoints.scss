@@ -11,7 +11,7 @@ $mobile-only: max-width $bp-small;
 $small: $bp-small, "no-query" ".lt-ie9";
 $small-only: (min-width $bp-small) (max-width $bp-medium);
 $medium: $bp-medium, "no-query" ".lt-ie9";
-$large: $bp-large, "no-query" ".lt-ie9";
-$xlarge: $bp-xlarge, "no-query" ".lt-ie9";
+$large: $bp-large;
+$xlarge: $bp-xlarge;
 
 $gutters: $horz-spacing-unit;

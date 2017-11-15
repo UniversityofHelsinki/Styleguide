@@ -3920,7 +3920,7 @@ a.label:hover {
 
 .l-footer__subregion {
   margin: 0 auto;
-  max-width: 75em, "no-query" ".lt-ie9";
+  max-width: 75em;
   padding: 0 1em;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3982,7 +3982,7 @@ a.label:hover {
 
 .l-footer__copyright {
   margin: 0 auto;
-  max-width: 75em, "no-query" ".lt-ie9";
+  max-width: 75em;
   padding: 0 1em;
 }
 
@@ -4243,7 +4243,7 @@ a.label:hover {
   *zoom: 1;
   clear: both;
   margin: 0 auto;
-  max-width: 75em, "no-query" ".lt-ie9";
+  max-width: 75em;
   padding: 0 1em;
 }
 
@@ -4282,7 +4282,7 @@ a.label:hover {
 @media (min-width: 48em) {
   .l-top-bar__subregion {
     margin: 0 auto;
-    max-width: 75em, "no-query" ".lt-ie9";
+    max-width: 75em;
     padding: 0 1em;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
@@ -5467,7 +5467,7 @@ dl, ol, ul {
 
 .fatmenu > ul.menu {
   margin: 0 auto;
-  max-width: 75em, "no-query" ".lt-ie9";
+  max-width: 75em;
   padding: 0 1em;
   height: 0;
   overflow: hidden;
@@ -5763,7 +5763,7 @@ dl, ol, ul {
 
 .hero__content {
   margin: 0 auto;
-  max-width: 75em, "no-query" ".lt-ie9";
+  max-width: 75em;
   padding: 0 1em;
   padding: 1.5em 1em;
 }
@@ -7645,7 +7645,7 @@ span.links__link.theme-language {
 @media (min-width: 48em) {
   .main-menu > ul.menu {
     margin: 0 auto;
-    max-width: 75em, "no-query" ".lt-ie9";
+    max-width: 75em;
     padding: 0 1em;
     border: none;
     display: -webkit-flex;
