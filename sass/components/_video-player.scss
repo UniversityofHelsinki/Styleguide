@@ -20,6 +20,7 @@
 
 .video-player__play {
   @include font-weight-bold;
+  @include text-shadow-overlay;
   color: $white;
   text-transform: uppercase;
   z-index: 1;
