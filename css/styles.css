@@ -7540,6 +7540,7 @@ span.links__link.theme-language {
 
 .logo-block__content a.is-tel {
   color: #FFF;
+  text-decoration: underline;
 }
 
 .logo-block__content a.is-tel:hover, .logo-block__content a.is-tel:active {
