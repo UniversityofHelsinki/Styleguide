@@ -45,6 +45,7 @@
 
   a.is-tel {
     color: $white;
+    text-decoration: underline;
 
     &:hover,
     &:active {
