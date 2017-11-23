@@ -1,5 +1,14 @@
 @mixin container {
   margin: 0 auto;
-  max-width: $large;
+  max-width: $bp-large;
   padding: 0 1em;
+}
+
+@mixin container-aftermobile {
+  margin: 0 auto;
+  max-width: $bp-large;
+
+  @include breakpoint($small) {
+    padding: 0 1em;
+  }
 }
