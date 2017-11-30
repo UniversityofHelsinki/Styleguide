@@ -17,28 +17,25 @@
 }
 
 .logo-block__content {
+  text-align: center;
   width: 100%;
-
-  h4, p {
-    text-align: center;
-    color: $white;
-  }
 
   @include breakpoint($small) {
     float: left;
-
-    h4, p {
-      text-align: left;
-    }
+    text-align: left;
   }
 
-  h4 {
+  .logo-block__sitename {
+    @extend h4;
     @include font-size(16px);
+    color: $white;
+    font-weight: bold;
     text-transform: uppercase;
   }
 
   p {
     @include font-size(14px);
+    color: $white;
     line-height: 1.2em;
   }
 
@@ -48,7 +45,6 @@
 
   a.is-tel {
     color: $white;
-    text-decoration: underline;
 
     &:hover,
     &:active {

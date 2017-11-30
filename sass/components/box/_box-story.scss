@@ -197,11 +197,13 @@
 }
 
 .box-story__title {
-  display: flex;
-  transition-property: color;
-  transition-duration: 0.1s;
+  @include font-size(20px, 20px);
   align-items: center;
+  display: flex;
   overflow: hidden;
+  text-transform: none;
+  transition-duration: 0.1s;
+  transition-property: color;
 
   .box-story__link-wrapper:active &,
   .box-story__link-wrapper:hover & {
