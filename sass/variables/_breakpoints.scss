@@ -5,11 +5,13 @@ $horz-spacing-unit: 30px;
 $bp-small: 48em;
 $bp-medium: 62.5em;
 $bp-large: 75em;
+$bp-xlarge: 100em;
 
 $mobile-only: max-width $bp-small;
 $small: $bp-small, "no-query" ".lt-ie9";
 $small-only: (min-width $bp-small) (max-width $bp-medium);
 $medium: $bp-medium, "no-query" ".lt-ie9";
 $large: $bp-large;
+$xlarge: $bp-xlarge;
 
 $gutters: $horz-spacing-unit;

@@ -1,0 +1,18 @@
+.section-title {
+  @include font-size(30px, 26px);
+  text-transform: none;
+
+  &.theme-listing {
+    border-bottom: 1px solid $lightsilver;
+    margin-bottom: 1em;
+  }
+
+  .section-title__subheading {
+    @include font-size(16px);
+    color: $silver;
+    float: right;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-left: auto;
+  }
+}

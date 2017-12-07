@@ -69,10 +69,6 @@
     &:after {
       opacity: 0.2;
     }
-
-    &:hover:after {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -95,6 +91,7 @@
 
 .hero-big__title {
   @include font-size(42px);
+  @include text-shadow-overlay;
   color: $white;
   font-weight: 700;
   line-height: 1em;
@@ -110,6 +107,7 @@
 .hero-big__ingress {
   @include font-size(18px);
   @include font-weight-medium;
+  @include text-shadow-overlay;
   color: $white;
   margin-bottom: 10px;
 
@@ -142,10 +140,12 @@
 
 .hero-big__play {
   @include font-weight-bold;
+  @include text-shadow-overlay;
   align-items: center;
   color: $white;
   display: flex;
   text-transform: uppercase;
+  transition: color 0.2s;
 
   &:before {
     @include icon($icon-video);
@@ -229,6 +229,7 @@
 
   .hero-big__link {
     @include font-size(18px);
+    @include text-shadow-overlay;
     border: 2px solid $white;
     color: $white;
     display: inline-block;
@@ -243,12 +244,6 @@
   }
 
   .hero-big__play {
-    transition: color 0.2s;
-
-    &:hover {
-      color: $silver;
-    }
-
     @include breakpoint($small) {
       margin-left: 40px;
     }
@@ -356,6 +351,7 @@
 .hero-medium__title {
   @include font-size(50px);
   @include font-weight-bold;
+  @include text-shadow-overlay;
   color: $white;
   line-height: 1em;
   margin-bottom: 10px;
@@ -365,6 +361,7 @@
 .hero-medium__ingress {
   @include font-size(30px, 24px);
   @include font-weight-bold;
+  @include text-shadow-overlay;
   color: $white;
   line-height: 1.1em;
   margin-bottom: 10px;

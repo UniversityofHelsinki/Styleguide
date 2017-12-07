@@ -13,3 +13,7 @@
 @mixin text-shadow-outline-small($color: $black) {
   text-shadow: 1px 1px 1px $color, 0px 0px 1px rgba(0, 0, 0, 0.6);
 }
+
+@mixin text-shadow-overlay {
+  text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}

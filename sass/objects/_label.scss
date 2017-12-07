@@ -1,5 +1,6 @@
 .label {
   @include label;
+  display: inline-block;
 
   @at-root a#{&} {
     transition: background-color 0.1s;
@@ -8,5 +9,10 @@
       background-color: $darkblue;
       color: $white;
     }
+  }
+
+  &.theme-alert {
+    background-color: red;
+    border-color: red;
   }
 }
