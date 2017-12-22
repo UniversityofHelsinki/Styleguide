@@ -20,7 +20,7 @@ var iconFontSettings = {
   svgSrc: './icons/dest/*.svg',
   fontDestination: './fonts/',
   fontCssPath: '../fonts/',
-  appendUnicode: true
+  prependUnicode: true
 };
 
 var generateIconSrcPath = iconFontSettings.iconsPath + 'src';
@@ -65,7 +65,9 @@ gulp.task('generateUnicodeIconFiles', function () {
 
   _.each(iconFiles, function (file) {
     var unicodeValue;
-
+    if (file.startsWith('.')) {
+      return;
+    }
     if (_.has(unicodes, file)) {
       unicodeValue = unicodes[file];
     } else {
@@ -84,8 +86,8 @@ gulp.task('iconFont', function () {
   gulp.src([iconFontSettings.svgSrc])
     .pipe(iconFont({
       fontName: iconFontSettings.fontFileName,
-      appendUnicode: true,
-      fontHeight: 1000,
+      prependUnicode: true,
+      fontHeight: 1001,
       normalize: true,
       descent: 6
     }))
