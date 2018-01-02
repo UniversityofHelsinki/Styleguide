@@ -20,7 +20,7 @@ var iconFontSettings = {
   svgSrc: './icons/dest/*.svg',
   fontDestination: './fonts/',
   fontCssPath: '../fonts/',
-  prependUnicode: true
+  appendUnicode: true
 };
 
 var generateIconSrcPath = iconFontSettings.iconsPath + 'src';
@@ -86,8 +86,8 @@ gulp.task('iconFont', function () {
   gulp.src([iconFontSettings.svgSrc])
     .pipe(iconFont({
       fontName: iconFontSettings.fontFileName,
-      prependUnicode: true,
-      fontHeight: 1001,
+      appendUnicode: true,
+      fontHeight: 1000,
       normalize: true,
       descent: 6
     }))
