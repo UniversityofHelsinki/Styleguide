@@ -1851,7 +1851,7 @@ th {
   content: "";
 }
 
-.icon--new-version:after {
+.icon--item-close:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1862,7 +1862,7 @@ th {
   content: "";
 }
 
-.icon--parts-all:after {
+.icon--item-edit:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1873,7 +1873,7 @@ th {
   content: "";
 }
 
-.icon--parts-one:after {
+.icon--item-set:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1884,7 +1884,7 @@ th {
   content: "";
 }
 
-.icon--questionnaire-close:after {
+.icon--item-single:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1895,7 +1895,7 @@ th {
   content: "";
 }
 
-.icon--questionnaire-edit:after {
+.icon--new-version:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
