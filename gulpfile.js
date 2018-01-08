@@ -65,7 +65,9 @@ gulp.task('generateUnicodeIconFiles', function () {
 
   _.each(iconFiles, function (file) {
     var unicodeValue;
-
+    if (file.startsWith('.')) {
+      return;
+    }
     if (_.has(unicodes, file)) {
       unicodeValue = unicodes[file];
     } else {
