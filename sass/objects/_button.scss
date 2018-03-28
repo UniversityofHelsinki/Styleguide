@@ -349,7 +349,6 @@
 */
 .button--outline {
   @extend %button;
-  @include font-size(13px);
   @include font-weight-medium;
   align-items: center;
   background-color: transparent;

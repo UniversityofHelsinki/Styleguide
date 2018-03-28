@@ -2438,7 +2438,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
  description:
 */
 .button--outline {
-  font-size: 0.8125rem;
   font-weight: 600;
   font-style: normal;
   -ms-flex-align: center;
