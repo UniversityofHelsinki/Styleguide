@@ -354,11 +354,9 @@
   background-color: transparent;
   border: 2px solid $blue;
   color: $blue;
-  display: inline-flex;
   padding: .8em 1em;
 
   &:after {
-    line-height: 1;
     margin-left: 1em;
     transition-property: none;
   }
