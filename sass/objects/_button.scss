@@ -341,3 +341,30 @@
  description:
 */
 
+/*
+ section: 3.7.9
+ title: Button outline
+ template: 3_7_9-button-outline
+ description:
+*/
+.button--outline {
+  @extend %button;
+  @include font-size(13px);
+  @include font-weight-medium;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid $blue;
+  color: $blue;
+  display: inline-flex;
+  padding: .8em 1em;
+
+  &:after {
+    line-height: 1;
+    margin-left: 1em;
+    transition-property: none;
+  }
+
+  &:hover {
+    background-color: $blue;
+  }
+}
