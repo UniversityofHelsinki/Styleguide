@@ -350,7 +350,6 @@
 .button--outline {
   @extend %button;
   @include font-weight-medium;
-  align-items: center;
   background-color: transparent;
   border: 2px solid $blue;
   color: $blue;

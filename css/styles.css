@@ -2440,8 +2440,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 .button--outline {
   font-weight: 600;
   font-style: normal;
-  -ms-flex-align: center;
-      align-items: center;
   background-color: transparent;
   border: 2px solid #0098d0;
   color: #0098d0;
