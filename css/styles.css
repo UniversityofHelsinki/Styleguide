@@ -4907,7 +4907,6 @@ a.highlight:hover .highlight__title {
 
 .highlight__title {
   font-size: 5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-weight: 700;
   line-height: 1;
@@ -4929,7 +4928,6 @@ a.highlight:hover .highlight__title {
 
 .highlight__ingress {
   font-size: 1.125rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   max-width: 720px;
 }

@@ -36,7 +36,6 @@ a.highlight:hover {
 
 .highlight__title {
   @include font-size(80px, 48px);
-  @include text-shadow-overlay;
   color: $white;
   font-weight: 700;
   line-height: 1;
@@ -50,7 +49,6 @@ a.highlight:hover {
 
 .highlight__ingress {
   @include font-size(18px);
-  @include text-shadow-overlay;
   color: $white;
   max-width: 720px;
 }
