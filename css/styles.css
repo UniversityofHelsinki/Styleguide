@@ -2443,7 +2443,6 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   background-color: transparent;
   border: 2px solid #0098d0;
   color: #0098d0;
-  padding: .8em 1em;
 }
 
 .button--outline:after {
