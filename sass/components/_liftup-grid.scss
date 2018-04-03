@@ -26,10 +26,6 @@
   padding: 3em;
   position: relative;
 
-  &:hover .liftup-grid__title {
-    text-decoration: underline;
-  }
-
   @include breakpoint($small) {
     flex-basis: 34%;
     height: 33vw;
@@ -52,6 +48,12 @@
       margin: 0 auto;
       padding-right: 6em;
     }
+  }
+}
+
+a.liftup-grid__item:hover {
+  .liftup-grid__title {
+    text-decoration: underline;
   }
 }
 

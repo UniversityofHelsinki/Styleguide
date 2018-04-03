@@ -4892,7 +4892,7 @@ dl, ol, ul {
   }
 }
 
-.highlight:hover .highlight__title {
+a.highlight:hover .highlight__title {
   text-decoration: underline;
 }
 
@@ -5495,10 +5495,6 @@ td.jobs-listing__date {
   position: relative;
 }
 
-.liftup-grid__item:hover .liftup-grid__title {
-  text-decoration: underline;
-}
-
 @media (min-width: 48em) {
   .liftup-grid__item {
     -ms-flex-preferred-size: 34%;
@@ -5527,6 +5523,10 @@ td.jobs-listing__date {
       align-self: flex-start;
   margin: 0 auto;
   padding-right: 6em;
+}
+
+a.liftup-grid__item:hover .liftup-grid__title {
+  text-decoration: underline;
 }
 
 .liftup-grid__content {

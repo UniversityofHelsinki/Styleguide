@@ -17,8 +17,10 @@
   @include breakpoint($small) {
     min-height: 480px;
   }
+}
 
-  &:hover .highlight__title{
+a.highlight:hover {
+  .highlight__title {
     text-decoration: underline;
   }
 }
