@@ -5537,7 +5537,6 @@ a.liftup-grid__item:hover .liftup-grid__title {
 
 .liftup-grid__title {
   font-size: 1.875rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
@@ -5557,7 +5556,6 @@ a.liftup-grid__item:hover .liftup-grid__title {
 
 .liftup-grid__ingress {
   font-size: 1.125rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-align: center;
 }

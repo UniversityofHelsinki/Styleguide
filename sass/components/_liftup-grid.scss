@@ -65,7 +65,6 @@ a.liftup-grid__item:hover {
 
 .liftup-grid__title {
   @include font-size(30px);
-  @include text-shadow-overlay;
   color: $white;
   text-align: center;
   text-transform: uppercase;
@@ -81,7 +80,6 @@ a.liftup-grid__item:hover {
 
 .liftup-grid__ingress {
   @include font-size(18px);
-  @include text-shadow-overlay;
   color: $white;
   text-align: center;
 
