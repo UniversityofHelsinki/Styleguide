@@ -1965,7 +1965,7 @@ th {
 .button--small, .accordion__title,
 .button--accordion,
 .button--action-before,
-.button--action, .button--anchor, .button--expand, .button--icon, input[type="submit"], .accordion--dark .accordion__title,
+.button--action, .button--anchor, .button--expand, .button--icon, .button--outline, input[type="submit"], .accordion--dark .accordion__title,
 .button {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 0.9375rem;
@@ -1986,10 +1986,10 @@ th {
 .button--small:focus, .accordion__title:focus,
 .button--accordion:focus,
 .button--action-before:focus,
-.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, input[type="submit"]:focus, .button--small:hover, .accordion__title:hover,
+.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, .button--outline:focus, input[type="submit"]:focus, .button--small:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
-.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, input[type="submit"]:hover,
+.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, .button--outline:hover, input[type="submit"]:hover,
 .button:focus,
 .button:hover {
   background-color: #005479;
@@ -1999,10 +1999,10 @@ th {
 .button--small:active, .accordion__title:active,
 .button--accordion:active,
 .button--action-before:active,
-.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, input[type="submit"]:active, .is-active.button--small, .is-active.accordion__title,
+.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, .button--outline:active, input[type="submit"]:active, .is-active.button--small, .is-active.accordion__title,
 .is-active.button--accordion,
 .is-active.button--action-before,
-.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, input.is-active[type="submit"],
+.is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, .is-active.button--outline, input.is-active[type="submit"],
 .button:active,
 .button.is-active {
   background-color: #003146;
@@ -2011,10 +2011,10 @@ th {
 .button--small:before, .accordion__title:before,
 .button--accordion:before,
 .button--action-before:before,
-.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .button--small:after, .accordion__title:after,
+.button--action:before, .button--anchor:before, .button--expand:before, .button--icon:before, .button--outline:before, input[type="submit"]:before, .accordion--dark .accordion__title:before, .button--small:after, .accordion__title:after,
 .button--accordion:after,
 .button--action-before:after,
-.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, input[type="submit"]:after, .accordion--dark .accordion__title:after,
+.button--action:after, .button--anchor:after, .button--expand:after, .button--icon:after, .button--outline:after, input[type="submit"]:after, .accordion--dark .accordion__title:after,
 .button:before,
 .button:after {
   transition-duration: 0.1s;
@@ -2024,10 +2024,10 @@ th {
 .theme-transparent.button--small, .theme-transparent.accordion__title,
 .theme-transparent.button--accordion,
 .theme-transparent.button--action-before,
-.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, input.theme-transparent[type="submit"], .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
+.theme-transparent.button--action, .theme-transparent.button--anchor, .theme-transparent.button--expand, .theme-transparent.button--icon, .theme-transparent.button--outline, input.theme-transparent[type="submit"], .theme-transparent-alt.button--small, .theme-transparent-alt.accordion__title,
 .theme-transparent-alt.button--accordion,
 .theme-transparent-alt.button--action-before,
-.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, input.theme-transparent-alt[type="submit"],
+.theme-transparent-alt.button--action, .theme-transparent-alt.button--anchor, .theme-transparent-alt.button--expand, .theme-transparent-alt.button--icon, .theme-transparent-alt.button--outline, input.theme-transparent-alt[type="submit"],
 .button.theme-transparent,
 .button.theme-transparent-alt {
   background-color: transparent;
@@ -2037,10 +2037,10 @@ th {
 .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt[type="submit"]:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt:hover {
   background-color: #0098d0;
@@ -2049,16 +2049,16 @@ th {
 .theme-transparent.button--small a:hover, .theme-transparent.accordion__title a:hover,
 .theme-transparent.button--accordion a:hover,
 .theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, input.theme-transparent[type="submit"] a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
+.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, .theme-transparent.button--outline a:hover, input.theme-transparent[type="submit"] a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
 .theme-transparent-alt.button--accordion a:hover,
 .theme-transparent-alt.button--action-before a:hover,
-.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, input.theme-transparent-alt[type="submit"] a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, .theme-transparent-alt.button--outline a:hover, input.theme-transparent-alt[type="submit"] a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, input.theme-transparent-alt[type="submit"]:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt[type="submit"]:hover,
 .button.theme-transparent a:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt a:hover,
@@ -2431,6 +2431,29 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
  template: 3_7_8-button-group--small
  description:
 */
+/*
+ section: 3.7.9
+ title: Button outline
+ template: 3_7_9-button-outline
+ description:
+*/
+.button--outline {
+  font-weight: 600;
+  font-style: normal;
+  background-color: transparent;
+  border: 2px solid #0098d0;
+  color: #0098d0;
+}
+
+.button--outline:after {
+  margin-left: 1em;
+  transition-property: none;
+}
+
+.button--outline:hover {
+  background-color: #0098d0;
+}
+
 .island {
   padding: 1em;
 }
