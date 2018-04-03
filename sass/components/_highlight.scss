@@ -14,27 +14,14 @@
   padding-top: 30px;
   position: relative;
 
-  &:after {
-    background: black;
-    bottom: 0;
-    content: "";
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate3d(0,0,0);
-    transition-duration: 0.2s;
-    transition-property: opacity;
-    z-index: 1;
-  }
-
-  &:hover:after {
-    opacity: 0.2;
-  }
-
   @include breakpoint($small) {
     min-height: 480px;
+  }
+}
+
+a.highlight:hover {
+  .highlight__title {
+    text-decoration: underline;
   }
 }
 
@@ -49,7 +36,6 @@
 
 .highlight__title {
   @include font-size(80px, 48px);
-  @include text-shadow-overlay;
   color: $white;
   font-weight: 700;
   line-height: 1;
@@ -63,13 +49,11 @@
 
 .highlight__ingress {
   @include font-size(18px);
-  @include text-shadow-overlay;
   color: $white;
   max-width: 720px;
 }
 
 .highlight__bgoverlay {
-  opacity: 0.7;
   position: absolute;
   left: 0;
   top: 0;
@@ -78,7 +62,16 @@
   background-position-x: 50%;
   background-size: cover;
 
-  @include breakpoint($small) {
-    opacity: 0.8;
+  &:after {
+    background-color: black;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
   }
 }

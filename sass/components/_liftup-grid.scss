@@ -34,24 +34,6 @@
     width: 34%;
   }
 
-  &:before {
-    background-color: #000;
-    bottom: 0;
-    content: "";
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate3d(0,0,0);
-    transition: opacity 0.2s;
-    z-index: 1;
-  }
-
-  &:hover:before {
-    opacity: 0.2;
-  }
-
   &.theme-small {
     background-color: $black !important;
     height: auto;
@@ -69,6 +51,12 @@
   }
 }
 
+a.liftup-grid__item:hover {
+  .liftup-grid__title {
+    text-decoration: underline;
+  }
+}
+
 .liftup-grid__content {
   position: relative;
   width: 100%;
@@ -77,7 +65,6 @@
 
 .liftup-grid__title {
   @include font-size(30px);
-  @include text-shadow-overlay;
   color: $white;
   text-align: center;
   text-transform: uppercase;
@@ -93,7 +80,6 @@
 
 .liftup-grid__ingress {
   @include font-size(18px);
-  @include text-shadow-overlay;
   color: $white;
   text-align: center;
 
@@ -115,9 +101,21 @@
   top: 0;
   z-index: 0;
 
+  &:after {
+    background-color: #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+  }
+
   img {
     min-height: 100%;
     min-width: 100%;
-    opacity: 0.8;
   }
 }
