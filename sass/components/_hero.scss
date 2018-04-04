@@ -39,7 +39,7 @@
  description:
 */
 .hero-big {
-  align-items: flex-end;
+  align-items: center;
   background-position-x: 50%;
   background-size: cover;
   display: flex;
@@ -79,10 +79,6 @@
   position: relative;
   z-index: 10;
   width: 100%;
-
-  @include breakpoint($small) {
-    margin-bottom: 9em;
-  }
 }
 
 .hero-big__content {
