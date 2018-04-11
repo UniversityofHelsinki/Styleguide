@@ -7472,7 +7472,7 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--minimal {
-  background-color: #222;
+  background-color: #000;
   max-width: 100%;
   position: relative;
 }
