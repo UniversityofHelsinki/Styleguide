@@ -223,18 +223,10 @@ li.main-menu__front {
     color: $white;
     display: block;
     letter-spacing: 0.01em;
-    transition: color 0.2s;
 
-    &:hover {
-      color: $mediumsilver;
-    }
-
+    &:hover,
     &.active {
-      color: $blue;
-
-      &:hover {
-        color: $blue--active;
-      }
+      text-decoration: underline;
     }
   }
 
@@ -260,7 +252,6 @@ li.main-menu__front {
       @include font-size(18px);
       @include font-weight-bold;
       text-transform: uppercase;
-      text-decoration: none;
     }
 
     &.is-open {
@@ -308,10 +299,6 @@ li.main-menu__front {
 
       &.theme-minor {
         > a {
-          &:hover {
-            color: $white;
-          }
-
           @include font-size(14px);
           @include font-weight-medium;
           color: $silver;

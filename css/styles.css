@@ -2682,7 +2682,7 @@ a.label:hover {
  description: The footer.
 */
 .l-footer {
-  background-color: #222;
+  background-color: #000;
   overflow: hidden;
   padding-bottom: 10px;
   padding-top: 2em;
@@ -2779,7 +2779,7 @@ a.label:hover {
  description: The header bar with logo & navigation.
 */
 .l-header-bar {
-  background: #222;
+  background: #000;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -2874,7 +2874,7 @@ a.label:hover {
  description: Full screen overlay for menu, etc.
 */
 .l-overlay {
-  background-color: #222;
+  background-color: #000;
   display: none;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -6447,19 +6447,10 @@ span.links__link.theme-language {
   color: #FFF;
   display: block;
   letter-spacing: 0.01em;
-  transition: color 0.2s;
 }
 
-.main-menu-v2 a:hover {
-  color: #D2D2D2;
-}
-
-.main-menu-v2 a.active {
-  color: #0098d0;
-}
-
-.main-menu-v2 a.active:hover {
-  color: #0882B3;
+.main-menu-v2 a:hover, .main-menu-v2 a.active {
+  text-decoration: underline;
 }
 
 .main-menu-v2 li.is-lvl1 {
@@ -6490,7 +6481,6 @@ span.links__link.theme-language {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .main-menu-v2 li.is-lvl1.is-open {
@@ -6539,9 +6529,6 @@ span.links__link.theme-language {
     font-weight: 600;
     font-style: normal;
     color: #979797;
-  }
-  .main-menu-v2 li.is-lvl2.theme-minor > a:hover {
-    color: #FFF;
   }
 }
 
@@ -7237,15 +7224,9 @@ ul.pager > li.pager__page a {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  transition-duration: 0.2s;
-  transition-property: color;
 }
 
-.quick-menu a:hover {
-  color: #D2D2D2;
-}
-
-.quick-menu a.active:before {
+.quick-menu a:hover:before, .quick-menu a.active:before {
   content: "";
   position: absolute;
   border-bottom: 2px solid #FFF;
@@ -7485,7 +7466,7 @@ input[type="text"].search-form-large__input {
 }
 
 .search-form--minimal {
-  background-color: #222;
+  background-color: #000;
   max-width: 100%;
   position: relative;
 }
