@@ -7224,15 +7224,9 @@ ul.pager > li.pager__page a {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  transition-duration: 0.2s;
-  transition-property: color;
 }
 
-.quick-menu a:hover {
-  color: #D2D2D2;
-}
-
-.quick-menu a.active:before {
+.quick-menu a:hover:before, .quick-menu a.active:before {
   content: "";
   position: absolute;
   border-bottom: 2px solid #FFF;
