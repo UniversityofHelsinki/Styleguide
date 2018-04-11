@@ -2682,7 +2682,7 @@ a.label:hover {
  description: The footer.
 */
 .l-footer {
-  background-color: #222;
+  background-color: #000;
   overflow: hidden;
   padding-bottom: 10px;
   padding-top: 2em;
@@ -2779,7 +2779,7 @@ a.label:hover {
  description: The header bar with logo & navigation.
 */
 .l-header-bar {
-  background: #222;
+  background: #000;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -2874,7 +2874,7 @@ a.label:hover {
  description: Full screen overlay for menu, etc.
 */
 .l-overlay {
-  background-color: #222;
+  background-color: #000;
   display: none;
   -ms-flex-direction: column;
       flex-direction: column;
