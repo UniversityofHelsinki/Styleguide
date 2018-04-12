@@ -3096,14 +3096,14 @@ a.label:hover {
  description: The top bar small variant
 */
 .l-top-bar--small {
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #000;
   display: none;
 }
 
 @media (min-width: 62.5em) {
   .l-top-bar--small {
-    -ms-flex-align: center;
-        align-items: center;
-    background-color: #000;
     display: -ms-flexbox;
     display: flex;
   }
