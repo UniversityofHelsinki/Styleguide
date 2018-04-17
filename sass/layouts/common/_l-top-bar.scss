@@ -77,11 +77,11 @@
 */
 
 .l-top-bar--small {
+  align-items: center;
+  background-color: $pitchblack;
   display: none;
 
   @include breakpoint($medium) {
-    align-items: center;
-    background-color: $pitchblack;
     display: flex;
   }
 
