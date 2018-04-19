@@ -5657,17 +5657,16 @@ a.liftup-grid__item:hover .liftup-grid__title {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.2s;
   z-index: 1;
 }
 
-.liftup-mosaic__item:hover:before {
-  opacity: 0.4;
+.liftup-mosaic__item:hover .liftup-mosaic__title {
+  text-decoration: underline;
 }
 
 @media (min-width: 48em) {
@@ -5693,15 +5692,12 @@ a.liftup-grid__item:hover .liftup-grid__title {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-size: 2em;
   line-height: normal;
   position: absolute;
   right: 8px;
   top: 8px;
-  transition-duration: 0.2s;
-  transition-property: color;
   z-index: 1;
 }
 
@@ -5713,12 +5709,12 @@ a.liftup-grid__item:hover .liftup-grid__title {
   }
 }
 
-.liftup-mosaic__item.theme-video:hover:after {
-  color: #D2D2D2;
+.liftup-mosaic__item.theme-plain {
+  background-color: #000;
 }
 
-.liftup-mosaic__item.theme-plain {
-  background-color: #222;
+.liftup-mosaic__item.theme-plain:before {
+  opacity: 0;
 }
 
 .liftup-mosaic__label {
@@ -5729,7 +5725,6 @@ a.liftup-grid__item:hover .liftup-grid__title {
 }
 
 .liftup-mosaic__title {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-size: 1.25rem;
   font-weight: 600;
