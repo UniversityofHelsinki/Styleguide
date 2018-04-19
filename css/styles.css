@@ -5648,6 +5648,7 @@ a.liftup-grid__item:hover .liftup-grid__title {
   background-size: cover;
   background-position: center;
   height: 320px;
+  margin: 1px 0;
   padding: 2rem;
   position: relative;
 }
