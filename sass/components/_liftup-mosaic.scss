@@ -48,11 +48,12 @@
 
   @include breakpoint($small) {
     height: 36vw;
+    margin: 1px;
     max-height: 480px;
-    width: 33.33%;
+    width: calc(33.33% - 2px);
 
     &:nth-of-type(2) {
-      width: 66.66%;
+      width: calc(66.66% - 2px);
 
       .liftup-mosaic__title {
         @include font-size(28px);

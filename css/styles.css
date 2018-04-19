@@ -5672,11 +5672,12 @@ a.liftup-grid__item:hover .liftup-grid__title {
 @media (min-width: 48em) {
   .liftup-mosaic__item {
     height: 36vw;
+    margin: 1px;
     max-height: 480px;
-    width: 33.33%;
+    width: calc(33.33% - 2px);
   }
   .liftup-mosaic__item:nth-of-type(2) {
-    width: 66.66%;
+    width: calc(66.66% - 2px);
   }
   .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
     font-size: 1.75rem;
