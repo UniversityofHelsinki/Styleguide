@@ -56,19 +56,11 @@
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0.3;
+    opacity: .4;
     position: absolute;
     right: 0;
     top: 0;
-    transition-duration: 0.2s;
-    transition-property: opacity;
     z-index: 1;
-  }
-
-  @include breakpoint($small) {
-    &:after {
-      opacity: 0.2;
-    }
   }
 }
 
@@ -87,7 +79,6 @@
 
 .hero-big__title {
   @include font-size(42px);
-  @include text-shadow-overlay;
   color: $white;
   font-weight: 700;
   line-height: 1em;
@@ -103,7 +94,6 @@
 .hero-big__ingress {
   @include font-size(18px);
   @include font-weight-medium;
-  @include text-shadow-overlay;
   color: $white;
   margin-bottom: 10px;
 
@@ -136,7 +126,6 @@
 
 .hero-big__play {
   @include font-weight-bold;
-  @include text-shadow-overlay;
   align-items: center;
   color: $white;
   display: flex;
@@ -225,7 +214,6 @@
 
   .hero-big__link {
     @include font-size(18px);
-    @include text-shadow-overlay;
     border: 2px solid $white;
     color: $white;
     display: inline-block;
@@ -319,7 +307,7 @@
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0.2;
+    opacity: .4;
     position: absolute;
     right: 0;
     top: 0;
@@ -347,7 +335,6 @@
 .hero-medium__title {
   @include font-size(50px);
   @include font-weight-bold;
-  @include text-shadow-overlay;
   color: $white;
   line-height: 1em;
   margin-bottom: 10px;
@@ -357,7 +344,6 @@
 .hero-medium__ingress {
   @include font-size(30px, 24px);
   @include font-weight-bold;
-  @include text-shadow-overlay;
   color: $white;
   line-height: 1.1em;
   margin-bottom: 10px;
