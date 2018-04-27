@@ -4522,19 +4522,11 @@ dl, ol, ul {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.3;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
-  transition-duration: 0.2s;
-  transition-property: opacity;
   z-index: 1;
-}
-
-@media (min-width: 48em) {
-  .hero-big:after {
-    opacity: 0.2;
-  }
 }
 
 .hero-big__top {
@@ -4552,7 +4544,6 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-weight: 700;
   line-height: 1em;
@@ -4571,7 +4562,6 @@ dl, ol, ul {
   font-size: 1.125rem;
   font-weight: 600;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   margin-bottom: 10px;
 }
@@ -4617,7 +4607,6 @@ dl, ol, ul {
 .hero-big__play {
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   -ms-flex-align: center;
       align-items: center;
   color: #FFF;
@@ -4728,7 +4717,6 @@ dl, ol, ul {
 
 .hero-big--centered .hero-big__link {
   font-size: 1.125rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid #FFF;
   color: #FFF;
   display: inline-block;
@@ -4833,7 +4821,7 @@ dl, ol, ul {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
@@ -4861,7 +4849,6 @@ dl, ol, ul {
   font-size: 3.125rem;
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1em;
   margin-bottom: 10px;
@@ -4872,7 +4859,6 @@ dl, ol, ul {
   font-size: 1.875rem;
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1.1em;
   margin-bottom: 10px;
@@ -8148,7 +8134,6 @@ input[type="text"].search-form-large__input {
 .video-player__play {
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-transform: uppercase;
   z-index: 1;
@@ -8195,7 +8180,7 @@ input[type="text"].search-form-large__input {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
