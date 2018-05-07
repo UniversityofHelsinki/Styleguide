@@ -3007,7 +3007,7 @@ a.label:hover {
 */
 @media (min-width: 48em) {
   .l-top-bar {
-    background-color: #222;
+    background-color: #000;
   }
 }
 
@@ -3033,7 +3033,7 @@ a.label:hover {
 .l-top-bar__main {
   -ms-flex-align: center;
       align-items: center;
-  background-color: #222;
+  background-color: #000;
   display: -ms-flexbox;
   display: flex;
   -ms-flex: 1 1 auto;
@@ -4522,19 +4522,11 @@ dl, ol, ul {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.3;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
-  transition-duration: 0.2s;
-  transition-property: opacity;
   z-index: 1;
-}
-
-@media (min-width: 48em) {
-  .hero-big:after {
-    opacity: 0.2;
-  }
 }
 
 .hero-big__top {
@@ -4552,7 +4544,6 @@ dl, ol, ul {
 
 .hero-big__title {
   font-size: 2.625rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-weight: 700;
   line-height: 1em;
@@ -4571,7 +4562,6 @@ dl, ol, ul {
   font-size: 1.125rem;
   font-weight: 600;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   margin-bottom: 10px;
 }
@@ -4617,7 +4607,6 @@ dl, ol, ul {
 .hero-big__play {
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   -ms-flex-align: center;
       align-items: center;
   color: #FFF;
@@ -4728,7 +4717,6 @@ dl, ol, ul {
 
 .hero-big--centered .hero-big__link {
   font-size: 1.125rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid #FFF;
   color: #FFF;
   display: inline-block;
@@ -4833,7 +4821,7 @@ dl, ol, ul {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
@@ -4861,7 +4849,6 @@ dl, ol, ul {
   font-size: 3.125rem;
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1em;
   margin-bottom: 10px;
@@ -4872,7 +4859,6 @@ dl, ol, ul {
   font-size: 1.875rem;
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   line-height: 1.1em;
   margin-bottom: 10px;
@@ -5522,7 +5508,7 @@ td.jobs-listing__date {
 }
 
 .liftup-grid__item.theme-small {
-  background-color: #222 !important;
+  background-color: #000 !important;
   height: auto;
 }
 
@@ -5648,6 +5634,7 @@ a.liftup-grid__item:hover .liftup-grid__title {
   background-size: cover;
   background-position: center;
   height: 320px;
+  margin: 1px 0;
   padding: 2rem;
   position: relative;
 }
@@ -5657,27 +5644,27 @@ a.liftup-grid__item:hover .liftup-grid__title {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
   transform: translate3d(0, 0, 0);
-  transition: opacity 0.2s;
   z-index: 1;
 }
 
-.liftup-mosaic__item:hover:before {
-  opacity: 0.4;
+.liftup-mosaic__item:hover .liftup-mosaic__title {
+  text-decoration: underline;
 }
 
 @media (min-width: 48em) {
   .liftup-mosaic__item {
     height: 36vw;
+    margin: 1px;
     max-height: 480px;
-    width: 33.33%;
+    width: calc(33.33% - 2px);
   }
   .liftup-mosaic__item:nth-of-type(2) {
-    width: 66.66%;
+    width: calc(66.66% - 2px);
   }
   .liftup-mosaic__item:nth-of-type(2) .liftup-mosaic__title {
     font-size: 1.75rem;
@@ -5693,15 +5680,12 @@ a.liftup-grid__item:hover .liftup-grid__title {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-size: 2em;
   line-height: normal;
   position: absolute;
   right: 8px;
   top: 8px;
-  transition-duration: 0.2s;
-  transition-property: color;
   z-index: 1;
 }
 
@@ -5713,12 +5697,12 @@ a.liftup-grid__item:hover .liftup-grid__title {
   }
 }
 
-.liftup-mosaic__item.theme-video:hover:after {
-  color: #D2D2D2;
+.liftup-mosaic__item.theme-plain {
+  background-color: #000;
 }
 
-.liftup-mosaic__item.theme-plain {
-  background-color: #222;
+.liftup-mosaic__item.theme-plain:before {
+  opacity: 0;
 }
 
 .liftup-mosaic__label {
@@ -5729,7 +5713,6 @@ a.liftup-grid__item:hover .liftup-grid__title {
 }
 
 .liftup-mosaic__title {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   font-size: 1.25rem;
   font-weight: 600;
@@ -8148,7 +8131,6 @@ input[type="text"].search-form-large__input {
 .video-player__play {
   font-weight: 700;
   font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFF;
   text-transform: uppercase;
   z-index: 1;
@@ -8195,7 +8177,7 @@ input[type="text"].search-form-large__input {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: .4;
   position: absolute;
   right: 0;
   top: 0;
@@ -14698,7 +14680,7 @@ Theme prominent
     </div>
     <div class="liftup-grid__image"><img src="images/squarepic.png"></div>
   </a>
-  <a class="liftup-grid__item" href="#" style="background-color: #222">
+  <a class="liftup-grid__item theme-small" href="#">
     <div class="liftup-grid__content">
       <h4 class="liftup-grid__title">
         Tule tutustumaan yliopistoon
@@ -14731,7 +14713,7 @@ Theme prominent
     &lt;/div&gt;
     &lt;div class="liftup-grid__image"&gt;&lt;img src="images/squarepic.png"&gt;&lt;/div&gt;
   &lt;/a&gt;
-  &lt;a class="liftup-grid__item" href="#" style="background-color: #222"&gt;
+  &lt;a class="liftup-grid__item theme-small" href="#"&gt;
     &lt;div class="liftup-grid__content"&gt;
       &lt;h4 class="liftup-grid__title"&gt;
         Tule tutustumaan yliopistoon
@@ -14901,7 +14883,7 @@ Theme prominent
   </div>
 </a>
 
-<a class="highlight" href="#" style="background-color: #222222;">
+<a class="highlight" href="#">
   <div class="highlight__content">
     <h4 class="highlight__title">
       Helsinki opiskelijakaupunkina
@@ -14934,7 +14916,7 @@ Theme prominent
   &lt;/div&gt;
 &lt;/a&gt;
 
-&lt;a class="highlight" href="#" style="background-color: #222222;"&gt;
+&lt;a class="highlight" href="#"&gt;
   &lt;div class="highlight__content"&gt;
     &lt;h4 class="highlight__title"&gt;
       Helsinki opiskelijakaupunkina
