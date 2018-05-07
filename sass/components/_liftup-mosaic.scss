@@ -24,6 +24,7 @@
   background-size: cover;
   background-position: center;
   height: 320px;
+  margin: 1px 0;
   padding: 2rem;
   position: relative;
 
@@ -32,26 +33,28 @@
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0.2;
+    opacity: .4;
     position: absolute;
     right: 0;
     top: 0;
     transform: translate3d(0,0,0);
-    transition: opacity 0.2s;
     z-index: 1;
   }
 
-  &:hover:before {
-    opacity: 0.4;
+  &:hover {
+    .liftup-mosaic__title {
+      text-decoration: underline;
+    }
   }
 
   @include breakpoint($small) {
     height: 36vw;
+    margin: 1px;
     max-height: 480px;
-    width: 33.33%;
+    width: calc(33.33% - 2px);
 
     &:nth-of-type(2) {
-      width: 66.66%;
+      width: calc(66.66% - 2px);
 
       .liftup-mosaic__title {
         @include font-size(28px);
@@ -62,15 +65,12 @@
   &.theme-video {
     &:after {
       @include icon($icon-video);
-      @include text-shadow-overlay;
       color: $white;
       font-size: 2em;
       line-height: normal;
       position: absolute;
       right: 8px;
       top: 8px;
-      transition-duration: 0.2s;
-      transition-property: color;
       z-index: 1;
 
       @include breakpoint($medium) {
@@ -79,16 +79,14 @@
         top: 16px;
       }
     }
-
-    &:hover {
-      &:after {
-        color: $mediumsilver;
-      }
-    }
   }
 
   &.theme-plain {
-    background-color: $black;
+    background-color: $pitchblack;
+
+    &:before {
+      opacity: 0;
+    }
   }
 }
 
@@ -100,7 +98,6 @@
 }
 
 .liftup-mosaic__title {
-  @include text-shadow-overlay;
   color: $white;
   font-size: 1.25rem;
   font-weight: 600;
