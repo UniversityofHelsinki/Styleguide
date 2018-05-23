@@ -63,10 +63,7 @@
 
     @include breakpoint($small) {
       float: right;
-      margin-top: -50px;
-      padding: 0 0 16px 20px;
-      text-align: left;
-      width: 24%;
+      padding: 10px 0 16px 20px;
     }
   }
 }
