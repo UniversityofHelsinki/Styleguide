@@ -2766,6 +2766,8 @@ a.label:hover {
   .l-footer__copyright p {
     float: right;
     padding: 10px 0 0 20px;
+    text-align: left;
+    width: 24%;
   }
 }
 
