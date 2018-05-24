@@ -2765,7 +2765,7 @@ a.label:hover {
 @media (min-width: 48em) {
   .l-footer__copyright p {
     float: right;
-    padding: 10px 0 16px 20px;
+    padding: 10px 0 0 20px;
   }
 }
 
