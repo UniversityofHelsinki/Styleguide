@@ -2765,8 +2765,7 @@ a.label:hover {
 @media (min-width: 48em) {
   .l-footer__copyright p {
     float: right;
-    margin-top: -50px;
-    padding: 0 0 16px 20px;
+    padding: 10px 0 0 20px;
     text-align: left;
     width: 24%;
   }
@@ -4539,7 +4538,7 @@ dl, ol, ul {
 }
 
 .hero-big__content {
-  max-width: 40em;
+  max-width: 50em;
 }
 
 .hero-big__title {
