@@ -2804,8 +2804,8 @@ a.label:hover {
 .l-header-bar__left {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   padding: 10px 0;
 }
 
