@@ -7208,7 +7208,7 @@ ul.pager > li.pager__page a {
   text-transform: uppercase;
 }
 
-.quick-menu a:hover:before, .quick-menu a.active:before {
+.quick-menu a:hover:before, .quick-menu a.active:before, .quick-menu a.active-trail:before {
   content: "";
   position: absolute;
   border-bottom: 2px solid #FFF;

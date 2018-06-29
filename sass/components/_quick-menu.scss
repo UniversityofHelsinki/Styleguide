@@ -32,7 +32,8 @@
     text-transform: uppercase;
 
     &:hover,
-    &.active {
+    &.active,
+    &.active-trail {
       &:before {
         content: "";
         position: absolute;
