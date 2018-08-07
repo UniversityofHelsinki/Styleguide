@@ -24,7 +24,7 @@
 
 .l-header-bar__left {
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   padding: 10px 0;
 
   @include breakpoint($medium) {

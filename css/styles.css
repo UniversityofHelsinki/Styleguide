@@ -2804,8 +2804,8 @@ a.label:hover {
 .l-header-bar__left {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   padding: 10px 0;
 }
 
@@ -7208,7 +7208,7 @@ ul.pager > li.pager__page a {
   text-transform: uppercase;
 }
 
-.quick-menu a:hover:before, .quick-menu a.active:before {
+.quick-menu a:hover:before, .quick-menu a.active:before, .quick-menu a.active-trail:before {
   content: "";
   position: absolute;
   border-bottom: 2px solid #FFF;
