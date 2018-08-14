@@ -1928,6 +1928,17 @@ th {
   content: "";
 }
 
+.icon--whatsapp:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .bar, .tube {
   display: block;
   padding-bottom: 1em;
@@ -2399,6 +2410,16 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
 
 .button--icon.icon--instagram:hover {
   background-color: #0c3a5b;
+}
+
+.button--icon.icon--whatsapp {
+  transition-duration: 0.1s;
+  transition-property: all;
+  background-color: #25d366;
+}
+
+.button--icon.icon--whatsapp:hover {
+  background-color: #1da851;
 }
 
 /*
