@@ -31,7 +31,7 @@ Here's how you'd add the submodule. (you'll need to change out the "release-X.X.
 git clone https://github.com/UH-StudentServices/Styleguide.git hu-styleguide
 cd hu-styleguide/
 git checkout release-X.X.X
-```
+````
 
 Once you've added the submodule, you'll have to commit it to the parent repository.
 

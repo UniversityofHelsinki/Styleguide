@@ -312,6 +312,10 @@
   &.icon--instagram {
     @include background-color(#125688);
   }
+
+  &.icon--whatsapp {
+    @include background-color(#25d366);
+  }
 }
 
 /*
