@@ -1997,10 +1997,10 @@ th {
 .button--small:focus, .accordion__title:focus,
 .button--accordion:focus,
 .button--action-before:focus,
-.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, .button--outline:focus, input[type="submit"]:focus, .button--small:hover, .accordion__title:hover,
+.button--action:focus, .button--anchor:focus, .button--expand:focus, .button--icon:focus, .button--outline:focus, input:focus[type="submit"], .button--small:hover, .accordion__title:hover,
 .button--accordion:hover,
 .button--action-before:hover,
-.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, .button--outline:hover, input[type="submit"]:hover,
+.button--action:hover, .button--anchor:hover, .button--expand:hover, .button--icon:hover, .button--outline:hover, input:hover[type="submit"],
 .button:focus,
 .button:hover {
   background-color: #005479;
@@ -2010,7 +2010,7 @@ th {
 .button--small:active, .accordion__title:active,
 .button--accordion:active,
 .button--action-before:active,
-.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, .button--outline:active, input[type="submit"]:active, .is-active.button--small, .is-active.accordion__title,
+.button--action:active, .button--anchor:active, .button--expand:active, .button--icon:active, .button--outline:active, input:active[type="submit"], .is-active.button--small, .is-active.accordion__title,
 .is-active.button--accordion,
 .is-active.button--action-before,
 .is-active.button--action, .is-active.button--anchor, .is-active.button--expand, .is-active.button--icon, .is-active.button--outline, input.is-active[type="submit"],
@@ -2048,28 +2048,22 @@ th {
 .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent:hover[type="submit"], .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt[type="submit"]:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt:hover[type="submit"],
 .button.theme-transparent:hover,
 .button.theme-transparent-alt:hover {
   background-color: #0098d0;
 }
 
-.theme-transparent.button--small a:hover, .theme-transparent.accordion__title a:hover,
-.theme-transparent.button--accordion a:hover,
-.theme-transparent.button--action-before a:hover,
-.theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, .theme-transparent.button--outline a:hover, input.theme-transparent[type="submit"] a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
+.theme-transparent.button--small a:hover, .theme-transparent.accordion__title a:hover, .theme-transparent.button--accordion a:hover, .theme-transparent.button--action-before a:hover, .theme-transparent.button--action a:hover, .theme-transparent.button--anchor a:hover, .theme-transparent.button--expand a:hover, .theme-transparent.button--icon a:hover, .theme-transparent.button--outline a:hover, input.theme-transparent[type="submit"] a:hover, .theme-transparent.button--small:hover, .theme-transparent.accordion__title:hover,
 .theme-transparent.button--accordion:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent[type="submit"]:hover, .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover,
-.theme-transparent-alt.button--accordion a:hover,
-.theme-transparent-alt.button--action-before a:hover,
-.theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, .theme-transparent-alt.button--outline a:hover, input.theme-transparent-alt[type="submit"] a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
+.theme-transparent.button--action:hover, .theme-transparent.button--anchor:hover, .theme-transparent.button--expand:hover, .theme-transparent.button--icon:hover, .theme-transparent.button--outline:hover, input.theme-transparent:hover[type="submit"], .theme-transparent-alt.button--small a:hover, .theme-transparent-alt.accordion__title a:hover, .theme-transparent-alt.button--accordion a:hover, .theme-transparent-alt.button--action-before a:hover, .theme-transparent-alt.button--action a:hover, .theme-transparent-alt.button--anchor a:hover, .theme-transparent-alt.button--expand a:hover, .theme-transparent-alt.button--icon a:hover, .theme-transparent-alt.button--outline a:hover, input.theme-transparent-alt[type="submit"] a:hover, .theme-transparent-alt.button--small:hover, .theme-transparent-alt.accordion__title:hover,
 .theme-transparent-alt.button--accordion:hover,
 .theme-transparent-alt.button--action-before:hover,
-.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt[type="submit"]:hover,
+.theme-transparent-alt.button--action:hover, .theme-transparent-alt.button--anchor:hover, .theme-transparent-alt.button--expand:hover, .theme-transparent-alt.button--icon:hover, .theme-transparent-alt.button--outline:hover, input.theme-transparent-alt:hover[type="submit"],
 .button.theme-transparent a:hover,
 .button.theme-transparent:hover,
 .button.theme-transparent-alt a:hover,
@@ -2243,11 +2237,9 @@ a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
   background-color: transparent;
 }
 
-
 .theme-transparent.button--action-before a:hover,
 .theme-transparent.button--action-before:hover,
-.theme-transparent.button--action-before:hover:after,
-.theme-transparent-alt.button--action-before a:hover,
+.theme-transparent.button--action-before:hover:after, .theme-transparent-alt.button--action-before a:hover,
 .theme-transparent-alt.button--action-before:hover,
 .theme-transparent-alt.button--action-before:hover:after,
 .button--action.theme-transparent a:hover,
@@ -4020,7 +4012,7 @@ dl, ol, ul {
 }
 
 .carousel-unwrapped__direction-nav a.carousel-unwrapped__prev {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
   left: 0;
 }
 
@@ -4036,7 +4028,7 @@ dl, ol, ul {
 }
 
 .carousel-unwrapped__direction-nav a.carousel-unwrapped__next {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), transparent 100%);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 100%);
   right: 0;
 }
 
@@ -7726,7 +7718,8 @@ input[type="text"].search-form-large__input {
  template: 6_1_2_table-simple
  description:
 */
-.textarea table, .textarea-ingress table, .box-application__table,
+.textarea table,
+.textarea-ingress table, .box-application__table,
 .table-simple {
   font-size: 0.875rem;
 }
@@ -7938,25 +7931,31 @@ input[type="text"].search-form-large__input {
   line-height: 1.5em;
 }
 
-.textarea ul, .textarea ol, .textarea-ingress ul, .textarea-ingress ol {
+.textarea ul, .textarea ol,
+.textarea-ingress ul,
+.textarea-ingress ol {
   margin-bottom: 30px;
 }
 
-.textarea li, .textarea-ingress li {
+.textarea li,
+.textarea-ingress li {
   line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
-.textarea ul, .textarea-ingress ul {
+.textarea ul,
+.textarea-ingress ul {
   padding-left: 2em;
   position: relative;
 }
 
-.textarea ul li, .textarea-ingress ul li {
+.textarea ul li,
+.textarea-ingress ul li {
   list-style-type: none;
 }
 
-.textarea ul li:before, .textarea-ingress ul li:before {
+.textarea ul li:before,
+.textarea-ingress ul li:before {
   font-size: 0.5625rem;
   display: inline-block;
   font-family: "hy-icons";
@@ -7971,17 +7970,20 @@ input[type="text"].search-form-large__input {
   position: absolute;
 }
 
-.textarea ol, .textarea-ingress ol {
+.textarea ol,
+.textarea-ingress ol {
   counter-reset: item;
   padding-left: 2em;
   position: relative;
 }
 
-.textarea ol li, .textarea-ingress ol li {
+.textarea ol li,
+.textarea-ingress ol li {
   display: block;
 }
 
-.textarea ol li:before, .textarea-ingress ol li:before {
+.textarea ol li:before,
+.textarea-ingress ol li:before {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -7991,25 +7993,46 @@ input[type="text"].search-form-large__input {
   position: absolute;
 }
 
-.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea .logo-block__content .logo-block__sitename, .logo-block__content .textarea .logo-block__sitename, .textarea h5, .textarea h6, .textarea-ingress h1, .textarea-ingress h2, .textarea-ingress h3, .textarea-ingress h4, .textarea-ingress legend, .textarea-ingress .logo-block__content .logo-block__sitename, .logo-block__content .textarea-ingress .logo-block__sitename, .textarea-ingress h5, .textarea-ingress h6 {
+.textarea h1, .textarea h2, .textarea h3, .textarea h4, .textarea legend, .textarea .logo-block__content .logo-block__sitename, .logo-block__content .textarea .logo-block__sitename, .textarea h5, .textarea h6,
+.textarea-ingress h1,
+.textarea-ingress h2,
+.textarea-ingress h3,
+.textarea-ingress h4,
+.textarea-ingress legend,
+.textarea-ingress .logo-block__content .logo-block__sitename,
+.logo-block__content .textarea-ingress .logo-block__sitename,
+.textarea-ingress h5,
+.textarea-ingress h6 {
   margin-top: 32px;
 }
 
-.textarea h1:first-child, .textarea h2:first-child, .textarea h3:first-child, .textarea h4:first-child, .textarea legend:first-child, .textarea .logo-block__content .logo-block__sitename:first-child, .logo-block__content .textarea .logo-block__sitename:first-child, .textarea h5:first-child, .textarea h6:first-child, .textarea-ingress h1:first-child, .textarea-ingress h2:first-child, .textarea-ingress h3:first-child, .textarea-ingress h4:first-child, .textarea-ingress legend:first-child, .textarea-ingress .logo-block__content .logo-block__sitename:first-child, .logo-block__content .textarea-ingress .logo-block__sitename:first-child, .textarea-ingress h5:first-child, .textarea-ingress h6:first-child {
+.textarea h1:first-child, .textarea h2:first-child, .textarea h3:first-child, .textarea h4:first-child, .textarea legend:first-child, .textarea .logo-block__content .logo-block__sitename:first-child, .logo-block__content .textarea .logo-block__sitename:first-child, .textarea h5:first-child, .textarea h6:first-child,
+.textarea-ingress h1:first-child,
+.textarea-ingress h2:first-child,
+.textarea-ingress h3:first-child,
+.textarea-ingress h4:first-child,
+.textarea-ingress legend:first-child,
+.textarea-ingress .logo-block__content .logo-block__sitename:first-child,
+.logo-block__content .textarea-ingress .logo-block__sitename:first-child,
+.textarea-ingress h5:first-child,
+.textarea-ingress h6:first-child {
   margin-top: 0;
 }
 
-.textarea a, .textarea-ingress a {
+.textarea a,
+.textarea-ingress a {
   word-wrap: break-word;
 }
 
-.textarea table, .textarea-ingress table {
+.textarea table,
+.textarea-ingress table {
   line-height: normal;
   margin-bottom: 2em;
 }
 
 @media (min-width: 48em) {
-  .textarea .dropcap, .textarea-ingress .dropcap {
+  .textarea .dropcap,
+  .textarea-ingress .dropcap {
     font-size: 4.6875rem;
     font-weight: 700;
     font-style: normal;
