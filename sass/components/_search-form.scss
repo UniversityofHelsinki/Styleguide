@@ -80,6 +80,10 @@ input[type="text"].search-form--dark__input {
   &:focus {
     outline-color: $blue;
   }
+
+  &::placeholder {
+    color: $lightsilver;
+  }
 }
 
 input[type="submit"].search-form--dark__submit {

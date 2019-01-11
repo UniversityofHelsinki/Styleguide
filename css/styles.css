@@ -2078,7 +2078,7 @@ th {
  description:
 */
 .button--small {
-  background-color: #F8F8F8;
+  background-color: #D2D2D2;
   color: #222;
   line-height: 1;
   padding: .4em .7em;
@@ -4534,7 +4534,7 @@ dl, ol, ul {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: .6;
+  opacity: .8;
   position: absolute;
   right: 0;
   top: 0;
@@ -7298,6 +7298,14 @@ input[type="text"].search-form--dark__input {
 
 input[type="text"].search-form--dark__input:focus {
   outline-color: #107EAB;
+}
+
+input[type="text"].search-form--dark__input:-ms-input-placeholder {
+  color: #F8F8F8;
+}
+
+input[type="text"].search-form--dark__input::placeholder {
+  color: #F8F8F8;
 }
 
 input[type="submit"].search-form--dark__submit {
