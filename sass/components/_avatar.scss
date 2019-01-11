@@ -14,7 +14,7 @@
 .avatar-image {
   background: url("../assets/svg/avatar.svg") no-repeat center center;
   background-size: 65% 65%;
-  color: white;
+  color: $white;
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -30,10 +30,10 @@
   }
 
   &.is-student {
-    background-color: #7b46a3;
+    background-color: $darkorange;
   }
 
   &.is-teacher {
-    background-color: #99cc66;
+    background-color: $green;
   }
 }

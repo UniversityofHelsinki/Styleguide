@@ -146,7 +146,7 @@ blockquote,
 blockquote p {
   @include font-size(18px, 16px);
   @include font-weight-book;
-  color: $silver;
+  color: $lightgray;
   line-height: 1.5em;
 }
 
