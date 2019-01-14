@@ -8702,7 +8702,7 @@ input[type="text"].search-form-large__input {
 .box-hero__shadow {
   background: none;
   background: #000;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: inline;
