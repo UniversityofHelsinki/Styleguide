@@ -2086,7 +2086,7 @@ th {
 
 .button--small:focus, .button--small:hover {
   background-color: #979797;
-  color: #FFF;
+  color: #222;
 }
 
 .button--small:active, .button--small.is-active {
@@ -2143,6 +2143,11 @@ th {
   -ms-transform: translateY(-50%) rotate(90deg);
       transform: translateY(-50%) rotate(90deg);
   color: #FFF;
+}
+
+.accordion__title:hover,
+.button--accordion:hover {
+  border: 2px solid #005379;
 }
 
 a:hover .accordion__title:before, .accordion__title:hover:before, a:hover
@@ -3376,7 +3381,8 @@ input[type="submit"] {
 }
 
 input[type="submit"][disabled], input[type="submit"][disabled]:active, input[type="submit"][disabled]:focus, input[type="submit"][disabled]:hover {
-  background-color: #F8F8F8;
+  background-color: #D2D2D2;
+  color: #555555;
 }
 
 select,
@@ -6707,11 +6713,11 @@ span.links__link.theme-language {
 
 .messages.info {
   background-color: #F9A21A;
-  color: #FFF;
+  color: #222;
 }
 
 .messages.info * {
-  color: #FFF;
+  color: #222;
 }
 
 .messages.info.alternative {

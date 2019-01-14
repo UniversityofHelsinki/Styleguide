@@ -73,7 +73,7 @@
   &:focus,
   &:hover {
     background-color: $silver;
-    color: $white;
+    color: $black;
   }
 
   &:active,
@@ -117,6 +117,10 @@
       transform: translateY(-50%) rotate(90deg);
       color: $white;
     }
+  }
+
+  &:hover {
+    border: 2px solid $darkblue;
   }
 
   a:hover &:before,

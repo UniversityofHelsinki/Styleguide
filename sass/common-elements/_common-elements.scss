@@ -198,7 +198,8 @@ input[type="submit"] {
   &[disabled]:active,
   &[disabled]:focus,
   &[disabled]:hover {
-    background-color: $lightsilver;
+    background-color: $mediumsilver;
+    color: $lightgray;
   }
 }
 
