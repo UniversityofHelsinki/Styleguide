@@ -121,6 +121,19 @@ a {
 }
 
 /*
+  Disable pseudo elements on hover on devices that don't support it.
+  This fixes link double tap issue on iOS devices.
+*/
+@media (hover: none) {
+  a:hover {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+/*
   section: 3.4
   title: Blockquote
 */
