@@ -159,7 +159,7 @@ blockquote,
 blockquote p {
   @include font-size(18px, 16px);
   @include font-weight-book;
-  color: $silver;
+  color: $lightgray;
   line-height: 1.5em;
 }
 
@@ -211,7 +211,8 @@ input[type="submit"] {
   &[disabled]:active,
   &[disabled]:focus,
   &[disabled]:hover {
-    background-color: $lightsilver;
+    background-color: $mediumsilver;
+    color: $lightgray;
   }
 }
 

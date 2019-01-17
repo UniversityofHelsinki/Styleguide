@@ -8,21 +8,21 @@ $messages: (
   "status": (
     "color": $black,
     "color-alt": #81b43b,
-    "bg-color": #b2e576,
+    "bg-color": $green,
     "bg-color-alt": #f2f7eb,
     "icon": $icon-done,
   ),
   "info": (
-    "color": $white,
+    "color": $black,
     "color-alt": $black,
-    "bg-color": #52c6af,
+    "bg-color": $orange,
     "bg-color-alt": #f8f8f8,
     "icon": $icon-info,
   ),
   "error": (
     "color": $white,
-    "color-alt": #964822,
-    "bg-color": #964822,
+    "color-alt": $redalert,
+    "bg-color": $redalert,
     "bg-color-alt": #f4ece8,
     "icon": $icon-warning,
   )

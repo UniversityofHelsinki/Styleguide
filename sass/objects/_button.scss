@@ -65,7 +65,7 @@
 
 .button--small {
   @extend %button;
-  background-color: $lightsilver;
+  background-color: $mediumsilver;
   color: $black;
   line-height: 1;
   padding: .4em .7em;
@@ -73,7 +73,7 @@
   &:focus,
   &:hover {
     background-color: $silver;
-    color: $white;
+    color: $black;
   }
 
   &:active,
@@ -117,6 +117,10 @@
       transform: translateY(-50%) rotate(90deg);
       color: $white;
     }
+  }
+
+  &:hover {
+    border: 2px solid $darkblue;
   }
 
   a:hover &:before,
