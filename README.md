@@ -51,7 +51,7 @@ Submit changes with pull requests.
 
 ### Dependencies ###
 
-1. node & npm
+1. node (version <= 8.4.0) & npm 
 2. gulp
 
 ### Setting up ###

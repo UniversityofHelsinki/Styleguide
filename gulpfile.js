@@ -135,7 +135,7 @@ gulp.task('serve', ['build'], function () {
       baseDir: './'
     }
   });
-  gulp.watch(['./sass/**/*.scss', './templates/**/*.html'], ['build']);
+  gulp.watch(['./sass/**/*.scss', '!./sass/icons/**/*.scss', './templates/**/*.html'], ['build']);
 
   gulp.watch(['index.html']).on('change', browserSync.reload);
 });

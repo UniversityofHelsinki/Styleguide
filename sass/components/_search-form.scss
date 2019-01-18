@@ -80,6 +80,10 @@ input[type="text"].search-form--dark__input {
   &:focus {
     outline-color: $blue;
   }
+
+  &::placeholder {
+    color: $lightsilver;
+  }
 }
 
 input[type="submit"].search-form--dark__submit {
@@ -117,7 +121,7 @@ input[type="submit"].search-form--dark__submit {
 input[type="text"].search-form-large__input {
   @include font-size(15px);
   border: 2px solid $lightsilver;
-  color: $silver;
+  color: $lightsilver;
   display: block;
   line-height: 1.7em;
   margin-bottom: $vert-spacing-unit;
