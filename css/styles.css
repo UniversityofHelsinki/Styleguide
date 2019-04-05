@@ -4576,11 +4576,16 @@ dl, ol, ul {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
   font-size: 6vh;
   padding: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 62.5em) {

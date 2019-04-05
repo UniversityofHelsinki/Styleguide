@@ -80,11 +80,14 @@
       align-items: flex-start;
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
+      flex-basis: auto;
     }
 
     .hero-big__title {
       font-size: 6vh;
       padding: 1rem;
+      width: 100%;
 
       @include breakpoint($medium) {
         font-size: 8vh;
