@@ -71,6 +71,7 @@
     align-items: flex-end;
     display: flex;
     height: calc(100vh - 80px);
+    max-height: 800px;
 
     &:after {
       display: none;
@@ -87,7 +88,7 @@
     .hero-big__title {
       font-size: 6vh;
       padding: 1rem;
-      width: 100%;
+      max-width: 100%;
 
       @include breakpoint($medium) {
         font-size: 8vh;

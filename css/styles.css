@@ -4563,6 +4563,7 @@ dl, ol, ul {
   display: -ms-flexbox;
   display: flex;
   height: calc(100vh - 80px);
+  max-height: 800px;
 }
 
 .hero-big:not(.hero-big--centered):after {
@@ -4585,7 +4586,7 @@ dl, ol, ul {
 .hero-big:not(.hero-big--centered) .hero-big__title {
   font-size: 6vh;
   padding: 1rem;
-  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 62.5em) {
