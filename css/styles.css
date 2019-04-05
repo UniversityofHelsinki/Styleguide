@@ -4587,8 +4587,8 @@ dl, ol, ul {
       flex-wrap: wrap;
 }
 
-.hero-big:not(.hero-big--centered) .hero-big__title--wrapper,
-.hero-big:not(.hero-big--centered) .hero-big__ingress--wrapper {
+.hero-big:not(.hero-big--centered) .hero-big__title__container,
+.hero-big:not(.hero-big--centered) .hero-big__ingress__container {
   margin: 1rem 0;
 }
 
