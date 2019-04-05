@@ -64,10 +64,6 @@
   }
 
   &:not(.hero-big--centered) {
-    @include breakpoint($medium) {
-
-    }
-
     align-items: flex-end;
     display: flex;
     height: calc(100vh - 80px);
@@ -77,17 +73,25 @@
       display: none;
     }
 
+    .hero-big__top {
+      margin-bottom: 1rem;
+    }
+
     .hero-big__content {
       align-items: flex-start;
       display: flex;
+      flex-basis: auto;
       flex-direction: column;
       flex-wrap: wrap;
-      flex-basis: auto;
+    }
+
+    .hero-big__title--wrapper {
+      margin: 1rem 0;
     }
 
     .hero-big__title {
       font-size: 6vh;
-      padding: 1rem;
+      padding: 0 1rem;
       max-width: 100%;
 
       @include breakpoint($medium) {
@@ -102,10 +106,10 @@
 
     .hero-big__title,
     .hero-big__ingress {
-      display: inline-block;
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
       background-color: rgba($black, 0.61);
+      box-decoration-break: clone;
+      display: inline;
+      line-height: normal;
 
       @include breakpoint($small) {
         margin-bottom: 1rem;
