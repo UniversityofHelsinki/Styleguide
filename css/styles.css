@@ -4617,6 +4617,13 @@ dl, ol, ul {
   padding: .25rem 1rem;
 }
 
+.hero-big:not(.hero-big--centered) .hero-big__play {
+  background-color: rgba(34, 34, 34, 0.61);
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  padding: 0 1rem;
+}
+
 .hero-big:not(.hero-big--centered) .hero-big__title,
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
   background-color: rgba(34, 34, 34, 0.61);
