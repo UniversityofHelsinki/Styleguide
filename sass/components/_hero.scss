@@ -85,14 +85,20 @@
       flex-wrap: wrap;
     }
 
-    .hero-big__title--wrapper {
+    .hero-big__title--wrapper,
+    .hero-big__ingress--wrapper {
       margin: 1rem 0;
     }
 
     .hero-big__title {
-      font-size: 6vh;
+      font-size: 2.125rem;
       padding: 0 1rem;
       max-width: 100%;
+      line-height: normal;
+
+      @include breakpoint($small) {
+        font-size: 6vh;
+      }
 
       @include breakpoint($medium) {
         font-size: 8vh;
@@ -101,6 +107,7 @@
 
     .hero-big__ingress {
       font-size: .9rem;
+      line-height: 1.715rem;
       padding: .25rem 1rem;
     }
 
@@ -109,7 +116,6 @@
       background-color: rgba($black, 0.61);
       box-decoration-break: clone;
       display: inline;
-      line-height: normal;
 
       @include breakpoint($small) {
         margin-bottom: 1rem;
