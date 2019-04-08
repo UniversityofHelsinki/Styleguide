@@ -4563,7 +4563,11 @@ dl, ol, ul {
   display: -ms-flexbox;
   display: flex;
   height: calc(100vh - 80px);
-  max-height: 800px;
+  /*     .hero-big__play {
+      background-color: rgba($black, 0.61);
+      box-decoration-break: clone;
+      padding: 0 1rem;
+    } */
 }
 
 .hero-big:not(.hero-big--centered):after {
@@ -4590,6 +4594,7 @@ dl, ol, ul {
 .hero-big:not(.hero-big--centered) .hero-big__title__container,
 .hero-big:not(.hero-big--centered) .hero-big__ingress__container {
   margin: 1rem 0;
+  width: 100%;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
@@ -4615,13 +4620,6 @@ dl, ol, ul {
   font-size: .9rem;
   line-height: 1.715rem;
   padding: .25rem 1rem;
-}
-
-.hero-big:not(.hero-big--centered) .hero-big__play {
-  background-color: rgba(34, 34, 34, 0.61);
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  padding: 0 1rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title,

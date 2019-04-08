@@ -67,7 +67,6 @@
     align-items: flex-end;
     display: flex;
     height: calc(100vh - 80px);
-    max-height: 800px;
 
     &:after {
       display: none;
@@ -88,6 +87,7 @@
     .hero-big__title__container,
     .hero-big__ingress__container {
       margin: 1rem 0;
+      width: 100%;
     }
 
     .hero-big__title {
@@ -111,11 +111,11 @@
       padding: .25rem 1rem;
     }
 
-    .hero-big__play {
+/*     .hero-big__play {
       background-color: rgba($black, 0.61);
       box-decoration-break: clone;
       padding: 0 1rem;
-    }
+    } */
 
     .hero-big__title,
     .hero-big__ingress {
