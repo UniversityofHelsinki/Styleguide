@@ -4562,7 +4562,7 @@ dl, ol, ul {
       align-items: flex-end;
   display: -ms-flexbox;
   display: flex;
-  height: calc(100vh - 80px);
+  height: 75vh;
   /*     .hero-big__play {
       background-color: rgba($black, 0.61);
       box-decoration-break: clone;
@@ -4598,7 +4598,7 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
-  font-size: 2.125rem;
+  font-size: 2.625rem;
   padding: 0 1rem;
   max-width: 100%;
   line-height: normal;
@@ -4606,19 +4606,19 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 6vh;
+    font-size: 4vh;
   }
 }
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 8vh;
+    font-size: 6vh;
   }
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
-  font-size: .9rem;
-  line-height: 1.715rem;
+  font-size: 1.125rem;
+  line-height: 1.915rem;
   padding: .25rem 1rem;
 }
 
