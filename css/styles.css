@@ -4606,13 +4606,13 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 6.5vh;
+    font-size: 4.0625rem;
   }
 }
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 7vh;
+    font-size: 5rem;
   }
 }
 
