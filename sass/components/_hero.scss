@@ -97,17 +97,17 @@
       line-height: normal;
 
       @include breakpoint($small) {
-        font-size: 4.5vh;
+        font-size: 6.5vh;
       }
 
       @include breakpoint($medium) {
-        font-size: 6vh;
+        font-size: 7vh;
       }
     }
 
     .hero-big__ingress {
       @include font-size(18px);
-      line-height: 2.15rem;
+      line-height: 2.055rem;
       padding: .25rem 1rem;
     }
 

@@ -4606,19 +4606,19 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 4.5vh;
+    font-size: 6.5vh;
   }
 }
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 6vh;
+    font-size: 7vh;
   }
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
   font-size: 1.125rem;
-  line-height: 2.15rem;
+  line-height: 2.055rem;
   padding: .25rem 1rem;
 }
 
