@@ -66,7 +66,7 @@
   &:not(.hero-big--centered) {
     align-items: flex-end;
     display: flex;
-    height: calc(100vh - 80px);
+    height: 75vh;
 
     &:after {
       display: none;
@@ -91,23 +91,25 @@
     }
 
     .hero-big__title {
-      font-size: 2.125rem;
+      @include font-size(42px);
       padding: 0 1rem;
       max-width: 100%;
       line-height: normal;
 
       @include breakpoint($small) {
-        font-size: 6vh;
+        @include font-size(65px);
+        //font-size: 6.5vh;
       }
 
       @include breakpoint($medium) {
-        font-size: 8vh;
+        @include font-size(80px);
+        //font-size: 7vh;
       }
     }
 
     .hero-big__ingress {
-      font-size: .9rem;
-      line-height: 1.715rem;
+      @include font-size(18px);
+      line-height: 2.055rem;
       padding: .25rem 1rem;
     }
 
