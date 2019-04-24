@@ -99,18 +99,16 @@
 
       @include breakpoint($small) {
         @include font-size(65px);
-        //font-size: 6.5vh;
       }
 
       @include breakpoint($medium) {
         @include font-size(80px);
-        //font-size: 7vh;
       }
     }
 
     .hero-big__ingress {
       @include font-size(18px);
-      line-height: 2.055rem;
+      line-height: 2.14rem;
       padding: .25rem 1rem;
     }
 
@@ -140,6 +138,7 @@
 }
 
 .hero-big__video-button {
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
   color: $white;
@@ -153,6 +152,10 @@
   transition-duration: .3s;
   transition-property: all;
   width: 3rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
 }
 
 .hero-big__top {

@@ -1477,17 +1477,6 @@ th {
   content: "";
 }
 
-.icon--wrench:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
-}
-
 .icon--youtube:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -4641,7 +4630,7 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
   font-size: 1.125rem;
-  line-height: 2.055rem;
+  line-height: 2.14rem;
   padding: .25rem 1rem;
 }
 
@@ -4667,6 +4656,8 @@ dl, ol, ul {
 }
 
 .hero-big__video-button {
+  -ms-flex-align: center;
+      align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
   color: #FFF;
@@ -4683,6 +4674,10 @@ dl, ol, ul {
   transition-duration: .3s;
   transition-property: all;
   width: 3rem;
+}
+
+.hero-big__video-button:hover {
+  background-color: black;
 }
 
 .hero-big__top {
