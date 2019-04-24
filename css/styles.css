@@ -1477,6 +1477,17 @@ th {
   content: "";
 }
 
+.icon--wrench:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .icon--youtube:after {
   display: inline-block;
   font-family: "hy-icons";
