@@ -67,6 +67,7 @@
     align-items: flex-end;
     display: flex;
     height: 75vh;
+    max-height: 600px;
 
     &:after {
       display: none;
@@ -121,7 +122,7 @@
 
     .hero-big__title,
     .hero-big__ingress {
-      background-color: rgba($black, 0.61);
+      background-color: rgba($black, 0.7);
       box-decoration-break: clone;
       display: inline;
 
@@ -130,6 +131,28 @@
       }
     }
   }
+}
+
+.hero-big__video__controls {
+  bottom: 0;
+  position: absolute;
+  right: 0; 
+}
+
+.hero-big__video-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  justify-content: center;
+  padding: 0;
+  transition-duration: .3s;
+  transition-property: all;
+  width: 3rem;
 }
 
 .hero-big__top {
