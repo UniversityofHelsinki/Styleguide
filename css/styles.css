@@ -1939,6 +1939,28 @@ th {
   content: "";
 }
 
+.icon--pause:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
+.icon--play-arrow:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .bar, .tube {
   display: block;
   padding-bottom: 1em;
@@ -4563,6 +4585,7 @@ dl, ol, ul {
   display: -ms-flexbox;
   display: flex;
   height: 75vh;
+  max-height: 600px;
   /*     .hero-big__play {
       background-color: rgba($black, 0.61);
       box-decoration-break: clone;
@@ -4618,13 +4641,13 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
   font-size: 1.125rem;
-  line-height: 2.055rem;
+  line-height: 2.14rem;
   padding: .25rem 1rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title,
 .hero-big:not(.hero-big--centered) .hero-big__ingress {
-  background-color: rgba(34, 34, 34, 0.61);
+  background-color: rgba(34, 34, 34, 0.7);
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
   display: inline;
@@ -4635,6 +4658,37 @@ dl, ol, ul {
   .hero-big:not(.hero-big--centered) .hero-big__ingress {
     margin-bottom: 1rem;
   }
+}
+
+.hero-big__video__controls {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.hero-big__video-button {
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1;
+      flex: 1;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 0;
+  transition-duration: .3s;
+  transition-property: all;
+  width: 3rem;
+}
+
+.hero-big__video-button:hover {
+  background-color: black;
 }
 
 .hero-big__top {
