@@ -4594,7 +4594,7 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered):after {
-  display: none;
+  background: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0));
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
@@ -4635,7 +4635,7 @@ dl, ol, ul {
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 5rem;
+    font-size: 4.6875rem;
   }
 }
 
