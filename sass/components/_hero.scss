@@ -71,6 +71,8 @@
 
     &:after {
       background: linear-gradient(rgba($black, .9), rgba($black, 0));
+      // Overlay will block video pause button, prevent it by giving margin to bottom.
+      margin-bottom: 40px;
     }
 
     .hero-big__top {

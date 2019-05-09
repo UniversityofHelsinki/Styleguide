@@ -4595,6 +4595,7 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered):after {
   background: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0));
+  margin-bottom: 40px;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
