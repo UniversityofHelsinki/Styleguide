@@ -70,7 +70,7 @@
     max-height: 600px;
 
     &:after {
-      display: none;
+      background: linear-gradient(rgba($black, .9), rgba($black, 0));
     }
 
     .hero-big__top {
