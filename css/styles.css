@@ -4599,7 +4599,7 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__content {
