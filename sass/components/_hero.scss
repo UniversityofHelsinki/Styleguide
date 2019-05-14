@@ -76,7 +76,7 @@
     }
 
     .hero-big__top {
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
     }
 
     .hero-big__content {
@@ -116,6 +116,7 @@
       @include font-size(18px);
       line-height: 2.14rem;
       padding: .25rem 1rem;
+      margin-bottom: .5rem;
     }
 
 /*     .hero-big__play {
