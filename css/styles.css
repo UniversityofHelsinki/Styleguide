@@ -4654,6 +4654,13 @@ dl, ol, ul {
   display: inline;
 }
 
+@media (min-width: 48em) {
+  .hero-big:not(.hero-big--centered) .hero-big__title,
+  .hero-big:not(.hero-big--centered) .hero-big__ingress {
+    margin-bottom: 0;
+  }
+}
+
 .hero-big__video__controls {
   bottom: 0;
   position: absolute;

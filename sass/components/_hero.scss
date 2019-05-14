@@ -127,7 +127,7 @@
       display: inline;
 
       @include breakpoint($small) {
-        //margin-bottom: .5rem;
+        margin-bottom: 0;
       }
     }
   }
