@@ -76,7 +76,7 @@
     }
 
     .hero-big__top {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
 
     .hero-big__content {
@@ -89,15 +89,8 @@
 
     .hero-big__title__container,
     .hero-big__ingress__container {
+      margin-bottom: 1rem;
       width: 100%;
-      
-      @include breakpoint($small) {
-        margin: .5rem;
-      }
-    }
-
-    .hero-big__content-bottom {
-      margin-top: .5rem;
     }
 
     .hero-big__title {
@@ -134,7 +127,7 @@
       display: inline;
 
       @include breakpoint($small) {
-        margin-bottom: 1rem;
+        //margin-bottom: .5rem;
       }
     }
   }
