@@ -4617,8 +4617,12 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered) .hero-big__title__container,
 .hero-big:not(.hero-big--centered) .hero-big__ingress__container {
-  margin: 1rem 0;
+  margin: .5rem 0;
   width: 100%;
+}
+
+.hero-big:not(.hero-big--centered) .hero-big__content-bottom {
+  margin-top: .5rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
@@ -4630,13 +4634,13 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 4.0625rem;
+    font-size: 3.4375rem;
   }
 }
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 5rem;
+    font-size: 4.375rem;
   }
 }
 

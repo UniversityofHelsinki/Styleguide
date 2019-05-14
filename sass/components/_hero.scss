@@ -89,8 +89,12 @@
 
     .hero-big__title__container,
     .hero-big__ingress__container {
-      margin: 1rem 0;
+      margin: .5rem 0;
       width: 100%;
+    }
+
+    .hero-big__content-bottom {
+      margin-top: .5rem;
     }
 
     .hero-big__title {
@@ -100,11 +104,11 @@
       line-height: normal;
 
       @include breakpoint($small) {
-        @include font-size(65px);
+        @include font-size(55px);
       }
 
       @include breakpoint($medium) {
-        @include font-size(80px);
+        @include font-size(70px);
       }
     }
 
