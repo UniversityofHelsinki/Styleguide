@@ -1488,17 +1488,6 @@ th {
   content: "";
 }
 
-.icon--youtube:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
-}
-
 .icon--link-arrow-down:after {
   display: inline-block;
   font-family: "hy-icons";
@@ -4630,13 +4619,13 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 3.4375rem;
+    font-size: 3.125rem;
   }
 }
 
 @media (min-width: 62.5em) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 4.375rem;
+    font-size: 3.75rem;
   }
 }
 
