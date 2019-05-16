@@ -4615,7 +4615,7 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
-  font-size: 42px;
+  font-size: 32px;
   padding: 0 1rem;
   max-width: 100%;
   line-height: normal;
@@ -4623,7 +4623,7 @@ dl, ol, ul {
 
 @media (min-width: 360px) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: calc(42px + 26 * (100vw - 360px) / 1240);
+    font-size: calc(32px + 36 * (100vw - 360px) / 1240);
   }
 }
 
