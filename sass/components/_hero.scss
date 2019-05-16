@@ -94,20 +94,10 @@
     }
 
     .hero-big__title {
-      @include font-size(42px);
+      @include fluid-type(font-size, 360px, 1600px, 42px, 68px);
       padding: 0 1rem;
       max-width: 100%;
       line-height: normal;
-
-      @include breakpoint($small) {
-        @include font-size(50px);
-      }
-
-      @include breakpoint($medium) {
-        @include font-size(60px);
-        // Test out scaling font-size based on widths.
-        //font-size: calc( 16px + (44 - 16) * (100vw - 400px) / (1000 - 400));
-      }
     }
 
     .hero-big__ingress {

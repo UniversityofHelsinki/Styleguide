@@ -464,6 +464,10 @@ th {
 /**
  * Mixin for subtitle thin
  */
+/**
+ * Mixin for fluid type.
+ * Example usage: @include fluid-type(font-size, 320px, 1600px, 32px, 80px);
+ */
 /*
   section: 2
   title: Icons
@@ -1486,17 +1490,6 @@ th {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: bottom;
   content: "";
-}
-
-.icon--youtube:after {
-  display: inline-block;
-  font-family: "hy-icons";
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: bottom;
-  content: "";
 }
 
 .icon--link-arrow-down:after {
@@ -4622,21 +4615,21 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__title {
-  font-size: 2.625rem;
+  font-size: 42px;
   padding: 0 1rem;
   max-width: 100%;
   line-height: normal;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 360px) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 3.125rem;
+    font-size: calc(42px + 26 * (100vw - 360px) / 1240);
   }
 }
 
-@media (min-width: 62.5em) {
+@media (min-width: 1600px) {
   .hero-big:not(.hero-big--centered) .hero-big__title {
-    font-size: 3.75rem;
+    font-size: 68px;
   }
 }
 
