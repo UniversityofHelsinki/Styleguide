@@ -76,7 +76,7 @@
     }
 
     .hero-big__top {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
 
     .hero-big__content {
@@ -89,23 +89,15 @@
 
     .hero-big__title__container,
     .hero-big__ingress__container {
-      margin: 1rem 0;
+      margin-bottom: 1rem;
       width: 100%;
     }
 
     .hero-big__title {
-      @include font-size(42px);
+      @include fluid-type(font-size, 360px, 1600px, 32px, 68px);
       padding: 0 1rem;
       max-width: 100%;
       line-height: normal;
-
-      @include breakpoint($small) {
-        @include font-size(65px);
-      }
-
-      @include breakpoint($medium) {
-        @include font-size(80px);
-      }
     }
 
     .hero-big__ingress {
@@ -127,7 +119,7 @@
       display: inline;
 
       @include breakpoint($small) {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
       }
     }
   }
