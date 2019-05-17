@@ -467,7 +467,7 @@
 
 .hero-big__title__container {
   .hero-big__overlay {
-    @extend h2;
+    @extend h1;
     @extend .hero-big__title;
     background: $black;
     color: transparent !important;
