@@ -102,10 +102,6 @@
       position: relative;
       margin-bottom: 1rem;
       width: 100%;
-
-      @include breakpoint($small) {
-        margin-bottom: 0;
-      }
     }
 
     .hero-big__title {

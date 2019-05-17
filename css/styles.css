@@ -4638,12 +4638,6 @@ dl, ol, ul {
   width: 100%;
 }
 
-@media (min-width: 48em) {
-  .hero-big:not(.hero-big--centered) .hero-big__ingress__container {
-    margin-bottom: 0;
-  }
-}
-
 .hero-big:not(.hero-big--centered) .hero-big__title, .hero-big:not(.hero-big--centered) .hero-big__title__container .hero-big__overlay, .hero-big__title__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
   font-size: 32px;
   -webkit-box-decoration-break: clone;
