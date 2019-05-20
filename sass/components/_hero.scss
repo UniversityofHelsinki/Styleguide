@@ -68,6 +68,10 @@
     display: flex;
     height: 75vh;
     max-height: 600px;
+    
+    @include breakpoint($small) {
+      min-height: 400px;
+    }
 
     &:after {
       background: linear-gradient(rgba($black, .9), rgba($black, 0));
@@ -88,23 +92,46 @@
       flex-wrap: wrap;
     }
 
-    .hero-big__title__container,
+    .hero-big__title__container {
+      position: relative;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
     .hero-big__ingress__container {
+      position: relative;
       margin-bottom: 1rem;
       width: 100%;
     }
 
     .hero-big__title {
       @include fluid-type(font-size, 360px, 1600px, 32px, 68px);
-      padding: 0 1rem;
+      box-decoration-break: clone;
+      display: inline;
+      line-height: 1;
       max-width: 100%;
-      line-height: normal;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 1;
+
+      @include breakpoint($small) {
+        margin-bottom: 0;
+      }
     }
 
     .hero-big__ingress {
       @include font-size(18px);
-      line-height: 2.14rem;
+      box-decoration-break: clone;
+      display: inline;
+      line-height: 2rem;
       padding: .25rem 1rem;
+      position: relative;
+      z-index: 1;
+
+      @include breakpoint($small) {
+        margin-bottom: 0;
+      }
     }
 
 /*     .hero-big__play {
@@ -112,17 +139,6 @@
       box-decoration-break: clone;
       padding: 0 1rem;
     } */
-
-    .hero-big__title,
-    .hero-big__ingress {
-      background-color: rgba($black, 0.7);
-      box-decoration-break: clone;
-      display: inline;
-
-      @include breakpoint($small) {
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
@@ -437,4 +453,32 @@
   line-height: 1.1em;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+/*
+* Hero-big overlay wizardry.
+*/
+.hero-big__overlay--container {
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+.hero-big__title__container {
+  .hero-big__overlay {
+    @extend h1;
+    @extend .hero-big__title;
+    background: $black;
+    color: transparent !important;
+    line-height: 1;
+  }
+}
+.hero-big__ingress__container {
+  .hero-big__overlay {
+    @extend .hero-big__ingress;
+    background: $black;
+    color: transparent !important;
+    line-height: 1;
+  }
 }
