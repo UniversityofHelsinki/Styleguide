@@ -1939,7 +1939,7 @@ th {
   content: "";
 }
 
-.icon--headphones:after {
+.icon--pause:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1950,7 +1950,7 @@ th {
   content: "";
 }
 
-.icon--pause:after {
+.icon--play-arrow:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
@@ -1961,7 +1961,7 @@ th {
   content: "";
 }
 
-.icon--play-arrow:after {
+.icon--headphones:after {
   display: inline-block;
   font-family: "hy-icons";
   font-style: normal;
