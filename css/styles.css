@@ -1965,6 +1965,17 @@ th {
   content: "";
 }
 
+.icon--headphones:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .bar, .tube {
   display: block;
   padding-bottom: 1em;
