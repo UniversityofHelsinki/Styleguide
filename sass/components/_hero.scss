@@ -67,7 +67,7 @@
     align-items: flex-end;
     display: flex;
     height: 75vh;
-    max-height: 600px;
+    max-height: 800px;
     
     @include breakpoint($small) {
       min-height: 400px;
@@ -81,7 +81,7 @@
     }
 
     .hero-big__top {
-      margin-bottom: .5rem;
+      padding: 1rem 1rem 2.5rem;
     }
 
     .hero-big__content {

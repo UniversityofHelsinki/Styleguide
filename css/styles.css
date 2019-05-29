@@ -4600,7 +4600,7 @@ dl, ol, ul {
   display: -ms-flexbox;
   display: flex;
   height: 75vh;
-  max-height: 600px;
+  max-height: 800px;
   /*     .hero-big__play {
       background-color: rgba($black, 0.61);
       box-decoration-break: clone;
@@ -4621,7 +4621,7 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
-  margin-bottom: .5rem;
+  padding: 1rem 1rem 2.5rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__content {
