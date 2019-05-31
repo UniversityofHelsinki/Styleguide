@@ -4651,13 +4651,11 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered) .hero-big__title, .hero-big:not(.hero-big--centered) .hero-big__title__container .hero-big__overlay, .hero-big__title__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
   font-size: 32px;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  display: inline;
+  display: inline-block;
   line-height: 1;
   max-width: 100%;
   margin-bottom: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -4674,6 +4672,15 @@ dl, ol, ul {
   }
 }
 
+@supports ((-webkit-box-decoration-break: clone) or (box-decoration-break: clone)) {
+  .hero-big:not(.hero-big--centered) .hero-big__title, .hero-big:not(.hero-big--centered) .hero-big__title__container .hero-big__overlay, .hero-big__title__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    display: inline;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) .hero-big__title, .hero-big:not(.hero-big--centered) .hero-big__title__container .hero-big__overlay, .hero-big__title__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
     margin-bottom: 0;
@@ -4682,13 +4689,20 @@ dl, ol, ul {
 
 .hero-big:not(.hero-big--centered) .hero-big__ingress, .hero-big:not(.hero-big--centered) .hero-big__ingress__container .hero-big__overlay, .hero-big__ingress__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
   font-size: 1.125rem;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  display: inline;
+  display: inline-block;
   line-height: 2rem;
   padding: .25rem 1rem;
   position: relative;
   z-index: 1;
+}
+
+@supports ((-webkit-box-decoration-break: clone) or (box-decoration-break: clone)) {
+  .hero-big:not(.hero-big--centered) .hero-big__ingress, .hero-big:not(.hero-big--centered) .hero-big__ingress__container .hero-big__overlay, .hero-big__ingress__container .hero-big:not(.hero-big--centered) .hero-big__overlay {
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    display: inline;
+    padding: .25rem 1rem;
+  }
 }
 
 @media (min-width: 48em) {
