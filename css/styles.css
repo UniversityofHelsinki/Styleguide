@@ -5083,7 +5083,11 @@ dl, ol, ul {
 .hero-big__title__container .hero-big__overlay {
   background: #222;
   color: transparent !important;
-  line-height: 1;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+  margin: 0;
+  padding-bottom: 0.4em;
+  word-wrap: break-word;
 }
 
 .hero-big__ingress__container .hero-big__overlay {
