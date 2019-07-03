@@ -62,6 +62,121 @@
     top: 0;
     z-index: 1;
   }
+
+  &:not(.hero-big--centered) {
+    align-items: flex-end;
+    display: flex;
+    height: 75vh;
+    max-height: 800px;
+    
+    @include breakpoint($small) {
+      min-height: 400px;
+    }
+
+    &:after {
+      background: linear-gradient(rgba($black, .9), rgba($black, 0));
+      opacity: unset;
+      // Overlay will block video pause button, prevent it by giving margin to bottom.
+      margin-bottom: 40px;
+    }
+
+    .hero-big__top {
+      padding: 1rem 1rem 2.5rem;
+    }
+
+    .hero-big__content {
+      align-items: flex-start;
+      display: flex;
+      flex-basis: auto;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .hero-big__title__container {
+      position: relative;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+    .hero-big__ingress__container {
+      position: relative;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    .hero-big__title {
+      @include fluid-type(font-size, 360px, 1600px, 32px, 68px);
+      display: inline-block;
+      line-height: 1;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+
+      @supports (box-decoration-break: clone) {
+        box-decoration-break: clone;
+        display: inline;
+        padding: 0 1rem;
+      }
+
+      @include breakpoint($small) {
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-big__ingress {
+      @include font-size(18px);
+      display: inline-block;
+      line-height: 2rem;
+      padding: .25rem 1rem;
+      position: relative;
+      z-index: 1;
+
+      @supports (box-decoration-break: clone) {
+        box-decoration-break: clone;
+        display: inline;
+        padding: .25rem 1rem;
+      }
+
+      @include breakpoint($small) {
+        margin-bottom: 0;
+      }
+    }
+
+/*     .hero-big__play {
+      background-color: rgba($black, 0.61);
+      box-decoration-break: clone;
+      padding: 0 1rem;
+    } */
+  }
+}
+
+.hero-big__video__controls {
+  bottom: 0;
+  position: absolute;
+  right: 0; 
+}
+
+.hero-big__video-button {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  justify-content: center;
+  padding: 0;
+  transition-duration: .3s;
+  transition-property: all;
+  width: 3rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
 }
 
 .hero-big__top {
@@ -348,4 +463,32 @@
   line-height: 1.1em;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+/*
+* Hero-big overlay wizardry.
+*/
+.hero-big__overlay--container {
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+.hero-big__title__container {
+  .hero-big__overlay {
+    @extend h1;
+    @extend .hero-big__title;
+    background: $black;
+    color: transparent !important;
+    line-height: 1;
+  }
+}
+.hero-big__ingress__container {
+  .hero-big__overlay {
+    @extend .hero-big__ingress;
+    background: $black;
+    color: transparent !important;
+    line-height: 1;
+  }
 }

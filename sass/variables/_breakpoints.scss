@@ -2,10 +2,10 @@
 $vert-spacing-unit: 30px;
 $horz-spacing-unit: 30px;
 
-$bp-small: 48em;
-$bp-medium: 62.5em;
-$bp-large: 75em;
-$bp-xlarge: 100em;
+$bp-small: 48em; // 768px
+$bp-medium: 62.5em; // 1000px
+$bp-large: 75em; // 1200px
+$bp-xlarge: 100em; // 1600px
 
 $mobile-only: max-width $bp-small;
 $small: $bp-small, "no-query" ".lt-ie9";
