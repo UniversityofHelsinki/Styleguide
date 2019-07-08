@@ -8132,12 +8132,12 @@ input[type="text"].search-form-large__input {
   font-style: normal;
   color: #555555;
   text-transform: uppercase;
-  color: #979797;
+  color: #555555;
   transition: color, 0.2s;
 }
 
 .tag-list__item a:hover {
-  color: #555555;
+  color: #424242;
 }
 
 .tag-list__item:after {
