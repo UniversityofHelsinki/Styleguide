@@ -3686,7 +3686,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -3848,7 +3848,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -3887,7 +3887,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -4632,7 +4632,8 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
-  padding: 1rem 1rem 2.5rem;
+  padding: 1rem 1rem 0;
+  margin-bottom: 2.5rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__content {
@@ -8119,7 +8120,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
   margin-left: 0;
   margin-right: 0;
@@ -8129,7 +8130,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
   color: #979797;
   transition: color, 0.2s;
@@ -9474,7 +9475,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
