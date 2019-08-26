@@ -221,7 +221,7 @@ li.main-menu__front {
 
   a {
     color: $white;
-    display: block;
+    display: inline-block;
     letter-spacing: 0.01em;
 
     &:hover {
@@ -229,7 +229,7 @@ li.main-menu__front {
     }
 
     &.active {
-      text-decoration: underline;
+      border-bottom: 2px solid $white;
     }
   }
 
@@ -338,7 +338,7 @@ li.main-menu__front {
             color: $mediumsilver;
           }
         }
-        
+
         a {
           @include font-size(14px);
           font-weight: 600;

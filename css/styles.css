@@ -6658,7 +6658,7 @@ span.links__link.theme-language {
 
 .main-menu-v2 a {
   color: #FFF;
-  display: block;
+  display: inline-block;
   letter-spacing: 0.01em;
 }
 
@@ -6667,7 +6667,7 @@ span.links__link.theme-language {
 }
 
 .main-menu-v2 a.active {
-  text-decoration: underline;
+  border-bottom: 2px solid #FFF;
 }
 
 .main-menu-v2 li.is-lvl1 {
