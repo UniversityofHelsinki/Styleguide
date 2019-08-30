@@ -279,7 +279,12 @@ li.main-menu__front {
       flex-flow: column wrap;
       opacity: 1;
       padding-left: 1rem;
+      margin-bottom: 0;
       width: 100%;
+
+      @include breakpoint($small) {
+        margin-bottom: 4rem;
+      }
 
       > a {
         @include font-size(18px);

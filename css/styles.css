@@ -6725,7 +6725,14 @@ span.links__link.theme-language {
       flex-flow: column wrap;
   opacity: 1;
   padding-left: 1rem;
+  margin-bottom: 0;
   width: 100%;
+}
+
+@media (min-width: 48em) {
+  .main-menu-v2 li.is-lvl1.theme-quicklinks {
+    margin-bottom: 4rem;
+  }
 }
 
 .main-menu-v2 li.is-lvl1.theme-quicklinks > a {
