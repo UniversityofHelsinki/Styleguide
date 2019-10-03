@@ -70,7 +70,7 @@
     max-height: 800px;
     
     @include breakpoint($small) {
-      min-height: 400px;
+      min-height: 600px;
     }
 
     &:after {
