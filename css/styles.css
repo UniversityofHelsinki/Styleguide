@@ -1987,6 +1987,17 @@ th {
   content: "";
 }
 
+.icon--settings:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .bar, .tube {
   display: block;
   padding-bottom: 1em;
@@ -4621,7 +4632,7 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) {
-    min-height: 400px;
+    min-height: 600px;
   }
 }
 
