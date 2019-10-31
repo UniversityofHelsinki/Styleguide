@@ -4,6 +4,12 @@
     "type": "git",
     "url": "git://github.com/UniversityofHelsinki/Styleguide.git"
   },
+  "scripts": {
+    "start": "gulp serve",
+    "visual-testing-infra": "docker-compose up",
+    "visual-testing": "hermione gui",
+    "test": "hermione"
+  },
   "version": "0.0.0",
   "description": "Living styleguide for University of Helsinki",
   "author": "Benjamin Horn <benjamin.horn@idean.com>",
@@ -22,6 +28,8 @@
     "gulp-iconfont": "^4.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.4.2",
+    "hermione": "^2.13.1",
+    "html-reporter": "^5.3.2",
     "lodash": "^3.10.1",
     "node-sass-globbing": "0.0.23",
     "normalize.css": "^3.0.0",

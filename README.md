@@ -57,9 +57,31 @@ Submit changes with pull requests.
 ### Setting up ###
 
 1. `npm install`
-2. `gulp serve` (to compile the css and launch server)
+2. `npm start` (to compile the css and launch server)
 
 ## Style guide documentation: ##
 
 Read `styleguide/README.md` for more information about how to document the style guide.
 
+## Style guide visual verification
+When changing existing components or general styles it is important to make the changes so that some other component is not changed unintentionally. We have some tooling in place in style guide that make this task easier. The basic idea is that each component is rendered to a raster image. Those images can then be compared visually. A visual testing tool called [Hermione](https://github.com/gemini-testing/hermione) is used to inspect and report the changes. 
+
+Git contains a baseline set of rendered component images in directory [hermione/screens](hermione/screens). The new reference images are committed to git together with the changes to the component. This way the reviewer of the pr can immediately see all the changes visually too.
+
+#### Prerequisites ####
+1. Styleguide server is running, see [Setting up](#setting-up)
+1. Docker
+
+#### Start Visual testing test infra ###
+It is important to have a consistent rendering of the components and therefore we use Chrome on Linux to render the components into a raster image. The linux rendering engine runs on docker. 
+
+`npm start visual-testing-infra`
+
+#### Start Visual testing gui ####
+Hermione has a gui that can then be used to see and accept the changed raster images while developing the new component.
+
+`npm start visual-testing-gui`
+
+#### Running visual tests from cli ####
+
+`npm test`
