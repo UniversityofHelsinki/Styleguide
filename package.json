@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gulp serve",
     "visual-testing-infra": "docker-compose up",
-    "visual-testing": "hermione gui",
+    "visual-testing-gui": "hermione gui",
     "test": "hermione"
   },
   "version": "0.0.0",
