@@ -75,12 +75,12 @@ Git contains a baseline set of rendered component images in directory [hermione/
 #### Start Visual testing test infra ###
 It is important to have a consistent rendering of the components and therefore we use Chrome on Linux to render the components into a raster image. The linux rendering engine runs on docker. 
 
-`npm start visual-testing-infra`
+`npm run visual-testing-infra`
 
 #### Start Visual testing gui ####
 Hermione has a gui that can then be used to see and accept the changed raster images while developing the new component.
 
-`npm start visual-testing-gui`
+`npm run visual-testing-gui`
 
 #### Running visual tests from cli ####
 
