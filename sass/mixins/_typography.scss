@@ -78,7 +78,7 @@
 @mixin text-author {
   @include font-size(12px);
   @include font-weight-medium;
-  color: $silver;
+  color: $lightgray;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -87,7 +87,7 @@
 @mixin text-tag {
   @include font-size(12px);
   @include font-weight-medium;
-  color: $silver;
+  color: $lightgray;
   text-transform: uppercase;
 }
 

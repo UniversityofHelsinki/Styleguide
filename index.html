@@ -1987,6 +1987,17 @@ th {
   content: "";
 }
 
+.icon--settings:after {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+}
+
 .bar, .tube {
   display: block;
   padding-bottom: 1em;
@@ -3686,7 +3697,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -3848,7 +3859,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -3887,7 +3898,7 @@ dl, ol, ul {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   display: block;
   margin-bottom: 1em;
   text-transform: uppercase;
@@ -4621,7 +4632,7 @@ dl, ol, ul {
 
 @media (min-width: 48em) {
   .hero-big:not(.hero-big--centered) {
-    min-height: 400px;
+    min-height: 600px;
   }
 }
 
@@ -4632,7 +4643,8 @@ dl, ol, ul {
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__top {
-  padding: 1rem 1rem 2.5rem;
+  padding: 1rem 1rem 0;
+  margin-bottom: 2.5rem;
 }
 
 .hero-big:not(.hero-big--centered) .hero-big__content {
@@ -6657,16 +6669,20 @@ span.links__link.theme-language {
 
 .main-menu-v2 a {
   color: #FFF;
-  display: block;
+  display: inline-block;
   letter-spacing: 0.01em;
 }
 
-.main-menu-v2 a:hover, .main-menu-v2 a.active {
-  text-decoration: underline;
+.main-menu-v2 a:hover {
+  color: #D2D2D2;
+}
+
+.main-menu-v2 a.active {
+  border-bottom: 2px solid #FFF;
 }
 
 .main-menu-v2 li.is-lvl1 {
-  margin-bottom: 48px;
+  margin-bottom: 31px;
   opacity: 0.5;
   padding-left: 64px;
   position: relative;
@@ -6690,8 +6706,7 @@ span.links__link.theme-language {
 
 .main-menu-v2 li.is-lvl1 > a {
   font-size: 1.125rem;
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -6705,7 +6720,7 @@ span.links__link.theme-language {
 
 .main-menu-v2 li.is-lvl1 > ul {
   display: none;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 @media (min-width: 62.5em) {
@@ -6714,19 +6729,114 @@ span.links__link.theme-language {
   }
 }
 
+.main-menu-v2 li.is-lvl1.theme-quicklinks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  opacity: 1;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .main-menu-v2 li.is-lvl1.theme-quicklinks {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+}
+
 .main-menu-v2 li.is-lvl1.theme-quicklinks > a {
-  font-size: 0.875rem;
-  color: #979797;
-  line-height: 25px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-menu-v2 li.is-lvl1.theme-quicklinks > ul {
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .main-menu-v2 li.is-lvl1.theme-quicklinks > ul {
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+  }
+}
+
+.main-menu-v2 li.is-lvl1.theme-quicklinks > ul li a {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .75rem 0;
+}
+
+@media (min-width: 48em) {
+  .main-menu-v2 li.is-lvl1.theme-quicklinks > ul li a {
+    margin: 1rem 1rem 0 1rem;
+  }
+}
+
+.main-menu-v2 li.is-lvl1.theme-quicklinks > ul .candy-link {
+  font-size: 0.9375rem;
+  -ms-flex-align: center;
+      align-items: center;
+  background: #107EAB;
+  color: #FFF;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  line-height: 19px;
+  margin: 1rem 1rem 1rem 0;
+  padding: .75rem 1.5rem .75rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  .main-menu-v2 li.is-lvl1.theme-quicklinks > ul .candy-link {
+    margin: 1rem 1rem 0 0;
+  }
+}
+
+.main-menu-v2 li.is-lvl1.theme-quicklinks > ul .candy-link:before {
+  display: inline-block;
+  font-family: "hy-icons";
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: bottom;
+  content: "";
+  font-size: 1.5rem;
+  left: .75rem;
+  opacity: .5;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%) rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg);
+}
+
+.main-menu-v2 li.is-lvl1.theme-quicklinks > ul .candy-link:hover {
+  color: #D2D2D2;
 }
 
 .main-menu-v2 li.is-lvl1.theme-quicklinks > ul a {
   font-size: 0.875rem;
+  font-weight: 600;
   margin-bottom: 0.5em;
 }
 
 .main-menu-v2 li.is-lvl2 > a {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 1em;
@@ -6936,7 +7046,6 @@ span.links__link.theme-language {
   font-size: 1.4em;
   margin-right: 0.5em;
   position: relative;
-  top: 2px;
 }
 
 .messages.info {
@@ -6970,7 +7079,6 @@ span.links__link.theme-language {
   font-size: 1.4em;
   margin-right: 0.5em;
   position: relative;
-  top: 2px;
 }
 
 .messages.error {
@@ -7004,7 +7112,6 @@ span.links__link.theme-language {
   font-size: 1.4em;
   margin-right: 0.5em;
   position: relative;
-  top: 2px;
 }
 
 .overlay-toggle {
@@ -8119,7 +8226,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
   margin-left: 0;
   margin-right: 0;
@@ -8129,14 +8236,14 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
-  color: #979797;
+  color: #555555;
   transition: color, 0.2s;
 }
 
 .tag-list__item a:hover {
-  color: #555555;
+  color: #424242;
 }
 
 .tag-list__item:after {
@@ -9474,7 +9581,7 @@ input[type="text"].search-form-large__input {
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal;
-  color: #979797;
+  color: #555555;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -10850,6 +10957,7 @@ table[class*="idean-styleguide"] {
     <span class="icon--play-arrow"></span>
     <span class="icon--pause"></span>
     <span class="icon--euro-currency"></span>
+    <span class="icon--settings"></span>
 </div><br><br>
 
 <div>
@@ -10977,6 +11085,7 @@ table[class*="idean-styleguide"] {
     <span class="icon-2x icon--pause"></span>
     <span class="icon-2x icon--headphones"></span>
     <span class="icon-2x icon--euro-currency"></span>
+    <span class="icon-2x icon--settings"></span>
 </div>
 <div>
     <span class="icon-2x icon--twitter icon-rotate-90"></span>
@@ -11113,6 +11222,7 @@ table[class*="idean-styleguide"] {
     &lt;span class="icon--play-arrow"&gt;&lt;/span&gt;
     &lt;span class="icon--pause"&gt;&lt;/span&gt;
     &lt;span class="icon--euro-currency"&gt;&lt;/span&gt;
+    &lt;span class="icon--settings"&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;br&gt;&lt;br&gt;
 
 &lt;div&gt;
@@ -11240,6 +11350,7 @@ table[class*="idean-styleguide"] {
     &lt;span class="icon-2x icon--pause"&gt;&lt;/span&gt;
     &lt;span class="icon-2x icon--headphones"&gt;&lt;/span&gt;
     &lt;span class="icon-2x icon--euro-currency"&gt;&lt;/span&gt;
+    &lt;span class="icon-2x icon--settings"&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div&gt;
     &lt;span class="icon-2x icon--twitter icon-rotate-90"&gt;&lt;/span&gt;
@@ -14783,6 +14894,9 @@ Theme prominent
           <a href="#" title="Pikalinkit">Pikalinkit</a>
           <ul>
             <li>
+              <a class="candy-link" href="#">Jatkuva oppiminen</a>
+            </li>
+            <li>
               <a href="#">Yhteystiedot</a>
             </li>
             <li>
@@ -14980,6 +15094,9 @@ Theme prominent
         &lt;li class="is-lvl1 theme-quicklinks is-hidden--tablet"&gt;
           &lt;a href="#" title="Pikalinkit"&gt;Pikalinkit&lt;/a&gt;
           &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a class="candy-link" href="#"&gt;Jatkuva oppiminen&lt;/a&gt;
+            &lt;/li&gt;
             &lt;li&gt;
               &lt;a href="#"&gt;Yhteystiedot&lt;/a&gt;
             &lt;/li&gt;

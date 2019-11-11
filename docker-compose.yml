@@ -1,0 +1,28 @@
+version: "3"
+services:
+#  selenium-hub:
+##    image: selenium/hub:3.141.59
+ #   container_name: selenium-hub
+ #   ports:
+ #     - "4444:4444"
+  chrome:
+    image: selenium/standalone-chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+#      - selenium-hub
+      - styleguide
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - START_XVFB=false
+      - SCREEN_WIDTH=1400
+      - SCREEN_HEIGHT=1000
+      - SCREEN_DEPTH=24
+      - SCREEN_DPI=220
+    ports:
+      - "4444:4444"
+  styleguide:
+    image: redsadic/docker-http-server
+    volumes:
+      - .:/public

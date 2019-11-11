@@ -16,11 +16,11 @@
 
   a {
     @include text-tag;
-    color: $silver;
+    color: $lightgray;
     transition: color, 0.2s;
 
     &:hover {
-      color: $lightgray;
+      color: $darkgray;
     }
   }
 
