@@ -32,7 +32,7 @@
 
   &:active,
   &.is-active {
-    background-color: $darkblue--active;
+    background-color: $blue--active;
   }
 
   &:before, &:after {
@@ -160,12 +160,12 @@
 
   &:focus:after,
   &:active:after {
-    background: $darkblue--active;
+    background: $blue--active;
   }
 
   &:hover {
     &:after {
-      background: $darkblue--active;
+      background: $blue--active;
     }
   }
 
