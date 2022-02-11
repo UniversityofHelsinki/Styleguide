@@ -31,7 +31,7 @@
     "hermione": "^2.13.6",
     "html-reporter": "^5.16.4",
     "lodash": "^4.17.19",
-    "node-sass": "4.13.0",
+    "node-sass": "7.0.0",
     "node-sass-globbing": "0.0.23",
     "normalize.css": "^3.0.0",
     "run-sequence": "1.2.2"
