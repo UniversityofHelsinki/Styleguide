@@ -28,7 +28,7 @@
     "gulp-iconfont": "^4.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.4.2",
-    "hermione": "^2.13.6",
+    "hermione": "^7.0.4",
     "html-reporter": "^5.16.4",
     "lodash": "^4.17.19",
     "node-sass": "4.13.0",
